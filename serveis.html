@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Serveis — Estudi Dental Carrera</title>
+  <meta name="description" content="Tots els nostres tractaments odontològics: implants, ortodòncia, estètica dental, odontopediatria i molt més." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/logos/favicon.svg" />
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <img src="assets/img/logos/icona.png" class="nav__logo-icon" alt="" />
+        <div class="nav__logo-text">
+          <span class="nav__logo-brand">Estudi Dental</span>
+          <span class="nav__logo-location">Carrera</span>
+        </div>
+      </a>
+      <nav class="nav__links" aria-label="Navegació principal">
+        <a href="index.html">Inici</a>
+        <a href="serveis.html" class="active">Serveis</a>
+        <a href="equip.html">Equip</a>
+        <a href="seus.html">Les nostres seus</a>
+      </nav>
+      <a href="seus.html#contacte" class="btn btn--outline nav__cta">Demana cita</a>
+      <button class="nav__burger" id="navBurger" aria-label="Obrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <button class="mobile-menu__close" id="mobileMenuClose" aria-label="Tancar menú">✕</button>
+    <nav>
+      <a href="index.html" class="mobile-menu__link">Inici</a>
+      <a href="serveis.html" class="mobile-menu__link">Serveis</a>
+      <a href="equip.html" class="mobile-menu__link">Equip</a>
+      <a href="seus.html" class="mobile-menu__link">Les nostres seus</a>
+      <a href="seus.html#contacte" class="btn btn--primary mobile-menu__cta">Demana cita</a>
+    </nav>
+  </div>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="page-hero__bg"></div>
+      <div class="container">
+        <div class="page-hero__content">
+          <nav class="breadcrumb" aria-label="Fil d'Ariadna">
+            <a href="index.html">Inici</a>
+            <span>→</span>
+            <span>Serveis</span>
+          </nav>
+          <h1 class="reveal">Els nostres <em>serveis</em></h1>
+          <p class="reveal">Tractaments integrals per a tota la família, amb les tecnologies més avançades del sector i la calidesa d'un equip proper i de confiança.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPLANTS -->
+    <section class="service-detail" id="implants">
+      <div class="container">
+        <div class="service-detail__grid">
+          <div class="service-detail__visual reveal">
+            <div class="service-detail__card">
+              <div class="service-detail__icon">
+                <svg viewBox="0 0 80 80" fill="none"><path d="M40 14c-10 0-18 9-18 21 0 8 4 15 10 19l3 8h10l3-8c6-4 10-11 10-19 0-12-8-21-18-21z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><circle cx="40" cy="32" r="5" fill="currentColor" opacity="0.3"/><path d="M34 52h12M36 58h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </div>
+              <span class="service-detail__tag">Cirurgia implantològica</span>
+            </div>
+          </div>
+          <div class="service-detail__text">
+            <span class="label reveal">Implantologia</span>
+            <h2 class="reveal">Implants <em>dentals</em></h2>
+            <p class="reveal">Els implants dentals són la solució més avançada i duradora per substituir dents perdudes. Estan fabricats en titani biocompatible que s'integra perfectament a l'os, oferint una base sòlida per a corones, ponts o pròtesis.</p>
+            <div class="service-features reveal">
+              <div class="feature-item">
+                <span class="feature-item__check">✓</span>
+                <div>
+                  <strong>Implant unitari</strong>
+                  <span>Substitució d'una sola dent de forma natural i estètica</span>
+                </div>
+              </div>
+              <div class="feature-item">
+                <span class="feature-item__check">✓</span>
+                <div>
+                  <strong>Implants múltiples</strong>
+                  <span>Substitució de diverses dents amb el mínim d'implants</span>
+                </div>
+              </div>
+              <div class="feature-item">
+                <span class="feature-item__check">✓</span>
+                <div>
+                  <strong>All on 4 / All on 6</strong>
+                  <span>Rehabilitació completa d'una arcada sobre 4 o 6 implants</span>
+                </div>
+              </div>
+              <div class="feature-item">
+                <span class="feature-item__check">✓</span>
+                <div>
+                  <strong>Implants immediats</strong>
+                  <span>Col·locació el mateix dia de l'extracció dental</span>
+                </div>
+              </div>
+            </div>
+            <a href="seus.html#contacte" class="btn btn--primary reveal">Consulta sense compromís →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ORTODÒNCIA -->
+    <section class="service-detail service-detail--alt" id="ortodencia">
+      <div class="container">
+        <div class="service-detail__grid service-detail__grid--reverse">
+          <div class="service-detail__text">
+            <span class="label reveal">Alineació dental</span>
+            <h2 class="reveal">Ortodòncia</h2>
+            <p class="reveal">Corregim la posició de les dents i la mossegada per aconseguir un somriure sa i harmònic. Disposem de les solucions més modernes, des dels bràquets clàssics fins als alineadors transparents invisibles.</p>
+            <div class="service-features reveal">
+              <div class="feature-item">
+                <span class="feature-item__check">✓</span>
+                <div>
+                  <strong>Alineadors invisibles (Invisalign)</strong>
+                  <span>Ferules transparents i extraïbles, còmodes i estètiques</span>
+                </div>
+              </div>
+              <div class="feature-item">
+                <span class="feature-item__check">✓</span>
+                <div>
+                  <strong>Bràquets metàl·lics</strong>
+                  <span>La solució clàssica, eficaç per a casos complexos</span>
+                </div>
+              </div>
+              <div class="feature-item">
+                <span class="feature-item__check">✓</span>
+                <div>
+                  <strong>Bràquets de zirconi</strong>
+                  <span>Estètics i resistents, quasi invisibles</span>
+                </div>
+              </div>
+              <div class="feature-item">
+                <span class="feature-item__check">✓</span>
+                <div>
+                  <strong>Ortodòncia interceptiva</strong>
+                  <span>Tractament primerenc en nens per prevenir problemes futurs</span>
+                </div>
+              </div>
+            </div>
+            <a href="seus.html#contacte" class="btn btn--primary reveal">Sol·licita una valoració →</a>
+          </div>
+          <div class="service-detail__visual reveal">
+            <div class="service-detail__card">
+              <div class="service-detail__icon">
+                <svg viewBox="0 0 80 80" fill="none"><path d="M28 20c-6 6-9 13-9 20s4 13 9 16l3 3 9-6 9 6 3-3c5-3 9-9 9-16s-3-14-9-20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M31 30c3-3 9-3 12 0M28 40h8M44 40h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </div>
+              <span class="service-detail__tag">Tractament d'alineació</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESTÈTICA -->
+    <section class="service-detail" id="estetica">
+      <div class="container">
+        <div class="service-detail__grid">
+          <div class="service-detail__visual reveal">
+            <div class="service-detail__card">
+              <div class="service-detail__icon">
+                <svg viewBox="0 0 80 80" fill="none"><path d="M40 16c-14 0-24 10-24 24 0 7 3 13 8 18v10h32V58c5-5 8-11 8-18 0-14-10-24-24-24z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M32 46h16M35 53h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M34 30c2-3 6-4 9-2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </div>
+              <span class="service-detail__tag">Somriure perfecte</span>
+            </div>
+          </div>
+          <div class="service-detail__text">
+            <span class="label reveal">Odontologia cosmètica</span>
+            <h2 class="reveal">Estètica <em>dental</em></h2>
+            <p class="reveal">El disseny del somriure és una de les nostres especialitats. Combinant diverses tècniques podrem transformar completament l'aspecte de les teves dents, aconseguint resultats naturals i brillants.</p>
+            <div class="service-features reveal">
+              <div class="feature-item">
+                <span class="feature-item__check">✓</span>
+                <div>
+                  <strong>Blanquejament dental</strong>
+                  <span>Tractament professional a clínica o amb fèrules a casa</span>
+                </div>
+              </div>
+              <div class="feature-item">
+                <span class="feature-item__check">✓</span>
+                <div>
+                  <strong>Facetes de porcellana</strong>
+                  <span>Làmines ultrafines que transformen la forma i color de les dents</span>
+                </div>
+              </div>
+              <div class="feature-item">
+                <span class="feature-item__check">✓</span>
+                <div>
+                  <strong>Disseny de somriure digital</strong>
+                  <span>Planificació digital del resultat final abans de tractar</span>
+                </div>
+              </div>
+              <div class="feature-item">
+                <span class="feature-item__check">✓</span>
+                <div>
+                  <strong>Composite estètic</strong>
+                  <span>Restauració de dents trencades o amb espais</span>
+                </div>
+              </div>
+            </div>
+            <a href="seus.html#contacte" class="btn btn--primary reveal">Dissenya el teu somriure →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GRID DE SERVEIS ADDICIONALS -->
+    <section class="services-extra">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="label">Més tractaments</span>
+          <h2>Atenció <em>integral</em></h2>
+          <p>Cobrim totes les necessitats de salut bucodental de tota la família.</p>
+        </div>
+        <div class="services-extra__grid">
+
+          <div class="extra-card reveal">
+            <div class="extra-card__num">01</div>
+            <h3>Odontopediatria</h3>
+            <p>Atenció dental especialitzada per a nadons, nens i adolescents. Revisions, fluors, segelladors i tractaments preventius en un entorn amable i de confiança.</p>
+          </div>
+
+          <div class="extra-card reveal" style="--delay:80ms">
+            <div class="extra-card__num">02</div>
+            <h3>Endodòncia</h3>
+            <p>Tractament del nervi dental (conductes) per eliminar la infecció i conservar la dent. Tècnica indolora amb microscopi endodòncic d'alta precisió.</p>
+          </div>
+
+          <div class="extra-card reveal" style="--delay:160ms">
+            <div class="extra-card__num">03</div>
+            <h3>Periodontologia</h3>
+            <p>Diagnosi i tractament de la malaltia de les genives (periodontitis). Rastrejat i alisament radicular, cirurgia periodontal i manteniment.</p>
+          </div>
+
+          <div class="extra-card reveal" style="--delay:240ms">
+            <div class="extra-card__num">04</div>
+            <h3>Pròtesi dental</h3>
+            <p>Corones, ponts i pròtesis removibles i fixes per recuperar la funcionalitat i l'estètica. Fabricació en materials d'alta qualitat: zirconi, porcellana i e.max.</p>
+          </div>
+
+          <div class="extra-card reveal" style="--delay:320ms">
+            <div class="extra-card__num">05</div>
+            <h3>Cirurgia oral</h3>
+            <p>Extraccions simples i quirúrgiques, inclosos cordals. Cirurgia dels ossos i teixits tous. Tractament de quists i tumors benignes de la cavitat oral.</p>
+          </div>
+
+          <div class="extra-card reveal" style="--delay:400ms">
+            <div class="extra-card__num">06</div>
+            <h3>Bruxisme i fèrules</h3>
+            <p>Diagnosi i tractament del bruxisme (cruixir de dents). Fèrules de descàrrega personalitzades per protegir les dents i alleujar tensions musculars.</p>
+          </div>
+
+          <div class="extra-card reveal" style="--delay:80ms">
+            <div class="extra-card__num">07</div>
+            <h3>Higiene dental</h3>
+            <p>Profilaxi professional, detartrat i poliment. Controls preventius regulars per mantenir unes genives sanes i prevenir la càries i la periodontitis.</p>
+          </div>
+
+          <div class="extra-card reveal" style="--delay:160ms">
+            <div class="extra-card__num">08</div>
+            <h3>Radiologia digital</h3>
+            <p>Radiografies digitals amb mínima radiació, ortopantomografia i escàner 3D (CBCT) per a un diagnosi precís i una planificació quirúrgica segura.</p>
+          </div>
+
+          <div class="extra-card reveal" style="--delay:240ms">
+            <div class="extra-card__num">09</div>
+            <h3>Urgències dentals</h3>
+            <p>Atenem urgències odontològiques: dolor agut, fractures dentals, infeccions i pèrdua de peces. Atenció ràpida i eficaç per al teu benestar immediat.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="label">Com treballem</span>
+          <h2>El nostre <em>procés</em></h2>
+        </div>
+        <div class="process__steps">
+          <div class="process-step reveal">
+            <span class="process-step__num">01</span>
+            <h3>Primera visita</h3>
+            <p>Diagnosi completa gratuïta i sense compromís. Exploració oral, radiografies i explicació detallada del pla de tractament.</p>
+          </div>
+          <div class="process-step__divider" aria-hidden="true"></div>
+          <div class="process-step reveal" style="--delay:120ms">
+            <span class="process-step__num">02</span>
+            <h3>Pla personalitzat</h3>
+            <p>Elaborem un pressupost detallat i transparent, adaptant el tractament a les teves necessitats i possibilitats econòmiques.</p>
+          </div>
+          <div class="process-step__divider" aria-hidden="true"></div>
+          <div class="process-step reveal" style="--delay:240ms">
+            <span class="process-step__num">03</span>
+            <h3>Tractament</h3>
+            <p>Executem el tractament acordat amb les tecnologies més avançades i tota la nostra experiència, en un entorn confortable.</p>
+          </div>
+          <div class="process-step__divider" aria-hidden="true"></div>
+          <div class="process-step reveal" style="--delay:360ms">
+            <span class="process-step__num">04</span>
+            <h3>Seguiment</h3>
+            <p>Revisions periòdiques per assegurar que el resultat es manté a llarg termini i detectar qualsevol incidència a temps.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band">
+      <div class="container">
+        <div class="cta-band__inner reveal">
+          <div class="cta-band__text">
+            <h2>Tens alguna pregunta<br />sobre un <em>tractament?</em></h2>
+            <p>El nostre equip t'assessora sense compromís.</p>
+          </div>
+          <a href="seus.html#contacte" class="btn btn--dark btn--lg">Contacta'ns →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo">
+            <img src="assets/img/logos/icona.png" alt="" style="filter:brightness(0) invert(0.7) sepia(1) saturate(0.4);" />
+            <div><span>Estudi Dental</span><strong>Carrera</strong></div>
+          </a>
+          <p class="footer__tagline">Odontologia d'excel·lència.<br />Dues seus al vostre servei.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Navegació</h4>
+          <ul>
+            <li><a href="index.html">Inici</a></li>
+            <li><a href="serveis.html">Serveis</a></li>
+            <li><a href="equip.html">Equip</a></li>
+            <li><a href="seus.html">Les nostres seus</a></li>
+            <li><a href="seus.html#contacte">Demana cita</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Seu Carrera</h4>
+          <ul>
+            <li>Carrer de la Clínica, 12</li><li>Lleida</li>
+            <li><a href="tel:+34973000000">973 000 000</a></li>
+            <li>Dl–Dv: 9h – 20h</li><li>Ds: 9h – 14h</li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Seu Tremp</h4>
+          <ul>
+            <li>Carrer Major, 28</li><li>25620 Tremp</li>
+            <li><a href="tel:+34973650000">973 650 000</a></li>
+            <li>Dl–Dv: 9h – 19h</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Estudi Dental Carrera. Tots els drets reservats.</p>
+        <div class="footer__legal">
+          <a href="#">Política de privacitat</a>
+          <a href="#">Avís legal</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
