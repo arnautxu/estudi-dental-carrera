@@ -682,3 +682,19 @@ console.log(
     boot();
   }
 })();
+
+/* ---------- HERO CONSTELLATION — responsive fit ----------
+   The SVG's preserveAspectRatio is not reachable via CSS. On narrow
+   viewports we swap from 'slice' (crops sides) to 'meet' (fits the
+   whole graph), so the remaining nodes stay on-screen. */
+(function () {
+  const svg = document.querySelector('.hero-constellation');
+  if (!svg) return;
+  const mq = window.matchMedia('(max-width: 640px)');
+  const apply = () => {
+    svg.setAttribute('preserveAspectRatio', mq.matches ? 'xMidYMid meet' : 'xMidYMid slice');
+  };
+  apply();
+  if (mq.addEventListener) mq.addEventListener('change', apply);
+  else if (mq.addListener) mq.addListener(apply); // Safari <14
+})();
