@@ -291,7 +291,7 @@ input, select, textarea { font:inherit; }
 
 /* ---------- MOBILE MENU — editorial full-screen ---------- */
 .mobile-menu {
-  position:fixed; inset:0; z-index:99;
+  position:fixed; inset:0; z-index:110;  /* above .nav (z-index:100) */
   background:var(--off-white);
   display:flex; flex-direction:column;
   padding: 20px var(--pad) 28px;
