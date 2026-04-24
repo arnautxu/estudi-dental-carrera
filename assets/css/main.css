@@ -862,8 +862,9 @@ input, select, textarea { font:inherit; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .testimonial__inner { animation: none; }
+  html:not([data-motion="force"]) .testimonial__inner { animation: none; }
 }
+html[data-motion="off"] .testimonial__inner { animation: none; }
 
 /* Controls */
 .testimonials__controls {
@@ -1821,43 +1822,45 @@ h2.em-lit em::after { transform:scaleX(1); }
 
 /* ============================================================
    REDUCED MOTION
+   Everything inside this block is scoped to html:not([data-motion="force"])
+   so the ?motion=force URL override can opt out for testing.
    ============================================================ */
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *::before, *::after {
+  html:not([data-motion="force"]) { scroll-behavior: auto; }
+  html:not([data-motion="force"]) *, html:not([data-motion="force"]) *::before, html:not([data-motion="force"]) *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
   /* Show reveals immediately — no entrance animation */
-  .reveal { opacity: 1; transform: none; }
+  html:not([data-motion="force"]) .reveal { opacity: 1; transform: none; }
   /* Entrance animations: skip delay, show immediately */
-  .nav { animation: none; }
-  .hero__scroll-hint { animation: none; opacity: 1; transform: none; }
-  .cta-band { animation: none; }
+  html:not([data-motion="force"]) .nav { animation: none; }
+  html:not([data-motion="force"]) .hero__scroll-hint { animation: none; opacity: 1; transform: none; }
+  html:not([data-motion="force"]) .cta-band { animation: none; }
   /* Hero ambient motion: stop the orb float, scroll-hint pulse, marquee scroll */
-  .hero__orb { animation: none; }
-  .hero__scroll-line { animation: none; }
-  .marquee__track { animation: none; }
+  html:not([data-motion="force"]) .hero__orb { animation: none; }
+  html:not([data-motion="force"]) .hero__scroll-line { animation: none; }
+  html:not([data-motion="force"]) .marquee__track { animation: none; }
   /* Mobile menu items: always visible when container is open */
-  .mobile-menu__link,
-  .mobile-menu__cta,
-  .mobile-menu__seus { opacity: 1; transform: none; transition: none; }
-  .mobile-menu__close:hover { transform: none; }
+  html:not([data-motion="force"]) .mobile-menu__link,
+  html:not([data-motion="force"]) .mobile-menu__cta,
+  html:not([data-motion="force"]) .mobile-menu__seus { opacity: 1; transform: none; transition: none; }
+  html:not([data-motion="force"]) .mobile-menu__close:hover { transform: none; }
   /* Hero line stagger: skip the stagger, show lines immediately */
-  .hero__title .hero__line { opacity: 1; transform: none; animation: none; }
+  html:not([data-motion="force"]) .hero__title .hero__line { opacity: 1; transform: none; animation: none; }
   /* Italic underline: skip the draw, show the rule immediately */
-  h2 em::after { transform: scaleX(1); transition: none; }
+  html:not([data-motion="force"]) h2 em::after { transform: scaleX(1); transition: none; }
   /* Service illustrations: skip stroke-draw + mark-pop + breathing */
-  .sdc-illo svg { opacity: 1; animation: none; }
-  .sdc-illo svg path:not([stroke-dasharray]),
-  .sdc-illo svg line:not([stroke-dasharray]),
-  .sdc-illo svg rect:not([stroke-dasharray]),
-  .sdc-illo svg circle:not([stroke-dasharray]):not([fill]) {
+  html:not([data-motion="force"]) .sdc-illo svg { opacity: 1; animation: none; }
+  html:not([data-motion="force"]) .sdc-illo svg path:not([stroke-dasharray]),
+  html:not([data-motion="force"]) .sdc-illo svg line:not([stroke-dasharray]),
+  html:not([data-motion="force"]) .sdc-illo svg rect:not([stroke-dasharray]),
+  html:not([data-motion="force"]) .sdc-illo svg circle:not([stroke-dasharray]):not([fill]) {
     stroke-dasharray: none; stroke-dashoffset: 0;
   }
-  .sdc-illo svg circle[fill="currentColor"],
-  .sdc-illo svg g[fill="currentColor"] > circle { transform: none; }
+  html:not([data-motion="force"]) .sdc-illo svg circle[fill="currentColor"],
+  html:not([data-motion="force"]) .sdc-illo svg g[fill="currentColor"] > circle { transform: none; }
 }
 
 /* ============================================================
@@ -2185,8 +2188,8 @@ body.cookie-modal-open { overflow: hidden; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .cookie-banner { transition: opacity 160ms linear; transform: none; }
-  .cookie-modal__backdrop,
-  .cookie-modal__panel { transition: opacity 160ms linear; transform: none; }
-  .cc-switch::after { transition: none; }
+  html:not([data-motion="force"]) .cookie-banner { transition: opacity 160ms linear; transform: none; }
+  html:not([data-motion="force"]) .cookie-modal__backdrop,
+  html:not([data-motion="force"]) .cookie-modal__panel { transition: opacity 160ms linear; transform: none; }
+  html:not([data-motion="force"]) .cc-switch::after { transition: none; }
 }
