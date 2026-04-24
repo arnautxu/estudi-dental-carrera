@@ -323,3 +323,266 @@ console.log(
   '%c🦷  Salut bucodental de qualitat · Carrera & Tremp\n   Dos equips. Una mateixa cura.',
   'color:#9A9090;font-size:11px;font-weight:300;line-height:1.8'
 );
+
+/* ============================================================
+   COOKIE CONSENT
+   ============================================================ */
+(function initConsent() {
+  const STORAGE_KEY = 'edc_consent_v1';
+  const DEFAULT = { necessary: true, maps: false, ts: null };
+
+  const listeners = new Set();
+
+  function read() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return null;
+      const p = JSON.parse(raw);
+      if (!p || typeof p !== 'object') return null;
+      return Object.assign({}, DEFAULT, p, { necessary: true });
+    } catch (_) { return null; }
+  }
+
+  function write(prefs) {
+    const next = Object.assign({}, DEFAULT, prefs, {
+      necessary: true,
+      ts: new Date().toISOString()
+    });
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(next)); } catch (_) {}
+    listeners.forEach(fn => { try { fn(next); } catch (_) {} });
+    applyMapGate(next);
+    return next;
+  }
+
+  function current() {
+    return read() || Object.assign({}, DEFAULT);
+  }
+
+  /* ---- Map iframe gate ---- */
+  function applyMapGate(prefs) {
+    const allow = !!(prefs && prefs.maps);
+    document.querySelectorAll('.seu-map').forEach(wrap => {
+      const iframe = wrap.querySelector('iframe[data-cookie-src]');
+      if (!iframe) return;
+      if (allow) {
+        if (!iframe.src) iframe.src = iframe.dataset.cookieSrc;
+        wrap.setAttribute('data-consent-blocked', 'false');
+      } else {
+        iframe.removeAttribute('src');
+        wrap.setAttribute('data-consent-blocked', 'true');
+      }
+    });
+  }
+
+  /* ---- Banner ---- */
+  let bannerEl = null;
+  function buildBanner() {
+    if (bannerEl) return bannerEl;
+    const el = document.createElement('aside');
+    el.className = 'cookie-banner';
+    el.setAttribute('role', 'dialog');
+    el.setAttribute('aria-live', 'polite');
+    el.setAttribute('aria-label', 'Consentiment de cookies');
+    el.innerHTML = `
+      <h2 class="cookie-banner__title">Cookies i privacitat</h2>
+      <p class="cookie-banner__text">Fem servir cookies tècniques pròpies per al funcionament del lloc i, si ho acceptes, mapes de Google Maps a la pàgina de seus. <a href="cookies.html">Més informació</a>.</p>
+      <div class="cookie-banner__actions">
+        <button type="button" class="cc-btn cc-btn--link" data-consent-action="prefs">Preferències</button>
+        <button type="button" class="cc-btn cc-btn--ghost" data-consent-action="reject">Rebutjar</button>
+        <button type="button" class="cc-btn cc-btn--primary" data-consent-action="accept">Acceptar</button>
+      </div>`;
+    document.body.appendChild(el);
+    el.addEventListener('click', e => {
+      const btn = e.target.closest('[data-consent-action]');
+      if (!btn) return;
+      const action = btn.dataset.consentAction;
+      if (action === 'accept') { write({ maps: true }); hideBanner(); }
+      else if (action === 'reject') { write({ maps: false }); hideBanner(); }
+      else if (action === 'prefs') { openModal(); }
+    });
+    bannerEl = el;
+    return el;
+  }
+  function showBanner() {
+    const el = buildBanner();
+    requestAnimationFrame(() => el.classList.add('is-visible'));
+  }
+  function hideBanner() {
+    if (!bannerEl) return;
+    bannerEl.classList.remove('is-visible');
+    setTimeout(() => { if (bannerEl) { bannerEl.remove(); bannerEl = null; } }, 500);
+  }
+
+  /* ---- Modal ---- */
+  let modalEl = null;
+  let modalReturnFocus = null;
+  const CATEGORIES = [
+    {
+      key: 'necessary',
+      label: 'Estrictament necessàries',
+      tag: 'Sempre actives',
+      desc: 'Permeten el funcionament bàsic del lloc (navegació, sessió, formularis). Sense aquestes cookies el web no funcionaria correctament.',
+      required: true
+    },
+    {
+      key: 'maps',
+      label: 'Mapes de Google Maps',
+      tag: 'De tercers',
+      desc: 'Carrega els mapes integrats a la pàgina de seus perquè puguis veure la ubicació de les clíniques. Google pot establir cookies pròpies segons la seva política.',
+      required: false
+    }
+  ];
+
+  function buildModal() {
+    if (modalEl) return modalEl;
+    const el = document.createElement('div');
+    el.className = 'cookie-modal';
+    el.setAttribute('role', 'dialog');
+    el.setAttribute('aria-modal', 'true');
+    el.setAttribute('aria-labelledby', 'cookieModalTitle');
+    el.innerHTML = `
+      <div class="cookie-modal__backdrop" data-consent-action="close"></div>
+      <div class="cookie-modal__panel" role="document">
+        <button type="button" class="cookie-modal__close" data-consent-action="close" aria-label="Tancar">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+        </button>
+        <h2 class="cookie-modal__title" id="cookieModalTitle">Preferències de cookies</h2>
+        <p class="cookie-modal__lead">Tria quines categories acceptes. Pots canviar aquestes preferències en qualsevol moment des del peu de pàgina.</p>
+        <div class="cookie-modal__groups" data-groups></div>
+        <div class="cookie-modal__actions">
+          <button type="button" class="cc-btn cc-btn--ghost cc-btn--reject" data-consent-action="reject">Rebutjar opcionals</button>
+          <button type="button" class="cc-btn cc-btn--ghost" data-consent-action="save">Desar preferències</button>
+          <button type="button" class="cc-btn cc-btn--primary" data-consent-action="accept">Acceptar totes</button>
+        </div>
+      </div>`;
+    document.body.appendChild(el);
+
+    const groupsWrap = el.querySelector('[data-groups]');
+    CATEGORIES.forEach(cat => {
+      const g = document.createElement('div');
+      g.className = 'cc-group';
+      g.dataset.key = cat.key;
+      g.innerHTML = `
+        <div class="cc-group__row">
+          <h3 class="cc-group__label">${cat.label}<span class="cc-group__tag">${cat.tag}</span></h3>
+          <button type="button" class="cc-switch"
+            role="switch"
+            aria-checked="false"
+            ${cat.required ? 'aria-disabled="true"' : ''}
+            aria-label="Activar ${cat.label}"
+            data-switch="${cat.key}"></button>
+        </div>
+        <p class="cc-group__desc">${cat.desc}</p>`;
+      groupsWrap.appendChild(g);
+    });
+
+    el.addEventListener('click', e => {
+      const sw = e.target.closest('[data-switch]');
+      if (sw) {
+        if (sw.getAttribute('aria-disabled') === 'true') return;
+        const on = sw.getAttribute('aria-checked') === 'true';
+        setSwitch(sw, !on);
+        return;
+      }
+      const btn = e.target.closest('[data-consent-action]');
+      if (!btn) return;
+      const a = btn.dataset.consentAction;
+      if (a === 'close') closeModal();
+      else if (a === 'accept') { write({ maps: true }); closeModal(); hideBanner(); }
+      else if (a === 'reject') { write({ maps: false }); closeModal(); hideBanner(); }
+      else if (a === 'save') {
+        const prefs = {};
+        el.querySelectorAll('[data-switch]').forEach(s => {
+          prefs[s.dataset.switch] = s.getAttribute('aria-checked') === 'true';
+        });
+        write(prefs);
+        closeModal();
+        hideBanner();
+      }
+    });
+
+    el.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    modalEl = el;
+    return el;
+  }
+
+  function setSwitch(btn, on) {
+    btn.setAttribute('aria-checked', on ? 'true' : 'false');
+    const group = btn.closest('.cc-group');
+    if (group) group.dataset.on = on ? 'true' : 'false';
+  }
+
+  function syncModalState() {
+    const prefs = current();
+    modalEl.querySelectorAll('[data-switch]').forEach(sw => {
+      const key = sw.dataset.switch;
+      const required = sw.getAttribute('aria-disabled') === 'true';
+      setSwitch(sw, required ? true : !!prefs[key]);
+    });
+  }
+
+  function openModal(opts) {
+    modalReturnFocus = (opts && opts.returnFocus) || document.activeElement;
+    buildModal();
+    syncModalState();
+    document.body.classList.add('cookie-modal-open');
+    requestAnimationFrame(() => modalEl.classList.add('is-open'));
+    setTimeout(() => {
+      const first = modalEl.querySelector('.cookie-modal__close');
+      if (first) first.focus();
+    }, 60);
+  }
+
+  function closeModal() {
+    if (!modalEl) return;
+    modalEl.classList.remove('is-open');
+    document.body.classList.remove('cookie-modal-open');
+    if (modalReturnFocus && typeof modalReturnFocus.focus === 'function') {
+      try { modalReturnFocus.focus(); } catch (_) {}
+    }
+  }
+
+  /* ---- Wire footer triggers (delegation so links in any page work) ---- */
+  document.addEventListener('click', e => {
+    const trigger = e.target.closest('[data-consent-open]');
+    if (!trigger) return;
+    e.preventDefault();
+    openModal({ returnFocus: trigger });
+  });
+
+  /* ---- Map gate "accept" button (inside .seu-map__gate) ---- */
+  document.addEventListener('click', e => {
+    const btn = e.target.closest('[data-consent-accept-maps]');
+    if (!btn) return;
+    e.preventDefault();
+    write({ maps: true });
+    hideBanner();
+  });
+
+  /* ---- Public API ---- */
+  window.EDCConsent = {
+    get: current,
+    set: write,
+    open: openModal,
+    accept: () => write({ maps: true }),
+    reject: () => write({ maps: false }),
+    on: fn => { if (typeof fn === 'function') listeners.add(fn); return () => listeners.delete(fn); }
+  };
+
+  /* ---- Boot ---- */
+  function boot() {
+    const stored = read();
+    applyMapGate(stored || DEFAULT);
+    if (!stored) {
+      setTimeout(showBanner, 650);
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+})();

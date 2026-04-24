@@ -159,13 +159,19 @@
             </div>
           </div>
           <div class="seu-detail__map reveal">
-            <div class="seu-map">
+            <div class="seu-map" data-consent-blocked="true">
               <iframe
                 title="Mapa — Estudi Dental Carrera, Carrer Major 74-76, 25007 Lleida"
-                src="https://www.google.com/maps?q=Carrer+Major+74,+25007+Lleida,+Spain&z=16&output=embed"
+                data-cookie-src="https://www.google.com/maps?q=Carrer+Major+74,+25007+Lleida,+Spain&z=16&output=embed"
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
                 allowfullscreen></iframe>
+              <div class="seu-map__gate" role="group" aria-label="Consentiment per carregar el mapa">
+                <h3 class="seu-map__gate-title">Mapa bloquejat</h3>
+                <p class="seu-map__gate-text">Per veure el mapa cal acceptar les cookies de Google Maps. També pots obrir l'adreça al teu aplicatiu de mapes preferit.</p>
+                <button type="button" class="cc-btn cc-btn--primary seu-map__gate-btn" data-consent-accept-maps>Activar mapa</button>
+                <a href="https://maps.google.com/?q=Carrer+Major+74-76,+25007+Lleida" target="_blank" rel="noopener" class="cc-btn cc-btn--link">Obrir a Google Maps →</a>
+              </div>
               <a href="https://maps.google.com/?q=Carrer+Major+74-76,+25007+Lleida" target="_blank" rel="noopener" class="seu-map__cta">Com arribar-hi →</a>
             </div>
           </div>
@@ -181,13 +187,19 @@
       <div class="container">
         <div class="seu-detail__grid seu-detail__grid--reverse">
           <div class="seu-detail__map reveal">
-            <div class="seu-map">
+            <div class="seu-map" data-consent-blocked="true">
               <iframe
                 title="Mapa — Estudi Dental Tremp, Carrer Montllobar 22, 25620 Tremp"
-                src="https://www.google.com/maps?q=Carrer+Montllobar+22,+25620+Tremp,+Lleida,+Spain&z=16&output=embed"
+                data-cookie-src="https://www.google.com/maps?q=Carrer+Montllobar+22,+25620+Tremp,+Lleida,+Spain&z=16&output=embed"
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
                 allowfullscreen></iframe>
+              <div class="seu-map__gate" role="group" aria-label="Consentiment per carregar el mapa">
+                <h3 class="seu-map__gate-title">Mapa bloquejat</h3>
+                <p class="seu-map__gate-text">Per veure el mapa cal acceptar les cookies de Google Maps. També pots obrir l'adreça al teu aplicatiu de mapes preferit.</p>
+                <button type="button" class="cc-btn cc-btn--primary seu-map__gate-btn" data-consent-accept-maps>Activar mapa</button>
+                <a href="https://maps.google.com/?q=Carrer+Montllobar+22,+25620+Tremp" target="_blank" rel="noopener" class="cc-btn cc-btn--link">Obrir a Google Maps →</a>
+              </div>
               <a href="https://maps.google.com/?q=Carrer+Montllobar+22,+25620+Tremp" target="_blank" rel="noopener" class="seu-map__cta">Com arribar-hi →</a>
             </div>
           </div>
@@ -385,6 +397,7 @@
           <a href="privacitat.html">Política de privacitat</a>
           <a href="avis-legal.html">Avís legal</a>
           <a href="cookies.html">Cookies</a>
+          <button type="button" class="footer__consent-btn" data-consent-open>Prefer&egrave;ncies de cookies</button>
         </div>
       </div>
     </div>
