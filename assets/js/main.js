@@ -2,18 +2,6 @@
    ESTUDI DENTAL CARRERA — Main JS
    ============================================================ */
 
-/* ---------- MOTION OVERRIDE ----------
-   Test hooks for animation behavior, applied to <html> before anything
-   else runs so CSS can react on first paint.
-     ?motion=force → ignore prefers-reduced-motion, animate everything
-     ?motion=off   → force reduced-motion behavior
-*/
-(function applyMotionOverride() {
-  const p = new URLSearchParams(window.location.search).get('motion');
-  if (p === 'force') document.documentElement.setAttribute('data-motion', 'force');
-  else if (p === 'off') document.documentElement.setAttribute('data-motion', 'off');
-})();
-
 /* ---------- NAV ---------- */
 const nav = document.getElementById('nav');
 const hero = document.querySelector('.hero') || document.querySelector('.page-hero:not(.page-hero--light)');
@@ -218,14 +206,7 @@ document.querySelectorAll('.team-card').forEach(card => {
   const prevBtn  = root.querySelector('[data-testimonials-prev]');
   const nextBtn  = root.querySelector('[data-testimonials-next]');
 
-  // Consult the doc-level override set at page load (?motion=force/off),
-  // falling back to the OS preference.
-  const motionOverride = document.documentElement.getAttribute('data-motion');
-  const reducedMotion = motionOverride === 'force'
-    ? false
-    : motionOverride === 'off'
-      ? true
-      : window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const AUTOPLAY_MS = 6500;
   let current = 0;
   let timer = null;
