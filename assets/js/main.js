@@ -191,12 +191,12 @@ document.querySelectorAll('.team-card').forEach(card => {
   });
 });
 
-/* ---------- TESTIMONIALS SLIDER ---------- */
+/* ---------- TESTIMONIALS (3D stage with Motion One springs) ---------- */
 (function initTestimonials() {
   const root = document.querySelector('[data-testimonials]');
   if (!root) return;
   const track = root.querySelector('[data-testimonials-track]');
-  const slides = track.querySelectorAll('.testimonial');
+  const slides = Array.from(track.querySelectorAll('.testimonial'));
   const total = slides.length;
   if (!total) return;
 
@@ -210,6 +210,103 @@ document.querySelectorAll('.team-card').forEach(card => {
   const AUTOPLAY_MS = 6500;
   let current = 0;
   let timer = null;
+
+  // Motion One — loaded via CDN as a global `motion` object. Degrade to
+  // instant positioning if the script failed to load.
+  const motionLib = (typeof window !== 'undefined') ? window.motion : null;
+  const animate = motionLib && motionLib.animate;
+
+  // Viewport-driven pose presets so narrow screens read cleanly.
+  function poses() {
+    const w = window.innerWidth;
+    if (w <= 480) {
+      return {
+        center: { x: '0%',   z: 0,    rotateY: 0,    scale: 1,    opacity: 1 },
+        right:  { x: '0%',   z: -260, rotateY: 0,    scale: 0.78, opacity: 0 },
+        left:   { x: '0%',   z: -260, rotateY: 0,    scale: 0.78, opacity: 0 },
+        hidden: { x: '0%',   z: -320, rotateY: 0,    scale: 0.7,  opacity: 0 }
+      };
+    }
+    if (w <= 720) {
+      return {
+        center: { x: '0%',   z: 0,    rotateY: 0,    scale: 1,    opacity: 1 },
+        right:  { x: '44%',  z: -220, rotateY: -26,  scale: 0.78, opacity: 0.28 },
+        left:   { x: '-44%', z: -220, rotateY: 26,   scale: 0.78, opacity: 0.28 },
+        hidden: { x: '0%',   z: -320, rotateY: 0,    scale: 0.7,  opacity: 0 }
+      };
+    }
+    return {
+      center: { x: '0%',   z: 0,    rotateY: 0,    scale: 1,    opacity: 1 },
+      right:  { x: '52%',  z: -180, rotateY: -22,  scale: 0.84, opacity: 0.42 },
+      left:   { x: '-52%', z: -180, rotateY: 22,   scale: 0.84, opacity: 0.42 },
+      hidden: { x: '0%',   z: -320, rotateY: 0,    scale: 0.7,  opacity: 0 }
+    };
+  }
+
+  function posFor(diff) {
+    if (diff === 0) return 'center';
+    if (diff === 1) return 'right';
+    if (diff === -1) return 'left';
+    return 'hidden';
+  }
+
+  // Spring config — stiff enough to feel decisive, damped enough to not
+  // oscillate past the pose. Stagger sends waves through the stack.
+  const SPRING = { type: 'spring', stiffness: 190, damping: 24, mass: 0.9 };
+  const FAST_TWEEN = { duration: 0.32, easing: [0.23, 1, 0.32, 1] };
+
+  function applyPose(el, target, delay = 0) {
+    if (reducedMotion) {
+      Object.assign(el.style, {
+        transform: `translate3d(${target.x}, 0, ${target.z}px) rotateY(${target.rotateY}deg) scale(${target.scale})`,
+        opacity: target.opacity
+      });
+      return;
+    }
+    if (!animate) {
+      // No Motion One — fall back to a CSS transition baked on-the-fly.
+      el.style.transition = 'transform 720ms cubic-bezier(0.23, 1, 0.32, 1), opacity 520ms ease-out';
+      el.style.transform = `translate3d(${target.x}, 0, ${target.z}px) rotateY(${target.rotateY}deg) scale(${target.scale})`;
+      el.style.opacity = target.opacity;
+      return;
+    }
+    // Opacity eases; pose springs. Keeping them on separate curves prevents
+    // the fade from visibly lagging the physics.
+    animate(el, {
+      x: target.x,
+      z: target.z + 'px',
+      rotateY: target.rotateY + 'deg',
+      scale: target.scale
+    }, { ...SPRING, delay });
+    animate(el, { opacity: target.opacity }, { ...FAST_TWEEN, delay });
+  }
+
+  function go(i) {
+    current = (i + total) % total;
+    const p = poses();
+    slides.forEach((s, j) => {
+      let diff = j - current;
+      if (diff > total / 2) diff -= total;
+      else if (diff < -total / 2) diff += total;
+      const pos = posFor(diff);
+      s.setAttribute('data-pos', pos);
+      s.setAttribute('aria-hidden', pos !== 'center');
+      s.tabIndex = pos === 'center' ? 0 : -1;
+      // Small stagger so the wave reads as a physical swap, not a mass move.
+      const delay = pos === 'center' ? 0 : (pos === 'hidden' ? 0 : 0.04);
+      applyPose(s, p[pos], delay);
+    });
+    dots.forEach((d, j) => d.classList.toggle('is-active', j === current));
+    if (idxEl) idxEl.textContent = String(current + 1).padStart(2, '0');
+  }
+
+  // Side-card clicks jump directly to that card
+  slides.forEach((s, j) => {
+    s.addEventListener('click', () => {
+      const pos = s.getAttribute('data-pos');
+      if (pos === 'left' || pos === 'right') { go(j); restart(); }
+    });
+  });
 
   // Build dots
   const dots = [];
@@ -226,35 +323,11 @@ document.querySelectorAll('.team-card').forEach(card => {
 
   if (totalEl) totalEl.textContent = String(total).padStart(2, '0');
 
-  function posFor(diff) {
-    if (diff === 0) return 'center';
-    if (diff === 1) return 'right';
-    if (diff === -1) return 'left';
-    return 'hidden';
-  }
-
-  function go(i) {
-    current = (i + total) % total;
-    slides.forEach((s, j) => {
-      let diff = j - current;
-      // circular shortest-path diff
-      if (diff > total / 2) diff -= total;
-      else if (diff < -total / 2) diff += total;
-      const pos = posFor(diff);
-      s.setAttribute('data-pos', pos);
-      s.setAttribute('aria-hidden', pos !== 'center');
-      s.tabIndex = pos === 'center' ? 0 : -1;
-    });
-    dots.forEach((d, j) => d.classList.toggle('is-active', j === current));
-    if (idxEl) idxEl.textContent = String(current + 1).padStart(2, '0');
-  }
-
-  // Side-card clicks jump directly to that card
-  slides.forEach((s, j) => {
-    s.addEventListener('click', () => {
-      const pos = s.getAttribute('data-pos');
-      if (pos === 'left' || pos === 'right') { go(j); restart(); }
-    });
+  // Recompute poses on resize so the stage reflows gracefully.
+  let resizeTimer = null;
+  window.addEventListener('resize', () => {
+    if (resizeTimer) clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => go(current), 120);
   });
 
   function next() { go(current + 1); }

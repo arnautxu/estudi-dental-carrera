@@ -675,12 +675,6 @@ input, select, textarea { font:inherit; }
 .testimonials__link:hover { color: var(--beix-deep); border-color: var(--beix-deep); }
 
 /* 3D floating stage */
-@property --fy {
-  syntax: '<length>';
-  inherits: false;
-  initial-value: 0px;
-}
-
 .testimonials__slider { position: relative; }
 .testimonials__viewport {
   position: relative;
@@ -698,48 +692,35 @@ input, select, textarea { font:inherit; }
   width: 100%;
 }
 
+/* Pose is animated imperatively by Motion One (transform + opacity).
+   The CSS only sets the anchor (left/top + translate -50% -50%) and
+   the visual skin of the card. */
 .testimonial {
-  --tx: 0%;
-  --tz: 0px;
-  --ry: 0deg;
-  --sc: 1;
-  --op: 0;
-  --fy: 0px;
-  --shadow: 0 30px 70px -30px rgba(42, 38, 35, 0.35),
-            0 8px 20px -8px rgba(42, 38, 35, 0.15);
-
   position: absolute;
   left: 50%;
   top: 50%;
   width: min(92%, 540px);
-
-  /* Composited 3D position — distinct properties so a keyframe on --fy
-     only affects the vertical offset without clobbering the pose. */
-  translate: calc(-50% + var(--tx)) calc(-50% + var(--fy)) var(--tz);
-  rotate: 0 1 0 var(--ry);
-  scale: var(--sc);
-  opacity: var(--op);
+  translate: -50% -50%;
+  opacity: 0;                 /* Motion raises this on first go() */
+  will-change: transform, opacity;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
 
   background: var(--white);
   border: 1px solid var(--beix-xlight);
   border-radius: var(--radius-xl);
   padding: clamp(32px, 4vw, 56px) clamp(28px, 4.4vw, 64px);
-  box-shadow: var(--shadow);
+  box-shadow:
+    0 30px 70px -30px rgba(42, 38, 35, 0.35),
+    0 8px 20px -8px rgba(42, 38, 35, 0.15);
   display: flex;
   flex-direction: column;
   gap: 1.75rem;
   pointer-events: none;
-  visibility: hidden;
-  transform-style: preserve-3d;
-  transition:
-    translate 820ms cubic-bezier(0.23, 1, 0.32, 1),
-    rotate 820ms cubic-bezier(0.23, 1, 0.32, 1),
-    scale 820ms cubic-bezier(0.23, 1, 0.32, 1),
-    opacity 520ms ease-out,
-    box-shadow 520ms ease-out;
+  transition: box-shadow 520ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-/* Decorative quote glyph, sitting on the card's near face */
+/* Decorative quote glyph */
 .testimonial::before {
   content: "\201C";
   position: absolute;
@@ -751,58 +732,36 @@ input, select, textarea { font:inherit; }
   color: var(--beix-xlight);
   z-index: 0;
   pointer-events: none;
-  transition: color 520ms ease-out;
 }
 .testimonial > * { position: relative; z-index: 1; }
 
-/* Position states */
-.testimonial[data-pos="center"] {
-  --tx: 0%;
-  --tz: 0px;
-  --ry: 0deg;
-  --sc: 1;
-  --op: 1;
-  visibility: visible;
-  pointer-events: auto;
-  animation: testimonialFloat 7.5s cubic-bezier(0.45, 0, 0.55, 1) infinite;
-}
+/* Hit-testing + cursor per logical position.
+   These toggles are set by JS; Motion owns the transform itself. */
+.testimonial[data-pos="center"] { pointer-events: auto; }
+.testimonial[data-pos="left"],
+.testimonial[data-pos="right"]  { pointer-events: auto; cursor: pointer; }
+.testimonial[data-pos="hidden"] { pointer-events: none; visibility: hidden; }
+.testimonial[data-pos="left"],
 .testimonial[data-pos="right"] {
-  --tx: 52%;
-  --tz: -180px;
-  --ry: -22deg;
-  --sc: 0.84;
-  --op: 0.42;
-  --shadow: 0 20px 40px -20px rgba(42, 38, 35, 0.22);
-  visibility: visible;
-  pointer-events: auto;
-  cursor: pointer;
-}
-.testimonial[data-pos="left"] {
-  --tx: -52%;
-  --tz: -180px;
-  --ry: 22deg;
-  --sc: 0.84;
-  --op: 0.42;
-  --shadow: 0 20px 40px -20px rgba(42, 38, 35, 0.22);
-  visibility: visible;
-  pointer-events: auto;
-  cursor: pointer;
-}
-.testimonial[data-pos="hidden"] {
-  --tx: 0%;
-  --tz: -320px;
-  --ry: 0deg;
-  --sc: 0.7;
-  --op: 0;
-  visibility: hidden;
+  box-shadow: 0 20px 40px -20px rgba(42, 38, 35, 0.22);
 }
 
-.testimonial[data-pos="right"]:hover,
-.testimonial[data-pos="left"]:hover { --op: 0.7; }
+/* Float carrier — sits inside the card, drifts vertically forever.
+   Separate element so it doesn't collide with Motion's pose transform. */
+.testimonial__inner {
+  display: flex;
+  flex-direction: column;
+  gap: inherit;
+  width: 100%;
+  animation: testimonialFloat 7.2s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  will-change: transform;
+}
+.testimonial[data-pos="center"] .testimonial__inner { animation-play-state: running; }
+.testimonial:not([data-pos="center"]) .testimonial__inner { animation-play-state: paused; }
 
 @keyframes testimonialFloat {
-  0%, 100% { --fy: 0px; }
-  50%      { --fy: -10px; }
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
 }
 
 .testimonial__quote {
@@ -900,19 +859,10 @@ input, select, textarea { font:inherit; }
 @media (max-width: 720px) {
   .testimonials__track { height: clamp(420px, 88vw, 520px); }
   .testimonial { width: min(86%, 440px); }
-  .testimonial[data-pos="right"] { --tx: 44%; --tz: -220px; --ry: -26deg; --sc: 0.78; --op: 0.28; }
-  .testimonial[data-pos="left"]  { --tx: -44%; --tz: -220px; --ry: 26deg; --sc: 0.78; --op: 0.28; }
-}
-@media (max-width: 480px) {
-  .testimonial[data-pos="right"],
-  .testimonial[data-pos="left"] { --op: 0; visibility: hidden; pointer-events: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .testimonial[data-pos="center"] { animation: none; }
-  .testimonial {
-    transition: opacity 200ms linear;
-  }
+  .testimonial__inner { animation: none; }
 }
 
 /* Controls */
