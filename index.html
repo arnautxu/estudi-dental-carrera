@@ -177,48 +177,51 @@
             <line class="hero-constellation__line" x1="1480" y1="540" x2="280" y2="780" />
           </g>
 
-          <!-- Icon nodes: each is a small g transformed to its node position. -->
+          <!-- Icon nodes: outer <g> holds the translate (SVG attr),
+               inner .hero-constellation__node receives CSS transforms
+               (opacity + scale). Splitting avoids the CSS-transform-
+               replaces-attribute bug on SVG elements. -->
           <g class="hero-constellation__nodes">
             <!-- 1. Tooth — top-left -->
-            <g class="hero-constellation__node" transform="translate(180 160)">
+            <g transform="translate(180 160)"><g class="hero-constellation__node">
               <path d="M 0,-22 C -10,-22 -16,-18 -16,-10 C -16,0 -14,12 -8,20 L -4,14 L 0,20 L 4,14 L 8,20 C 14,12 16,0 16,-10 C 16,-18 10,-22 0,-22 Z" />
-            </g>
+            </g></g>
             <!-- 2. Crown — top-right -->
-            <g class="hero-constellation__node" transform="translate(1400 180)">
+            <g transform="translate(1400 180)"><g class="hero-constellation__node">
               <path d="M -14,-10 Q -14,-20 0,-20 Q 14,-20 14,-10 L 14,8 Q 0,12 -14,8 Z" />
               <line x1="-18" y1="12" x2="18" y2="12" stroke-dasharray="2 2" opacity="0.6" />
-            </g>
+            </g></g>
             <!-- 3. Implant — mid-right -->
-            <g class="hero-constellation__node" transform="translate(1480 540)">
+            <g transform="translate(1480 540)"><g class="hero-constellation__node">
               <rect x="-3" y="-22" width="6" height="5" />
               <path d="M -6,-12 L -4,14 Q 0,18 4,14 L 6,-12 Z" />
               <line x1="-4" y1="-6" x2="4" y2="-6" />
               <line x1="-4" y1="0" x2="4" y2="0" />
               <line x1="-4" y1="6" x2="4" y2="6" />
-            </g>
+            </g></g>
             <!-- 4. Dental arch / braces — bottom-right -->
-            <g class="hero-constellation__node" transform="translate(1280 800)">
+            <g transform="translate(1280 800)"><g class="hero-constellation__node">
               <path d="M -22,-6 C -22,-6 -18,14 0,18 C 18,14 22,-6 22,-6" />
               <circle class="hero-constellation__dot" cx="-14" cy="0" r="1.6" fill="currentColor" stroke="none" />
               <circle class="hero-constellation__dot" cx="0" cy="12" r="1.6" fill="currentColor" stroke="none" />
               <circle class="hero-constellation__dot" cx="14" cy="0" r="1.6" fill="currentColor" stroke="none" />
-            </g>
+            </g></g>
             <!-- 5. Aligner — bottom-center -->
-            <g class="hero-constellation__node" transform="translate(780 820)">
+            <g transform="translate(780 820)"><g class="hero-constellation__node">
               <path d="M -20,-8 Q -20,-20 0,-20 Q 20,-20 20,-8 L 20,10 Q 10,16 0,12 Q -10,16 -20,10 Z" />
-            </g>
+            </g></g>
             <!-- 6. Molar cross-section — bottom-left -->
-            <g class="hero-constellation__node" transform="translate(280 780)">
+            <g transform="translate(280 780)"><g class="hero-constellation__node">
               <path d="M -15,-16 C -16,-20 -10,-22 0,-22 C 10,-22 16,-20 15,-16 L 13,8 L 10,18 L 6,12 L 0,18 L -6,12 L -10,18 L -13,8 Z" />
               <path d="M -4,-4 Q 0,-8 4,-4" stroke-dasharray="1.5 2" opacity="0.6" />
-            </g>
+            </g></g>
             <!-- 7. Radiography / X-ray rings — mid-left -->
-            <g class="hero-constellation__node" transform="translate(140 460)">
+            <g transform="translate(140 460)"><g class="hero-constellation__node">
               <circle class="hero-constellation__dot" cx="0" cy="0" r="2" fill="currentColor" stroke="none" />
               <path d="M -10,-2 A 10,10 0 0,1 10,-2" />
               <path d="M -18,-2 A 18,18 0 0,1 18,-2" />
               <path d="M -26,-2 A 26,26 0 0,1 26,-2" opacity="0.55" />
-            </g>
+            </g></g>
           </g>
         </svg>
       </div>
@@ -271,12 +274,14 @@
           <div class="about__text">
             <span class="label reveal">Com treballem</span>
             <h2 class="about__heading reveal">Explicar-ho tot<br /><em>abans</em> de fer res</h2>
-            <p class="about__body reveal">Estudi Dental Carrera és una clínica familiar amb dues seus, Lleida i Tremp, on apliquem una odontologia conservadora: mantenir peça pròpia sempre que sigui possible i intervenir només quan és estrictament necessari.</p>
+            <p class="about__body reveal">Apliquem una odontologia conservadora: mantenim la peça pròpia sempre que és possible i intervenim només quan és estrictament necessari. Som una clínica familiar amb dues seus, Lleida i Tremp, i un sol equip al darrere.</p>
             <p class="about__body reveal">Per això la primera visita és, sobretot, una conversa: explorem, diagnostiquem i t'expliquem amb claredat què passa, quines opcions hi ha i què recomanem, abans que decideixis.</p>
             <div class="about__evidence reveal">
               <blockquote class="about__evidence-quote">
                 Tot el que s'explica abans és una explicació; si s'explica després, és una excusa.
-                <cite class="about__evidence-attrib">Dra. Yasmin El Messaoudi · Seu Tremp</cite>
+                <footer class="about__evidence-attrib">
+                  <cite>Dra. Yasmin El Messaoudi</cite> · Seu Tremp
+                </footer>
               </blockquote>
               <div class="about__evidence-figures">
                 <div class="evidence-fig">
@@ -291,25 +296,41 @@
             </div>
             <a href="equip.html" class="btn btn--outline reveal" style="margin-top:2rem">Coneix el nostre equip →</a>
           </div>
-          <div class="about__visual reveal">
-            <div class="about__card about__card--1">
-              <div class="about__card-logo">
-                <img src="assets/img/logos/icona.png" alt="" class="about__logo-img" width="264" height="184" loading="lazy" decoding="async" />
-                <div class="about__card-brand">
-                  <span>Estudi Dental</span>
-                  <strong>Carrera</strong>
+          <aside class="about__process reveal" aria-labelledby="about-process-title">
+            <span class="label about__process-label">Què passa a la primera visita</span>
+            <h3 id="about-process-title" class="about__process-title">Quatre moments, <em>sense pressa</em></h3>
+            <ol class="about__process-steps">
+              <li class="about__process-step">
+                <span class="about__process-num" aria-hidden="true">01</span>
+                <div class="about__process-body">
+                  <h4>Exploració</h4>
+                  <p>Revisem peces, genives, oclusió i articulació temporomandibular. Sense comprar ni res per endavant.</p>
                 </div>
-              </div>
-              <p class="about__quote">"Creem una experiència de confiança i benestar."</p>
-            </div>
-            <div class="about__card about__card--2">
-              <div class="about__values">
-                <div class="value-item"><span class="value-item__icon" aria-hidden="true">◆</span><span>Tecnologia avançada</span></div>
-                <div class="value-item"><span class="value-item__icon" aria-hidden="true">◆</span><span>Tracte humà i càlid</span></div>
-                <div class="value-item"><span class="value-item__icon" aria-hidden="true">◆</span><span>Identitat sofisticada i moderna</span></div>
-              </div>
-            </div>
-          </div>
+              </li>
+              <li class="about__process-step">
+                <span class="about__process-num" aria-hidden="true">02</span>
+                <div class="about__process-body">
+                  <h4>Diagnòstic</h4>
+                  <p>Radiografia digital, escàner intraoral i, si cal, estudi funcional d'ATM. Recollim evidència abans de proposar.</p>
+                </div>
+              </li>
+              <li class="about__process-step">
+                <span class="about__process-num" aria-hidden="true">03</span>
+                <div class="about__process-body">
+                  <h4>Explicació</h4>
+                  <p>Et mostrem què veiem i quines opcions hi ha, amb els seus límits. Les preguntes es responen aquí, no després.</p>
+                </div>
+              </li>
+              <li class="about__process-step">
+                <span class="about__process-num" aria-hidden="true">04</span>
+                <div class="about__process-body">
+                  <h4>Pla</h4>
+                  <p>Pressupost detallat i temps de tractament definit per escrit. Decideixes tu, amb la informació completa.</p>
+                </div>
+              </li>
+            </ol>
+            <p class="about__process-foot">La primera visita és de pagament. És una decisió de principis: el temps que et dediquem val el mateix que qualsevol altra visita.</p>
+          </aside>
         </div>
       </div>
     </section>

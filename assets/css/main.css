@@ -449,32 +449,55 @@ input, select, textarea { font:inherit; }
 .about__heading { font-family:var(--font-display); font-size:clamp(2.5rem,4.5vw,3.8rem); font-weight:400; line-height:1.1; color:var(--ink); margin-bottom:1.75rem; }
 .about__heading em { font-style:italic; color:var(--beix-text); }
 .about__body { font-size:1rem; line-height:1.8; color:var(--gris); margin-bottom:1.25rem; max-width:480px; }
-.about__stats { display:flex; gap:2.5rem; margin-top:2.5rem; padding-top:2rem; border-top:1px solid var(--beix-xlight); }
-.stat { display:flex; flex-direction:column; gap:4px; }
-.stat__num { font-family:var(--font-display); font-size:2rem; font-weight:500; color:var(--beix-deep); line-height:1; }
-.stat__label { font-size:0.72rem; font-weight:400; letter-spacing:.06em; color:var(--gris); text-transform:uppercase; }
 
-.about__visual { display:flex; flex-direction:column; gap:1rem; }
-.about__card { border-radius:var(--radius-lg); overflow:hidden; }
-.about__card--1 { background:var(--ink); padding:clamp(28px,4vw,48px); display:flex; flex-direction:column; gap:1.5rem; position:relative; }
-.about__card--1::before {
-  content:'\201C';
-  position:absolute; font-family:var(--font-display);
-  font-size:240px; line-height:0.8;
-  color:rgba(255,255,255,0.04);
-  right:-8px; bottom:-10px;
-  pointer-events:none; user-select:none;
+/* Right column: first-visit workflow. Editorial list — no card
+   chrome. Numbered steps carry the predictability principle from
+   PRODUCT.md (Principle 5) as visible evidence, not a claim. */
+.about__process {
+  position:relative;
+  padding:clamp(28px,3.5vw,44px);
+  background:var(--white);
+  border:1px solid var(--beix-xlight);
+  border-radius:var(--radius-lg);
 }
-.about__card-logo { display:flex; align-items:center; gap:12px; }
-.about__logo-img { width:40px; height:40px; object-fit:contain; filter:brightness(0) invert(1); }
-.about__card-brand { display:flex; flex-direction:column; line-height:1.2; }
-.about__card-brand span { font-size:0.6rem; font-weight:300; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.4); }
-.about__card-brand strong { font-family:var(--font-display); font-size:1.05rem; font-weight:500; color:var(--white); }
-.about__quote { font-family:var(--font-display); font-style:italic; font-size:clamp(1.1rem,2vw,1.35rem); color:var(--white); line-height:1.5; }
-.about__card--2 { background:var(--cream); padding:28px 32px; }
-.about__values { display:flex; flex-direction:column; gap:12px; }
-.value-item { display:flex; align-items:center; gap:12px; font-size:0.9rem; font-weight:400; color:var(--gris-dark); }
-.value-item__icon { color:var(--beix-text); font-size:0.5rem; }
+.about__process-label { display:block; margin-bottom:0.9rem; }
+.about__process-title {
+  font-family:var(--font-display); font-weight:400;
+  font-size:clamp(1.5rem,2.4vw,1.9rem); line-height:1.15;
+  color:var(--ink); margin-bottom:1.75rem;
+}
+.about__process-title em { font-style:italic; color:var(--beix-text); }
+.about__process-steps { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; }
+.about__process-step {
+  display:grid; grid-template-columns:auto 1fr; gap:1.25rem;
+  padding:1.25rem 0;
+  border-top:1px solid var(--beix-xlight);
+}
+.about__process-step:first-child { border-top:none; padding-top:0; }
+.about__process-step:last-child { padding-bottom:0.25rem; }
+.about__process-num {
+  font-family:var(--font-display); font-weight:400;
+  font-size:1rem; letter-spacing:0.02em;
+  color:var(--beix-text); line-height:1.4;
+  padding-top:0.15rem;
+}
+.about__process-body h4 {
+  font-family:var(--font-display); font-weight:500;
+  font-size:1.05rem; line-height:1.2;
+  color:var(--ink); margin:0 0 0.4rem;
+}
+.about__process-body p {
+  font-size:0.92rem; line-height:1.6;
+  color:var(--gris); margin:0;
+  max-width:38ch;
+}
+.about__process-foot {
+  margin-top:1.5rem; padding-top:1.25rem;
+  border-top:1px solid var(--beix-xlight);
+  font-size:0.82rem; line-height:1.55;
+  color:var(--beix-text); font-style:italic;
+  max-width:44ch;
+}
 
 /* ============================================================
    HOME — SERVICES GRID
@@ -1472,7 +1495,6 @@ input, select, textarea { font:inherit; }
   .nav__links, .nav__cta { display:none; }
   .nav__burger { display:flex; }
   .about__grid { grid-template-columns:1fr; }
-  .about__visual { order:-1; }
   .team-teaser__inner { grid-template-columns:1fr; }
   .team-teaser__photo-wrap { order:-1; }
   .team-teaser__photo-card { max-width:280px; }
@@ -2212,7 +2234,7 @@ body.cookie-modal-open { overflow: hidden; }
   position:absolute; inset:0;
   width:100%; height:100%;
   pointer-events:none;
-  color:rgba(193,178,162,0.22); /* --beix at low alpha */
+  color:rgba(193,178,162,0.32); /* --beix at low alpha, reads over the gradient */
   z-index:1;
 }
 
@@ -2238,9 +2260,12 @@ body.cookie-modal-open { overflow: hidden; }
   to   { stroke-dashoffset: 0; }
 }
 
-/* Icon nodes: pop in after lines finish drawing. transform-box
-   fill-box keeps the scale origin at each node's local 0,0
-   (set by the group's transform), not the SVG viewport origin. */
+/* Icon nodes: pop in after lines finish drawing. Each node is
+   wrapped in an outer <g transform="translate(...)"> that handles
+   positioning; the inner .hero-constellation__node has no SVG
+   transform attribute, so the CSS transform below doesn't conflict.
+   transform-box fill-box anchors the scale to the node's own bbox
+   center (its local 0,0), not the SVG viewport. */
 .hero-constellation__node {
   opacity: 0;
   transform: scale(0.55);
@@ -2248,13 +2273,16 @@ body.cookie-modal-open { overflow: hidden; }
   transform-origin: center;
   animation: heroConstellationNodePop 720ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
 }
-.hero-constellation__node:nth-of-type(1) { animation-delay: 1400ms; }
-.hero-constellation__node:nth-of-type(2) { animation-delay: 1490ms; }
-.hero-constellation__node:nth-of-type(3) { animation-delay: 1580ms; }
-.hero-constellation__node:nth-of-type(4) { animation-delay: 1670ms; }
-.hero-constellation__node:nth-of-type(5) { animation-delay: 1760ms; }
-.hero-constellation__node:nth-of-type(6) { animation-delay: 1850ms; }
-.hero-constellation__node:nth-of-type(7) { animation-delay: 1940ms; }
+/* Stagger via the positioning wrappers (direct children of
+   .hero-constellation__nodes), since each .hero-constellation__node
+   is now the only child of its own wrapper. */
+.hero-constellation__nodes > g:nth-of-type(1) .hero-constellation__node { animation-delay: 1400ms; }
+.hero-constellation__nodes > g:nth-of-type(2) .hero-constellation__node { animation-delay: 1490ms; }
+.hero-constellation__nodes > g:nth-of-type(3) .hero-constellation__node { animation-delay: 1580ms; }
+.hero-constellation__nodes > g:nth-of-type(4) .hero-constellation__node { animation-delay: 1670ms; }
+.hero-constellation__nodes > g:nth-of-type(5) .hero-constellation__node { animation-delay: 1760ms; }
+.hero-constellation__nodes > g:nth-of-type(6) .hero-constellation__node { animation-delay: 1850ms; }
+.hero-constellation__nodes > g:nth-of-type(7) .hero-constellation__node { animation-delay: 1940ms; }
 
 @keyframes heroConstellationNodePop {
   from { opacity: 0; transform: scale(0.55); }
@@ -2271,11 +2299,11 @@ body.cookie-modal-open { overflow: hidden; }
    swap to a portrait viewBox would be cleaner but adds a script
    dependency; this keeps the enhancement CSS-only. */
 @media (max-width: 640px) {
-  .hero-constellation { color: rgba(193,178,162,0.18); }
-  /* Hide crown (top-right) and x-ray (mid-left) nodes on mobile
-     along with the interior diagonals that connected through them. */
-  .hero-constellation__node:nth-of-type(2),
-  .hero-constellation__node:nth-of-type(7) { display: none; }
+  .hero-constellation { color: rgba(193,178,162,0.28); }
+  /* Hide crown (top-right wrapper #2) and x-ray (mid-left wrapper #7)
+     plus the two interior diagonals that passed through them. */
+  .hero-constellation__nodes > g:nth-of-type(2),
+  .hero-constellation__nodes > g:nth-of-type(7) { display: none; }
   .hero-constellation__line:nth-of-type(8),
   .hero-constellation__line:nth-of-type(9) { display: none; }
 }
