@@ -7,21 +7,21 @@
   <meta name="description" content="Estudi Dental Carrera. Atenció odontològica de qualitat, propera i de confiança. Dues seus: Carrera i Tremp." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="preload" href="assets/fonts/N27-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/N27-Light.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="assets/css/main.css" />
-  <link rel="icon" type="image/png" href="assets/img/logos/icona.png" />
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/img/logos/favicon.png" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/logos/favicon.svg" />
 </head>
 <body>
+  <a href="#main" class="skip-link">Salta al contingut</a>
 
   <!-- NAV -->
   <header class="nav nav--hero" id="nav">
     <div class="nav__inner">
       <a href="index.html" class="nav__logo">
-        <img src="assets/img/logos/icona.png" class="nav__logo-icon" alt="" />
-        <div class="nav__logo-text">
-          <span class="nav__logo-brand">Estudi Dental</span>
-          <span class="nav__logo-location">Carrera</span>
-        </div>
+        <img src="assets/img/logos/logo-carrera-vertical.png" class="nav__logo-icon" alt="Estudi Dental Carrera" width="163" height="240" fetchpriority="high" />
       </a>
       <nav class="nav__links" aria-label="Navegació principal">
         <a href="index.html" class="active">Inici</a>
@@ -48,7 +48,7 @@
     </nav>
   </div>
 
-  <main>
+  <main id="main">
 
     <!-- HERO -->
     <section class="hero" id="inici">
@@ -127,7 +127,7 @@
           <div class="about__visual reveal">
             <div class="about__card about__card--1">
               <div class="about__card-logo">
-                <img src="assets/img/logos/icona.png" alt="" class="about__logo-img" />
+                <img src="assets/img/logos/icona.png" alt="" class="about__logo-img" width="264" height="184" loading="lazy" decoding="async" />
                 <div class="about__card-brand">
                   <span>Estudi Dental</span>
                   <strong>Carrera</strong>
@@ -137,9 +137,9 @@
             </div>
             <div class="about__card about__card--2">
               <div class="about__values">
-                <div class="value-item"><span class="value-item__icon">◆</span><span>Tecnologia avançada</span></div>
-                <div class="value-item"><span class="value-item__icon">◆</span><span>Tracte humà i càlid</span></div>
-                <div class="value-item"><span class="value-item__icon">◆</span><span>Identitat sofisticada i moderna</span></div>
+                <div class="value-item"><span class="value-item__icon" aria-hidden="true">◆</span><span>Tecnologia avançada</span></div>
+                <div class="value-item"><span class="value-item__icon" aria-hidden="true">◆</span><span>Tracte humà i càlid</span></div>
+                <div class="value-item"><span class="value-item__icon" aria-hidden="true">◆</span><span>Identitat sofisticada i moderna</span></div>
               </div>
             </div>
           </div>
@@ -208,35 +208,18 @@
     <!-- EQUIP TEASER -->
     <section class="team-teaser">
       <div class="container">
-        <div class="team-teaser__inner reveal">
-          <div class="team-teaser__text">
+        <div class="team-teaser__inner">
+          <div class="team-teaser__text reveal">
             <span class="label">El nostre equip</span>
             <h2>Professionals <em>compromesos</em><br />amb el teu somriure</h2>
-            <p>Un equip de dentistes especialistes amb anys d'experiència i formació continuada, dedicats a oferir-te la millor atenció possible.</p>
+            <p>Un equip de dentistes especialistes amb anys d'experiència i formació continuada, dedicats a oferir-te la millor atenció possible en un entorn proper i de confiança.</p>
             <a href="equip.html" class="btn btn--outline" style="margin-top:1.75rem">Coneix l'equip →</a>
           </div>
-          <div class="team-teaser__cards">
-            <div class="team-mini-card reveal" style="--delay:100ms">
-              <div class="team-mini-card__avatar">
-                <span>JC</span>
-              </div>
-              <strong>Dr. J. Carrera</strong>
-              <span>Director i Cirurgià</span>
-            </div>
-            <div class="team-mini-card reveal" style="--delay:200ms">
-              <div class="team-mini-card__avatar">
-                <span>MC</span>
-              </div>
-              <strong>Dra. M. Carrera</strong>
-              <span>Ortodòncia</span>
-            </div>
-            <div class="team-mini-card reveal" style="--delay:300ms">
-              <div class="team-mini-card__avatar">
-                <span>AP</span>
-              </div>
-              <strong>Dra. A. Pérez</strong>
-              <span>Odontopediatria</span>
-            </div>
+          <div class="team-teaser__photo-wrap reveal" style="--delay:120ms">
+            <picture class="team-teaser__photo-card">
+              <source srcset="assets/img/equip-tremp.webp" type="image/webp" />
+              <img src="assets/img/equip-tremp.jpg" alt="L'equip d'Estudi Dental Tremp" width="950" height="1267" loading="lazy" decoding="async" />
+            </picture>
           </div>
         </div>
       </div>
@@ -249,20 +232,16 @@
           <div class="location-card__bg location-card__bg--carrera"></div>
           <div class="location-card__content">
             <div class="location-card__logo">
-              <img src="assets/img/logos/icona.png" class="loc-icon" alt="" style="filter:brightness(0) invert(1);" />
-              <div class="loc-name">
-                <span class="loc-name__estudi">Estudi Dental</span>
-                <span class="loc-name__city">Carrera</span>
-              </div>
+              <img src="assets/img/logos/logo-carrera-vertical.png" class="loc-full-logo" alt="Estudi Dental Carrera" width="163" height="240" loading="lazy" decoding="async" style="filter:brightness(0) invert(1);" />
             </div>
             <div class="location-card__info">
               <div class="loc-detail">
                 <span class="loc-detail__label">Adreça</span>
-                <span class="loc-detail__value">Carrer de la Clínica, 12 · Lleida</span>
+                <span class="loc-detail__value">Carrer Major, 74-76 · 25007 Lleida</span>
               </div>
               <div class="loc-detail">
                 <span class="loc-detail__label">Telèfon</span>
-                <span class="loc-detail__value"><a href="tel:+34973000000">973 000 000</a></span>
+                <span class="loc-detail__value"><a href="tel:+34973268826">973 26 88 26</a></span>
               </div>
               <div class="loc-detail">
                 <span class="loc-detail__label">Horari</span>
@@ -276,16 +255,16 @@
           <div class="location-card__bg location-card__bg--tremp"></div>
           <div class="location-card__content">
             <div class="location-card__logo">
-              <img src="assets/img/logos/logo-tremp-vertical.png" class="loc-full-logo" alt="Estudi Dental Tremp" style="filter:brightness(0) invert(1);" />
+              <img src="assets/img/logos/logo-tremp-vertical.png" class="loc-full-logo" alt="Estudi Dental Tremp" width="163" height="240" loading="lazy" decoding="async" style="filter:brightness(0) invert(1);" />
             </div>
             <div class="location-card__info">
               <div class="loc-detail">
                 <span class="loc-detail__label">Adreça</span>
-                <span class="loc-detail__value">Carrer Major, 28 · 25620 Tremp</span>
+                <span class="loc-detail__value">Carrer Montllobar, 22 · 25620 Tremp</span>
               </div>
               <div class="loc-detail">
                 <span class="loc-detail__label">Telèfon</span>
-                <span class="loc-detail__value"><a href="tel:+34973650000">973 650 000</a></span>
+                <span class="loc-detail__value"><a href="tel:+34650600172">650 60 01 72</a></span>
               </div>
               <div class="loc-detail">
                 <span class="loc-detail__label">Horari</span>
@@ -306,7 +285,7 @@
             <h2>Comença la teva<br /><em>experiència dental</em></h2>
             <p>Primera visita de diagnosi gratuïta. Sense compromís.</p>
           </div>
-          <a href="seus.html#contacte" class="btn btn--dark btn--lg">Reserva la teva cita</a>
+          <a href="seus.html#contacte" class="btn btn--ghost btn--lg">Reserva la teva cita</a>
         </div>
       </div>
     </section>
@@ -319,11 +298,7 @@
       <div class="footer__grid">
         <div class="footer__brand">
           <a href="index.html" class="footer__logo">
-            <img src="assets/img/logos/icona.png" alt="" style="filter:brightness(0) invert(0.7) sepia(1) saturate(0.4);" />
-            <div>
-              <span>Estudi Dental</span>
-              <strong>Carrera</strong>
-            </div>
+            <img src="assets/img/logos/logo-carrera-vertical.png" alt="Estudi Dental Carrera" width="163" height="240" loading="lazy" decoding="async" style="filter:brightness(0) invert(0.72);" />
           </a>
           <p class="footer__tagline">Odontologia d'excel·lència.<br />Dues seus al vostre servei.</p>
         </div>
@@ -340,9 +315,9 @@
         <div class="footer__col">
           <h4>Seu Carrera</h4>
           <ul>
-            <li>Carrer de la Clínica, 12</li>
-            <li>Lleida</li>
-            <li><a href="tel:+34973000000">973 000 000</a></li>
+            <li>Carrer Major, 74-76, 3r 3a</li>
+            <li>25007 Lleida</li>
+            <li><a href="tel:+34973268826">973 26 88 26</a></li>
             <li>Dl–Dv: 9h – 20h</li>
             <li>Ds: 9h – 14h</li>
           </ul>
@@ -350,9 +325,9 @@
         <div class="footer__col">
           <h4>Seu Tremp</h4>
           <ul>
-            <li>Carrer Major, 28</li>
+            <li>Carrer Montllobar, 22 Baixos</li>
             <li>25620 Tremp</li>
-            <li><a href="tel:+34973650000">973 650 000</a></li>
+            <li><a href="tel:+34650600172">650 60 01 72</a></li>
             <li>Dl–Dv: 9h – 19h</li>
           </ul>
         </div>
@@ -360,9 +335,9 @@
       <div class="footer__bottom">
         <p>© 2026 Estudi Dental Carrera. Tots els drets reservats.</p>
         <div class="footer__legal">
-          <a href="#">Política de privacitat</a>
-          <a href="#">Avís legal</a>
-          <a href="#">Cookies</a>
+          <a href="privacitat.html">Política de privacitat</a>
+          <a href="avis-legal.html">Avís legal</a>
+          <a href="cookies.html">Cookies</a>
         </div>
       </div>
     </div>

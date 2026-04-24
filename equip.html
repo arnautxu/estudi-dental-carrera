@@ -7,20 +7,20 @@
   <meta name="description" content="Coneix l'equip de professionals d'Estudi Dental Carrera. Dentistes especialistes amb vocació i formació d'alt nivell." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="preload" href="assets/fonts/N27-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/N27-Light.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="assets/css/main.css" />
-  <link rel="icon" type="image/png" href="assets/img/logos/icona.png" />
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/img/logos/favicon.png" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/logos/favicon.svg" />
 </head>
 <body>
+  <a href="#main" class="skip-link">Salta al contingut</a>
 
   <header class="nav" id="nav">
     <div class="nav__inner">
       <a href="index.html" class="nav__logo">
-        <img src="assets/img/logos/icona.png" class="nav__logo-icon" alt="" />
-        <div class="nav__logo-text">
-          <span class="nav__logo-brand">Estudi Dental</span>
-          <span class="nav__logo-location">Carrera</span>
-        </div>
+        <img src="assets/img/logos/logo-carrera-vertical.png" class="nav__logo-icon" alt="Estudi Dental Carrera" width="163" height="240" fetchpriority="high" />
       </a>
       <nav class="nav__links" aria-label="Navegació principal">
         <a href="index.html">Inici</a>
@@ -46,13 +46,13 @@
     </nav>
   </div>
 
-  <main>
+  <main id="main">
 
     <!-- PAGE HERO (light) -->
     <section class="page-hero page-hero--light">
       <div class="container">
         <div class="page-hero__content page-hero__content--dark">
-          <nav class="breadcrumb breadcrumb--dark">
+          <nav class="breadcrumb breadcrumb--dark reveal" aria-label="Fil d'Ariadna">
             <a href="index.html">Inici</a><span>→</span><span>Equip</span>
           </nav>
           <h1 class="reveal">El nostre <em>equip</em></h1>
@@ -96,7 +96,7 @@
     <section class="team-section" id="carrera">
       <div class="container">
         <div class="team-section__header reveal">
-          <img src="assets/img/logos/icona.png" class="team-section__icon" alt="" />
+          <img src="assets/img/logos/logo-carrera-vertical.png" alt="Estudi Dental Carrera" width="163" height="240" loading="lazy" decoding="async" style="height:48px;width:auto;" />
           <div>
             <span class="label" style="margin:0">Seu</span>
             <strong>Carrera</strong>
@@ -106,84 +106,147 @@
 
           <article class="team-card reveal">
             <div class="team-card__avatar team-card__avatar--a">
-              <span>JC</span>
+              <span>JCG</span>
             </div>
             <div class="team-card__body">
               <div class="team-card__header">
                 <div>
-                  <h3>Dr. Josep Carrera</h3>
-                  <span class="team-card__role">Director · Cirurgia Oral i Maxil·lofacial</span>
+                  <h3>Dr. Joan Carrera Guiu</h3>
+                  <span class="team-card__role">President del Col·legi de Dentistes de Lleida</span>
                 </div>
-                <div class="team-card__badge">Direcció</div>
+                <div class="team-card__badge">Fundador</div>
               </div>
-              <p>Llicenciat en Odontologia per la UB, amb especialització en implantologia i cirurgia oral. Més de 20 anys d'experiència clínica i instructor reconegut en cursos d'implantologia avançada.</p>
+              <p>Fundador de la clínica i referent de l'odontologia a la demarcació de Lleida. President del Col·legi de Dentistes de Lleida i Vicesecretari del Consejo General de Dentistas.</p>
               <div class="team-card__tags">
-                <span>Implantologia</span>
-                <span>Cirurgia oral</span>
-                <span>Regeneració òssia</span>
+                <span>Direcció</span>
+                <span>Odontologia general</span>
+                <span>Gestió professional</span>
               </div>
             </div>
           </article>
 
           <article class="team-card reveal" style="--delay:100ms">
             <div class="team-card__avatar team-card__avatar--b">
-              <span>MC</span>
+              <span>JCC</span>
             </div>
             <div class="team-card__body">
               <div class="team-card__header">
                 <div>
-                  <h3>Dra. Marta Carrera</h3>
-                  <span class="team-card__role">Especialista en Ortodòncia</span>
+                  <h3>Dr. Joan Carrera Carrillo</h3>
+                  <span class="team-card__role">Director Mèdic · Cirurgia i Implantologia</span>
                 </div>
-                <div class="team-card__badge">Ortodòncia</div>
+                <div class="team-card__badge">Direcció Mèdica</div>
               </div>
-              <p>Màster en Ortodòncia per la UIC Barcelona. Especialista en alineadors invisibles i ortodòncia per a adults i adolescents. Apassionada pel disseny del somriure i el detall estètic.</p>
+              <p>Màster en Implantologia Oral i Pròtesis (Universidad Alfonso X el Sabio), Màster en Cirurgia Oral i Màster en Periodòncia per la Universitat de Lleida. Ponent habitual a congressos internacionals: EAO, SEPES i SEPA.</p>
               <div class="team-card__tags">
-                <span>Alineadors invisibles</span>
-                <span>Bràquets</span>
-                <span>Estètica dental</span>
+                <span>Implantologia</span>
+                <span>Cirurgia oral</span>
+                <span>Periodòncia</span>
               </div>
             </div>
           </article>
 
           <article class="team-card reveal" style="--delay:200ms">
             <div class="team-card__avatar team-card__avatar--c">
-              <span>RL</span>
+              <span>CR</span>
             </div>
             <div class="team-card__body">
               <div class="team-card__header">
                 <div>
-                  <h3>Dr. Raül López</h3>
-                  <span class="team-card__role">Especialista en Periodontologia</span>
+                  <h3>Dra. Carme Roure Miquel</h3>
+                  <span class="team-card__role">Responsable d'Ortodòncia</span>
                 </div>
-                <div class="team-card__badge">Periodontologia</div>
+                <div class="team-card__badge">Ortodòncia</div>
               </div>
-              <p>Màster en Periodontologia i Implantologia per la UdL. Expert en tractament de la malaltia periodontal i cirurgia plàstica gingival. Referent de la zona en salut de genives.</p>
+              <p>Llicenciada en Medicina i Cirurgia (UAB, 1990) i en Odontologia (UIC, 2000). Postgrau en ortodòncia i ortopèdia dental a la Universitat de Padova. Membre de la SEDO i especialista en disfunció craneomandibular.</p>
               <div class="team-card__tags">
-                <span>Periodontologia</span>
-                <span>Cirurgia gingival</span>
-                <span>Implants</span>
+                <span>Ortodòncia</span>
+                <span>Ortopèdia dental</span>
+                <span>Disfunció craneomandibular</span>
               </div>
             </div>
           </article>
 
           <article class="team-card reveal" style="--delay:300ms">
             <div class="team-card__avatar team-card__avatar--d">
-              <span>NV</span>
+              <span>IS</span>
             </div>
             <div class="team-card__body">
               <div class="team-card__header">
                 <div>
-                  <h3>Núria Vidal</h3>
+                  <h3>Dra. Isabel Sierra</h3>
+                  <span class="team-card__role">Metgessa Odontòloga · Endodòncia i Estètica</span>
+                </div>
+                <div class="team-card__badge">Odontologia</div>
+              </div>
+              <p>Especialista en endodòncia, pròtesis i rehabilitació oral mínimament invasiva. Formació postgraduada en estètica dental i àcid hialurònic. Màster en curs en ortodòncia a l'Athenea Dental Institute.</p>
+              <div class="team-card__tags">
+                <span>Endodòncia</span>
+                <span>Estètica dental</span>
+                <span>Pròtesis</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="team-card reveal" style="--delay:100ms">
+            <div class="team-card__avatar team-card__avatar--e">
+              <span>TR</span>
+            </div>
+            <div class="team-card__body">
+              <div class="team-card__header">
+                <div>
+                  <h3>Toñi Rossell Lozano</h3>
+                  <span class="team-card__role">Auxiliar Dental i Higienista</span>
+                </div>
+                <div class="team-card__badge">Higiene</div>
+              </div>
+              <p>Auxiliar dental i higienista de la seu de Lleida. Especialitzada en higiene i prevenció bucodental, amb un tracte proper que acompanya el pacient en cada visita.</p>
+              <div class="team-card__tags">
+                <span>Higiene oral</span>
+                <span>Prevenció</span>
+                <span>Atenció al pacient</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="team-card reveal" style="--delay:200ms">
+            <div class="team-card__avatar team-card__avatar--f">
+              <span>LC</span>
+            </div>
+            <div class="team-card__body">
+              <div class="team-card__header">
+                <div>
+                  <h3>Lisbeth Coca</h3>
                   <span class="team-card__role">Higienista Dental</span>
                 </div>
                 <div class="team-card__badge">Higiene</div>
               </div>
-              <p>Diplomada en Higiene Bucodental. S'ocupa de la prevenció, les revisions periòdiques i les neteges professionals. El primer rostre que veus en arribar a la clínica Carrera.</p>
+              <p>Higienista dental especialitzada en salut periodontal i educació en higiene oral. Treballa estretament amb cada pacient per establir hàbits de salut bucal duradors.</p>
               <div class="team-card__tags">
-                <span>Prevenció</span>
                 <span>Higiene oral</span>
+                <span>Salut periodontal</span>
+                <span>Prevenció</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="team-card reveal" style="--delay:300ms">
+            <div class="team-card__avatar team-card__avatar--g">
+              <span>MP</span>
+            </div>
+            <div class="team-card__body">
+              <div class="team-card__header">
+                <div>
+                  <h3>Mireia Pujol</h3>
+                  <span class="team-card__role">Administració i Atenció al Pacient</span>
+                </div>
+                <div class="team-card__badge">Administració</div>
+              </div>
+              <p>Referent organitzatiu i primer contacte per als pacients de la clínica. Coordina les cites i la documentació per assegurar que cada visita comenci amb la màxima comoditat.</p>
+              <div class="team-card__tags">
+                <span>Gestió de cites</span>
                 <span>Atenció al pacient</span>
+                <span>Coordinació</span>
               </div>
             </div>
           </article>
@@ -196,7 +259,7 @@
     <section class="team-section team-section--beix" id="tremp">
       <div class="container">
         <div class="team-section__header reveal">
-          <img src="assets/img/logos/logo-tremp-reduccio.png" class="team-section__logo-sm" alt="EDT" />
+          <img src="assets/img/logos/logo-tremp-vertical.png" alt="Estudi Dental Tremp" width="163" height="240" loading="lazy" decoding="async" style="height:48px;width:auto;" />
           <div>
             <span class="label" style="margin:0">Seu</span>
             <strong>Tremp</strong>
@@ -205,64 +268,85 @@
         <div class="team-grid">
 
           <article class="team-card reveal">
-            <div class="team-card__avatar team-card__avatar--e">
-              <span>AP</span>
+            <div class="team-card__avatar team-card__avatar--h">
+              <span>YEA</span>
             </div>
             <div class="team-card__body">
               <div class="team-card__header">
                 <div>
-                  <h3>Dra. Anna Puig</h3>
-                  <span class="team-card__role">Odontòloga · Odontopediatria</span>
+                  <h3>Dra. Yasmine El Messaoudi</h3>
+                  <span class="team-card__role">Odontologia Restauradora i Endodòncia</span>
                 </div>
                 <div class="team-card__badge">Referent Tremp</div>
               </div>
-              <p>Màster en Odontopediatria per la UAB. Referent de la seu de Tremp i dedicada a l'atenció dels pacients més petits. Crea un entorn de confiança des de la primera visita.</p>
+              <p>Llicenciada per la Universitat de València. Màster en Odontologia Restauradora i Endodòncia (UV) i Postgrau en Estètica Dental Avançada (Societat Catalana d'Odontologia). Especialista en pròtesis implantosoportada.</p>
               <div class="team-card__tags">
-                <span>Odontopediatria</span>
-                <span>Prevenció infantil</span>
-                <span>General</span>
+                <span>Odontologia restauradora</span>
+                <span>Endodòncia</span>
+                <span>Estètica avançada</span>
               </div>
             </div>
           </article>
 
           <article class="team-card reveal" style="--delay:100ms">
-            <div class="team-card__avatar team-card__avatar--f">
-              <span>SM</span>
+            <div class="team-card__avatar team-card__avatar--b">
+              <span>JCC</span>
             </div>
             <div class="team-card__body">
               <div class="team-card__header">
                 <div>
-                  <h3>Dr. Sergi Mir</h3>
-                  <span class="team-card__role">Especialista en Endodòncia</span>
+                  <h3>Dr. Joan Carrera Carrillo</h3>
+                  <span class="team-card__role">Implantologia · Cirurgia Oral · Periodòncia</span>
                 </div>
-                <div class="team-card__badge">Endodòncia</div>
+                <div class="team-card__badge">Cirurgia</div>
               </div>
-              <p>Màster en Endodòncia per la UIC. Treballa amb microscopi quirúrgic per a tractaments de conductes de màxima precisió. Expert en casos complexos i retractaments.</p>
+              <p>Director Mèdic d'Estudi Dental. Tres màsters en Implantologia Oral, Cirurgia Oral i Periodòncia per la UAX i la Universitat de Lleida. Ponent habitual als congressos internacionals EAO, SEPES i SEPA.</p>
               <div class="team-card__tags">
-                <span>Endodòncia</span>
-                <span>Microscopi</span>
-                <span>Conservadora</span>
+                <span>Implantologia</span>
+                <span>Cirurgia oral</span>
+                <span>Periodòncia</span>
               </div>
             </div>
           </article>
 
           <article class="team-card reveal" style="--delay:200ms">
-            <div class="team-card__avatar team-card__avatar--g">
-              <span>LF</span>
+            <div class="team-card__avatar team-card__avatar--c">
+              <span>CR</span>
             </div>
             <div class="team-card__body">
               <div class="team-card__header">
                 <div>
-                  <h3>Laura Font</h3>
-                  <span class="team-card__role">Higienista Dental</span>
+                  <h3>Dra. Carme Roure Miquel</h3>
+                  <span class="team-card__role">Ortodòncia · Medicina Estètica · Orofacial</span>
                 </div>
-                <div class="team-card__badge">Higiene</div>
+                <div class="team-card__badge">Ortodòncia</div>
               </div>
-              <p>Diplomada en Higiene Bucodental per la UdL. Especialitzada en prevenció i educació oral, treballant estretament amb els pacients per establir hàbits saludables duradors.</p>
+              <p>Doble llicenciatura en Medicina i Cirurgia (UAB) i Odontologia (UIC). Màsters en Ortodòncia, Medicina Estètica i Harmonització Orofacial. Especialista en disfunció craneomandibular i medicina dental del son.</p>
               <div class="team-card__tags">
-                <span>Higiene oral</span>
-                <span>Prevenció</span>
-                <span>Educació sanitària</span>
+                <span>Ortodòncia</span>
+                <span>Harmonització orofacial</span>
+                <span>Medicina dental del son</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="team-card reveal" style="--delay:300ms">
+            <div class="team-card__avatar team-card__avatar--d">
+              <span>IS</span>
+            </div>
+            <div class="team-card__body">
+              <div class="team-card__header">
+                <div>
+                  <h3>Dra. Isabel Sierra</h3>
+                  <span class="team-card__role">Ortodòncia · Estètica · Endodòncia</span>
+                </div>
+                <div class="team-card__badge">Odontologia</div>
+              </div>
+              <p>Màster en Ortodòncia a l'Athenea Dental Institute. Certificada en Invisalign®, SureSmile i Spark. Especialista en rehabilitació estètica mínimament invasiva, endodòncia i pròtesis oral.</p>
+              <div class="team-card__tags">
+                <span>Invisalign®</span>
+                <span>Endodòncia</span>
+                <span>Rehabilitació estètica</span>
               </div>
             </div>
           </article>
@@ -281,22 +365,22 @@
         </div>
         <div class="formation__grid">
           <div class="formation-item reveal">
-            <div class="formation-item__icon">◆</div>
+            <div class="formation-item__icon" aria-hidden="true">◆</div>
             <h4>Congressos nacionals i internacionals</h4>
             <p>Participació anual als principals congressos: SEPA, SEOQ, SEPES i EAO Europa.</p>
           </div>
           <div class="formation-item reveal" style="--delay:100ms">
-            <div class="formation-item__icon">◆</div>
+            <div class="formation-item__icon" aria-hidden="true">◆</div>
             <h4>Màsters i postgraus</h4>
             <p>Tot l'equip clínic disposa de formació de postgrau o màster en la seva especialitat.</p>
           </div>
           <div class="formation-item reveal" style="--delay:200ms">
-            <div class="formation-item__icon">◆</div>
+            <div class="formation-item__icon" aria-hidden="true">◆</div>
             <h4>Tecnologia d'última generació</h4>
             <p>Escàner 3D, radiologia digital, microscopi endodòncic, escàner intraoral i CAD/CAM.</p>
           </div>
           <div class="formation-item reveal" style="--delay:300ms">
-            <div class="formation-item__icon">◆</div>
+            <div class="formation-item__icon" aria-hidden="true">◆</div>
             <h4>Protocols d'esterilització</h4>
             <p>Seguim els protocols d'esterilització i higiene més estrictes per a la teva total seguretat.</p>
           </div>
@@ -312,7 +396,7 @@
             <h2>Confia el teu somriure<br /><em>al millor equip</em></h2>
             <p>Primera visita de diagnosi gratuïta. Sense compromís.</p>
           </div>
-          <a href="seus.html#contacte" class="btn btn--dark btn--lg">Demana cita →</a>
+          <a href="seus.html#contacte" class="btn btn--ghost btn--lg">Demana cita →</a>
         </div>
       </div>
     </section>
@@ -324,8 +408,7 @@
       <div class="footer__grid">
         <div class="footer__brand">
           <a href="index.html" class="footer__logo">
-            <img src="assets/img/logos/icona.png" alt="" style="filter:brightness(0) invert(0.7) sepia(1) saturate(0.4);" />
-            <div><span>Estudi Dental</span><strong>Carrera</strong></div>
+            <img src="assets/img/logos/logo-carrera-vertical.png" alt="Estudi Dental Carrera" width="163" height="240" loading="lazy" decoding="async" style="filter:brightness(0) invert(0.72);" />
           </a>
           <p class="footer__tagline">Odontologia d'excel·lència.<br />Dues seus al vostre servei.</p>
         </div>
@@ -342,16 +425,16 @@
         <div class="footer__col">
           <h4>Seu Carrera</h4>
           <ul>
-            <li>Carrer de la Clínica, 12</li><li>Lleida</li>
-            <li><a href="tel:+34973000000">973 000 000</a></li>
+            <li>Carrer Major, 74-76, 3r 3a</li><li>25007 Lleida</li>
+            <li><a href="tel:+34973268826">973 26 88 26</a></li>
             <li>Dl–Dv: 9h – 20h</li><li>Ds: 9h – 14h</li>
           </ul>
         </div>
         <div class="footer__col">
           <h4>Seu Tremp</h4>
           <ul>
-            <li>Carrer Major, 28</li><li>25620 Tremp</li>
-            <li><a href="tel:+34973650000">973 650 000</a></li>
+            <li>Carrer Montllobar, 22 Baixos</li><li>25620 Tremp</li>
+            <li><a href="tel:+34650600172">650 60 01 72</a></li>
             <li>Dl–Dv: 9h – 19h</li>
           </ul>
         </div>
@@ -359,9 +442,9 @@
       <div class="footer__bottom">
         <p>© 2026 Estudi Dental Carrera. Tots els drets reservats.</p>
         <div class="footer__legal">
-          <a href="#">Política de privacitat</a>
-          <a href="#">Avís legal</a>
-          <a href="#">Cookies</a>
+          <a href="privacitat.html">Política de privacitat</a>
+          <a href="avis-legal.html">Avís legal</a>
+          <a href="cookies.html">Cookies</a>
         </div>
       </div>
     </div>

@@ -7,20 +7,20 @@
   <meta name="description" content="Dues seus al teu servei: Estudi Dental Carrera i Estudi Dental Tremp. Adreces, horaris i formulari de cita prèvia." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="preload" href="assets/fonts/N27-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/N27-Light.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="assets/css/main.css" />
-  <link rel="icon" type="image/png" href="assets/img/logos/icona.png" />
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/img/logos/favicon.png" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/logos/favicon.svg" />
 </head>
 <body>
+  <a href="#main" class="skip-link">Salta al contingut</a>
 
   <header class="nav" id="nav">
     <div class="nav__inner">
       <a href="index.html" class="nav__logo">
-        <img src="assets/img/logos/icona.png" class="nav__logo-icon" alt="" />
-        <div class="nav__logo-text">
-          <span class="nav__logo-brand">Estudi Dental</span>
-          <span class="nav__logo-location">Carrera</span>
-        </div>
+        <img src="assets/img/logos/logo-carrera-vertical.png" class="nav__logo-icon" alt="Estudi Dental Carrera" width="163" height="240" fetchpriority="high" />
       </a>
       <nav class="nav__links" aria-label="Navegació principal">
         <a href="index.html">Inici</a>
@@ -46,13 +46,13 @@
     </nav>
   </div>
 
-  <main>
+  <main id="main">
 
     <!-- PAGE HERO (light) -->
     <section class="page-hero page-hero--light">
       <div class="container">
         <div class="page-hero__content page-hero__content--dark">
-          <nav class="breadcrumb breadcrumb--dark">
+          <nav class="breadcrumb breadcrumb--dark reveal">
             <a href="index.html">Inici</a><span>→</span><span>Les nostres seus</span>
           </nav>
           <h1 class="reveal">Les nostres <em>seus</em></h1>
@@ -67,7 +67,7 @@
         <div class="seu-detail__grid">
           <div class="seu-detail__info">
             <div class="seu-detail__logo-wrap reveal">
-              <img src="assets/img/logos/icona.png" class="seu-detail__icon" alt="" />
+              <img src="assets/img/logos/logo-carrera-vertical.png" class="seu-detail__logo-vertical" alt="Estudi Dental Carrera" width="163" height="240" loading="lazy" decoding="async" />
               <div class="seu-name">
                 <span>Estudi Dental</span>
                 <strong>Carrera</strong>
@@ -79,15 +79,15 @@
                   <svg viewBox="0 0 20 20" fill="none"><path d="M10 2C7 2 4 5 4 8c0 5 6 10 6 10s6-5 6-10c0-3-3-6-6-6z" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="8" r="2" fill="currentColor"/></svg>
                   Adreça
                 </div>
-                <p>Carrer de la Clínica, 12<br />25001 Lleida</p>
-                <a href="https://maps.google.com" target="_blank" rel="noopener" class="seu-data-item__link">Obre al mapa →</a>
+                <p>Carrer Major, 74-76, 3r 3a<br />25007 Lleida</p>
+                <a href="https://maps.google.com/?q=Carrer+Major+74-76,+25007+Lleida" target="_blank" rel="noopener" class="seu-data-item__link">Obre al mapa →</a>
               </div>
               <div class="seu-data-item">
                 <div class="seu-data-item__label">
                   <svg viewBox="0 0 20 20" fill="none"><path d="M4 4h5l2 4-3 2a9 9 0 004 4l2-3 4 2v5c0 1-1 2-2 2C7 20 0 13 0 6c0-1 1-2 2-2h2z" stroke="currentColor" stroke-width="1.5"/></svg>
                   Telèfon
                 </div>
-                <p><a href="tel:+34973000000">973 000 000</a></p>
+                <p><a href="tel:+34973268826">973 26 88 26</a></p>
               </div>
               <div class="seu-data-item">
                 <div class="seu-data-item__label">
@@ -113,8 +113,8 @@
             <div class="map-placeholder map-placeholder--carrera">
               <div class="map-placeholder__inner">
                 <svg viewBox="0 0 48 48" fill="none" width="48"><path d="M24 4C16 4 9 11 9 19c0 11 15 25 15 25s15-14 15-25C39 11 32 4 24 4z" stroke="currentColor" stroke-width="2.5"/><circle cx="24" cy="19" r="5" fill="currentColor" opacity="0.3"/></svg>
-                <p>Carrer de la Clínica, 12<br />25001 Lleida</p>
-                <a href="https://maps.google.com/?q=Carrer+de+la+Clinica+12+Lleida" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Com arribar-hi →</a>
+                <p>Carrer Major, 74-76, 3r 3a<br />25007 Lleida</p>
+                <a href="https://maps.google.com/?q=Carrer+Major+74-76,+25007+Lleida/?q=Carrer+Major+74-76,+25007+Lleida" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Com arribar-hi →</a>
               </div>
             </div>
           </div>
@@ -133,14 +133,14 @@
             <div class="map-placeholder map-placeholder--tremp">
               <div class="map-placeholder__inner map-placeholder__inner--light">
                 <svg viewBox="0 0 48 48" fill="none" width="48"><path d="M24 4C16 4 9 11 9 19c0 11 15 25 15 25s15-14 15-25C39 11 32 4 24 4z" stroke="currentColor" stroke-width="2.5"/><circle cx="24" cy="19" r="5" fill="currentColor" opacity="0.3"/></svg>
-                <p>Carrer Major, 28<br />25620 Tremp (Pallars Jussà)</p>
-                <a href="https://maps.google.com/?q=Carrer+Major+28+Tremp" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Com arribar-hi →</a>
+                <p>Carrer Montllobar, 22 Baixos<br />25620 Tremp (Pallars Jussà)</p>
+                <a href="https://maps.google.com/?q=Carrer+Major+74-76,+25007+Lleida/?q=Carrer+Montllobar+22,+25620+Tremp" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Com arribar-hi →</a>
               </div>
             </div>
           </div>
           <div class="seu-detail__info">
             <div class="seu-detail__logo-wrap reveal">
-              <img src="assets/img/logos/logo-tremp-vertical.png" class="seu-detail__logo-vertical" alt="Estudi Dental Tremp" />
+              <img src="assets/img/logos/logo-tremp-vertical.png" class="seu-detail__logo-vertical" alt="Estudi Dental Tremp" width="163" height="240" loading="lazy" decoding="async" />
             </div>
             <div class="seu-detail__data reveal">
               <div class="seu-data-item">
@@ -148,15 +148,15 @@
                   <svg viewBox="0 0 20 20" fill="none"><path d="M10 2C7 2 4 5 4 8c0 5 6 10 6 10s6-5 6-10c0-3-3-6-6-6z" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="8" r="2" fill="currentColor"/></svg>
                   Adreça
                 </div>
-                <p>Carrer Major, 28<br />25620 Tremp (Pallars Jussà)</p>
-                <a href="https://maps.google.com/?q=Carrer+Major+28+Tremp" target="_blank" rel="noopener" class="seu-data-item__link">Obre al mapa →</a>
+                <p>Carrer Montllobar, 22 Baixos<br />25620 Tremp (Pallars Jussà)</p>
+                <a href="https://maps.google.com/?q=Carrer+Major+74-76,+25007+Lleida/?q=Carrer+Montllobar+22,+25620+Tremp" target="_blank" rel="noopener" class="seu-data-item__link">Obre al mapa →</a>
               </div>
               <div class="seu-data-item">
                 <div class="seu-data-item__label">
                   <svg viewBox="0 0 20 20" fill="none"><path d="M4 4h5l2 4-3 2a9 9 0 004 4l2-3 4 2v5c0 1-1 2-2 2C7 20 0 13 0 6c0-1 1-2 2-2h2z" stroke="currentColor" stroke-width="1.5"/></svg>
                   Telèfon
                 </div>
-                <p><a href="tel:+34973650000">973 650 000</a></p>
+                <p><a href="tel:+34650600172">650 60 01 72</a></p>
               </div>
               <div class="seu-data-item">
                 <div class="seu-data-item__label">
@@ -191,22 +191,22 @@
             <h2>Parlem <em>quan vulguis</em></h2>
             <p>Omple el formulari i et contactarem en menys de 24 hores. Primera visita de diagnosi completament gratuïta.</p>
             <div class="contact-channels">
-              <a href="tel:+34973000000" class="channel-item">
+              <a href="tel:+34973268826" class="channel-item">
                 <div class="channel-item__icon">
                   <svg viewBox="0 0 24 24" fill="none"><path d="M4 4h6l2 5-3 2a14 14 0 006 6l2-3 5 2v6c0 1-1 2-2 2C9 24 0 15 0 6c0-1 1-2 2-2h2z" stroke="currentColor" stroke-width="1.5"/></svg>
                 </div>
                 <div>
                   <strong>Carrera</strong>
-                  <span>973 000 000</span>
+                  <span>973 26 88 26</span>
                 </div>
               </a>
-              <a href="tel:+34973650000" class="channel-item">
+              <a href="tel:+34650600172" class="channel-item">
                 <div class="channel-item__icon">
                   <svg viewBox="0 0 24 24" fill="none"><path d="M4 4h6l2 5-3 2a14 14 0 006 6l2-3 5 2v6c0 1-1 2-2 2C9 24 0 15 0 6c0-1 1-2 2-2h2z" stroke="currentColor" stroke-width="1.5"/></svg>
                 </div>
                 <div>
                   <strong>Tremp</strong>
-                  <span>973 650 000</span>
+                  <span>650 60 01 72</span>
                 </div>
               </a>
               <a href="mailto:info@clinicarrera.cat" class="channel-item">
@@ -295,8 +295,7 @@
       <div class="footer__grid">
         <div class="footer__brand">
           <a href="index.html" class="footer__logo">
-            <img src="assets/img/logos/icona.png" alt="" style="filter:brightness(0) invert(0.7) sepia(1) saturate(0.4);" />
-            <div><span>Estudi Dental</span><strong>Carrera</strong></div>
+            <img src="assets/img/logos/logo-carrera-vertical.png" alt="Estudi Dental Carrera" width="163" height="240" loading="lazy" decoding="async" style="filter:brightness(0) invert(0.72);" />
           </a>
           <p class="footer__tagline">Odontologia d'excel·lència.<br />Dues seus al vostre servei.</p>
         </div>
@@ -313,16 +312,16 @@
         <div class="footer__col">
           <h4>Seu Carrera</h4>
           <ul>
-            <li>Carrer de la Clínica, 12</li><li>25001 Lleida</li>
-            <li><a href="tel:+34973000000">973 000 000</a></li>
+            <li>Carrer Major, 74-76, 3r 3a</li><li>25007 Lleida</li>
+            <li><a href="tel:+34973268826">973 26 88 26</a></li>
             <li>Dl–Dv: 9h – 20h</li><li>Ds: 9h – 14h</li>
           </ul>
         </div>
         <div class="footer__col">
           <h4>Seu Tremp</h4>
           <ul>
-            <li>Carrer Major, 28</li><li>25620 Tremp</li>
-            <li><a href="tel:+34973650000">973 650 000</a></li>
+            <li>Carrer Montllobar, 22 Baixos</li><li>25620 Tremp</li>
+            <li><a href="tel:+34650600172">650 60 01 72</a></li>
             <li>Dl–Dv: 9h – 19h</li>
           </ul>
         </div>
@@ -330,9 +329,9 @@
       <div class="footer__bottom">
         <p>© 2026 Estudi Dental Carrera. Tots els drets reservats.</p>
         <div class="footer__legal">
-          <a href="#">Política de privacitat</a>
-          <a href="#">Avís legal</a>
-          <a href="#">Cookies</a>
+          <a href="privacitat.html">Política de privacitat</a>
+          <a href="avis-legal.html">Avís legal</a>
+          <a href="cookies.html">Cookies</a>
         </div>
       </div>
     </div>
