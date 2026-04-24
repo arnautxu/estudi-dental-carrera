@@ -191,6 +191,95 @@ document.querySelectorAll('.team-card').forEach(card => {
   });
 });
 
+/* ---------- TESTIMONIALS SLIDER ---------- */
+(function initTestimonials() {
+  const root = document.querySelector('[data-testimonials]');
+  if (!root) return;
+  const track = root.querySelector('[data-testimonials-track]');
+  const slides = track.querySelectorAll('.testimonial');
+  const total = slides.length;
+  if (!total) return;
+
+  const dotsWrap = root.querySelector('[data-testimonials-dots]');
+  const idxEl    = root.querySelector('[data-testimonials-index]');
+  const totalEl  = root.querySelector('[data-testimonials-total]');
+  const prevBtn  = root.querySelector('[data-testimonials-prev]');
+  const nextBtn  = root.querySelector('[data-testimonials-next]');
+
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const AUTOPLAY_MS = 6500;
+  let current = 0;
+  let timer = null;
+
+  // Build dots
+  const dots = [];
+  for (let i = 0; i < total; i++) {
+    const d = document.createElement('button');
+    d.type = 'button';
+    d.className = 'testimonials__dot';
+    d.setAttribute('role', 'tab');
+    d.setAttribute('aria-label', `Ressenya ${i + 1} de ${total}`);
+    d.addEventListener('click', () => { go(i); restart(); });
+    dotsWrap.appendChild(d);
+    dots.push(d);
+  }
+
+  if (totalEl) totalEl.textContent = String(total).padStart(2, '0');
+
+  function go(i) {
+    current = (i + total) % total;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dots.forEach((d, j) => d.classList.toggle('is-active', j === current));
+    slides.forEach((s, j) => s.setAttribute('aria-hidden', j !== current));
+    if (idxEl) idxEl.textContent = String(current + 1).padStart(2, '0');
+  }
+
+  function next() { go(current + 1); }
+  function prev() { go(current - 1); }
+
+  function start() {
+    if (reducedMotion) return;
+    stop();
+    timer = setInterval(next, AUTOPLAY_MS);
+  }
+  function stop()    { if (timer) { clearInterval(timer); timer = null; } }
+  function restart() { if (!reducedMotion) start(); }
+
+  prevBtn?.addEventListener('click', () => { prev(); restart(); });
+  nextBtn?.addEventListener('click', () => { next(); restart(); });
+
+  // Pause autoplay on hover / focus-in
+  root.addEventListener('mouseenter', stop);
+  root.addEventListener('mouseleave', start);
+  root.addEventListener('focusin', stop);
+  root.addEventListener('focusout', start);
+
+  // Keyboard arrows when focus is inside
+  root.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight') { next(); restart(); }
+    else if (e.key === 'ArrowLeft') { prev(); restart(); }
+  });
+
+  // Swipe on touch
+  let touchStartX = null;
+  root.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; stop(); }, { passive: true });
+  root.addEventListener('touchend', e => {
+    if (touchStartX === null) return;
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 40) { dx < 0 ? next() : prev(); }
+    touchStartX = null;
+    restart();
+  }, { passive: true });
+
+  // Only autoplay when slider is in view
+  const playObs = new IntersectionObserver(entries => {
+    entries.forEach(e => e.isIntersecting ? start() : stop());
+  }, { threshold: 0.3 });
+  playObs.observe(root);
+
+  go(0);
+})();
+
 /* ---------- BACK TO TOP ---------- */
 const backTop = document.createElement('button');
 backTop.className = 'back-top';
