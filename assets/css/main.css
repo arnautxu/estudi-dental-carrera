@@ -816,12 +816,19 @@ input, select, textarea { font:inherit; }
   margin: 0;
 }
 .testimonial__meta {
-  display: flex; flex-direction: column;
-  gap: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
   padding-top: 1.25rem;
   border-top: 1px solid var(--beix-xlight);
   font-style: normal;
   margin-top: auto;
+}
+.testimonial__who {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
 }
 .testimonial__name {
   font-family: var(--font-display);
@@ -838,6 +845,56 @@ input, select, textarea { font:inherit; }
   text-transform: uppercase;
   color: var(--beix-text);
   font-variant-numeric: tabular-nums;
+}
+
+/* Avatar — initials by default, image if data-avatar is set */
+.testimonial__avatar {
+  flex: 0 0 auto;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  color: var(--ink);
+  background: var(--beix-xlight);
+  box-shadow: inset 0 0 0 1px rgba(42, 38, 35, 0.06);
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+}
+.testimonial__avatar[data-tone="1"] { background: #EAE0D1; color: #6B5A45; }
+.testimonial__avatar[data-tone="2"] { background: #2A2623; color: #F2E9DC; }
+.testimonial__avatar[data-tone="3"] { background: #F3ECE0; color: #7A6450; }
+.testimonial__avatar[data-tone="4"] { background: #C1B2A2; color: #2A2623; }
+
+/* When an image is supplied via data-avatar, hide the initials */
+.testimonial__avatar[data-avatar] {
+  background-image: var(--avatar-img);
+  background-size: cover;
+  background-position: center;
+  color: transparent;
+  text-indent: -999em;
+}
+
+/* Small "G" Google glyph corner mark for source authenticity */
+.testimonial__avatar::after {
+  content: "";
+  position: absolute;
+  right: -2px;
+  bottom: -2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 50%, #fff 45%, transparent 46%),
+    conic-gradient(from -45deg, #EA4335 0 25%, #FBBC04 25% 50%, #34A853 50% 75%, #4285F4 75% 100%);
+  box-shadow: 0 0 0 2px var(--white);
 }
 
 @media (max-width: 720px) {
