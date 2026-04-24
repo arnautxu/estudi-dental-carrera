@@ -1214,6 +1214,45 @@ input, select, textarea { font:inherit; }
 }
 
 /* ============================================================
+   EDITORIAL MOTION — headline crafts
+   ============================================================ */
+/* Hero headline: line-by-line stagger on page load.
+   The h1 keeps .reveal for the em-underline trigger below, but its
+   default opacity/transform are neutralised so the inner spans own
+   the entrance instead. */
+.hero__title.reveal { opacity:1; transform:none; transition:none; }
+.hero__title .hero__line {
+  display:block;
+  opacity:0; transform:translateY(18px);
+  animation:heroLine 960ms var(--ease) forwards;
+  animation-delay:calc(240ms + var(--line-delay, 0ms));
+  will-change:transform, opacity;
+}
+@keyframes heroLine {
+  to { opacity:1; transform:none; }
+}
+
+/* Italic emphasis underline — draws a 1px architectural rule beneath
+   any <em> inside an h2 when its .reveal ancestor enters the viewport.
+   Excludes .hero__title because the hero em already has its own
+   entrance via the line stagger above. */
+h2 em {
+  position:relative; display:inline-block;
+}
+h2 em::after {
+  content:""; position:absolute;
+  left:0; right:0; bottom:-0.06em;
+  height:1px; background:currentColor;
+  opacity:0.32;
+  transform:scaleX(0); transform-origin:left;
+  transition:transform 1400ms var(--ease);
+  transition-delay:420ms;
+}
+.reveal.visible h2 em::after,
+h2.reveal.visible em::after,
+h2.em-lit em::after { transform:scaleX(1); }
+
+/* ============================================================
    REDUCED MOTION
    ============================================================ */
 @media (prefers-reduced-motion: reduce) {
@@ -1232,4 +1271,8 @@ input, select, textarea { font:inherit; }
   /* Mobile menu items: always visible when container is open */
   .mobile-menu__link,
   .mobile-menu__cta { opacity: 1; transform: none; transition: none; }
+  /* Hero line stagger: skip the stagger, show lines immediately */
+  .hero__title .hero__line { opacity: 1; transform: none; animation: none; }
+  /* Italic underline: skip the draw, show the rule immediately */
+  h2 em::after { transform: scaleX(1); transition: none; }
 }

@@ -57,6 +57,18 @@ const revealObserver = new IntersectionObserver(
 );
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
+/* ---------- HEADLINE ITALIC UNDERLINE ----------
+   Draws a thin rule beneath any <em> inside an h2 once the h2 enters
+   the viewport. Works independently of .reveal so headlines without
+   a reveal ancestor still get the treatment. */
+const emObserver = new IntersectionObserver(
+  entries => entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('em-lit'); emObserver.unobserve(e.target); }
+  }),
+  { threshold: 0.2, rootMargin: '0px 0px -40px 0px' }
+);
+document.querySelectorAll('h2:has(em)').forEach(el => emObserver.observe(el));
+
 /* ---------- SMOOTH ANCHOR SCROLL ---------- */
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
