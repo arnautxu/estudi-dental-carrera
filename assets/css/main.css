@@ -306,35 +306,84 @@ input, select, textarea { font:inherit; }
 .services { padding:clamp(80px,10vw,140px) 0; background:var(--cream); }
 .services__grid {
   display:grid; grid-template-columns:repeat(3,1fr);
-  gap:1.5px; background:var(--beix-light); border-radius:var(--radius-lg); overflow:hidden;
-  border:1.5px solid var(--beix-light);
+  gap:1px; background:var(--beix-xlight); border-radius:var(--radius-lg); overflow:hidden;
+  border:1px solid var(--beix-xlight);
 }
-.service-card { background:var(--off-white); padding:clamp(24px,3vw,40px); display:flex; flex-direction:column; gap:1rem; transition:background 200ms var(--ease); position:relative; }
+.service-card {
+  background:var(--off-white); padding:clamp(28px,3.2vw,44px);
+  display:flex; flex-direction:column; gap:0.95rem;
+  transition:background 220ms var(--ease); position:relative;
+}
 @media (hover: hover) and (pointer: fine) {
   .service-card:hover { background:var(--white); }
 }
-.service-card__icon { width:32px; height:32px; color:var(--beix-text); }
-.service-card__icon svg { width:100%; height:100%; }
-.service-card h3 { font-family:var(--font-display); font-size:1.15rem; font-weight:500; color:var(--ink); line-height:1.2; }
-.service-card p { font-size:0.875rem; line-height:1.7; color:var(--gris); flex:1; }
-/* Categorization tag — replaces the identical-card-grid anti-pattern with a clear approach taxonomy */
+/* Numeric marker — pillar-card pattern from DESIGN.md, gives editorial hierarchy without relying on stock icons */
+.service-card__num {
+  font-family:var(--font-body); font-size:0.78rem; font-weight:400;
+  letter-spacing:.08em; color:var(--beix-text); align-self:flex-start;
+}
+/* Category chip — chip-tag component spec (DESIGN.md §5): filled pill, quiet */
 .service-card__tag {
-  font-size:0.68rem; font-weight:500; letter-spacing:.14em; text-transform:uppercase;
-  color:var(--beix-text); align-self:flex-start;
-  padding:4px 10px; border:1px solid var(--beix-light); border-radius:999px;
+  font-family:var(--font-body); font-size:0.68rem; font-weight:500;
+  letter-spacing:.14em; text-transform:uppercase;
+  color:var(--gris-dark); background:var(--beix-xlight);
+  align-self:flex-start; padding:5px 11px; border-radius:999px;
+  margin-top:-0.25rem;
+}
+/* Load-bearing lead chip — beix-deep (reserved for load-bearing per DESIGN.md §2) */
+.service-card__tag--lead {
+  color:var(--white); background:var(--beix-deep);
+}
+.service-card h3 {
+  font-family:var(--font-display); font-size:1.3rem; font-weight:500;
+  color:var(--ink); line-height:1.2; margin-top:0.1rem;
+}
+.service-card p { font-size:0.875rem; line-height:1.7; color:var(--gris); flex:1; }
+/* Flat at rest — thin beige rule above the number to anchor each tile to the grid */
+.service-card::before {
+  content:""; position:absolute; top:0; left:clamp(28px,3.2vw,44px); right:clamp(28px,3.2vw,44px);
+  height:1px; background:var(--beix-light);
+  transform:scaleX(0); transform-origin:left;
+  transition:transform 420ms var(--ease);
+}
+@media (hover: hover) and (pointer: fine) {
+  .service-card:hover::before { transform:scaleX(1); }
 }
 
-/* Featured first card: spans 2 cols × 2 rows — ATM/bruxisme as the punta de llança */
-.service-card:first-child { grid-column:1 / 3; grid-row:1 / 3; background:var(--ink); color:var(--white); }
-@media (hover: hover) and (pointer: fine) {
-  .service-card:first-child:hover { background:var(--ink); }
+/* Featured first card: spans 2 cols × 2 rows — ATM/bruxisme as the punta de llança.
+   Ink surface carries the "committed palette" idea from DESIGN.md §2: the dark tile is
+   not an accent but an anchor against the cream section background. */
+.service-card--featured {
+  grid-column:1 / 3; grid-row:1 / 3;
+  background:var(--ink); color:var(--white);
+  padding:clamp(36px,4vw,60px);
+  gap:1.1rem;
 }
-.service-card:first-child .service-card__icon { width:44px; height:44px; color:var(--beix-light); }
-.service-card:first-child h3 { font-size:clamp(1.5rem, 2.2vw, 2.1rem); line-height:1.1; margin-top:0.35rem; color:var(--white); }
-.service-card:first-child em { font-style:normal; color:var(--beix-light); }
-.service-card:first-child p { font-size:0.9375rem; max-width:460px; color:rgba(255,255,255,.72); }
-.service-card:first-child .service-card__tag {
-  color:var(--beix-light); border-color:rgba(242,230,214,.32);
+@media (hover: hover) and (pointer: fine) {
+  .service-card--featured:hover { background:var(--ink); }
+}
+.service-card--featured::before {
+  background:rgba(242,230,214,.18);
+  transform:scaleX(1); /* always visible as an architectural rule on the featured tile */
+  transition:none;
+}
+.service-card--featured .service-card__num {
+  font-size:0.85rem; color:var(--beix-light); letter-spacing:.12em;
+}
+.service-card--featured h3 {
+  font-size:clamp(1.9rem, 3vw, 2.8rem); line-height:1.08;
+  color:var(--white); margin-top:0.25rem; max-width:14ch;
+}
+.service-card--featured h3 em {
+  font-style:italic; color:var(--beix-light);
+}
+.service-card--featured .service-card__lede {
+  font-size:1.0625rem; line-height:1.55; color:var(--beix-light);
+  font-weight:400; max-width:36ch; flex:none; margin-top:0.5rem;
+}
+.service-card--featured p:not(.service-card__lede) {
+  font-size:0.9375rem; line-height:1.75; color:rgba(253,252,250,.68);
+  max-width:46ch; margin-top:auto;
 }
 .services__cta { text-align:center; margin-top:3rem; }
 
@@ -829,9 +878,9 @@ input, select, textarea { font:inherit; }
    ============================================================ */
 @media (max-width:1024px) {
   .services__grid { grid-template-columns:repeat(2,1fr); }
-  /* Reset featured card — let it flow naturally in 2-col grid */
-  .service-card:first-child { grid-column:auto; grid-row:auto; }
-  .service-card:first-child h3 { font-size:1.15rem; }
+  /* Featured card on tablet — span the full 2-col row but let it flow normally */
+  .service-card--featured { grid-column:1 / -1; grid-row:auto; }
+  .service-card--featured h3 { font-size:clamp(1.6rem, 4vw, 2.2rem); }
   .services-extra__grid { grid-template-columns:repeat(2,1fr); }
   /* Correct border rule for 2-col layout (was 3n) */
   .extra-card:nth-child(3n) { border-right:1px solid var(--beix-xlight); }
@@ -959,16 +1008,6 @@ input, select, textarea { font:inherit; }
 .mobile-menu.open .mobile-menu__link:nth-child(3) { opacity:1; transform:none; transition-delay:180ms; }
 .mobile-menu.open .mobile-menu__link:nth-child(4) { opacity:1; transform:none; transition-delay:240ms; }
 .mobile-menu.open .mobile-menu__cta              { opacity:1; transform:none; transition-delay:320ms; }
-
-/* ---------- SERVICE CARD ICON FLOAT ---------- */
-.service-card__icon {
-  transition: transform 250ms var(--ease);
-}
-@media (hover: hover) and (pointer: fine) {
-  .service-card:hover .service-card__icon {
-    transform: translateY(-4px);
-  }
-}
 
 /* ---------- BACK TO TOP ---------- */
 .back-top {
