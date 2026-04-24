@@ -679,16 +679,25 @@ input, select, textarea { font:inherit; }
 .service-detail__card {
   background:var(--ink); border-radius:var(--radius-xl);
   padding:clamp(36px,4.5vw,60px); display:flex; flex-direction:column;
-  gap:1.5rem; min-height:380px; position:relative; overflow:hidden;
+  gap:1.25rem; min-height:440px; position:relative; overflow:hidden;
 }
 .service-detail__card::before {
   content:''; position:absolute; inset:0;
   background:radial-gradient(circle at 85% 15%, rgba(193,178,162,.1) 0%, transparent 55%);
   pointer-events:none;
 }
-.sdc-eyebrow { display:flex; align-items:center; justify-content:space-between; }
-.sdc-icon { width:28px; height:28px; color:var(--beix); flex-shrink:0; }
-.sdc-icon svg { width:100%; height:100%; }
+/* Line-art anatomical illustration — editorial Gray's Anatomy vibes */
+.sdc-illo {
+  width:clamp(110px, 13vw, 150px);
+  height:clamp(110px, 13vw, 150px);
+  color:var(--beix);
+  opacity:0.88;
+  margin-bottom:0.25rem;
+  flex-shrink:0;
+  position:relative;
+}
+.sdc-illo svg { width:100%; height:100%; display:block; }
+.sdc-eyebrow { display:flex; align-items:center; justify-content:flex-start; }
 .sdc-num { font-family:var(--font-display); font-size:0.75rem; letter-spacing:0.16em; color:rgba(255,255,255,0.22); font-style:italic; }
 .sdc-headline {
   font-family:var(--font-display); font-style:italic;
