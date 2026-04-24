@@ -553,7 +553,9 @@ input, select, textarea { font:inherit; }
    Ink surface carries the "committed palette" idea from DESIGN.md §2: the dark tile is
    not an accent but an anchor against the cream section background. */
 .service-card--featured {
-  grid-column:1 / 3; grid-row:1 / 3;
+  /* 2 cols x 3 rows: leaves col 3 for 3 small tiles stacked,
+     and a clean bottom row of 3 — fits exactly 6 small cards. */
+  grid-column:1 / 3; grid-row:1 / 4;
   background:var(--ink); color:var(--white);
   padding:clamp(36px,4vw,60px);
   gap:1.1rem;
