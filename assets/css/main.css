@@ -1706,6 +1706,70 @@ input, select, textarea { font:inherit; }
 }
 
 /* ============================================================
+   SOCIAL ICONS — footer + mobile menu
+   ============================================================ */
+.footer__social {
+  display:flex; align-items:center; gap:0.75rem; margin-top:1.25rem;
+}
+.footer__social-link {
+  display:flex; align-items:center; justify-content:center;
+  width:36px; height:36px; border-radius:50%;
+  border:1px solid rgba(255,255,255,.14);
+  color:rgba(255,255,255,.52);
+  transition:color var(--trans), border-color var(--trans), background var(--trans);
+  text-decoration:none;
+}
+.footer__social-link:hover {
+  color:var(--white);
+  border-color:rgba(255,255,255,.45);
+  background:rgba(255,255,255,.07);
+}
+.footer__social-link svg { display:block; flex-shrink:0; }
+
+/* Mobile-menu social row */
+.mobile-menu__social {
+  display:flex; align-items:center; gap:0.65rem;
+  margin-top:1rem;
+}
+.mobile-menu__social-link {
+  display:flex; align-items:center; justify-content:center;
+  width:40px; height:40px; border-radius:50%;
+  border:1px solid rgba(26,24,22,.1);
+  color:var(--beix-text);
+  transition:color var(--trans), border-color var(--trans), background var(--trans);
+  text-decoration:none;
+}
+.mobile-menu__social-link:hover {
+  color:var(--ink);
+  border-color:var(--beix);
+  background:var(--beix-xlight);
+}
+.mobile-menu__social-link svg { display:block; flex-shrink:0; }
+
+/* ============================================================
+   WHATSAPP FLOATING ACTION BUTTON
+   ============================================================ */
+.whatsapp-fab {
+  position:fixed; bottom:1.5rem; right:1.5rem; z-index:900;
+  display:flex; align-items:center; justify-content:center;
+  width:56px; height:56px; border-radius:50%;
+  background:#25D366;
+  color:#fff;
+  text-decoration:none;
+  box-shadow:0 4px 16px rgba(37,211,102,.38), 0 1px 4px rgba(0,0,0,.14);
+  transition:transform 220ms var(--ease), box-shadow 220ms var(--ease);
+}
+.whatsapp-fab:hover {
+  transform:translateY(-2px) scale(1.04);
+  box-shadow:0 8px 28px rgba(37,211,102,.48), 0 2px 8px rgba(0,0,0,.16);
+}
+.whatsapp-fab:active { transform:scale(0.97); }
+.whatsapp-fab svg { display:block; }
+@media (prefers-reduced-motion:reduce) {
+  .whatsapp-fab { transition:none; }
+}
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width:1024px) {
