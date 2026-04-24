@@ -338,59 +338,82 @@
     <!-- SERVEIS PREVIEW -->
     <section class="services" id="serveis">
       <div class="container">
-        <div class="section-header reveal">
-          <span class="label">El que oferim</span>
-          <h2>Tractem el que cal, <em>quan cal</em></h2>
-          <p>Primer diagnostiquem. Després decidim si cal tractar i triem la intervenció més conservadora que resolgui el problema.</p>
-        </div>
+        <header class="services__head reveal">
+          <div class="services__head-left">
+            <span class="label">El que oferim</span>
+            <h2 class="services__title">Tractem el que cal, <em>quan cal</em></h2>
+          </div>
+          <p class="services__head-lede">Primer diagnostiquem. Després decidim si cal tractar i triem la intervenció més conservadora que resolgui el problema.</p>
+        </header>
         <div class="services__grid">
           <article class="service-card service-card--featured reveal">
-            <span class="service-card__num" aria-hidden="true">01</span>
             <span class="service-card__tag service-card__tag--lead">Punta de llança</span>
-            <h3>Disfunció ATM i <em>bruxisme</em></h3>
+            <h3 class="service-card__title"><a href="serveis.html#atm">Disfunció ATM i <em>bruxisme</em></a></h3>
             <p class="service-card__lede">Quan el dolor, els clics i el desgast tenen el mateix origen, cal un abordatge que ho tracti junt.</p>
             <p>Tensió crònica, clics mandibulars, desgast nocturn i mal de cap d'origen dental. Diagnòstic amb criteri, fèrules planificades i seguiment a mesos, no sessions soltes.</p>
+            <span class="service-card__cta" aria-hidden="true">Veure protocol <svg viewBox="0 0 14 10" width="14" height="10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 5h12M9 1l4 4-4 4"/></svg></span>
+            <!-- ATM motif: two interlocking arcs echoing the mandibular joint, stroke-drawn in the hero-constellation visual language. -->
+            <svg class="service-card__motif" viewBox="0 0 160 160" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M 20 90 Q 50 40 90 70 Q 125 95 135 60" />
+              <path d="M 25 120 Q 60 80 100 105 Q 135 125 140 95" opacity="0.55" />
+              <circle cx="90" cy="70" r="2.4" fill="currentColor" stroke="none" />
+              <circle cx="100" cy="105" r="1.8" fill="currentColor" stroke="none" opacity="0.55" />
+            </svg>
           </article>
           <article class="service-card reveal" style="--delay:80ms">
-            <span class="service-card__num" aria-hidden="true">02</span>
-            <span class="service-card__tag">Conservar</span>
-            <h3>Endodòncia</h3>
+            <h3 class="service-card__title"><a href="serveis.html">Endodòncia</a></h3>
             <p>Salvem la peça pròpia abans de plantejar substituir-la. Tractament de conductes per eliminar el dolor i conservar la dent natural.</p>
+            <footer class="service-card__foot">
+              <span class="service-card__tag">Conservar</span>
+              <span class="service-card__arrow" aria-hidden="true"><svg viewBox="0 0 14 10" width="14" height="10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 5h12M9 1l4 4-4 4"/></svg></span>
+            </footer>
           </article>
           <article class="service-card reveal" style="--delay:160ms">
-            <span class="service-card__num" aria-hidden="true">03</span>
-            <span class="service-card__tag">Conservar</span>
-            <h3>Periodontologia</h3>
+            <h3 class="service-card__title"><a href="serveis.html">Periodontologia</a></h3>
             <p>Genives sanes, dents estables. Diagnòstic, manteniment i tractament de la malaltia periodontal per prevenir la pèrdua dental.</p>
+            <footer class="service-card__foot">
+              <span class="service-card__tag">Conservar</span>
+              <span class="service-card__arrow" aria-hidden="true"><svg viewBox="0 0 14 10" width="14" height="10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 5h12M9 1l4 4-4 4"/></svg></span>
+            </footer>
           </article>
           <article class="service-card reveal" style="--delay:240ms">
-            <span class="service-card__num" aria-hidden="true">04</span>
-            <span class="service-card__tag">Rehabilitar</span>
-            <h3>Implants dentals</h3>
+            <h3 class="service-card__title"><a href="serveis.html#implants">Implants dentals</a></h3>
             <p>Quan la conservació ja no és possible, substitució planificada amb implants d'osteointegració provada i temps de tractament definits.</p>
+            <footer class="service-card__foot">
+              <span class="service-card__tag">Rehabilitar</span>
+              <span class="service-card__arrow" aria-hidden="true"><svg viewBox="0 0 14 10" width="14" height="10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 5h12M9 1l4 4-4 4"/></svg></span>
+            </footer>
           </article>
           <article class="service-card reveal" style="--delay:320ms">
-            <span class="service-card__num" aria-hidden="true">05</span>
-            <span class="service-card__tag">Rehabilitar</span>
-            <h3>Estètica dental</h3>
+            <h3 class="service-card__title"><a href="serveis.html#estetica">Estètica dental</a></h3>
             <p>Blanquejaments i facetes amb proposta prèvia i simulació. Només les peces que realment cal intervenir.</p>
+            <footer class="service-card__foot">
+              <span class="service-card__tag">Rehabilitar</span>
+              <span class="service-card__arrow" aria-hidden="true"><svg viewBox="0 0 14 10" width="14" height="10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 5h12M9 1l4 4-4 4"/></svg></span>
+            </footer>
           </article>
           <article class="service-card reveal" style="--delay:400ms">
-            <span class="service-card__num" aria-hidden="true">06</span>
-            <span class="service-card__tag">Família</span>
-            <h3>Odontopediatria</h3>
+            <h3 class="service-card__title"><a href="serveis.html">Odontopediatria</a></h3>
             <p>Primeres visites, prevenció i tractaments infantils amb ritme d'infant. Construïm la relació amb el dentista abans que aparegui la por.</p>
+            <footer class="service-card__foot">
+              <span class="service-card__tag">Família</span>
+              <span class="service-card__arrow" aria-hidden="true"><svg viewBox="0 0 14 10" width="14" height="10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 5h12M9 1l4 4-4 4"/></svg></span>
+            </footer>
           </article>
           <article class="service-card reveal" style="--delay:480ms">
-            <span class="service-card__num" aria-hidden="true">07</span>
-            <span class="service-card__tag">Família</span>
-            <h3>Ortodòncia</h3>
+            <h3 class="service-card__title"><a href="serveis.html#ortodencia">Ortodòncia</a></h3>
             <p>Bràquets estètics i alineadors invisibles. Planifiquem el moviment amb escàner digital i et diem fins on arribarem i en quant de temps.</p>
+            <footer class="service-card__foot">
+              <span class="service-card__tag">Família</span>
+              <span class="service-card__arrow" aria-hidden="true"><svg viewBox="0 0 14 10" width="14" height="10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 5h12M9 1l4 4-4 4"/></svg></span>
+            </footer>
           </article>
         </div>
-        <div class="services__cta reveal">
-          <a href="serveis.html" class="btn btn--primary btn--lg">Veure tots els serveis →</a>
-        </div>
+        <a href="serveis.html" class="services__all reveal">
+          <span class="services__all-label">Veure tots els serveis en detall</span>
+          <span class="services__all-meta">Fitxes individuals, preus i temps de tractament</span>
+          <svg class="services__all-arrow" viewBox="0 0 14 10" width="14" height="10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 5h12M9 1l4 4-4 4"/></svg>
+        </a>
       </div>
     </section>
 
