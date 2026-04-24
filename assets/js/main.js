@@ -226,13 +226,36 @@ document.querySelectorAll('.team-card').forEach(card => {
 
   if (totalEl) totalEl.textContent = String(total).padStart(2, '0');
 
+  function posFor(diff) {
+    if (diff === 0) return 'center';
+    if (diff === 1) return 'right';
+    if (diff === -1) return 'left';
+    return 'hidden';
+  }
+
   function go(i) {
     current = (i + total) % total;
-    track.style.transform = `translateX(-${current * 100}%)`;
+    slides.forEach((s, j) => {
+      let diff = j - current;
+      // circular shortest-path diff
+      if (diff > total / 2) diff -= total;
+      else if (diff < -total / 2) diff += total;
+      const pos = posFor(diff);
+      s.setAttribute('data-pos', pos);
+      s.setAttribute('aria-hidden', pos !== 'center');
+      s.tabIndex = pos === 'center' ? 0 : -1;
+    });
     dots.forEach((d, j) => d.classList.toggle('is-active', j === current));
-    slides.forEach((s, j) => s.setAttribute('aria-hidden', j !== current));
     if (idxEl) idxEl.textContent = String(current + 1).padStart(2, '0');
   }
+
+  // Side-card clicks jump directly to that card
+  slides.forEach((s, j) => {
+    s.addEventListener('click', () => {
+      const pos = s.getAttribute('data-pos');
+      if (pos === 'left' || pos === 'right') { go(j); restart(); }
+    });
+  });
 
   function next() { go(current + 1); }
   function prev() { go(current - 1); }
