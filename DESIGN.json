@@ -1,0 +1,251 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-04-24T00:00:00Z",
+  "title": "Design System: Estudi Dental Carrera",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "secondary",
+        "displayName": "Warm Ink",
+        "canonical": "oklch(20% 0.005 55)",
+        "tonalRamp": ["#1A1A1B", "#242426", "#2A2A2C", "#3D3B3A", "#4A4A4E", "#6B6B6F", "#8A8A8E", "#B4B4B8"]
+      },
+      "off-white": {
+        "role": "neutral",
+        "displayName": "Warm Off-White",
+        "canonical": "oklch(97% 0.005 55)",
+        "tonalRamp": ["#3B3731", "#5F574D", "#85786A", "#AB9D8C", "#D1C7B8", "#E5DED2", "#F2EDE6", "#FAF8F5"]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "Cream White",
+        "canonical": "oklch(98.5% 0.004 55)",
+        "tonalRamp": ["#3A3631", "#5E564D", "#84776A", "#AA9C8C", "#D0C6B8", "#E4DDD2", "#F1ECE5", "#FDFCFA"]
+      },
+      "cream": {
+        "role": "neutral",
+        "displayName": "Editorial Cream",
+        "canonical": "oklch(94% 0.008 55)",
+        "tonalRamp": ["#3A3631", "#5C554C", "#807364", "#A39584", "#C2B4A1", "#DBCDBA", "#EAE2D3", "#F2EDE6"]
+      },
+      "beix": {
+        "role": "primary",
+        "displayName": "Beige Pedra",
+        "canonical": "oklch(76% 0.028 65)",
+        "tonalRamp": ["#2E261F", "#4C3E33", "#6B594A", "#8A7664", "#A8937D", "#C1B2A2", "#D3C7B9", "#E4DCD1"]
+      },
+      "beix-light": {
+        "role": "primary",
+        "displayName": "Pedra Light",
+        "canonical": "oklch(85% 0.02 60)",
+        "tonalRamp": ["#332920", "#544538", "#76634F", "#968168", "#B39C82", "#CBB9A4", "#DDD1C6", "#EFE8DF"]
+      },
+      "beix-xlight": {
+        "role": "neutral",
+        "displayName": "Pedra Mist",
+        "canonical": "oklch(91% 0.012 60)",
+        "tonalRamp": ["#3A3228", "#5C5144", "#7F7163", "#A29281", "#C0B09C", "#D8CBBB", "#EDE6DE", "#F6F2ED"]
+      },
+      "beix-bg": {
+        "role": "neutral",
+        "displayName": "Pedra Veil",
+        "canonical": "oklch(94% 0.012 55)",
+        "tonalRamp": ["#3A3229", "#5C5144", "#7F7163", "#A29281", "#C0B09C", "#D8CBBB", "#E9E0D5", "#F4EFE9"]
+      },
+      "beix-text": {
+        "role": "primary",
+        "displayName": "Pedra Text",
+        "canonical": "oklch(43% 0.06 52)",
+        "tonalRamp": ["#2A1F16", "#3F3023", "#55412F", "#6B533D", "#745C4C", "#9A7860", "#B99A83", "#D4BAA8"]
+      },
+      "beix-rich": {
+        "role": "primary",
+        "displayName": "Pedra Rich",
+        "canonical": "oklch(54% 0.055 56)",
+        "tonalRamp": ["#2C211A", "#422F24", "#593F2E", "#705039", "#866146", "#9A7860", "#B89480", "#D3B6A0"]
+      },
+      "beix-deep": {
+        "role": "primary",
+        "displayName": "Pedra Deep",
+        "canonical": "oklch(40% 0.065 52)",
+        "tonalRamp": ["#26180F", "#38251A", "#4B3325", "#5E4131", "#685040", "#8A6B53", "#AE8B6C", "#CEB190"]
+      },
+      "gris": {
+        "role": "neutral",
+        "displayName": "Boira Grey",
+        "canonical": "oklch(48% 0.005 55)",
+        "tonalRamp": ["#1F1F22", "#34343A", "#4A4A4E", "#6B6B6F", "#8A8A8E", "#ABABAF", "#CACACE", "#E5E5E7"]
+      },
+      "gris-dark": {
+        "role": "neutral",
+        "displayName": "Boira Dark",
+        "canonical": "oklch(38% 0.005 55)",
+        "tonalRamp": ["#1A1A1C", "#2A2A2C", "#3A3A3E", "#4A4A4E", "#6B6B6F", "#8A8A8E", "#ABABAF", "#CACACE"]
+      },
+      "success": {
+        "role": "tertiary",
+        "displayName": "Medical Green",
+        "canonical": "oklch(52% 0.13 158)",
+        "tonalRamp": ["#0F2A1E", "#174530", "#1E5C3F", "#24724E", "#2C9067", "#48B084", "#7ECCA6", "#BBE3CC"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display (Playfair)", "purpose": "Hero and page-hero titles. Italic-only emphasis." },
+      "headline": { "displayName": "Headline (Playfair)", "purpose": "Section H2 across inner pages." },
+      "title": { "displayName": "Title (Playfair 500)", "purpose": "Card heads: team member names, pillar titles, service titles." },
+      "body": { "displayName": "Body (N27 Light)", "purpose": "Running copy, capped at 65-75ch." },
+      "label": { "displayName": "Label (N27 Uppercase)", "purpose": "Eyebrows, metadata, small tags. 0.16em tracking." }
+    },
+    "shadows": [
+      { "name": "shadow-sm", "value": "0 2px 12px rgba(42,42,44,0.06)", "purpose": "Barely-there ambient on nav scroll and subtle card hints." },
+      { "name": "shadow-md", "value": "0 8px 32px rgba(42,42,44,0.10)", "purpose": "Standard hover lift for buttons and team cards." },
+      { "name": "shadow-lg", "value": "0 24px 60px rgba(42,42,44,0.14)", "purpose": "Team-teaser photo card and location-card CTA hover. Paired with 0 4px 16px for close-contact grounding." },
+      { "name": "photo-lift", "value": "0 24px 64px oklch(18% 0.03 55 / 0.16), 0 4px 16px oklch(18% 0.03 55 / 0.08)", "purpose": "Signature photo card on team teaser. Two-layer ink-tinted shadow." }
+    ],
+    "motion": [
+      { "name": "ease-standard", "value": "cubic-bezier(0.23, 1, 0.32, 1)", "purpose": "Default easing. Exponential ease-out. No bounce permitted." },
+      { "name": "trans-standard", "value": "0.25s cubic-bezier(0.23, 1, 0.32, 1)", "purpose": "Default transition for color/border/background state changes." },
+      { "name": "reveal", "value": "opacity 0.5s + translateY(12px) scale(0.98) -> none", "purpose": "Scroll-observer reveal with --delay custom property for stagger." },
+      { "name": "btn-hover", "value": "transform 160ms ease-out + box-shadow 200ms var(--ease)", "purpose": "Button lift + shadow emergence." },
+      { "name": "nav-logo-hover", "value": "rotate(-7deg) scale(1.1) 380ms var(--ease)", "purpose": "Nav logo playful tilt on hover." },
+      { "name": "band-shimmer", "value": "bandShimmer 10s ease-in-out infinite", "purpose": "Barely perceptible diagonal gradient drift on CTA band. Honors prefers-reduced-motion." }
+    ],
+    "breakpoints": [
+      { "name": "mobile-s", "value": "480px" },
+      { "name": "mobile", "value": "560px" },
+      { "name": "tablet", "value": "768px" },
+      { "name": "desktop", "value": "1024px" },
+      { "name": "max-content", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The load-bearing CTA. Beige-deep fill, white text, pill shape.",
+      "html": "<button class=\"ds-btn-primary\">Demana cita</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; border-radius: 100px; background: #685040; color: #FDFCFA; font-family: 'N27', 'Inter', system-ui, sans-serif; font-weight: 400; font-size: 0.875rem; letter-spacing: 0.04em; border: none; cursor: pointer; transition: background 200ms cubic-bezier(0.23, 1, 0.32, 1), box-shadow 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 160ms ease-out; } .ds-btn-primary:hover { background: #4A4A4E; transform: translateY(-2px); box-shadow: 0 8px 32px rgba(42,42,44,0.10); } .ds-btn-primary:active { transform: translateY(-2px) scale(0.97); transition-duration: 60ms; } .ds-btn-primary:focus-visible { outline: 2px solid #745C4C; outline-offset: 3px; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary CTA on light backgrounds. Ink outline, ink text, pill.",
+      "html": "<button class=\"ds-btn-outline\">Veure serveis</button>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; border-radius: 100px; background: transparent; color: #2A2A2C; font-family: 'N27', 'Inter', system-ui, sans-serif; font-weight: 400; font-size: 0.875rem; letter-spacing: 0.04em; border: 1.5px solid #2A2A2C; cursor: pointer; transition: background 200ms cubic-bezier(0.23, 1, 0.32, 1), color 200ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-btn-outline:hover { background: #2A2A2C; color: #FDFCFA; } .ds-btn-outline:focus-visible { outline: 2px solid #745C4C; outline-offset: 3px; }"
+    },
+    {
+      "name": "Ghost Button (over dark)",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "CTA on ink or beige-deep surfaces. White text, semi-transparent border.",
+      "html": "<button class=\"ds-btn-ghost\">Demana cita →</button>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; border-radius: 100px; background: transparent; color: #FDFCFA; font-family: 'N27', 'Inter', system-ui, sans-serif; font-weight: 400; font-size: 0.875rem; letter-spacing: 0.04em; border: 1.5px solid rgba(255,255,255,.45); cursor: pointer; transition: background 200ms cubic-bezier(0.23, 1, 0.32, 1), border-color 200ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-btn-ghost:hover { border-color: #FDFCFA; background: rgba(255,255,255,.1); }"
+    },
+    {
+      "name": "Team Card",
+      "kind": "card",
+      "refersTo": "card-team",
+      "description": "Horizontal card: 120px photo left, content right. Used on /equip.",
+      "html": "<article class=\"ds-team-card\"><div class=\"ds-team-card__photo\"><img src=\"\" alt=\"\" /></div><div class=\"ds-team-card__body\"><div class=\"ds-team-card__header\"><div><h3>Dra. Yasmine El Messaoudi</h3><span class=\"ds-team-card__role\">Odontologia Restauradora</span></div><div class=\"ds-team-card__badge\">Referent Tremp</div></div><p>Màster en Odontologia Restauradora i Endodòncia (UV).</p><div class=\"ds-team-card__tags\"><span>Endodòncia</span><span>Restauradora</span></div></div></article>",
+      "css": ".ds-team-card { display: flex; gap: 0; background: #FDFCFA; border-radius: 24px; overflow: hidden; border: 1px solid #EDE6DE; transition: box-shadow 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-team-card:hover { box-shadow: 0 8px 32px rgba(42,42,44,.10); transform: translateY(-3px); } .ds-team-card__photo { width: 120px; flex-shrink: 0; overflow: hidden; background: #F4EFE9; } .ds-team-card__photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; } .ds-team-card__body { padding: 24px; flex: 1; display: flex; flex-direction: column; gap: 1rem; } .ds-team-card__header { display: flex; justify-content: space-between; align-items: flex-start; gap: .75rem; } .ds-team-card__header h3 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.1rem; font-weight: 500; color: #2A2A2C; line-height: 1.2; margin: 0; } .ds-team-card__role { font-size: 0.78rem; color: #745C4C; font-weight: 400; letter-spacing: .04em; display: block; margin-top: 3px; } .ds-team-card__badge { font-size: 0.65rem; font-weight: 400; letter-spacing: .08em; text-transform: uppercase; color: #745C4C; border: 1px solid #DDD1C6; border-radius: 100px; padding: 4px 10px; white-space: nowrap; flex-shrink: 0; } .ds-team-card__body p { font-family: 'N27', 'Inter', system-ui, sans-serif; font-size: 0.875rem; font-weight: 300; line-height: 1.7; color: #6B6B6F; flex: 1; margin: 0; } .ds-team-card__tags { display: flex; flex-wrap: wrap; gap: .4rem; } .ds-team-card__tags span { font-size: 0.72rem; background: #EDE6DE; color: #4A4A4E; padding: 4px 10px; border-radius: 100px; font-weight: 400; }"
+    },
+    {
+      "name": "Chip / Tag",
+      "kind": "chip",
+      "refersTo": "chip-tag",
+      "description": "Small pill for specialty tags on team cards and similar metadata lists.",
+      "html": "<span class=\"ds-chip\">Ortodòncia</span>",
+      "css": ".ds-chip { display: inline-block; font-family: 'N27', 'Inter', system-ui, sans-serif; font-size: 0.72rem; font-weight: 400; background: #EDE6DE; color: #4A4A4E; padding: 4px 10px; border-radius: 100px; }"
+    },
+    {
+      "name": "Pillar Card",
+      "kind": "card",
+      "refersTo": "pillar",
+      "description": "Numbered philosophy card (01/02/03). Used on /equip for filosofia pillars.",
+      "html": "<div class=\"ds-pillar\"><span class=\"ds-pillar__num\">01</span><h4>Escolta activa</h4><p>Cada pacient és únic. Escoltem les teves preocupacions i adaptem el tractament a les teves necessitats reals.</p></div>",
+      "css": ".ds-pillar { padding: 24px 28px; background: #FDFCFA; border-radius: 12px; border: 1px solid #EDE6DE; } .ds-pillar__num { font-family: 'Playfair Display', Georgia, serif; font-size: 0.85rem; color: #745C4C; letter-spacing: .08em; display: block; margin-bottom: .5rem; } .ds-pillar h4 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.05rem; font-weight: 500; color: #2A2A2C; margin: 0 0 .4rem 0; } .ds-pillar p { font-family: 'N27', 'Inter', system-ui, sans-serif; font-size: 0.875rem; font-weight: 300; line-height: 1.65; color: #6B6B6F; margin: 0; }"
+    },
+    {
+      "name": "Section Label",
+      "kind": "custom",
+      "refersTo": "label",
+      "description": "Uppercase eyebrow that precedes H2. The system's signature metadata mark.",
+      "html": "<span class=\"ds-label\">La nostra filosofia</span>",
+      "css": ".ds-label { display: inline-block; font-family: 'N27', 'Inter', system-ui, sans-serif; font-weight: 400; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: #745C4C; margin-bottom: 1rem; }"
+    },
+    {
+      "name": "Italic Emphasis in Headline",
+      "kind": "custom",
+      "refersTo": "display",
+      "description": "The single-italic pattern. One word per headline, Playfair italic, beix-text color.",
+      "html": "<h2 class=\"ds-headline\">Persones que<br/>cuiden <em>persones</em></h2>",
+      "css": ".ds-headline { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 400; line-height: 1.15; color: #2A2A2C; margin: 0; } .ds-headline em { font-style: italic; color: #745C4C; }"
+    },
+    {
+      "name": "Nav Link (underline-on-hover)",
+      "kind": "nav",
+      "refersTo": "nav",
+      "description": "Desktop nav link. 1px beige underline scales from 0 to 1 on hover/active.",
+      "html": "<a class=\"ds-navlink active\" href=\"#\">Equip</a>",
+      "css": ".ds-navlink { display: inline-block; position: relative; font-family: 'N27', 'Inter', system-ui, sans-serif; font-size: 0.875rem; font-weight: 400; color: #4A4A4E; letter-spacing: 0.02em; text-decoration: none; padding: 8px 0; transition: color 0.25s cubic-bezier(0.23, 1, 0.32, 1); } .ds-navlink::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 1px; background: #C1B2A2; transform: scaleX(0); transform-origin: left; transition: transform 220ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-navlink:hover, .ds-navlink.active { color: #2A2A2C; } .ds-navlink:hover::after, .ds-navlink.active::after { transform: scaleX(1); }"
+    },
+    {
+      "name": "CTA Band",
+      "kind": "custom",
+      "refersTo": "cta-band",
+      "description": "Full-bleed closing CTA on beige-deep surface with barely perceptible diagonal shimmer animation.",
+      "html": "<section class=\"ds-cta\"><div class=\"ds-cta__inner\"><div><h2>Confia el teu somriure<br/><em>al millor equip</em></h2><p>Primera visita de diagnosi. Sense compromís.</p></div><a class=\"ds-btn-ghost\" href=\"#\">Demana cita →</a></div></section>",
+      "css": ".ds-cta { background: linear-gradient(110deg, #685040 0%, oklch(44% 0.06 44) 38%, oklch(36% 0.07 56) 62%, #685040 100%); background-size: 240% 100%; animation: dsBandShimmer 10s ease-in-out infinite; padding: clamp(60px, 8vw, 100px) 0; } .ds-cta__inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; max-width: 1280px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 80px); } .ds-cta h2 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 400; color: #FDFCFA; line-height: 1.2; margin: 0; } .ds-cta h2 em { font-style: italic; } .ds-cta p { font-family: 'N27', 'Inter', system-ui, sans-serif; font-size: 1rem; font-weight: 300; color: rgba(255,255,255,.72); margin-top: .5rem; } .ds-btn-ghost { display: inline-flex; align-items: center; gap: 8px; padding: 16px 36px; border-radius: 100px; background: transparent; color: #FDFCFA; font-family: 'N27', 'Inter', system-ui, sans-serif; font-weight: 400; font-size: 0.9375rem; letter-spacing: 0.04em; border: 1.5px solid rgba(255,255,255,.45); text-decoration: none; transition: background 200ms, border-color 200ms; } .ds-btn-ghost:hover { border-color: #FDFCFA; background: rgba(255,255,255,.1); } @keyframes dsBandShimmer { 0%,100% { background-position: 0% 0%; } 50% { background-position: 100% 0%; } } @media (prefers-reduced-motion: reduce) { .ds-cta { animation: none; } }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Modernist Consultation",
+    "overview": "The system is a dental brand operating from inside a real modernist building in Lleida. That physical fact is the design's center of gravity: warm beige pedra against deep ink, Playfair Display running italic on emphasis, generous margins, no stock-photo smiles. The visual temperature of the web should match the temperature of walking into the clinic, not clinical blue-white under fluorescent light, but cream and shade and patinated wood, with a quiet confidence that comes from not having to shout. The palette is deliberately earth-based: a family of beiges (pedra, light, x-light, bg, rich, deep) pulled toward oklch warm hue 52° anchored against a near-black ink (#2A2A2C, never #000). The system rejects the entire category-reflex of 'healthcare → white + teal' and 'dental → blue + smile.' Authority here is warm, not sterile. Reassurance comes from texture, not from promises.",
+    "keyCharacteristics": [
+      "Beige-on-ink committed palette (not restrained): the warm family carries 40-60% of most surfaces.",
+      "Playfair Display + custom N27 sans: one of each, never mixing display faces.",
+      "Pill buttons (100px radius) as the signature shape; cards use 24px.",
+      "Flat-by-default; shadows reserved for hover lift and depth cues, never decoration.",
+      "Italic as the only form of display emphasis. No bold, no uppercase on headlines.",
+      "Motion is slow exponential ease (cubic-bezier(0.23, 1, 0.32, 1)), never bounce."
+    ],
+    "rules": [
+      { "name": "The No-Pure-Anything Rule", "body": "Neither #000 nor #fff appears anywhere in the system. The darkest surface is --ink (#2A2A2C), the lightest is --white (#FDFCFA). Any value migrating toward pure black or pure white is a bug.", "section": "colors" },
+      { "name": "The Beige-Hierarchy Rule", "body": "The beige family is a hierarchy, not a palette. Light and x-light are for fills; bg is for photo backgrounds; text is for labels and emphasis; rich is display-only; deep is load-bearing (CTAs, marquee, footer accents). Moving up or down this ladder changes meaning.", "section": "colors" },
+      { "name": "The Italic-Only Emphasis Rule", "body": "Emphasis inside display type is expressed through italic (Playfair's italic is the reason this font is here). Never bold, never uppercase, never color-shift to an accent.", "section": "colors" },
+      { "name": "The Single-Italic Rule", "body": "Each display headline has at most one italic span: the single word that carries the thought. Italicizing multiple words in a headline dilutes the device to decoration.", "section": "typography" },
+      { "name": "The 300-Weight Body Rule", "body": "Running body copy is weight 300, not 400. The lightness is deliberate: it gives Playfair's display weight the contrast to feel editorial instead of busy. Do not upweight body to 400 'for readability': fix contrast in color instead.", "section": "typography" },
+      { "name": "The Flat-At-Rest Rule", "body": "Every surface is flat at rest. Shadows are earned by interaction (hover, focus) or by meaningful altitude. No shadow appears 'because the card needs to look like a card.'", "section": "elevation" },
+      { "name": "The Ink-Tinted Shadow Rule", "body": "Shadow color is always rgba(42, 42, 44, α) or oklch(18% 0.03 55 / α): the ink hue, never pure black. Neutral-black shadows against a beige surface read as dirty; ink-tinted shadows stay tonal.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep the beige family as a committed 40-60% presence on most surfaces.",
+      "Do use Playfair italic for emphasis inside headlines: one italic span per headline, using <em> with color: var(--beix-text).",
+      "Do cap body copy at 65-75ch.",
+      "Do use pill buttons (border-radius: 100px) as the primary CTA shape.",
+      "Do reserve --shadow-md and --shadow-lg for hover lift, photo hero cards, and grounding fixed elements. Flat at rest otherwise.",
+      "Do tint every neutral toward the brand hue.",
+      "Do treat the modernist building as narrative content, per PRODUCT.md Principle 2.",
+      "Do make the two-seu coherence visible: same type, same palette, same button shapes across Lleida and Tremp. Per PRODUCT.md Principle 3."
+    ],
+    "donts": [
+      "Don't use #000 or #fff anywhere.",
+      "Don't use the category-reflex healthcare palette: blue + teal + white + stock smiles.",
+      "Don't use gradient text (background-clip: text on a gradient).",
+      "Don't use decorative glassmorphism. backdrop-filter: blur is permitted only on functional surfaces (nav.scrolled, location-card CTA over images).",
+      "Don't build hero-metric templates (big number + small label + supporting stats + gradient accent).",
+      "Don't use side-stripe borders as a colored accent (border-left: 4px solid...).",
+      "Don't build a uniform grid of identical cards with icon + heading + text repeated.",
+      "Don't use generic flaticon-style icons.",
+      "Don't add uppercase / bold / color-shift as display emphasis. Italic in --beix-text is the only permitted pattern.",
+      "Don't use em dashes in UI copy.",
+      "Don't write 'confiança, qualitat, somriure' or 'la teva salut és la nostra prioritat' or any saturated-sector cliché.",
+      "Don't present 'odontologia conservadora' as a service card in a service grid. It is a filosofia, not a tractament.",
+      "Don't bounce / elastic ease anywhere.",
+      "Don't animate layout properties. Transform and opacity only.",
+      "Don't break prefers-reduced-motion."
+    ]
+  }
+}
