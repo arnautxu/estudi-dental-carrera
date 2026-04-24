@@ -702,7 +702,7 @@ input, select, textarea { font:inherit; }
 .sdc-illo svg {
   width:100%; height:100%; display:block;
   opacity:0;
-  transition: opacity 420ms var(--ease);
+  transition: opacity 420ms var(--ease) 500ms;
   transform-origin: center;
 }
 /* Solid strokes: draw-on */
@@ -711,12 +711,12 @@ input, select, textarea { font:inherit; }
 .sdc-illo svg rect:not([stroke-dasharray]) {
   stroke-dasharray: 420;
   stroke-dashoffset: 420;
-  transition: stroke-dashoffset 1.4s cubic-bezier(0.23, 1, 0.32, 1) 240ms;
+  transition: stroke-dashoffset 1.4s cubic-bezier(0.23, 1, 0.32, 1) 740ms;
 }
 .sdc-illo svg circle:not([stroke-dasharray]):not([fill]) {
   stroke-dasharray: 120;
   stroke-dashoffset: 120;
-  transition: stroke-dashoffset 1s cubic-bezier(0.23, 1, 0.32, 1) 480ms;
+  transition: stroke-dashoffset 1s cubic-bezier(0.23, 1, 0.32, 1) 980ms;
 }
 /* Filled focus marks: scale pop after draw */
 .sdc-illo svg circle[fill="currentColor"],
@@ -724,7 +724,7 @@ input, select, textarea { font:inherit; }
   transform-box: fill-box;
   transform-origin: center;
   transform: scale(0);
-  transition: transform 520ms cubic-bezier(0.23, 1, 0.32, 1) 1240ms;
+  transition: transform 520ms cubic-bezier(0.23, 1, 0.32, 1) 1740ms;
 }
 /* Entrance driven by the .reveal on .service-detail__visual */
 .service-detail__visual.visible .sdc-illo svg { opacity: 1; }
@@ -744,7 +744,7 @@ input, select, textarea { font:inherit; }
   50%      { transform: scale(1.022); }
 }
 .service-detail__visual.visible .sdc-illo svg {
-  animation: sdcIlloBreathe 6s ease-in-out 2400ms infinite;
+  animation: sdcIlloBreathe 6s ease-in-out 2900ms infinite;
 }
 /* Hover: crisper + touch brighter */
 .service-detail__card:hover .sdc-illo { opacity: 1; }
