@@ -315,6 +315,49 @@ input, select, textarea { font:inherit; }
 .nav.scrolled.nav--hero .nav__links a.active::after,
 .nav.scrolled.nav--hero .nav__links a[aria-current="page"]::after { background:var(--beix-deep); }
 
+/* ---------- NAV · LANGUAGE SWITCHER ---------- */
+.nav__lang {
+  display:inline-flex; align-items:center; gap:0.45rem;
+  margin-left:1rem; padding-left:1rem;
+  border-left:1px solid var(--beix-light);
+  font-size:0.72rem; letter-spacing:0.16em; text-transform:uppercase;
+  font-variant-numeric: tabular-nums;
+}
+.nav__lang-link {
+  color:var(--beix-text); text-decoration:none;
+  padding:0.2rem 0; transition:color var(--trans);
+  font-weight:400;
+}
+.nav__lang-link:hover { color:var(--ink); }
+.nav__lang-link.is-active { color:var(--ink); font-weight:500; }
+.nav__lang-sep { color:var(--beix); user-select:none; }
+
+.nav--hero .nav__lang { border-left-color:rgba(255,255,255,.18); }
+.nav--hero .nav__lang-link { color:rgba(255,255,255,.55); }
+.nav--hero .nav__lang-link:hover,
+.nav--hero .nav__lang-link.is-active { color:var(--white); }
+.nav--hero .nav__lang-sep { color:rgba(255,255,255,.28); }
+.nav.scrolled.nav--hero .nav__lang { border-left-color:var(--beix-light); }
+.nav.scrolled.nav--hero .nav__lang-link { color:var(--beix-text); }
+.nav.scrolled.nav--hero .nav__lang-link:hover,
+.nav.scrolled.nav--hero .nav__lang-link.is-active { color:var(--ink); }
+.nav.scrolled.nav--hero .nav__lang-sep { color:var(--beix); }
+
+/* Mobile menu language switcher */
+.mobile-menu__lang {
+  display:flex; align-items:center; justify-content:center; gap:0.75rem;
+  margin-top:1.25rem; padding-top:1.25rem;
+  border-top:1px solid rgba(26,24,22,0.08);
+  font-size:0.78rem; letter-spacing:0.18em; text-transform:uppercase;
+}
+.mobile-menu__lang-link {
+  color:var(--beix-text); text-decoration:none;
+  padding:0.35rem 0.5rem; transition:color var(--trans);
+}
+.mobile-menu__lang-link:hover { color:var(--ink); }
+.mobile-menu__lang-link.is-active { color:var(--ink); font-weight:500; }
+.mobile-menu__lang-sep { color:var(--beix); user-select:none; }
+
 /* ---------- NAV · CTA (arrow that shifts on hover) ---------- */
 .nav__cta { margin-left:.75rem; gap:0.55rem; }
 .nav__cta-arrow {
