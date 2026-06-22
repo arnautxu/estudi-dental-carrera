@@ -2,6 +2,18 @@
 <html lang="ca">
 <head>
   <meta charset="UTF-8" />
+  <!-- Google Analytics 4 — consent-gated: loads only after the visitor grants the analytics category (see assets/js/main.js). -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.GA4_ID = 'G-XXXXXXXXXX'; /* TODO: substituir per l'ID real de GA4 */
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Estudi Dental Carrera · Odontologia conservadora a Lleida i Tremp</title>
   <meta name="description" content="Clínica dental a Lleida i Tremp amb un enfoc conservador: diagnòstic detallat, explicació clara, tractament només si cal. Especialistes en ATM, bruxisme, implants i ortodòncia." />
@@ -255,9 +267,20 @@
         </h1>
         <p class="hero__subtitle reveal">Diagnòstic detallat, explicació clara i pla transparent abans de començar res. Especialistes en ATM, bruxisme, implants i ortodòncia.</p>
         <div class="hero__actions reveal">
-          <a href="seus.html#contacte" class="btn btn--primary btn--lg">Demana cita</a>
+          <a href="seus.html#contacte" class="btn btn--primary btn--lg" data-track="click_cita" data-track-label="hero">Demana cita</a>
           <a href="serveis.html" class="btn btn--ghost btn--lg">Els nostres serveis</a>
         </div>
+        <p class="contact-row reveal">
+          <span class="contact-row__label">O parla'ns ara mateix:</span>
+          <a href="tel:+34973268826" class="contact-link">
+            <svg viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 1.5h3l1.5 3.5-1.75 1.25a9 9 0 004.5 4.5L11 9l3.5 1.5v3a1 1 0 01-1 1C6.3 14.5 1.5 9.7 1.5 3.5a1 1 0 011-1z"/></svg>
+            973 26 88 26
+          </a>
+          <a href="https://wa.me/34615983352" class="contact-link" target="_blank" rel="noopener" data-seu="general">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.556 4.122 1.528 5.855L.057 23.175a.75.75 0 00.918.899l5.42-1.424A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 01-4.965-1.364l-.356-.211-3.677.964.982-3.592-.231-.369A9.713 9.713 0 012.25 12C2.25 6.613 6.613 2.25 12 2.25S21.75 6.613 21.75 12 17.387 21.75 12 21.75z"/></svg>
+            WhatsApp
+          </a>
+        </p>
         <div class="hero__locations reveal">
           <a href="seus.html#carrera" class="location-pill active" aria-current="true">
             <span class="location-pill__dot"></span>Lleida
@@ -287,6 +310,30 @@
         <span>Bruxisme · </span><span>Blanquejament · </span><span>Cirurgia oral · </span>
       </div>
     </div>
+
+    <!-- TRUST STRIP -->
+    <section class="trust-strip" aria-label="Confiança i experiència">
+      <div class="container">
+        <div class="trust-strip__inner reveal">
+          <div class="trust-item">
+            <span class="trust-item__num"><b>5,0</b><span class="trust-item__stars" aria-hidden="true">★</span></span>
+            <span class="trust-item__label"><a href="https://www.google.com/search?q=Cl%C3%ADnica+Dental+Carrera+Lleida" target="_blank" rel="noopener">42 ressenyes a Google</a></span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-item__num">+30</span>
+            <span class="trust-item__label">Anys d'experiència</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-item__num">98%</span>
+            <span class="trust-item__label">Èxit en implants</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-item__num">2</span>
+            <span class="trust-item__label">Clíniques · Lleida i Tremp</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- NOSALTRES -->
     <section class="about" id="nosaltres">
@@ -607,7 +654,20 @@
             <h2>Primer parlem,<br /><em>després decidim</em></h2>
             <p>La primera visita és una exploració i una conversa. T'expliquem què passa i què caldria fer, amb pressupost clar, abans de començar cap tractament.</p>
           </div>
-          <a href="seus.html#contacte" class="btn btn--ghost btn--lg">Reserva la teva cita</a>
+          <div class="cta-band__cta">
+            <a href="seus.html#contacte" class="btn btn--ghost btn--lg" data-track="click_cita" data-track-label="cta-band">Reserva la teva cita</a>
+            <p class="contact-row">
+              <span class="contact-row__label">o ara mateix:</span>
+              <a href="tel:+34973268826" class="contact-link">
+                <svg viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 1.5h3l1.5 3.5-1.75 1.25a9 9 0 004.5 4.5L11 9l3.5 1.5v3a1 1 0 01-1 1C6.3 14.5 1.5 9.7 1.5 3.5a1 1 0 011-1z"/></svg>
+                973 26 88 26
+              </a>
+              <a href="https://wa.me/34615983352" class="contact-link" target="_blank" rel="noopener" data-seu="general">
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.556 4.122 1.528 5.855L.057 23.175a.75.75 0 00.918.899l5.42-1.424A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 01-4.965-1.364l-.356-.211-3.677.964.982-3.592-.231-.369A9.713 9.713 0 012.25 12C2.25 6.613 6.613 2.25 12 2.25S21.75 6.613 21.75 12 17.387 21.75 12 21.75z"/></svg>
+                WhatsApp
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </section>

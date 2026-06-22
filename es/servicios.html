@@ -2,6 +2,18 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
+  <!-- Google Analytics 4 — consent-gated: loads only after the visitor grants the analytics category (see assets/js/main.js). -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.GA4_ID = 'G-XXXXXXXXXX'; /* TODO: substituir per l'ID real de GA4 */
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Servicios · Estudi Dental Carrera</title>
   <meta name="description" content="Tratamientos odontológicos con enfoque conservador: ATM y bruxismo, implantes, ortodoncia, prevención infantil, endodoncia. En Lleida y Tremp." />
@@ -28,6 +40,15 @@
   <link rel="stylesheet" href="../assets/css/main.css" />
   <link rel="icon" type="image/png" sizes="64x64" href="../assets/img/logos/favicon.png" />
   <link rel="icon" type="image/svg+xml" href="../assets/img/logos/favicon.svg" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"¿Cuánto cuesta la primera visita?","acceptedAnswer":{"@type":"Answer","text":"La primera visita es una exploración completa con diagnóstico y, cuando es necesario, escáner intraoral. Saldrás con un presupuesto detallado por escrito, sin ningún compromiso de tratar nada."}},
+  {"@type":"Question","name":"¿Duele el tratamiento?","acceptedAnswer":{"@type":"Answer","text":"Trabajamos con anestesia local y técnicas mínimamente invasivas para que los tratamientos sean lo más cómodos posible. Te explicamos cada paso antes de hacerlo y paramos siempre que lo necesites."}},
+  {"@type":"Question","name":"¿Cuánto dura un tratamiento?","acceptedAnswer":{"@type":"Answer","text":"Depende del caso. Una higiene o un empaste se resuelven en una visita; la ortodoncia suele durar entre 12 y 18 meses; los implantes requieren varias fases. En el plan consta el tiempo estimado por escrito antes de empezar."}},
+  {"@type":"Question","name":"¿Se puede financiar?","acceptedAnswer":{"@type":"Answer","text":"Sí. Adaptamos el plan a tus posibilidades y ofrecemos opciones de pago fraccionado para los tratamientos más extensos."}},
+  {"@type":"Question","name":"Tengo que cambiar de dentista y me da miedo.","acceptedAnswer":{"@type":"Answer","text":"No tienes que decidir nada en la primera visita. Te enseñamos qué vemos, qué opciones hay y qué límites tienen. Tú decides, con toda la información y sin prisa."}}
+  ]}
+  </script>
 </head>
 <body>
   <a href="#main" class="skip-link">Saltar al contenido</a>
@@ -572,6 +593,34 @@
       </div>
     </section>
 
+    <!-- ANTES / DESPUÉS -->
+    <section class="ba" id="casos" aria-labelledby="ba-title">
+      <div class="container">
+        <div class="section-header reveal"><span class="label">Resultados reales</span><h2 id="ba-title">Antes y <em>después</em></h2></div>
+        <!-- IMÁGENES PENDIENTES. Para publicar casos reales se necesita el consentimiento informado por escrito del paciente (RGPD). Sustituye cada <span class="ba-shot__ph"> por <img src="../assets/img/casos/..." alt="..." loading="lazy" decoding="async" /> manteniendo la estructura .ba-shot. -->
+        <div class="ba__grid reveal">
+          <figure class="ba-case"><div class="ba-case__pair"><div class="ba-shot"><span class="ba-shot__tag">Antes</span><span class="ba-shot__ph">Foto pendiente</span></div><div class="ba-shot"><span class="ba-shot__tag">Después</span><span class="ba-shot__ph">Foto pendiente</span></div></div><figcaption><span class="ba-case__service">Implantes</span><span class="ba-case__caption">Rehabilitación completa con implantes y recuperación de la función masticatoria.</span></figcaption></figure>
+          <figure class="ba-case"><div class="ba-case__pair"><div class="ba-shot"><span class="ba-shot__tag">Antes</span><span class="ba-shot__ph">Foto pendiente</span></div><div class="ba-shot"><span class="ba-shot__tag">Después</span><span class="ba-shot__ph">Foto pendiente</span></div></div><figcaption><span class="ba-case__service">Estética dental</span><span class="ba-case__caption">Diseño digital de la sonrisa con carillas, manteniendo un aspecto natural.</span></figcaption></figure>
+          <figure class="ba-case"><div class="ba-case__pair"><div class="ba-shot"><span class="ba-shot__tag">Antes</span><span class="ba-shot__ph">Foto pendiente</span></div><div class="ba-shot"><span class="ba-shot__tag">Después</span><span class="ba-shot__ph">Foto pendiente</span></div></div><figcaption><span class="ba-case__service">Ortodoncia</span><span class="ba-case__caption">Alineación con ortodoncia invisible en 14 meses de tratamiento.</span></figcaption></figure>
+        </div>
+        <p class="ba__note">Todos los casos se publican con el consentimiento informado del paciente. Cada tratamiento es único; los resultados varían según cada persona.</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-header reveal"><span class="label">Preguntas frecuentes</span><h2 id="faq-title">Antes de la <em>primera visita</em></h2></div>
+        <div class="faq__list reveal">
+          <div class="faq__item"><button type="button" class="faq__q" aria-expanded="false">¿Cuánto cuesta la primera visita?<span class="faq__icon" aria-hidden="true"></span></button><div class="faq__a"><div class="faq__a-inner"><p>La primera visita es una exploración completa con diagnóstico y, cuando es necesario, escáner intraoral. Saldrás con un presupuesto detallado por escrito, sin ningún compromiso de tratar nada. Te indicamos el importe al reservar.</p></div></div></div>
+          <div class="faq__item"><button type="button" class="faq__q" aria-expanded="false">¿Duele el tratamiento?<span class="faq__icon" aria-hidden="true"></span></button><div class="faq__a"><div class="faq__a-inner"><p>Trabajamos con anestesia local y técnicas mínimamente invasivas para que los tratamientos sean lo más cómodos posible. Te explicamos cada paso antes de hacerlo y paramos siempre que lo necesites.</p></div></div></div>
+          <div class="faq__item"><button type="button" class="faq__q" aria-expanded="false">¿Cuánto dura un tratamiento?<span class="faq__icon" aria-hidden="true"></span></button><div class="faq__a"><div class="faq__a-inner"><p>Depende del caso. Una higiene o un empaste se resuelven en una visita; la ortodoncia suele durar entre 12 y 18 meses; los implantes requieren varias fases. En el plan de tratamiento consta el tiempo estimado por escrito antes de empezar.</p></div></div></div>
+          <div class="faq__item"><button type="button" class="faq__q" aria-expanded="false">¿Se puede financiar?<span class="faq__icon" aria-hidden="true"></span></button><div class="faq__a"><div class="faq__a-inner"><p>Sí. Adaptamos el plan a tus posibilidades y ofrecemos opciones de pago fraccionado para los tratamientos más extensos.</p></div></div></div>
+          <div class="faq__item"><button type="button" class="faq__q" aria-expanded="false">Tengo que cambiar de dentista y me da miedo.<span class="faq__icon" aria-hidden="true"></span></button><div class="faq__a"><div class="faq__a-inner"><p>No tienes que decidir nada en la primera visita. Te enseñamos qué vemos, qué opciones hay y qué límites tienen. Tú decides, con toda la información y sin prisa.</p></div></div></div>
+        </div>
+      </div>
+    </section>
+
     <!-- CTA -->
     <section class="cta-band">
       <div class="container">
@@ -580,7 +629,13 @@
             <h2>¿Tienes alguna pregunta<br />sobre un <em>tratamiento?</em></h2>
             <p>Nuestro equipo te asesora sin compromiso.</p>
           </div>
-          <a href="sedes.html#contacto" class="btn btn--ghost btn--lg">Contáctanos →</a>
+          <div class="cta-band__cta">
+            <a href="sedes.html#contacto" class="btn btn--ghost btn--lg" data-track="click_cita" data-track-label="serveis-cta">Contáctanos →</a>
+            <p class="contact-row"><span class="contact-row__label">o ahora mismo:</span>
+              <a href="tel:+34973268826" class="contact-link"><svg viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 1.5h3l1.5 3.5-1.75 1.25a9 9 0 004.5 4.5L11 9l3.5 1.5v3a1 1 0 01-1 1C6.3 14.5 1.5 9.7 1.5 3.5a1 1 0 011-1z"/></svg> 973 26 88 26</a>
+              <a href="https://wa.me/34615983352" class="contact-link" target="_blank" rel="noopener" data-seu="general"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.556 4.122 1.528 5.855L.057 23.175a.75.75 0 00.918.899l5.42-1.424A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 01-4.965-1.364l-.356-.211-3.677.964.982-3.592-.231-.369A9.713 9.713 0 012.25 12C2.25 6.613 6.613 2.25 12 2.25S21.75 6.613 21.75 12 17.387 21.75 12 21.75z"/></svg> WhatsApp</a>
+            </p>
+          </div>
         </div>
       </div>
     </section>

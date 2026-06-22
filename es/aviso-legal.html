@@ -2,6 +2,18 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
+  <!-- Google Analytics 4 — consent-gated: loads only after the visitor grants the analytics category (see assets/js/main.js). -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.GA4_ID = 'G-XXXXXXXXXX'; /* TODO: substituir per l'ID real de GA4 */
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aviso legal · Estudi Dental Carrera</title>
   <meta name="description" content="Aviso legal y condiciones de uso del sitio web de Estudi Dental Carrera, clínica odontológica en Lleida y Tremp." />

@@ -425,7 +425,7 @@ console.log(
    ============================================================ */
 (function initConsent() {
   const STORAGE_KEY = 'edc_consent_v1';
-  const DEFAULT = { necessary: true, maps: false, ts: null };
+  const DEFAULT = { necessary: true, maps: false, analytics: false, ts: null };
 
   const listeners = new Set();
 
@@ -440,13 +440,17 @@ console.log(
   }
 
   function write(prefs) {
-    const next = Object.assign({}, DEFAULT, prefs, {
+    // Merge over the CURRENT stored prefs (not DEFAULT) so partial updates
+    // — e.g. the map-gate "accept" button passing only { maps: true } —
+    // don't silently reset other categories like analytics.
+    const next = Object.assign({}, current(), prefs, {
       necessary: true,
       ts: new Date().toISOString()
     });
     try { localStorage.setItem(STORAGE_KEY, JSON.stringify(next)); } catch (_) {}
     listeners.forEach(fn => { try { fn(next); } catch (_) {} });
     applyMapGate(next);
+    applyAnalytics(next);
     return next;
   }
 
@@ -468,6 +472,39 @@ console.log(
         wrap.setAttribute('data-consent-blocked', 'true');
       }
     });
+  }
+
+  /* ---- Google Analytics 4 gate ----
+     GA is loaded lazily, ONLY after the visitor grants the "analytics"
+     category. Until then no request is made to Google's servers. The
+     gtag() stub + Consent Mode defaults live in each page's <head>. */
+  let gaLoaded = false;
+  function applyAnalytics(prefs) {
+    const allow = !!(prefs && prefs.analytics);
+    if (!allow) {
+      if (typeof window.gtag === 'function') {
+        window.gtag('consent', 'update', { analytics_storage: 'denied' });
+      }
+      return;
+    }
+    if (typeof window.gtag === 'function') {
+      window.gtag('consent', 'update', { analytics_storage: 'granted' });
+    }
+    loadGA();
+  }
+  function loadGA() {
+    if (gaLoaded) return;
+    const id = window.GA4_ID;
+    if (!id || /X{4,}/.test(id)) { gaLoaded = true; return; } // placeholder → don't load
+    gaLoaded = true;
+    const s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(id);
+    document.head.appendChild(s);
+    if (typeof window.gtag === 'function') {
+      window.gtag('js', new Date());
+      window.gtag('config', id, { anonymize_ip: true });
+    }
   }
 
   /* ---- Banner ---- */
@@ -492,8 +529,8 @@ console.log(
       const btn = e.target.closest('[data-consent-action]');
       if (!btn) return;
       const action = btn.dataset.consentAction;
-      if (action === 'accept') { write({ maps: true }); hideBanner(); }
-      else if (action === 'reject') { write({ maps: false }); hideBanner(); }
+      if (action === 'accept') { write({ maps: true, analytics: true }); hideBanner(); }
+      else if (action === 'reject') { write({ maps: false, analytics: false }); hideBanner(); }
       else if (action === 'prefs') { openModal(); }
     });
     bannerEl = el;
@@ -525,6 +562,13 @@ console.log(
       label: 'Mapes de Google Maps',
       tag: 'De tercers',
       desc: 'Carrega els mapes integrats a la pàgina de seus perquè puguis veure la ubicació de les clíniques. Google pot establir cookies pròpies segons la seva política.',
+      required: false
+    },
+    {
+      key: 'analytics',
+      label: 'Estadístiques (Google Analytics)',
+      tag: 'De tercers',
+      desc: 'Ens ajuden a entendre de forma anònima i agregada com es fa servir el web (pàgines vistes, clics a telèfon o WhatsApp) per millorar-lo. No carreguem Google Analytics fins que ho acceptes.',
       required: false
     }
   ];
@@ -584,8 +628,8 @@ console.log(
       if (!btn) return;
       const a = btn.dataset.consentAction;
       if (a === 'close') closeModal();
-      else if (a === 'accept') { write({ maps: true }); closeModal(); hideBanner(); }
-      else if (a === 'reject') { write({ maps: false }); closeModal(); hideBanner(); }
+      else if (a === 'accept') { write({ maps: true, analytics: true }); closeModal(); hideBanner(); }
+      else if (a === 'reject') { write({ maps: false, analytics: false }); closeModal(); hideBanner(); }
       else if (a === 'save') {
         const prefs = {};
         el.querySelectorAll('[data-switch]').forEach(s => {
@@ -663,8 +707,8 @@ console.log(
     get: current,
     set: write,
     open: openModal,
-    accept: () => write({ maps: true }),
-    reject: () => write({ maps: false }),
+    accept: () => write({ maps: true, analytics: true }),
+    reject: () => write({ maps: false, analytics: false }),
     on: fn => { if (typeof fn === 'function') listeners.add(fn); return () => listeners.delete(fn); }
   };
 
@@ -672,6 +716,7 @@ console.log(
   function boot() {
     const stored = read();
     applyMapGate(stored || DEFAULT);
+    applyAnalytics(stored || DEFAULT);
     if (!stored) {
       setTimeout(showBanner, 650);
     }
@@ -697,4 +742,106 @@ console.log(
   apply();
   if (mq.addEventListener) mq.addEventListener('change', apply);
   else if (mq.addListener) mq.addListener(apply); // Safari <14
+})();
+
+/* ---------- CONVERSION EVENT TRACKING ----------
+   Thin wrapper over GA4. track() is a no-op until the visitor grants the
+   analytics category (gtag only sends once loaded — see initConsent). We
+   capture the conversion-critical micro-actions: phone taps, WhatsApp
+   taps, appointment CTAs and form submissions. Delegated from document
+   so it covers nav, footer, FAB, mobile bar and any injected markup. */
+window.track = function track(name, params) {
+  try {
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', name, params || {});
+    }
+  } catch (_) {}
+};
+
+(function initTracking() {
+  document.addEventListener('click', e => {
+    const tel = e.target.closest('a[href^="tel:"]');
+    if (tel) {
+      window.track('click_telefon', { numero: tel.getAttribute('href').replace('tel:', '') });
+      return;
+    }
+    const wa = e.target.closest('a[href*="wa.me"]');
+    if (wa) {
+      window.track('click_whatsapp', { seu: wa.getAttribute('data-seu') || 'general' });
+      return;
+    }
+    const cta = e.target.closest('[data-track]');
+    if (cta) {
+      window.track(cta.getAttribute('data-track'), { etiqueta: cta.getAttribute('data-track-label') || cta.textContent.trim().slice(0, 60) });
+    }
+  }, { passive: true });
+
+  // Form submission intent — fires even though the backend isn't wired yet,
+  // so the clinic can already see how many visitors reach "send".
+  const cForm = document.getElementById('contactForm');
+  if (cForm) {
+    cForm.addEventListener('submit', () => {
+      const seu = cForm.querySelector('[name="clinica"],[name="seu"],select');
+      window.track('submit_formulari', { seu: (seu && seu.value) || '' });
+    });
+  }
+})();
+
+/* ---------- STICKY MOBILE ACTION BAR ----------
+   On phones, a fixed bottom bar puts "Call" and "WhatsApp" one tap away on
+   every page — the single highest-leverage conversion element for a local
+   clinic. Injected here (like back-top) so it needs no per-page markup.
+   Hidden on desktop via CSS; hidden over the footer so it never covers
+   the legal links / contact details. */
+(function initMobileBar() {
+  const LANG = (document.documentElement.lang || 'ca').slice(0, 2).toLowerCase();
+  const STR = {
+    ca: { call: 'Trucar', wa: 'WhatsApp', callAria: 'Trucar a la clínica', waAria: 'Escriure per WhatsApp' },
+    es: { call: 'Llamar', wa: 'WhatsApp', callAria: 'Llamar a la clínica', waAria: 'Escribir por WhatsApp' },
+    en: { call: 'Call',   wa: 'WhatsApp', callAria: 'Call the clinic',     waAria: 'Message on WhatsApp' }
+  }[LANG] || { call: 'Trucar', wa: 'WhatsApp', callAria: 'Trucar a la clínica', waAria: 'Escriure per WhatsApp' };
+
+  // Primary contacts (Lleida line + main WhatsApp), overridable per page
+  // via <body data-phone="..." data-wa="...">.
+  const phone = document.body.getAttribute('data-phone') || '+34973268826';
+  const wa    = document.body.getAttribute('data-wa') || '34615983352';
+
+  const bar = document.createElement('div');
+  bar.className = 'mobile-cta-bar';
+  bar.setAttribute('role', 'group');
+  bar.setAttribute('aria-label', STR.call + ' / ' + STR.wa);
+  bar.innerHTML = `
+    <a href="tel:${phone}" class="mobile-cta-bar__btn mobile-cta-bar__btn--call" aria-label="${STR.callAria}">
+      <svg viewBox="0 0 16 16" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 1.5h3l1.5 3.5-1.75 1.25a9 9 0 004.5 4.5L11 9l3.5 1.5v3a1 1 0 01-1 1C6.3 14.5 1.5 9.7 1.5 3.5a1 1 0 011-1z"/></svg>
+      <span>${STR.call}</span>
+    </a>
+    <a href="https://wa.me/${wa}" class="mobile-cta-bar__btn mobile-cta-bar__btn--wa" target="_blank" rel="noopener" data-seu="general" aria-label="${STR.waAria}">
+      <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.556 4.122 1.528 5.855L.057 23.175a.75.75 0 00.918.899l5.42-1.424A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+      <span>${STR.wa}</span>
+    </a>`;
+  document.body.appendChild(bar);
+
+  // Hide the bar while the footer is on screen so it never covers it.
+  const footer = document.querySelector('.footer');
+  if (footer && 'IntersectionObserver' in window) {
+    new IntersectionObserver(entries => {
+      entries.forEach(en => bar.classList.toggle('is-hidden', en.isIntersecting));
+    }, { threshold: 0 }).observe(footer);
+  }
+})();
+
+/* ---------- FAQ ACCORDION ----------
+   Accessible disclosure: each question is a <button aria-expanded>
+   controlling the answer panel. Open one at a time isn't enforced —
+   visitors can keep several open while comparing answers. */
+(function initFAQ() {
+  const items = document.querySelectorAll('.faq__q');
+  if (!items.length) return;
+  items.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+      if (!open) window.track && window.track('obre_faq', { pregunta: btn.textContent.trim().slice(0, 80) });
+    });
+  });
 })();

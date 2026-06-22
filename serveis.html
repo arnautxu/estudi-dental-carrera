@@ -2,6 +2,18 @@
 <html lang="ca">
 <head>
   <meta charset="UTF-8" />
+  <!-- Google Analytics 4 — consent-gated: loads only after the visitor grants the analytics category (see assets/js/main.js). -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.GA4_ID = 'G-XXXXXXXXXX'; /* TODO: substituir per l'ID real de GA4 */
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Serveis · Estudi Dental Carrera</title>
   <meta name="description" content="Tractaments odontològics amb enfoc conservador: ATM i bruxisme, implants, ortodòncia, prevenció infantil, endodòncia. A Lleida i Tremp." />
@@ -27,6 +39,20 @@
   <link rel="stylesheet" href="assets/css/main.css" />
   <link rel="icon" type="image/png" sizes="64x64" href="assets/img/logos/favicon.png" />
   <link rel="icon" type="image/svg+xml" href="assets/img/logos/favicon.svg" />
+  <!-- FAQPage structured data — mirrors the on-page FAQ section -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"Quant costa la primera visita?","acceptedAnswer":{"@type":"Answer","text":"La primera visita és una exploració completa amb diagnòstic i, quan cal, escàner intraoral. En sortiràs amb un pressupost detallat per escrit, sense cap compromís de tractar res. T'indiquem l'import en reservar."}},
+      {"@type":"Question","name":"Fa mal el tractament?","acceptedAnswer":{"@type":"Answer","text":"Treballem amb anestèsia local i tècniques mínimament invasives perquè els tractaments siguin el més confortables possible. T'expliquem cada pas abans de fer-lo i ens aturem sempre que ho necessitis."}},
+      {"@type":"Question","name":"Quant dura un tractament?","acceptedAnswer":{"@type":"Answer","text":"Depèn del cas. Una higiene o un empast es resolen en una visita; l'ortodòncia sol durar entre 12 i 18 mesos; els implants requereixen diverses fases. Al pla de tractament hi consta el temps estimat per escrit abans de començar."}},
+      {"@type":"Question","name":"Es pot finançar?","acceptedAnswer":{"@type":"Answer","text":"Sí. Adaptem el pla a les teves possibilitats i oferim opcions de pagament fraccionat per als tractaments més extensos."}},
+      {"@type":"Question","name":"He de canviar de dentista? Tinc por.","acceptedAnswer":{"@type":"Answer","text":"No has de decidir res a la primera visita. T'ensenyem què veiem, quines opcions hi ha i quins límits tenen. Tu decideixes, amb tota la informació i sense pressa."}}
+    ]
+  }
+  </script>
 </head>
 <body>
   <a href="#main" class="skip-link">Salta al contingut</a>
@@ -590,6 +616,88 @@
       </div>
     </section>
 
+    <!-- ABANS / DESPRÉS -->
+    <section class="ba" id="casos" aria-labelledby="ba-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="label">Resultats reals</span>
+          <h2 id="ba-title">Abans i <em>després</em></h2>
+        </div>
+        <!--
+          IMATGES PENDENTS. Per publicar casos reals cal el consentiment
+          informat per escrit del pacient (RGPD). Quan tinguis les fotos,
+          substitueix cada <span class="ba-shot__ph"> per:
+            <img src="assets/img/casos/cas-1-abans.webp" alt="Abans del tractament" loading="lazy" decoding="async" />
+          mantenint la mateixa estructura .ba-shot.
+        -->
+        <div class="ba__grid reveal">
+          <figure class="ba-case">
+            <div class="ba-case__pair">
+              <div class="ba-shot"><span class="ba-shot__tag">Abans</span><span class="ba-shot__ph">Foto pendent</span></div>
+              <div class="ba-shot"><span class="ba-shot__tag">Després</span><span class="ba-shot__ph">Foto pendent</span></div>
+            </div>
+            <figcaption>
+              <span class="ba-case__service">Implants</span>
+              <span class="ba-case__caption">Rehabilitació completa amb implants i recuperació de la funció de mastegar.</span>
+            </figcaption>
+          </figure>
+          <figure class="ba-case">
+            <div class="ba-case__pair">
+              <div class="ba-shot"><span class="ba-shot__tag">Abans</span><span class="ba-shot__ph">Foto pendent</span></div>
+              <div class="ba-shot"><span class="ba-shot__tag">Després</span><span class="ba-shot__ph">Foto pendent</span></div>
+            </div>
+            <figcaption>
+              <span class="ba-case__service">Estètica dental</span>
+              <span class="ba-case__caption">Disseny digital del somriure amb carilles, mantenint l'aspecte natural.</span>
+            </figcaption>
+          </figure>
+          <figure class="ba-case">
+            <div class="ba-case__pair">
+              <div class="ba-shot"><span class="ba-shot__tag">Abans</span><span class="ba-shot__ph">Foto pendent</span></div>
+              <div class="ba-shot"><span class="ba-shot__tag">Després</span><span class="ba-shot__ph">Foto pendent</span></div>
+            </div>
+            <figcaption>
+              <span class="ba-case__service">Ortodòncia</span>
+              <span class="ba-case__caption">Alineació amb ortodòncia invisible en 14 mesos de tractament.</span>
+            </figcaption>
+          </figure>
+        </div>
+        <p class="ba__note">Tots els casos es publiquen amb el consentiment informat del pacient. Cada tractament és únic; els resultats varien segons cada persona.</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="label">Preguntes freqüents</span>
+          <h2 id="faq-title">Abans de la <em>primera visita</em></h2>
+        </div>
+        <div class="faq__list reveal">
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false">Quant costa la primera visita?<span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><div class="faq__a-inner"><p>La primera visita és una exploració completa amb diagnòstic i, quan cal, escàner intraoral. En sortiràs amb un pressupost detallat per escrit, sense cap compromís de tractar res. És de pagament perquè el temps que et dediquem val el mateix que qualsevol altra visita; t'indiquem l'import en reservar.</p></div></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false">Fa mal el tractament?<span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><div class="faq__a-inner"><p>Treballem amb anestèsia local i tècniques mínimament invasives perquè els tractaments siguin el més confortables possible. T'expliquem cada pas abans de fer-lo i ens aturem sempre que ho necessitis. La majoria de pacients descriu molèsties molt menors a les que esperaven.</p></div></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false">Quant dura un tractament?<span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><div class="faq__a-inner"><p>Depèn del cas. Una higiene o un empast es resolen en una visita; l'ortodòncia sol durar entre 12 i 18 mesos; els implants requereixen diverses fases amb temps de cicatrització. Al pla de tractament hi consta el temps estimat per escrit abans de començar.</p></div></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false">Es pot finançar?<span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><div class="faq__a-inner"><p>Sí. Adaptem el pla a les teves possibilitats i oferim opcions de pagament fraccionat per als tractaments més extensos. Comenta-ho a la primera visita i et preparem una proposta a mida.</p></div></div>
+          </div>
+          <div class="faq__item">
+            <button type="button" class="faq__q" aria-expanded="false">He de canviar de dentista? Tinc por.<span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><div class="faq__a-inner"><p>No has de decidir res a la primera visita. La nostra manera de treballar és explicar-ho tot abans de fer res: t'ensenyem què veiem, quines opcions hi ha i quins límits tenen. Tu decideixes, amb tota la informació i sense pressa.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- CTA -->
     <section class="cta-band">
       <div class="container">
@@ -598,7 +706,20 @@
             <h2>Tens alguna pregunta<br />sobre un <em>tractament?</em></h2>
             <p>El nostre equip t'assessora sense compromís.</p>
           </div>
-          <a href="seus.html#contacte" class="btn btn--ghost btn--lg">Contacta'ns →</a>
+          <div class="cta-band__cta">
+            <a href="seus.html#contacte" class="btn btn--ghost btn--lg" data-track="click_cita" data-track-label="serveis-cta">Contacta'ns →</a>
+            <p class="contact-row">
+              <span class="contact-row__label">o ara mateix:</span>
+              <a href="tel:+34973268826" class="contact-link">
+                <svg viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 1.5h3l1.5 3.5-1.75 1.25a9 9 0 004.5 4.5L11 9l3.5 1.5v3a1 1 0 01-1 1C6.3 14.5 1.5 9.7 1.5 3.5a1 1 0 011-1z"/></svg>
+                973 26 88 26
+              </a>
+              <a href="https://wa.me/34615983352" class="contact-link" target="_blank" rel="noopener" data-seu="general">
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.556 4.122 1.528 5.855L.057 23.175a.75.75 0 00.918.899l5.42-1.424A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 01-4.965-1.364l-.356-.211-3.677.964.982-3.592-.231-.369A9.713 9.713 0 012.25 12C2.25 6.613 6.613 2.25 12 2.25S21.75 6.613 21.75 12 17.387 21.75 12 21.75z"/></svg>
+                WhatsApp
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </section>

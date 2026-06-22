@@ -1,0 +1,16 @@
+# OS
+.DS_Store
+**/.DS_Store
+
+# Vercel (conté secrets: .env.development.local)
+.vercel/
+
+# Tooling / agents (no és contingut del lloc)
+.agents/
+.claude/skills/
+.impeccable.md
+skills/
+skills-lock.json
+
+# Fitxers duplicats accidentals
+*.png.png
