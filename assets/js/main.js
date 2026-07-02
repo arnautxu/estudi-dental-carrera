@@ -35,15 +35,35 @@ function toggleMenu(state) {
   menu.classList.toggle('open', open);
   menu.setAttribute('aria-hidden', !open);
   document.body.style.overflow = open ? 'hidden' : '';
+  document.querySelector('.mobile-cta-bar')?.classList.toggle('is-hidden', open);
   const spans = burger.querySelectorAll('span');
   if (open) {
     spans[0].style.transform = 'translateY(6.5px) rotate(45deg)';
     spans[1].style.opacity   = '0';
     spans[2].style.transform = 'translateY(-6.5px) rotate(-45deg)';
+    // Move focus into the menu so keyboard/AT users land somewhere sane
+    // instead of staying "behind" a full-screen overlay.
+    setTimeout(() => closeBtn?.focus(), 60);
   } else {
     spans.forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
+    burger.focus();
   }
 }
+
+// Simple focus trap while the full-screen menu is open — Tab/Shift+Tab
+// cycle within it instead of escaping to the (invisible) page behind.
+document.addEventListener('keydown', e => {
+  if (!open || e.key !== 'Tab' || !menu) return;
+  const focusables = menu.querySelectorAll('a[href], button:not([disabled])');
+  if (!focusables.length) return;
+  const first = focusables[0];
+  const last = focusables[focusables.length - 1];
+  if (e.shiftKey && document.activeElement === first) {
+    e.preventDefault(); last.focus();
+  } else if (!e.shiftKey && document.activeElement === last) {
+    e.preventDefault(); first.focus();
+  }
+});
 
 if (burger) burger.addEventListener('click', () => toggleMenu());
 if (closeBtn) closeBtn.addEventListener('click', () => toggleMenu(false));
@@ -70,13 +90,14 @@ const emObserver = new IntersectionObserver(
 document.querySelectorAll('h2:has(em)').forEach(el => emObserver.observe(el));
 
 /* ---------- SMOOTH ANCHOR SCROLL ---------- */
+const prefersReducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     const id = a.getAttribute('href').slice(1);
     const target = document.getElementById(id);
     if (!target) return;
     e.preventDefault();
-    window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
+    window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 88, behavior: prefersReducedMotion() ? 'auto' : 'smooth' });
   });
 });
 
@@ -91,110 +112,160 @@ const secObs = new IntersectionObserver(
 );
 sections.forEach(s => secObs.observe(s));
 
-/* ---------- LOCATION CARD PARALLAX ---------- */
-document.querySelectorAll('.location-card').forEach(card => {
-  const bg = card.querySelector('.location-card__bg');
-  if (!bg) return;
-  let rafId = null;
-  card.addEventListener('mousemove', e => {
-    if (rafId) return; // throttle to one RAF per frame
-    rafId = requestAnimationFrame(() => {
-      const r = card.getBoundingClientRect();
-      const x = (e.clientX - r.left) / r.width  - 0.5;
-      const y = (e.clientY - r.top)  / r.height - 0.5;
-      bg.style.transform = `scale(1.06) translate(${x*10}px,${y*10}px)`;
-      rafId = null;
+/* ---------- LOCATION CARD PARALLAX (pointer-fine only) ---------- */
+if (window.matchMedia('(hover: hover) and (pointer: fine)').matches
+    && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.querySelectorAll('.location-card').forEach(card => {
+    const bg = card.querySelector('.location-card__bg');
+    if (!bg) return;
+    let rafId = null;
+    card.addEventListener('mousemove', e => {
+      if (rafId) return; // throttle to one RAF per frame
+      rafId = requestAnimationFrame(() => {
+        const r = card.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width  - 0.5;
+        const y = (e.clientY - r.top)  / r.height - 0.5;
+        bg.style.transform = `scale(1.06) translate(${x*10}px,${y*10}px)`;
+        rafId = null;
+      });
+    });
+    card.addEventListener('mouseleave', () => {
+      if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+      bg.style.transform = '';
     });
   });
-  card.addEventListener('mouseleave', () => {
-    if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
-    bg.style.transform = '';
-  });
-});
+}
 
-/* ---------- CONTACT FORM ---------- */
+/* ---------- CONTACT FORM ----------
+   Honest states only: the form never claims success unless a submission
+   actually goes somewhere. FORM_ENDPOINT is intentionally empty until a
+   real backend (Formspree / Web3Forms / a Vercel serverless function) is
+   wired — until then, invalid fields show inline errors and a valid
+   submission is routed to phone/WhatsApp instead of a fake confirmation. */
 const form = document.getElementById('contactForm');
 if (form) {
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    const btn = form.querySelector('.submit-btn') || form.querySelector('[type="submit"]');
-    const origHTML = btn.innerHTML;
-    const origStyle = btn.getAttribute('style') || '';
-    btn.innerHTML = 'Enviant...';
-    btn.disabled = true;
-    setTimeout(() => {
-      btn.innerHTML = `<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="17" height="17" aria-hidden="true" style="flex-shrink:0"><path d="M3.5 10.5l4.5 4.5 8.5-9" class="check-path"/></svg><span>Sol·licitud enviada!</span>`;
-      btn.style.cssText = origStyle + ';background:var(--success,oklch(52% 0.13 158));display:inline-flex;align-items:center;gap:8px;justify-content:center';
-      form.reset();
-      setTimeout(() => {
-        btn.innerHTML = origHTML;
-        btn.setAttribute('style', origStyle);
-        btn.disabled = false;
-      }, 4000);
-    }, 1200);
-  });
-}
+  const FORM_ENDPOINT = ''; // TODO: set the real form backend endpoint to enable submissions.
+  const FORM_LANG = (document.documentElement.lang || 'ca').slice(0, 2).toLowerCase();
+  const FS = ({
+    ca: {
+      fieldRequired: 'Aquest camp és obligatori.',
+      formInvalid: 'Revisa els camps marcats en vermell.',
+      sending: 'Enviant...',
+      success: 'Sol·licitud enviada! Et contactarem en menys de 24 hores.',
+      error: 'No hem pogut enviar el formulari. Truca’ns al 973 26 88 26 o escriu-nos per WhatsApp i ho resolem a l’instant.',
+      notWired: 'De moment no podem processar la sol·licitud des d’aquí. Truca’ns al 973 26 88 26 o escriu-nos per WhatsApp — et confirmarem la cita a l’instant.'
+    },
+    es: {
+      fieldRequired: 'Este campo es obligatorio.',
+      formInvalid: 'Revisa los campos marcados en rojo.',
+      sending: 'Enviando...',
+      success: '¡Solicitud enviada! Te contactaremos en menos de 24 horas.',
+      error: 'No hemos podido enviar el formulario. Llámanos al 973 26 88 26 o escríbenos por WhatsApp y lo resolvemos al instante.',
+      notWired: 'De momento no podemos procesar la solicitud desde aquí. Llámanos al 973 26 88 26 o escríbenos por WhatsApp — te confirmamos la cita al instante.'
+    }
+  })[FORM_LANG] || {};
 
-/* ---------- STAT COUNTER ---------- */
-if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  function animateCounter(el) {
-    const original = el.textContent.trim();
-    // Detect Catalan thousands separator (period): e.g. "+5.000"
-    const hasThousands = /\d\.\d{3}/.test(original);
-    const target = parseInt(original.replace(/\./g, '').replace(/[^\d]/g, ''), 10);
-    if (!target) return;
-    const prefix = original.match(/^[^\d]*/)[0];
+  const statusEl = form.querySelector('[data-form-status]');
+  const btn = form.querySelector('.submit-btn') || form.querySelector('[type="submit"]');
+  const origHTML = btn.innerHTML;
 
-    const fmt = n => {
-      if (hasThousands && n >= 1000) {
-        return prefix + Math.floor(n / 1000) + '.' + String(n % 1000).padStart(3, '0');
-      }
-      return prefix + n;
-    };
-
-    const duration = 1400;
-    const startTs = performance.now();
-    const tick = ts => {
-      const t = Math.min((ts - startTs) / duration, 1);
-      const ease = 1 - Math.pow(1 - t, 3); // cubic ease-out
-      el.textContent = fmt(Math.round(ease * target));
-      if (t < 1) requestAnimationFrame(tick);
-      else { el.textContent = original; el.classList.add('counted'); } // restore + pulse
-    };
-    requestAnimationFrame(tick);
+  function setStatus(msg, kind) {
+    if (!statusEl) return;
+    statusEl.textContent = msg || '';
+    statusEl.hidden = !msg;
+    statusEl.className = 'form-status' + (kind ? ' form-status--' + kind : '');
   }
 
-  const counterObs = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        animateCounter(e.target);
-        counterObs.unobserve(e.target);
+  function clearFieldErrors() {
+    form.querySelectorAll('.field-error').forEach(el => el.remove());
+    form.querySelectorAll('[aria-invalid="true"]').forEach(el => el.removeAttribute('aria-invalid'));
+  }
+
+  function markInvalid(field) {
+    field.setAttribute('aria-invalid', 'true');
+    if (!field.id) return;
+    const id = field.id + '-error';
+    const err = document.createElement('span');
+    err.className = 'field-error';
+    err.id = id;
+    err.textContent = FS.fieldRequired;
+    field.setAttribute('aria-describedby', id);
+    field.closest('.form-group')?.appendChild(err);
+  }
+
+  function validate() {
+    clearFieldErrors();
+    let firstInvalid = null;
+    form.querySelectorAll('[required]').forEach(field => {
+      const invalid = field.type === 'checkbox' ? !field.checked : !field.value.trim();
+      if (invalid) {
+        markInvalid(field);
+        if (!firstInvalid) firstInvalid = field;
       }
     });
-  }, { threshold: 0.8 });
+    return firstInvalid;
+  }
 
-  document.querySelectorAll('.stat__num').forEach(el => counterObs.observe(el));
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const firstInvalid = validate();
+    if (firstInvalid) {
+      firstInvalid.focus();
+      setStatus(FS.formInvalid, 'error');
+      return;
+    }
+
+    if (!FORM_ENDPOINT) {
+      setStatus(FS.notWired, 'info');
+      return;
+    }
+
+    setStatus('');
+    btn.innerHTML = FS.sending;
+    btn.disabled = true;
+    try {
+      const res = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      });
+      if (!res.ok) throw new Error('submit failed');
+      setStatus(FS.success, 'success');
+      form.reset();
+    } catch (_) {
+      setStatus(FS.error, 'error');
+    } finally {
+      btn.innerHTML = origHTML;
+      btn.disabled = false;
+    }
+  });
 }
 
-/* ---------- TEAM CARDS: subtle hover tilt ---------- */
-document.querySelectorAll('.team-card').forEach(card => {
-  card.addEventListener('mousemove', e => {
-    const r = card.getBoundingClientRect();
-    const x = ((e.clientX - r.left) / r.width  - 0.5) * 4;
-    const y = ((e.clientY - r.top)  / r.height - 0.5) * 4;
-    card.style.transform = `translateY(-3px) rotateX(${-y}deg) rotateY(${x}deg)`;
-    card.style.transition = 'transform .1s';
+/* ---------- TEAM CARDS: subtle hover tilt (pointer-fine only) ---------- */
+if (window.matchMedia('(hover: hover) and (pointer: fine)').matches
+    && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.querySelectorAll('.team-card').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const r = card.getBoundingClientRect();
+      const x = ((e.clientX - r.left) / r.width  - 0.5) * 4;
+      const y = ((e.clientY - r.top)  / r.height - 0.5) * 4;
+      card.style.transform = `translateY(-3px) rotateX(${-y}deg) rotateY(${x}deg)`;
+      card.style.transition = 'transform .1s';
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+      card.style.transition = 'transform .4s ease, box-shadow .4s ease';
+    });
   });
-  card.addEventListener('mouseleave', () => {
-    card.style.transform = '';
-    card.style.transition = 'transform .4s ease, box-shadow .4s ease';
-  });
-});
+}
 
 /* ---------- TESTIMONIALS (3D stage with Motion One springs) ---------- */
 (function initTestimonials() {
   const root = document.querySelector('[data-testimonials]');
   if (!root) return;
+  const dotLabel = (document.documentElement.lang || 'ca').slice(0, 2).toLowerCase() === 'es'
+    ? (i, total) => `Reseña ${i} de ${total}`
+    : (i, total) => `Ressenya ${i} de ${total}`;
   const track = root.querySelector('[data-testimonials-track]');
   const slides = Array.from(track.querySelectorAll('.testimonial'));
   const total = slides.length;
@@ -315,7 +386,7 @@ document.querySelectorAll('.team-card').forEach(card => {
     d.type = 'button';
     d.className = 'testimonials__dot';
     d.setAttribute('role', 'tab');
-    d.setAttribute('aria-label', `Ressenya ${i + 1} de ${total}`);
+    d.setAttribute('aria-label', dotLabel(i + 1, total));
     d.addEventListener('click', () => { go(i); restart(); });
     dotsWrap.appendChild(d);
     dots.push(d);
@@ -385,30 +456,15 @@ document.body.appendChild(backTop);
 window.addEventListener('scroll', () => {
   backTop.classList.toggle('visible', window.scrollY > 500);
 }, { passive: true });
-backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: prefersReducedMotion() ? 'auto' : 'smooth' }));
 
 /* ---------- TAB TITLE DELIGHT ---------- */
 const _pageTitle = document.title;
+const _awayTitle = (document.documentElement.lang || 'ca').slice(0, 2).toLowerCase() === 'es'
+  ? '¿Vuelves pronto?' : 'Tornes aviat?';
 document.addEventListener('visibilitychange', () => {
-  document.title = document.hidden ? '🦷 Tornes aviat?' : _pageTitle;
+  document.title = document.hidden ? _awayTitle : _pageTitle;
 });
-
-/* ---------- SPARKLE CURSOR (desktop only) ---------- */
-if (window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
-  const sparkleBeix = getComputedStyle(document.documentElement).getPropertyValue('--beix').trim() || '#C1B2A2';
-  const style = document.createElement('style');
-  style.textContent = `@keyframes sparkle{0%{transform:translate(-50%,-50%) scale(0);opacity:1}60%{transform:translate(-50%,-50%) scale(1.8);opacity:.5}100%{transform:translate(-50%,-60%) scale(.5);opacity:0}}`;
-  document.head.appendChild(style);
-  let last = 0;
-  document.addEventListener('mousemove', e => {
-    if (Date.now() - last < 80) return;
-    last = Date.now();
-    const d = document.createElement('div');
-    d.style.cssText = `position:fixed;pointer-events:none;z-index:9999;left:${e.clientX}px;top:${e.clientY}px;width:5px;height:5px;border-radius:50%;background:${sparkleBeix};animation:sparkle .5s ease-out forwards;`;
-    document.body.appendChild(d);
-    setTimeout(() => d.remove(), 500);
-  });
-}
 
 /* ---------- CONSOLE EASTER EGG ---------- */
 console.log(
@@ -426,6 +482,47 @@ console.log(
 (function initConsent() {
   const STORAGE_KEY = 'edc_consent_v1';
   const DEFAULT = { necessary: true, maps: false, analytics: false, ts: null };
+
+  const LANG = (document.documentElement.lang || 'ca').slice(0, 2).toLowerCase();
+  const I18N = {
+    ca: {
+      bannerTitle: 'Cookies i privacitat',
+      bannerText: 'Fem servir cookies tècniques pròpies per al funcionament del lloc i, si ho acceptes, mapes de Google Maps a la pàgina de seus. <a href="cookies.html">Més informació</a>.',
+      prefs: 'Preferències', reject: 'Rebutjar', accept: 'Acceptar',
+      bannerAria: 'Consentiment de cookies',
+      modalTitle: 'Preferències de cookies',
+      modalLead: 'Tria quines categories acceptes. Pots canviar aquestes preferències en qualsevol moment des del peu de pàgina.',
+      rejectOptional: 'Rebutjar opcionals', save: 'Desar preferències', acceptAll: 'Acceptar totes',
+      close: 'Tancar',
+      categories: [
+        { key: 'necessary', label: 'Estrictament necessàries', tag: 'Sempre actives',
+          desc: 'Permeten el funcionament bàsic del lloc (navegació, sessió, formularis). Sense aquestes cookies el web no funcionaria correctament.', required: true },
+        { key: 'maps', label: 'Mapes de Google Maps', tag: 'De tercers',
+          desc: 'Carrega els mapes integrats a la pàgina de seus perquè puguis veure la ubicació de les clíniques. Google pot establir cookies pròpies segons la seva política.', required: false },
+        { key: 'analytics', label: 'Estadístiques (Google Analytics)', tag: 'De tercers',
+          desc: 'Ens ajuden a entendre de forma anònima i agregada com es fa servir el web (pàgines vistes, clics a telèfon o WhatsApp) per millorar-lo. No carreguem Google Analytics fins que ho acceptes.', required: false }
+      ]
+    },
+    es: {
+      bannerTitle: 'Cookies y privacidad',
+      bannerText: 'Usamos cookies técnicas propias para el funcionamiento del sitio y, si lo aceptas, mapas de Google Maps en la página de sedes. <a href="cookies.html">Más información</a>.',
+      prefs: 'Preferencias', reject: 'Rechazar', accept: 'Aceptar',
+      bannerAria: 'Consentimiento de cookies',
+      modalTitle: 'Preferencias de cookies',
+      modalLead: 'Elige qué categorías aceptas. Puedes cambiar estas preferencias en cualquier momento desde el pie de página.',
+      rejectOptional: 'Rechazar opcionales', save: 'Guardar preferencias', acceptAll: 'Aceptar todas',
+      close: 'Cerrar',
+      categories: [
+        { key: 'necessary', label: 'Estrictamente necesarias', tag: 'Siempre activas',
+          desc: 'Permiten el funcionamiento básico del sitio (navegación, sesión, formularios). Sin estas cookies el sitio no funcionaría correctamente.', required: true },
+        { key: 'maps', label: 'Mapas de Google Maps', tag: 'De terceros',
+          desc: 'Carga los mapas integrados en la página de sedes para que puedas ver la ubicación de las clínicas. Google puede establecer sus propias cookies según su política.', required: false },
+        { key: 'analytics', label: 'Estadísticas (Google Analytics)', tag: 'De terceros',
+          desc: 'Nos ayudan a entender de forma anónima y agregada cómo se usa el sitio (páginas vistas, clics en teléfono o WhatsApp) para mejorarlo. No cargamos Google Analytics hasta que lo aceptes.', required: false }
+      ]
+    }
+  };
+  const T = I18N[LANG] || I18N.ca;
 
   const listeners = new Set();
 
@@ -515,14 +612,14 @@ console.log(
     el.className = 'cookie-banner';
     el.setAttribute('role', 'dialog');
     el.setAttribute('aria-live', 'polite');
-    el.setAttribute('aria-label', 'Consentiment de cookies');
+    el.setAttribute('aria-label', T.bannerAria);
     el.innerHTML = `
-      <h2 class="cookie-banner__title">Cookies i privacitat</h2>
-      <p class="cookie-banner__text">Fem servir cookies tècniques pròpies per al funcionament del lloc i, si ho acceptes, mapes de Google Maps a la pàgina de seus. <a href="cookies.html">Més informació</a>.</p>
+      <h2 class="cookie-banner__title">${T.bannerTitle}</h2>
+      <p class="cookie-banner__text">${T.bannerText}</p>
       <div class="cookie-banner__actions">
-        <button type="button" class="cc-btn cc-btn--link" data-consent-action="prefs">Preferències</button>
-        <button type="button" class="cc-btn cc-btn--ghost" data-consent-action="reject">Rebutjar</button>
-        <button type="button" class="cc-btn cc-btn--primary" data-consent-action="accept">Acceptar</button>
+        <button type="button" class="cc-btn cc-btn--link" data-consent-action="prefs">${T.prefs}</button>
+        <button type="button" class="cc-btn cc-btn--ghost" data-consent-action="reject">${T.reject}</button>
+        <button type="button" class="cc-btn cc-btn--primary" data-consent-action="accept">${T.accept}</button>
       </div>`;
     document.body.appendChild(el);
     el.addEventListener('click', e => {
@@ -549,29 +646,7 @@ console.log(
   /* ---- Modal ---- */
   let modalEl = null;
   let modalReturnFocus = null;
-  const CATEGORIES = [
-    {
-      key: 'necessary',
-      label: 'Estrictament necessàries',
-      tag: 'Sempre actives',
-      desc: 'Permeten el funcionament bàsic del lloc (navegació, sessió, formularis). Sense aquestes cookies el web no funcionaria correctament.',
-      required: true
-    },
-    {
-      key: 'maps',
-      label: 'Mapes de Google Maps',
-      tag: 'De tercers',
-      desc: 'Carrega els mapes integrats a la pàgina de seus perquè puguis veure la ubicació de les clíniques. Google pot establir cookies pròpies segons la seva política.',
-      required: false
-    },
-    {
-      key: 'analytics',
-      label: 'Estadístiques (Google Analytics)',
-      tag: 'De tercers',
-      desc: 'Ens ajuden a entendre de forma anònima i agregada com es fa servir el web (pàgines vistes, clics a telèfon o WhatsApp) per millorar-lo. No carreguem Google Analytics fins que ho acceptes.',
-      required: false
-    }
-  ];
+  const CATEGORIES = T.categories;
 
   function buildModal() {
     if (modalEl) return modalEl;
@@ -583,16 +658,16 @@ console.log(
     el.innerHTML = `
       <div class="cookie-modal__backdrop" data-consent-action="close"></div>
       <div class="cookie-modal__panel" role="document">
-        <button type="button" class="cookie-modal__close" data-consent-action="close" aria-label="Tancar">
+        <button type="button" class="cookie-modal__close" data-consent-action="close" aria-label="${T.close}">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
         </button>
-        <h2 class="cookie-modal__title" id="cookieModalTitle">Preferències de cookies</h2>
-        <p class="cookie-modal__lead">Tria quines categories acceptes. Pots canviar aquestes preferències en qualsevol moment des del peu de pàgina.</p>
+        <h2 class="cookie-modal__title" id="cookieModalTitle">${T.modalTitle}</h2>
+        <p class="cookie-modal__lead">${T.modalLead}</p>
         <div class="cookie-modal__groups" data-groups></div>
         <div class="cookie-modal__actions">
-          <button type="button" class="cc-btn cc-btn--ghost cc-btn--reject" data-consent-action="reject">Rebutjar opcionals</button>
-          <button type="button" class="cc-btn cc-btn--ghost" data-consent-action="save">Desar preferències</button>
-          <button type="button" class="cc-btn cc-btn--primary" data-consent-action="accept">Acceptar totes</button>
+          <button type="button" class="cc-btn cc-btn--ghost cc-btn--reject" data-consent-action="reject">${T.rejectOptional}</button>
+          <button type="button" class="cc-btn cc-btn--ghost" data-consent-action="save">${T.save}</button>
+          <button type="button" class="cc-btn cc-btn--primary" data-consent-action="accept">${T.acceptAll}</button>
         </div>
       </div>`;
     document.body.appendChild(el);
@@ -609,7 +684,7 @@ console.log(
             role="switch"
             aria-checked="false"
             ${cat.required ? 'aria-disabled="true"' : ''}
-            aria-label="Activar ${cat.label}"
+            aria-label="${cat.label}"
             data-switch="${cat.key}"></button>
         </div>
         <p class="cc-group__desc">${cat.desc}</p>`;

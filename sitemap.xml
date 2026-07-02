@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://clinicarrera.cat/</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://clinicarrera.cat/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://clinicarrera.cat/es/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clinicarrera.cat/" />
+  </url>
+  <url>
+    <loc>https://clinicarrera.cat/serveis.html</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://clinicarrera.cat/serveis.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://clinicarrera.cat/es/servicios.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clinicarrera.cat/serveis.html" />
+  </url>
+  <url>
+    <loc>https://clinicarrera.cat/equip.html</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://clinicarrera.cat/equip.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://clinicarrera.cat/es/equipo.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clinicarrera.cat/equip.html" />
+  </url>
+  <url>
+    <loc>https://clinicarrera.cat/seus.html</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://clinicarrera.cat/seus.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://clinicarrera.cat/es/sedes.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clinicarrera.cat/seus.html" />
+  </url>
+  <url>
+    <loc>https://clinicarrera.cat/es/</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://clinicarrera.cat/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://clinicarrera.cat/es/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clinicarrera.cat/" />
+  </url>
+  <url>
+    <loc>https://clinicarrera.cat/es/servicios.html</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://clinicarrera.cat/serveis.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://clinicarrera.cat/es/servicios.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clinicarrera.cat/serveis.html" />
+  </url>
+  <url>
+    <loc>https://clinicarrera.cat/es/equipo.html</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://clinicarrera.cat/equip.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://clinicarrera.cat/es/equipo.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clinicarrera.cat/equip.html" />
+  </url>
+  <url>
+    <loc>https://clinicarrera.cat/es/sedes.html</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://clinicarrera.cat/seus.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://clinicarrera.cat/es/sedes.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clinicarrera.cat/seus.html" />
+  </url>
+</urlset>
