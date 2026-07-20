@@ -1348,12 +1348,12 @@ section[id] { scroll-margin-top: 96px; }
 .service-detail--featured .svc-photo__cap { color:var(--beix-light); }
 
 .sdc-photo-atm {
-  background-image:url('../img/serveis/atm-diagnostic.webp');
-  background-image:image-set(url('../img/serveis/atm-diagnostic.webp') type('image/webp'), url('../img/serveis/atm-diagnostic.jpg') type('image/jpeg'));
+  background-image:url('../img/serveis/atm-carme.webp');
+  background-image:image-set(url('../img/serveis/atm-carme.webp') type('image/webp'), url('../img/serveis/atm-carme.jpg') type('image/jpeg'));
 }
 .sdc-photo-implants {
-  background-image:url('../img/serveis/implants-cirurgia.webp');
-  background-image:image-set(url('../img/serveis/implants-cirurgia.webp') type('image/webp'), url('../img/serveis/implants-cirurgia.jpg') type('image/jpeg'));
+  background-image:url('../img/serveis/implants-planificacio.webp');
+  background-image:image-set(url('../img/serveis/implants-planificacio.webp') type('image/webp'), url('../img/serveis/implants-planificacio.jpg') type('image/jpeg'));
 }
 .sdc-photo-ortodoncia {
   background-image:url('../img/serveis/ortodoncia-model.webp');
