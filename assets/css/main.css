@@ -1630,9 +1630,15 @@ section[id] { scroll-margin-top: 96px; }
 .seu-divider { height:1px; background:var(--beix-xlight); margin:0; }
 
 /* ============================================================
-   CLINIC GALLERY (seus) — editorial masonry of real clinic photos
+   CLINIC GALLERY (seus) — editorial masonry, a block WITHIN the Lleida
+   section (the photos are all from the Lleida clinic). Separated from the
+   address/map above by a hairline, sharing the section's off-white ground.
    ============================================================ */
-.clinic-gallery { padding:clamp(70px,9vw,120px) 0; background:var(--cream); }
+.clinic-gallery__block {
+  margin-top:clamp(48px,7vw,90px);
+  padding-top:clamp(40px,5vw,64px);
+  border-top:1px solid var(--beix-xlight);
+}
 .clinic-gallery__head { max-width:640px; margin-bottom:clamp(36px,5vw,56px); }
 .clinic-gallery__head .label { display:inline-block; }
 .clinic-gallery__head h2 {
