@@ -874,8 +874,10 @@ section[id] { scroll-margin-top: 96px; }
   background-image:url('../img/lleida-edifici.webp');
   background-image:image-set(url('../img/lleida-edifici.webp') type('image/webp'), url('../img/lleida-edifici.jpg') type('image/jpeg'));
   background-size:cover;
-  background-position:center 20%;
-  filter:sepia(0.28) saturate(0.92) brightness(0.78) contrast(1.03);
+  background-position:center 15%;
+  /* Real photo, naturally warm-graded — only a light touch to sit the
+     hue near the beix system, no more heavy correction needed. */
+  filter:saturate(0.94) brightness(0.86) contrast(1.02);
 }
 .location-card__bg--tremp {
   background-color:var(--ink);
@@ -1291,6 +1293,35 @@ section[id] { scroll-margin-top: 96px; }
   content:''; position:absolute; inset:0;
   background:radial-gradient(circle at 85% 15%, rgba(193,178,162,.1) 0%, transparent 55%);
   pointer-events:none;
+}
+
+/* ---------- Photo-backed variant (real clinic photography) ----------
+   Same card shell (radius, padding, eyebrow/headline/stats), but the flat
+   ink background + SVG line-art is replaced by a real photo with a scrim
+   for text contrast — used only where we have a genuine matching photo. */
+.service-detail__card--photo {
+  background-size:cover; background-position:center; background-color:var(--ink);
+}
+.service-detail__card--photo::before {
+  background:linear-gradient(180deg, rgba(20,18,16,.1) 0%, rgba(20,18,16,.38) 55%, rgba(20,18,16,.84) 100%);
+}
+.service-detail__card--photo .sdc-headline { text-shadow:0 1px 12px rgba(0,0,0,.25); }
+.service-detail__card--photo .sdc-stats { border-top-color:rgba(255,255,255,.16); }
+
+.sdc-photo-atm {
+  background-image:url('../img/serveis/atm-diagnostic.webp');
+  background-image:image-set(url('../img/serveis/atm-diagnostic.webp') type('image/webp'), url('../img/serveis/atm-diagnostic.jpg') type('image/jpeg'));
+  background-position:center 30%;
+}
+.sdc-photo-implants {
+  background-image:url('../img/serveis/implants-cirurgia.webp');
+  background-image:image-set(url('../img/serveis/implants-cirurgia.webp') type('image/webp'), url('../img/serveis/implants-cirurgia.jpg') type('image/jpeg'));
+  background-position:center 35%;
+}
+.sdc-photo-ortodoncia {
+  background-image:url('../img/serveis/ortodoncia-model.webp');
+  background-image:image-set(url('../img/serveis/ortodoncia-model.webp') type('image/webp'), url('../img/serveis/ortodoncia-model.jpg') type('image/jpeg'));
+  background-position:center 50%;
 }
 /* Line-art anatomical illustration — editorial Gray's Anatomy vibes */
 .sdc-illo {
@@ -2154,7 +2185,9 @@ section[id] { scroll-margin-top: 96px; }
   background:rgba(193,178,162,.18); color:var(--beix-light);
 }
 .service-detail--featured .service-detail__card {
-  background:var(--beix-deep);
+  /* longhand, not shorthand `background:` — a shorthand would reset
+     background-image to none and wipe out .service-detail__card--photo */
+  background-color:var(--beix-deep);
 }
 .service-detail--featured .service-detail__card::before {
   background:radial-gradient(circle at 15% 85%, rgba(255,255,255,.08) 0%, transparent 55%);

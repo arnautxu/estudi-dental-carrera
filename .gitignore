@@ -14,3 +14,6 @@ skills-lock.json
 
 # Fitxers duplicats accidentals
 *.png.png
+
+# Fotos processades pendents de selecció final (sessió Lleida)
+assets/img/_staging/
