@@ -490,17 +490,38 @@ section[id] { scroll-margin-top: 96px; }
   display:flex; align-items:center; overflow:hidden;
   background:var(--ink); color:var(--white);
 }
-.hero__bg { position:absolute; inset:0; }
+.hero__bg {
+  position:absolute; inset:0;
+  /* Real clinic photograph behind the scrim — the hero is now photographic. */
+  background-color:var(--ink);
+  background-image:url('../img/home/hero.webp');
+  background-image:image-set(url('../img/home/hero.webp') type('image/webp'), url('../img/home/hero.jpg') type('image/jpeg'));
+  background-size:cover; background-position:center 40%;
+}
 .hero__gradient {
   position:absolute; inset:0;
-  /* Tokenized: ink → beix-deep → beix-rich, with oklch-mixed midpoints.
-     Fallback keeps the old hand-picked stops for browsers without color-mix. */
-  background:linear-gradient(135deg, #2A2A2C 0%, #3D3B3A 30%, #4E4744 55%, #6B6158 75%, #857568 100%);
-  background:linear-gradient(135deg,
-    var(--ink) 0%,
-    color-mix(in oklch, var(--ink) 62%, var(--beix-deep)) 35%,
-    var(--beix-deep) 72%,
-    color-mix(in oklch, var(--beix-deep) 58%, var(--beix-rich)) 100%);
+  /* Two scrims over the photo: a top band so the white nav stays legible,
+     and a left-heavy wash so the headline reads while the photo breathes
+     through on the right. Warm ink so it sits in the beix system. */
+  background:
+    linear-gradient(180deg, oklch(18% 0.02 55 / 0.55) 0%, transparent 20%),
+    linear-gradient(100deg,
+      oklch(20% 0.02 55 / 0.93) 0%,
+      oklch(20% 0.02 55 / 0.78) 40%,
+      oklch(22% 0.03 55 / 0.44) 74%,
+      oklch(24% 0.04 55 / 0.28) 100%);
+}
+/* On phones the headline spans full width, so darken the scrim more
+   evenly (top-to-bottom) instead of left-heavy, to keep it legible. */
+@media (max-width:768px) {
+  .hero__gradient {
+    background:
+      linear-gradient(180deg, oklch(18% 0.02 55 / 0.5) 0%, transparent 16%),
+      linear-gradient(165deg,
+        oklch(19% 0.02 55 / 0.9) 0%,
+        oklch(20% 0.02 55 / 0.76) 52%,
+        oklch(22% 0.03 55 / 0.56) 100%);
+  }
 }
 .hero__orb {
   position:absolute; border-radius:50%; pointer-events:none;
@@ -722,12 +743,19 @@ section[id] { scroll-margin-top: 96px; }
 /* ---------- Featured tile (ATM/bruxisme) ---------- */
 .service-card--featured {
   grid-column:1 / 3; grid-row:1 / 4;
-  background:var(--ink); color:var(--white);
+  color:var(--white);
   padding:clamp(36px,4vw,60px);
   gap:1.2rem; overflow:hidden;
-}
-@media (hover: hover) and (pointer: fine) {
-  .service-card--featured:hover { background:var(--ink); }
+  /* Real ATM/diagnosis photo behind a strong warm scrim — a photographic
+     feature tile. Gradient layer stacks above the image (first = top). */
+  background-color:var(--ink);
+  background-image:
+    linear-gradient(145deg, oklch(16% 0.02 55 / 0.9) 0%, oklch(18% 0.02 55 / 0.66) 46%, oklch(22% 0.03 55 / 0.5) 100%),
+    url('../img/home/atm-tile.webp');
+  background-image:
+    linear-gradient(145deg, oklch(16% 0.02 55 / 0.9) 0%, oklch(18% 0.02 55 / 0.66) 46%, oklch(22% 0.03 55 / 0.5) 100%),
+    image-set(url('../img/home/atm-tile.webp') type('image/webp'), url('../img/home/atm-tile.jpg') type('image/jpeg'));
+  background-size:cover; background-position:center;
 }
 .service-card--featured::before {
   background:rgba(242,230,214,.22);
@@ -1295,33 +1323,43 @@ section[id] { scroll-margin-top: 96px; }
   pointer-events:none;
 }
 
-/* ---------- Photo-backed variant (real clinic photography) ----------
-   Same card shell (radius, padding, eyebrow/headline/stats), but the flat
-   ink background + SVG line-art is replaced by a real photo with a scrim
-   for text contrast — used only where we have a genuine matching photo. */
-.service-detail__card--photo {
-  background-size:cover; background-position:center; background-color:var(--ink);
+/* ---------- Service photograph (real clinic photography) ----------
+   Lets the photo BE a photograph: a cleanly framed 4:5 image with a short
+   editorial caption below — no headline/stats buried on top under a scrim.
+   Replaces the flat ink card + SVG line-art for the services that have a
+   genuine matching photo. */
+.svc-photo { margin:0; display:flex; flex-direction:column; gap:1.1rem; }
+.svc-photo__img {
+  aspect-ratio:4 / 5;
+  border-radius:var(--radius-xl);
+  background-size:cover; background-position:center;
+  background-color:var(--beix-xlight);
+  box-shadow:0 34px 70px -30px oklch(28% 0.04 55 / 0.5),
+             0 8px 22px -12px oklch(28% 0.04 55 / 0.3);
 }
-.service-detail__card--photo::before {
-  background:linear-gradient(180deg, rgba(20,18,16,.1) 0%, rgba(20,18,16,.38) 55%, rgba(20,18,16,.84) 100%);
+.svc-photo__cap {
+  font-family:var(--font-display); font-style:italic;
+  font-size:1rem; line-height:1.5; color:var(--beix-text);
+  max-width:38ch; padding-left:0.15rem;
 }
-.service-detail__card--photo .sdc-headline { text-shadow:0 1px 12px rgba(0,0,0,.25); }
-.service-detail__card--photo .sdc-stats { border-top-color:rgba(255,255,255,.16); }
+/* On the dark featured (ATM) section the caption reads light */
+.service-detail--featured .svc-photo__cap { color:var(--beix-light); }
 
 .sdc-photo-atm {
   background-image:url('../img/serveis/atm-diagnostic.webp');
   background-image:image-set(url('../img/serveis/atm-diagnostic.webp') type('image/webp'), url('../img/serveis/atm-diagnostic.jpg') type('image/jpeg'));
-  background-position:center 30%;
 }
 .sdc-photo-implants {
   background-image:url('../img/serveis/implants-cirurgia.webp');
   background-image:image-set(url('../img/serveis/implants-cirurgia.webp') type('image/webp'), url('../img/serveis/implants-cirurgia.jpg') type('image/jpeg'));
-  background-position:center 35%;
 }
 .sdc-photo-ortodoncia {
   background-image:url('../img/serveis/ortodoncia-model.webp');
   background-image:image-set(url('../img/serveis/ortodoncia-model.webp') type('image/webp'), url('../img/serveis/ortodoncia-model.jpg') type('image/jpeg'));
-  background-position:center 50%;
+}
+.sdc-photo-estetica {
+  background-image:url('../img/serveis/estetica-llum.webp');
+  background-image:image-set(url('../img/serveis/estetica-llum.webp') type('image/webp'), url('../img/serveis/estetica-llum.jpg') type('image/jpeg'));
 }
 /* Line-art anatomical illustration — editorial Gray's Anatomy vibes */
 .sdc-illo {
@@ -1588,6 +1626,32 @@ section[id] { scroll-margin-top: 96px; }
 }
 
 .seu-divider { height:1px; background:var(--beix-xlight); margin:0; }
+
+/* ============================================================
+   CLINIC GALLERY (seus) — editorial masonry of real clinic photos
+   ============================================================ */
+.clinic-gallery { padding:clamp(70px,9vw,120px) 0; background:var(--cream); }
+.clinic-gallery__head { max-width:640px; margin-bottom:clamp(36px,5vw,56px); }
+.clinic-gallery__head .label { display:inline-block; }
+.clinic-gallery__head h2 {
+  font-family:var(--font-display); font-weight:400;
+  font-size:clamp(2rem,3.6vw,3rem); line-height:1.12;
+  color:var(--ink); margin-bottom:1rem;
+}
+.clinic-gallery__head h2 em { font-style:italic; color:var(--beix-text); }
+.clinic-gallery__head p { font-size:1rem; line-height:1.75; color:var(--gris); max-width:54ch; }
+.clinic-gallery__grid { columns:3 260px; column-gap:14px; }
+.clinic-gallery__grid figure {
+  break-inside:avoid; margin:0 0 14px;
+  border-radius:var(--radius-md); overflow:hidden;
+  background:var(--beix-xlight); box-shadow:var(--shadow-sm);
+}
+.clinic-gallery__grid img { width:100%; height:auto; display:block; transition:transform 0.7s var(--ease); }
+@media (hover:hover) and (pointer:fine) {
+  .clinic-gallery__grid figure:hover img { transform:scale(1.045); }
+}
+@media (prefers-reduced-motion:reduce) { .clinic-gallery__grid img { transition:none; } }
+@media (max-width:520px) { .clinic-gallery__grid { columns:2; column-gap:10px; } }
 
 /* ============================================================
    CONTACT FORM (seus.html)
