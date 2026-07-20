@@ -920,3 +920,111 @@ window.track = function track(name, params) {
     });
   });
 })();
+
+/* ---------- CLINIC GALLERY SLIDESHOW (seus) ----------
+   A single crossfading stage with autoplay, a thin progress bar, dots,
+   arrows, keyboard and swipe. Autoplay pauses on hover / focus / touch,
+   while off-screen, and when the tab is hidden. Fully honours
+   prefers-reduced-motion (no autoplay, no zoom, instant-ish fade). */
+(function initGallerySlideshow() {
+  const root = document.querySelector('[data-gallery]');
+  if (!root) return;
+  const slides = Array.from(root.querySelectorAll('[data-slide]'));
+  const total = slides.length;
+  if (!total) return;
+
+  const captionEl = root.querySelector('[data-caption-el]');
+  const countEl = root.querySelector('[data-count]');
+  const dotsWrap = root.querySelector('[data-dots]');
+  const progressEl = root.querySelector('[data-progress]');
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const AUTOPLAY_MS = 5200;
+  let current = 0;
+  let timer = null;
+
+  const pad = n => String(n).padStart(2, '0');
+
+  const dots = slides.map((s, i) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'gallery-slideshow__dot';
+    b.setAttribute('role', 'tab');
+    b.setAttribute('aria-label', `Foto ${i + 1} de ${total}`);
+    b.addEventListener('click', () => { go(i); restart(); });
+    dotsWrap && dotsWrap.appendChild(b);
+    return b;
+  });
+
+  function restartProgress() {
+    if (!progressEl || reduced) return;
+    progressEl.style.transition = 'none';
+    progressEl.style.transform = 'scaleX(0)';
+    void progressEl.offsetWidth; // reflow so the next transition runs
+    progressEl.style.transition = `transform ${AUTOPLAY_MS}ms linear`;
+    progressEl.style.transform = 'scaleX(1)';
+  }
+
+  function go(i) {
+    current = (i + total) % total;
+    slides.forEach((s, j) => {
+      const on = j === current;
+      s.classList.toggle('is-active', on);
+      s.setAttribute('aria-hidden', on ? 'false' : 'true');
+    });
+    dots.forEach((d, j) => {
+      d.classList.toggle('is-active', j === current);
+      d.setAttribute('aria-selected', j === current ? 'true' : 'false');
+    });
+    if (captionEl) captionEl.textContent = slides[current].getAttribute('data-caption') || '';
+    if (countEl) countEl.textContent = `${pad(current + 1)} / ${pad(total)}`;
+    restartProgress();
+  }
+  const next = () => go(current + 1);
+  const prev = () => go(current - 1);
+
+  function start() {
+    if (reduced) return;
+    stop();
+    timer = setInterval(next, AUTOPLAY_MS);
+    restartProgress();
+  }
+  function stop() {
+    if (timer) { clearInterval(timer); timer = null; }
+    if (progressEl && !reduced) { progressEl.style.transition = 'none'; }
+  }
+  function restart() { if (!reduced) start(); }
+
+  root.querySelector('[data-prev]')?.addEventListener('click', () => { prev(); restart(); });
+  root.querySelector('[data-next]')?.addEventListener('click', () => { next(); restart(); });
+
+  root.addEventListener('mouseenter', stop);
+  root.addEventListener('mouseleave', start);
+  root.addEventListener('focusin', stop);
+  root.addEventListener('focusout', start);
+  root.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight') { next(); restart(); }
+    else if (e.key === 'ArrowLeft') { prev(); restart(); }
+  });
+
+  let touchX = null;
+  root.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; stop(); }, { passive: true });
+  root.addEventListener('touchend', e => {
+    if (touchX === null) return;
+    const dx = e.changedTouches[0].clientX - touchX;
+    if (Math.abs(dx) > 40) { dx < 0 ? next() : prev(); }
+    touchX = null;
+    restart();
+  }, { passive: true });
+
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(
+      entries => entries.forEach(en => (en.isIntersecting ? start() : stop())),
+      { threshold: 0.35 }
+    ).observe(root);
+  } else {
+    start();
+  }
+  document.addEventListener('visibilitychange', () => (document.hidden ? stop() : start()));
+
+  go(0);
+})();

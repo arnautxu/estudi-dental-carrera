@@ -1648,18 +1648,106 @@ section[id] { scroll-margin-top: 96px; }
 }
 .clinic-gallery__head h2 em { font-style:italic; color:var(--beix-text); }
 .clinic-gallery__head p { font-size:1rem; line-height:1.75; color:var(--gris); max-width:54ch; }
-.clinic-gallery__grid { columns:3 260px; column-gap:14px; }
-.clinic-gallery__grid figure {
-  break-inside:avoid; margin:0 0 14px;
-  border-radius:var(--radius-md); overflow:hidden;
-  background:var(--beix-xlight); box-shadow:var(--shadow-sm);
+
+/* ---------- Elegant slideshow ----------
+   A single large stage that crossfades between photos. Mixed orientations
+   are handled by a blurred, scaled copy of the photo behind a `contain`ed
+   sharp image, so portraits and landscapes both fill the frame gracefully.
+   Autoplay with a thin progress bar; pauses on hover / focus / off-screen. */
+.gallery-slideshow { position:relative; }
+.gallery-slideshow__stage {
+  position:relative;
+  aspect-ratio:3 / 2;
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+  background:var(--ink);
+  box-shadow:0 34px 74px -34px oklch(26% 0.04 55 / 0.55),
+             0 8px 22px -14px oklch(26% 0.04 55 / 0.3);
 }
-.clinic-gallery__grid img { width:100%; height:auto; display:block; transition:transform 0.7s var(--ease); }
+.gallery-slide {
+  position:absolute; inset:0; margin:0;
+  opacity:0; visibility:hidden;
+  transition:opacity 850ms var(--ease), visibility 0s linear 850ms;
+}
+.gallery-slide.is-active {
+  opacity:1; visibility:visible;
+  transition:opacity 850ms var(--ease), visibility 0s linear 0s;
+}
+.gallery-slide__bg {
+  position:absolute; inset:0;
+  background-size:cover; background-position:center;
+  filter:blur(30px) saturate(1.08) brightness(0.6);
+  transform:scale(1.18);
+}
+.gallery-slide__img {
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  object-fit:contain;
+}
+/* Very slow Ken Burns on the active slide for a touch of life */
+.gallery-slide.is-active .gallery-slide__img {
+  animation:gallerySlideZoom 8s ease-out both;
+}
+@keyframes gallerySlideZoom { from{transform:scale(1.001)} to{transform:scale(1.035)} }
+
+/* Autoplay progress bar pinned to the bottom edge of the stage */
+.gallery-slideshow__track {
+  position:absolute; left:0; right:0; bottom:0; height:3px;
+  background:rgba(255,255,255,0.16); z-index:3;
+}
+.gallery-slideshow__progress {
+  display:block; height:100%; width:100%;
+  background:var(--beix-light);
+  transform:scaleX(0); transform-origin:left;
+}
+
+.gallery-slideshow__bar {
+  display:flex; align-items:flex-start; justify-content:space-between;
+  gap:1.5rem; margin-top:1.35rem;
+}
+.gallery-slideshow__caption {
+  font-family:var(--font-display); font-style:italic;
+  font-size:clamp(1.05rem,1.5vw,1.3rem); line-height:1.4;
+  color:var(--beix-text); max-width:48ch;
+}
+.gallery-slideshow__nav { display:flex; align-items:center; gap:1rem; flex-shrink:0; }
+.gallery-slideshow__count {
+  font-family:var(--font-body); font-size:0.82rem; letter-spacing:0.14em;
+  color:var(--gris); font-variant-numeric:tabular-nums; white-space:nowrap;
+}
+.gallery-slideshow__btn {
+  width:44px; height:44px; border-radius:50%;
+  border:1px solid var(--beix-light); background:transparent; color:var(--ink);
+  display:inline-flex; align-items:center; justify-content:center; cursor:pointer;
+  transition:background 200ms var(--ease), border-color 200ms var(--ease), transform 200ms var(--ease);
+}
 @media (hover:hover) and (pointer:fine) {
-  .clinic-gallery__grid figure:hover img { transform:scale(1.045); }
+  .gallery-slideshow__btn:hover { background:var(--ink); border-color:var(--ink); color:var(--white); }
 }
-@media (prefers-reduced-motion:reduce) { .clinic-gallery__grid img { transition:none; } }
-@media (max-width:520px) { .clinic-gallery__grid { columns:2; column-gap:10px; } }
+.gallery-slideshow__btn:active { transform:scale(0.94); }
+.gallery-slideshow__btn svg { display:block; }
+
+.gallery-slideshow__dots { display:flex; gap:0.5rem; margin-top:1.1rem; }
+.gallery-slideshow__dot {
+  width:26px; height:2px; border:none; padding:0; cursor:pointer;
+  border-radius:2px; background:var(--beix-light);
+  position:relative; transition:background 220ms var(--ease);
+}
+.gallery-slideshow__dot::after { content:""; position:absolute; inset:-11px 0; }
+.gallery-slideshow__dot.is-active { background:var(--beix-deep); }
+@media (hover:hover) and (pointer:fine) {
+  .gallery-slideshow__dot:hover { background:var(--beix-text); }
+}
+@media (max-width:600px) {
+  .gallery-slideshow__stage { aspect-ratio:4 / 5; }
+  .gallery-slideshow__bar { flex-direction:column; gap:0.9rem; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .gallery-slide { transition:opacity 200ms linear, visibility 0s linear 200ms; }
+  .gallery-slide.is-active { transition:opacity 200ms linear, visibility 0s linear 0s; }
+  .gallery-slide.is-active .gallery-slide__img { animation:none; }
+  .gallery-slideshow__track { display:none; }
+}
 
 /* ============================================================
    CONTACT FORM (seus.html)
