@@ -669,7 +669,9 @@ section[id] { scroll-margin-top: 96px; }
   position:relative; isolation:isolate;
 }
 @media (hover: hover) and (pointer: fine) {
-  .service-card:hover { background:var(--white); }
+  /* Exclude the featured tile: it has a photo background, and the white
+     fill would wipe the image and hide its white text on hover. */
+  .service-card:not(.service-card--featured):hover { background:var(--white); }
 }
 
 /* Card heading: Playfair medium, the anchor tag expands to cover
