@@ -1028,3 +1028,12 @@ window.track = function track(name, params) {
 
   go(0);
 })();
+
+/* Auto-updating copyright year — keeps every footer current with no build step.
+   The hard-coded year in the markup stays as a no-JS fallback. */
+(function initCopyrightYear() {
+  var year = String(new Date().getFullYear());
+  document.querySelectorAll('[data-year]').forEach(function (el) {
+    el.textContent = year;
+  });
+})();
