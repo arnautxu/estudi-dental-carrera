@@ -98,6 +98,10 @@
 html { scroll-behavior:smooth; font-size:100%; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } }
 body { font-family:var(--font-body); font-weight:300; color:var(--ink); background:var(--off-white); -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+
+/* Balanced line breaks on headings sitewide — the ragged edge of a
+   wrapped title should never look lopsided. */
+h1, h2, h3, h4 { text-wrap:balance; }
 img, svg { display:block; max-width:100%; }
 a { color:inherit; text-decoration:none; }
 ul { list-style:none; }
@@ -538,7 +542,7 @@ section[id] { scroll-margin-top: 96px; }
 .hero__eyebrow { font-size:0.72rem; font-weight:400; letter-spacing:0.2em; text-transform:uppercase; color:var(--beix-light); margin-bottom:1.5rem; }
 .hero__title { font-family:var(--font-display); font-size:clamp(3rem,7vw,6rem); font-weight:400; line-height:1.07; color:var(--white); margin-bottom:1.75rem; max-width:700px; }
 .hero__title em { font-style:italic; color:var(--beix-light); }
-.hero__subtitle { font-size:clamp(1rem,1.5vw,1.1rem); font-weight:300; color:rgba(255,255,255,.92); line-height:1.75; max-width:520px; margin-bottom:2.5rem; }
+.hero__subtitle { font-size:clamp(1rem,1.5vw,1.1rem); font-weight:300; color:rgba(255,255,255,.92); line-height:1.75; max-width:520px; margin-bottom:2.5rem; text-wrap:balance; }
 .hero__actions { display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:2.5rem; }
 .hero__locations { display:flex; gap:.75rem; flex-wrap:wrap; }
 
@@ -572,14 +576,25 @@ section[id] { scroll-margin-top: 96px; }
    HOME — ABOUT
    ============================================================ */
 .about { padding:clamp(80px,10vw,140px) 0; background:var(--off-white); }
-.about__grid { display:grid; grid-template-columns:1fr 1fr; gap:clamp(40px,6vw,100px); align-items:center; }
-.about__heading { font-family:var(--font-display); font-size:clamp(2.5rem,4.5vw,3.8rem); font-weight:400; line-height:1.1; color:var(--ink); margin-bottom:1.75rem; }
+.about__top { display:grid; grid-template-columns:1.15fr 0.85fr; gap:clamp(32px,5vw,72px); align-items:start; margin-bottom:clamp(48px,6vw,72px); }
+.about__heading { font-family:var(--font-display); font-size:clamp(2.5rem,4.5vw,3.8rem); font-weight:400; line-height:1.1; color:var(--ink); margin-bottom:1.75rem; text-wrap:balance; }
 .about__heading em { font-style:italic; color:var(--beix-text); }
 .about__body { font-size:1rem; line-height:1.8; color:var(--gris); margin-bottom:1.25rem; max-width:480px; }
 
-/* Right column: first-visit workflow. Editorial list — no card
-   chrome. Numbered steps carry the predictability principle from
-   PRODUCT.md (Principle 5) as visible evidence, not a claim. */
+/* Quote column: stands on its own beside the body text instead of
+   sharing a row with the stat figures — an editorial pull-quote card. */
+.about__quote-col {
+  background:var(--cream);
+  border:1px solid var(--beix-xlight);
+  border-radius:var(--radius-lg);
+  padding:clamp(28px,3.5vw,44px);
+  align-self:stretch;
+  display:flex; align-items:center;
+}
+
+/* First-visit workflow: full-width band below the top row, four
+   moments as a 2x2 card grid. Numbered cards carry the predictability
+   principle from PRODUCT.md (Principle 5) as visible evidence, not a claim. */
 .about__process {
   position:relative;
   padding:clamp(28px,3.5vw,44px);
@@ -587,33 +602,37 @@ section[id] { scroll-margin-top: 96px; }
   border:1px solid var(--beix-xlight);
   border-radius:var(--radius-lg);
 }
+.about__process-head { margin-bottom:clamp(28px,3.5vw,40px); }
 .about__process-label { display:block; margin-bottom:0.9rem; }
 .about__process-title {
   font-family:var(--font-display); font-weight:400;
   font-size:clamp(1.5rem,2.4vw,1.9rem); line-height:1.15;
-  color:var(--ink); margin-bottom:1.75rem;
+  color:var(--ink); margin:0; text-wrap:balance;
 }
 .about__process-title em { font-style:italic; color:var(--beix-text); }
-.about__process-steps { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; }
-.about__process-step {
-  display:grid; grid-template-columns:auto 1fr; gap:1.25rem;
-  padding:1.25rem 0;
+.about__process-grid {
+  display:grid; grid-template-columns:1fr 1fr;
   border-top:1px solid var(--beix-xlight);
+  border-left:1px solid var(--beix-xlight);
 }
-.about__process-step:first-child { border-top:none; padding-top:0; }
-.about__process-step:last-child { padding-bottom:0.25rem; }
+.about__process-card {
+  padding:clamp(24px,3vw,32px);
+  border-right:1px solid var(--beix-xlight);
+  border-bottom:1px solid var(--beix-xlight);
+}
 .about__process-num {
+  display:block;
   font-family:var(--font-display); font-weight:400;
   font-size:1rem; letter-spacing:0.02em;
   color:var(--beix-text); line-height:1.4;
-  padding-top:0.15rem;
+  margin-bottom:0.9rem;
 }
-.about__process-body h4 {
+.about__process-card h4 {
   font-family:var(--font-display); font-weight:500;
   font-size:1.2rem; line-height:1.2;
   color:var(--ink); margin:0 0 0.4rem;
 }
-.about__process-body p {
+.about__process-card p {
   font-size:1rem; line-height:1.65;
   color:var(--gris); margin:0;
   max-width:38ch;
@@ -624,6 +643,9 @@ section[id] { scroll-margin-top: 96px; }
   font-size:0.82rem; line-height:1.55;
   color:var(--beix-text); font-style:italic;
   max-width:44ch;
+}
+@media (max-width:640px) {
+  .about__process-grid { grid-template-columns:1fr; }
 }
 
 /* ============================================================
@@ -650,7 +672,7 @@ section[id] { scroll-margin-top: 96px; }
 .services__title em { font-style:italic; color:var(--beix-text); }
 .services__head-lede {
   font-size:clamp(0.95rem,1.25vw,1.05rem); line-height:1.7;
-  color:var(--gris); margin:0; max-width:42ch;
+  color:var(--gris); margin:0; max-width:42ch; text-wrap:balance;
 }
 @media (max-width:768px) {
   .services__head { grid-template-columns:1fr; align-items:start; gap:1.25rem; }
@@ -914,8 +936,10 @@ section[id] { scroll-margin-top: 96px; }
   background-image:url('../img/tremp-exterior.webp');
   background-image:image-set(url('../img/tremp-exterior.webp') type('image/webp'), url('../img/tremp-exterior.jpg') type('image/jpeg'));
   background-size:cover;
-  background-position:center 40%;
-  filter:sepia(0.28) saturate(0.92) brightness(0.78) contrast(1.03);
+  background-position:center 50%;
+  /* New storefront shot already carries its own warm grade — same light
+     touch as --carrera instead of the old heavy sepia correction. */
+  filter:saturate(0.94) brightness(0.88) contrast(1.02);
 }
 .location-card::after {
   content:''; position:absolute; inset:0; z-index:1; pointer-events:none;
@@ -1275,6 +1299,7 @@ section[id] { scroll-margin-top: 96px; }
 .page-hero__bg {
   position:absolute; inset:0;
   background:linear-gradient(135deg,#2A2A2C 0%,#3D3B3A 40%,#564F4A 70%,#7A6E63 100%);
+  background-size:cover; background-position:center;
 }
 .page-hero__bg::after {
   content:''; position:absolute; inset:0;
@@ -1283,10 +1308,31 @@ section[id] { scroll-margin-top: 96px; }
 .page-hero--light { background:var(--cream); }
 .page-hero--light .page-hero__bg { display:none; }
 
+/* Photographic section headers — a real clinic photo behind a bottom-
+   heavy scrim (text sits at flex-end) instead of the abstract gradient. */
+.page-hero__bg--serveis,
+.page-hero__bg--seus,
+.page-hero__bg--equip {
+  background-image:none; /* clear the abstract gradient fallback */
+}
+.page-hero__bg--serveis { background-color:var(--ink); background-image:url('../img/headers/hero-serveis.webp'); background-image:image-set(url('../img/headers/hero-serveis.webp') type('image/webp'), url('../img/headers/hero-serveis.jpg') type('image/jpeg')); background-position:center 65%; }
+.page-hero__bg--seus { background-color:var(--ink); background-image:url('../img/headers/hero-seus.webp'); background-image:image-set(url('../img/headers/hero-seus.webp') type('image/webp'), url('../img/headers/hero-seus.jpg') type('image/jpeg')); background-position:center 50%; }
+.page-hero__bg--equip { background-color:var(--ink); background-image:url('../img/headers/hero-equip.webp'); background-image:image-set(url('../img/headers/hero-equip.webp') type('image/webp'), url('../img/headers/hero-equip.jpg') type('image/jpeg')); background-position:center 65%; }
+.page-hero__bg--serveis::after,
+.page-hero__bg--seus::after,
+.page-hero__bg--equip::after {
+  /* Architectural detail shots (painted ceilings, tile/marble) — the
+     ornament is the point, so the scrim stays bottom-heavy (text sits
+     at flex-end) and lets the pattern read clearly higher up. */
+  background:
+    linear-gradient(0deg, oklch(14% 0.02 55 / 0.85) 0%, oklch(16% 0.02 55 / 0.5) 42%, oklch(18% 0.03 55 / 0.22) 75%, transparent 100%),
+    linear-gradient(180deg, oklch(14% 0.02 55 / 0.3) 0%, transparent 26%);
+}
+
 .page-hero__content { position:relative; z-index:2; padding:clamp(48px,6vw,80px) 0 clamp(40px,5vw,64px); }
 .page-hero__content h1 { font-family:var(--font-display); font-size:clamp(2.8rem,6vw,5rem); font-weight:400; line-height:1.08; color:var(--white); margin-bottom:1rem; max-width:640px; }
 .page-hero__content h1 em { font-style:italic; color:var(--beix-light); }
-.page-hero__content p { font-size:clamp(1rem,1.5vw,1.1rem); font-weight:300; color:rgba(255,255,255,.6); line-height:1.75; max-width:520px; }
+.page-hero__content p { font-size:clamp(1rem,1.5vw,1.1rem); font-weight:300; color:rgba(255,255,255,.6); line-height:1.75; max-width:520px; text-wrap:balance; }
 .page-hero__content--dark h1 { color:var(--ink); }
 .page-hero__content--dark h1 em { color:var(--beix-text); }
 .page-hero__content--dark p { color:var(--gris); }
@@ -1342,7 +1388,7 @@ section[id] { scroll-margin-top: 96px; }
 .svc-photo__cap {
   font-family:var(--font-display); font-style:italic;
   font-size:1rem; line-height:1.5; color:var(--beix-text);
-  max-width:38ch; padding-left:0.15rem;
+  max-width:38ch; padding-left:0.15rem; text-wrap:balance;
 }
 /* On the dark featured (ATM) section the caption reads light */
 .service-detail--featured .svc-photo__cap { color:var(--beix-light); }
@@ -1489,16 +1535,46 @@ section[id] { scroll-margin-top: 96px; }
 /* ============================================================
    EQUIP PAGE
    ============================================================ */
-.team-philosophy { padding:clamp(70px,9vw,120px) 0; background:var(--off-white); }
+.team-philosophy { padding:clamp(70px,9vw,120px) 0; background:var(--cream); }
 .team-philosophy__grid { display:grid; grid-template-columns:1fr 1fr; gap:clamp(40px,6vw,100px); align-items:start; }
+.team-philosophy__text { position:relative; padding-bottom:clamp(60px,8vw,100px); }
 .team-philosophy__text h2 { font-family:var(--font-display); font-size:clamp(2.2rem,4vw,3.2rem); font-weight:400; line-height:1.1; color:var(--ink); margin-bottom:1.25rem; }
 .team-philosophy__text h2 em { font-style:italic; color:var(--beix-text); }
 .team-philosophy__text p { font-size:1rem; line-height:1.8; color:var(--gris); margin-bottom:1rem; max-width:460px; }
-.team-philosophy__pillars { display:flex; flex-direction:column; gap:1.5rem; }
-.pillar { padding:24px 28px; background:var(--white); border-radius:var(--radius-md); border:1px solid var(--beix-xlight); }
-.pillar__num { font-family:var(--font-display); font-size:0.85rem; color:var(--beix-text); letter-spacing:.08em; display:block; margin-bottom:.5rem; }
-.pillar h4 { font-family:var(--font-display); font-size:1.05rem; font-weight:500; color:var(--ink); margin-bottom:.4rem; }
-.pillar p { font-size:1rem; line-height:1.65; color:var(--gris); }
+/* Care motif: low-alpha stroke-drawn ornament, same grammar as the
+   ATM service-card motif — ties the philosophy section back into the
+   site's visual language instead of sitting as plain, imageless text. */
+.team-philosophy__motif {
+  position:absolute; left:-8px; bottom:0;
+  width:170px; height:170px;
+  color:oklch(60% 0.03 55 / 0.22);
+  pointer-events:none;
+}
+.team-philosophy__motif path,
+.team-philosophy__motif circle {
+  stroke-dasharray:380; stroke-dashoffset:380;
+  animation:servicesMotifDraw 1.8s cubic-bezier(0.23, 1, 0.32, 1) 400ms forwards;
+}
+.team-philosophy__motif path:nth-of-type(2) { animation-delay:700ms; }
+.team-philosophy__pillars { display:flex; flex-direction:column; gap:1.25rem; }
+.pillar {
+  position:relative; overflow:hidden;
+  padding:28px 30px; background:var(--white);
+  border-radius:var(--radius-md); border:1px solid var(--beix-xlight);
+}
+.pillar__num {
+  position:absolute; top:-0.35em; right:0.5rem;
+  font-family:var(--font-display); font-weight:500;
+  font-size:4.2rem; line-height:1;
+  color:var(--beix-xlight);
+  pointer-events:none;
+}
+.pillar h4 { position:relative; font-family:var(--font-display); font-size:1.05rem; font-weight:500; color:var(--ink); margin-bottom:.4rem; }
+.pillar p { position:relative; font-size:1rem; line-height:1.65; color:var(--gris); max-width:36ch; }
+@media (prefers-reduced-motion: reduce) {
+  .team-philosophy__motif path,
+  .team-philosophy__motif circle { stroke-dashoffset:0; animation:none; }
+}
 
 .team-section { padding:clamp(60px,8vw,100px) 0; background:var(--off-white); }
 .team-section--beix { background:var(--beix-bg); }
@@ -2041,7 +2117,7 @@ section[id] { scroll-margin-top: 96px; }
 @media (max-width:768px) {
   .nav__links, .nav__cta { display:none; }
   .nav__burger { display:flex; }
-  .about__grid { grid-template-columns:1fr; }
+  .about__top { grid-template-columns:1fr; }
   .team-teaser__inner { grid-template-columns:1fr; }
   .team-teaser__photo-wrap { order:-1; }
   .team-teaser__photo-card { max-width:280px; }
@@ -2204,22 +2280,16 @@ section[id] { scroll-margin-top: 96px; }
 }
 
 /* ============================================================
-   HOME — EVIDENCE BAND (reframed stats with editorial quote)
-   Replaces the 3-stat row: one attributed quote + two sober figures.
+   HOME — EVIDENCE (editorial quote card + sober stat row)
+   The quote now lives in its own column (.about__quote-col in the
+   markup); the two figures sit as a compact row under the body text.
    ============================================================ */
-.about__evidence {
-  display:grid; grid-template-columns:1.2fr 1fr;
-  gap:clamp(24px,4vw,56px);
-  margin-top:2.5rem; padding-top:2rem;
-  border-top:1px solid var(--beix-xlight);
-  align-items:start;
-}
 .about__evidence-quote {
   font-family:var(--font-display); font-style:italic;
   font-size:clamp(1.05rem,1.6vw,1.25rem);
   line-height:1.5; color:var(--ink);
   border-left:none; padding:0;
-  max-width:46ch;
+  max-width:46ch; margin:0; text-wrap:balance;
 }
 .about__evidence-quote::before {
   content:'\201C';
@@ -2235,13 +2305,14 @@ section[id] { scroll-margin-top: 96px; }
   letter-spacing:.08em; text-transform:uppercase;
   color:var(--beix-text);
 }
-.about__evidence-figures { display:flex; flex-direction:column; gap:1.5rem; }
+.about__stats {
+  display:flex; flex-wrap:wrap; gap:clamp(1.5rem,3vw,2.5rem);
+  margin-top:0.5rem; padding-top:1.75rem;
+  border-top:1px solid var(--beix-xlight);
+}
 .evidence-fig { display:flex; flex-direction:column; gap:4px; padding-left:1.25rem; border-left:1px solid var(--beix-xlight); }
 .evidence-fig__num { font-family:var(--font-display); font-size:2rem; font-weight:500; color:var(--beix-deep); line-height:1; }
 .evidence-fig__label { font-size:0.82rem; font-weight:300; color:var(--gris); line-height:1.55; max-width:30ch; }
-@media (max-width:768px) {
-  .about__evidence { grid-template-columns:1fr; }
-}
 
 /* ============================================================
    EQUIP — FEATURED TEAM CARD

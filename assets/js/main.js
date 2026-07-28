@@ -260,7 +260,7 @@ if (window.matchMedia('(hover: hover) and (pointer: fine)').matches
 }
 
 /* ---------- TESTIMONIALS (3D stage with Motion One springs) ---------- */
-(function initTestimonials() {
+function initTestimonials() {
   const root = document.querySelector('[data-testimonials]');
   if (!root) return;
   const dotLabel = (document.documentElement.lang || 'ca').slice(0, 2).toLowerCase() === 'es'
@@ -445,7 +445,49 @@ if (window.matchMedia('(hover: hover) and (pointer: fine)').matches
   playObs.observe(root);
 
   go(0);
-})();
+}
+
+/* Fetch live Google reviews (see api/reviews.js) and rebuild the
+   testimonials track before wiring up the carousel. Falls back to the
+   static markup already in the HTML — silently — if the endpoint
+   isn't configured yet, errors, or returns nothing usable. */
+function loadLiveReviews() {
+  const root = document.querySelector('[data-testimonials]');
+  if (!root) return;
+
+  const isEs = (document.documentElement.lang || 'ca').slice(0, 2).toLowerCase() === 'es';
+  const track = root.querySelector('[data-testimonials-track]');
+  const ratingEl = document.querySelector('.testimonials__rating b');
+  const starsEl = document.querySelector('.testimonials__stars');
+  const linkEl = document.querySelector('.testimonials__link');
+  const srcLabel = isEs ? 'Reseña verificada · Google' : 'Ressenya verificada · Google';
+  const reviewsWord = (n) => isEs ? `${n} reseñas en Google →` : `${n} ressenyes a Google →`;
+
+  const initials = name => (name || '').trim().split(/\s+/).slice(0, 2).map(w => w[0]).join('').toUpperCase();
+  const escapeHtml = s => String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
+
+  fetch(`/api/reviews?lang=${isEs ? 'es' : 'ca'}`)
+    .then(r => r.ok ? r.json() : null)
+    .then(data => {
+      if (data && data.reviews && data.reviews.length) {
+        track.innerHTML = data.reviews.map((r, i) => `
+          <article class="testimonial" data-name="${escapeHtml(r.author)}"><div class="testimonial__inner"><blockquote class="testimonial__quote">"${escapeHtml(r.text)}"</blockquote>
+            <footer class="testimonial__meta">
+              <span class="testimonial__avatar" data-tone="${(i % 5) + 1}" aria-hidden="true">${escapeHtml(initials(r.author))}</span>
+              <div class="testimonial__who">
+                <cite class="testimonial__name">${escapeHtml(r.author)}</cite>
+                <span class="testimonial__src">${srcLabel}</span>
+              </div>
+            </footer></div></article>`).join('');
+        if (data.rating && ratingEl) ratingEl.textContent = String(data.rating).replace('.', ',');
+        if (data.rating && starsEl) starsEl.textContent = '★ '.repeat(Math.round(data.rating)).trim();
+        if (data.total && linkEl) linkEl.textContent = reviewsWord(data.total);
+      }
+    })
+    .catch(() => { /* keep the static testimonials already in the HTML */ })
+    .finally(initTestimonials);
+}
+loadLiveReviews();
 
 /* ---------- BACK TO TOP ---------- */
 const backTop = document.createElement('button');
@@ -926,9 +968,11 @@ window.track = function track(name, params) {
    arrows, keyboard and swipe. Autoplay pauses on hover / focus / touch,
    while off-screen, and when the tab is hidden. Fully honours
    prefers-reduced-motion (no autoplay, no zoom, instant-ish fade). */
-(function initGallerySlideshow() {
-  const root = document.querySelector('[data-gallery]');
-  if (!root) return;
+(function initGallerySlideshows() {
+  document.querySelectorAll('[data-gallery]').forEach(initGallerySlideshow);
+})();
+
+function initGallerySlideshow(root) {
   const slides = Array.from(root.querySelectorAll('[data-slide]'));
   const total = slides.length;
   if (!total) return;
@@ -1027,7 +1071,7 @@ window.track = function track(name, params) {
   document.addEventListener('visibilitychange', () => (document.hidden ? stop() : start()));
 
   go(0);
-})();
+}
 
 /* Auto-updating copyright year — keeps every footer current with no build step.
    The hard-coded year in the markup stays as a no-JS fallback. */

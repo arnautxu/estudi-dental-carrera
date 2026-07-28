@@ -54,10 +54,10 @@
         <span class="nav__meta-text">Lleida &amp; Tremp</span>
       </span>
       <nav class="nav__links" aria-label="Navegació principal">
-        <a href="index.html"><span class="nav__num" aria-hidden="true">01</span><span class="nav__label">Inici</span></a>
-        <a href="serveis.html"><span class="nav__num" aria-hidden="true">02</span><span class="nav__label">Serveis</span></a>
-        <a href="equip.html" class="active" aria-current="page"><span class="nav__num" aria-hidden="true">03</span><span class="nav__label">Equip</span></a>
-        <a href="seus.html"><span class="nav__num" aria-hidden="true">04</span><span class="nav__label">Les nostres seus</span></a>
+        <a href="index.html"><span class="nav__label">Inici</span></a>
+        <a href="serveis.html"><span class="nav__label">Serveis</span></a>
+        <a href="equip.html" class="active" aria-current="page"><span class="nav__label">Equip</span></a>
+        <a href="seus.html"><span class="nav__label">Els nostres centres</span></a>
       </nav>
       <div class="nav__lang" role="group" aria-label="Idioma">
         <a href="#" class="nav__lang-link is-active" aria-current="true">CA</a>
@@ -85,20 +85,16 @@
     </div>
     <nav class="mobile-menu__nav" aria-label="Navegació principal">
       <a href="index.html" class="mobile-menu__link">
-        <span class="mobile-menu__num" aria-hidden="true">01</span>
         <span class="mobile-menu__label">Inici</span>
       </a>
       <a href="serveis.html" class="mobile-menu__link">
-        <span class="mobile-menu__num" aria-hidden="true">02</span>
         <span class="mobile-menu__label">Serveis</span>
       </a>
       <a href="equip.html" class="mobile-menu__link">
-        <span class="mobile-menu__num" aria-hidden="true">03</span>
         <span class="mobile-menu__label">Equip</span>
       </a>
       <a href="seus.html" class="mobile-menu__link">
-        <span class="mobile-menu__num" aria-hidden="true">04</span>
-        <span class="mobile-menu__label">Les nostres seus</span>
+        <span class="mobile-menu__label">Els nostres centres</span>
       </a>
     </nav>
     <div class="mobile-menu__footer">
@@ -130,11 +126,12 @@
 
   <main id="main">
 
-    <!-- PAGE HERO (light) -->
-    <section class="page-hero page-hero--light">
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="page-hero__bg page-hero__bg--equip"></div>
       <div class="container">
-        <div class="page-hero__content page-hero__content--dark">
-          <nav class="breadcrumb breadcrumb--dark reveal" aria-label="Fil d'Ariadna">
+        <div class="page-hero__content">
+          <nav class="breadcrumb reveal" aria-label="Fil d'Ariadna">
             <a href="index.html">Inici</a><span>→</span><span>Equip</span>
           </nav>
           <h1 class="reveal">El nostre <em>equip</em></h1>
@@ -152,20 +149,28 @@
             <h2 class="reveal">Persones que<br />cuiden <em>persones</em></h2>
             <p class="reveal">A Estudi Dental Carrera creiem que la qualitat d'un tractament dental va molt més enllà de la tècnica. Implica escolta activa, empatia i un compromís real amb cada pacient.</p>
             <p class="reveal">Tot l'equip participa regularment en cursos de formació, congressos i actualitzacions científiques per oferir sempre les solucions més avançades amb el millor tracte humà.</p>
+            <!-- Care motif: two arcs leaning toward each other, echoing the
+                 service-card ornament grammar (same stroke-drawn language). -->
+            <svg class="team-philosophy__motif" viewBox="0 0 200 200" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M 20 140 Q 60 60 100 100 Q 140 140 180 60" />
+              <path d="M 30 165 Q 70 100 100 130 Q 130 160 170 90" opacity="0.55" />
+              <circle cx="100" cy="100" r="2.6" fill="currentColor" stroke="none" />
+              <circle cx="100" cy="130" r="2" fill="currentColor" stroke="none" opacity="0.55" />
+            </svg>
           </div>
           <div class="team-philosophy__pillars">
             <div class="pillar reveal" style="--delay:80ms">
-              <span class="pillar__num">01</span>
+              <span class="pillar__num" aria-hidden="true">01</span>
               <h4>Escolta activa</h4>
               <p>Cada pacient és únic. Escoltem les teves preocupacions i adaptem el tractament a les teves necessitats reals.</p>
             </div>
             <div class="pillar reveal" style="--delay:160ms">
-              <span class="pillar__num">02</span>
+              <span class="pillar__num" aria-hidden="true">02</span>
               <h4>Formació contínua</h4>
               <p>L'odontologia avança ràpidament. El nostre equip es forma constantment per oferir-te sempre el millor.</p>
             </div>
             <div class="pillar reveal" style="--delay:240ms">
-              <span class="pillar__num">03</span>
+              <span class="pillar__num" aria-hidden="true">03</span>
               <h4>Transparència total</h4>
               <p>T'expliquem sempre el diagnòstic, les opcions i els costos amb claredat i sense lletra petita.</p>
             </div>
@@ -180,7 +185,7 @@
         <div class="team-section__header reveal">
           <img src="assets/img/logos/logo-carrera-vertical.png" alt="Estudi Dental Carrera" width="163" height="210" loading="lazy" decoding="async" style="height:80px;width:auto;" />
           <div>
-            <span class="label" style="margin:0">Seu</span>
+            <span class="label" style="margin:0">Centre</span>
             <strong>Lleida</strong>
           </div>
         </div>
@@ -238,7 +243,6 @@
                   <h3>Dra. Carme Roure Miquel</h3>
                   <span class="team-card__role">Ortodòncia · Disfunció craneomandibular · ATM</span>
                 </div>
-                <div class="team-card__badge">Referent ATM</div>
               </div>
               <blockquote class="team-card__quote">
                 Conservar la peça pròpia sempre que sigui possible. Substituir-la, només quan és estrictament necessari.
@@ -275,6 +279,27 @@
             </div>
           </article>
 
+          <article class="team-card reveal" style="--delay:0ms">
+            <div class="team-card__photo">
+              <picture><source srcset="assets/img/equip/albert-vim.webp" type="image/webp" /><img src="assets/img/equip/albert-vim.jpg" alt="Dr. Albert Vim" loading="lazy" decoding="async" /></picture>
+            </div>
+            <div class="team-card__body">
+              <div class="team-card__header">
+                <div>
+                  <h3>Dr. Albert Vim</h3>
+                  <span class="team-card__role">Periodòncia i Rehabilitació Oral</span>
+                </div>
+                <div class="team-card__badge">Periodòncia</div>
+              </div>
+              <p>Especialista en periodòncia i rehabilitació oral, amb un enfoc centrat en la salut de les genives com a base de qualsevol tractament dental durador. Acompanya el pacient amb un diagnòstic detallat abans de decidir cap intervenció.</p>
+              <div class="team-card__tags">
+                <span>Periodòncia</span>
+                <span>Rehabilitació oral</span>
+                <span>Pròtesis</span>
+              </div>
+            </div>
+          </article>
+
           <article class="team-card reveal" style="--delay:100ms">
             <div class="team-card__photo">
               <picture><source srcset="assets/img/equip/toni-rossell.webp" type="image/webp" /><img src="assets/img/equip/toni-rossell.jpg" alt="Toñi Rossell Lozano" loading="lazy" decoding="async" /></picture>
@@ -287,7 +312,7 @@
                 </div>
                 <div class="team-card__badge">Higiene</div>
               </div>
-              <p>Auxiliar dental i higienista de la seu de Lleida. Especialitzada en higiene i prevenció bucodental, amb un tracte proper que acompanya el pacient en cada visita.</p>
+              <p>Auxiliar dental i higienista del centre de Lleida. Especialitzada en higiene i prevenció bucodental, amb un tracte proper que acompanya el pacient en cada visita.</p>
               <div class="team-card__tags">
                 <span>Higiene oral</span>
                 <span>Prevenció</span>
@@ -308,7 +333,7 @@
                 </div>
                 <div class="team-card__badge">Higiene</div>
               </div>
-              <p>Higienista dental de la seu de Lleida. Acompanya el pacient en la higiene i la prevenció amb un tracte proper, i fa que cada visita sigui fàcil des del primer moment.</p>
+              <p>Higienista dental del centre de Lleida. Acompanya el pacient en la higiene i la prevenció amb un tracte proper, i fa que cada visita sigui fàcil des del primer moment.</p>
               <div class="team-card__tags">
                 <span>Higiene oral</span>
                 <span>Prevenció</span>
@@ -338,7 +363,7 @@
             </div>
           </article>
 
-          <article class="team-card reveal" style="--delay:300ms">
+          <article class="team-card reveal" style="--delay:0ms">
             <div class="team-card__photo">
               <picture><source srcset="assets/img/equip/mireia-pujol.webp" type="image/webp" /><img src="assets/img/equip/mireia-pujol.jpg" alt="Mireia Pujol" loading="lazy" decoding="async" /></picture>
             </div>
@@ -369,7 +394,7 @@
         <div class="team-section__header reveal">
           <img src="assets/img/logos/logo-tremp-vertical.png" alt="Estudi Dental Tremp" width="163" height="240" loading="lazy" decoding="async" style="height:80px;width:auto;" />
           <div>
-            <span class="label" style="margin:0">Seu</span>
+            <span class="label" style="margin:0">Centre</span>
             <strong>Tremp</strong>
           </div>
         </div>
@@ -377,7 +402,7 @@
 
           <article class="team-card team-card--featured reveal">
             <div class="team-card__photo">
-              <picture><source srcset="assets/img/equip/yasmine-el-messaoudi.webp" type="image/webp" /><img src="assets/img/equip/yasmine-el-messaoudi.jpg" alt="Dra. Yasmine El Messaoudi" loading="lazy" decoding="async" onerror="this.parentElement.innerHTML='&lt;span class=\'team-card__initials\' role=\'img\' aria-label=\'Dra. Yasmine El Messaoudi\'&gt;YEA&lt;/span&gt;'" /></picture>
+              <picture><source srcset="assets/img/equip/yasmine-el-messaoudi.webp" type="image/webp" /><img src="assets/img/equip/yasmine-el-messaoudi.jpg" alt="Dra. Yasmine El Messaoudi" loading="lazy" decoding="async" /></picture>
             </div>
             <div class="team-card__body">
               <div class="team-card__header">
@@ -385,13 +410,12 @@
                   <h3>Dra. Yasmine El Messaoudi</h3>
                   <span class="team-card__role">Odontologia Restauradora · Endodòncia · Pròtesi implantosoportada</span>
                 </div>
-                <div class="team-card__badge">Referent Tremp</div>
               </div>
               <blockquote class="team-card__quote">
                 Tot el que s'explica abans és una explicació; si s'explica després, és una excusa.
                 <cite>Dra. Yasmin · Sobre la predictibilitat com a principi</cite>
               </blockquote>
-              <p>Llicenciada per la Universitat de València. Màster en Odontologia Restauradora i Endodòncia (UV) i Postgrau en Estètica Dental Avançada (Societat Catalana d'Odontologia). Responsable clínica de la seu de Tremp i referent d'atenció continuada per a pacients del Pallars Jussà.</p>
+              <p>Llicenciada per la Universitat de València. Màster en Odontologia Restauradora i Endodòncia (UV) i Postgrau en Estètica Dental Avançada (Societat Catalana d'Odontologia). Responsable clínica del centre de Tremp i referent d'atenció continuada per a pacients del Pallars Jussà.</p>
               <div class="team-card__tags">
                 <span>Odontologia restauradora</span>
                 <span>Endodòncia</span>
@@ -403,7 +427,7 @@
 
           <article class="team-card reveal" style="--delay:100ms">
             <div class="team-card__photo">
-              <picture><source srcset="assets/img/equip/joan-carrera-carrillo.webp" type="image/webp" /><img src="assets/img/equip/joan-carrera-carrillo.jpg" alt="Dr. Joan Carrera Carrillo" loading="lazy" decoding="async" /></picture>
+              <picture><source srcset="assets/img/equip/joan-carrera-carrillo-tremp.webp" type="image/webp" /><img src="assets/img/equip/joan-carrera-carrillo-tremp.jpg" alt="Dr. Joan Carrera Carrillo" loading="lazy" decoding="async" /></picture>
             </div>
             <div class="team-card__body">
               <div class="team-card__header">
@@ -424,6 +448,27 @@
 
           <article class="team-card reveal" style="--delay:200ms">
             <div class="team-card__photo">
+              <picture><source srcset="assets/img/equip/nuria-castells.webp" type="image/webp" /><img src="assets/img/equip/nuria-castells.jpg" alt="Dra. Núria Castells" loading="lazy" decoding="async" /></picture>
+            </div>
+            <div class="team-card__body">
+              <div class="team-card__header">
+                <div>
+                  <h3>Dra. Núria Castells</h3>
+                  <span class="team-card__role">Odontòloga · Endodòncia</span>
+                </div>
+                <div class="team-card__badge">Endodòncia</div>
+              </div>
+              <p>Especialista en endodòncia, centrada a conservar la peça pròpia sempre que sigui possible. Acompanya el pacient amb un diagnòstic clar i un tractament pensat per durar.</p>
+              <div class="team-card__tags">
+                <span>Endodòncia</span>
+                <span>Conservació dental</span>
+                <span>Atenció al pacient</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="team-card reveal" style="--delay:300ms">
+            <div class="team-card__photo">
               <picture><source srcset="assets/img/equip/carme-roure.webp" type="image/webp" /><img src="assets/img/equip/carme-roure.jpg" alt="Dra. Carme Roure Miquel" loading="lazy" decoding="async" /></picture>
             </div>
             <div class="team-card__body">
@@ -443,7 +488,7 @@
             </div>
           </article>
 
-          <article class="team-card reveal" style="--delay:300ms">
+          <article class="team-card reveal" style="--delay:0ms">
             <div class="team-card__photo">
               <picture><source srcset="assets/img/equip/isabel-sierra.webp" type="image/webp" /><img src="assets/img/equip/isabel-sierra.jpg" alt="Dra. Isabel Sierra" loading="lazy" decoding="async" /></picture>
             </div>
@@ -464,6 +509,69 @@
             </div>
           </article>
 
+          <article class="team-card reveal" style="--delay:100ms">
+            <div class="team-card__photo">
+              <picture><source srcset="assets/img/equip/andrea-salamon-tremp.webp" type="image/webp" /><img src="assets/img/equip/andrea-salamon-tremp.jpg" alt="Andrea Salamon" loading="lazy" decoding="async" /></picture>
+            </div>
+            <div class="team-card__body">
+              <div class="team-card__header">
+                <div>
+                  <h3>Andrea Salamon</h3>
+                  <span class="team-card__role">Higienista Dental</span>
+                </div>
+                <div class="team-card__badge">Higiene</div>
+              </div>
+              <p>Higienista dental que atén tant el centre de Lleida com el de Tremp. Acompanya el pacient en la higiene i la prevenció amb un tracte proper, i fa que cada visita sigui fàcil des del primer moment.</p>
+              <div class="team-card__tags">
+                <span>Higiene oral</span>
+                <span>Prevenció</span>
+                <span>Atenció al pacient</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="team-card reveal" style="--delay:200ms">
+            <div class="team-card__photo">
+              <picture><source srcset="assets/img/equip/melani-alonso.webp" type="image/webp" /><img src="assets/img/equip/melani-alonso.jpg" alt="Melani Alonso" loading="lazy" decoding="async" /></picture>
+            </div>
+            <div class="team-card__body">
+              <div class="team-card__header">
+                <div>
+                  <h3>Melani Alonso</h3>
+                  <span class="team-card__role">Higienista Dental</span>
+                </div>
+                <div class="team-card__badge">Higiene</div>
+              </div>
+              <p>Higienista dental del centre de Tremp. Acompanya el pacient en la higiene i la prevenció amb un tracte proper, i fa que cada visita sigui fàcil des del primer moment.</p>
+              <div class="team-card__tags">
+                <span>Higiene oral</span>
+                <span>Prevenció</span>
+                <span>Atenció al pacient</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="team-card reveal" style="--delay:300ms">
+            <div class="team-card__photo">
+              <picture><source srcset="assets/img/equip/carol-hernando.webp" type="image/webp" /><img src="assets/img/equip/carol-hernando.jpg" alt="Carol Hernando" loading="lazy" decoding="async" /></picture>
+            </div>
+            <div class="team-card__body">
+              <div class="team-card__header">
+                <div>
+                  <h3>Carol Hernando</h3>
+                  <span class="team-card__role">Administració i Atenció al Pacient</span>
+                </div>
+                <div class="team-card__badge">Administració</div>
+              </div>
+              <p>Referent organitzatiu i primer contacte per als pacients de la clínica de Tremp. Coordina les cites i la documentació per assegurar que cada visita comenci amb la màxima comoditat.</p>
+              <div class="team-card__tags">
+                <span>Gestió de cites</span>
+                <span>Atenció al pacient</span>
+                <span>Coordinació</span>
+              </div>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
@@ -478,22 +586,18 @@
         </div>
         <div class="formation__grid">
           <div class="formation-item reveal">
-            <div class="formation-item__icon" aria-hidden="true">◆</div>
             <h4>Congressos nacionals i internacionals</h4>
             <p>Participació anual als principals congressos: SEPA, SEOQ, SEPES i EAO Europa.</p>
           </div>
           <div class="formation-item reveal" style="--delay:100ms">
-            <div class="formation-item__icon" aria-hidden="true">◆</div>
             <h4>Màsters i postgraus</h4>
             <p>Tot l'equip clínic disposa de formació de postgrau o màster en la seva especialitat.</p>
           </div>
           <div class="formation-item reveal" style="--delay:200ms">
-            <div class="formation-item__icon" aria-hidden="true">◆</div>
             <h4>Tecnologia d'última generació</h4>
             <p>Escàner 3D, radiologia digital, microscopi endodòncic, escàner intraoral i CAD/CAM.</p>
           </div>
           <div class="formation-item reveal" style="--delay:300ms">
-            <div class="formation-item__icon" aria-hidden="true">◆</div>
             <h4>Protocols d'esterilització</h4>
             <p>Seguim els protocols d'esterilització i higiene més estrictes per a la teva total seguretat.</p>
           </div>
@@ -539,12 +643,12 @@
             <li><a href="index.html">Inici</a></li>
             <li><a href="serveis.html">Serveis</a></li>
             <li><a href="equip.html">Equip</a></li>
-            <li><a href="seus.html">Les nostres seus</a></li>
+            <li><a href="seus.html">Els nostres centres</a></li>
             <li><a href="seus.html#contacte">Demana cita</a></li>
           </ul>
         </div>
         <div class="footer__col">
-          <h4>Seu Lleida</h4>
+          <h4>Centre Lleida</h4>
           <ul>
             <li>Carrer Major, 74-76, 3r 3a</li><li>25007 Lleida</li>
             <li><a href="tel:+34973268826">973 26 88 26</a></li>
@@ -552,7 +656,7 @@
           </ul>
         </div>
         <div class="footer__col">
-          <h4>Seu Tremp</h4>
+          <h4>Centre Tremp</h4>
           <ul>
             <li>Carrer Montllobar, 22 Baixos</li><li>25620 Tremp</li>
             <li><a href="tel:+34650600172">650 60 01 72</a></li>

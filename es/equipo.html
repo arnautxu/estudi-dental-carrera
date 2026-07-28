@@ -54,10 +54,10 @@
         <span class="nav__meta-text">Lleida &amp; Tremp</span>
       </span>
       <nav class="nav__links" aria-label="Navegación principal">
-        <a href="index.html"><span class="nav__num" aria-hidden="true">01</span><span class="nav__label">Inicio</span></a>
-        <a href="servicios.html"><span class="nav__num" aria-hidden="true">02</span><span class="nav__label">Servicios</span></a>
-        <a href="equipo.html" class="active" aria-current="page"><span class="nav__num" aria-hidden="true">03</span><span class="nav__label">Equipo</span></a>
-        <a href="sedes.html"><span class="nav__num" aria-hidden="true">04</span><span class="nav__label">Clínicas</span></a>
+        <a href="index.html"><span class="nav__label">Inicio</span></a>
+        <a href="servicios.html"><span class="nav__label">Servicios</span></a>
+        <a href="equipo.html" class="active" aria-current="page"><span class="nav__label">Equipo</span></a>
+        <a href="sedes.html"><span class="nav__label">Clínicas</span></a>
       </nav>
       <div class="nav__lang" role="group" aria-label="Idioma">
         <a href="../equip.html" class="nav__lang-link" hreflang="ca" lang="ca">CA</a>
@@ -85,19 +85,15 @@
     </div>
     <nav class="mobile-menu__nav" aria-label="Navegación principal">
       <a href="index.html" class="mobile-menu__link">
-        <span class="mobile-menu__num" aria-hidden="true">01</span>
         <span class="mobile-menu__label">Inicio</span>
       </a>
       <a href="servicios.html" class="mobile-menu__link">
-        <span class="mobile-menu__num" aria-hidden="true">02</span>
         <span class="mobile-menu__label">Servicios</span>
       </a>
       <a href="equipo.html" class="mobile-menu__link">
-        <span class="mobile-menu__num" aria-hidden="true">03</span>
         <span class="mobile-menu__label">Equipo</span>
       </a>
       <a href="sedes.html" class="mobile-menu__link">
-        <span class="mobile-menu__num" aria-hidden="true">04</span>
         <span class="mobile-menu__label">Clínicas</span>
       </a>
     </nav>
@@ -130,11 +126,12 @@
 
   <main id="main">
 
-    <!-- PAGE HERO (light) -->
-    <section class="page-hero page-hero--light">
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="page-hero__bg page-hero__bg--equip"></div>
       <div class="container">
-        <div class="page-hero__content page-hero__content--dark">
-          <nav class="breadcrumb breadcrumb--dark reveal" aria-label="Migas de pan">
+        <div class="page-hero__content">
+          <nav class="breadcrumb reveal" aria-label="Migas de pan">
             <a href="index.html">Inicio</a><span>→</span><span>Equipo</span>
           </nav>
           <h1 class="reveal">Nuestro <em>equipo</em></h1>
@@ -152,20 +149,26 @@
             <h2 class="reveal">Personas que<br />cuidan <em>personas</em></h2>
             <p class="reveal">En Estudi Dental Carrera creemos que la calidad de un tratamiento dental va mucho más allá de la técnica. Implica escucha activa, empatía y un compromiso real con cada paciente.</p>
             <p class="reveal">Todo el equipo participa regularmente en cursos de formación, congresos y actualizaciones científicas para ofrecer siempre las soluciones más avanzadas con el mejor trato humano.</p>
+            <svg class="team-philosophy__motif" viewBox="0 0 200 200" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M 20 140 Q 60 60 100 100 Q 140 140 180 60" />
+              <path d="M 30 165 Q 70 100 100 130 Q 130 160 170 90" opacity="0.55" />
+              <circle cx="100" cy="100" r="2.6" fill="currentColor" stroke="none" />
+              <circle cx="100" cy="130" r="2" fill="currentColor" stroke="none" opacity="0.55" />
+            </svg>
           </div>
           <div class="team-philosophy__pillars">
             <div class="pillar reveal" style="--delay:80ms">
-              <span class="pillar__num">01</span>
+              <span class="pillar__num" aria-hidden="true">01</span>
               <h4>Escucha activa</h4>
               <p>Cada paciente es único. Escuchamos tus preocupaciones y adaptamos el tratamiento a tus necesidades reales.</p>
             </div>
             <div class="pillar reveal" style="--delay:160ms">
-              <span class="pillar__num">02</span>
+              <span class="pillar__num" aria-hidden="true">02</span>
               <h4>Formación continua</h4>
               <p>La odontología avanza rápido. Nuestro equipo se forma constantemente para ofrecerte siempre lo mejor.</p>
             </div>
             <div class="pillar reveal" style="--delay:240ms">
-              <span class="pillar__num">03</span>
+              <span class="pillar__num" aria-hidden="true">03</span>
               <h4>Transparencia total</h4>
               <p>Te explicamos siempre el diagnóstico, las opciones y los costes con claridad y sin letra pequeña.</p>
             </div>
@@ -180,7 +183,7 @@
         <div class="team-section__header reveal">
           <img src="../assets/img/logos/logo-carrera-vertical.png" alt="Estudi Dental Carrera" width="163" height="210" loading="lazy" decoding="async" style="height:80px;width:auto;" />
           <div>
-            <span class="label" style="margin:0">Sede</span>
+            <span class="label" style="margin:0">Centro</span>
             <strong>Lleida</strong>
           </div>
         </div>
@@ -238,7 +241,6 @@
                   <h3>Dra. Carme Roure Miquel</h3>
                   <span class="team-card__role">Ortodoncia · Disfunción craneomandibular · ATM</span>
                 </div>
-                <div class="team-card__badge">Referente ATM</div>
               </div>
               <blockquote class="team-card__quote">
                 Conservar la pieza propia siempre que sea posible. Sustituirla, solo cuando es estrictamente necesario.
@@ -275,6 +277,27 @@
             </div>
           </article>
 
+          <article class="team-card reveal" style="--delay:0ms">
+            <div class="team-card__photo">
+              <picture><source srcset="../assets/img/equip/albert-vim.webp" type="image/webp" /><img src="../assets/img/equip/albert-vim.jpg" alt="Dr. Albert Vim" loading="lazy" decoding="async" /></picture>
+            </div>
+            <div class="team-card__body">
+              <div class="team-card__header">
+                <div>
+                  <h3>Dr. Albert Vim</h3>
+                  <span class="team-card__role">Periodoncia y Rehabilitación Oral</span>
+                </div>
+                <div class="team-card__badge">Periodoncia</div>
+              </div>
+              <p>Especialista en periodoncia y rehabilitación oral, con un enfoque centrado en la salud de las encías como base de cualquier tratamiento dental duradero. Acompaña al paciente con un diagnóstico detallado antes de decidir cualquier intervención.</p>
+              <div class="team-card__tags">
+                <span>Periodoncia</span>
+                <span>Rehabilitación oral</span>
+                <span>Prótesis</span>
+              </div>
+            </div>
+          </article>
+
           <article class="team-card reveal" style="--delay:100ms">
             <div class="team-card__photo">
               <picture><source srcset="../assets/img/equip/toni-rossell.webp" type="image/webp" /><img src="../assets/img/equip/toni-rossell.jpg" alt="Toñi Rossell Lozano" loading="lazy" decoding="async" /></picture>
@@ -287,7 +310,7 @@
                 </div>
                 <div class="team-card__badge">Higiene</div>
               </div>
-              <p>Auxiliar dental e higienista de la sede de Lleida. Especializada en higiene y prevención bucodental, con un trato cercano que acompaña al paciente en cada visita.</p>
+              <p>Auxiliar dental e higienista del centro de Lleida. Especializada en higiene y prevención bucodental, con un trato cercano que acompaña al paciente en cada visita.</p>
               <div class="team-card__tags">
                 <span>Higiene oral</span>
                 <span>Prevención</span>
@@ -308,7 +331,7 @@
                 </div>
                 <div class="team-card__badge">Higiene</div>
               </div>
-              <p>Higienista dental de la sede de Lleida. Acompaña al paciente en la higiene y la prevención con un trato cercano, y hace que cada visita sea fácil desde el primer momento.</p>
+              <p>Higienista dental del centro de Lleida. Acompaña al paciente en la higiene y la prevención con un trato cercano, y hace que cada visita sea fácil desde el primer momento.</p>
               <div class="team-card__tags">
                 <span>Higiene oral</span>
                 <span>Prevención</span>
@@ -338,7 +361,7 @@
             </div>
           </article>
 
-          <article class="team-card reveal" style="--delay:300ms">
+          <article class="team-card reveal" style="--delay:0ms">
             <div class="team-card__photo">
               <picture><source srcset="../assets/img/equip/mireia-pujol.webp" type="image/webp" /><img src="../assets/img/equip/mireia-pujol.jpg" alt="Mireia Pujol" loading="lazy" decoding="async" /></picture>
             </div>
@@ -369,7 +392,7 @@
         <div class="team-section__header reveal">
           <img src="../assets/img/logos/logo-tremp-vertical.png" alt="Estudi Dental Tremp" width="163" height="240" loading="lazy" decoding="async" style="height:80px;width:auto;" />
           <div>
-            <span class="label" style="margin:0">Sede</span>
+            <span class="label" style="margin:0">Centro</span>
             <strong>Tremp</strong>
           </div>
         </div>
@@ -377,7 +400,7 @@
 
           <article class="team-card team-card--featured reveal">
             <div class="team-card__photo">
-              <picture><source srcset="../assets/img/equip/yasmine-el-messaoudi.webp" type="image/webp" /><img src="../assets/img/equip/yasmine-el-messaoudi.jpg" alt="Dra. Yasmine El Messaoudi" loading="lazy" decoding="async" onerror="this.parentElement.innerHTML='&lt;span class=\'team-card__initials\' role=\'img\' aria-label=\'Dra. Yasmine El Messaoudi\'&gt;YEA&lt;/span&gt;'" /></picture>
+              <picture><source srcset="../assets/img/equip/yasmine-el-messaoudi.webp" type="image/webp" /><img src="../assets/img/equip/yasmine-el-messaoudi.jpg" alt="Dra. Yasmine El Messaoudi" loading="lazy" decoding="async" /></picture>
             </div>
             <div class="team-card__body">
               <div class="team-card__header">
@@ -385,13 +408,12 @@
                   <h3>Dra. Yasmine El Messaoudi</h3>
                   <span class="team-card__role">Odontología Restauradora · Endodoncia · Prótesis implantosoportada</span>
                 </div>
-                <div class="team-card__badge">Referente Tremp</div>
               </div>
               <blockquote class="team-card__quote">
                 Todo lo que se explica antes es una explicación; si se explica después, es una excusa.
                 <cite>Dra. Yasmin · Sobre la predictibilidad como principio</cite>
               </blockquote>
-              <p>Licenciada por la Universitat de València. Máster en Odontología Restauradora y Endodoncia (UV) y Postgrado en Estética Dental Avanzada (Societat Catalana d'Odontologia). Responsable clínica de la sede de Tremp y referente de atención continuada para pacientes del Pallars Jussà.</p>
+              <p>Licenciada por la Universitat de València. Máster en Odontología Restauradora y Endodoncia (UV) y Postgrado en Estética Dental Avanzada (Societat Catalana d'Odontologia). Responsable clínica del centro de Tremp y referente de atención continuada para pacientes del Pallars Jussà.</p>
               <div class="team-card__tags">
                 <span>Odontología restauradora</span>
                 <span>Endodoncia</span>
@@ -403,7 +425,7 @@
 
           <article class="team-card reveal" style="--delay:100ms">
             <div class="team-card__photo">
-              <picture><source srcset="../assets/img/equip/joan-carrera-carrillo.webp" type="image/webp" /><img src="../assets/img/equip/joan-carrera-carrillo.jpg" alt="Dr. Joan Carrera Carrillo" loading="lazy" decoding="async" /></picture>
+              <picture><source srcset="../assets/img/equip/joan-carrera-carrillo-tremp.webp" type="image/webp" /><img src="../assets/img/equip/joan-carrera-carrillo-tremp.jpg" alt="Dr. Joan Carrera Carrillo" loading="lazy" decoding="async" /></picture>
             </div>
             <div class="team-card__body">
               <div class="team-card__header">
@@ -424,6 +446,27 @@
 
           <article class="team-card reveal" style="--delay:200ms">
             <div class="team-card__photo">
+              <picture><source srcset="../assets/img/equip/nuria-castells.webp" type="image/webp" /><img src="../assets/img/equip/nuria-castells.jpg" alt="Dra. Núria Castells" loading="lazy" decoding="async" /></picture>
+            </div>
+            <div class="team-card__body">
+              <div class="team-card__header">
+                <div>
+                  <h3>Dra. Núria Castells</h3>
+                  <span class="team-card__role">Odontóloga · Endodoncia</span>
+                </div>
+                <div class="team-card__badge">Endodoncia</div>
+              </div>
+              <p>Especialista en endodoncia, centrada en conservar la pieza propia siempre que sea posible. Acompaña al paciente con un diagnóstico claro y un tratamiento pensado para durar.</p>
+              <div class="team-card__tags">
+                <span>Endodoncia</span>
+                <span>Conservación dental</span>
+                <span>Atención al paciente</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="team-card reveal" style="--delay:300ms">
+            <div class="team-card__photo">
               <picture><source srcset="../assets/img/equip/carme-roure.webp" type="image/webp" /><img src="../assets/img/equip/carme-roure.jpg" alt="Dra. Carme Roure Miquel" loading="lazy" decoding="async" /></picture>
             </div>
             <div class="team-card__body">
@@ -443,7 +486,7 @@
             </div>
           </article>
 
-          <article class="team-card reveal" style="--delay:300ms">
+          <article class="team-card reveal" style="--delay:0ms">
             <div class="team-card__photo">
               <picture><source srcset="../assets/img/equip/isabel-sierra.webp" type="image/webp" /><img src="../assets/img/equip/isabel-sierra.jpg" alt="Dra. Isabel Sierra" loading="lazy" decoding="async" /></picture>
             </div>
@@ -464,6 +507,69 @@
             </div>
           </article>
 
+          <article class="team-card reveal" style="--delay:100ms">
+            <div class="team-card__photo">
+              <picture><source srcset="../assets/img/equip/andrea-salamon-tremp.webp" type="image/webp" /><img src="../assets/img/equip/andrea-salamon-tremp.jpg" alt="Andrea Salamon" loading="lazy" decoding="async" /></picture>
+            </div>
+            <div class="team-card__body">
+              <div class="team-card__header">
+                <div>
+                  <h3>Andrea Salamon</h3>
+                  <span class="team-card__role">Higienista Dental</span>
+                </div>
+                <div class="team-card__badge">Higiene</div>
+              </div>
+              <p>Higienista dental que atiende tanto el centro de Lleida como el de Tremp. Acompaña al paciente en la higiene y la prevención con un trato cercano, y hace que cada visita sea fácil desde el primer momento.</p>
+              <div class="team-card__tags">
+                <span>Higiene oral</span>
+                <span>Prevención</span>
+                <span>Atención al paciente</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="team-card reveal" style="--delay:200ms">
+            <div class="team-card__photo">
+              <picture><source srcset="../assets/img/equip/melani-alonso.webp" type="image/webp" /><img src="../assets/img/equip/melani-alonso.jpg" alt="Melani Alonso" loading="lazy" decoding="async" /></picture>
+            </div>
+            <div class="team-card__body">
+              <div class="team-card__header">
+                <div>
+                  <h3>Melani Alonso</h3>
+                  <span class="team-card__role">Higienista Dental</span>
+                </div>
+                <div class="team-card__badge">Higiene</div>
+              </div>
+              <p>Higienista dental del centro de Tremp. Acompaña al paciente en la higiene y la prevención con un trato cercano, y hace que cada visita sea fácil desde el primer momento.</p>
+              <div class="team-card__tags">
+                <span>Higiene oral</span>
+                <span>Prevención</span>
+                <span>Atención al paciente</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="team-card reveal" style="--delay:300ms">
+            <div class="team-card__photo">
+              <picture><source srcset="../assets/img/equip/carol-hernando.webp" type="image/webp" /><img src="../assets/img/equip/carol-hernando.jpg" alt="Carol Hernando" loading="lazy" decoding="async" /></picture>
+            </div>
+            <div class="team-card__body">
+              <div class="team-card__header">
+                <div>
+                  <h3>Carol Hernando</h3>
+                  <span class="team-card__role">Administración y Atención al Paciente</span>
+                </div>
+                <div class="team-card__badge">Administración</div>
+              </div>
+              <p>Referente organizativo y primer contacto para los pacientes de la clínica de Tremp. Coordina las citas y la documentación para asegurar que cada visita empiece con la máxima comodidad.</p>
+              <div class="team-card__tags">
+                <span>Gestión de citas</span>
+                <span>Atención al paciente</span>
+                <span>Coordinación</span>
+              </div>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
@@ -478,22 +584,18 @@
         </div>
         <div class="formation__grid">
           <div class="formation-item reveal">
-            <div class="formation-item__icon" aria-hidden="true">◆</div>
             <h4>Congresos nacionales e internacionales</h4>
             <p>Participación anual en los principales congresos: SEPA, SEOQ, SEPES y EAO Europa.</p>
           </div>
           <div class="formation-item reveal" style="--delay:100ms">
-            <div class="formation-item__icon" aria-hidden="true">◆</div>
             <h4>Másteres y postgrados</h4>
             <p>Todo el equipo clínico dispone de formación de postgrado o máster en su especialidad.</p>
           </div>
           <div class="formation-item reveal" style="--delay:200ms">
-            <div class="formation-item__icon" aria-hidden="true">◆</div>
             <h4>Tecnología de última generación</h4>
             <p>Escáner 3D, radiología digital, microscopio endodóncico, escáner intraoral y CAD/CAM.</p>
           </div>
           <div class="formation-item reveal" style="--delay:300ms">
-            <div class="formation-item__icon" aria-hidden="true">◆</div>
             <h4>Protocolos de esterilización</h4>
             <p>Seguimos los protocolos de esterilización e higiene más estrictos para tu total seguridad.</p>
           </div>
@@ -544,7 +646,7 @@
           </ul>
         </div>
         <div class="footer__col">
-          <h4>Sede Lleida</h4>
+          <h4>Centro Lleida</h4>
           <ul>
             <li>Carrer Major, 74-76, 3r 3a</li><li>25007 Lleida</li>
             <li><a href="tel:+34973268826">973 26 88 26</a></li>
@@ -552,7 +654,7 @@
           </ul>
         </div>
         <div class="footer__col">
-          <h4>Sede Tremp</h4>
+          <h4>Centro Tremp</h4>
           <ul>
             <li>Carrer Montllobar, 22 Baixos</li><li>25620 Tremp</li>
             <li><a href="tel:+34650600172">650 60 01 72</a></li>
