@@ -2355,6 +2355,17 @@ section[id] { scroll-margin-top: 96px; }
   .team-card--featured .team-card__photo { width:100%; height:auto; aspect-ratio: 3 / 4; }
 }
 
+/* One-off: Carme's featured photo is a candid action shot (landscape
+   composition, hands + splint in frame) rather than a studio portrait —
+   give it its own box instead of forcing the usual tall crop. */
+.team-card--photo-wide .team-card__photo {
+  width:clamp(260px, 34vw, 420px);
+}
+.team-card--photo-wide .team-card__photo img { object-position:center; }
+@media (max-width:560px) {
+  .team-card--photo-wide .team-card__photo { width:100%; height:auto; aspect-ratio:4 / 3; }
+}
+
 /* ============================================================
    SERVEIS — CONSERVADORISME BAND (philosophy ahead of catalogue)
    ============================================================ */
