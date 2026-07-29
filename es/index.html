@@ -316,9 +316,9 @@
           </div>
           <div class="about__quote-col reveal">
             <blockquote class="about__evidence-quote">
-              Todo lo que se explica antes es una explicación; si se explica después, es una excusa.
+              [Cita pendiente — sustituir por una frase real del equipo antes de publicar.]
               <footer class="about__evidence-attrib">
-                <cite>Dra. Yasmin El Messaoudi</cite> · Centro Tremp
+                <cite>[Nombre pendiente]</cite> · [Centro pendiente]
               </footer>
             </blockquote>
           </div>
@@ -328,26 +328,54 @@
             <span class="label about__process-label">Qué pasa en la primera visita</span>
             <h3 id="about-process-title" class="about__process-title">Cuatro momentos, <em>sin prisa</em></h3>
           </div>
-          <div class="about__process-grid">
-            <div class="about__process-card">
-              <span class="about__process-num" aria-hidden="true">01</span>
-              <h4>Exploración</h4>
-              <p>Revisamos piezas, encías, oclusión y articulación temporomandibular. Sin comprometer nada por adelantado.</p>
+          <div class="about__process-list">
+            <div class="about__process-item">
+              <button type="button" class="about__process-toggle" aria-expanded="false" aria-controls="process-panel-01-es">
+                <span class="about__process-num" aria-hidden="true">01</span>
+                <span class="about__process-toggle-title">Exploración</span>
+                <span class="about__process-icon" aria-hidden="true"></span>
+              </button>
+              <div class="about__process-panel" id="process-panel-01-es">
+                <div class="about__process-panel-inner">
+                  <p>Revisamos piezas, encías, oclusión y articulación temporomandibular. Sin comprometer nada por adelantado.</p>
+                </div>
+              </div>
             </div>
-            <div class="about__process-card">
-              <span class="about__process-num" aria-hidden="true">02</span>
-              <h4>Diagnóstico</h4>
-              <p>Radiografía digital, escáner intraoral y, si hace falta, estudio funcional de ATM. Recogemos evidencia antes de proponer.</p>
+            <div class="about__process-item">
+              <button type="button" class="about__process-toggle" aria-expanded="false" aria-controls="process-panel-02-es">
+                <span class="about__process-num" aria-hidden="true">02</span>
+                <span class="about__process-toggle-title">Diagnóstico</span>
+                <span class="about__process-icon" aria-hidden="true"></span>
+              </button>
+              <div class="about__process-panel" id="process-panel-02-es">
+                <div class="about__process-panel-inner">
+                  <p>Radiografía digital, escáner intraoral y, si hace falta, estudio funcional de ATM. Recogemos evidencia antes de proponer.</p>
+                </div>
+              </div>
             </div>
-            <div class="about__process-card">
-              <span class="about__process-num" aria-hidden="true">03</span>
-              <h4>Explicación</h4>
-              <p>Te mostramos qué vemos y qué opciones hay, con sus límites. Las preguntas se responden aquí, no después.</p>
+            <div class="about__process-item">
+              <button type="button" class="about__process-toggle" aria-expanded="false" aria-controls="process-panel-03-es">
+                <span class="about__process-num" aria-hidden="true">03</span>
+                <span class="about__process-toggle-title">Explicación</span>
+                <span class="about__process-icon" aria-hidden="true"></span>
+              </button>
+              <div class="about__process-panel" id="process-panel-03-es">
+                <div class="about__process-panel-inner">
+                  <p>Te mostramos qué vemos y qué opciones hay, con sus límites. Las preguntas se responden aquí, no después.</p>
+                </div>
+              </div>
             </div>
-            <div class="about__process-card">
-              <span class="about__process-num" aria-hidden="true">04</span>
-              <h4>Plan</h4>
-              <p>Presupuesto detallado y tiempo de tratamiento definido por escrito. Decides tú, con la información completa.</p>
+            <div class="about__process-item">
+              <button type="button" class="about__process-toggle" aria-expanded="false" aria-controls="process-panel-04-es">
+                <span class="about__process-num" aria-hidden="true">04</span>
+                <span class="about__process-toggle-title">Plan</span>
+                <span class="about__process-icon" aria-hidden="true"></span>
+              </button>
+              <div class="about__process-panel" id="process-panel-04-es">
+                <div class="about__process-panel-inner">
+                  <p>Presupuesto detallado y tiempo de tratamiento definido por escrito. Decides tú, con la información completa.</p>
+                </div>
+              </div>
             </div>
           </div>
           <p class="about__process-foot">La primera visita es de pago. Es una decisión de principios: el tiempo que te dedicamos vale lo mismo que cualquier otra visita.</p>
@@ -378,7 +406,7 @@
               <circle cx="100" cy="105" r="1.8" fill="currentColor" stroke="none" opacity="0.55" />
             </svg>
           </article>
-          <article class="service-card reveal" style="--delay:80ms">
+          <article class="service-card service-card--photo service-card--photo-endo reveal" style="--delay:80ms">
             <h3 class="service-card__title"><a href="servicios.html">Endodoncia</a></h3>
             <p>Salvamos la pieza propia antes de plantear sustituirla. Tratamiento de conductos para eliminar el dolor y conservar el diente natural.</p>
             <footer class="service-card__foot">
@@ -386,7 +414,7 @@
               <span class="service-card__arrow" aria-hidden="true"><svg viewBox="0 0 14 10" width="14" height="10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 5h12M9 1l4 4-4 4"/></svg></span>
             </footer>
           </article>
-          <article class="service-card reveal" style="--delay:160ms">
+          <article class="service-card service-card--photo service-card--photo-perio reveal" style="--delay:160ms">
             <h3 class="service-card__title"><a href="servicios.html">Periodoncia</a></h3>
             <p>Encías sanas, dientes estables. Diagnóstico, mantenimiento y tratamiento de la enfermedad periodontal para prevenir la pérdida dental.</p>
             <footer class="service-card__foot">
@@ -394,7 +422,7 @@
               <span class="service-card__arrow" aria-hidden="true"><svg viewBox="0 0 14 10" width="14" height="10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 5h12M9 1l4 4-4 4"/></svg></span>
             </footer>
           </article>
-          <article class="service-card reveal" style="--delay:240ms">
+          <article class="service-card service-card--photo service-card--photo-implants reveal" style="--delay:240ms">
             <h3 class="service-card__title"><a href="servicios.html#implantes">Implantes dentales</a></h3>
             <p>Cuando conservar ya no es posible, sustitución planificada con implantes de osteointegración probada y tiempos de tratamiento definidos.</p>
             <footer class="service-card__foot">
@@ -402,7 +430,7 @@
               <span class="service-card__arrow" aria-hidden="true"><svg viewBox="0 0 14 10" width="14" height="10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 5h12M9 1l4 4-4 4"/></svg></span>
             </footer>
           </article>
-          <article class="service-card reveal" style="--delay:320ms">
+          <article class="service-card service-card--photo service-card--photo-estetica reveal" style="--delay:320ms">
             <h3 class="service-card__title"><a href="servicios.html#estetica">Estética dental</a></h3>
             <p>Blanqueamientos y carillas con propuesta previa y simulación. Solo las piezas que realmente hay que intervenir.</p>
             <footer class="service-card__foot">
@@ -410,7 +438,7 @@
               <span class="service-card__arrow" aria-hidden="true"><svg viewBox="0 0 14 10" width="14" height="10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 5h12M9 1l4 4-4 4"/></svg></span>
             </footer>
           </article>
-          <article class="service-card reveal" style="--delay:400ms">
+          <article class="service-card service-card--photo service-card--photo-pedo reveal" style="--delay:400ms">
             <h3 class="service-card__title"><a href="servicios.html">Odontopediatría</a></h3>
             <p>Primeras visitas, prevención y tratamientos infantiles al ritmo del niño. Construimos la relación con el dentista antes de que aparezca el miedo.</p>
             <footer class="service-card__foot">
@@ -418,7 +446,7 @@
               <span class="service-card__arrow" aria-hidden="true"><svg viewBox="0 0 14 10" width="14" height="10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 5h12M9 1l4 4-4 4"/></svg></span>
             </footer>
           </article>
-          <article class="service-card reveal" style="--delay:480ms">
+          <article class="service-card service-card--photo service-card--photo-orto reveal" style="--delay:480ms">
             <h3 class="service-card__title"><a href="servicios.html#ortodoncia">Ortodoncia</a></h3>
             <p>Brackets estéticos y alineadores invisibles. Planificamos el movimiento con escáner digital y te decimos hasta dónde llegaremos y en cuánto tiempo.</p>
             <footer class="service-card__foot">

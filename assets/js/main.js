@@ -963,6 +963,22 @@ window.track = function track(name, params) {
   });
 })();
 
+/* ---------- FIRST-VISIT PROCESS ACCORDION ----------
+   Same disclosure pattern as the FAQ: collapsed by default to keep
+   the "Què passa a la primera visita" block compact, each moment
+   expands independently. */
+(function initProcessAccordion() {
+  const items = document.querySelectorAll('.about__process-toggle');
+  if (!items.length) return;
+  items.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+      if (!open) window.track && window.track('obre_moment_primera_visita', { moment: btn.querySelector('.about__process-toggle-title')?.textContent.trim() });
+    });
+  });
+})();
+
 /* ---------- CLINIC GALLERY SLIDESHOW (seus) ----------
    A single crossfading stage with autoplay, a thin progress bar, dots,
    arrows, keyboard and swipe. Autoplay pauses on hover / focus / touch,

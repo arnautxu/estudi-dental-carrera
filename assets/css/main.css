@@ -581,20 +581,10 @@ section[id] { scroll-margin-top: 96px; }
 .about__heading em { font-style:italic; color:var(--beix-text); }
 .about__body { font-size:1rem; line-height:1.8; color:var(--gris); margin-bottom:1.25rem; max-width:480px; }
 
-/* Quote column: stands on its own beside the body text instead of
-   sharing a row with the stat figures — an editorial pull-quote card. */
-.about__quote-col {
-  background:var(--cream);
-  border:1px solid var(--beix-xlight);
-  border-radius:var(--radius-lg);
-  padding:clamp(28px,3.5vw,44px);
-  align-self:stretch;
-  display:flex; align-items:center;
-}
-
-/* First-visit workflow: full-width band below the top row, four
-   moments as a 2x2 card grid. Numbered cards carry the predictability
-   principle from PRODUCT.md (Principle 5) as visible evidence, not a claim. */
+/* First-visit workflow: a collapsible list below the top row, four
+   moments the visitor can expand one at a time. Numbered disclosures
+   carry the predictability principle from PRODUCT.md (Principle 5) as
+   visible evidence, not a claim, while staying compact by default. */
 .about__process {
   position:relative;
   padding:clamp(28px,3.5vw,44px);
@@ -602,7 +592,7 @@ section[id] { scroll-margin-top: 96px; }
   border:1px solid var(--beix-xlight);
   border-radius:var(--radius-lg);
 }
-.about__process-head { margin-bottom:clamp(28px,3.5vw,40px); }
+.about__process-head { margin-bottom:clamp(20px,2.5vw,28px); }
 .about__process-label { display:block; margin-bottom:0.9rem; }
 .about__process-title {
   font-family:var(--font-display); font-weight:400;
@@ -610,32 +600,40 @@ section[id] { scroll-margin-top: 96px; }
   color:var(--ink); margin:0; text-wrap:balance;
 }
 .about__process-title em { font-style:italic; color:var(--beix-text); }
-.about__process-grid {
-  display:grid; grid-template-columns:1fr 1fr;
-  border-top:1px solid var(--beix-xlight);
-  border-left:1px solid var(--beix-xlight);
-}
-.about__process-card {
-  padding:clamp(24px,3vw,32px);
-  border-right:1px solid var(--beix-xlight);
-  border-bottom:1px solid var(--beix-xlight);
+.about__process-list { border-top:1px solid var(--beix-xlight); }
+.about__process-item { border-bottom:1px solid var(--beix-xlight); }
+.about__process-toggle {
+  width:100%; display:flex; align-items:center; gap:18px;
+  padding:20px 2px; background:none; border:none; cursor:pointer; text-align:left;
 }
 .about__process-num {
-  display:block;
+  flex-shrink:0; width:2.2ch;
   font-family:var(--font-display); font-weight:400;
   font-size:1rem; letter-spacing:0.02em;
   color:var(--beix-text); line-height:1.4;
-  margin-bottom:0.9rem;
 }
-.about__process-card h4 {
+.about__process-toggle-title {
+  flex:1;
   font-family:var(--font-display); font-weight:500;
-  font-size:1.2rem; line-height:1.2;
-  color:var(--ink); margin:0 0 0.4rem;
+  font-size:clamp(1.05rem,1.6vw,1.25rem); line-height:1.2;
+  color:var(--ink);
 }
-.about__process-card p {
-  font-size:1rem; line-height:1.65;
-  color:var(--gris); margin:0;
-  max-width:38ch;
+.about__process-icon { position:relative; flex-shrink:0; width:20px; height:20px; transition:transform 0.3s var(--ease); }
+.about__process-icon::before, .about__process-icon::after {
+  content:""; position:absolute; top:50%; left:50%;
+  width:14px; height:1.6px; background:var(--beix-deep);
+  transform:translate(-50%,-50%); transition:opacity 0.3s var(--ease);
+}
+.about__process-icon::after { transform:translate(-50%,-50%) rotate(90deg); }
+.about__process-toggle[aria-expanded="true"] .about__process-icon { transform:rotate(180deg); }
+.about__process-toggle[aria-expanded="true"] .about__process-icon::after { opacity:0; }
+.about__process-panel { display:grid; grid-template-rows:0fr; transition:grid-template-rows 0.4s var(--ease); }
+.about__process-toggle[aria-expanded="true"] + .about__process-panel { grid-template-rows:1fr; }
+.about__process-panel-inner { overflow:hidden; }
+.about__process-panel-inner p {
+  padding:0 2px 20px calc(2.2ch + 18px);
+  margin:0; font-size:1rem; line-height:1.65;
+  color:var(--gris); max-width:52ch;
 }
 .about__process-foot {
   margin-top:1.5rem; padding-top:1.25rem;
@@ -644,8 +642,8 @@ section[id] { scroll-margin-top: 96px; }
   color:var(--beix-text); font-style:italic;
   max-width:44ch;
 }
-@media (max-width:640px) {
-  .about__process-grid { grid-template-columns:1fr; }
+@media (prefers-reduced-motion: reduce) {
+  .about__process-panel, .about__process-icon { transition:none; }
 }
 
 /* ============================================================
@@ -692,8 +690,98 @@ section[id] { scroll-margin-top: 96px; }
 }
 @media (hover: hover) and (pointer: fine) {
   /* Exclude the featured tile: it has a photo background, and the white
-     fill would wipe the image and hide its white text on hover. */
-  .service-card:not(.service-card--featured):hover { background:var(--white); }
+     fill would wipe the image and hide its white text on hover. Photo
+     tiles are excluded for the same reason — the white fill would flash
+     underneath the fading photo. */
+  .service-card:not(.service-card--featured):not(.service-card--photo):hover { background:var(--white); }
+}
+
+/* Photo reveal on hover: the card's ::after (::before is taken by the
+   hairline) carries the image. At z-index:-1 inside the card's own
+   stacking context (isolation:isolate above) it paints over the card
+   background but under all content and under the title anchor's
+   full-tile hit area, so the click target is untouched.
+   The photo settles from scale(1.06) to 1 — the tile appears to open
+   outwards without the grid ever reflowing. Desktop pointers only:
+   inside this media query, touch devices never fetch the images. */
+@media (hover: hover) and (pointer: fine) {
+  .service-card--photo::after {
+    content:""; position:absolute; inset:0; z-index:-1;
+    background-color:var(--ink);
+    background-size:cover; background-position:center;
+    opacity:0; transform:scale(1.06);
+    transition:opacity 320ms var(--ease), transform 700ms var(--ease);
+    pointer-events:none;
+  }
+  .service-card--photo:is(:hover,:focus-within)::after { opacity:1; transform:scale(1); }
+
+  /* Scrim over each photo, slightly denser than the featured tile's:
+     body copy here spans the whole tile, not just the dark corner.
+     The plain url() declaration comes first as the fallback; browsers
+     with image-set() support take the second. */
+  .service-card--photo-endo::after {
+    background-image:
+      linear-gradient(160deg, oklch(16% 0.02 55 / 0.92) 0%, oklch(18% 0.02 55 / 0.72) 50%, oklch(22% 0.03 55 / 0.6) 100%),
+      url('../img/seus/slideshow/sl-4-gabinet.jpg');
+    background-image:
+      linear-gradient(160deg, oklch(16% 0.02 55 / 0.92) 0%, oklch(18% 0.02 55 / 0.72) 50%, oklch(22% 0.03 55 / 0.6) 100%),
+      image-set(url('../img/seus/slideshow/sl-4-gabinet.webp') type('image/webp'), url('../img/seus/slideshow/sl-4-gabinet.jpg') type('image/jpeg'));
+  }
+  .service-card--photo-perio::after {
+    background-image:
+      linear-gradient(160deg, oklch(16% 0.02 55 / 0.92) 0%, oklch(18% 0.02 55 / 0.72) 50%, oklch(22% 0.03 55 / 0.6) 100%),
+      url('../img/seus/slideshow/sl-6-detall.jpg');
+    background-image:
+      linear-gradient(160deg, oklch(16% 0.02 55 / 0.92) 0%, oklch(18% 0.02 55 / 0.72) 50%, oklch(22% 0.03 55 / 0.6) 100%),
+      image-set(url('../img/seus/slideshow/sl-6-detall.webp') type('image/webp'), url('../img/seus/slideshow/sl-6-detall.jpg') type('image/jpeg'));
+  }
+  .service-card--photo-implants::after {
+    background-image:
+      linear-gradient(160deg, oklch(16% 0.02 55 / 0.92) 0%, oklch(18% 0.02 55 / 0.72) 50%, oklch(22% 0.03 55 / 0.6) 100%),
+      url('../img/serveis/implants-planificacio.jpg');
+    background-image:
+      linear-gradient(160deg, oklch(16% 0.02 55 / 0.92) 0%, oklch(18% 0.02 55 / 0.72) 50%, oklch(22% 0.03 55 / 0.6) 100%),
+      image-set(url('../img/serveis/implants-planificacio.webp') type('image/webp'), url('../img/serveis/implants-planificacio.jpg') type('image/jpeg'));
+  }
+  .service-card--photo-estetica::after {
+    background-image:
+      linear-gradient(160deg, oklch(16% 0.02 55 / 0.92) 0%, oklch(18% 0.02 55 / 0.72) 50%, oklch(22% 0.03 55 / 0.6) 100%),
+      url('../img/serveis/estetica-llum.jpg');
+    background-image:
+      linear-gradient(160deg, oklch(16% 0.02 55 / 0.92) 0%, oklch(18% 0.02 55 / 0.72) 50%, oklch(22% 0.03 55 / 0.6) 100%),
+      image-set(url('../img/serveis/estetica-llum.webp') type('image/webp'), url('../img/serveis/estetica-llum.jpg') type('image/jpeg'));
+  }
+  .service-card--photo-pedo::after {
+    background-image:
+      linear-gradient(160deg, oklch(16% 0.02 55 / 0.92) 0%, oklch(18% 0.02 55 / 0.72) 50%, oklch(22% 0.03 55 / 0.6) 100%),
+      url('../img/seus/slideshow-tremp/ts-3-espera.jpg');
+    background-image:
+      linear-gradient(160deg, oklch(16% 0.02 55 / 0.92) 0%, oklch(18% 0.02 55 / 0.72) 50%, oklch(22% 0.03 55 / 0.6) 100%),
+      image-set(url('../img/seus/slideshow-tremp/ts-3-espera.webp') type('image/webp'), url('../img/seus/slideshow-tremp/ts-3-espera.jpg') type('image/jpeg'));
+  }
+  .service-card--photo-orto::after {
+    background-image:
+      linear-gradient(160deg, oklch(16% 0.02 55 / 0.92) 0%, oklch(18% 0.02 55 / 0.72) 50%, oklch(22% 0.03 55 / 0.6) 100%),
+      url('../img/serveis/ortodoncia-model.jpg');
+    background-image:
+      linear-gradient(160deg, oklch(16% 0.02 55 / 0.92) 0%, oklch(18% 0.02 55 / 0.72) 50%, oklch(22% 0.03 55 / 0.6) 100%),
+      image-set(url('../img/serveis/ortodoncia-model.webp') type('image/webp'), url('../img/serveis/ortodoncia-model.jpg') type('image/jpeg'));
+  }
+
+  /* Text lifts to white over the scrim. The photo fade (320ms) leads and
+     the colour flips follow at 240ms + 60ms delay, so the copy never sits
+     light-on-light mid-transition. */
+  .service-card--photo:is(:hover,:focus-within) .service-card__title,
+  .service-card--photo:is(:hover,:focus-within) .service-card__title a { color:var(--white); transition-delay:60ms; }
+  .service-card--photo:is(:hover,:focus-within) .service-card__title a {
+    background-image:linear-gradient(var(--beix-light),var(--beix-light));
+  }
+  .service-card--photo:is(:hover,:focus-within) p { color:rgba(253,252,250,.88); transition-delay:60ms; }
+  .service-card--photo:is(:hover,:focus-within) .service-card__arrow { color:var(--white); }
+  .service-card--photo:is(:hover,:focus-within) .service-card__tag {
+    background:var(--beix-deep); color:var(--white);
+  }
+  .service-card--photo:is(:hover,:focus-within)::before { background:rgba(242,230,214,.35); }
 }
 
 /* Card heading: Playfair medium, the anchor tag expands to cover
@@ -702,13 +790,14 @@ section[id] { scroll-margin-top: 96px; }
 .service-card__title {
   font-family:var(--font-display); font-size:1.3rem; font-weight:500;
   color:var(--ink); line-height:1.2; margin:0;
+  transition:color 240ms var(--ease);
 }
 .service-card__title a {
   color:inherit; text-decoration:none;
   background-image:linear-gradient(var(--beix-text),var(--beix-text));
   background-size:0 1px; background-repeat:no-repeat;
   background-position:0 100%;
-  transition:background-size 320ms var(--ease);
+  transition:background-size 320ms var(--ease), color 240ms var(--ease);
 }
 .service-card__title a::after {
   content:""; position:absolute; inset:0; z-index:1;
@@ -723,6 +812,7 @@ section[id] { scroll-margin-top: 96px; }
 .service-card p {
   font-size:1rem; line-height:1.7; color:var(--gris);
   flex:1; margin:0; max-width:38ch;
+  transition:color 240ms var(--ease);
 }
 
 /* Footer row: category chip left, arrow right. Arrow slides right
@@ -738,6 +828,7 @@ section[id] { scroll-margin-top: 96px; }
   color:var(--gris-dark); background:var(--beix-xlight);
   padding:5px 11px; border-radius:999px;
   align-self:flex-start;
+  transition:background 240ms var(--ease), color 240ms var(--ease);
 }
 .service-card__tag--lead {
   color:var(--white); background:var(--beix-deep);
@@ -871,7 +962,8 @@ section[id] { scroll-margin-top: 96px; }
   outline:2px solid var(--beix-text); outline-offset:3px;
 }
 
-/* Reduced motion: snap the ATM motif to final state */
+/* Reduced motion: snap the ATM motif to final state, and let the photo
+   reveal be a plain state flip with no zoom or settle. */
 @media (prefers-reduced-motion: reduce) {
   .service-card__motif path,
   .service-card__motif circle { stroke-dashoffset:0; animation:none; }
@@ -880,6 +972,8 @@ section[id] { scroll-margin-top: 96px; }
   .service-card--featured .service-card__cta svg,
   .services__all,
   .services__all-arrow { transition:none; }
+  .service-card--photo::after { transform:none; transition:none; }
+  .service-card--photo:is(:hover,:focus-within)::after { transform:none; }
 }
 
 /* ============================================================
@@ -2290,26 +2384,32 @@ section[id] { scroll-margin-top: 96px; }
 }
 
 /* ============================================================
-   HOME — EVIDENCE (editorial quote card + sober stat row)
-   The quote now lives in its own column (.about__quote-col in the
-   markup); the two figures sit as a compact row under the body text.
+   HOME — EVIDENCE (editorial pull-quote, no box + sober stat row)
+   The quote lives in its own column (.about__quote-col in the
+   markup) and deliberately breaks from the card/box language used
+   everywhere else on the page (process list, stat figures, team
+   cards): no background, no border-box, no radius — just a spine
+   rule and an oversized mark. The two figures sit as a compact row
+   under the body text.
    ============================================================ */
+.about__quote-col { align-self:stretch; display:flex; align-items:center; }
 .about__evidence-quote {
+  position:relative;
   font-family:var(--font-display); font-style:italic;
-  font-size:clamp(1.05rem,1.6vw,1.25rem);
-  line-height:1.5; color:var(--ink);
-  border-left:none; padding:0;
-  max-width:46ch; margin:0; text-wrap:balance;
+  font-size:clamp(1.3rem,2.3vw,1.8rem);
+  line-height:1.42; color:var(--ink);
+  border-left:2px solid var(--beix-deep); padding-left:clamp(24px,2.8vw,36px);
+  max-width:42ch; margin:0; text-wrap:balance;
 }
 .about__evidence-quote::before {
   content:'\201C';
-  font-family:var(--font-display);
-  font-size:3rem; line-height:0.3;
-  color:var(--beix); display:block;
-  margin-bottom:1rem;
+  display:block;
+  font-family:var(--font-display); font-style:normal;
+  font-size:clamp(4.5rem,7vw,6.5rem); line-height:0.5;
+  color:var(--beix); margin:0 0 0.25em -0.03em;
 }
 .about__evidence-attrib {
-  display:block; margin-top:1rem;
+  display:block; margin-top:1.5rem;
   font-family:var(--font-body); font-style:normal;
   font-size:0.72rem; font-weight:500;
   letter-spacing:.08em; text-transform:uppercase;
