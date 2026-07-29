@@ -69,6 +69,8 @@
 
   --font-display: 'Playfair Display', Georgia, serif;
   --font-body:    'N27', 'Inter', system-ui, sans-serif;
+  /* Signature hand only — loaded on the home pages, never for body copy. */
+  --font-hand:    'Nothing You Could Do', 'Segoe Script', cursive;
 
   --radius-sm:  6px;
   --radius-md:  12px;
@@ -862,13 +864,17 @@ section[id] { scroll-margin-top: 96px; }
   padding:clamp(36px,4vw,60px);
   gap:1.2rem; overflow:hidden;
   /* Real ATM/diagnosis photo behind a strong warm scrim — a photographic
-     feature tile. Gradient layer stacks above the image (first = top). */
+     feature tile. Gradient layer stacks above the image (first = top).
+     Densities are set by measurement, not taste: the tile crop puts a
+     bright surgical cap directly under the body copy, and at the previous
+     0.9/0.66/0.5 that copy measured 3.98:1 — under AA. These values put
+     it at 5.8:1 while the face stays legible through the scrim. */
   background-color:var(--ink);
   background-image:
-    linear-gradient(145deg, oklch(16% 0.02 55 / 0.9) 0%, oklch(18% 0.02 55 / 0.66) 46%, oklch(22% 0.03 55 / 0.5) 100%),
+    linear-gradient(145deg, oklch(16% 0.02 55 / 0.94) 0%, oklch(18% 0.02 55 / 0.78) 46%, oklch(22% 0.03 55 / 0.58) 100%),
     url('../img/home/atm-tile.webp');
   background-image:
-    linear-gradient(145deg, oklch(16% 0.02 55 / 0.9) 0%, oklch(18% 0.02 55 / 0.66) 46%, oklch(22% 0.03 55 / 0.5) 100%),
+    linear-gradient(145deg, oklch(16% 0.02 55 / 0.94) 0%, oklch(18% 0.02 55 / 0.78) 46%, oklch(22% 0.03 55 / 0.58) 100%),
     image-set(url('../img/home/atm-tile.webp') type('image/webp'), url('../img/home/atm-tile.jpg') type('image/jpeg'));
   background-size:cover; background-position:center;
 }
@@ -2415,6 +2421,18 @@ section[id] { scroll-margin-top: 96px; }
   letter-spacing:.08em; text-transform:uppercase;
   color:var(--beix-text);
 }
+/* Signed, not captioned: the name is set in a hand so the quote reads
+   as something a person put their name to. The role line underneath
+   keeps the formal title and carries the uppercase metadata style. */
+.about__evidence-sign {
+  display:block;
+  font-family:var(--font-hand); font-style:normal;
+  font-size:clamp(1.4rem,2.3vw,1.85rem); font-weight:400;
+  letter-spacing:0; text-transform:none;
+  line-height:1.15; color:var(--beix-deep);
+  margin-bottom:0.6rem;
+}
+.about__evidence-role { display:block; }
 .about__stats {
   display:flex; flex-wrap:wrap; gap:clamp(1.5rem,3vw,2.5rem);
   margin-top:0.5rem; padding-top:1.75rem;
