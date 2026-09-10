@@ -3201,9 +3201,10 @@ body.cookie-modal-open { overflow: hidden; }
 
 
 /* Tremp: uniform portraits with the biography directly visible. */
-.team-card--compact { align-self:start; }
+.team-grid--compact { grid-column:1 / -1; grid-auto-rows:1fr; }
 .team-card--compact .team-card__body { min-width:0; }
 .team-card--compact .team-card__header { flex-wrap:wrap; }
 @media (min-width:561px) {
-  .team-card--compact .team-card__photo { height:258px; }
+  .team-card--compact .team-card__photo { position:relative; }
+  .team-card--compact .team-card__photo img { position:absolute; inset:0; }
 }
