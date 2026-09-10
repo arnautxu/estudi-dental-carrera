@@ -3200,21 +3200,10 @@ body.cookie-modal-open { overflow: hidden; }
 .team-card__bio strong { font-weight:500; color:var(--ink); }
 
 
-/* Tremp: consistent compact profiles, with the full biography on demand. */
-.team-card--compact { align-self:start; min-height:240px; }
+/* Tremp: uniform portraits with the biography directly visible. */
+.team-card--compact { align-self:start; }
 .team-card--compact .team-card__body { min-width:0; }
-.team-card--compact .team-card__header { min-height:58px; flex-wrap:wrap; }
-.team-card--compact .team-card__details { margin-top:auto; }
-.team-card__details summary { cursor:pointer; font-size:.875rem; color:var(--beix-text); text-underline-offset:4px; }
-.team-card__details summary:hover { text-decoration:underline; }
-.team-card__details summary:focus-visible { outline:2px solid var(--beix-text); outline-offset:4px; }
-.team-card__details[open] .team-card__bio { margin-top:1rem; }
-.team-card--compact .team-card__tags { min-height:52px; align-content:flex-start; }
+.team-card--compact .team-card__header { flex-wrap:wrap; }
 @media (min-width:561px) {
-  .team-card--compact:not(:has(.team-card__details[open])) { height:260px; }
-  .team-card--compact .team-card__photo { position:relative; }
-  .team-card--compact .team-card__photo img { position:absolute; inset:0; }
-}
-@media (max-width:560px) {
-  .team-card--compact .team-card__body { min-height:240px; }
+  .team-card--compact .team-card__photo { height:258px; }
 }
