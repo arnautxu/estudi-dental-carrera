@@ -1,0 +1,26 @@
+.git
+.claude
+.agents
+.impeccable.md
+.DS_Store
+**/.DS_Store
+
+# Internal project documentation; never publish it as website content.
+ACTION-PLAN.md
+FULL-AUDIT-REPORT.md
+DEPLOYMENT-CHECKLIST.md
+DINAHOSTING-REDIRECTS.htaccess
+AUDITORIA-UX-UI.md
+DESIGN.md
+DESIGN.json
+PRODUCT.md
+skills
+skills-lock.json
+
+# Local staging and accidental duplicate assets.
+assets/img/_staging
+*.png.png
+
+# Review evidence and automated tests are not public site assets.
+docs
+tests

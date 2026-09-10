@@ -6,7 +6,7 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    window.GA4_ID = 'G-XXXXXXXXXX'; /* TODO: substituir per l'ID real de GA4 */
+    window.GA4_ID = '';
     gtag('consent', 'default', {
       analytics_storage: 'denied',
       ad_storage: 'denied',
@@ -18,13 +18,14 @@
   <title>Política de cookies · Estudi Dental Carrera</title>
   <meta name="description" content="Información sobre las cookies utilizadas en el sitio web de Estudi Dental Carrera y cómo gestionarlas." />
   <meta name="robots" content="noindex" />
-  <link rel="canonical" href="https://estudidentalcarrera.com/es/cookies.html" />
+  <link rel="canonical" href="https://www.estudidentalcarrera.com/es/cookies.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=optional" onload="this.onload=null;this.rel=&quot;stylesheet&quot;" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=optional" rel="stylesheet" /></noscript>
   <link rel="preload" href="../assets/fonts/N27-Regular.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="../assets/fonts/N27-Light.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="../assets/css/main.css" />
+  <link rel="stylesheet" href="../assets/css/main.css?v=20260910-cita" />
   <link rel="icon" type="image/png" sizes="64x64" href="../assets/img/logos/favicon.png" />
   <link rel="icon" type="image/svg+xml" href="../assets/img/logos/favicon.svg" />
 </head>
@@ -33,7 +34,7 @@
 
   <header class="nav" id="nav">
     <div class="nav__inner">
-      <a href="index.html" class="nav__logo">
+      <a href="/es/" class="nav__logo">
         <img src="../assets/img/logos/logo-carrera-vertical.png" class="nav__logo-icon" alt="Estudi Dental Carrera" width="163" height="210" fetchpriority="high" />
       </a>
       <span class="nav__meta" aria-hidden="true">
@@ -41,7 +42,7 @@
         <span class="nav__meta-text">Lleida &amp; Tremp</span>
       </span>
       <nav class="nav__links" aria-label="Navegación principal">
-        <a href="index.html"><span class="nav__label">Inicio</span></a>
+        <a href="/es/"><span class="nav__label">Inicio</span></a>
         <a href="servicios.html"><span class="nav__label">Servicios</span></a>
         <a href="equipo.html"><span class="nav__label">Equipo</span></a>
         <a href="sedes.html"><span class="nav__label">Clínicas</span></a>
@@ -63,7 +64,7 @@
 
   <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <div class="mobile-menu__top">
-      <a href="index.html" class="mobile-menu__brand" aria-label="Inicio · Estudi Dental Carrera">
+      <a href="/es/" class="mobile-menu__brand" aria-label="Inicio · Estudi Dental Carrera">
         <img src="../assets/img/logos/logo-carrera-vertical.png" alt="" width="163" height="210" />
       </a>
       <button class="mobile-menu__close" id="mobileMenuClose" aria-label="Cerrar menú">
@@ -71,7 +72,7 @@
       </button>
     </div>
     <nav class="mobile-menu__nav" aria-label="Navegación principal">
-      <a href="index.html" class="mobile-menu__link">
+      <a href="/es/" class="mobile-menu__link">
         <span class="mobile-menu__label">Inicio</span>
       </a>
       <a href="servicios.html" class="mobile-menu__link">
@@ -85,7 +86,7 @@
       </a>
     </nav>
     <div class="mobile-menu__footer">
-      <a href="tel:+34973268826" class="btn btn--primary btn--lg mobile-menu__cta">Pedir cita</a>
+      <a href="sedes.html#contacto" class="btn btn--primary btn--lg mobile-menu__cta">Pedir cita</a>
       <div class="mobile-menu__seus">
         <a href="tel:+34973268826" class="mobile-menu__seu">
           <span class="mobile-menu__seu-label">Lleida</span>
@@ -104,7 +105,7 @@
           <a href="https://www.instagram.com/clinicarrera/" class="mobile-menu__social-link" target="_blank" rel="noopener" aria-label="Instagram">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
           </a>
-          <a href="https://wa.me/34615983352" class="mobile-menu__social-link" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <a href="sedes.html?canal=whatsapp#contacto" class="mobile-menu__social-link" rel="noopener" aria-label="WhatsApp: elige una clínica">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.556 4.122 1.528 5.855L.057 23.175a.75.75 0 00.918.899l5.42-1.424A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 01-4.965-1.364l-.356-.211-3.677.964.982-3.592-.231-.369A9.713 9.713 0 012.25 12C2.25 6.613 6.613 2.25 12 2.25S21.75 6.613 21.75 12 17.387 21.75 12 21.75z"/></svg>
           </a>
         </div>
@@ -117,7 +118,7 @@
       <div class="container">
         <div class="page-hero__content page-hero__content--dark">
           <nav class="breadcrumb reveal" aria-label="Migas de pan">
-            <a href="index.html">Inicio</a>
+            <a href="/es/">Inicio</a>
             <span>→</span>
             <span>Política de cookies</span>
           </nav>
@@ -131,14 +132,14 @@
       <div class="container">
         <div class="legal-wrap reveal">
 
-          <p class="legal-meta">Última actualización: abril de 2026</p>
+          <p class="legal-meta">Última actualización: agosto de 2026</p>
 
           <h2>¿Qué es una cookie?</h2>
           <p>Una cookie es un pequeño fichero de texto que un sitio web almacena en su dispositivo (ordenador, tableta o teléfono móvil) cuando lo visita. Las cookies permiten al sitio web recordar sus acciones y preferencias durante un período de tiempo, de modo que no tenga que volver a introducirlas cada vez que visite el sitio o navegue de una página a otra.</p>
           <p>De acuerdo con lo establecido en la Ley 34/2002, de 11 de julio, de servicios de la sociedad de la información (LSSICE), y el Reglamento General de Protección de Datos (RGPD), le informamos sobre las cookies que utilizamos.</p>
 
           <h2>Cookies que utiliza este sitio web</h2>
-          <p>Este sitio web utiliza únicamente cookies técnicas propias, estrictamente necesarias para el funcionamiento correcto del sitio. No se utilizan cookies analíticas, publicitarias ni de seguimiento de terceros.</p>
+          <p>Este sitio web utiliza cookies técnicas propias, estadísticas privadas sin cookies mediante una instancia propia de Umami y, solo con su consentimiento, cookies analíticas de Google Analytics y contenido de Google Maps. No utilizamos cookies publicitarias ni activamos la personalización de anuncios.</p>
 
           <div class="table-scroll">
             <table class="cookies-table">
@@ -163,11 +164,34 @@
                   <td>Sesión</td>
                   <td>Mantiene el estado de navegación durante la sesión activa (por ejemplo, el menú móvil). Se elimina al cerrar el navegador.</td>
                 </tr>
+                <tr>
+                  <td>Umami</td>
+                  <td>Analítica privada · sin cookies</td>
+                  <td>No almacena cookies</td>
+                  <td>Mide páginas vistas, procedencia e interacciones de forma agregada, sin perfiles personales ni seguimiento entre sitios web.</td>
+                </tr>
+                <tr>
+                  <td><code>_ga</code></td>
+                  <td>Analítica · Google Analytics</td>
+                  <td>Hasta 2 años</td>
+                  <td>Distingue visitas de forma seudónima para elaborar estadísticas agregadas de uso del sitio.</td>
+                </tr>
+                <tr>
+                  <td><code>_ga_*</code></td>
+                  <td>Analítica · Google Analytics</td>
+                  <td>Hasta 2 años</td>
+                  <td>Mantiene el estado de la sesión y permite medir páginas vistas e interacciones, únicamente después del consentimiento.</td>
+                </tr>
               </tbody>
             </table>
           </div>
 
           <p>Las cookies técnicas no requieren su consentimiento previo, ya que son estrictamente necesarias para el funcionamiento del servicio solicitado.</p>
+
+          <h2>Estadísticas con Umami y Google Analytics</h2>
+          <p>Utilizamos una instancia propia de Umami para obtener estadísticas básicas sin cookies, huellas digitales ni perfiles personales. El sistema respeta la señal «Do Not Track» del navegador y puede desactivarse en cualquier momento desde «Preferencias de cookies».</p>
+          <p>Con su consentimiento, utilizamos Google Analytics 4 para conocer de forma agregada qué páginas se visitan y si se interactúa con acciones de contacto como el teléfono, WhatsApp o el formulario. No enviamos a Analytics el nombre, el teléfono, el correo electrónico, el mensaje ni datos clínicos.</p>
+          <p>Google Analytics no se carga hasta que acepta la categoría «Estadísticas». Puede retirar este consentimiento en cualquier momento desde «Preferencias de cookies». El proveedor es Google Ireland Limited; puede consultar su <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">política de privacidad</a>.</p>
 
           <h2>Cookies de Google Maps</h2>
           <p>Las páginas de nuestras clínicas incluyen mapas integrados de Google Maps para facilitar la localización de nuestros centros. Cuando interactúe con el mapa, Google puede establecer sus propias cookies en su dispositivo de acuerdo con su propia política de privacidad, accesible en <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
@@ -207,7 +231,7 @@
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <a href="index.html" class="footer__logo">
+          <a href="/es/" class="footer__logo">
             <img src="../assets/img/logos/logo-carrera-vertical.png" alt="Estudi Dental Carrera" width="163" height="210" loading="lazy" decoding="async" style="filter:brightness(0) invert(0.72);" />
           </a>
           <p class="footer__tagline">Primero entendemos qué te pasa.<br />Lleida y Tremp, un solo equipo.</p>
@@ -215,15 +239,15 @@
             <a href="https://www.instagram.com/clinicarrera/" class="footer__social-link" target="_blank" rel="noopener" aria-label="Instagram de Estudi Dental Carrera">
               <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
             </a>
-            <a href="https://wa.me/34615983352" class="footer__social-link" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <a href="sedes.html?canal=whatsapp#contacto" class="footer__social-link" rel="noopener" aria-label="WhatsApp: elige una clínica">
               <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.556 4.122 1.528 5.855L.057 23.175a.75.75 0 00.918.899l5.42-1.424A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 01-4.965-1.364l-.356-.211-3.677.964.982-3.592-.231-.369A9.713 9.713 0 012.25 12C2.25 6.613 6.613 2.25 12 2.25S21.75 6.613 21.75 12 17.387 21.75 12 21.75z"/></svg>
             </a>
           </div>
         </div>
         <div class="footer__col">
-          <h4>Navegación</h4>
+          <p class="footer__heading">Navegación</p>
           <ul>
-            <li><a href="index.html">Inicio</a></li>
+            <li><a href="/es/">Inicio</a></li>
             <li><a href="servicios.html">Servicios</a></li>
             <li><a href="equipo.html">Equipo</a></li>
             <li><a href="sedes.html">Clínicas</a></li>
@@ -231,17 +255,17 @@
           </ul>
         </div>
         <div class="footer__col">
-          <h4>Centro Lleida</h4>
+          <p class="footer__heading">Clínica de Lleida</p>
           <ul>
-            <li>Carrer Major, 74-76, 3r 3a</li><li>25007 Lleida</li>
+            <li>Carrer Major, 74-76, 3.º 3.ª</li><li>25007 Lleida</li>
             <li><a href="tel:+34973268826">973 26 88 26</a></li>
             <li>L–V: 9h – 20h</li><li>S: 9h – 14h</li>
           </ul>
         </div>
         <div class="footer__col">
-          <h4>Centro Tremp</h4>
+          <p class="footer__heading">Clínica de Tremp</p>
           <ul>
-            <li>Carrer Montllobar, 22 Baixos</li><li>25620 Tremp</li>
+            <li>Carrer Montllobar, 22, bajos</li><li>25620 Tremp</li>
             <li><a href="tel:+34650600172">650 60 01 72</a></li>
             <li>L–V: 9h – 19h</li>
           </ul>
@@ -262,9 +286,9 @@
     </div>
   </footer>
 
-  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/main.js?v=20260910-cita"></script>
   <!-- WhatsApp FAB -->
-  <a href="https://wa.me/34615983352" class="whatsapp-fab" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  <a href="sedes.html?canal=whatsapp#contacto" class="whatsapp-fab" rel="noopener" aria-label="WhatsApp: elige una clínica">
     <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.556 4.122 1.528 5.855L.057 23.175a.75.75 0 00.918.899l5.42-1.424A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 01-4.965-1.364l-.356-.211-3.677.964.982-3.592-.231-.369A9.713 9.713 0 012.25 12C2.25 6.613 6.613 2.25 12 2.25S21.75 6.613 21.75 12 17.387 21.75 12 21.75z"/></svg>
   </a>
 </body>

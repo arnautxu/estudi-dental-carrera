@@ -1,0 +1,612 @@
+[
+  {
+    "file": "es/privacidad.html",
+    "before": "Centro Lleida",
+    "after": "Clínica de Lleida",
+    "count": 1
+  },
+  {
+    "file": "es/privacidad.html",
+    "before": "Centro Tremp",
+    "after": "Clínica de Tremp",
+    "count": 1
+  },
+  {
+    "file": "es/privacidad.html",
+    "before": "Carrer Montllobar, 22 Baixos",
+    "after": "Carrer Montllobar, 22, bajos",
+    "count": 1
+  },
+  {
+    "file": "es/privacidad.html",
+    "before": "Carrer Major, 74-76, 3r 3a",
+    "after": "Carrer Major, 74-76, 3.º 3.ª",
+    "count": 2
+  },
+  {
+    "file": "es/privacidad.html",
+    "before": "En calidad de interesados, puede",
+    "after": "Como persona interesada, puede",
+    "count": 1
+  },
+  {
+    "file": "es/equipo.html",
+    "before": "Profesionales con vocación, experiencia y formación continuada al servicio de tu salud bucodental. Conocerlos es el primer paso.",
+    "after": "Conoce a los profesionales que te atenderán en Lleida y Tremp, su formación y las áreas en las que trabajan.",
+    "count": 1
+  },
+  {
+    "file": "es/equipo.html",
+    "before": "En Estudi Dental Carrera creemos que la calidad de un tratamiento dental va mucho más allá de la técnica. Implica escucha activa, empatía y un compromiso real con cada paciente.",
+    "after": "Antes de proponer un tratamiento, escuchamos qué te preocupa y te explicamos qué hemos observado. Las decisiones se toman contigo, con tiempo para resolver tus dudas.",
+    "count": 1
+  },
+  {
+    "file": "es/equipo.html",
+    "before": "Todo el equipo participa regularmente en cursos de formación, congresos y actualizaciones científicas para ofrecer siempre las soluciones más avanzadas con el mejor trato humano.",
+    "after": "El equipo participa en cursos, congresos y actualizaciones científicas para revisar sus conocimientos y aplicarlos en la consulta.",
+    "count": 1
+  },
+  {
+    "file": "es/equipo.html",
+    "before": "Cada paciente es único. Escuchamos tus preocupaciones y adaptamos el tratamiento a tus necesidades reales.",
+    "after": "Escuchamos tus preocupaciones para tenerlas en cuenta al valorar las opciones de tratamiento.",
+    "count": 1
+  },
+  {
+    "file": "es/equipo.html",
+    "before": "La odontología avanza rápido. Nuestro equipo se forma constantemente para ofrecerte siempre lo mejor.",
+    "after": "El equipo mantiene su formación mediante cursos y encuentros profesionales.",
+    "count": 1
+  },
+  {
+    "file": "es/equipo.html",
+    "before": "Transparencia total",
+    "after": "Explicaciones claras",
+    "count": 1
+  },
+  {
+    "file": "es/equipo.html",
+    "before": "Director Médico",
+    "after": "Director médico",
+    "count": 1
+  },
+  {
+    "file": "es/equipo.html",
+    "before": "Dirección Médica",
+    "after": "Dirección médica",
+    "count": 1
+  },
+  {
+    "file": "es/equipo.html",
+    "before": "Cirugía Oral",
+    "after": "Cirugía oral",
+    "count": 1
+  },
+  {
+    "file": "es/equipo.html",
+    "before": "con un trato cercano, y hace que cada visita sea fácil desde el primer momento.",
+    "after": "y resuelve sus dudas sobre el cuidado diario de los dientes.",
+    "count": 1
+  },
+  {
+    "file": "es/equipo.html",
+    "before": "para asegurar que cada visita empiece con la máxima comodidad.",
+    "after": "para preparar cada visita.",
+    "count": 1
+  },
+  {
+    "file": "es/equipo.html",
+    "before": "Médica Odontóloga",
+    "after": "Médica odontóloga",
+    "count": 1
+  },
+  {
+    "file": "es/equipo.html",
+    "before": "Auxiliar Dental e Higienista",
+    "after": "Auxiliar dental e higienista",
+    "count": 1
+  },
+  {
+    "file": "es/equipo.html",
+    "before": "Higienista Dental",
+    "after": "Higienista dental",
+    "count": 2
+  },
+  {
+    "file": "es/equipo.html",
+    "before": "Administración y Atención al Paciente",
+    "after": "Administración y atención al paciente",
+    "count": 1
+  },
+  {
+    "file": "es/equipo.html",
+    "before": "Odontología Restauradora",
+    "after": "Odontología restauradora",
+    "count": 1
+  },
+  {
+    "file": "es/equipo.html",
+    "before": "Rehabilitación Oral",
+    "after": "Rehabilitación oral",
+    "count": 1
+  },
+  {
+    "file": "es/equipo.html",
+    "before": "Centro Lleida",
+    "after": "Clínica de Lleida",
+    "count": 1
+  },
+  {
+    "file": "es/equipo.html",
+    "before": "Centro Tremp",
+    "after": "Clínica de Tremp",
+    "count": 1
+  },
+  {
+    "file": "es/equipo.html",
+    "before": "Carrer Montllobar, 22 Baixos",
+    "after": "Carrer Montllobar, 22, bajos",
+    "count": 1
+  },
+  {
+    "file": "es/equipo.html",
+    "before": "Carrer Major, 74-76, 3r 3a",
+    "after": "Carrer Major, 74-76, 3.º 3.ª",
+    "count": 1
+  },
+  {
+    "file": "es/equipo.html",
+    "before": "con un trato cercano, y hace que cada visita sea fácil desde el primer momento.",
+    "after": "y resuelve sus dudas sobre el cuidado diario de los dientes.",
+    "count": 2
+  },
+  {
+    "file": "es/equipo.html",
+    "before": "para asegurar que cada visita empiece con la máxima comodidad.",
+    "after": "para preparar cada visita.",
+    "count": 1
+  },
+  {
+    "file": "es/equipo.html",
+    "before": "Siempre a la <em>vanguardia</em>",
+    "after": "Formación y <em>práctica clínica</em>",
+    "count": 1
+  },
+  {
+    "file": "es/equipo.html",
+    "before": "Invertimos en formación y tecnología para ofrecerte siempre el mejor tratamiento disponible.",
+    "after": "La formación y los medios de la clínica apoyan el diagnóstico y la planificación de los tratamientos.",
+    "count": 1
+  },
+  {
+    "file": "es/equipo.html",
+    "before": "Tecnología de última generación",
+    "after": "Equipamiento de la clínica",
+    "count": 1
+  },
+  {
+    "file": "es/equipo.html",
+    "before": "Seguimos los protocolos de esterilización e higiene más estrictos para tu total seguridad.",
+    "after": "Aplicamos protocolos de esterilización e higiene en el instrumental y los espacios de trabajo.",
+    "count": 1
+  },
+  {
+    "file": "es/equipo.html",
+    "before": "conservar la pieza propia",
+    "after": "conservar el diente natural",
+    "count": 1
+  },
+  {
+    "file": "es/equipo.html",
+    "before": "qué haría falta hacer",
+    "after": "qué tratamiento podría ser necesario",
+    "count": 1
+  },
+  {
+    "file": "es/equipo.html",
+    "before": "Director Médico",
+    "after": "Director médico",
+    "count": 1
+  },
+  {
+    "file": "es/equipo.html",
+    "before": "Higienista Dental",
+    "after": "Higienista dental",
+    "count": 2
+  },
+  {
+    "file": "es/equipo.html",
+    "before": "Administración y Atención al Paciente",
+    "after": "Administración y atención al paciente",
+    "count": 1
+  },
+  {
+    "file": "es/equipo.html",
+    "before": "Odontología Restauradora",
+    "after": "Odontología restauradora",
+    "count": 1
+  },
+  {
+    "file": "es/equipo.html",
+    "before": "Cirugía Oral",
+    "after": "Cirugía oral",
+    "count": 2
+  },
+  {
+    "file": "es/index.html",
+    "before": "Carrer Montllobar, 22 Baixos",
+    "after": "Carrer Montllobar, 22, bajos",
+    "count": 1
+  },
+  {
+    "file": "es/index.html",
+    "before": "Carrer Major, 74-76, 3r 3a",
+    "after": "Carrer Major, 74-76, 3.º 3.ª",
+    "count": 1
+  },
+  {
+    "file": "es/index.html",
+    "before": "Aplicamos una odontología conservadora: mantenemos la pieza propia siempre que es posible e intervenimos solo cuando es estrictamente necesario.",
+    "after": "Nuestro criterio es conservar tus dientes naturales siempre que sea posible e intervenir cuando sea necesario.",
+    "count": 1
+  },
+  {
+    "file": "es/index.html",
+    "before": "Somos una clínica familiar con dos centros y un solo equipo: conoce nuestra",
+    "after": "Somos una clínica familiar con dos centros y un equipo que trabaja de forma coordinada. Conoce nuestra",
+    "count": 1
+  },
+  {
+    "file": "es/index.html",
+    "before": "Revisamos piezas, encías, oclusión y articulación temporomandibular. Sin comprometer nada por adelantado.",
+    "after": "Revisamos los dientes, las encías, la mordida y la articulación de la mandíbula antes de proponer un tratamiento.",
+    "count": 1
+  },
+  {
+    "file": "es/index.html",
+    "before": "Recogemos evidencia antes de proponer.",
+    "after": "Recogemos la información necesaria antes de proponer un tratamiento.",
+    "count": 1
+  },
+  {
+    "file": "es/index.html",
+    "before": "Presupuesto detallado y tiempo de tratamiento definido por escrito. Decides tú, con la información completa.",
+    "after": "Te entregamos un presupuesto detallado y una estimación de los plazos por escrito. Tú decides con esa información.",
+    "count": 1
+  },
+  {
+    "file": "es/index.html",
+    "before": "La primera visita es de pago. Es una decisión de principios: el tiempo que te dedicamos vale lo mismo que cualquier otra visita.",
+    "after": "La primera visita es de pago. Dedicamos ese tiempo a valorar tu caso y explicarte las opciones. Te indicaremos el importe antes de confirmarla.",
+    "count": 1
+  },
+  {
+    "file": "es/index.html",
+    "before": "Diagnóstico con criterio, férulas planificadas y seguimiento a meses, no sesiones sueltas.",
+    "after": "Valoramos el caso, indicamos férulas cuando son necesarias y hacemos seguimiento a lo largo de los meses.",
+    "count": 1
+  },
+  {
+    "file": "es/index.html",
+    "before": "Salvamos la pieza propia antes de plantear sustituirla. Tratamiento de conductos para eliminar el dolor y conservar el diente natural.",
+    "after": "Valoramos cómo conservar el diente antes de plantear sustituirlo. La endodoncia trata sus conductos para controlar la infección e intentar mantenerlo.",
+    "count": 1
+  },
+  {
+    "file": "es/index.html",
+    "before": "Cuando conservar ya no es posible, sustitución planificada con implantes de osteointegración probada y tiempos de tratamiento definidos.",
+    "after": "Cuando no es posible conservar un diente, valoramos sustituirlo con un implante y explicamos las fases del tratamiento.",
+    "count": 1
+  },
+  {
+    "file": "es/index.html",
+    "before": "Blanqueamientos y carillas con propuesta previa y simulación. Solo las piezas que realmente hay que intervenir.",
+    "after": "Valoramos blanqueamientos y carillas con una propuesta previa y simulación, interviniendo solo en los dientes que lo necesitan.",
+    "count": 1
+  },
+  {
+    "file": "es/index.html",
+    "before": "Planificamos el movimiento con escáner digital y te decimos hasta dónde llegaremos y en cuánto tiempo.",
+    "after": "Planificamos el movimiento con un escáner digital y te explicamos los objetivos y los plazos estimados.",
+    "count": 1
+  },
+  {
+    "file": "es/index.html",
+    "before": "Centro Lleida",
+    "after": "Clínica de Lleida",
+    "count": 1
+  },
+  {
+    "file": "es/index.html",
+    "before": "Centro Tremp",
+    "after": "Clínica de Tremp",
+    "count": 1
+  },
+  {
+    "file": "es/index.html",
+    "before": "Carrer Montllobar, 22 Baixos",
+    "after": "Carrer Montllobar, 22, bajos",
+    "count": 1
+  },
+  {
+    "file": "es/index.html",
+    "before": "Carrer Major, 74-76, 3r 3a",
+    "after": "Carrer Major, 74-76, 3.º 3.ª",
+    "count": 1
+  },
+  {
+    "file": "es/index.html",
+    "before": "antes de empezar ningún tratamiento",
+    "after": "antes de iniciar un tratamiento",
+    "count": 1
+  },
+  {
+    "file": "es/index.html",
+    "before": "qué haría falta hacer",
+    "after": "qué tratamiento podría ser necesario",
+    "count": 1
+  },
+  {
+    "file": "es/cookies.html",
+    "before": "Centro Lleida",
+    "after": "Clínica de Lleida",
+    "count": 1
+  },
+  {
+    "file": "es/cookies.html",
+    "before": "Centro Tremp",
+    "after": "Clínica de Tremp",
+    "count": 1
+  },
+  {
+    "file": "es/cookies.html",
+    "before": "Carrer Montllobar, 22 Baixos",
+    "after": "Carrer Montllobar, 22, bajos",
+    "count": 1
+  },
+  {
+    "file": "es/cookies.html",
+    "before": "Carrer Major, 74-76, 3r 3a",
+    "after": "Carrer Major, 74-76, 3.º 3.ª",
+    "count": 1
+  },
+  {
+    "file": "es/servicios.html",
+    "before": "Tratamientos integrales para toda la familia. Ofrecemos el catálogo clínico completo, pero partimos de una convicción: conservar la pieza propia siempre que sea posible.",
+    "after": "Atendemos a adultos y niños con un mismo criterio: conservar los dientes naturales siempre que sea posible. El tratamiento se decide después de valorar cada caso.",
+    "count": 1
+  },
+  {
+    "file": "es/servicios.html",
+    "before": "sin ningún compromiso de tratar nada",
+    "after": "sin compromiso de iniciar un tratamiento",
+    "count": 1
+  },
+  {
+    "file": "es/servicios.html",
+    "before": "Centro Lleida",
+    "after": "Clínica de Lleida",
+    "count": 1
+  },
+  {
+    "file": "es/servicios.html",
+    "before": "Centro Tremp",
+    "after": "Clínica de Tremp",
+    "count": 1
+  },
+  {
+    "file": "es/servicios.html",
+    "before": "Carrer Montllobar, 22 Baixos",
+    "after": "Carrer Montllobar, 22, bajos",
+    "count": 1
+  },
+  {
+    "file": "es/servicios.html",
+    "before": "Carrer Major, 74-76, 3r 3a",
+    "after": "Carrer Major, 74-76, 3.º 3.ª",
+    "count": 1
+  },
+  {
+    "file": "es/servicios.html",
+    "before": "Esto no es un tratamiento de nuestra carta: es la manera como abordamos todo lo demás. Diagnosticamos con detalle, te explicamos las opciones reales y solo tratamos cuando aporta valor clínico. Por eso cada ficha siguiente empieza con una pregunta del paciente, no con una técnica.",
+    "after": "Este criterio guía todos los tratamientos. Primero valoramos qué ocurre y qué opciones hay; después te explicamos cuándo conviene intervenir y cuándo podemos esperar.",
+    "count": 1
+  },
+  {
+    "file": "es/servicios.html",
+    "before": "Dolor en la mandíbula<br />que <em>no sabías de dónde venía</em>",
+    "after": "¿Te duele<br /><em>la mandíbula?</em>",
+    "count": 1
+  },
+  {
+    "file": "es/servicios.html",
+    "before": "Cubrimos todas las necesidades de salud bucodental de toda la familia.",
+    "after": "Revisiones, prevención y tratamientos para adultos y niños.",
+    "count": 1
+  },
+  {
+    "file": "es/servicios.html",
+    "before": "Fabricación en materiales de alta calidad: zirconio, porcelana y e.max.",
+    "after": "Utilizamos materiales como zirconio, porcelana y e.max, según el caso.",
+    "count": 1
+  },
+  {
+    "file": "es/servicios.html",
+    "before": "Ejecutamos el tratamiento acordado con las tecnologías más avanzadas y toda nuestra experiencia, en un entorno confortable.",
+    "after": "Realizamos el tratamiento acordado y te explicamos cada paso durante la visita.",
+    "count": 1
+  },
+  {
+    "file": "es/servicios.html",
+    "before": "Revisiones periódicas para asegurar que el resultado se mantiene a largo plazo y detectar cualquier incidencia a tiempo.",
+    "after": "Revisiones periódicas para comprobar la evolución del tratamiento y detectar posibles incidencias.",
+    "count": 1
+  },
+  {
+    "file": "es/servicios.html",
+    "before": "sin ningún compromiso de tratar nada",
+    "after": "sin compromiso de iniciar un tratamiento",
+    "count": 1
+  },
+  {
+    "file": "es/servicios.html",
+    "before": "Nuestro equipo te asesora sin compromiso.",
+    "after": "Habla con la recepción de Lleida o Tremp para orientar tu consulta.",
+    "count": 1
+  },
+  {
+    "file": "es/sedes.html",
+    "before": "Centro Lleida",
+    "after": "Clínica de Lleida",
+    "count": 1
+  },
+  {
+    "file": "es/sedes.html",
+    "before": "Centro Tremp",
+    "after": "Clínica de Tremp",
+    "count": 1
+  },
+  {
+    "file": "es/sedes.html",
+    "before": "Carrer Montllobar, 22 Baixos",
+    "after": "Carrer Montllobar, 22, bajos",
+    "count": 3
+  },
+  {
+    "file": "es/sedes.html",
+    "before": "Carrer Major, 74-76, 3r 3a",
+    "after": "Carrer Major, 74-76, 3.º 3.ª",
+    "count": 3
+  },
+  {
+    "file": "es/aviso-legal.html",
+    "before": "Centro Lleida",
+    "after": "Clínica de Lleida",
+    "count": 1
+  },
+  {
+    "file": "es/aviso-legal.html",
+    "before": "Centro Tremp",
+    "after": "Clínica de Tremp",
+    "count": 1
+  },
+  {
+    "file": "es/aviso-legal.html",
+    "before": "Carrer Montllobar, 22 Baixos",
+    "after": "Carrer Montllobar, 22, bajos",
+    "count": 1
+  },
+  {
+    "file": "es/aviso-legal.html",
+    "before": "Carrer Major, 74-76, 3r 3a",
+    "after": "Carrer Major, 74-76, 3.º 3.ª",
+    "count": 2
+  },
+  {
+    "file": "es/aviso-legal.html",
+    "before": "El acceso y la utilización del sitio web implica",
+    "after": "El acceso y la utilización del sitio web implican",
+    "count": 1
+  },
+  {
+    "file": "data/landing-pages.js",
+    "before": "Cuando la mandíbula pide una mirada más amplia",
+    "after": "Dolor de mandíbula y bruxismo: valorar el origen"
+  },
+  {
+    "file": "data/landing-pages.js",
+    "before": "Implantes dentales planificados desde la función y el mantenimiento",
+    "after": "Implantes dentales: planificación y cuidados"
+  },
+  {
+    "file": "data/landing-pages.js",
+    "before": "Mover dientes con un objetivo claro, no solo alinearlos",
+    "after": "Ortodoncia para mejorar la posición de los dientes y la mordida"
+  },
+  {
+    "file": "data/landing-pages.js",
+    "before": "qué profesional puede responder mejor cada pregunta",
+    "after": "qué profesional puede responder mejor a cada pregunta"
+  },
+  {
+    "file": "data/landing-pages.js",
+    "before": "cómo afecta a comer, hablar o dormir",
+    "after": "cómo afecta a la hora de comer, hablar o dormir"
+  },
+  {
+    "file": "data/landing-pages.js",
+    "before": "descanso temporal de sobrecargas",
+    "after": "reducción temporal de las sobrecargas"
+  },
+  {
+    "file": "data/landing-pages.js",
+    "before": "trabajo sobre hábitos diurnos y medidas de sueño",
+    "after": "revisión de los hábitos diurnos y del sueño"
+  },
+  {
+    "file": "data/landing-pages.js",
+    "before": "se puede considerar conservar la pieza",
+    "after": "se puede valorar conservar el diente"
+  },
+  {
+    "file": "data/landing-pages.js",
+    "before": "radiografías proporcionadas al caso",
+    "after": "radiografías adecuadas para el caso"
+  },
+  {
+    "file": "data/landing-pages.js",
+    "before": "brackets o attachments",
+    "after": "brackets o aditamentos de los alineadores"
+  },
+  {
+    "file": "data/landing-pages.js",
+    "before": "y coordinamos higienes cuando hace falta",
+    "after": "y coordinamos las limpiezas dentales cuando es necesario"
+  },
+  {
+    "file": "data/landing-pages.js",
+    "before": "si no hay suficiente uso",
+    "after": "si no se usan el tiempo necesario"
+  },
+  {
+    "file": "data/landing-pages.js",
+    "before": "Pueden ser necesarios mantenimientos",
+    "after": "Puede ser necesario un tratamiento de mantenimiento"
+  },
+  {
+    "file": "data/landing-pages.js",
+    "before": "qué exige conservarlo",
+    "after": "qué cuidados necesita"
+  },
+  {
+    "file": "data/landing-pages.js",
+    "before": "Pide visita en",
+    "after": "Pide cita en"
+  },
+  {
+    "file": "data/landing-pages.js",
+    "before": "Cuéntanos el motivo de consulta sin incluir información clínica sensible en el formulario. Te indicaremos el siguiente paso.",
+    "after": "Deja tus datos de contacto. La recepción de la clínica elegida te llamará para concretar la visita."
+  },
+  {
+    "file": "data/landing-pages.js",
+    "before": "3º 3ª",
+    "after": "3.º 3.ª"
+  },
+  {
+    "file": "data/landing-pages.js",
+    "before": "22 bajos",
+    "after": "22, bajos"
+  },
+  {
+    "file": "data/landing-pages.js",
+    "before": "Cuando una prueba, equipamiento o profesional requiere coordinación con Lleida",
+    "after": "Cuando una prueba, el uso de un equipo o la intervención de un profesional requieren coordinación con Lleida"
+  },
+  {
+    "file": "data/landing-pages.js",
+    "before": "ayuda a tomar decisiones sostenibles",
+    "after": "ayuda a tomar decisiones informadas"
+  }
+]

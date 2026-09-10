@@ -6,7 +6,7 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    window.GA4_ID = 'G-XXXXXXXXXX'; /* TODO: substituir per l'ID real de GA4 */
+    window.GA4_ID = '';
     gtag('consent', 'default', {
       analytics_storage: 'denied',
       ad_storage: 'denied',
@@ -18,13 +18,14 @@
   <title>Política de privacidad · Estudi Dental Carrera</title>
   <meta name="description" content="Información sobre el tratamiento de sus datos personales en Estudi Dental Carrera, de acuerdo con el Reglamento General de Protección de Datos." />
   <meta name="robots" content="noindex" />
-  <link rel="canonical" href="https://estudidentalcarrera.com/es/privacidad.html" />
+  <link rel="canonical" href="https://www.estudidentalcarrera.com/es/privacidad.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=optional" onload="this.onload=null;this.rel=&quot;stylesheet&quot;" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=optional" rel="stylesheet" /></noscript>
   <link rel="preload" href="../assets/fonts/N27-Regular.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="../assets/fonts/N27-Light.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="../assets/css/main.css" />
+  <link rel="stylesheet" href="../assets/css/main.css?v=20260910-cita" />
   <link rel="icon" type="image/png" sizes="64x64" href="../assets/img/logos/favicon.png" />
   <link rel="icon" type="image/svg+xml" href="../assets/img/logos/favicon.svg" />
 </head>
@@ -33,7 +34,7 @@
 
   <header class="nav" id="nav">
     <div class="nav__inner">
-      <a href="index.html" class="nav__logo">
+      <a href="/es/" class="nav__logo">
         <img src="../assets/img/logos/logo-carrera-vertical.png" class="nav__logo-icon" alt="Estudi Dental Carrera" width="163" height="210" fetchpriority="high" />
       </a>
       <span class="nav__meta" aria-hidden="true">
@@ -41,7 +42,7 @@
         <span class="nav__meta-text">Lleida &amp; Tremp</span>
       </span>
       <nav class="nav__links" aria-label="Navegación principal">
-        <a href="index.html"><span class="nav__label">Inicio</span></a>
+        <a href="/es/"><span class="nav__label">Inicio</span></a>
         <a href="servicios.html"><span class="nav__label">Servicios</span></a>
         <a href="equipo.html"><span class="nav__label">Equipo</span></a>
         <a href="sedes.html"><span class="nav__label">Clínicas</span></a>
@@ -63,7 +64,7 @@
 
   <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <div class="mobile-menu__top">
-      <a href="index.html" class="mobile-menu__brand" aria-label="Inicio · Estudi Dental Carrera">
+      <a href="/es/" class="mobile-menu__brand" aria-label="Inicio · Estudi Dental Carrera">
         <img src="../assets/img/logos/logo-carrera-vertical.png" alt="" width="163" height="210" />
       </a>
       <button class="mobile-menu__close" id="mobileMenuClose" aria-label="Cerrar menú">
@@ -71,7 +72,7 @@
       </button>
     </div>
     <nav class="mobile-menu__nav" aria-label="Navegación principal">
-      <a href="index.html" class="mobile-menu__link">
+      <a href="/es/" class="mobile-menu__link">
         <span class="mobile-menu__label">Inicio</span>
       </a>
       <a href="servicios.html" class="mobile-menu__link">
@@ -85,7 +86,7 @@
       </a>
     </nav>
     <div class="mobile-menu__footer">
-      <a href="tel:+34973268826" class="btn btn--primary btn--lg mobile-menu__cta">Pedir cita</a>
+      <a href="sedes.html#contacto" class="btn btn--primary btn--lg mobile-menu__cta">Pedir cita</a>
       <div class="mobile-menu__seus">
         <a href="tel:+34973268826" class="mobile-menu__seu">
           <span class="mobile-menu__seu-label">Lleida</span>
@@ -104,7 +105,7 @@
           <a href="https://www.instagram.com/clinicarrera/" class="mobile-menu__social-link" target="_blank" rel="noopener" aria-label="Instagram">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
           </a>
-          <a href="https://wa.me/34615983352" class="mobile-menu__social-link" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <a href="sedes.html?canal=whatsapp#contacto" class="mobile-menu__social-link" rel="noopener" aria-label="WhatsApp: elige una clínica">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.556 4.122 1.528 5.855L.057 23.175a.75.75 0 00.918.899l5.42-1.424A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 01-4.965-1.364l-.356-.211-3.677.964.982-3.592-.231-.369A9.713 9.713 0 012.25 12C2.25 6.613 6.613 2.25 12 2.25S21.75 6.613 21.75 12 17.387 21.75 12 21.75z"/></svg>
           </a>
         </div>
@@ -117,7 +118,7 @@
       <div class="container">
         <div class="page-hero__content page-hero__content--dark">
           <nav class="breadcrumb reveal" aria-label="Migas de pan">
-            <a href="index.html">Inicio</a>
+            <a href="/es/">Inicio</a>
             <span>→</span>
             <span>Política de privacidad</span>
           </nav>
@@ -131,14 +132,13 @@
       <div class="container">
         <div class="legal-wrap reveal">
 
-          <p class="legal-meta">Última actualización: abril de 2026</p>
+          <p class="legal-meta">Última actualización: 10 de septiembre de 2026</p>
 
           <h2>Responsable del tratamiento</h2>
           <p>El responsable del tratamiento de los datos personales recogidos a través de este sitio web es:</p>
           <div class="legal-highlight">
             <p><strong>Titular:</strong> Estudi Dental Carrera<br />
-            <strong>NIF:</strong> [NIF/CIF]<br />
-            <strong>Dirección:</strong> Carrer Major, 74-76, 3r 3a, 25007 Lleida<br />
+            <strong>Dirección:</strong> Carrer Major, 74-76, 3.º 3.ª, 25007 Lleida<br />
             <strong>Teléfono:</strong> <a href="tel:+34973268826">973 26 88 26</a><br />
             <strong>Correo electrónico:</strong> <a href="mailto:info@clinicarrera.cat">info@clinicarrera.cat</a></p>
           </div>
@@ -148,9 +148,10 @@
           <ul>
             <li>Nombre y apellidos</li>
             <li>Dirección de correo electrónico y/o número de teléfono</li>
-            <li>El mensaje o la consulta que nos formule</li>
+            <li>Clínica elegida y preferencia de horario para recibir la llamada</li>
           </ul>
-          <p>No recogemos datos de salud a través del formulario web. Los datos clínicos de los pacientes se gestionan de forma separada y con las medidas de seguridad exigidas por la normativa sanitaria y de protección de datos aplicable.</p>
+          <p>La pregunta inicial sirve para orientarte en el navegador: su respuesta no se guarda ni se envía. El formulario solo envía los datos de contacto, la clínica elegida, la preferencia de horario y la aceptación del tratamiento de los datos. Los datos clínicos de los pacientes se gestionan de forma separada y con las medidas de seguridad exigidas por la normativa sanitaria y de protección de datos aplicable.</p>
+          <p>Nuestra instancia propia de Umami trata de forma agregada datos técnicos y de uso como la página visitada, el navegador, el tipo de dispositivo, el país aproximado y las interacciones con los canales de contacto, sin cookies ni perfiles personales. Si acepta las cookies de estadísticas, Google Analytics también trata información técnica y de uso. No enviamos a ningún sistema de analítica el contenido del formulario ni datos clínicos.</p>
 
           <h2>Finalidad del tratamiento</h2>
           <p>Los datos facilitados a través del formulario de contacto se tratan únicamente para:</p>
@@ -158,20 +159,22 @@
             <li>Gestionar su solicitud de cita o consulta</li>
             <li>Responder a sus dudas o peticiones de información</li>
             <li>Coordinar la atención entre las dos clínicas (Lleida y Tremp) si procede</li>
+            <li>Medir de forma agregada el uso del sitio con Umami y mejorar su rendimiento, con opción de desactivación desde las preferencias</li>
+            <li>Obtener estadísticas ampliadas con Google Analytics, únicamente si ha aceptado las cookies de estadísticas</li>
           </ul>
 
           <h2>Base jurídica</h2>
-          <p>El tratamiento de sus datos se fundamenta en el <strong>consentimiento expreso</strong> que otorga al enviar el formulario (art. 6.1.a del RGPD). En el ámbito clínico, el tratamiento puede fundamentarse, adicionalmente, en la ejecución de un contrato de atención sanitaria (art. 6.1.b) y en el cumplimiento de obligaciones legales (art. 6.1.c).</p>
+          <p>Las estadísticas mínimas y sin cookies de Umami se tratan sobre la base del <strong>interés legítimo</strong> de conocer y mejorar el funcionamiento del sitio (art. 6.1.f del RGPD), con datos minimizados, respeto de la señal «Do Not Track» y opción de desactivación. El formulario y Google Analytics se fundamentan en el <strong>consentimiento expreso</strong> (art. 6.1.a del RGPD). En el ámbito clínico, el tratamiento puede fundamentarse, adicionalmente, en la ejecución de un contrato de atención sanitaria (art. 6.1.b) y en el cumplimiento de obligaciones legales (art. 6.1.c).</p>
 
           <h2>Conservación de los datos</h2>
           <p>Los datos de contacto facilitados a través del formulario web se conservan durante el tiempo necesario para atender su solicitud. Si se formaliza una relación clínica, los datos se integran en el historial del paciente y se conservan de acuerdo con los plazos establecidos por la legislación sanitaria catalana (Ley 21/2000, de 29 de diciembre) y estatal, que es de, como mínimo, cinco años desde el alta del paciente.</p>
 
           <h2>Comunicación de datos a terceros</h2>
-          <p>Sus datos no se ceden a terceros, salvo en los casos en que exista una obligación legal o cuando sea estrictamente necesario para la prestación del servicio (por ejemplo, laboratorios de prótesis dental o especialistas externos a los que se derive el tratamiento, siempre con su información previa).</p>
-          <p>Los datos no se transfieren a terceros países fuera del Espacio Económico Europeo.</p>
+          <p>Sus datos no se venden ni se ceden con fines publicitarios. Pueden ser tratados por los proveedores tecnológicos necesarios para alojar el sitio y la instancia propia de Umami, almacenar sus estadísticas, gestionar comunicaciones y, si lo ha consentido, elaborar estadísticas mediante Google Analytics. Estos proveedores actúan de acuerdo con los contratos y garantías de protección de datos aplicables.</p>
+          <p>Algunos proveedores, incluidos los de alojamiento y base de datos, pueden tratar información fuera del Espacio Económico Europeo aplicando las garantías previstas en el capítulo V del RGPD. Umami no crea perfiles personales ni realiza seguimiento entre webs; Google Analytics solo se activa con su consentimiento y sin personalización publicitaria.</p>
 
           <h2>Sus derechos</h2>
-          <p>En calidad de interesados, puede ejercer los siguientes derechos en relación con sus datos personales:</p>
+          <p>Como persona interesada, puede ejercer los siguientes derechos en relación con sus datos personales:</p>
           <ul>
             <li><strong>Acceso:</strong> obtener confirmación de si tratamos sus datos y acceder a ellos</li>
             <li><strong>Rectificación:</strong> corregir datos inexactos o incompletos</li>
@@ -201,7 +204,7 @@
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <a href="index.html" class="footer__logo">
+          <a href="/es/" class="footer__logo">
             <img src="../assets/img/logos/logo-carrera-vertical.png" alt="Estudi Dental Carrera" width="163" height="210" loading="lazy" decoding="async" style="filter:brightness(0) invert(0.72);" />
           </a>
           <p class="footer__tagline">Primero entendemos qué te pasa.<br />Lleida y Tremp, un solo equipo.</p>
@@ -209,15 +212,15 @@
             <a href="https://www.instagram.com/clinicarrera/" class="footer__social-link" target="_blank" rel="noopener" aria-label="Instagram de Estudi Dental Carrera">
               <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
             </a>
-            <a href="https://wa.me/34615983352" class="footer__social-link" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <a href="sedes.html?canal=whatsapp#contacto" class="footer__social-link" rel="noopener" aria-label="WhatsApp: elige una clínica">
               <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.556 4.122 1.528 5.855L.057 23.175a.75.75 0 00.918.899l5.42-1.424A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 01-4.965-1.364l-.356-.211-3.677.964.982-3.592-.231-.369A9.713 9.713 0 012.25 12C2.25 6.613 6.613 2.25 12 2.25S21.75 6.613 21.75 12 17.387 21.75 12 21.75z"/></svg>
             </a>
           </div>
         </div>
         <div class="footer__col">
-          <h4>Navegación</h4>
+          <p class="footer__heading">Navegación</p>
           <ul>
-            <li><a href="index.html">Inicio</a></li>
+            <li><a href="/es/">Inicio</a></li>
             <li><a href="servicios.html">Servicios</a></li>
             <li><a href="equipo.html">Equipo</a></li>
             <li><a href="sedes.html">Clínicas</a></li>
@@ -225,17 +228,17 @@
           </ul>
         </div>
         <div class="footer__col">
-          <h4>Centro Lleida</h4>
+          <p class="footer__heading">Clínica de Lleida</p>
           <ul>
-            <li>Carrer Major, 74-76, 3r 3a</li><li>25007 Lleida</li>
+            <li>Carrer Major, 74-76, 3.º 3.ª</li><li>25007 Lleida</li>
             <li><a href="tel:+34973268826">973 26 88 26</a></li>
             <li>L–V: 9h – 20h</li><li>S: 9h – 14h</li>
           </ul>
         </div>
         <div class="footer__col">
-          <h4>Centro Tremp</h4>
+          <p class="footer__heading">Clínica de Tremp</p>
           <ul>
-            <li>Carrer Montllobar, 22 Baixos</li><li>25620 Tremp</li>
+            <li>Carrer Montllobar, 22, bajos</li><li>25620 Tremp</li>
             <li><a href="tel:+34650600172">650 60 01 72</a></li>
             <li>L–V: 9h – 19h</li>
           </ul>
@@ -256,9 +259,9 @@
     </div>
   </footer>
 
-  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/main.js?v=20260910-cita"></script>
   <!-- WhatsApp FAB -->
-  <a href="https://wa.me/34615983352" class="whatsapp-fab" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  <a href="sedes.html?canal=whatsapp#contacto" class="whatsapp-fab" rel="noopener" aria-label="WhatsApp: elige una clínica">
     <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.556 4.122 1.528 5.855L.057 23.175a.75.75 0 00.918.899l5.42-1.424A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 01-4.965-1.364l-.356-.211-3.677.964.982-3.592-.231-.369A9.713 9.713 0 012.25 12C2.25 6.613 6.613 2.25 12 2.25S21.75 6.613 21.75 12 17.387 21.75 12 21.75z"/></svg>
   </a>
 </body>

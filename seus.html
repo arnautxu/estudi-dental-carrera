@@ -6,7 +6,7 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    window.GA4_ID = 'G-XXXXXXXXXX'; /* TODO: substituir per l'ID real de GA4 */
+    window.GA4_ID = '';
     gtag('consent', 'default', {
       analytics_storage: 'denied',
       ad_storage: 'denied',
@@ -15,29 +15,31 @@
     });
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Els nostres centres · Estudi Dental Carrera</title>
+  <title>Clíniques dentals a Lleida i Tremp | Estudi Dental</title>
   <meta name="description" content="Dos centres d'Estudi Dental Carrera: al cor de Lleida (Carrer Major) i a Tremp (Pallars Jussà). Adreces, horaris i cita prèvia." />
-  <link rel="canonical" href="https://estudidentalcarrera.com/seus.html" />
-  <link rel="alternate" hreflang="ca" href="https://estudidentalcarrera.com/seus.html" />
-  <link rel="alternate" hreflang="es" href="https://estudidentalcarrera.com/es/sedes.html" />
-  <link rel="alternate" hreflang="x-default" href="https://estudidentalcarrera.com/seus.html" />
+  <link rel="canonical" href="https://www.estudidentalcarrera.com/seus.html" />
+  <link rel="alternate" hreflang="ca" href="https://www.estudidentalcarrera.com/seus.html" />
+  <link rel="alternate" hreflang="es" href="https://www.estudidentalcarrera.com/es/sedes.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.estudidentalcarrera.com/seus.html" />
 
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="ca_ES" />
   <meta property="og:locale:alternate" content="es_ES" />
   <meta property="og:site_name" content="Estudi Dental Carrera" />
-  <meta property="og:title" content="Els nostres centres · Estudi Dental Carrera" />
-  <meta property="og:description" content="Dos centres: Lleida (Carrer Major) i Tremp (Pallars Jussà). Adreces, horaris i cita prèvia." />
-  <meta property="og:url" content="https://estudidentalcarrera.com/seus.html" />
-  <meta property="og:image" content="https://estudidentalcarrera.com/assets/img/lleida-edifici.jpg" />
+  <meta property="og:title" content="Clíniques dentals a Lleida i Tremp | Estudi Dental" />
+  <meta property="og:description" content="Clíniques dentals a Lleida i Tremp: adreces, horaris, tractaments i cita prèvia amb l'equip d'Estudi Dental Carrera." />
+  <meta property="og:url" content="https://www.estudidentalcarrera.com/seus.html" />
+  <meta property="og:image" content="https://www.estudidentalcarrera.com/assets/img/lleida-edifici.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=optional" onload="this.onload=null;this.rel=&quot;stylesheet&quot;" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=optional" rel="stylesheet" /></noscript>
   <link rel="preload" href="assets/fonts/N27-Regular.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="assets/fonts/N27-Light.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="preload" href="assets/img/headers/hero-seus.webp" as="image" fetchpriority="high" />
+  <link rel="stylesheet" href="assets/css/main.css?v=20260910-cita" />
   <link rel="icon" type="image/png" sizes="64x64" href="assets/img/logos/favicon.png" />
   <link rel="icon" type="image/svg+xml" href="assets/img/logos/favicon.svg" />
 
@@ -49,14 +51,16 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "DentalClinic",
-        "@id": "https://estudidentalcarrera.com/#carrera",
+        "@type": "Dentist",
+        "@id": "https://www.estudidentalcarrera.com/#lleida",
         "name": "Estudi Dental Carrera",
-        "url": "https://estudidentalcarrera.com/seus.html#carrera",
-        "image": "https://estudidentalcarrera.com/assets/img/lleida-edifici.jpg",
+        "url": "https://www.estudidentalcarrera.com/clinica-dental-lleida.html",
+        "image": "https://www.estudidentalcarrera.com/assets/img/lleida-edifici.jpg",
         "telephone": "+34973268826",
         "email": "carrera@clinicarrera.cat",
         "priceRange": "€€",
+        "branchOf": {"@id": "https://www.estudidentalcarrera.com/#organization"},
+        "hasMap": "https://www.google.com/maps/search/?api=1&query=Estudi+Dental+Carrera+Lleida",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Carrer Major, 74-76, 3r 3a",
@@ -69,18 +73,20 @@
           {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"20:00"},
           {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"14:00"}
         ],
-        "areaServed": "Lleida",
-        "medicalSpecialty": ["Orthodontics","Implantology","Endodontics","Periodontics"]
+        "areaServed": {"@type": "City", "name": "Lleida"},
+        "medicalSpecialty": "https://schema.org/Dentistry"
       },
       {
-        "@type": "DentalClinic",
-        "@id": "https://estudidentalcarrera.com/#tremp",
+        "@type": "Dentist",
+        "@id": "https://www.estudidentalcarrera.com/#tremp",
         "name": "Estudi Dental Tremp",
-        "url": "https://estudidentalcarrera.com/seus.html#tremp",
-        "image": "https://estudidentalcarrera.com/assets/img/tremp-exterior.jpg",
+        "url": "https://www.estudidentalcarrera.com/dentista-tremp.html",
+        "image": "https://www.estudidentalcarrera.com/assets/img/tremp-exterior.jpg",
         "telephone": "+34650600172",
         "email": "tremp@clinicarrera.cat",
         "priceRange": "€€",
+        "branchOf": {"@id": "https://www.estudidentalcarrera.com/#organization"},
+        "hasMap": "https://www.google.com/maps/search/?api=1&query=Estudi+Dental+Tremp",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Carrer Montllobar, 22 Baixos",
@@ -92,19 +98,21 @@
         "openingHoursSpecification": [
           {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"19:00"}
         ],
-        "areaServed": "Pallars Jussà",
-        "medicalSpecialty": ["Orthodontics","Implantology","Endodontics"]
+        "geo": {"@type": "GeoCoordinates", "latitude": 42.16731, "longitude": 0.89164},
+        "areaServed": {"@type": "AdministrativeArea", "name": "Pallars Jussà"},
+        "medicalSpecialty": "https://schema.org/Dentistry"
       }
     ]
   }
   </script>
+  <link rel="stylesheet" href="assets/css/appointment.css?v=20260910-cita" />
 </head>
 <body>
   <a href="#main" class="skip-link">Salta al contingut</a>
 
   <header class="nav" id="nav">
     <div class="nav__inner">
-      <a href="index.html" class="nav__logo">
+      <a href="/" class="nav__logo">
         <img src="assets/img/logos/logo-carrera-vertical.png" class="nav__logo-icon" alt="Estudi Dental Carrera" width="163" height="210" fetchpriority="high" />
       </a>
       <span class="nav__meta" aria-hidden="true">
@@ -112,7 +120,7 @@
         <span class="nav__meta-text">Lleida &amp; Tremp</span>
       </span>
       <nav class="nav__links" aria-label="Navegació principal">
-        <a href="index.html"><span class="nav__label">Inici</span></a>
+        <a href="/"><span class="nav__label">Inici</span></a>
         <a href="serveis.html"><span class="nav__label">Serveis</span></a>
         <a href="equip.html"><span class="nav__label">Equip</span></a>
         <a href="seus.html" class="active" aria-current="page"><span class="nav__label">Els nostres centres</span></a>
@@ -134,7 +142,7 @@
 
   <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <div class="mobile-menu__top">
-      <a href="index.html" class="mobile-menu__brand" aria-label="Inici · Estudi Dental Carrera">
+      <a href="/" class="mobile-menu__brand" aria-label="Inici · Estudi Dental Carrera">
         <img src="assets/img/logos/logo-carrera-vertical.png" alt="" width="163" height="210" />
       </a>
       <button class="mobile-menu__close" id="mobileMenuClose" aria-label="Tancar menú">
@@ -142,7 +150,7 @@
       </button>
     </div>
     <nav class="mobile-menu__nav" aria-label="Navegació principal">
-      <a href="index.html" class="mobile-menu__link">
+      <a href="/" class="mobile-menu__link">
         <span class="mobile-menu__label">Inici</span>
       </a>
       <a href="serveis.html" class="mobile-menu__link">
@@ -156,7 +164,7 @@
       </a>
     </nav>
     <div class="mobile-menu__footer">
-      <a href="tel:+34973268826" class="btn btn--primary btn--lg mobile-menu__cta">Demana cita</a>
+      <a href="seus.html#contacte" class="btn btn--primary btn--lg mobile-menu__cta">Demana cita</a>
       <div class="mobile-menu__seus">
         <a href="tel:+34973268826" class="mobile-menu__seu">
           <span class="mobile-menu__seu-label">Lleida</span>
@@ -175,7 +183,7 @@
           <a href="https://www.instagram.com/clinicarrera/" class="mobile-menu__social-link" target="_blank" rel="noopener" aria-label="Instagram">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
           </a>
-          <a href="https://wa.me/34615983352" class="mobile-menu__social-link" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <a href="seus.html?canal=whatsapp#contacte" class="mobile-menu__social-link" rel="noopener" aria-label="WhatsApp: tria una clínica">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.556 4.122 1.528 5.855L.057 23.175a.75.75 0 00.918.899l5.42-1.424A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 01-4.965-1.364l-.356-.211-3.677.964.982-3.592-.231-.369A9.713 9.713 0 012.25 12C2.25 6.613 6.613 2.25 12 2.25S21.75 6.613 21.75 12 17.387 21.75 12 21.75z"/></svg>
           </a>
         </div>
@@ -190,13 +198,68 @@
       <div class="container">
         <div class="page-hero__content">
           <nav class="breadcrumb reveal">
-            <a href="index.html">Inici</a><span>→</span><span>Els nostres centres</span>
+            <a href="/">Inici</a><span>→</span><span>Els nostres centres</span>
           </nav>
-          <h1 class="reveal">Els nostres <em>centres</em></h1>
-          <p class="reveal">Dos espais pensats per a la teva comoditat, a Lleida i a Tremp. Escull el centre que et quedi més a prop.</p>
+          <h1 class="reveal">Clíniques dentals a <em>Lleida i Tremp</em></h1>
+          <p class="reveal">Dues clíniques, un mateix equip i tractaments coordinats. Consulta la ubicació i tria el centre que et quedi més a prop.</p>
         </div>
       </div>
     </section>
+
+    <!-- APPOINTMENT: orientation stays in this browser; only contact details are submitted. -->
+    <section class="contact-full appointment-section" id="contacte" aria-labelledby="appointment-title">
+      <div class="container appointment-layout">
+        <div class="appointment-intro">
+          <h2 id="appointment-title">Explica'ns<br /><em>què necessites.</em></h2>
+          <p>Tria entre Lleida i Tremp. La recepció de la clínica que escullis et trucarà per concretar la visita.</p>
+          <details class="appointment-direct">
+            <summary>Prefereixes parlar directament?</summary>
+            <div><strong>Estudi Dental Carrera · Lleida</strong><a href="tel:+34973268826">973 26 88 26</a><a href="https://wa.me/34615983352" target="_blank" rel="noopener" data-seu="lleida">WhatsApp · Lleida</a></div>
+            <div><strong>Estudi Dental Tremp · Tremp</strong><a href="tel:+34650600172">650 60 01 72</a><a href="https://wa.me/34650600172" target="_blank" rel="noopener" data-seu="tremp">WhatsApp · Tremp</a></div>
+            <p>Si necessites atenció urgent, truca a la clínica. Aquest formulari no ofereix resposta immediata.</p>
+          </details>
+        </div>
+        <form class="appointment" id="contactForm" data-appointment>
+          <div class="form-honeypot" aria-hidden="true"><label for="website">Deixa aquest camp buit</label><input id="website" name="website" tabindex="-1" autocomplete="off" /></div>
+          <div class="appointment-progress" aria-label="Progrés de la sol·licitud"><span data-step-count>1 de 3</span><span data-clinic-context>Lleida · Tremp</span></div>
+          <ol class="appointment-steps" aria-label="Passos"><li aria-current="step">La teva consulta</li><li>La clínica</li><li>El contacte</li></ol>
+          <fieldset class="appointment__step" data-step="0">
+            <legend tabindex="-1">Què et porta a consultar-nos?</legend>
+            <p class="appointment-help">Tria el que més s'hi acosti. També pots continuar sense escollir cap opció.</p>
+            <div class="appointment-choices"><label class="appointment-choice"><input type="radio" name="orientation" value="0" /><span>Em molesta la mandíbula</span></label><label class="appointment-choice"><input type="radio" name="orientation" value="1" /><span>Tinc molèsties a les dents o les genives</span></label><label class="appointment-choice"><input type="radio" name="orientation" value="2" /><span>Em falta una dent o vull millorar les dents</span></label><label class="appointment-choice"><input type="radio" name="orientation" value="3" /><span>Vull una revisió</span></label><label class="appointment-choice"><input type="radio" name="orientation" value="4" /><span>És per al meu fill o filla</span></label><label class="appointment-choice"><input type="radio" name="orientation" value="5" /><span>Prefereixo explicar-ho parlant</span></label></div>
+            <p class="appointment-orientation" data-orientation-feedback aria-live="polite"></p>
+            <p class="appointment-note">Aquesta resposta només t'orienta aquí: no es guarda ni s'envia a la clínica. Podràs explicar els detalls quan et truquem.</p>
+            <button type="button" class="btn btn--primary" data-next>Continuar</button>
+          </fieldset>
+          <fieldset class="appointment__step" data-step="1">
+            <legend tabindex="-1">On prefereixes venir?</legend>
+            <p class="appointment-help">La recepció d’aquesta clínica rebrà la teva sol·licitud.</p>
+            <div class="appointment-choices" data-clinic-options><label class="appointment-choice appointment-choice--clinic"><input type="radio" name="seu" value="carrera" required /><span><strong>Lleida</strong><span>Estudi Dental Carrera</span><small>Carrer Major, 74–76, 3r 3a</small></span></label><label class="appointment-choice appointment-choice--clinic"><input type="radio" name="seu" value="tremp" required /><span><strong>Tremp</strong><span>Estudi Dental Tremp</span><small>Carrer Montllobar, 22, baixos</small></span></label></div>
+            <p class="field-error" id="seu-error" hidden></p>
+            <div class="appointment-actions"><button type="button" class="btn btn--outline" data-back>Enrere</button><button type="button" class="btn btn--primary" data-next>Continuar</button></div>
+          </fieldset>
+          <fieldset class="appointment__step" data-step="2">
+            <legend tabindex="-1">Com et podem contactar?</legend>
+            <div class="appointment-summary"><p data-clinic-summary></p><button type="button" class="appointment-edit" data-edit-clinic>Canviar de clínica</button></div>
+            <p class="appointment-help">Els camps amb * són obligatoris.</p>
+            <div class="form-row">
+              <div class="form-group"><label for="name">Nom i cognoms *</label><input id="name" name="name" autocomplete="name" maxlength="120" required /><span class="field-error" id="name-error" hidden></span></div>
+              <div class="form-group"><label for="phone">Telèfon *</label><input type="tel" id="phone" name="phone" inputmode="tel" autocomplete="tel" maxlength="40" required /><span class="field-error" id="phone-error" hidden></span></div>
+            </div>
+            <div class="form-group"><label for="email">Correu electrònic (opcional)</label><input type="email" id="email" name="email" autocomplete="email" maxlength="180" /><span class="field-error" id="email-error" hidden></span></div>
+            <div class="form-group"><label for="horari">Quan et va millor que et truquem? (opcional)</label><select id="horari" name="horari"><option value="">Sense preferència</option><option value="morning">Al matí</option><option value="afternoon">A la tarda</option></select><p class="appointment-note">Dins de l'horari d'atenció de la clínica. No és una reserva d'hora.</p></div>
+            <p class="appointment-visit">La primera visita és de pagament. T'indicarem l'import abans de confirmar-la.</p>
+            <div class="form-group"><label class="appointment-consent" for="consent"><input type="checkbox" id="consent" name="consent" required /><span>He llegit la <a href="privacitat.html" target="_blank" rel="noopener">política de privacitat</a> i accepto el tractament de les meves dades per gestionar aquesta sol·licitud. *</span></label><span class="field-error" id="consent-error" hidden></span></div>
+            <div class="appointment-actions"><button type="button" class="btn btn--outline" data-back>Enrere</button><button type="submit" class="btn btn--primary submit-btn" disabled>Enviar sol·licitud</button></div>
+          </fieldset>
+          <p class="form-status" role="status" aria-live="polite" data-form-status hidden></p>
+          <div class="appointment-recovery" data-recovery hidden><a data-recovery-phone></a><a data-recovery-wa target="_blank" rel="noopener"></a></div>
+          <section class="appointment-success" data-success hidden aria-labelledby="appointment-success-title"><h3 id="appointment-success-title" tabindex="-1">Sol·licitud enviada.</h3><p data-success-message></p><p>La cita encara no està confirmada.</p><button type="button" class="btn btn--outline" data-restart>Fer una altra sol·licitud</button></section>
+          <noscript><p>Per enviar el formulari cal activar JavaScript. També pots contactar directament amb Lleida o Tremp als telèfons d’aquesta secció.</p></noscript>
+        </form>
+      </div>
+    </section>
+
 
     <!-- SEU CARRERA -->
     <section class="seu-detail" id="carrera">
@@ -245,7 +308,7 @@
                   <svg viewBox="0 0 20 20" fill="none"><rect x="2" y="4" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M2 8h16M6 4V2M14 4V2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
                   Email
                 </div>
-                <p><a href="mailto:carrera@clinicarrera.cat">carrera@clinicarrera.cat</a></p>
+                <p><a href="mailto:carrera@clinicarrera.cat">carrera@clinicarrera.cat</a></p><p><a class="seu-request" href="seus.html?seu=carrera#contacte">Demanar cita a Lleida →</a></p>
               </div>
             </div>
           </div>
@@ -271,33 +334,34 @@
         <header class="clinic-gallery__head reveal">
           <span class="label">L'espai</span>
           <h2>Una clínica dins d'un <em>edifici modernista</em></h2>
-          <p>El centre de Lleida ocupa una planta d'un edifici modernista del Carrer Major: sostres pintats, arrimadors de rajola i gabinets equipats amb tecnologia actual. Entrar a la clínica i entrar a l'edifici tenen la mateixa temperatura.</p>
+          <p>El centre de Lleida ocupa una planta d'un edifici modernista del Carrer Major: sostres pintats, arrimadors de rajola i gabinets equipats amb tecnologia actual. <a href="clinica-dental-lleida.html">Consulta la guia completa de la clínica dental de Lleida →</a></p>
+          <p>Explora els tractaments d'<a href="atm-bruxisme.html">ATM i bruxisme</a>, <a href="implants-dentals.html">implants dentals</a>, <a href="ortodoncia.html">ortodòncia</a>, <a href="periodoncia-endodoncia.html">periodòncia i endodòncia</a> i <a href="estetica-dental.html">estètica dental</a>.</p>
         </header>
           <div class="gallery-slideshow reveal" data-gallery role="group" aria-roledescription="carrusel" aria-label="Fotografies de la clínica de Lleida" tabindex="0">
           <div class="gallery-slideshow__stage">
             <figure class="gallery-slide is-active" data-slide data-caption="El vestíbul modernista de l'edifici, al Carrer Major." aria-hidden="false">
               <div class="gallery-slide__bg" style="background-image:url('assets/img/seus/slideshow/sl-1-vestibul.webp')"></div>
-              <picture><source srcset="assets/img/seus/slideshow/sl-1-vestibul.webp" type="image/webp" /><img class="gallery-slide__img" src="assets/img/seus/slideshow/sl-1-vestibul.jpg" alt="Vestíbul modernista de l'edifici amb el sostre pintat i l'arrimador de rajola" loading="lazy" decoding="async" /></picture>
+              <picture><source srcset="assets/img/seus/slideshow/sl-1-vestibul.webp" type="image/webp" /><img class="gallery-slide__img" src="assets/img/seus/slideshow/sl-1-vestibul.jpg" alt="Vestíbul modernista de l'edifici amb el sostre pintat i l'arrimador de rajola" width="1200" height="1800" loading="lazy" decoding="async" /></picture>
             </figure>
             <figure class="gallery-slide" data-slide data-caption="La recepció: aquí comença tot, sense pressa." aria-hidden="true">
               <div class="gallery-slide__bg" style="background-image:url('assets/img/seus/slideshow/sl-2-recepcio.webp')"></div>
-              <picture><source srcset="assets/img/seus/slideshow/sl-2-recepcio.webp" type="image/webp" /><img class="gallery-slide__img" src="assets/img/seus/slideshow/sl-2-recepcio.jpg" alt="Recepció de la clínica amb terra de fusta càlida" loading="lazy" decoding="async" /></picture>
+              <picture><source srcset="assets/img/seus/slideshow/sl-2-recepcio.webp" type="image/webp" /><img class="gallery-slide__img" src="assets/img/seus/slideshow/sl-2-recepcio.jpg" alt="Recepció de la clínica amb terra de fusta càlida" width="1313" height="1800" loading="lazy" decoding="async" /></picture>
             </figure>
             <figure class="gallery-slide" data-slide data-caption="La sala d'espera: càlida, tranquil·la, sense pressa." aria-hidden="true">
               <div class="gallery-slide__bg" style="background-image:url('assets/img/seus/slideshow/sl-3-espera.webp')"></div>
-              <picture><source srcset="assets/img/seus/slideshow/sl-3-espera.webp" type="image/webp" /><img class="gallery-slide__img" src="assets/img/seus/slideshow/sl-3-espera.jpg" alt="Sala d'espera amb sofàs de pell i obra emmarcada" loading="lazy" decoding="async" /></picture>
+              <picture><source srcset="assets/img/seus/slideshow/sl-3-espera.webp" type="image/webp" /><img class="gallery-slide__img" src="assets/img/seus/slideshow/sl-3-espera.jpg" alt="Sala d'espera amb sofàs de pell i obra emmarcada" width="1800" height="1200" loading="lazy" decoding="async" /></picture>
             </figure>
             <figure class="gallery-slide" data-slide data-caption="El gabinet, equipat amb tecnologia actual." aria-hidden="true">
               <div class="gallery-slide__bg" style="background-image:url('assets/img/seus/slideshow/sl-4-gabinet.webp')"></div>
-              <picture><source srcset="assets/img/seus/slideshow/sl-4-gabinet.webp" type="image/webp" /><img class="gallery-slide__img" src="assets/img/seus/slideshow/sl-4-gabinet.jpg" alt="Gabinet dental equipat amb tecnologia actual" loading="lazy" decoding="async" /></picture>
+              <picture><source srcset="assets/img/seus/slideshow/sl-4-gabinet.webp" type="image/webp" /><img class="gallery-slide__img" src="assets/img/seus/slideshow/sl-4-gabinet.jpg" alt="Gabinet dental equipat amb tecnologia actual" width="1200" height="1800" loading="lazy" decoding="async" /></picture>
             </figure>
             <figure class="gallery-slide" data-slide data-caption="Models d'ortodòncia: cada moviment, planificat." aria-hidden="true">
               <div class="gallery-slide__bg" style="background-image:url('assets/img/seus/slideshow/sl-5-ortodoncia.webp')"></div>
-              <picture><source srcset="assets/img/seus/slideshow/sl-5-ortodoncia.webp" type="image/webp" /><img class="gallery-slide__img" src="assets/img/seus/slideshow/sl-5-ortodoncia.jpg" alt="Model d'ortodòncia amb bràquets en una prestatgeria" loading="lazy" decoding="async" /></picture>
+              <picture><source srcset="assets/img/seus/slideshow/sl-5-ortodoncia.webp" type="image/webp" /><img class="gallery-slide__img" src="assets/img/seus/slideshow/sl-5-ortodoncia.jpg" alt="Model d'ortodòncia amb bràquets en una prestatgeria" width="1800" height="1345" loading="lazy" decoding="async" /></picture>
             </figure>
             <figure class="gallery-slide" data-slide data-caption="El detall del treball ben fet." aria-hidden="true">
               <div class="gallery-slide__bg" style="background-image:url('assets/img/seus/slideshow/sl-6-detall.webp')"></div>
-              <picture><source srcset="assets/img/seus/slideshow/sl-6-detall.webp" type="image/webp" /><img class="gallery-slide__img" src="assets/img/seus/slideshow/sl-6-detall.jpg" alt="Primer pla de les mans treballant amb precisió" loading="lazy" decoding="async" /></picture>
+              <picture><source srcset="assets/img/seus/slideshow/sl-6-detall.webp" type="image/webp" /><img class="gallery-slide__img" src="assets/img/seus/slideshow/sl-6-detall.jpg" alt="Primer pla de les mans treballant amb precisió" width="1800" height="1379" loading="lazy" decoding="async" /></picture>
             </figure>
             <div class="gallery-slideshow__track" aria-hidden="true"><span class="gallery-slideshow__progress" data-progress></span></div>
           </div>
@@ -382,7 +446,7 @@
                   <svg viewBox="0 0 20 20" fill="none"><rect x="2" y="4" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M2 8h16M6 4V2M14 4V2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
                   Email
                 </div>
-                <p><a href="mailto:tremp@clinicarrera.cat">tremp@clinicarrera.cat</a></p>
+                <p><a href="mailto:tremp@clinicarrera.cat">tremp@clinicarrera.cat</a></p><p><a class="seu-request" href="seus.html?seu=tremp#contacte">Demanar cita a Tremp →</a></p>
               </div>
             </div>
           </div>
@@ -391,33 +455,34 @@
         <header class="clinic-gallery__head reveal">
           <span class="label">L'espai</span>
           <h2>Una clínica <em>pensada des de zero</em></h2>
-          <p>El centre de Tremp és un espai modern al bell mig del poble: llum natural a cada gabinet, i el mateix criteri clínic que a Lleida. Perquè no calgui baixar a la ciutat per rebre la mateixa atenció.</p>
+          <p>El centre de Tremp és un espai modern al bell mig del poble, amb llum natural als gabinets i coordinació amb l'equip de Lleida quan el cas ho requereix. <a href="dentista-tremp.html">Consulta la guia completa de la clínica dental de Tremp →</a></p>
+          <p>Consulta com abordem <a href="atm-bruxisme.html">ATM i bruxisme</a>, <a href="implants-dentals.html">implants</a>, <a href="ortodoncia.html">ortodòncia</a>, <a href="periodoncia-endodoncia.html">salut de genives i endodòncia</a> i <a href="estetica-dental.html">estètica dental</a>.</p>
         </header>
           <div class="gallery-slideshow reveal" data-gallery role="group" aria-roledescription="carrusel" aria-label="Fotografies de la clínica de Tremp" tabindex="0">
           <div class="gallery-slideshow__stage">
             <figure class="gallery-slide is-active" data-slide data-caption="L'entrada, amb el rètol ben visible al carrer." aria-hidden="false">
               <div class="gallery-slide__bg" style="background-image:url('assets/img/seus/slideshow-tremp/ts-1-entrada.webp')"></div>
-              <picture><source srcset="assets/img/seus/slideshow-tremp/ts-1-entrada.webp" type="image/webp" /><img class="gallery-slide__img" src="assets/img/seus/slideshow-tremp/ts-1-entrada.jpg" alt="Façana de la clínica de Tremp amb el rètol Estudi Dental Tremp" loading="lazy" decoding="async" /></picture>
+              <picture><source srcset="assets/img/seus/slideshow-tremp/ts-1-entrada.webp" type="image/webp" /><img class="gallery-slide__img" src="assets/img/seus/slideshow-tremp/ts-1-entrada.jpg" alt="Façana de la clínica de Tremp amb el rètol Estudi Dental Tremp" width="1799" height="829" loading="lazy" decoding="async" /></picture>
             </figure>
             <figure class="gallery-slide" data-slide data-caption="La recepció, el primer que veus en arribar." aria-hidden="true">
               <div class="gallery-slide__bg" style="background-image:url('assets/img/seus/slideshow-tremp/ts-2-recepcio.webp')"></div>
-              <picture><source srcset="assets/img/seus/slideshow-tremp/ts-2-recepcio.webp" type="image/webp" /><img class="gallery-slide__img" src="assets/img/seus/slideshow-tremp/ts-2-recepcio.jpg" alt="Recepció de la clínica de Tremp" loading="lazy" decoding="async" /></picture>
+              <picture><source srcset="assets/img/seus/slideshow-tremp/ts-2-recepcio.webp" type="image/webp" /><img class="gallery-slide__img" src="assets/img/seus/slideshow-tremp/ts-2-recepcio.jpg" alt="Recepció de la clínica de Tremp" width="1800" height="1240" loading="lazy" decoding="async" /></picture>
             </figure>
             <figure class="gallery-slide" data-slide data-caption="La sala d'espera, amb llum natural." aria-hidden="true">
               <div class="gallery-slide__bg" style="background-image:url('assets/img/seus/slideshow-tremp/ts-3-espera.webp')"></div>
-              <picture><source srcset="assets/img/seus/slideshow-tremp/ts-3-espera.webp" type="image/webp" /><img class="gallery-slide__img" src="assets/img/seus/slideshow-tremp/ts-3-espera.jpg" alt="Sala d'espera de la clínica de Tremp amb llum natural" loading="lazy" decoding="async" /></picture>
+              <picture><source srcset="assets/img/seus/slideshow-tremp/ts-3-espera.webp" type="image/webp" /><img class="gallery-slide__img" src="assets/img/seus/slideshow-tremp/ts-3-espera.jpg" alt="Sala d'espera de la clínica de Tremp amb llum natural" width="1800" height="1172" loading="lazy" decoding="async" /></picture>
             </figure>
             <figure class="gallery-slide" data-slide data-caption="El gabinet, net i lluminós." aria-hidden="true">
               <div class="gallery-slide__bg" style="background-image:url('assets/img/seus/slideshow-tremp/ts-4-gabinet.webp')"></div>
-              <picture><source srcset="assets/img/seus/slideshow-tremp/ts-4-gabinet.webp" type="image/webp" /><img class="gallery-slide__img" src="assets/img/seus/slideshow-tremp/ts-4-gabinet.jpg" alt="Gabinet dental de la clínica de Tremp" loading="lazy" decoding="async" /></picture>
+              <picture><source srcset="assets/img/seus/slideshow-tremp/ts-4-gabinet.webp" type="image/webp" /><img class="gallery-slide__img" src="assets/img/seus/slideshow-tremp/ts-4-gabinet.jpg" alt="Gabinet dental de la clínica de Tremp" width="1800" height="1342" loading="lazy" decoding="async" /></picture>
             </figure>
             <figure class="gallery-slide" data-slide data-caption="El detall de l'instrumental, sempre a punt." aria-hidden="true">
               <div class="gallery-slide__bg" style="background-image:url('assets/img/seus/slideshow-tremp/ts-5-detall.webp')"></div>
-              <picture><source srcset="assets/img/seus/slideshow-tremp/ts-5-detall.webp" type="image/webp" /><img class="gallery-slide__img" src="assets/img/seus/slideshow-tremp/ts-5-detall.jpg" alt="Detall de l'instrumental dental a la clínica de Tremp" loading="lazy" decoding="async" /></picture>
+              <picture><source srcset="assets/img/seus/slideshow-tremp/ts-5-detall.webp" type="image/webp" /><img class="gallery-slide__img" src="assets/img/seus/slideshow-tremp/ts-5-detall.jpg" alt="Detall de l'instrumental dental a la clínica de Tremp" width="1800" height="1320" loading="lazy" decoding="async" /></picture>
             </figure>
             <figure class="gallery-slide" data-slide data-caption="L'equip, atenent un pacient." aria-hidden="true">
               <div class="gallery-slide__bg" style="background-image:url('assets/img/seus/slideshow-tremp/ts-6-equip.webp')"></div>
-              <picture><source srcset="assets/img/seus/slideshow-tremp/ts-6-equip.webp" type="image/webp" /><img class="gallery-slide__img" src="assets/img/seus/slideshow-tremp/ts-6-equip.jpg" alt="L'equip de la clínica de Tremp atenent un pacient" loading="lazy" decoding="async" /></picture>
+              <picture><source srcset="assets/img/seus/slideshow-tremp/ts-6-equip.webp" type="image/webp" /><img class="gallery-slide__img" src="assets/img/seus/slideshow-tremp/ts-6-equip.jpg" alt="L'equip de la clínica de Tremp atenent un pacient" width="1800" height="1329" loading="lazy" decoding="async" /></picture>
             </figure>
             <div class="gallery-slideshow__track" aria-hidden="true"><span class="gallery-slideshow__progress" data-progress></span></div>
           </div>
@@ -435,112 +500,6 @@
       </div>
     </section>
 
-    <!-- CONTACT FORM -->
-    <section class="contact-full" id="contacte">
-      <div class="container">
-        <div class="contact-full__grid">
-          <div class="contact-full__intro reveal">
-            <span class="label">Cita prèvia</span>
-            <h2>Parlem <em>quan vulguis</em></h2>
-            <p>Omple el formulari i et contactarem en menys de 24 hores. La primera visita és una exploració i una conversa: t'expliquem què passa i què caldria fer, amb pressupost clar, abans de començar res.</p>
-            <div class="contact-channels">
-              <a href="tel:+34973268826" class="channel-item">
-                <div class="channel-item__icon">
-                  <svg viewBox="0 0 24 24" fill="none"><path d="M4 4h6l2 5-3 2a14 14 0 006 6l2-3 5 2v6c0 1-1 2-2 2C9 24 0 15 0 6c0-1 1-2 2-2h2z" stroke="currentColor" stroke-width="1.5"/></svg>
-                </div>
-                <div>
-                  <strong>Lleida</strong>
-                  <span>973 26 88 26</span>
-                </div>
-              </a>
-              <a href="tel:+34650600172" class="channel-item">
-                <div class="channel-item__icon">
-                  <svg viewBox="0 0 24 24" fill="none"><path d="M4 4h6l2 5-3 2a14 14 0 006 6l2-3 5 2v6c0 1-1 2-2 2C9 24 0 15 0 6c0-1 1-2 2-2h2z" stroke="currentColor" stroke-width="1.5"/></svg>
-                </div>
-                <div>
-                  <strong>Tremp</strong>
-                  <span>650 60 01 72</span>
-                </div>
-              </a>
-              <a href="mailto:info@clinicarrera.cat" class="channel-item">
-                <div class="channel-item__icon">
-                  <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M2 8l10 7 10-7" stroke="currentColor" stroke-width="1.5"/></svg>
-                </div>
-                <div>
-                  <strong>Email</strong>
-                  <span>info@clinicarrera.cat</span>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <form class="contact-full__form reveal" id="contactForm">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="name">Nom i cognoms *</label>
-                <input type="text" id="name" name="name" autocomplete="name" placeholder="El teu nom complet" required />
-              </div>
-              <div class="form-group">
-                <label for="phone">Telèfon *</label>
-                <input type="tel" id="phone" name="phone" inputmode="tel" autocomplete="tel" placeholder="6XX XXX XXX" required />
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="email">Correu electrònic</label>
-                <input type="email" id="email" name="email" autocomplete="email" placeholder="correu@exemple.com" />
-              </div>
-              <div class="form-group">
-                <label for="seu">Centre preferit *</label>
-                <select id="seu" name="seu" required>
-                  <option value="" disabled selected>Selecciona un centre</option>
-                  <option value="carrera">Centre Lleida</option>
-                  <option value="tremp">Centre Tremp</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="service">Servei d'interès</label>
-                <select id="service" name="service">
-                  <option value="" disabled selected>Selecciona un servei (opcional)</option>
-                  <option>Implants dentals</option>
-                  <option>Ortodòncia / Alineadors invisibles</option>
-                  <option>Estètica dental / Blanquejament</option>
-                  <option>Odontopediatria</option>
-                  <option>Endodòncia</option>
-                  <option>Periodontologia</option>
-                  <option>Cirurgia oral</option>
-                  <option>Revisió general i higiene</option>
-                  <option>Urgència</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="horari">Preferència d'horari</label>
-                <select id="horari" name="horari">
-                  <option value="" disabled selected>Quina franja prefereixes?</option>
-                  <option>Matí (9h – 13h)</option>
-                  <option>Migdia (13h – 16h)</option>
-                  <option>Tarda (16h – 20h)</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-group form-group--full">
-              <label for="message">Missatge (opcional)</label>
-              <textarea id="message" name="message" rows="4" placeholder="Explica'ns el que necessites o qualsevol informació rellevant..."></textarea>
-            </div>
-            <div class="form-group form-group--full form-check">
-              <label class="check-label">
-                <input type="checkbox" id="consent" name="consent" required />
-                <span>He llegit i accepto la <a href="privacitat.html" target="_blank" rel="noopener">política de privacitat</a> i el tractament de les meves dades per a la gestió de la meva cita.</span>
-              </label>
-            </div>
-            <button type="submit" class="btn btn--primary btn--lg submit-btn">Envia la sol·licitud de cita</button>
-            <p class="form-status" role="status" aria-live="polite" data-form-status hidden></p>
-          </form>
-        </div>
-      </div>
-    </section>
 
   </main>
 
@@ -548,7 +507,7 @@
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <a href="index.html" class="footer__logo">
+          <a href="/" class="footer__logo">
             <img src="assets/img/logos/logo-carrera-vertical.png" alt="Estudi Dental Carrera" width="163" height="210" loading="lazy" decoding="async" style="filter:brightness(0) invert(0.72);" />
           </a>
           <p class="footer__tagline">Primer entenem què et passa.<br />Lleida i Tremp, un sol equip.</p>
@@ -556,15 +515,15 @@
             <a href="https://www.instagram.com/clinicarrera/" class="footer__social-link" target="_blank" rel="noopener" aria-label="Instagram d'Estudi Dental Carrera">
               <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
             </a>
-            <a href="https://wa.me/34615983352" class="footer__social-link" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <a href="seus.html?canal=whatsapp#contacte" class="footer__social-link" rel="noopener" aria-label="WhatsApp: tria una clínica">
               <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.556 4.122 1.528 5.855L.057 23.175a.75.75 0 00.918.899l5.42-1.424A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 01-4.965-1.364l-.356-.211-3.677.964.982-3.592-.231-.369A9.713 9.713 0 012.25 12C2.25 6.613 6.613 2.25 12 2.25S21.75 6.613 21.75 12 17.387 21.75 12 21.75z"/></svg>
             </a>
           </div>
         </div>
         <div class="footer__col">
-          <h4>Navegació</h4>
+          <p class="footer__heading">Navegació</p>
           <ul>
-            <li><a href="index.html">Inici</a></li>
+            <li><a href="/">Inici</a></li>
             <li><a href="serveis.html">Serveis</a></li>
             <li><a href="equip.html">Equip</a></li>
             <li><a href="seus.html">Els nostres centres</a></li>
@@ -572,7 +531,7 @@
           </ul>
         </div>
         <div class="footer__col">
-          <h4>Centre Lleida</h4>
+          <p class="footer__heading">Centre Lleida</p>
           <ul>
             <li>Carrer Major, 74-76, 3r 3a</li><li>25007 Lleida</li>
             <li><a href="tel:+34973268826">973 26 88 26</a></li>
@@ -580,7 +539,7 @@
           </ul>
         </div>
         <div class="footer__col">
-          <h4>Centre Tremp</h4>
+          <p class="footer__heading">Centre Tremp</p>
           <ul>
             <li>Carrer Montllobar, 22 Baixos</li><li>25620 Tremp</li>
             <li><a href="tel:+34650600172">650 60 01 72</a></li>
@@ -603,10 +562,11 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js?v=20260910-cita"></script>
   <!-- WhatsApp FAB -->
-  <a href="https://wa.me/34615983352" class="whatsapp-fab" target="_blank" rel="noopener" aria-label="Contacta per WhatsApp">
+  <a href="seus.html?canal=whatsapp#contacte" class="whatsapp-fab" rel="noopener" aria-label="WhatsApp: tria una clínica">
     <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.556 4.122 1.528 5.855L.057 23.175a.75.75 0 00.918.899l5.42-1.424A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 01-4.965-1.364l-.356-.211-3.677.964.982-3.592-.231-.369A9.713 9.713 0 012.25 12C2.25 6.613 6.613 2.25 12 2.25S21.75 6.613 21.75 12 17.387 21.75 12 21.75z"/></svg>
   </a>
+  <script src="assets/js/appointment.js?v=20260910-cita"></script>
 </body>
 </html>

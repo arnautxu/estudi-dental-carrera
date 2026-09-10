@@ -1,0 +1,103 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": false,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "estudidentalcarrera.es" }],
+      "destination": "https://www.estudidentalcarrera.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.estudidentalcarrera.es" }],
+      "destination": "https://www.estudidentalcarrera.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "estudidentaltremp.es" }],
+      "destination": "https://www.estudidentalcarrera.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.estudidentaltremp.es" }],
+      "destination": "https://www.estudidentalcarrera.com/:path*",
+      "permanent": true
+    },
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/es/index.html", "destination": "/es/", "permanent": true },
+    { "source": "/es", "destination": "/es/", "permanent": true },
+    { "source": "/page-sitemap.xml", "destination": "/sitemap.xml", "permanent": true },
+    { "source": "/sitemap_index.xml", "destination": "/sitemap.xml", "permanent": true },
+    { "source": "/contacta/", "destination": "/seus.html", "permanent": true },
+    { "source": "/contacta", "destination": "/seus.html", "permanent": true },
+    { "source": "/la-clinica/", "destination": "/equip.html", "permanent": true },
+    { "source": "/la-clinica", "destination": "/equip.html", "permanent": true },
+    { "source": "/equip/", "destination": "/equip.html", "permanent": true },
+    { "source": "/equip", "destination": "/equip.html", "permanent": true },
+    { "source": "/aplicacio-de-plasma/", "destination": "/serveis.html", "permanent": true },
+    { "source": "/aplicacio-de-plasma", "destination": "/serveis.html", "permanent": true },
+    { "source": "/trastorns-de-larticulacio-temporomandibular/", "destination": "/atm-bruxisme.html", "permanent": true },
+    { "source": "/trastorns-de-larticulacio-temporomandibular", "destination": "/atm-bruxisme.html", "permanent": true },
+    { "source": "/estetica-dental/", "destination": "/estetica-dental.html", "permanent": true },
+    { "source": "/estetica-dental", "destination": "/estetica-dental.html", "permanent": true },
+    { "source": "/protesis/", "destination": "/serveis.html", "permanent": true },
+    { "source": "/protesis", "destination": "/serveis.html", "permanent": true },
+    { "source": "/conservadora/", "destination": "/serveis.html", "permanent": true },
+    { "source": "/conservadora", "destination": "/serveis.html", "permanent": true },
+    { "source": "/ortodoncia/", "destination": "/ortodoncia.html", "permanent": true },
+    { "source": "/ortodoncia", "destination": "/ortodoncia.html", "permanent": true },
+    { "source": "/cirurgia-oral/", "destination": "/serveis.html", "permanent": true },
+    { "source": "/cirurgia-oral", "destination": "/serveis.html", "permanent": true },
+    { "source": "/cirurgia-periodontal/", "destination": "/periodoncia-endodoncia.html", "permanent": true },
+    { "source": "/cirurgia-periodontal", "destination": "/periodoncia-endodoncia.html", "permanent": true },
+    { "source": "/periodoncia/", "destination": "/periodoncia-endodoncia.html", "permanent": true },
+    { "source": "/periodoncia", "destination": "/periodoncia-endodoncia.html", "permanent": true },
+    { "source": "/implantologia/", "destination": "/implants-dentals.html", "permanent": true },
+    { "source": "/implantologia", "destination": "/implants-dentals.html", "permanent": true },
+    { "source": "/avis-legal/", "destination": "/avis-legal.html", "permanent": true },
+    { "source": "/avis-legal", "destination": "/avis-legal.html", "permanent": true },
+    { "source": "/politica-privacitat/", "destination": "/privacitat.html", "permanent": true },
+    { "source": "/politica-privacitat", "destination": "/privacitat.html", "permanent": true },
+    { "source": "/politica-de-galetes/", "destination": "/cookies.html", "permanent": true },
+    { "source": "/politica-de-galetes", "destination": "/cookies.html", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/stats/:path*", "destination": "https://estudi-dental-carrera-umami.vercel.app/:path*" },
+    { "source": "/atm-bruxisme.html", "destination": "/api/landing?key=ca-atm" },
+    { "source": "/implants-dentals.html", "destination": "/api/landing?key=ca-implants" },
+    { "source": "/ortodoncia.html", "destination": "/api/landing?key=ca-ortho" },
+    { "source": "/periodoncia-endodoncia.html", "destination": "/api/landing?key=ca-perio" },
+    { "source": "/estetica-dental.html", "destination": "/api/landing?key=ca-aesthetic" },
+    { "source": "/clinica-dental-lleida.html", "destination": "/api/landing?key=ca-lleida" },
+    { "source": "/dentista-tremp.html", "destination": "/api/landing?key=ca-tremp" },
+    { "source": "/es/atm-bruxismo.html", "destination": "/api/landing?key=es-atm" },
+    { "source": "/es/implantes-dentales.html", "destination": "/api/landing?key=es-implants" },
+    { "source": "/es/ortodoncia.html", "destination": "/api/landing?key=es-ortho" },
+    { "source": "/es/periodoncia-endodoncia.html", "destination": "/api/landing?key=es-perio" },
+    { "source": "/es/estetica-dental.html", "destination": "/api/landing?key=es-aesthetic" },
+    { "source": "/es/clinica-dental-lleida.html", "destination": "/api/landing?key=es-lleida" },
+    { "source": "/es/dentista-tremp.html", "destination": "/api/landing?key=es-tremp" }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "Content-Security-Policy", "value": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https://maps.gstatic.com https://maps.googleapis.com https://*.googleusercontent.com; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://maps.googleapis.com; frame-src https://www.google.com; upgrade-insecure-requests" }
+      ]
+    }
+  ]
+}

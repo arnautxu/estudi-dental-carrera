@@ -7,6 +7,7 @@ const nav = document.getElementById('nav');
 const hero = document.querySelector('.hero') || document.querySelector('.page-hero:not(.page-hero--light)');
 
 function updateNav() {
+  if (!nav) return;
   const scrolled = window.scrollY > 40;
   nav.classList.toggle('scrolled', scrolled);
   if (hero) {
@@ -136,110 +137,7 @@ if (window.matchMedia('(hover: hover) and (pointer: fine)').matches
   });
 }
 
-/* ---------- CONTACT FORM ----------
-   Honest states only: the form never claims success unless a submission
-   actually goes somewhere. FORM_ENDPOINT is intentionally empty until a
-   real backend (Formspree / Web3Forms / a Vercel serverless function) is
-   wired — until then, invalid fields show inline errors and a valid
-   submission is routed to phone/WhatsApp instead of a fake confirmation. */
-const form = document.getElementById('contactForm');
-if (form) {
-  const FORM_ENDPOINT = ''; // TODO: set the real form backend endpoint to enable submissions.
-  const FORM_LANG = (document.documentElement.lang || 'ca').slice(0, 2).toLowerCase();
-  const FS = ({
-    ca: {
-      fieldRequired: 'Aquest camp és obligatori.',
-      formInvalid: 'Revisa els camps marcats en vermell.',
-      sending: 'Enviant...',
-      success: 'Sol·licitud enviada! Et contactarem en menys de 24 hores.',
-      error: 'No hem pogut enviar el formulari. Truca’ns al 973 26 88 26 o escriu-nos per WhatsApp i ho resolem a l’instant.',
-      notWired: 'De moment no podem processar la sol·licitud des d’aquí. Truca’ns al 973 26 88 26 o escriu-nos per WhatsApp — et confirmarem la cita a l’instant.'
-    },
-    es: {
-      fieldRequired: 'Este campo es obligatorio.',
-      formInvalid: 'Revisa los campos marcados en rojo.',
-      sending: 'Enviando...',
-      success: '¡Solicitud enviada! Te contactaremos en menos de 24 horas.',
-      error: 'No hemos podido enviar el formulario. Llámanos al 973 26 88 26 o escríbenos por WhatsApp y lo resolvemos al instante.',
-      notWired: 'De momento no podemos procesar la solicitud desde aquí. Llámanos al 973 26 88 26 o escríbenos por WhatsApp — te confirmamos la cita al instante.'
-    }
-  })[FORM_LANG] || {};
-
-  const statusEl = form.querySelector('[data-form-status]');
-  const btn = form.querySelector('.submit-btn') || form.querySelector('[type="submit"]');
-  const origHTML = btn.innerHTML;
-
-  function setStatus(msg, kind) {
-    if (!statusEl) return;
-    statusEl.textContent = msg || '';
-    statusEl.hidden = !msg;
-    statusEl.className = 'form-status' + (kind ? ' form-status--' + kind : '');
-  }
-
-  function clearFieldErrors() {
-    form.querySelectorAll('.field-error').forEach(el => el.remove());
-    form.querySelectorAll('[aria-invalid="true"]').forEach(el => el.removeAttribute('aria-invalid'));
-  }
-
-  function markInvalid(field) {
-    field.setAttribute('aria-invalid', 'true');
-    if (!field.id) return;
-    const id = field.id + '-error';
-    const err = document.createElement('span');
-    err.className = 'field-error';
-    err.id = id;
-    err.textContent = FS.fieldRequired;
-    field.setAttribute('aria-describedby', id);
-    field.closest('.form-group')?.appendChild(err);
-  }
-
-  function validate() {
-    clearFieldErrors();
-    let firstInvalid = null;
-    form.querySelectorAll('[required]').forEach(field => {
-      const invalid = field.type === 'checkbox' ? !field.checked : !field.value.trim();
-      if (invalid) {
-        markInvalid(field);
-        if (!firstInvalid) firstInvalid = field;
-      }
-    });
-    return firstInvalid;
-  }
-
-  form.addEventListener('submit', async e => {
-    e.preventDefault();
-    const firstInvalid = validate();
-    if (firstInvalid) {
-      firstInvalid.focus();
-      setStatus(FS.formInvalid, 'error');
-      return;
-    }
-
-    if (!FORM_ENDPOINT) {
-      setStatus(FS.notWired, 'info');
-      return;
-    }
-
-    setStatus('');
-    btn.innerHTML = FS.sending;
-    btn.disabled = true;
-    try {
-      const res = await fetch(FORM_ENDPOINT, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { Accept: 'application/json' }
-      });
-      if (!res.ok) throw new Error('submit failed');
-      setStatus(FS.success, 'success');
-      form.reset();
-    } catch (_) {
-      setStatus(FS.error, 'error');
-    } finally {
-      btn.innerHTML = origHTML;
-      btn.disabled = false;
-    }
-  });
-}
+/* Appointment flow lives in appointment.js (contact pages only). */
 
 /* ---------- TEAM CARDS: subtle hover tilt (pointer-fine only) ---------- */
 if (window.matchMedia('(hover: hover) and (pointer: fine)').matches
@@ -460,8 +358,9 @@ function loadLiveReviews() {
   const ratingEl = document.querySelector('.testimonials__rating b');
   const starsEl = document.querySelector('.testimonials__stars');
   const linkEl = document.querySelector('.testimonials__link');
-  const srcLabel = isEs ? 'Reseña verificada · Google' : 'Ressenya verificada · Google';
+  const srcLabel = isEs ? 'Reseña publicada en Google' : 'Ressenya publicada a Google';
   const reviewsWord = (n) => isEs ? `${n} reseñas en Google →` : `${n} ressenyes a Google →`;
+  const dateLocale = isEs ? 'es-ES' : 'ca-ES';
 
   const initials = name => (name || '').trim().split(/\s+/).slice(0, 2).map(w => w[0]).join('').toUpperCase();
   const escapeHtml = s => String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
@@ -476,12 +375,21 @@ function loadLiveReviews() {
               <span class="testimonial__avatar" data-tone="${(i % 5) + 1}" aria-hidden="true">${escapeHtml(initials(r.author))}</span>
               <div class="testimonial__who">
                 <cite class="testimonial__name">${escapeHtml(r.author)}</cite>
-                <span class="testimonial__src">${srcLabel}</span>
+                <span class="testimonial__src">${escapeHtml(r.placeName ? `${r.placeName} · Google` : srcLabel)}${r.time ? ` · <time datetime="${new Date(r.time * 1000).toISOString().slice(0, 10)}">${new Intl.DateTimeFormat(dateLocale, { month: 'short', year: 'numeric' }).format(new Date(r.time * 1000))}</time>` : ''}</span>
               </div>
             </footer></div></article>`).join('');
         if (data.rating && ratingEl) ratingEl.textContent = String(data.rating).replace('.', ',');
         if (data.rating && starsEl) starsEl.textContent = '★ '.repeat(Math.round(data.rating)).trim();
         if (data.total && linkEl) linkEl.textContent = reviewsWord(data.total);
+        if (data.places && data.places.length) {
+          const links = document.querySelector('[data-reviews-links]');
+          if (links) {
+            links.innerHTML = data.places
+              .filter(place => /^https:\/\//i.test(place.url || ''))
+              .map(place => `<a href="${escapeHtml(place.url)}" target="_blank" rel="noopener" class="testimonials__link">${escapeHtml(place.name)} →</a>`)
+              .join('<span class="testimonials__sep" aria-hidden="true"></span>');
+          }
+        }
       }
     })
     .catch(() => { /* keep the static testimonials already in the HTML */ })
@@ -492,21 +400,13 @@ loadLiveReviews();
 /* ---------- BACK TO TOP ---------- */
 const backTop = document.createElement('button');
 backTop.className = 'back-top';
-backTop.setAttribute('aria-label', 'Tornar a dalt');
+backTop.setAttribute('aria-label', document.documentElement.lang === 'es' ? 'Volver arriba' : 'Tornar a dalt');
 backTop.innerHTML = `<svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 13V5M4.5 9.5l4.5-5 4.5 5"/></svg>`;
 document.body.appendChild(backTop);
 window.addEventListener('scroll', () => {
   backTop.classList.toggle('visible', window.scrollY > 500);
 }, { passive: true });
 backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: prefersReducedMotion() ? 'auto' : 'smooth' }));
-
-/* ---------- TAB TITLE DELIGHT ---------- */
-const _pageTitle = document.title;
-const _awayTitle = (document.documentElement.lang || 'ca').slice(0, 2).toLowerCase() === 'es'
-  ? '¿Vuelves pronto?' : 'Tornes aviat?';
-document.addEventListener('visibilitychange', () => {
-  document.title = document.hidden ? _awayTitle : _pageTitle;
-});
 
 /* ---------- CONSOLE EASTER EGG ---------- */
 console.log(
@@ -523,13 +423,13 @@ console.log(
    ============================================================ */
 (function initConsent() {
   const STORAGE_KEY = 'edc_consent_v1';
-  const DEFAULT = { necessary: true, maps: false, analytics: false, ts: null };
+  const DEFAULT = { necessary: true, umami: true, maps: false, analytics: false, ts: null };
 
   const LANG = (document.documentElement.lang || 'ca').slice(0, 2).toLowerCase();
   const I18N = {
     ca: {
       bannerTitle: 'Cookies i privacitat',
-      bannerText: 'Fem servir cookies tècniques pròpies per al funcionament del lloc i, si ho acceptes, mapes de Google Maps a la pàgina de seus. <a href="cookies.html">Més informació</a>.',
+      bannerText: 'Fem servir Umami sense cookies per a estadístiques bàsiques. Google Analytics i Google Maps només s\'activen si ho acceptes. <a href="cookies.html">Més informació</a>.',
       prefs: 'Preferències', reject: 'Rebutjar', accept: 'Acceptar',
       bannerAria: 'Consentiment de cookies',
       modalTitle: 'Preferències de cookies',
@@ -539,15 +439,17 @@ console.log(
       categories: [
         { key: 'necessary', label: 'Estrictament necessàries', tag: 'Sempre actives',
           desc: 'Permeten el funcionament bàsic del lloc (navegació, sessió, formularis). Sense aquestes cookies el web no funcionaria correctament.', required: true },
+        { key: 'umami', label: 'Estadístiques privades (Umami)', tag: 'Sense cookies',
+          desc: 'Mesura pàgines vistes i interaccions de manera agregada, sense cookies ni perfils personals. Està activa per defecte, respecta «Do Not Track» i la pots desactivar aquí.', required: false },
         { key: 'maps', label: 'Mapes de Google Maps', tag: 'De tercers',
           desc: 'Carrega els mapes integrats a la pàgina de seus perquè puguis veure la ubicació de les clíniques. Google pot establir cookies pròpies segons la seva política.', required: false },
-        { key: 'analytics', label: 'Estadístiques (Google Analytics)', tag: 'De tercers',
+        { key: 'analytics', label: 'Estadístiques ampliades (Google Analytics)', tag: 'Amb consentiment',
           desc: 'Ens ajuden a entendre de forma anònima i agregada com es fa servir el web (pàgines vistes, clics a telèfon o WhatsApp) per millorar-lo. No carreguem Google Analytics fins que ho acceptes.', required: false }
       ]
     },
     es: {
       bannerTitle: 'Cookies y privacidad',
-      bannerText: 'Usamos cookies técnicas propias para el funcionamiento del sitio y, si lo aceptas, mapas de Google Maps en la página de sedes. <a href="cookies.html">Más información</a>.',
+      bannerText: 'Usamos Umami sin cookies para estadísticas básicas. Google Analytics y Google Maps solo se activan si lo aceptas. <a href="cookies.html">Más información</a>.',
       prefs: 'Preferencias', reject: 'Rechazar', accept: 'Aceptar',
       bannerAria: 'Consentimiento de cookies',
       modalTitle: 'Preferencias de cookies',
@@ -557,9 +459,11 @@ console.log(
       categories: [
         { key: 'necessary', label: 'Estrictamente necesarias', tag: 'Siempre activas',
           desc: 'Permiten el funcionamiento básico del sitio (navegación, sesión, formularios). Sin estas cookies el sitio no funcionaría correctamente.', required: true },
+        { key: 'umami', label: 'Estadísticas privadas (Umami)', tag: 'Sin cookies',
+          desc: 'Mide páginas vistas e interacciones de forma agregada, sin cookies ni perfiles personales. Está activa por defecto, respeta «Do Not Track» y puedes desactivarla aquí.', required: false },
         { key: 'maps', label: 'Mapas de Google Maps', tag: 'De terceros',
           desc: 'Carga los mapas integrados en la página de sedes para que puedas ver la ubicación de las clínicas. Google puede establecer sus propias cookies según su política.', required: false },
-        { key: 'analytics', label: 'Estadísticas (Google Analytics)', tag: 'De terceros',
+        { key: 'analytics', label: 'Estadísticas ampliadas (Google Analytics)', tag: 'Con consentimiento',
           desc: 'Nos ayudan a entender de forma anónima y agregada cómo se usa el sitio (páginas vistas, clics en teléfono o WhatsApp) para mejorarlo. No cargamos Google Analytics hasta que lo aceptes.', required: false }
       ]
     }
@@ -589,6 +493,7 @@ console.log(
     try { localStorage.setItem(STORAGE_KEY, JSON.stringify(next)); } catch (_) {}
     listeners.forEach(fn => { try { fn(next); } catch (_) {} });
     applyMapGate(next);
+    applyUmami(next);
     applyAnalytics(next);
     return next;
   }
@@ -613,11 +518,71 @@ console.log(
     });
   }
 
+  /* ---- Privacy-first Umami analytics ----
+     Umami runs without cookies or cross-site profiles, respects the browser's
+     Do Not Track signal and is enabled by default with a persistent opt-out.
+     It is restricted to the canonical production hostname. */
+  let umamiLoaded = false;
+  let umamiLoading = false;
+  let umamiQueue = [];
+  function applyUmami(prefs) {
+    if (prefs && prefs.umami) loadUmami();
+  }
+  async function loadUmami() {
+    if (umamiLoaded || umamiLoading) return;
+    if (window.location.hostname !== 'www.estudidentalcarrera.com') return;
+    umamiLoading = true;
+    let id = window.UMAMI_WEBSITE_ID;
+    if (!id) {
+      try {
+        const response = await fetch('/api/public-config', { headers: { Accept: 'application/json' } });
+        const config = response.ok ? await response.json() : null;
+        id = config && config.umamiWebsiteId;
+      } catch (_) {
+        id = null;
+      }
+    }
+    if (!/^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(id || '')) {
+      umamiLoading = false;
+      return;
+    }
+    window.UMAMI_WEBSITE_ID = id;
+    const s = document.createElement('script');
+    s.async = true;
+    s.src = '/stats/script.js';
+    s.dataset.websiteId = id;
+    s.dataset.domains = 'www.estudidentalcarrera.com';
+    s.dataset.doNotTrack = 'true';
+    s.onload = () => {
+      umamiLoaded = true;
+      umamiLoading = false;
+      if (window.umami && typeof window.umami.track === 'function') {
+        umamiQueue.splice(0).forEach(item => window.umami.track(item.name, item.params));
+      }
+    };
+    s.onerror = () => { umamiLoading = false; };
+    document.head.appendChild(s);
+  }
+
+  window.EDCUmami = {
+    track(name, params) {
+      const prefs = current();
+      if (!prefs.umami) return;
+      if (window.umami && typeof window.umami.track === 'function') {
+        window.umami.track(name, params || {});
+      } else {
+        umamiQueue.push({ name, params: params || {} });
+        loadUmami();
+      }
+    }
+  };
+
   /* ---- Google Analytics 4 gate ----
      GA is loaded lazily, ONLY after the visitor grants the "analytics"
      category. Until then no request is made to Google's servers. The
      gtag() stub + Consent Mode defaults live in each page's <head>. */
   let gaLoaded = false;
+  let gaLoading = false;
   function applyAnalytics(prefs) {
     const allow = !!(prefs && prefs.analytics);
     if (!allow) {
@@ -631,18 +596,37 @@ console.log(
     }
     loadGA();
   }
-  function loadGA() {
-    if (gaLoaded) return;
-    const id = window.GA4_ID;
-    if (!id || /X{4,}/.test(id)) { gaLoaded = true; return; } // placeholder → don't load
+  async function loadGA() {
+    if (gaLoaded || gaLoading) return;
+    gaLoading = true;
+    let id = window.GA4_ID;
+    if (!id) {
+      try {
+        const response = await fetch('/api/public-config', { headers: { Accept: 'application/json' } });
+        const config = response.ok ? await response.json() : null;
+        id = config && config.ga4Id;
+      } catch (_) {
+        id = null;
+      }
+    }
+    if (!/^G-[A-Z0-9]+$/i.test(id || '')) {
+      gaLoading = false;
+      return;
+    }
     gaLoaded = true;
+    gaLoading = false;
+    window.GA4_ID = id;
     const s = document.createElement('script');
     s.async = true;
     s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(id);
     document.head.appendChild(s);
     if (typeof window.gtag === 'function') {
       window.gtag('js', new Date());
-      window.gtag('config', id, { anonymize_ip: true });
+      window.gtag('config', id, {
+        anonymize_ip: true,
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false
+      });
     }
   }
 
@@ -652,7 +636,6 @@ console.log(
     if (bannerEl) return bannerEl;
     const el = document.createElement('aside');
     el.className = 'cookie-banner';
-    el.setAttribute('role', 'dialog');
     el.setAttribute('aria-live', 'polite');
     el.setAttribute('aria-label', T.bannerAria);
     el.innerHTML = `
@@ -668,8 +651,8 @@ console.log(
       const btn = e.target.closest('[data-consent-action]');
       if (!btn) return;
       const action = btn.dataset.consentAction;
-      if (action === 'accept') { write({ maps: true, analytics: true }); hideBanner(); }
-      else if (action === 'reject') { write({ maps: false, analytics: false }); hideBanner(); }
+      if (action === 'accept') { write({ umami: true, maps: true, analytics: true }); hideBanner(); }
+      else if (action === 'reject') { write({ umami: false, maps: false, analytics: false }); hideBanner(); }
       else if (action === 'prefs') { openModal(); }
     });
     bannerEl = el;
@@ -745,8 +728,8 @@ console.log(
       if (!btn) return;
       const a = btn.dataset.consentAction;
       if (a === 'close') closeModal();
-      else if (a === 'accept') { write({ maps: true, analytics: true }); closeModal(); hideBanner(); }
-      else if (a === 'reject') { write({ maps: false, analytics: false }); closeModal(); hideBanner(); }
+      else if (a === 'accept') { write({ umami: true, maps: true, analytics: true }); closeModal(); hideBanner(); }
+      else if (a === 'reject') { write({ umami: false, maps: false, analytics: false }); closeModal(); hideBanner(); }
       else if (a === 'save') {
         const prefs = {};
         el.querySelectorAll('[data-switch]').forEach(s => {
@@ -824,8 +807,8 @@ console.log(
     get: current,
     set: write,
     open: openModal,
-    accept: () => write({ maps: true, analytics: true }),
-    reject: () => write({ maps: false, analytics: false }),
+    accept: () => write({ umami: true, maps: true, analytics: true }),
+    reject: () => write({ umami: false, maps: false, analytics: false }),
     on: fn => { if (typeof fn === 'function') listeners.add(fn); return () => listeners.delete(fn); }
   };
 
@@ -833,6 +816,7 @@ console.log(
   function boot() {
     const stored = read();
     applyMapGate(stored || DEFAULT);
+    applyUmami(stored || DEFAULT);
     applyAnalytics(stored || DEFAULT);
     if (!stored) {
       setTimeout(showBanner, 650);
@@ -846,14 +830,18 @@ console.log(
 })();
 
 /* ---------- CONVERSION EVENT TRACKING ----------
-   Thin wrapper over GA4. track() is a no-op until the visitor grants the
-   analytics category (gtag only sends once loaded — see initConsent). We
+   Thin wrapper over Umami and GA4. Umami is cookieless and can be disabled
+   from preferences; GA4 remains consent-gated. We
    capture the conversion-critical micro-actions: phone taps, WhatsApp
    taps, appointment CTAs and form submissions. Delegated from document
    so it covers nav, footer, FAB, mobile bar and any injected markup. */
 window.track = function track(name, params) {
   try {
-    if (typeof window.gtag === 'function') {
+    const consent = window.EDCConsent && window.EDCConsent.get();
+    if (consent && consent.umami && window.EDCUmami) {
+      window.EDCUmami.track(name, params || {});
+    }
+    if (consent && consent.analytics && typeof window.gtag === 'function') {
       window.gtag('event', name, params || {});
     }
   } catch (_) {}
@@ -863,12 +851,18 @@ window.track = function track(name, params) {
   document.addEventListener('click', e => {
     const tel = e.target.closest('a[href^="tel:"]');
     if (tel) {
-      window.track('click_telefon', { numero: tel.getAttribute('href').replace('tel:', '') });
+      window.track('phone_click', {
+        clinic: tel.getAttribute('href').includes('650600172') ? 'tremp' : 'lleida',
+        page_path: window.location.pathname
+      });
       return;
     }
     const wa = e.target.closest('a[href*="wa.me"]');
     if (wa) {
-      window.track('click_whatsapp', { seu: wa.getAttribute('data-seu') || 'general' });
+      window.track('whatsapp_click', {
+        clinic: wa.getAttribute('data-seu') || 'general',
+        page_path: window.location.pathname
+      });
       return;
     }
     const cta = e.target.closest('[data-track]');
@@ -877,57 +871,40 @@ window.track = function track(name, params) {
     }
   }, { passive: true });
 
-  // Form submission intent — fires even though the backend isn't wired yet,
-  // so the clinic can already see how many visitors reach "send".
-  const cForm = document.getElementById('contactForm');
-  if (cForm) {
-    cForm.addEventListener('submit', () => {
-      const seu = cForm.querySelector('[name="clinica"],[name="seu"],select');
-      window.track('submit_formulari', { seu: (seu && seu.value) || '' });
-    });
-  }
 })();
 
-/* ---------- STICKY MOBILE ACTION BAR ----------
-   On phones, a fixed bottom bar puts "Call" and "WhatsApp" one tap away on
-   every page — the single highest-leverage conversion element for a local
-   clinic. Injected here (like back-top) so it needs no per-page markup.
-   Hidden on desktop via CSS; hidden over the footer so it never covers
-   the legal links / contact details. */
-(function initMobileBar() {
-  const LANG = (document.documentElement.lang || 'ca').slice(0, 2).toLowerCase();
-  const STR = {
-    ca: { call: 'Trucar', wa: 'WhatsApp', callAria: 'Trucar a la clínica', waAria: 'Escriure per WhatsApp' },
-    es: { call: 'Llamar', wa: 'WhatsApp', callAria: 'Llamar a la clínica', waAria: 'Escribir por WhatsApp' },
-    en: { call: 'Call',   wa: 'WhatsApp', callAria: 'Call the clinic',     waAria: 'Message on WhatsApp' }
-  }[LANG] || { call: 'Trucar', wa: 'WhatsApp', callAria: 'Trucar a la clínica', waAria: 'Escriure per WhatsApp' };
-
-  // Primary contacts (Lleida line + main WhatsApp), overridable per page
-  // via <body data-phone="..." data-wa="...">.
-  const phone = document.body.getAttribute('data-phone') || '+34973268826';
-  const wa    = document.body.getAttribute('data-wa') || '34615983352';
-
+/* ---------- CLINIC-AWARE CONTACTS ---------- */
+(function initClinicContacts() {
+  const es = document.documentElement.lang === 'es';
+  const contact = es ? '/es/sedes.html' : '/seus.html';
+  const hash = es ? '#contacto' : '#contacte';
+  const clinics = {
+    carrera: { city: 'Lleida', phone: '+34973268826', wa: '34615983352' },
+    tremp: { city: 'Tremp', phone: '+34650600172', wa: '34650600172' }
+  };
+  const pageClinic = document.body.dataset.clinic || '';
   const bar = document.createElement('div');
   bar.className = 'mobile-cta-bar';
   bar.setAttribute('role', 'group');
-  bar.setAttribute('aria-label', STR.call + ' / ' + STR.wa);
-  bar.innerHTML = `
-    <a href="tel:${phone}" class="mobile-cta-bar__btn mobile-cta-bar__btn--call" aria-label="${STR.callAria}">
-      <svg viewBox="0 0 16 16" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 1.5h3l1.5 3.5-1.75 1.25a9 9 0 004.5 4.5L11 9l3.5 1.5v3a1 1 0 01-1 1C6.3 14.5 1.5 9.7 1.5 3.5a1 1 0 011-1z"/></svg>
-      <span>${STR.call}</span>
-    </a>
-    <a href="https://wa.me/${wa}" class="mobile-cta-bar__btn mobile-cta-bar__btn--wa" target="_blank" rel="noopener" data-seu="general" aria-label="${STR.waAria}">
-      <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.556 4.122 1.528 5.855L.057 23.175a.75.75 0 00.918.899l5.42-1.424A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
-      <span>${STR.wa}</span>
-    </a>`;
+  bar.setAttribute('aria-label', es ? 'Cita y contacto' : 'Cita i contacte');
+  bar.innerHTML = `<a class="mobile-cta-bar__btn mobile-cta-bar__btn--call" data-bar-primary></a><a class="mobile-cta-bar__btn mobile-cta-bar__btn--wa" data-bar-secondary></a>`;
   document.body.appendChild(bar);
-
-  // Hide the bar while the footer is on screen so it never covers it.
+  function update(id) {
+    const c = clinics[id];
+    const first = bar.querySelector('[data-bar-primary]');
+    const second = bar.querySelector('[data-bar-secondary]');
+    first.href = c ? `tel:${c.phone}` : contact + hash;
+    first.textContent = c ? `${es ? 'Llamar' : 'Trucar'} · ${c.city}` : (es ? 'Pedir cita' : 'Demanar cita');
+    second.href = c ? `https://wa.me/${c.wa}` : contact + '?canal=directe' + hash;
+    second.textContent = c ? `WhatsApp · ${c.city}` : (es ? 'Llamar / WhatsApp' : 'Trucar / WhatsApp');
+    if (c) { second.target = '_blank'; second.rel = 'noopener'; second.dataset.seu = c.city.toLowerCase(); }
+    else { second.removeAttribute('target'); second.removeAttribute('data-seu'); }
+  }
+  update(pageClinic);
+  document.addEventListener('appointment:clinic', event => update(event.detail.id));
   const footer = document.querySelector('.footer');
   if (footer && 'IntersectionObserver' in window) {
-    new IntersectionObserver(entries => {
-      entries.forEach(en => bar.classList.toggle('is-hidden', en.isIntersecting));
-    }, { threshold: 0 }).observe(footer);
+    new IntersectionObserver(entries => entries.forEach(en => bar.classList.toggle('is-hidden', en.isIntersecting))).observe(footer);
   }
 })();
 

@@ -6,7 +6,7 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    window.GA4_ID = 'G-XXXXXXXXXX'; /* TODO: substituir per l'ID real de GA4 */
+    window.GA4_ID = '';
     gtag('consent', 'default', {
       analytics_storage: 'denied',
       ad_storage: 'denied',
@@ -15,12 +15,12 @@
     });
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Serveis · Estudi Dental Carrera</title>
-  <meta name="description" content="Tractaments odontològics amb enfoc conservador: ATM i bruxisme, implants, ortodòncia, prevenció infantil, endodòncia. A Lleida i Tremp." />
-  <link rel="canonical" href="https://estudidentalcarrera.com/serveis.html" />
-  <link rel="alternate" hreflang="ca" href="https://estudidentalcarrera.com/serveis.html" />
-  <link rel="alternate" hreflang="es" href="https://estudidentalcarrera.com/es/servicios.html" />
-  <link rel="alternate" hreflang="x-default" href="https://estudidentalcarrera.com/serveis.html" />
+  <title>Tractaments dentals a Lleida i Tremp | Estudi Dental</title>
+  <meta name="description" content="Tractaments dentals a Lleida i Tremp: ATM, bruxisme, implants, ortodòncia, endodòncia i prevenció. Coneix les opcions i demana una visita." />
+  <link rel="canonical" href="https://www.estudidentalcarrera.com/serveis.html" />
+  <link rel="alternate" hreflang="ca" href="https://www.estudidentalcarrera.com/serveis.html" />
+  <link rel="alternate" hreflang="es" href="https://www.estudidentalcarrera.com/es/servicios.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.estudidentalcarrera.com/serveis.html" />
 
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="ca_ES" />
@@ -28,16 +28,18 @@
   <meta property="og:site_name" content="Estudi Dental Carrera" />
   <meta property="og:title" content="Serveis · Estudi Dental Carrera" />
   <meta property="og:description" content="Tractaments amb enfoc conservador: ATM, bruxisme, implants, ortodòncia, prevenció infantil." />
-  <meta property="og:url" content="https://estudidentalcarrera.com/serveis.html" />
-  <meta property="og:image" content="https://estudidentalcarrera.com/assets/img/lleida-edifici.jpg" />
+  <meta property="og:url" content="https://www.estudidentalcarrera.com/serveis.html" />
+  <meta property="og:image" content="https://www.estudidentalcarrera.com/assets/img/lleida-edifici.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=optional" onload="this.onload=null;this.rel=&quot;stylesheet&quot;" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=optional" rel="stylesheet" /></noscript>
   <link rel="preload" href="assets/fonts/N27-Regular.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="assets/fonts/N27-Light.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="preload" href="assets/img/headers/hero-serveis.webp" as="image" fetchpriority="high" />
+  <link rel="stylesheet" href="assets/css/main.css?v=20260910-cita" />
   <link rel="icon" type="image/png" sizes="64x64" href="assets/img/logos/favicon.png" />
   <link rel="icon" type="image/svg+xml" href="assets/img/logos/favicon.svg" />
   <!-- FAQPage structured data — mirrors the on-page FAQ section -->
@@ -60,7 +62,7 @@
 
   <header class="nav" id="nav">
     <div class="nav__inner">
-      <a href="index.html" class="nav__logo">
+      <a href="/" class="nav__logo">
         <img src="assets/img/logos/logo-carrera-vertical.png" class="nav__logo-icon" alt="Estudi Dental Carrera" width="163" height="210" fetchpriority="high" />
       </a>
       <span class="nav__meta" aria-hidden="true">
@@ -68,7 +70,7 @@
         <span class="nav__meta-text">Lleida &amp; Tremp</span>
       </span>
       <nav class="nav__links" aria-label="Navegació principal">
-        <a href="index.html"><span class="nav__label">Inici</span></a>
+        <a href="/"><span class="nav__label">Inici</span></a>
         <a href="serveis.html" class="active" aria-current="page"><span class="nav__label">Serveis</span></a>
         <a href="equip.html"><span class="nav__label">Equip</span></a>
         <a href="seus.html"><span class="nav__label">Els nostres centres</span></a>
@@ -90,7 +92,7 @@
 
   <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <div class="mobile-menu__top">
-      <a href="index.html" class="mobile-menu__brand" aria-label="Inici · Estudi Dental Carrera">
+      <a href="/" class="mobile-menu__brand" aria-label="Inici · Estudi Dental Carrera">
         <img src="assets/img/logos/logo-carrera-vertical.png" alt="" width="163" height="210" />
       </a>
       <button class="mobile-menu__close" id="mobileMenuClose" aria-label="Tancar menú">
@@ -98,7 +100,7 @@
       </button>
     </div>
     <nav class="mobile-menu__nav" aria-label="Navegació principal">
-      <a href="index.html" class="mobile-menu__link">
+      <a href="/" class="mobile-menu__link">
         <span class="mobile-menu__label">Inici</span>
       </a>
       <a href="serveis.html" class="mobile-menu__link">
@@ -112,7 +114,7 @@
       </a>
     </nav>
     <div class="mobile-menu__footer">
-      <a href="tel:+34973268826" class="btn btn--primary btn--lg mobile-menu__cta">Demana cita</a>
+      <a href="seus.html#contacte" class="btn btn--primary btn--lg mobile-menu__cta">Demana cita</a>
       <div class="mobile-menu__seus">
         <a href="tel:+34973268826" class="mobile-menu__seu">
           <span class="mobile-menu__seu-label">Lleida</span>
@@ -131,7 +133,7 @@
           <a href="https://www.instagram.com/clinicarrera/" class="mobile-menu__social-link" target="_blank" rel="noopener" aria-label="Instagram">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
           </a>
-          <a href="https://wa.me/34615983352" class="mobile-menu__social-link" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <a href="seus.html?canal=whatsapp#contacte" class="mobile-menu__social-link" rel="noopener" aria-label="WhatsApp: tria una clínica">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.556 4.122 1.528 5.855L.057 23.175a.75.75 0 00.918.899l5.42-1.424A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 01-4.965-1.364l-.356-.211-3.677.964.982-3.592-.231-.369A9.713 9.713 0 012.25 12C2.25 6.613 6.613 2.25 12 2.25S21.75 6.613 21.75 12 17.387 21.75 12 21.75z"/></svg>
           </a>
         </div>
@@ -146,7 +148,7 @@
       <div class="container">
         <div class="page-hero__content">
           <nav class="breadcrumb reveal" aria-label="Fil d'Ariadna">
-            <a href="index.html">Inici</a>
+            <a href="/">Inici</a>
             <span>→</span>
             <span>Serveis</span>
           </nav>
@@ -177,7 +179,7 @@
           <div class="service-detail__text">
             <span class="label reveal">Disfunció ATM · bruxisme · dolor mandibular</span>
             <h2 class="reveal">Dolor a la mandíbula<br />que <em>no sabies d'on venia</em></h2>
-            <p class="reveal">Mals de cap matinals, soroll en obrir la boca, tensió muscular o dents desgastades: sovint són simptomes de disfunció de l'articulació temporomandibular (ATM) o de bruxisme. És un territori clínic poc atès al nostre entorn i en el qual estem especialitzats.</p>
+            <p class="reveal">Mals de cap matinals, soroll en obrir la boca, tensió muscular o dents desgastades poden relacionar-se amb l'articulació temporomandibular (ATM), els músculs o el bruxisme. Cal una valoració individual per diferenciar-ne les causes.</p>
             <div class="service-features reveal">
               <div class="feature-item">
                 <span class="feature-item__check">✓</span>
@@ -190,7 +192,7 @@
                 <span class="feature-item__check">✓</span>
                 <div>
                   <strong>Fèrules de descàrrega personalitzades</strong>
-                  <span>Dissenyades a mida per alleujar tensió i protegir l'esmalt</span>
+                  <span>Dissenyades a mida quan estan indicades, amb ajust i controls</span>
                 </div>
               </div>
               <div class="feature-item">
@@ -208,7 +210,7 @@
                 </div>
               </div>
             </div>
-            <a href="seus.html#contacte" class="btn btn--primary reveal">Demana valoració d'ATM →</a>
+            <a href="atm-bruxisme.html" class="btn btn--primary reveal">Guia d'ATM i bruxisme →</a>
           </div>
           <div class="service-detail__visual reveal">
             <figure class="svc-photo">
@@ -233,13 +235,13 @@
           <div class="service-detail__text">
             <span class="label reveal">Implantologia</span>
             <h2 class="reveal">Implants <em>dentals</em></h2>
-            <p class="reveal">Els implants dentals substitueixen dents perdudes quan la conservació ja no és possible. Estan fabricats en titani biocompatible que s'integra perfectament a l'os, oferint una base sòlida per a corones, ponts o pròtesis.</p>
+            <p class="reveal">Els implants dentals poden substituir dents perdudes quan conservar-les ja no és possible. Habitualment són de titani biocompatible i necessiten un període d'integració amb l'os abans de suportar la restauració definitiva; la indicació i els temps depenen de cada cas.</p>
             <div class="service-features reveal">
               <div class="feature-item">
                 <span class="feature-item__check">✓</span>
                 <div>
                   <strong>Implant unitari</strong>
-                  <span>Substitució d'una sola dent de forma natural i estètica</span>
+                  <span>Substitució d'una sola dent quan és l'opció indicada</span>
                 </div>
               </div>
               <div class="feature-item">
@@ -253,18 +255,18 @@
                 <span class="feature-item__check">✓</span>
                 <div>
                   <strong>All on 4 / All on 6</strong>
-                  <span>Rehabilitació completa d'una arcada sobre 4 o 6 implants</span>
+                  <span>Rehabilitació d'una arcada en casos seleccionats</span>
                 </div>
               </div>
               <div class="feature-item">
                 <span class="feature-item__check">✓</span>
                 <div>
                   <strong>Implants immediats</strong>
-                  <span>Col·locació el mateix dia de l'extracció dental</span>
+                  <span>Col·locació el dia de l'extracció quan el cas ho permet</span>
                 </div>
               </div>
             </div>
-            <a href="seus.html#contacte" class="btn btn--primary reveal">Consulta sense compromís →</a>
+            <a href="implants-dentals.html" class="btn btn--primary reveal">Guia d'implants dentals →</a>
           </div>
         </div>
       </div>
@@ -277,13 +279,13 @@
           <div class="service-detail__text">
             <span class="label reveal">Alineació dental</span>
             <h2 class="reveal">Ortodòncia</h2>
-            <p class="reveal">Corregim la posició de les dents i la mossegada per aconseguir un somriure sa i harmònic. Disposem de les solucions més modernes, des dels bràquets clàssics fins als alineadors transparents invisibles.</p>
+            <p class="reveal">Valorem la posició de les dents, la mossegada i els teixits de suport per definir un objectiu funcional i estètic. La tècnica, amb aparells fixos o alineadors, es tria segons el diagnòstic.</p>
             <div class="service-features reveal">
               <div class="feature-item">
                 <span class="feature-item__check">✓</span>
                 <div>
                   <strong>Alineadors invisibles (Invisalign)</strong>
-                  <span>Ferules transparents i extraïbles, còmodes i estètiques</span>
+                  <span>Aparells transparents i extraïbles per a casos indicats</span>
                 </div>
               </div>
               <div class="feature-item">
@@ -304,11 +306,11 @@
                 <span class="feature-item__check">✓</span>
                 <div>
                   <strong>Ortodòncia interceptiva</strong>
-                  <span>Tractament primerenc en nens per prevenir problemes futurs</span>
+                  <span>Valoració del creixement i del moment adequat per intervenir</span>
                 </div>
               </div>
             </div>
-            <a href="seus.html#contacte" class="btn btn--primary reveal">Sol·licita una valoració →</a>
+            <a href="ortodoncia.html" class="btn btn--primary reveal">Guia d'ortodòncia →</a>
           </div>
           <div class="service-detail__visual reveal">
             <figure class="svc-photo">
@@ -333,7 +335,7 @@
           <div class="service-detail__text">
             <span class="label reveal">Odontologia cosmètica</span>
             <h2 class="reveal">Estètica <em>dental</em></h2>
-            <p class="reveal">El disseny del somriure és una de les nostres especialitats. Combinant diverses tècniques podrem transformar completament l'aspecte de les teves dents, aconseguint resultats naturals.</p>
+            <p class="reveal">Valorem salut, color, forma, posició i genives abans de proposar canvis. Prioritzem opcions conservadores i expliquem els límits i el manteniment de cada material.</p>
             <div class="service-features reveal">
               <div class="feature-item">
                 <span class="feature-item__check">✓</span>
@@ -346,14 +348,14 @@
                 <span class="feature-item__check">✓</span>
                 <div>
                   <strong>Facetes de porcellana</strong>
-                  <span>Làmines ultrafines que transformen la forma i color de les dents</span>
+                  <span>Restauracions ceràmiques per a casos seleccionats</span>
                 </div>
               </div>
               <div class="feature-item">
                 <span class="feature-item__check">✓</span>
                 <div>
                   <strong>Disseny de somriure digital</strong>
-                  <span>Planificació digital del resultat final abans de tractar</span>
+                  <span>Eina de comunicació i planificació abans de tractar</span>
                 </div>
               </div>
               <div class="feature-item">
@@ -364,7 +366,7 @@
                 </div>
               </div>
             </div>
-            <a href="seus.html#contacte" class="btn btn--primary reveal">Dissenya el teu somriure →</a>
+            <a href="estetica-dental.html" class="btn btn--primary reveal">Guia d'estètica dental →</a>
           </div>
         </div>
       </div>
@@ -389,13 +391,13 @@
           <div class="extra-card reveal" style="--delay:80ms">
             <div class="extra-card__num">02</div>
             <h3>Endodòncia</h3>
-            <p>Tractament del nervi dental (conductes) per eliminar la infecció i conservar la dent. Tècnica indolora amb microscopi endodòncic d'alta precisió.</p>
+            <p>Tractament dels conductes de la dent per controlar la infecció i intentar conservar-la. Es realitza amb anestèsia local i, segons el cas, amb magnificació per millorar la precisió.</p>
           </div>
 
           <div class="extra-card reveal" style="--delay:160ms">
             <div class="extra-card__num">03</div>
             <h3>Periodontologia</h3>
-            <p>Diagnosi i tractament de la malaltia de les genives (periodontitis). Rastrejat i alisament radicular, cirurgia periodontal i manteniment.</p>
+            <p>Diagnòstic i tractament de la malaltia de les genives. Pot incloure raspat i allisat radicular, cirurgia periodontal o manteniment, segons la valoració clínica. <a href="periodoncia-endodoncia.html">Guia de periodòncia i endodòncia →</a></p>
           </div>
 
           <div class="extra-card reveal" style="--delay:240ms">
@@ -425,7 +427,7 @@
           <div class="extra-card reveal" style="--delay:160ms">
             <div class="extra-card__num">08</div>
             <h3>Radiologia digital</h3>
-            <p>Radiografies digitals amb mínima radiació, ortopantomografia i escàner 3D (CBCT) per a un diagnosi precís i una planificació quirúrgica segura.</p>
+            <p>Radiografies digitals, ortopantomografia i escàner 3D (CBCT) quan estan indicats. Ajustem la prova i l'exposició a la informació necessària per al diagnòstic i la planificació.</p>
           </div>
 
           <div class="extra-card reveal" style="--delay:240ms">
@@ -483,9 +485,8 @@
         <!--
           IMATGES PENDENTS. Per publicar casos reals cal el consentiment
           informat per escrit del pacient (RGPD). Quan tinguis les fotos,
-          substitueix cada <span class="ba-shot__ph"> per:
-            <img src="assets/img/casos/cas-1-abans.webp" alt="Abans del tractament" loading="lazy" decoding="async" />
-          mantenint la mateixa estructura .ba-shot.
+          substitueix cada placeholder per una imatge optimitzada amb un alt
+          descriptiu, dimensions declarades i la mateixa estructura .ba-shot.
         -->
         <div class="ba__grid reveal">
           <figure class="ba-case">
@@ -567,11 +568,11 @@
             <a href="seus.html#contacte" class="btn btn--ghost btn--lg" data-track="click_cita" data-track-label="serveis-cta">Contacta'ns →</a>
             <p class="contact-row">
               <span class="contact-row__label">o ara mateix:</span>
-              <a href="tel:+34973268826" class="contact-link">
+              <a href="seus.html?canal=directe#contacte" class="contact-link">
                 <svg viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 1.5h3l1.5 3.5-1.75 1.25a9 9 0 004.5 4.5L11 9l3.5 1.5v3a1 1 0 01-1 1C6.3 14.5 1.5 9.7 1.5 3.5a1 1 0 011-1z"/></svg>
-                973 26 88 26
+                Trucar · triar clínica
               </a>
-              <a href="https://wa.me/34615983352" class="contact-link" target="_blank" rel="noopener" data-seu="general">
+              <a href="seus.html?canal=whatsapp#contacte" class="contact-link" rel="noopener" aria-label="WhatsApp: tria una clínica">
                 <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.556 4.122 1.528 5.855L.057 23.175a.75.75 0 00.918.899l5.42-1.424A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 01-4.965-1.364l-.356-.211-3.677.964.982-3.592-.231-.369A9.713 9.713 0 012.25 12C2.25 6.613 6.613 2.25 12 2.25S21.75 6.613 21.75 12 17.387 21.75 12 21.75z"/></svg>
                 WhatsApp
               </a>
@@ -587,7 +588,7 @@
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <a href="index.html" class="footer__logo">
+          <a href="/" class="footer__logo">
             <img src="assets/img/logos/logo-carrera-vertical.png" alt="Estudi Dental Carrera" width="163" height="210" loading="lazy" decoding="async" style="filter:brightness(0) invert(0.72);" />
           </a>
           <p class="footer__tagline">Primer entenem què et passa.<br />Lleida i Tremp, un sol equip.</p>
@@ -595,15 +596,15 @@
             <a href="https://www.instagram.com/clinicarrera/" class="footer__social-link" target="_blank" rel="noopener" aria-label="Instagram d'Estudi Dental Carrera">
               <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
             </a>
-            <a href="https://wa.me/34615983352" class="footer__social-link" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <a href="seus.html?canal=whatsapp#contacte" class="footer__social-link" rel="noopener" aria-label="WhatsApp: tria una clínica">
               <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.556 4.122 1.528 5.855L.057 23.175a.75.75 0 00.918.899l5.42-1.424A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 01-4.965-1.364l-.356-.211-3.677.964.982-3.592-.231-.369A9.713 9.713 0 012.25 12C2.25 6.613 6.613 2.25 12 2.25S21.75 6.613 21.75 12 17.387 21.75 12 21.75z"/></svg>
             </a>
           </div>
         </div>
         <div class="footer__col">
-          <h4>Navegació</h4>
+          <p class="footer__heading">Navegació</p>
           <ul>
-            <li><a href="index.html">Inici</a></li>
+            <li><a href="/">Inici</a></li>
             <li><a href="serveis.html">Serveis</a></li>
             <li><a href="equip.html">Equip</a></li>
             <li><a href="seus.html">Els nostres centres</a></li>
@@ -611,7 +612,7 @@
           </ul>
         </div>
         <div class="footer__col">
-          <h4>Centre Lleida</h4>
+          <p class="footer__heading">Centre Lleida</p>
           <ul>
             <li>Carrer Major, 74-76, 3r 3a</li><li>25007 Lleida</li>
             <li><a href="tel:+34973268826">973 26 88 26</a></li>
@@ -619,7 +620,7 @@
           </ul>
         </div>
         <div class="footer__col">
-          <h4>Centre Tremp</h4>
+          <p class="footer__heading">Centre Tremp</p>
           <ul>
             <li>Carrer Montllobar, 22 Baixos</li><li>25620 Tremp</li>
             <li><a href="tel:+34650600172">650 60 01 72</a></li>
@@ -642,9 +643,9 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js?v=20260910-cita"></script>
   <!-- WhatsApp FAB -->
-  <a href="https://wa.me/34615983352" class="whatsapp-fab" target="_blank" rel="noopener" aria-label="Contacta per WhatsApp">
+  <a href="seus.html?canal=whatsapp#contacte" class="whatsapp-fab" rel="noopener" aria-label="WhatsApp: tria una clínica">
     <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.556 4.122 1.528 5.855L.057 23.175a.75.75 0 00.918.899l5.42-1.424A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 01-4.965-1.364l-.356-.211-3.677.964.982-3.592-.231-.369A9.713 9.713 0 012.25 12C2.25 6.613 6.613 2.25 12 2.25S21.75 6.613 21.75 12 17.387 21.75 12 21.75z"/></svg>
   </a>
 </body>

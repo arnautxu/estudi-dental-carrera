@@ -6,7 +6,7 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    window.GA4_ID = 'G-XXXXXXXXXX'; /* TODO: substituir per l'ID real de GA4 */
+    window.GA4_ID = '';
     gtag('consent', 'default', {
       analytics_storage: 'denied',
       ad_storage: 'denied',
@@ -15,12 +15,12 @@
     });
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Servicios · Estudi Dental Carrera</title>
-  <meta name="description" content="Tratamientos odontológicos con enfoque conservador: ATM y bruxismo, implantes, ortodoncia, prevención infantil, endodoncia. En Lleida y Tremp." />
-  <link rel="canonical" href="https://estudidentalcarrera.com/es/servicios.html" />
-  <link rel="alternate" hreflang="ca" href="https://estudidentalcarrera.com/serveis.html" />
-  <link rel="alternate" hreflang="es" href="https://estudidentalcarrera.com/es/servicios.html" />
-  <link rel="alternate" hreflang="x-default" href="https://estudidentalcarrera.com/serveis.html" />
+  <title>Tratamientos dentales en Lleida y Tremp | Estudi Dental</title>
+  <meta name="description" content="Tratamientos dentales en Lleida y Tremp: ATM, bruxismo, implantes, ortodoncia, endodoncia y prevención. Conoce las opciones y pide visita." />
+  <link rel="canonical" href="https://www.estudidentalcarrera.com/es/servicios.html" />
+  <link rel="alternate" hreflang="ca" href="https://www.estudidentalcarrera.com/serveis.html" />
+  <link rel="alternate" hreflang="es" href="https://www.estudidentalcarrera.com/es/servicios.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.estudidentalcarrera.com/serveis.html" />
 
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="es_ES" />
@@ -28,21 +28,23 @@
   <meta property="og:site_name" content="Estudi Dental Carrera" />
   <meta property="og:title" content="Servicios · Estudi Dental Carrera" />
   <meta property="og:description" content="Tratamientos con enfoque conservador: ATM, bruxismo, implantes, ortodoncia, prevención infantil." />
-  <meta property="og:url" content="https://estudidentalcarrera.com/es/servicios.html" />
-  <meta property="og:image" content="https://estudidentalcarrera.com/assets/img/lleida-edifici.jpg" />
+  <meta property="og:url" content="https://www.estudidentalcarrera.com/es/servicios.html" />
+  <meta property="og:image" content="https://www.estudidentalcarrera.com/assets/img/lleida-edifici.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=optional" onload="this.onload=null;this.rel=&quot;stylesheet&quot;" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=optional" rel="stylesheet" /></noscript>
   <link rel="preload" href="../assets/fonts/N27-Regular.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="../assets/fonts/N27-Light.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="../assets/css/main.css" />
+  <link rel="preload" href="../assets/img/headers/hero-serveis.webp" as="image" fetchpriority="high" />
+  <link rel="stylesheet" href="../assets/css/main.css?v=20260910-cita" />
   <link rel="icon" type="image/png" sizes="64x64" href="../assets/img/logos/favicon.png" />
   <link rel="icon" type="image/svg+xml" href="../assets/img/logos/favicon.svg" />
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-  {"@type":"Question","name":"¿Cuánto cuesta la primera visita?","acceptedAnswer":{"@type":"Answer","text":"La primera visita es una exploración completa con diagnóstico y, cuando es necesario, escáner intraoral. Saldrás con un presupuesto detallado por escrito, sin ningún compromiso de tratar nada."}},
+  {"@type":"Question","name":"¿Cuánto cuesta la primera visita?","acceptedAnswer":{"@type":"Answer","text":"La primera visita es una exploración completa con diagnóstico y, cuando es necesario, escáner intraoral. Saldrás con un presupuesto detallado por escrito, sin compromiso de iniciar un tratamiento."}},
   {"@type":"Question","name":"¿Duele el tratamiento?","acceptedAnswer":{"@type":"Answer","text":"Trabajamos con anestesia local y técnicas mínimamente invasivas para que los tratamientos sean lo más cómodos posible. Te explicamos cada paso antes de hacerlo y paramos siempre que lo necesites."}},
   {"@type":"Question","name":"¿Cuánto dura un tratamiento?","acceptedAnswer":{"@type":"Answer","text":"Depende del caso. Una higiene o un empaste se resuelven en una visita; la ortodoncia suele durar entre 12 y 18 meses; los implantes requieren varias fases. En el plan consta el tiempo estimado por escrito antes de empezar."}},
   {"@type":"Question","name":"¿Se puede financiar?","acceptedAnswer":{"@type":"Answer","text":"Sí. Adaptamos el plan a tus posibilidades y ofrecemos opciones de pago fraccionado para los tratamientos más extensos."}},
@@ -55,7 +57,7 @@
 
   <header class="nav" id="nav">
     <div class="nav__inner">
-      <a href="index.html" class="nav__logo">
+      <a href="/es/" class="nav__logo">
         <img src="../assets/img/logos/logo-carrera-vertical.png" class="nav__logo-icon" alt="Estudi Dental Carrera" width="163" height="210" fetchpriority="high" />
       </a>
       <span class="nav__meta" aria-hidden="true">
@@ -63,7 +65,7 @@
         <span class="nav__meta-text">Lleida &amp; Tremp</span>
       </span>
       <nav class="nav__links" aria-label="Navegación principal">
-        <a href="index.html"><span class="nav__label">Inicio</span></a>
+        <a href="/es/"><span class="nav__label">Inicio</span></a>
         <a href="servicios.html" class="active" aria-current="page"><span class="nav__label">Servicios</span></a>
         <a href="equipo.html"><span class="nav__label">Equipo</span></a>
         <a href="sedes.html"><span class="nav__label">Clínicas</span></a>
@@ -85,7 +87,7 @@
 
   <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <div class="mobile-menu__top">
-      <a href="index.html" class="mobile-menu__brand" aria-label="Inicio · Estudi Dental Carrera">
+      <a href="/es/" class="mobile-menu__brand" aria-label="Inicio · Estudi Dental Carrera">
         <img src="../assets/img/logos/logo-carrera-vertical.png" alt="" width="163" height="210" />
       </a>
       <button class="mobile-menu__close" id="mobileMenuClose" aria-label="Cerrar menú">
@@ -93,7 +95,7 @@
       </button>
     </div>
     <nav class="mobile-menu__nav" aria-label="Navegación principal">
-      <a href="index.html" class="mobile-menu__link">
+      <a href="/es/" class="mobile-menu__link">
         <span class="mobile-menu__label">Inicio</span>
       </a>
       <a href="servicios.html" class="mobile-menu__link">
@@ -107,7 +109,7 @@
       </a>
     </nav>
     <div class="mobile-menu__footer">
-      <a href="tel:+34973268826" class="btn btn--primary btn--lg mobile-menu__cta">Pedir cita</a>
+      <a href="sedes.html#contacto" class="btn btn--primary btn--lg mobile-menu__cta">Pedir cita</a>
       <div class="mobile-menu__seus">
         <a href="tel:+34973268826" class="mobile-menu__seu">
           <span class="mobile-menu__seu-label">Lleida</span>
@@ -126,7 +128,7 @@
           <a href="https://www.instagram.com/clinicarrera/" class="mobile-menu__social-link" target="_blank" rel="noopener" aria-label="Instagram">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
           </a>
-          <a href="https://wa.me/34615983352" class="mobile-menu__social-link" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <a href="sedes.html?canal=whatsapp#contacto" class="mobile-menu__social-link" rel="noopener" aria-label="WhatsApp: elige una clínica">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.556 4.122 1.528 5.855L.057 23.175a.75.75 0 00.918.899l5.42-1.424A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 01-4.965-1.364l-.356-.211-3.677.964.982-3.592-.231-.369A9.713 9.713 0 012.25 12C2.25 6.613 6.613 2.25 12 2.25S21.75 6.613 21.75 12 17.387 21.75 12 21.75z"/></svg>
           </a>
         </div>
@@ -141,12 +143,12 @@
       <div class="container">
         <div class="page-hero__content">
           <nav class="breadcrumb reveal" aria-label="Migas de pan">
-            <a href="index.html">Inicio</a>
+            <a href="/es/">Inicio</a>
             <span>→</span>
             <span>Servicios</span>
           </nav>
           <h1 class="reveal">Nuestros <em>servicios</em></h1>
-          <p class="reveal">Tratamientos integrales para toda la familia. Ofrecemos el catálogo clínico completo, pero partimos de una convicción: conservar la pieza propia siempre que sea posible.</p>
+          <p class="reveal">Atendemos a adultos y niños con un mismo criterio: conservar los dientes naturales siempre que sea posible. El tratamiento se decide después de valorar cada caso.</p>
         </div>
       </div>
     </section>
@@ -160,7 +162,7 @@
             Conservar la pieza propia siempre que sea posible. Sustituirla, solo cuando es estrictamente necesario.
             <cite class="philosophy-band__attrib">Dra. Carme Roure · Criterio clínico compartido</cite>
           </blockquote>
-          <p class="philosophy-band__body">Esto no es un tratamiento de nuestra carta: es la manera como abordamos todo lo demás. Diagnosticamos con detalle, te explicamos las opciones reales y solo tratamos cuando aporta valor clínico. Por eso cada ficha siguiente empieza con una pregunta del paciente, no con una técnica.</p>
+          <p class="philosophy-band__body">Este criterio guía todos los tratamientos. Primero valoramos qué ocurre y qué opciones hay; después te explicamos cuándo conviene intervenir y cuándo podemos esperar.</p>
         </div>
       </div>
     </section>
@@ -171,8 +173,8 @@
         <div class="service-detail__grid service-detail__grid--reverse">
           <div class="service-detail__text">
             <span class="label reveal">Disfunción ATM · bruxismo · dolor mandibular</span>
-            <h2 class="reveal">Dolor en la mandíbula<br />que <em>no sabías de dónde venía</em></h2>
-            <p class="reveal">Dolores de cabeza matinales, ruido al abrir la boca, tensión muscular o dientes desgastados: a menudo son síntomas de disfunción de la articulación temporomandibular (ATM) o de bruxismo. Es un terreno clínico poco atendido en nuestro entorno y en el que estamos especializados.</p>
+            <h2 class="reveal">¿Te duele<br /><em>la mandíbula?</em></h2>
+            <p class="reveal">Los dolores de cabeza matinales, el ruido al abrir la boca, la tensión muscular o los dientes desgastados pueden relacionarse con la articulación temporomandibular (ATM), los músculos o el bruxismo. Hace falta una valoración individual para diferenciar sus causas.</p>
             <div class="service-features reveal">
               <div class="feature-item">
                 <span class="feature-item__check">✓</span>
@@ -185,7 +187,7 @@
                 <span class="feature-item__check">✓</span>
                 <div>
                   <strong>Férulas de descarga personalizadas</strong>
-                  <span>Diseñadas a medida para aliviar tensión y proteger el esmalte</span>
+                  <span>Diseñadas a medida cuando están indicadas, con ajuste y controles</span>
                 </div>
               </div>
               <div class="feature-item">
@@ -203,7 +205,7 @@
                 </div>
               </div>
             </div>
-            <a href="sedes.html#contacto" class="btn btn--primary reveal">Pedir valoración de ATM →</a>
+            <a href="atm-bruxismo.html" class="btn btn--primary reveal">Guía de ATM y bruxismo →</a>
           </div>
           <div class="service-detail__visual reveal">
             <figure class="svc-photo">
@@ -228,13 +230,13 @@
           <div class="service-detail__text">
             <span class="label reveal">Implantología</span>
             <h2 class="reveal">Implantes <em>dentales</em></h2>
-            <p class="reveal">Los implantes dentales sustituyen dientes perdidos cuando la conservación ya no es posible. Están fabricados en titanio biocompatible que se integra perfectamente al hueso, ofreciendo una base sólida para coronas, puentes o prótesis.</p>
+            <p class="reveal">Los implantes dentales pueden sustituir dientes perdidos cuando conservarlos ya no es posible. Habitualmente son de titanio biocompatible y necesitan un periodo de integración con el hueso antes de soportar la restauración definitiva; la indicación y los tiempos dependen de cada caso.</p>
             <div class="service-features reveal">
               <div class="feature-item">
                 <span class="feature-item__check">✓</span>
                 <div>
                   <strong>Implante unitario</strong>
-                  <span>Sustitución de un solo diente de forma natural y estética</span>
+                  <span>Sustitución de un solo diente cuando es la opción indicada</span>
                 </div>
               </div>
               <div class="feature-item">
@@ -248,18 +250,18 @@
                 <span class="feature-item__check">✓</span>
                 <div>
                   <strong>All on 4 / All on 6</strong>
-                  <span>Rehabilitación completa de una arcada sobre 4 o 6 implantes</span>
+                  <span>Rehabilitación de una arcada en casos seleccionados</span>
                 </div>
               </div>
               <div class="feature-item">
                 <span class="feature-item__check">✓</span>
                 <div>
                   <strong>Implantes inmediatos</strong>
-                  <span>Colocación el mismo día de la extracción dental</span>
+                  <span>Colocación el día de la extracción cuando el caso lo permite</span>
                 </div>
               </div>
             </div>
-            <a href="sedes.html#contacto" class="btn btn--primary reveal">Consulta sin compromiso →</a>
+            <a href="implantes-dentales.html" class="btn btn--primary reveal">Guía de implantes dentales →</a>
           </div>
         </div>
       </div>
@@ -272,13 +274,13 @@
           <div class="service-detail__text">
             <span class="label reveal">Alineación dental</span>
             <h2 class="reveal">Ortodoncia</h2>
-            <p class="reveal">Corregimos la posición de los dientes y la mordida para conseguir una sonrisa sana y armónica. Disponemos de las soluciones más modernas, desde los brackets clásicos hasta los alineadores transparentes invisibles.</p>
+            <p class="reveal">Valoramos la posición de los dientes, la mordida y los tejidos de soporte para definir un objetivo funcional y estético. La técnica, con aparatos fijos o alineadores, se elige según el diagnóstico.</p>
             <div class="service-features reveal">
               <div class="feature-item">
                 <span class="feature-item__check">✓</span>
                 <div>
                   <strong>Alineadores invisibles (Invisalign)</strong>
-                  <span>Férulas transparentes y extraíbles, cómodas y estéticas</span>
+                  <span>Aparatos transparentes y extraíbles para casos indicados</span>
                 </div>
               </div>
               <div class="feature-item">
@@ -299,11 +301,11 @@
                 <span class="feature-item__check">✓</span>
                 <div>
                   <strong>Ortodoncia interceptiva</strong>
-                  <span>Tratamiento temprano en niños para prevenir problemas futuros</span>
+                  <span>Valoración del crecimiento y del momento adecuado para intervenir</span>
                 </div>
               </div>
             </div>
-            <a href="sedes.html#contacto" class="btn btn--primary reveal">Solicita una valoración →</a>
+            <a href="ortodoncia.html" class="btn btn--primary reveal">Guía de ortodoncia →</a>
           </div>
           <div class="service-detail__visual reveal">
             <figure class="svc-photo">
@@ -328,7 +330,7 @@
           <div class="service-detail__text">
             <span class="label reveal">Odontología cosmética</span>
             <h2 class="reveal">Estética <em>dental</em></h2>
-            <p class="reveal">El diseño de la sonrisa es una de nuestras especialidades. Combinando diversas técnicas podemos transformar completamente el aspecto de tus dientes, con resultados naturales.</p>
+            <p class="reveal">Valoramos salud, color, forma, posición y encías antes de proponer cambios. Priorizamos opciones conservadoras y explicamos los límites y el mantenimiento de cada material.</p>
             <div class="service-features reveal">
               <div class="feature-item">
                 <span class="feature-item__check">✓</span>
@@ -341,14 +343,14 @@
                 <span class="feature-item__check">✓</span>
                 <div>
                   <strong>Carillas de porcelana</strong>
-                  <span>Láminas ultrafinas que transforman la forma y el color de los dientes</span>
+                  <span>Restauraciones cerámicas para casos seleccionados</span>
                 </div>
               </div>
               <div class="feature-item">
                 <span class="feature-item__check">✓</span>
                 <div>
                   <strong>Diseño de sonrisa digital</strong>
-                  <span>Planificación digital del resultado final antes de tratar</span>
+                  <span>Herramienta de comunicación y planificación antes de tratar</span>
                 </div>
               </div>
               <div class="feature-item">
@@ -359,7 +361,7 @@
                 </div>
               </div>
             </div>
-            <a href="sedes.html#contacto" class="btn btn--primary reveal">Diseña tu sonrisa →</a>
+            <a href="estetica-dental.html" class="btn btn--primary reveal">Guía de estética dental →</a>
           </div>
         </div>
       </div>
@@ -371,7 +373,7 @@
         <div class="section-header reveal">
           <span class="label">Más tratamientos</span>
           <h2>Atención <em>integral</em></h2>
-          <p>Cubrimos todas las necesidades de salud bucodental de toda la familia.</p>
+          <p>Revisiones, prevención y tratamientos para adultos y niños.</p>
         </div>
         <div class="services-extra__grid">
 
@@ -384,19 +386,19 @@
           <div class="extra-card reveal" style="--delay:80ms">
             <div class="extra-card__num">02</div>
             <h3>Endodoncia</h3>
-            <p>Tratamiento del nervio dental (conductos) para eliminar la infección y conservar el diente. Técnica indolora con microscopio endodóncico de alta precisión.</p>
+            <p>Tratamiento de los conductos del diente para controlar la infección e intentar conservarlo. Se realiza con anestesia local y, según el caso, con magnificación para mejorar la precisión.</p>
           </div>
 
           <div class="extra-card reveal" style="--delay:160ms">
             <div class="extra-card__num">03</div>
             <h3>Periodoncia</h3>
-            <p>Diagnóstico y tratamiento de la enfermedad de las encías (periodontitis). Raspado y alisado radicular, cirugía periodontal y mantenimiento.</p>
+            <p>Diagnóstico y tratamiento de la enfermedad de las encías. Puede incluir raspado y alisado radicular, cirugía periodontal o mantenimiento, según la valoración. <a href="periodoncia-endodoncia.html">Guía de periodoncia y endodoncia →</a></p>
           </div>
 
           <div class="extra-card reveal" style="--delay:240ms">
             <div class="extra-card__num">04</div>
             <h3>Prótesis dental</h3>
-            <p>Coronas, puentes y prótesis removibles y fijas para recuperar la funcionalidad y la estética. Fabricación en materiales de alta calidad: zirconio, porcelana y e.max.</p>
+            <p>Coronas, puentes y prótesis removibles y fijas para recuperar la funcionalidad y la estética. Utilizamos materiales como zirconio, porcelana y e.max, según el caso.</p>
           </div>
 
           <div class="extra-card reveal" style="--delay:320ms">
@@ -420,7 +422,7 @@
           <div class="extra-card reveal" style="--delay:160ms">
             <div class="extra-card__num">08</div>
             <h3>Radiología digital</h3>
-            <p>Radiografías digitales con mínima radiación, ortopantomografía y escáner 3D (CBCT) para un diagnóstico preciso y una planificación quirúrgica segura.</p>
+            <p>Radiografías digitales, ortopantomografía y escáner 3D (CBCT) cuando están indicados. Ajustamos la prueba y la exposición a la información necesaria para el diagnóstico y la planificación.</p>
           </div>
 
           <div class="extra-card reveal" style="--delay:240ms">
@@ -456,13 +458,13 @@
           <div class="process-step reveal" style="--delay:240ms">
             <span class="process-step__num">03</span>
             <h3>Tratamiento</h3>
-            <p>Ejecutamos el tratamiento acordado con las tecnologías más avanzadas y toda nuestra experiencia, en un entorno confortable.</p>
+            <p>Realizamos el tratamiento acordado y te explicamos cada paso durante la visita.</p>
           </div>
           <div class="process-step__divider" aria-hidden="true"></div>
           <div class="process-step reveal" style="--delay:360ms">
             <span class="process-step__num">04</span>
             <h3>Seguimiento</h3>
-            <p>Revisiones periódicas para asegurar que el resultado se mantiene a largo plazo y detectar cualquier incidencia a tiempo.</p>
+            <p>Revisiones periódicas para comprobar la evolución del tratamiento y detectar posibles incidencias.</p>
           </div>
         </div>
       </div>
@@ -472,7 +474,7 @@
     <section class="ba" id="casos" aria-labelledby="ba-title" hidden>
       <div class="container">
         <div class="section-header reveal"><span class="label">Resultados reales</span><h2 id="ba-title">Antes y <em>después</em></h2></div>
-        <!-- IMÁGENES PENDIENTES. Para publicar casos reales se necesita el consentimiento informado por escrito del paciente (RGPD). Sustituye cada <span class="ba-shot__ph"> por <img src="../assets/img/casos/..." alt="..." loading="lazy" decoding="async" /> manteniendo la estructura .ba-shot. -->
+        <!-- IMÁGENES PENDIENTES. Para publicar casos reales se necesita el consentimiento informado por escrito del paciente (RGPD). Sustituye cada placeholder por una imagen optimizada, con alt descriptivo, dimensiones declaradas y la misma estructura .ba-shot. -->
         <div class="ba__grid reveal">
           <figure class="ba-case"><div class="ba-case__pair"><div class="ba-shot"><span class="ba-shot__tag">Antes</span><span class="ba-shot__ph">Foto pendiente</span></div><div class="ba-shot"><span class="ba-shot__tag">Después</span><span class="ba-shot__ph">Foto pendiente</span></div></div><figcaption><span class="ba-case__service">Implantes</span><span class="ba-case__caption">Rehabilitación completa con implantes y recuperación de la función masticatoria.</span></figcaption></figure>
           <figure class="ba-case"><div class="ba-case__pair"><div class="ba-shot"><span class="ba-shot__tag">Antes</span><span class="ba-shot__ph">Foto pendiente</span></div><div class="ba-shot"><span class="ba-shot__tag">Después</span><span class="ba-shot__ph">Foto pendiente</span></div></div><figcaption><span class="ba-case__service">Estética dental</span><span class="ba-case__caption">Diseño digital de la sonrisa con carillas, manteniendo un aspecto natural.</span></figcaption></figure>
@@ -487,7 +489,7 @@
       <div class="container">
         <div class="section-header reveal"><span class="label">Preguntas frecuentes</span><h2 id="faq-title">Antes de la <em>primera visita</em></h2></div>
         <div class="faq__list reveal">
-          <div class="faq__item"><button type="button" class="faq__q" aria-expanded="false">¿Cuánto cuesta la primera visita?<span class="faq__icon" aria-hidden="true"></span></button><div class="faq__a"><div class="faq__a-inner"><p>La primera visita es una exploración completa con diagnóstico y, cuando es necesario, escáner intraoral. Saldrás con un presupuesto detallado por escrito, sin ningún compromiso de tratar nada. Te indicamos el importe al reservar.</p></div></div></div>
+          <div class="faq__item"><button type="button" class="faq__q" aria-expanded="false">¿Cuánto cuesta la primera visita?<span class="faq__icon" aria-hidden="true"></span></button><div class="faq__a"><div class="faq__a-inner"><p>La primera visita es una exploración completa con diagnóstico y, cuando es necesario, escáner intraoral. Saldrás con un presupuesto detallado por escrito, sin compromiso de iniciar un tratamiento. Te indicamos el importe al reservar.</p></div></div></div>
           <div class="faq__item"><button type="button" class="faq__q" aria-expanded="false">¿Duele el tratamiento?<span class="faq__icon" aria-hidden="true"></span></button><div class="faq__a"><div class="faq__a-inner"><p>Trabajamos con anestesia local y técnicas mínimamente invasivas para que los tratamientos sean lo más cómodos posible. Te explicamos cada paso antes de hacerlo y paramos siempre que lo necesites.</p></div></div></div>
           <div class="faq__item"><button type="button" class="faq__q" aria-expanded="false">¿Cuánto dura un tratamiento?<span class="faq__icon" aria-hidden="true"></span></button><div class="faq__a"><div class="faq__a-inner"><p>Depende del caso. Una higiene o un empaste se resuelven en una visita; la ortodoncia suele durar entre 12 y 18 meses; los implantes requieren varias fases. En el plan de tratamiento consta el tiempo estimado por escrito antes de empezar.</p></div></div></div>
           <div class="faq__item"><button type="button" class="faq__q" aria-expanded="false">¿Se puede financiar?<span class="faq__icon" aria-hidden="true"></span></button><div class="faq__a"><div class="faq__a-inner"><p>Sí. Adaptamos el plan a tus posibilidades y ofrecemos opciones de pago fraccionado para los tratamientos más extensos.</p></div></div></div>
@@ -502,13 +504,13 @@
         <div class="cta-band__inner reveal">
           <div class="cta-band__text">
             <h2>¿Tienes alguna pregunta<br />sobre un <em>tratamiento?</em></h2>
-            <p>Nuestro equipo te asesora sin compromiso.</p>
+            <p>Habla con la recepción de Lleida o Tremp para orientar tu consulta.</p>
           </div>
           <div class="cta-band__cta">
             <a href="sedes.html#contacto" class="btn btn--ghost btn--lg" data-track="click_cita" data-track-label="serveis-cta">Contáctanos →</a>
             <p class="contact-row"><span class="contact-row__label">o ahora mismo:</span>
-              <a href="tel:+34973268826" class="contact-link"><svg viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 1.5h3l1.5 3.5-1.75 1.25a9 9 0 004.5 4.5L11 9l3.5 1.5v3a1 1 0 01-1 1C6.3 14.5 1.5 9.7 1.5 3.5a1 1 0 011-1z"/></svg> 973 26 88 26</a>
-              <a href="https://wa.me/34615983352" class="contact-link" target="_blank" rel="noopener" data-seu="general"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.556 4.122 1.528 5.855L.057 23.175a.75.75 0 00.918.899l5.42-1.424A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 01-4.965-1.364l-.356-.211-3.677.964.982-3.592-.231-.369A9.713 9.713 0 012.25 12C2.25 6.613 6.613 2.25 12 2.25S21.75 6.613 21.75 12 17.387 21.75 12 21.75z"/></svg> WhatsApp</a>
+              <a href="sedes.html?canal=directe#contacto" class="contact-link"><svg viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 1.5h3l1.5 3.5-1.75 1.25a9 9 0 004.5 4.5L11 9l3.5 1.5v3a1 1 0 01-1 1C6.3 14.5 1.5 9.7 1.5 3.5a1 1 0 011-1z"/></svg> Llamar · elegir clínica</a>
+              <a href="sedes.html?canal=whatsapp#contacto" class="contact-link" rel="noopener" aria-label="WhatsApp: elige una clínica"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.556 4.122 1.528 5.855L.057 23.175a.75.75 0 00.918.899l5.42-1.424A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 01-4.965-1.364l-.356-.211-3.677.964.982-3.592-.231-.369A9.713 9.713 0 012.25 12C2.25 6.613 6.613 2.25 12 2.25S21.75 6.613 21.75 12 17.387 21.75 12 21.75z"/></svg> WhatsApp</a>
             </p>
           </div>
         </div>
@@ -521,7 +523,7 @@
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <a href="index.html" class="footer__logo">
+          <a href="/es/" class="footer__logo">
             <img src="../assets/img/logos/logo-carrera-vertical.png" alt="Estudi Dental Carrera" width="163" height="210" loading="lazy" decoding="async" style="filter:brightness(0) invert(0.72);" />
           </a>
           <p class="footer__tagline">Primero entendemos qué te pasa.<br />Lleida y Tremp, un solo equipo.</p>
@@ -529,15 +531,15 @@
             <a href="https://www.instagram.com/clinicarrera/" class="footer__social-link" target="_blank" rel="noopener" aria-label="Instagram de Estudi Dental Carrera">
               <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
             </a>
-            <a href="https://wa.me/34615983352" class="footer__social-link" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <a href="sedes.html?canal=whatsapp#contacto" class="footer__social-link" rel="noopener" aria-label="WhatsApp: elige una clínica">
               <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.556 4.122 1.528 5.855L.057 23.175a.75.75 0 00.918.899l5.42-1.424A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 01-4.965-1.364l-.356-.211-3.677.964.982-3.592-.231-.369A9.713 9.713 0 012.25 12C2.25 6.613 6.613 2.25 12 2.25S21.75 6.613 21.75 12 17.387 21.75 12 21.75z"/></svg>
             </a>
           </div>
         </div>
         <div class="footer__col">
-          <h4>Navegación</h4>
+          <p class="footer__heading">Navegación</p>
           <ul>
-            <li><a href="index.html">Inicio</a></li>
+            <li><a href="/es/">Inicio</a></li>
             <li><a href="servicios.html">Servicios</a></li>
             <li><a href="equipo.html">Equipo</a></li>
             <li><a href="sedes.html">Clínicas</a></li>
@@ -545,17 +547,17 @@
           </ul>
         </div>
         <div class="footer__col">
-          <h4>Centro Lleida</h4>
+          <p class="footer__heading">Clínica de Lleida</p>
           <ul>
-            <li>Carrer Major, 74-76, 3r 3a</li><li>25007 Lleida</li>
+            <li>Carrer Major, 74-76, 3.º 3.ª</li><li>25007 Lleida</li>
             <li><a href="tel:+34973268826">973 26 88 26</a></li>
             <li>L–V: 9h – 20h</li><li>S: 9h – 14h</li>
           </ul>
         </div>
         <div class="footer__col">
-          <h4>Centro Tremp</h4>
+          <p class="footer__heading">Clínica de Tremp</p>
           <ul>
-            <li>Carrer Montllobar, 22 Baixos</li><li>25620 Tremp</li>
+            <li>Carrer Montllobar, 22, bajos</li><li>25620 Tremp</li>
             <li><a href="tel:+34650600172">650 60 01 72</a></li>
             <li>L–V: 9h – 19h</li>
           </ul>
@@ -576,9 +578,9 @@
     </div>
   </footer>
 
-  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/main.js?v=20260910-cita"></script>
   <!-- WhatsApp FAB -->
-  <a href="https://wa.me/34615983352" class="whatsapp-fab" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  <a href="sedes.html?canal=whatsapp#contacto" class="whatsapp-fab" rel="noopener" aria-label="WhatsApp: elige una clínica">
     <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.556 4.122 1.528 5.855L.057 23.175a.75.75 0 00.918.899l5.42-1.424A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 01-4.965-1.364l-.356-.211-3.677.964.982-3.592-.231-.369A9.713 9.713 0 012.25 12C2.25 6.613 6.613 2.25 12 2.25S21.75 6.613 21.75 12 17.387 21.75 12 21.75z"/></svg>
   </a>
 </body>
