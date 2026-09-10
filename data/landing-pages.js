@@ -140,6 +140,7 @@ pages['ca-atm'] = servicePage('ca', {
 });
 
 pages['es-atm'] = servicePage('es', {
+  trust: common.es.trust.map(item => item.title === 'Diagnóstico primero' ? { ...item, text: 'El tratamiento viene después de entender el problema' } : item),
   path: 'es/atm-bruxismo.html', alternatePath: 'atm-bruxisme.html',
   title: 'ATM y bruxismo en Lleida y Tremp | Estudi Dental Carrera',
   description: 'Valoración de dolor mandibular, ruidos, limitación de apertura y bruxismo en Lleida y Tremp. Diagnóstico individual, opciones y seguimiento.',

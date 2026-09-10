@@ -121,3 +121,10 @@
   .landing-hero { min-height:560px; }
   .landing-hero__actions .btn { width:100%; justify-content:center; }
 }
+
+.landing-faq .landing-references { margin-top:1rem; border:0; background:transparent; color:var(--ink-soft); font-size:.875rem; }
+.landing-faq .landing-references summary { display:list-item; width:fit-content; padding:.5rem 0; list-style:disclosure-closed inside; font-weight:400; }
+.landing-faq .landing-references[open] summary { list-style-type:disclosure-open; }
+.landing-faq .landing-references summary::-webkit-details-marker { display:inline; }
+.landing-references ul { margin:.5rem 0 0; padding-left:1.25rem; line-height:1.7; }
+.landing-references a { color:inherit; text-decoration:underline; text-underline-offset:3px; }

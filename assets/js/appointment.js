@@ -113,7 +113,8 @@
     text('Podràs explicar què voldries canviar. Les opcions es valoren a la consulta.', 'Podrás explicar qué te gustaría cambiar. Las opciones se valoran en la consulta.'),
     text('La recepció t’ajudarà a concretar la visita a la clínica que escullis.', 'Recepción te ayudará a concretar la visita en la clínica que elijas.'),
     text('Deixa les dades de contacte de la persona adulta que gestiona la visita.', 'Deja los datos de contacto de la persona adulta que gestiona la visita.'),
-    text('Cap problema. Només necessitem saber on prefereixes venir i com et podem contactar.', 'Sin problema. Solo necesitamos saber dónde prefieres venir y cómo podemos contactar contigo.')
+    text('Cap problema. Només necessitem saber on prefereixes venir i com et podem contactar.', 'Sin problema. Solo necesitamos saber dónde prefieres venir y cómo podemos contactar contigo.'),
+    text('Podràs explicar què voldries canviar. Les opcions es valoren a la consulta.', 'Podrás explicar qué te gustaría cambiar. Las opciones se valoran en la consulta.')
   ];
   form.querySelectorAll('[name="orientation"]').forEach(radio => radio.addEventListener('change', () => {
     form.querySelector('[data-orientation-feedback]').textContent = orientation[Number(radio.value)] || '';

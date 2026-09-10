@@ -69,6 +69,7 @@ function renderSection(section, index) {
 
 function render(page) {
   const isEs = page.lang === 'es';
+  const references = page.sources?.length ? `<details class="landing-references"><summary>${isEs ? 'Referencias' : 'Referències'}</summary><ul>${page.sources.map(source => `<li><a href="${escapeHtml(source.href)}" target="_blank" rel="noopener">${escapeHtml(source.label)}</a></li>`).join('')}</ul></details>` : '';
   const home = isEs ? '/es/' : '/';
   const services = isEs ? '/es/servicios.html' : '/serveis.html';
   const team = isEs ? '/es/equipo.html' : '/equip.html';
@@ -79,7 +80,6 @@ function render(page) {
   const altUrl = `${ORIGIN}/${page.alternatePath}`;
   const phone = page.location && page.location.id === 'tremp' ? '+34650600172' : '+34973268826';
   const wa = page.location && page.location.id === 'tremp' ? '34650600172' : '34615983352';
-  const sourceLinks = page.sources.map(source => `<a href="${escapeHtml(source.href)}" target="_blank" rel="noopener">${escapeHtml(source.label)}</a>`).join(' · ');
 
   return `<!DOCTYPE html>
 <html lang="${page.lang}">
@@ -147,7 +147,7 @@ function render(page) {
       </div>
     </section>
     ${page.sections.map(renderSection).join('')}
-    <section class="landing-faq"><div class="container"><span class="landing-kicker">FAQ</span><h2>${isEs ? 'Preguntas frecuentes' : 'Preguntes freqüents'}</h2><div class="landing-faq__list">${page.faqs.map(faq => `<details><summary>${faq.q}</summary><p>${faq.a}</p></details>`).join('')}</div><div class="landing-editorial">${page.editorial} ${isEs ? 'Fuentes consultadas' : 'Fonts consultades'}: ${sourceLinks}. ${isEs ? `Última actualización editorial: ${page.updatedLabel || '25 de agosto de 2026'}.` : `Darrera actualització editorial: ${page.updatedLabel || '25 d’agost de 2026'}.`}</div></div></section>
+    <section class="landing-faq"><div class="container"><span class="landing-kicker">FAQ</span><h2>${isEs ? 'Preguntas frecuentes' : 'Preguntes freqüents'}</h2><div class="landing-faq__list">${page.faqs.map(faq => `<details><summary>${faq.q}</summary><p>${faq.a}</p></details>`).join('')}</div><div class="landing-editorial">${page.editorial} ${isEs ? `Última actualización editorial: ${page.updatedLabel || '25 de agosto de 2026'}.` : `Darrera actualització editorial: ${page.updatedLabel || '25 d’agost de 2026'}.`}</div>${references}</div></section>
     <section class="landing-related"><div class="container"><span class="landing-kicker">${isEs ? 'Siguiente paso' : 'Següent pas'}</span><h2>${isEs ? 'Contenido relacionado' : 'Contingut relacionat'}</h2><div class="landing-related__grid">${page.related.map(item => `<a class="landing-related__card" href="${item.href}"><span>${item.type}</span><strong>${item.label}</strong><b>→</b></a>`).join('')}</div></div></section>
     <section class="landing-cta"><div class="container landing-cta__inner"><div><h2>${page.ctaTitle}</h2><p>${page.ctaText}</p></div><a href="${contact}" class="btn btn--primary btn--lg" data-track="appointment_cta_click" data-track-label="landing-footer">${isEs ? 'Pedir visita' : 'Demanar visita'}</a></div></section>
   </main>
