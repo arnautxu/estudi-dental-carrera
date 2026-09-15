@@ -1,7 +1,14 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": false,
+  "buildCommand": "npm run build",
   "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "estudi-dental-carrera.vercel.app" }],
+      "destination": "https://www.estudidentalcarrera.com/:path*",
+      "permanent": true
+    },
     {
       "source": "/:path*",
       "has": [{ "type": "host", "value": "estudidentalcarrera.es" }],

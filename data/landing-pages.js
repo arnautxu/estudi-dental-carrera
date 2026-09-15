@@ -97,10 +97,16 @@ function servicePage(lang, spec) {
 const pages = {};
 
 pages['ca-atm'] = servicePage('ca', {
+  related: [
+    { href: '/clinica-dental-lleida.html', type: 'Clínica', label: 'Clínica dental a Lleida' },
+    { href: '/dentista-tremp.html', type: 'Clínica', label: 'Dentista a Tremp' },
+    { href: '/equip.html#carme-roure', type: 'Equip', label: 'Dra. Carme Roure · Ortodòncia i ATM' }
+  ],
   path: 'atm-bruxisme.html', alternatePath: 'es/atm-bruxismo.html',
   title: 'ATM i bruxisme a Lleida i Tremp | Estudi Dental Carrera',
   description: 'Valoració de dolor mandibular, sorolls, limitació d’obertura i bruxisme a Lleida i Tremp. Diagnòstic individual, opcions i seguiment.',
-  eyebrow: 'ATM, dolor orofacial i bruxisme', h1: 'Quan la mandíbula demana una mirada més àmplia',
+  dateModified: '2026-09-15', updatedLabel: '15 de setembre de 2026',
+  eyebrow: 'ATM, dolor orofacial i bruxisme', h1: 'Dolor de mandíbula i bruxisme a Lleida i Tremp',
   lead: 'Dolor en mastegar, tensió al despertar, sorolls o desgast dental no sempre tenen una única causa. Comencem escoltant, explorant i diferenciant què pot contribuir als símptomes.',
   image: 'assets/img/serveis/atm-carme.webp', imageWidth: 1280, imageHeight: 1600, imageAlt: 'Professional d’Estudi Dental Carrera durant una valoració de la mandíbula',
   introTitle: 'Bruxisme no és sinònim de dolor mandibular',
@@ -140,11 +146,17 @@ pages['ca-atm'] = servicePage('ca', {
 });
 
 pages['es-atm'] = servicePage('es', {
+  related: [
+    { href: '/es/clinica-dental-lleida.html', type: 'Clínica', label: 'Clínica dental en Lleida' },
+    { href: '/es/dentista-tremp.html', type: 'Clínica', label: 'Dentista en Tremp' },
+    { href: '/es/equipo.html#carme-roure', type: 'Equipo', label: 'Dra. Carme Roure · Ortodoncia y ATM' }
+  ],
   trust: common.es.trust.map(item => item.title === 'Diagnóstico primero' ? { ...item, text: 'El tratamiento viene después de entender el problema' } : item),
   path: 'es/atm-bruxismo.html', alternatePath: 'atm-bruxisme.html',
   title: 'ATM y bruxismo en Lleida y Tremp | Estudi Dental Carrera',
   description: 'Valoración de dolor mandibular, ruidos, limitación de apertura y bruxismo en Lleida y Tremp. Diagnóstico individual, opciones y seguimiento.',
-  eyebrow: 'ATM, dolor orofacial y bruxismo', h1: 'Dolor de mandíbula y bruxismo: valorar el origen',
+  dateModified: '2026-09-15', updatedLabel: '15 de septiembre de 2026',
+  eyebrow: 'ATM, dolor orofacial y bruxismo', h1: 'Dolor de mandíbula y bruxismo en Lleida y Tremp',
   lead: 'Dolor al masticar, tensión al despertar, ruidos o desgaste dental no siempre tienen una única causa. Empezamos escuchando, explorando y diferenciando qué puede contribuir a los síntomas.',
   image: 'assets/img/serveis/atm-carme.webp', imageWidth: 1280, imageHeight: 1600, imageAlt: 'Profesional de Estudi Dental Carrera durante una valoración de la mandíbula',
   introTitle: 'Bruxismo no es sinónimo de dolor mandibular',
@@ -270,10 +282,16 @@ pages['es-implants'] = servicePage('es', {
 });
 
 pages['ca-ortho'] = servicePage('ca', {
+  related: [
+    { href: '/clinica-dental-lleida.html', type: 'Clínica', label: 'Clínica dental a Lleida' },
+    { href: '/dentista-tremp.html', type: 'Clínica', label: 'Dentista a Tremp' },
+    { href: '/equip.html#carme-roure', type: 'Equip', label: 'Dra. Carme Roure · Ortodòncia i ATM' }
+  ],
   path: 'ortodoncia.html', alternatePath: 'es/ortodoncia.html',
   title: 'Ortodòncia a Lleida i Tremp | Estudi Dental Carrera',
   description: 'Ortodòncia amb alineadors o aparells a Lleida i Tremp. Estudi individual de mossegada, salut periodontal, alternatives i retenció.',
-  eyebrow: 'Ortodòncia en infants, adolescents i adults', h1: 'Moure dents amb un objectiu clar, no només alinear-les',
+  dateModified: '2026-09-15', updatedLabel: '15 de setembre de 2026',
+  eyebrow: 'Ortodòncia en infants, adolescents i adults', h1: 'Ortodòncia a Lleida i Tremp: alineadors i brackets',
   lead: 'L’ortodòncia pot millorar posició, funció i higiene, però necessita un diagnòstic complet, expectatives realistes i una fase de retenció planificada des del principi.',
   image: 'assets/img/serveis/ortodoncia-model.webp', imageWidth: 1280, imageHeight: 1600, imageAlt: 'Model digital utilitzat per planificar un tractament d’ortodòncia',
   introTitle: 'Alineadors i brackets són eines, no diagnòstics',
@@ -293,7 +311,7 @@ pages['ca-ortho'] = servicePage('ca', {
     {
       title: 'Durant el tractament i després: higiene i retenció',
       paragraphs: [
-        'Amb qualsevol aparell, la higiene és essencial. La placa al voltant de brackets o aditamentos de los alineadores pot afavorir inflamació gingival i desmineralitzacions. Revisem la tècnica, recomanem eines adaptades i coordinem higienes quan cal. Els alineadors s’han de portar les hores indicades i netejar correctament; si no hi ha prou ús, els moviments poden no seguir el pla.',
+        'Amb qualsevol aparell, la higiene és essencial. La placa al voltant dels brackets o dels ancoratges dels alineadors pot afavorir inflamació gingival i desmineralitzacions. Revisem la tècnica, recomanem eines adaptades i coordinem higienes quan cal. Els alineadors s’han de portar les hores indicades i netejar correctament; si no hi ha prou ús, els moviments poden no seguir el pla.',
         'És normal notar pressió o sensibilitat temporal després d’alguns canvis, però dolor intens, ferides persistents, un aparell trencat o moviments imprevistos s’han de comunicar. Els controls permeten comprovar que dents i teixits responen de manera segura. De vegades cal refinar el pla, canviar auxiliars o allargar terminis; no és prudent prometre una data exacta abans de veure l’evolució.',
         'Quan acaba el moviment actiu, les dents tenen tendència a canviar. La retenció, fixa o removible segons el cas, ajuda a mantenir el resultat, però també necessita controls i manteniment. Si un retenidor es desenganxa, deixa d’ajustar o es perd, convé revisar-lo aviat. La retenció no és un detall final: forma part del tractament des del primer dia.',
       ],
@@ -313,10 +331,16 @@ pages['ca-ortho'] = servicePage('ca', {
 });
 
 pages['es-ortho'] = servicePage('es', {
+  related: [
+    { href: '/es/clinica-dental-lleida.html', type: 'Clínica', label: 'Clínica dental en Lleida' },
+    { href: '/es/dentista-tremp.html', type: 'Clínica', label: 'Dentista en Tremp' },
+    { href: '/es/equipo.html#carme-roure', type: 'Equipo', label: 'Dra. Carme Roure · Ortodoncia y ATM' }
+  ],
   path: 'es/ortodoncia.html', alternatePath: 'ortodoncia.html',
   title: 'Ortodoncia en Lleida y Tremp | Estudi Dental Carrera',
   description: 'Ortodoncia con alineadores o aparatos en Lleida y Tremp. Estudio individual de mordida, salud periodontal, alternativas y retención.',
-  eyebrow: 'Ortodoncia en niños, adolescentes y adultos', h1: 'Ortodoncia para mejorar la posición de los dientes y la mordida',
+  dateModified: '2026-09-15', updatedLabel: '15 de septiembre de 2026',
+  eyebrow: 'Ortodoncia en niños, adolescentes y adultos', h1: 'Ortodoncia en Lleida y Tremp: alineadores y brackets',
   lead: 'La ortodoncia puede mejorar posición, función e higiene, pero necesita un diagnóstico completo, expectativas realistas y una fase de retención planificada desde el principio.',
   image: 'assets/img/serveis/ortodoncia-model.webp', imageWidth: 1280, imageHeight: 1600, imageAlt: 'Modelo digital utilizado para planificar un tratamiento de ortodoncia',
   introTitle: 'Alineadores y brackets son herramientas, no diagnósticos',
@@ -545,7 +569,7 @@ function locationPage(lang, spec) {
 
 pages['ca-lleida'] = locationPage('ca', {
   path: 'clinica-dental-lleida.html', alternatePath: 'es/clinica-dental-lleida.html', city: 'Lleida',
-  dateModified: '2026-09-01', updatedLabel: '1 de setembre de 2026',
+  dateModified: '2026-09-15', updatedLabel: '15 de setembre de 2026',
   title: 'Clínica dental a Lleida | Estudi Dental Carrera',
   description: 'Clínica dental al centre de Lleida. Odontologia conservadora, implants, ortodòncia, genives, ATM i estètica amb diagnòstic individual.',
   eyebrow: 'Carrer Major, Lleida', h1: 'Clínica dental a Lleida amb una mirada integral',
@@ -584,6 +608,7 @@ pages['ca-lleida'] = locationPage('ca', {
     },
   ],
   faqs: [
+    { q: 'La primera visita és gratuïta?', a: 'La primera visita és de pagament. Contacta amb recepció per saber-ne l’import i què inclou abans de reservar.' },
     { q: 'On és la clínica de Lleida?', a: 'Al carrer Major, 74-76, 3r 3a, 25007 Lleida. Recomanem confirmar amb recepció qualsevol necessitat d’accés.' },
     { q: 'Què he de portar a la primera visita?', a: 'Medicació, antecedents rellevants i radiografies o informes recents si en tens. No cal repetir proves útils sense motiu.' },
     { q: 'Puc demanar cita per WhatsApp?', a: 'Sí, com a canal de contacte. Evita enviar-hi dades clíniques sensibles i no l’utilitzis per a emergències.' },
@@ -603,7 +628,7 @@ pages['ca-lleida'] = locationPage('ca', {
 
 pages['es-lleida'] = locationPage('es', {
   path: 'es/clinica-dental-lleida.html', alternatePath: 'clinica-dental-lleida.html', city: 'Lleida',
-  dateModified: '2026-09-01', updatedLabel: '1 de septiembre de 2026',
+  dateModified: '2026-09-15', updatedLabel: '15 de septiembre de 2026',
   title: 'Clínica dental Lleida | Estudi Dental Carrera',
   description: 'Clínica dental en Lleida para diagnóstico, prevención, implantes, ortodoncia, encías, ATM y estética. Conoce al equipo y pide una primera visita.',
   eyebrow: 'Dentistas en carrer Major, Lleida', h1: 'Clínica dental en Lleida: diagnóstico y tratamientos coordinados',
@@ -642,6 +667,7 @@ pages['es-lleida'] = locationPage('es', {
     },
   ],
   faqs: [
+    { q: '¿La primera visita es gratuita?', a: 'La primera visita es de pago. Contacta con recepción para conocer el importe y qué incluye antes de reservar.' },
     { q: '¿Dónde está la clínica de Lleida?', a: 'En carrer Major, 74-76, 3.º 3.ª, 25007 Lleida. Recomendamos confirmar con recepción cualquier necesidad de acceso.' },
     { q: '¿Qué debo llevar a la primera visita?', a: 'Medicación, antecedentes relevantes y radiografías o informes recientes si los tienes. No hace falta repetir pruebas útiles sin motivo.' },
     { q: '¿Puedo pedir cita por WhatsApp?', a: 'Sí, como canal de contacto. Evita enviar datos clínicos sensibles y no lo utilices para emergencias.' },
@@ -660,6 +686,7 @@ pages['es-lleida'] = locationPage('es', {
 });
 
 pages['ca-tremp'] = locationPage('ca', {
+  dateModified: '2026-09-15', updatedLabel: '15 de setembre de 2026',
   path: 'dentista-tremp.html', alternatePath: 'es/dentista-tremp.html', city: 'Tremp',
   title: 'Dentista a Tremp | Estudi Dental Carrera',
   description: 'Clínica dental a Tremp per al Pallars: prevenció, odontologia conservadora, implants, ortodòncia, genives, ATM i seguiment proper.',
@@ -699,12 +726,18 @@ pages['ca-tremp'] = locationPage('ca', {
     },
   ],
   faqs: [
+    { q: 'La primera visita és gratuïta?', a: 'La primera visita és de pagament. Contacta amb recepció per saber-ne l’import i què inclou abans de reservar.' },
     { q: 'On és la clínica de Tremp?', a: 'Al carrer Montllobar, 22 baixos, 25620 Tremp. Pots confirmar com arribar-hi i qualsevol necessitat d’accés amb recepció.' },
     { q: 'Ateneu persones d’altres poblacions del Pallars?', a: 'Sí. La planificació de visites s’adapta al tractament i, si cal coordinació amb Lleida, s’explica prèviament.' },
     { q: 'Puc enviar fotografies per WhatsApp per obtenir un diagnòstic?', a: 'WhatsApp és un canal de contacte, no substitueix una exploració ni és adequat per enviar dades clíniques sensibles sense indicació.' },
     { q: 'Com es gestiona una urgència dental?', a: 'Truca al 650 60 01 72 perquè puguem valorar prioritat i disponibilitat. Davant d’una urgència vital, truca al 112.' },
   ],
   location: { id: 'tremp' },
+  related: [
+    { href: '/ortodoncia.html', type: 'Guia', label: 'Ortodòncia: opcions i seguiment' },
+    { href: '/atm-bruxisme.html', type: 'Guia', label: 'Dolor de mandíbula i bruxisme' },
+    { href: '/equip.html#tremp', type: 'Guia', label: 'Coneix l’equip de Tremp' }
+  ],
   sources: [
     { href: 'https://www.who.int/news-room/fact-sheets/detail/oral-health', label: 'OMS: salut oral' },
     { href: 'https://consejodentistas.es/informacion-publica/informacion-clinica/', label: 'Consejo General de Dentistas' },
@@ -712,6 +745,7 @@ pages['ca-tremp'] = locationPage('ca', {
 });
 
 pages['es-tremp'] = locationPage('es', {
+  dateModified: '2026-09-15', updatedLabel: '15 de septiembre de 2026',
   path: 'es/dentista-tremp.html', alternatePath: 'dentista-tremp.html', city: 'Tremp',
   title: 'Dentista en Tremp | Estudi Dental Carrera',
   description: 'Clínica dental en Tremp para el Pallars: prevención, odontología conservadora, implantes, ortodoncia, encías, ATM y seguimiento cercano.',
@@ -751,12 +785,18 @@ pages['es-tremp'] = locationPage('es', {
     },
   ],
   faqs: [
+    { q: '¿La primera visita es gratuita?', a: 'La primera visita es de pago. Contacta con recepción para conocer el importe y qué incluye antes de reservar.' },
     { q: '¿Dónde está la clínica de Tremp?', a: 'En carrer Montllobar, 22, bajos, 25620 Tremp. Puedes confirmar cómo llegar y cualquier necesidad de acceso con recepción.' },
     { q: '¿Atendéis a personas de otras poblaciones del Pallars?', a: 'Sí. La planificación de visitas se adapta al tratamiento y, si hace falta coordinación con Lleida, se explica previamente.' },
     { q: '¿Puedo enviar fotografías por WhatsApp para obtener un diagnóstico?', a: 'WhatsApp es un canal de contacto, no sustituye una exploración ni es adecuado para enviar datos clínicos sensibles sin indicación.' },
     { q: '¿Cómo se gestiona una urgencia dental?', a: 'Llama al 650 60 01 72 para que podamos valorar prioridad y disponibilidad. Ante una urgencia vital, llama al 112.' },
   ],
   location: { id: 'tremp' },
+  related: [
+    { href: '/es/ortodoncia.html', type: 'Guía', label: 'Ortodoncia: opciones y seguimiento' },
+    { href: '/es/atm-bruxismo.html', type: 'Guía', label: 'Dolor de mandíbula y bruxismo' },
+    { href: '/es/equipo.html#tremp', type: 'Guía', label: 'Conoce al equipo de Tremp' }
+  ],
   sources: [
     { href: 'https://www.who.int/news-room/fact-sheets/detail/oral-health', label: 'OMS: salud oral' },
     { href: 'https://consejodentistas.es/informacion-publica/informacion-clinica/', label: 'Consejo General de Dentistas' },
