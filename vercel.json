@@ -76,6 +76,21 @@
     { "source": "/politica-de-galetes", "destination": "/cookies.html", "permanent": true }
   ],
   "rewrites": [
+    { "source": "/guies/implant-o-pont.html", "destination": "/api/guide?key=implant-o-pont" },
+    { "source": "/es/guias/implante-o-puente.html", "destination": "/api/guide?key=implante-o-puente" },
+    { "source": "/guies/alineadors-o-braquets.html", "destination": "/api/guide?key=alineadors-o-braquets" },
+    { "source": "/es/guias/alineadores-o-brackets.html", "destination": "/api/guide?key=alineadores-o-brackets" },
+    { "source": "/guies/taques-dents.html", "destination": "/api/guide?key=taques-dents" },
+    { "source": "/es/guias/manchas-dientes.html", "destination": "/api/guide?key=manchas-dientes" },
+    {"source": "/guies.html", "destination": "/api/guide?key=index-ca"},
+    {"source": "/es/guias.html", "destination": "/api/guide?key=index-es"},
+    {"source": "/guies/endodoncia-dubtes.html", "destination": "/api/guide?key=endodoncia-dubtes"},
+    {"source": "/es/guias/endodoncia-dudas.html", "destination": "/api/guide?key=endodoncia-dudas"},
+    {"source": "/guies/sagnat-genives.html", "destination": "/api/guide?key=sagnat-genives"},
+    {"source": "/es/guias/sangrado-encias.html", "destination": "/api/guide?key=sangrado-encias"},
+    {"source": "/guies/ferula-descarrega.html", "destination": "/api/guide?key=ferula-descarrega"},
+    {"source": "/es/guias/ferula-descarga.html", "destination": "/api/guide?key=ferula-descarga"},
+
     { "source": "/seus.html", "destination": "/api/contact-route?lang=ca" },
     { "source": "/es/sedes.html", "destination": "/api/contact-route?lang=es" },
     { "source": "/stats/:path*", "destination": "https://estudi-dental-carrera-umami.vercel.app/:path*" },

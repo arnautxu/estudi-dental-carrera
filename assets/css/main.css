@@ -1632,6 +1632,7 @@ section[id], .team-card[id] { scroll-margin-top: 96px; }
   border-right:1px solid var(--beix-xlight);
   transition:background 200ms var(--ease);
 }
+.extra-card[id] { scroll-margin-top:112px; }
 .extra-card:nth-child(3n) { border-right:none; }
 @media (hover: hover) and (pointer: fine) {
   .extra-card:hover { background:var(--beix-bg); }

@@ -15,7 +15,7 @@ async function build() {
     }
   }
   for (const file of ['robots.txt', 'sitemap.xml', 'llms.txt']) await cp(file, `public/${file}`);
-  for (const file of ['css/main.css', 'css/landing.css', 'css/appointment.css', 'js/main.js', 'js/appointment.js']) {
+  for (const file of ['css/main.css', 'css/landing.css', 'css/guides.css', 'css/appointment.css', 'js/main.js', 'js/appointment.js']) {
     const source = await readFile(`assets/${file}`, 'utf8');
     const loader = file.endsWith('.css') ? 'css' : 'js';
     const result = await transform(source, { loader, minify: true, legalComments: 'none', target: 'es2020' });

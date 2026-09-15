@@ -3,6 +3,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const { pages } = require('../data/landing-pages');
+const { guides } = require('../data/guides');
 const landing = require('../api/landing');
 const origin = 'https://www.estudidentalcarrera.com';
 const sitemap = fs.readFileSync(path.join(__dirname, '../sitemap.xml'), 'utf8');
@@ -22,7 +23,8 @@ for (const [key, page] of Object.entries(pages)) {
     assert.ok(graph['@graph'].some(item => item['@type'] === 'WebPage' && item.url === `${origin}/${page.path}`));
     for (const link of page.related) {
       const [target, anchor] = link.href.slice(1).split('#');
-      const generated = Object.values(pages).some(p => p.path === target);
+      const generated = [...Object.values(pages), ...Object.values(guides)].some(p => p.path === target)
+        || ['guies.html', 'es/guias.html'].includes(target);
       const localFile = path.join(__dirname, '..', target);
       assert.ok(generated || fs.existsSync(localFile), link.href);
       if (anchor) assert.ok(fs.readFileSync(localFile, 'utf8').includes(`id="${anchor}"`), link.href);

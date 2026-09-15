@@ -1,5 +1,6 @@
 const { pages } = require('../data/landing-pages');
 const clinics = require('../data/clinics');
+const { renderHeader, renderFooter } = require('../lib/site-shell');
 
 const ORIGIN = 'https://www.estudidentalcarrera.com';
 
@@ -52,7 +53,10 @@ function jsonLd(page) {
 }
 
 function renderSection(section, index, { contact, trempContact, isEs }) {
-  const paragraphs = section.paragraphs.map(text => `<p>${text}</p>`).join('');
+  const paragraphs = (section.paragraphs || []).map(text => `<p>${text}</p>`).join('');
+  const blocks = section.blocks?.length
+    ? `<div class="landing-treatment-blocks">${section.blocks.map(block => `<div><h3>${escapeHtml(block.title)}</h3><p>${block.text}</p>${block.href ? `<a class="landing-treatment-blocks__link" href="${escapeHtml(block.href)}">${escapeHtml(block.linkLabel || block.title)} <span aria-hidden="true">→</span></a>` : ''}</div>`).join('')}</div>`
+    : '';
   const list = section.items && section.items.length
     ? `<ul>${section.items.map(item => `<li>${item}</li>`).join('')}</ul>`
     : '';
@@ -66,7 +70,7 @@ function renderSection(section, index, { contact, trempContact, isEs }) {
           <span class="landing-section__index">0${index + 1}</span>
           <h2>${section.title}</h2>
         </div>
-        <div class="landing-prose">${paragraphs}${list}${sectionCta}</div>
+        <div class="landing-prose">${paragraphs}${list}${blocks}${sectionCta}</div>
       </div>
     </section>`;
 }
@@ -152,16 +156,7 @@ function render(page) {
 </head>
 <body data-phone="${phone}" data-wa="${wa}" data-clinic="${clinicId}">
   <a href="#main" class="skip-link">${isEs ? 'Saltar al contenido' : 'Salta al contingut'}</a>
-  <header class="landing-nav">
-    <a href="${home}" class="landing-nav__brand" aria-label="Estudi Dental Carrera"><img src="/assets/img/logos/logo-carrera-vertical.png" width="163" height="210" alt="Estudi Dental Carrera" /></a>
-    <nav class="landing-nav__links" aria-label="${isEs ? 'Navegación principal' : 'Navegació principal'}">
-      <a href="${services}">${isEs ? 'Tratamientos' : 'Tractaments'}</a>
-      <a href="${team}">${isEs ? 'Equipo' : 'Equip'}</a>
-      <a href="${isEs ? '/es/clinica-dental-lleida.html' : '/clinica-dental-lleida.html'}">Lleida</a>
-      <a href="${isEs ? '/es/dentista-tremp.html' : '/dentista-tremp.html'}">Tremp</a>
-      <a href="/${page.alternatePath}" class="landing-nav__lang" hreflang="${isEs ? 'ca' : 'es'}">${isEs ? 'CA' : 'ES'}</a>
-    </nav>
-  </header>
+${renderHeader(page.lang, page.alternatePath, { active: isService ? 'services' : 'locations', hero: true })}
   <main id="main" class="landing-page">
     <section class="landing-hero">
       <img class="landing-hero__image" src="/${page.image}" width="${page.imageWidth}" height="${page.imageHeight}" alt="${escapeHtml(page.imageAlt)}" fetchpriority="high" />
@@ -189,7 +184,7 @@ function render(page) {
     <section class="landing-related"><div class="container"><span class="landing-kicker">${isEs ? 'Siguiente paso' : 'Següent pas'}</span><h2>${isEs ? 'Contenido relacionado' : 'Contingut relacionat'}</h2><div class="landing-related__grid">${page.related.map(item => `<a class="landing-related__card" href="${item.href}"><span>${item.type}</span><strong>${item.label}</strong><b>→</b></a>`).join('')}</div></div></section>
     <section class="landing-cta"><div class="container landing-cta__inner"><div><h2>${page.ctaTitle}</h2><p>${page.ctaText}</p></div><div class="landing-cta__actions"><a href="${contact}" class="btn btn--primary btn--lg" data-track="appointment_cta_click" data-track-label="landing-footer">${isService ? primaryCtaLabel : (isEs ? 'Pedir visita' : 'Demanar visita')}</a>${alternateClinicLink}</div></div></section>
   </main>
-  <footer class="landing-footer"><div class="landing-footer__grid"><div><h2>Estudi Dental Carrera</h2><p>${isEs ? 'Odontología conservadora y decisiones explicadas con claridad.' : 'Odontologia conservadora i decisions explicades amb claredat.'}</p></div><div><h2>Lleida</h2><p>Carrer Major, 74-76, 3r 3a<br />25007 Lleida<br /><a href="tel:+34973268826">973 26 88 26</a></p></div><div><h2>Tremp</h2><p>Carrer Montllobar, 22 Baixos<br />25620 Tremp<br /><a href="tel:+34650600172">650 60 01 72</a></p></div></div><div class="landing-footer__legal"><span>© 2026 Estudi Dental Carrera</span><a href="${isEs ? '/es/privacidad.html' : '/privacitat.html'}">${isEs ? 'Privacidad' : 'Privacitat'}</a><a href="${isEs ? '/es/aviso-legal.html' : '/avis-legal.html'}">${isEs ? 'Aviso legal' : 'Avís legal'}</a><a href="${isEs ? '/es/cookies.html' : '/cookies.html'}">Cookies</a><button type="button" data-consent-open>${isEs ? 'Preferencias de cookies' : 'Preferències de cookies'}</button></div></footer>
+${renderFooter(page.lang)}
   <script src="/assets/js/main.min.js?v=20260915-growth"></script>
 </body>
 </html>`;

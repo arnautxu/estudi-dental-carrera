@@ -394,7 +394,7 @@ pages['ca-ortho'] = servicePage('ca', {
   dateModified: '2026-09-15', updatedLabel: '15 de setembre de 2026',
   eyebrow: 'Ortodòncia en infants, adolescents i adults', h1: 'Ortodòncia a Lleida i Tremp: alineadors i brackets',
   lead: 'L’ortodòncia pot millorar posició, funció i higiene, però necessita un diagnòstic complet, expectatives realistes i una fase de retenció planificada des del principi.',
-  image: 'assets/img/serveis/ortodoncia-model.webp', imageWidth: 1280, imageHeight: 1600, imageAlt: 'Model digital utilitzat per planificar un tractament d’ortodòncia',
+  image: 'assets/img/serveis/ortodoncia-model.webp', imageWidth: 1280, imageHeight: 1600, imageAlt: 'Model de dents amb bràquets en un prestatge de la clínica',
   introTitle: 'Alineadors i brackets són eines, no diagnòstics',
   intro: [
     'A la clínica dental estudiem l’ortodòncia a Lleida i Tremp. Primer parlem del que vols corregir: dents apinyades, espais o dificultats en mossegar. Revisem les genives, l’os i les càries abans de moure les dents. En infants i adolescents, també tenim en compte el creixement.',
@@ -467,7 +467,7 @@ pages['es-ortho'] = servicePage('es', {
   dateModified: '2026-09-15', updatedLabel: '15 de septiembre de 2026',
   eyebrow: 'Ortodoncia en niños, adolescentes y adultos', h1: 'Ortodoncia en Lleida y Tremp: alineadores y brackets',
   lead: 'La ortodoncia puede mejorar posición, función e higiene, pero necesita un diagnóstico completo, expectativas realistas y una fase de retención planificada desde el principio.',
-  image: 'assets/img/serveis/ortodoncia-model.webp', imageWidth: 1280, imageHeight: 1600, imageAlt: 'Modelo digital utilizado para planificar un tratamiento de ortodoncia',
+  image: 'assets/img/serveis/ortodoncia-model.webp', imageWidth: 1280, imageHeight: 1600, imageAlt: 'Modelo de dientes con brackets en un estante de la clínica',
   introTitle: 'Alineadores y brackets son herramientas, no diagnósticos',
   intro: [
     'En la clínica dental estudiamos la ortodoncia en Lleida y Tremp. Primero hablamos de lo que quieres corregir: dientes apiñados, espacios o dificultades al morder. Revisamos las encías, el hueso y las caries antes de mover los dientes. En niños y adolescentes, también tenemos en cuenta el crecimiento.',
@@ -1153,4 +1153,5 @@ pages['es-tremp'] = locationPage('es', {
   ],
 });
 
+require('./service-enrichment').enrichPages(pages);
 module.exports = { pages };

@@ -151,3 +151,14 @@
 .landing-faq .landing-references summary::-webkit-details-marker { display:inline; }
 .landing-references ul { margin:.5rem 0 0; padding-left:1.25rem; line-height:1.7; }
 .landing-references a { color:inherit; text-decoration:underline; text-underline-offset:3px; }
+
+.landing-treatment-blocks { margin-top:1.5rem; }
+.landing-treatment-blocks > div { border-top:1px solid var(--beix-light); padding:1.6rem 0; }
+.landing-treatment-blocks h3 { margin:0 0 .8rem; font-size:1.75rem; }
+.landing-treatment-blocks p { margin-bottom:.5rem; }
+.landing-treatment-blocks__link { display:inline-flex; align-items:center; gap:.7rem; min-height:44px; color:var(--ink); text-decoration:underline; text-underline-offset:4px; font-size:1rem; }
+@media (max-width:560px) {
+  .landing-nav__links { gap:1rem; max-width:calc(100vw - 100px); }
+  .landing-nav__links a.landing-nav__guides,
+  .landing-nav__links a:first-child { display:inline-flex; min-height:44px; align-items:center; }
+}
