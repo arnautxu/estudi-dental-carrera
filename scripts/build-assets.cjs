@@ -9,6 +9,8 @@ async function build() {
   for (const folder of ['assets/img', 'assets/fonts']) await cp(folder, `public/${folder}`, { recursive: true });
   for (const folder of ['.', 'es']) {
     for (const file of (await readdir(folder)).filter(file => file.endsWith('.html'))) {
+      // The contact handler serves these documents and redirects legacy query URLs.
+      if ((folder === '.' && file === 'seus.html') || (folder === 'es' && file === 'sedes.html')) continue;
       await cp(`${folder}/${file}`, `public/${folder}/${file}`);
     }
   }

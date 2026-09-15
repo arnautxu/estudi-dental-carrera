@@ -1,8 +1,16 @@
+const fs = require('node:fs');
+const pathModule = require('node:path');
 // Old contact links carry UI state in the query. Keep that state in a fragment
 // so crawlers see one contact document per language, without duplicate URLs.
 module.exports = (req, res) => {
   const es = req.query.lang === 'es';
   const path = es ? '/es/sedes.html' : '/seus.html';
+  if (!Object.hasOwn(req.query, 'seu') && !Object.hasOwn(req.query, 'canal')) {
+    const html = fs.readFileSync(pathModule.join(process.cwd(), es ? 'es/sedes.html' : 'seus.html'), 'utf8');
+    res.setHeader('Content-Type', 'text/html; charset=utf-8');
+    res.setHeader('Cache-Control', 'public, s-maxage=86400');
+    return res.status(200).send(html);
+  }
   const clinic = ['carrera', 'tremp'].includes(req.query.seu) ? req.query.seu : '';
   const channel = ['whatsapp', 'directe'].includes(req.query.canal) ? req.query.canal : '';
   const state = [clinic, channel].filter(Boolean).join('-');

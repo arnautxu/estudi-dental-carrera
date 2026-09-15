@@ -2,11 +2,18 @@ const { test } = require('node:test');
 const assert = require('node:assert/strict');
 const handler = require('../api/contact-route');
 function redirect(query) {
-  const res = { headers: {}, setHeader(k, v) { this.headers[k] = v; }, status(code) { this.code = code; return this; }, end() {} };
+  const res = { headers: {}, setHeader(k, v) { this.headers[k] = v; }, status(code) { this.code = code; return this; }, end() {}, send(html) { this.html = html; } };
   handler({ query }, res);
   return res;
 }
 for (const lang of ['ca', 'es']) {
+  test(`canonical contact ${lang} serves its complete form and matching language metadata`, () => {
+    const res = redirect({ lang });
+    assert.equal(res.code, 200);
+    assert.match(res.html, /data-appointment/);
+    assert.ok(res.html.includes(`<html lang="${lang}"`));
+    assert.ok(res.html.includes(`id="${lang === 'es' ? 'contacto' : 'contacte'}-tremp"`));
+  });
   for (const [key, state] of [['seu', 'carrera'], ['seu', 'tremp'], ['canal', 'whatsapp'], ['canal', 'directe']]) {
     test(`legacy contact ${lang}/${state} keeps the selected clinic or channel without a duplicate query`, () => {
       const res = redirect({ lang, [key]: state });
