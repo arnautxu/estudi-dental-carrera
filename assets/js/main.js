@@ -527,6 +527,7 @@ console.log(
   let umamiQueue = [];
   function applyUmami(prefs) {
     if (prefs && prefs.umami) loadUmami();
+    else umamiQueue = [];
   }
   async function loadUmami() {
     if (umamiLoaded || umamiLoading) return;
@@ -546,6 +547,11 @@ console.log(
       umamiLoading = false;
       return;
     }
+    if (!current().umami) {
+      umamiLoading = false;
+      umamiQueue = [];
+      return;
+    }
     window.UMAMI_WEBSITE_ID = id;
     const s = document.createElement('script');
     s.async = true;
@@ -556,8 +562,9 @@ console.log(
     s.onload = () => {
       umamiLoaded = true;
       umamiLoading = false;
-      if (window.umami && typeof window.umami.track === 'function') {
-        umamiQueue.splice(0).forEach(item => window.umami.track(item.name, item.params));
+      const pending = umamiQueue.splice(0);
+      if (current().umami && window.umami && typeof window.umami.track === 'function') {
+        pending.forEach(item => window.umami.track(item.name, item.params));
       }
     };
     s.onerror = () => { umamiLoading = false; };
@@ -806,11 +813,17 @@ window.track = function track(name, params) {
 };
 
 (function initTracking() {
+  const clinicForNumber = value => {
+    const digits = value.replace(/\D/g, '');
+    if (digits.endsWith('650600172')) return 'tremp';
+    if (digits.endsWith('973268826') || digits.endsWith('615983352')) return 'lleida';
+    return 'general';
+  };
   document.addEventListener('click', e => {
     const tel = e.target.closest('a[href^="tel:"]');
     if (tel) {
       window.track('phone_click', {
-        clinic: tel.getAttribute('href').includes('650600172') ? 'tremp' : 'lleida',
+        clinic: clinicForNumber(tel.getAttribute('href')),
         page_path: window.location.pathname
       });
       return;
@@ -818,7 +831,7 @@ window.track = function track(name, params) {
     const wa = e.target.closest('a[href*="wa.me"]');
     if (wa) {
       window.track('whatsapp_click', {
-        clinic: wa.getAttribute('data-seu') || 'general',
+        clinic: clinicForNumber(new URL(wa.href).pathname),
         page_path: window.location.pathname
       });
       return;
@@ -826,7 +839,19 @@ window.track = function track(name, params) {
     const cta = e.target.closest('[data-track]');
     if (cta) {
       window.track(cta.getAttribute('data-track'), { etiqueta: cta.getAttribute('data-track-label') || cta.textContent.trim().slice(0, 60) });
+      return;
     }
+    // Navigation and the mobile bar also lead to the appointment form.
+    // Count the intent once; a phone/WhatsApp tap is never a confirmed lead.
+    const link = e.target.closest('a[href]');
+    if (!link || link.hasAttribute('hreflang')) return;
+    const url = new URL(link.href, window.location.href);
+    if (url.origin !== window.location.origin || !['/seus.html', '/es/sedes.html'].includes(url.pathname)) return;
+    if (!/^#contact[eo](?:-(?:carrera|tremp|whatsapp|directe))?(?:-(?:whatsapp|directe))?$/.test(url.hash)) return;
+    const direct = /-(whatsapp|directe)$/.test(url.hash);
+    const clinic = /-tremp(?:-|$)/.test(url.hash) ? 'tremp' : /-carrera(?:-|$)/.test(url.hash) ? 'lleida' : 'unselected';
+    const position = link.closest('.mobile-cta-bar') ? 'mobile-bar' : link.closest('.mobile-menu') ? 'mobile-menu' : link.closest('.nav') ? 'navigation' : link.closest('.footer') ? 'footer' : 'page';
+    window.track(direct ? 'contact_options_click' : 'appointment_cta_click', { clinic, etiqueta: position });
   }, { passive: true });
 
 })();

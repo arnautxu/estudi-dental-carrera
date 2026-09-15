@@ -16,8 +16,34 @@
   let sent = false;
   let requestId = '';
   let previousPayload = '';
+  let started = false;
+  const measuredSteps = new Set();
   const selected = () => form.querySelector('[name="seu"]:checked')?.value || '';
   const clinic = () => clinics[selected()];
+
+  // Only fixed funnel labels leave this form. No field values, orientation,
+  // request IDs or validation messages belong in analytics.
+  function measure(name, extra = {}) {
+    window.track?.(name, {
+      form_name: 'appointment',
+      clinic: selected() === 'carrera' ? 'lleida' : selected() === 'tremp' ? 'tremp' : 'unselected',
+      ...extra
+    });
+  }
+
+  function measureStep() {
+    const key = `${step}:${selected()}`;
+    if (!started || measuredSteps.has(key)) return;
+    measuredSteps.add(key);
+    measure('appointment_step', { form_step: step + 1 });
+  }
+
+  function startMeasurement() {
+    if (started || sent) return;
+    started = true;
+    measure('appointment_start');
+    measureStep();
+  }
 
   function setStatus(message = '', kind = 'error') {
     status.textContent = message;
@@ -67,12 +93,14 @@
     });
     setStatus();
     form.querySelector('[data-recovery]').hidden = true;
+    measureStep();
     if (focus) steps[step].querySelector('legend').focus();
   }
 
   function validateClinic() {
     if (clinic()) return true;
     fieldError('seu', text('Escull la clínica on prefereixes venir.', 'Elige la clínica a la que prefieres venir.'));
+    measure('appointment_error', { form_step: 2, error_type: 'clinic_required' });
     form.querySelector('[name="seu"]').focus();
     return false;
   }
@@ -90,7 +118,10 @@
     if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) fields.push(['email', text('Revisa l’adreça de correu o deixa aquest camp buit.', 'Revisa la dirección de correo o deja este campo vacío.')]);
     if (!form.elements.consent.checked) fields.push(['consent', text('Cal acceptar el tractament de les dades per enviar la sol·licitud.', 'Debes aceptar el tratamiento de los datos para enviar la solicitud.')]);
     fields.forEach(([name, message]) => fieldError(name, message));
-    if (fields.length) form.querySelector(`[name="${fields[0][0]}"]`).focus();
+    if (fields.length) {
+      measure('appointment_error', { form_step: 3, error_type: 'contact_validation' });
+      form.querySelector(`[name="${fields[0][0]}"]`).focus();
+    }
     return !fields.length;
   }
 
@@ -100,13 +131,19 @@
   showStep(0, false);
   form.querySelectorAll('[data-next]').forEach(button => button.addEventListener('click', () => {
     if (busy) return;
+    startMeasurement();
     clearErrors();
     if (step === 1 && !validateClinic()) return;
     showStep(step + 1);
   }));
   form.querySelectorAll('[data-back]').forEach(button => button.addEventListener('click', () => { if (!busy) showStep(step - 1); }));
   form.querySelector('[data-edit-clinic]').addEventListener('click', () => { if (!busy) showStep(1); });
-  form.querySelectorAll('[name="seu"]').forEach(radio => radio.addEventListener('change', () => { clearErrors(); updateClinic(); }));
+  form.querySelectorAll('[name="seu"]').forEach(radio => radio.addEventListener('change', () => {
+    startMeasurement(); clearErrors(); updateClinic(); measureStep();
+  }));
+  form.addEventListener('input', event => {
+    if (['name', 'phone', 'email', 'horari', 'consent'].includes(event.target.name)) startMeasurement();
+  });
   const orientation = [
     text('Pots explicar quan notes la molèstia durant la trucada. No cal que sàpigues quin tractament necessites.', 'Puedes explicar cuándo notas la molestia durante la llamada. No necesitas saber qué tratamiento necesitas.'),
     text('La primera visita permetrà valorar què passa. Aquí només estàs demanant que contactem amb tu.', 'La primera visita permitirá valorar qué ocurre. Aquí solo estás pidiendo que contactemos contigo.'),
@@ -151,6 +188,7 @@
   form.addEventListener('submit', async event => {
     event.preventDefault();
     if (busy || sent) return;
+    startMeasurement();
     // Enter in earlier steps advances instead of bypassing the clinic selection.
     if (step < 2) { steps[step].querySelector('[data-next]').click(); return; }
     clearErrors();
@@ -177,11 +215,13 @@
     form.querySelector('[data-recovery]').hidden = true;
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 15000);
+    let failureType = 'network_error';
     try {
       const response = await fetch('/api/contact', {
         method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify(payload), signal: controller.signal
       });
+      failureType = response.status === 429 ? 'rate_limited' : 'request_failed';
       const result = await response.json();
       if (!response.ok || result.ok !== true) {
         if (response.status === 400 && Array.isArray(result.fields)) {
@@ -201,12 +241,13 @@
         `Hem rebut la teva sol·licitud per a ${c.name}, a ${c.city}. La recepció es posarà en contacte amb tu per concretar la visita.`,
         `Hemos recibido tu solicitud para ${c.name}, en ${c.city}. Recepción se pondrá en contacto contigo para concretar la visita.`
       );
-      window.track?.('generate_lead', { form_name: 'appointment', clinic: selected() });
+      measure('generate_lead');
       // Clear personal details and local orientation after confirmed acceptance.
       form.reset();
       form.querySelector('[data-orientation-feedback]').textContent = '';
       success.querySelector('h3').focus();
     } catch (_) {
+      measure('appointment_error', { form_step: 3, error_type: controller.signal.aborted ? 'timeout' : failureType });
       setStatus(text('No hem pogut confirmar l’enviament. Les dades es conserven: torna-ho a provar o contacta directament amb la clínica.', 'No hemos podido confirmar el envío. Tus datos se conservan: vuelve a intentarlo o contacta directamente con la clínica.'));
       recovery();
     } finally {
@@ -220,6 +261,7 @@
 
   form.querySelector('[data-restart]').addEventListener('click', () => {
     sent = false; requestId = ''; previousPayload = '';
+    started = false; measuredSteps.clear();
     form.querySelector('[data-success]').hidden = true;
     form.querySelector('.appointment-steps').hidden = false;
     clearErrors(); updateClinic(); showStep(0);

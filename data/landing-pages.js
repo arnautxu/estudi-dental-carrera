@@ -118,19 +118,31 @@ pages['ca-atm'] = servicePage('ca', {
   ],
   sections: [
     {
-      title: 'Què valorem i què no es pot deduir a simple vista',
+      title: 'Quins símptomes convé explicar a la visita',
       paragraphs: [
-        'Els sorolls articulars sense dolor ni limitació són freqüents i no sempre necessiten tractament. En canvi, un bloqueig recent, una obertura molt limitada, un canvi sobtat de la mossegada o un dolor que empitjora mereixen una valoració específica. També revisem cefalees, dolor d’oïda no explicat, traumatismes, artritis, apnees o medicació, perquè poden canviar el diagnòstic diferencial i la necessitat de coordinació amb altres professionals.',
-        'En el bruxisme distingim, fins on és possible, l’activitat durant el son de l’hàbit d’apretar mentre estem desperts. No són exactament el mateix i poden requerir enfocaments diferents. Les marques a la llengua, la tensió muscular o el desgast poden orientar, però cap signe aïllat confirma intensitat, causa o evolució. Documentar els patrons i relacionar-los amb els símptomes és més útil que buscar una explicació única.',
-        'Quan hi ha desgast dental, avaluem si està actiu, si també hi participen l’erosió àcida o altres factors i si la funció està compromesa. Protegir les dents pot ser un objectiu diferent de reduir el dolor. Explicar aquesta diferència evita esperar que una sola intervenció resolgui tots els aspectes alhora.',
+        'Un soroll a la mandíbula sense dolor ni limitació no sempre necessita tractament. Un bloqueig recent, una obertura molt limitada o un dolor que empitjora sí que mereixen una valoració. Passa el mateix si la manera de mossegar canvia de sobte.',
+        'Ens interessa saber quan va començar, en quins moments es repeteix i quines activitats limita. Preguntem també per mal de cap o d’orella, cops, artritis, pauses en respirar durant el son i medicació. Aquestes dades ajuden a decidir si cal coordinar l’atenció amb un altre professional.',
+      ],
+      items: [
+        'Si et fa mal en despertar, en menjar o al final del dia.',
+        'Si la mandíbula es bloqueja o s’obre menys que abans.',
+        'Si estrenys les dents de dia o t’han sentit grinyolar-les mentre dorms.',
+        'Si notes un canvi recent en mossegar.',
       ],
     },
     {
-      title: 'Opcions conservadores i fèrules: quan poden ajudar',
+      title: 'Quina diferència hi ha entre bruxisme i dolor de mandíbula',
       paragraphs: [
-        'Molts casos es comencen amb mesures reversibles: informació sobre el problema, descans temporal de sobrecàrregues, exercicis o fisioteràpia indicats, treball sobre hàbits diürns i mesures de son. La tria depèn del diagnòstic. No recomanem exercicis genèrics en fases agudes o davant d’un bloqueig sense haver explorat abans, perquè el mateix consell no és adequat per a totes les situacions.',
-        'Una fèrula oclusal pot plantejar-se per protegir les dents, redistribuir càrregues o ajudar en determinats quadres, però no “cura” automàticament el bruxisme ni és apropiada en qualsevol disfunció temporomandibular. Cal dissenyar-la per a una indicació concreta, comprovar-ne l’ajust i revisar-ne l’ús. Les fèrules comprades sense diagnòstic poden adaptar-se malament i dificultar el control dels símptomes.',
-        'Si detectem senyals que queden fora de l’àmbit dental, proposem coordinació amb medicina, fisioteràpia, unitats del son o altres especialitats. L’objectiu no és acumular tractaments, sinó decidir quin professional pot respondre millor cada pregunta i començar per les opcions menys invasives compatibles amb la situació.',
+        'Estrènyer les dents de dia i grinyolar-les mentre dorms no és ben bé el mateix. Poden requerir enfocaments diferents. Les marques a la llengua, la tensió muscular o el desgast ajuden a orientar. Per si sols no expliquen la causa ni quant durarà el problema.',
+        'Si hi ha desgast, revisem si continua avançant i si també hi intervenen àcids o altres factors. Comprovem si afecta la funció. Protegir les dents i reduir el dolor poden ser objectius diferents: una sola mesura no sempre resol tots dos.',
+      ],
+    },
+    {
+      title: 'Quan pot ajudar una fèrula',
+      paragraphs: [
+        'En molts casos comencem per mesures reversibles. Poden incloure informació, canvis d’hàbits, reducció temporal de les sobrecàrregues o exercicis i fisioteràpia indicats per al cas. Davant de dolor agut o un bloqueig, primer cal explorar; no tots els exercicis serveixen per a tothom.',
+        'Una fèrula pot protegir les dents o ajudar en certs quadres. No elimina automàticament el bruxisme ni és adequada per a qualsevol problema d’ATM. Expliquem per què la proposem, comprovem l’ajust i en revisem l’ús. Una fèrula comprada sense diagnòstic es pot adaptar malament.',
+        'Si el problema requereix una altra àrea d’atenció, proposem coordinació amb medicina, fisioteràpia o una unitat del son. Busquem quin professional pot respondre a cada necessitat i comencem per les opcions menys invasives que permeti el cas.',
       ],
     },
   ],
@@ -168,19 +180,31 @@ pages['es-atm'] = servicePage('es', {
   ],
   sections: [
     {
-      title: 'Qué valoramos y qué no puede deducirse a simple vista',
+      title: 'Qué síntomas conviene explicar en la visita',
       paragraphs: [
-        'Los ruidos articulares sin dolor ni limitación son frecuentes y no siempre necesitan tratamiento. En cambio, un bloqueo reciente, una apertura muy limitada, un cambio brusco de la mordida o un dolor que empeora merecen una valoración específica. También revisamos cefaleas, dolor de oído no explicado, traumatismos, artritis, apneas o medicación, porque pueden cambiar el diagnóstico diferencial y la necesidad de coordinación con otros profesionales.',
-        'En el bruxismo distinguimos, hasta donde es posible, la actividad durante el sueño del hábito de apretar mientras estamos despiertos. No son exactamente lo mismo y pueden requerir enfoques distintos. Las marcas en la lengua, la tensión muscular o el desgaste pueden orientar, pero ningún signo aislado confirma intensidad, causa o evolución. Documentar los patrones y relacionarlos con los síntomas es más útil que buscar una explicación única.',
-        'Cuando existe desgaste dental, evaluamos si está activo, si también participan la erosión ácida u otros factores y si la función está comprometida. Proteger los dientes puede ser un objetivo diferente de reducir el dolor. Explicar esta diferencia evita esperar que una sola intervención resuelva todos los aspectos a la vez.',
+        'Un ruido en la mandíbula sin dolor ni limitación no siempre necesita tratamiento. Un bloqueo reciente, una apertura muy limitada o un dolor que empeora sí merecen una valoración. Lo mismo ocurre si la forma de morder cambia de repente.',
+        'Nos interesa saber cuándo empezó, en qué momentos se repite y qué actividades limita. Preguntamos también por dolor de cabeza u oído, golpes, artritis, pausas al respirar durante el sueño y medicación. Estos datos ayudan a decidir si hace falta coordinar la atención con otro profesional.',
+      ],
+      items: [
+        'Si te duele al despertar, al comer o al final del día.',
+        'Si la mandíbula se bloquea o abre menos que antes.',
+        'Si aprietas los dientes de día o te han oído rechinarlos al dormir.',
+        'Si notas un cambio reciente al morder.',
       ],
     },
     {
-      title: 'Opciones conservadoras y férulas: cuándo pueden ayudar',
+      title: 'Qué diferencia hay entre bruxismo y dolor de mandíbula',
       paragraphs: [
-        'Muchos casos empiezan con medidas reversibles: información sobre el problema, reducción temporal de las sobrecargas, ejercicios o fisioterapia indicados, revisión de los hábitos diurnos y del sueño. La elección depende del diagnóstico. No recomendamos ejercicios genéricos en fases agudas o ante un bloqueo sin haber explorado antes, porque el mismo consejo no es adecuado para todas las situaciones.',
-        'Una férula oclusal puede plantearse para proteger los dientes, redistribuir cargas o ayudar en determinados cuadros, pero no “cura” automáticamente el bruxismo ni es apropiada en cualquier disfunción temporomandibular. Debe diseñarse para una indicación concreta, comprobar su ajuste y revisar su uso. Las férulas compradas sin diagnóstico pueden adaptarse mal y dificultar el control de los síntomas.',
-        'Si detectamos señales que quedan fuera del ámbito dental, proponemos coordinación con medicina, fisioterapia, unidades del sueño u otras especialidades. El objetivo no es acumular tratamientos, sino decidir qué profesional puede responder mejor a cada pregunta y empezar por las opciones menos invasivas compatibles con la situación.',
+        'Apretar los dientes de día y rechinarlos mientras duermes no son exactamente lo mismo. Pueden requerir enfoques distintos. Las marcas en la lengua, la tensión muscular o el desgaste ayudan a orientar. Por sí solos no explican la causa ni cuánto durará el problema.',
+        'Si hay desgaste, revisamos si sigue avanzando y si también intervienen ácidos u otros factores. Comprobamos si afecta a la función. Proteger los dientes y reducir el dolor pueden ser objetivos distintos: una sola medida no siempre resuelve ambos.',
+      ],
+    },
+    {
+      title: 'Cuándo puede ayudar una férula',
+      paragraphs: [
+        'En muchos casos empezamos por medidas reversibles. Pueden incluir información, cambios de hábitos, reducción temporal de las sobrecargas o ejercicios y fisioterapia indicados para el caso. Ante dolor agudo o un bloqueo, primero hay que explorar; no todos los ejercicios sirven para todos.',
+        'Una férula puede proteger los dientes o ayudar en ciertos cuadros. No elimina automáticamente el bruxismo ni es adecuada para cualquier problema de ATM. Explicamos para qué la proponemos, comprobamos su ajuste y revisamos su uso. Una férula comprada sin diagnóstico puede adaptarse mal.',
+        'Si el problema requiere otra área de atención, proponemos coordinación con medicina, fisioterapia o una unidad del sueño. Buscamos qué profesional puede responder a cada necesidad y empezamos por las opciones menos invasivas que permita el caso.',
       ],
     },
   ],
@@ -212,19 +236,33 @@ pages['ca-implants'] = servicePage('ca', {
   ],
   sections: [
     {
-      title: 'Alternatives, riscos i decisions abans de la cirurgia',
+      title: 'Què decidim abans d’extreure una dent',
       paragraphs: [
-        'Abans d’extreure una dent revisem si encara es pot conservar amb un pronòstic raonable. Quan l’extracció és necessària, expliquem si convé esperar la cicatrització, preservar l’alvèol o col·locar l’implant en el mateix acte. “Implant immediat” descriu el moment de col·locació, no garanteix que es pugui carregar una dent fixa immediatament. Aquestes decisions depenen de l’estabilitat, la infecció, l’os, els teixits i les forces que rebrà.',
-        'Entre els riscos hi ha infecció, sagnat, lesió d’estructures pròximes, falta d’integració, pèrdua d’os o complicacions de la pròtesi. El risc varia segons la zona i la persona. El tabac i una malaltia periodontal no controlada poden empitjorar el pronòstic. Explicar-ho no significa que hagi de passar, sinó que forma part del consentiment i permet reduir riscos modificables abans de començar.',
-        'Quan falta os es poden considerar tècniques de regeneració, però no són automàtiques ni sempre aporten el mateix benefici. A vegades una pròtesi diferent, un implant més curt o no substituir una peça posterior pot ser una alternativa raonable. El pla compara complexitat, temps, manteniment i impacte funcional, no només la possibilitat tècnica de fer una cirurgia.',
+        'Primer revisem si la dent encara es pot conservar. Si cal extreure-la, expliquem les opcions: esperar que cicatritzi, conservar l’os de la zona o col·locar l’implant en aquell moment. La tria depèn de l’os, la infecció, l’estabilitat i la força de la mossegada.',
+        'Col·locar un implant el mateix dia de l’extracció no vol dir que es pugui posar també una dent fixa aquell dia. Són dues decisions diferents. La càrrega immediata només es planteja quan l’estudi del cas ho permet.',
+        'Si falta os, podem valorar una regeneració. També comparem altres opcions, com una pròtesi diferent, un implant més curt o no reposar una peça posterior. Revisem què aporta cada alternativa i què exigeix en temps, cirurgia i manteniment.',
       ],
     },
     {
-      title: 'Cirurgia guiada, pròtesi i manteniment',
+      title: 'Les fases del tractament amb implants',
       paragraphs: [
-        'La cirurgia guiada utilitza la planificació digital i una guia per traslladar una posició prevista a la boca. Pot aportar control en casos seleccionats, però requereix registres precisos i no elimina la necessitat de criteri clínic. Tampoc converteix qualsevol cas en un procediment sense incisions ni garanteix una recuperació concreta. La tècnica s’escull per la seva utilitat real en aquell cas.',
-        'Després de la integració es dissenya la corona, el pont o la pròtesi. Comprovem l’ajust, la mossegada, la fonètica, l’estètica i l’accés per netejar. Una restauració difícil d’higienitzar pot donar problemes encara que l’implant estigui ben integrat. Per això ensenyem eines i tècniques adaptades i programem revisions segons el risc.',
-        'Els implants no pateixen càries, però els teixits que els envolten poden inflamar-se i perdre suport. El sagnat, la supuració, el mal gust, la mobilitat o una molèstia persistent mereixen revisió. El manteniment professional no substitueix la higiene diària, i cap implant es pot presentar honestament com una solució “per sempre” sense controls.',
+        'El pla comença per definir les dents que volem recuperar. Després decidim la posició dels implants i si cal preparar abans l’os o les genives. L’ordre i la durada canvien segons el cas.',
+        'La cirurgia guiada fa servir una guia preparada a partir de la planificació digital. Pot ajudar a col·locar l’implant en la posició prevista. Requereix registres precisos i criteri clínic. No garanteix una cirurgia sense incisions ni una recuperació concreta.',
+        'Després de la integració de l’implant es prepara la corona, el pont o la pròtesi. Comprovem com encaixa, com mossegues i com parles. També revisem l’aspecte i l’espai per netejar.',
+      ],
+      items: [
+        'Estudi, alternatives i pressupost del pla.',
+        'Preparació prèvia quan cal i col·locació de l’implant.',
+        'Revisions de la cicatrització i la integració.',
+        'Pròtesi, ajust de la mossegada i manteniment.',
+      ],
+    },
+    {
+      title: 'Riscos i cures que has de conèixer',
+      paragraphs: [
+        'Hi pot haver infecció, sagnat o lesió d’estructures properes. També pot fallar la integració, perdre’s os o aparèixer una complicació de la pròtesi. El risc canvia segons la zona i la persona. El tabac i una malaltia de les genives sense controlar poden empitjorar l’evolució.',
+        'Expliquem aquests riscos abans de començar i revisem quins es poden reduir. El consentiment inclou les limitacions del tractament i les alternatives. Cap implant es pot presentar com una solució garantida per a tota la vida.',
+        'Un implant no té càries, però la geniva i l’os que l’envolten poden emmalaltir. La neteja diària i els controls continuen sent necessaris. T’ensenyem com netejar la pròtesi i adaptem les revisions al risc. Consulta si hi ha sagnat, pus, mal gust, mobilitat o molèsties persistents.',
       ],
     },
   ],
@@ -257,19 +295,33 @@ pages['es-implants'] = servicePage('es', {
   ],
   sections: [
     {
-      title: 'Alternativas, riesgos y decisiones antes de la cirugía',
+      title: 'Qué decidimos antes de extraer un diente',
       paragraphs: [
-        'Antes de extraer un diente revisamos si todavía puede conservarse con un pronóstico razonable. Cuando la extracción es necesaria, explicamos si conviene esperar la cicatrización, preservar el alveolo o colocar el implante en el mismo acto. “Implante inmediato” describe el momento de colocación, no garantiza que pueda cargarse un diente fijo inmediatamente. Estas decisiones dependen de la estabilidad, la infección, el hueso, los tejidos y las fuerzas que recibirá.',
-        'Entre los riesgos están la infección, el sangrado, la lesión de estructuras próximas, la falta de integración, la pérdida de hueso o las complicaciones de la prótesis. El riesgo varía según la zona y la persona. El tabaco y una enfermedad periodontal no controlada pueden empeorar el pronóstico. Explicarlo no significa que tenga que ocurrir, sino que forma parte del consentimiento y permite reducir riesgos modificables antes de empezar.',
-        'Cuando falta hueso pueden considerarse técnicas de regeneración, pero no son automáticas ni siempre aportan el mismo beneficio. A veces una prótesis distinta, un implante más corto o no sustituir una pieza posterior puede ser una alternativa razonable. El plan compara complejidad, tiempo, mantenimiento e impacto funcional, no solo la posibilidad técnica de realizar una cirugía.',
+        'Primero revisamos si el diente todavía puede conservarse. Si hay que extraerlo, explicamos las opciones: esperar a que cicatrice, conservar el hueso de la zona o colocar el implante en ese momento. La elección depende del hueso, la infección, la estabilidad y la fuerza de la mordida.',
+        'Colocar un implante el mismo día de la extracción no significa que se pueda colocar también un diente fijo ese día. Son dos decisiones distintas. La carga inmediata solo se plantea cuando el estudio del caso lo permite.',
+        'Si falta hueso, podemos valorar una regeneración. También comparamos otras opciones, como una prótesis distinta, un implante más corto o no reponer una pieza posterior. Revisamos qué aporta cada alternativa y qué exige en tiempo, cirugía y mantenimiento.',
       ],
     },
     {
-      title: 'Cirugía guiada, prótesis y mantenimiento',
+      title: 'Las fases del tratamiento con implantes',
       paragraphs: [
-        'La cirugía guiada utiliza la planificación digital y una guía para trasladar una posición prevista a la boca. Puede aportar control en casos seleccionados, pero requiere registros precisos y no elimina la necesidad de criterio clínico. Tampoco convierte cualquier caso en un procedimiento sin incisiones ni garantiza una recuperación concreta. La técnica se elige por su utilidad real en ese caso.',
-        'Después de la integración se diseña la corona, el puente o la prótesis. Comprobamos el ajuste, la mordida, la fonética, la estética y el acceso para limpiar. Una restauración difícil de higienizar puede dar problemas aunque el implante esté bien integrado. Por eso enseñamos herramientas y técnicas adaptadas y programamos revisiones según el riesgo.',
-        'Los implantes no sufren caries, pero los tejidos que los rodean pueden inflamarse y perder soporte. El sangrado, la supuración, el mal sabor, la movilidad o una molestia persistente merecen revisión. El mantenimiento profesional no sustituye la higiene diaria, y ningún implante puede presentarse honestamente como una solución “para siempre” sin controles.',
+        'El plan empieza por definir los dientes que queremos recuperar. Después decidimos la posición de los implantes y si hace falta preparar antes el hueso o las encías. El orden y la duración cambian según el caso.',
+        'La cirugía guiada usa una guía preparada a partir de la planificación digital. Puede ayudar a colocar el implante en la posición prevista. Requiere registros precisos y criterio clínico. No garantiza una cirugía sin incisiones ni una recuperación concreta.',
+        'Tras la integración del implante se prepara la corona, el puente o la prótesis. Comprobamos cómo encaja, cómo muerdes y cómo hablas. También revisamos el aspecto y el espacio para limpiar.',
+      ],
+      items: [
+        'Estudio, alternativas y presupuesto del plan.',
+        'Preparación previa cuando es necesaria y colocación del implante.',
+        'Revisiones de la cicatrización y la integración.',
+        'Prótesis, ajuste de la mordida y mantenimiento.',
+      ],
+    },
+    {
+      title: 'Riesgos y cuidados que debes conocer',
+      paragraphs: [
+        'Puede haber infección, sangrado o lesión de estructuras cercanas. También puede fallar la integración, perderse hueso o aparecer una complicación de la prótesis. El riesgo cambia según la zona y la persona. El tabaco y una enfermedad de las encías sin controlar pueden empeorar la evolución.',
+        'Explicamos estos riesgos antes de empezar y revisamos cuáles se pueden reducir. El consentimiento incluye las limitaciones del tratamiento y sus alternativas. Ningún implante puede presentarse como una solución garantizada para toda la vida.',
+        'Un implante no tiene caries, pero la encía y el hueso que lo rodean pueden enfermar. La limpieza diaria y los controles siguen siendo necesarios. Te enseñamos cómo limpiar la prótesis y adaptamos las revisiones al riesgo. Consulta si hay sangrado, pus, mal sabor, movilidad o molestias persistentes.',
       ],
     },
   ],
@@ -397,24 +449,44 @@ pages['ca-perio'] = servicePage('ca', {
   image: 'assets/img/headers/hero-serveis.webp', imageWidth: 2200, imageHeight: 942, imageAlt: 'Gabinet d’Estudi Dental Carrera preparat per a tractaments conservadors',
   introTitle: 'Dues àrees diferents amb un objectiu compartit',
   intro: [
-    'A la nostra clínica dental, valorem tractaments de periodòncia a Lleida i Tremp. La periodòncia tracta les genives i els teixits que sostenen les dents. L’endodòncia tracta l’interior de la dent quan la polpa està inflamada o infectada. Poden donar símptomes semblants, com sensibilitat, dolor en mastegar o molèsties localitzades, però el tractament no és el mateix. Explorar, fer proves de sensibilitat i interpretar radiografies quan estan indicades ajuda a diferenciar-ne l’origen.',
-    'Conservar una dent és una prioritat quan el pronòstic ho permet, però no qualsevol dent es pot salvar ni qualsevol endodòncia o tractament periodontal és justificable. Valorem quant teixit queda, el suport ossi, les fractures, la possibilitat de restaurar, la higiene i el valor funcional de la peça. L’objectiu no és allargar tractaments sense límit, sinó prendre una decisió proporcionada.',
+    'A la nostra clínica dental valorem tractaments de periodòncia a Lleida i Tremp. La periodòncia cuida les genives i l’os que sosté les dents. El tractament d’endodòncia actua a l’interior de la dent, on hi ha la polpa: el teixit que conté nervis i vasos sanguinis.',
+    'El dolor en mastegar o la sensibilitat poden tenir orígens diferents. Explorem la boca i fem les proves necessàries per distingir-los. Abans de tractar, revisem si la dent es pot conservar i reconstruir. Si està molt malmesa, expliquem també les alternatives.',
   ],
   sections: [
     {
-      title: 'Genives: de la gingivitis a la periodontitis',
+      title: 'Genives que sagnen: què revisem primer',
       paragraphs: [
-        'La gingivitis és una inflamació superficial relacionada habitualment amb placa i pot provocar sagnat, envermelliment o inflor. La periodontitis implica pèrdua dels teixits de suport i pot avançar amb pocs símptomes. El sagnat repetit, la retracció, la mobilitat, el mal alè persistent o espais que canvien mereixen una exploració. Fumar pot emmascarar el sagnat i alhora augmentar el risc.',
-        'L’estudi periodontal registra profunditats, sagnat, mobilitat, recessions i, quan cal, el nivell ossi. El tractament inicial acostuma a combinar instruccions d’higiene i eliminació professional de dipòsits per sobre i per sota de la geniva. Després es reavalua la resposta; algunes zones poden necessitar tractament addicional o cirurgia, però no s’ha de decidir abans de comprovar què ha millorat amb la fase inicial.',
-        'El manteniment és part del tractament periodontal. La freqüència es personalitza segons risc, tabac, control de placa, diabetis, profunditats residuals i antecedents. Una higiene puntual no substitueix aquest seguiment quan hi ha periodontitis. També revisem els implants, perquè poden patir inflamació dels teixits que els envolten.',
+        'La gingivitis és una inflamació de la geniva que sovint es relaciona amb la placa. Pot causar sagnat, envermelliment o inflor. La periodontitis afecta també els teixits que subjecten la dent i pot avançar amb poques molèsties.',
+        'Convé consultar si les genives sagnen sovint, es retreuen o deixen veure més dent. També si notes mobilitat, mal alè persistent o espais nous entre dents. Fumar pot ocultar el sagnat i augmentar el risc.',
+        'A l’estudi periodontal mesurem els espais entre la geniva i la dent. Anotem el sagnat, la mobilitat i la retracció. Quan cal, una radiografia ajuda a valorar quant os sosté cada peça.',
       ],
     },
     {
-      title: 'Endodòncia: quan l’interior de la dent està afectat',
+      title: 'Com s’organitza el tractament de les genives',
       paragraphs: [
-        'Càries profundes, fractures o traumatismes poden inflamar o infectar la polpa. El dolor espontani, la sensibilitat prolongada al fred o la calor, el dolor en mossegar, un canvi de color o una inflamació poden orientar, però també hi ha infeccions sense dolor. Les proves clíniques i radiogràfiques ajuden a decidir si cal endodòncia, una restauració, observació o una altra actuació.',
-        'Durant l’endodòncia s’accedeix als conductes, es netegen i es desinfecten abans de segellar-los. L’anatomia interna pot ser complexa, i cap procediment pot garantir la desaparició de tots els microorganismes. Després cal reconstruir la dent perquè resisteixi les forces i quedi ben segellada. Endarrerir aquesta restauració pot augmentar el risc de fractura o filtració.',
-        'Una dent endodonciada pot necessitar controls. Si persisteix o reapareix una lesió, es valora el retratament, la cirurgia apical o l’extracció segons la causa i la possibilitat de restaurar. Els antibiòtics no substitueixen el tractament local d’una infecció dental i no s’indiquen de manera rutinària; es consideren quan hi ha criteris clínics i afectació sistèmica.',
+        'La primera fase sol combinar higiene a casa i neteja professional per sobre i per sota de la geniva. Després revisem la resposta. Només llavors valorem si alguna zona necessita un altre tractament o cirurgia.',
+        'Els controls formen part del tractament. La freqüència depèn de la placa, el tabac, la diabetis i l’estat de les genives després de la primera fase. Una neteja aïllada no substitueix el seguiment d’una periodontitis. Si portes implants, revisem també els teixits que els envolten.',
+      ],
+      items: [
+        'Estudiar l’estat de les genives i de l’os.',
+        'Explicar com netejar les zones que ho necessiten.',
+        'Tractar i comprovar la resposta abans de decidir el pas següent.',
+        'Acordar els controls segons el risc.',
+      ],
+    },
+    {
+      title: 'En què consisteix un tractament d’endodòncia',
+      paragraphs: [
+        'Una càries profunda, una fractura o un cop poden danyar la polpa. El dolor espontani, el dolor en mossegar o la sensibilitat que dura després del fred o la calor poden orientar. Un canvi de color o una inflamació també mereixen revisió. A vegades hi ha infecció sense dolor.',
+        'El tractament d’endodòncia neteja i desinfecta els conductes de l’interior de la dent i després els segella. Els conductes poden tenir una forma complexa. Cap procediment garanteix eliminar tots els microorganismes.',
+        'El pas següent és reconstruir la dent perquè quedi segellada i pugui suportar la mossegada. Endarrerir aquesta restauració pot afavorir una fractura o l’entrada de bacteris. A la visita expliquem quina part del tractament correspon als conductes i quina a la reconstrucció.',
+      ],
+    },
+    {
+      title: 'Què passa després del tractament',
+      paragraphs: [
+        'Una endodòncia necessita seguiment. Si una lesió persisteix o reapareix, revisem la causa i si la dent encara es pot restaurar. Segons el cas, es pot plantejar repetir el tractament, una cirurgia a l’extrem de l’arrel o extreure la peça.',
+        'Els antibiòtics no substitueixen el tractament de la causa local. No s’indiquen de forma rutinària: el professional valora si calen segons la infecció i el seu efecte en la salut general.',
       ],
     },
   ],
@@ -442,24 +514,44 @@ pages['es-perio'] = servicePage('es', {
   image: 'assets/img/headers/hero-serveis.webp', imageWidth: 2200, imageHeight: 942, imageAlt: 'Gabinete de Estudi Dental Carrera preparado para tratamientos conservadores',
   introTitle: 'Dos áreas distintas con un objetivo compartido',
   intro: [
-    'En nuestra clínica dental valoramos tratamientos de periodoncia en Lleida y Tremp. La periodoncia trata las encías y los tejidos que sostienen los dientes. La endodoncia trata el interior del diente cuando la pulpa está inflamada o infectada. Pueden producir síntomas parecidos, como sensibilidad, dolor al masticar o molestias localizadas, pero el tratamiento no es el mismo. Explorar, realizar pruebas de sensibilidad e interpretar radiografías cuando están indicadas ayuda a diferenciar su origen.',
-    'Conservar un diente es prioritario cuando el pronóstico lo permite, pero no cualquier pieza puede salvarse ni cualquier endodoncia o tratamiento periodontal está justificado. Valoramos cuánto tejido queda, el soporte óseo, las fracturas, la posibilidad de restaurar, la higiene y el valor funcional de la pieza. El objetivo no es prolongar tratamientos sin límite, sino tomar una decisión proporcionada.',
+    'En nuestra clínica dental valoramos tratamientos de periodoncia en Lleida y Tremp. La periodoncia cuida las encías y el hueso que sostiene los dientes. El tratamiento de endodoncia actúa en el interior del diente, donde está la pulpa: el tejido que contiene nervios y vasos sanguíneos.',
+    'El dolor al masticar o la sensibilidad pueden tener distintos orígenes. Exploramos la boca y hacemos las pruebas necesarias para distinguirlos. Antes de tratar, revisamos si el diente puede conservarse y reconstruirse. Si está muy dañado, explicamos también las alternativas.',
   ],
   sections: [
     {
-      title: 'Encías: de la gingivitis a la periodontitis',
+      title: 'Encías que sangran: qué revisamos primero',
       paragraphs: [
-        'La gingivitis es una inflamación superficial relacionada habitualmente con placa y puede provocar sangrado, enrojecimiento o hinchazón. La periodontitis implica pérdida de los tejidos de soporte y puede avanzar con pocos síntomas. El sangrado repetido, la retracción, la movilidad, el mal aliento persistente o espacios que cambian merecen una exploración. Fumar puede enmascarar el sangrado y al mismo tiempo aumentar el riesgo.',
-        'El estudio periodontal registra profundidades, sangrado, movilidad, recesiones y, cuando hace falta, el nivel óseo. El tratamiento inicial suele combinar instrucciones de higiene y eliminación profesional de depósitos por encima y por debajo de la encía. Después se reevalúa la respuesta; algunas zonas pueden necesitar tratamiento adicional o cirugía, pero no debe decidirse antes de comprobar qué ha mejorado con la fase inicial.',
-        'El mantenimiento forma parte del tratamiento periodontal. La frecuencia se personaliza según riesgo, tabaco, control de placa, diabetes, profundidades residuales y antecedentes. Una higiene puntual no sustituye este seguimiento cuando existe periodontitis. También revisamos los implantes, porque pueden sufrir inflamación de los tejidos que los rodean.',
+        'La gingivitis es una inflamación de la encía que suele relacionarse con la placa. Puede causar sangrado, enrojecimiento o hinchazón. La periodontitis afecta además a los tejidos que sujetan el diente y puede avanzar con pocas molestias.',
+        'Conviene consultar si las encías sangran a menudo, se retraen o dejan ver más diente. También si notas movilidad, mal aliento persistente o espacios nuevos entre dientes. Fumar puede ocultar el sangrado y aumentar el riesgo.',
+        'En el estudio periodontal medimos los espacios entre la encía y el diente. Anotamos el sangrado, la movilidad y la retracción. Cuando hace falta, una radiografía ayuda a valorar cuánto hueso sostiene cada pieza.',
       ],
     },
     {
-      title: 'Endodoncia: cuando el interior del diente está afectado',
+      title: 'Cómo se organiza el tratamiento de las encías',
       paragraphs: [
-        'Caries profundas, fracturas o traumatismos pueden inflamar o infectar la pulpa. El dolor espontáneo, la sensibilidad prolongada al frío o al calor, el dolor al morder, un cambio de color o una inflamación pueden orientar, pero también existen infecciones sin dolor. Las pruebas clínicas y radiográficas ayudan a decidir si hace falta endodoncia, una restauración, observación u otra actuación.',
-        'Durante la endodoncia se accede a los conductos, se limpian y desinfectan antes de sellarlos. La anatomía interna puede ser compleja, y ningún procedimiento puede garantizar la desaparición de todos los microorganismos. Después hay que reconstruir el diente para que resista las fuerzas y quede bien sellado. Retrasar esta restauración puede aumentar el riesgo de fractura o filtración.',
-        'Un diente endodonciado puede necesitar controles. Si persiste o reaparece una lesión, se valora el retratamiento, la cirugía apical o la extracción según la causa y la posibilidad de restaurar. Los antibióticos no sustituyen el tratamiento local de una infección dental y no se indican de forma rutinaria; se consideran cuando existen criterios clínicos y afectación sistémica.',
+        'La primera fase suele combinar higiene en casa y limpieza profesional por encima y por debajo de la encía. Después revisamos la respuesta. Solo entonces valoramos si alguna zona necesita otro tratamiento o cirugía.',
+        'Los controles forman parte del tratamiento. Su frecuencia depende de la placa, el tabaco, la diabetes y el estado de las encías tras la primera fase. Una limpieza aislada no sustituye el seguimiento de una periodontitis. Si llevas implantes, revisamos también los tejidos que los rodean.',
+      ],
+      items: [
+        'Estudiar el estado de las encías y del hueso.',
+        'Explicar cómo limpiar las zonas que lo necesitan.',
+        'Tratar y comprobar la respuesta antes de decidir el siguiente paso.',
+        'Acordar los controles según el riesgo.',
+      ],
+    },
+    {
+      title: 'En qué consiste un tratamiento de endodoncia',
+      paragraphs: [
+        'Una caries profunda, una fractura o un golpe pueden dañar la pulpa. El dolor espontáneo, el dolor al morder o la sensibilidad que dura tras el frío o el calor pueden orientar. Un cambio de color o una inflamación también merecen revisión. A veces existe infección sin dolor.',
+        'El tratamiento de endodoncia limpia y desinfecta los conductos del interior del diente y después los sella. Los conductos pueden tener una forma compleja. Ningún procedimiento garantiza eliminar todos los microorganismos.',
+        'El siguiente paso es reconstruir el diente para que quede sellado y pueda soportar la mordida. Retrasar esa restauración puede favorecer una fractura o la entrada de bacterias. En la visita explicamos qué parte del tratamiento corresponde a los conductos y cuál a la reconstrucción.',
+      ],
+    },
+    {
+      title: 'Qué pasa después del tratamiento',
+      paragraphs: [
+        'Una endodoncia necesita seguimiento. Si una lesión persiste o reaparece, revisamos la causa y si el diente aún se puede restaurar. Según el caso, puede plantearse repetir el tratamiento, una cirugía en el extremo de la raíz o extraer la pieza.',
+        'Los antibióticos no sustituyen el tratamiento de la causa local. No se indican de forma rutinaria: el profesional valora si hacen falta según la infección y su efecto en la salud general.',
       ],
     },
   ],
@@ -492,19 +584,33 @@ pages['ca-aesthetic'] = servicePage('ca', {
   ],
   sections: [
     {
-      title: 'Emblanquiment: indicació, límits i seguretat',
+      title: 'Què pot canviar l’emblanquiment',
       paragraphs: [
-        'L’emblanquiment pot aclarir dents naturals, però no canvia el color d’empastaments, corones o facetes. Abans cal descartar càries actives, fissures, sensibilitat no estudiada o inflamació gingival. També identifiquem taques que poden respondre de manera desigual. La concentració, el sistema i el temps s’adapten a la situació; més producte o més temps no equivalen automàticament a un millor resultat.',
-        'La sensibilitat transitòria i la irritació de genives són efectes possibles. Cal seguir les indicacions i interrompre l’ús si apareixen molèsties importants. Els productes comprats sense supervisió varien en composició i ajust, i no permeten diagnosticar la causa del canvi de color. Durant l’embaràs o davant de determinades condicions, es pot recomanar ajornar el tractament.',
-        'El resultat i la seva durada depenen del color inicial, l’estructura de la dent i hàbits com el tabac o el consum freqüent de begudes pigmentades. Poden caldre manteniments, però no s’han de fer de forma contínua sense revisió. Si hi ha una sola dent fosca després d’un traumatisme o una endodòncia, l’abordatge pot ser diferent.',
+        'L’emblanquiment aclareix dents naturals. No canvia el color d’empastaments, corones o facetes. Per això comprovem quina part del somriure canviaria i quina conservaria el color. Si només hi ha una dent fosca després d’un cop o una endodòncia, pot necessitar un altre enfocament.',
+        'Abans revisem càries, fissures, sensibilitat i genives. No totes les taques responen igual. Triem el sistema i el temps segons el cas: fer servir més producte o durant més temps no assegura un resultat millor.',
+        'Pot causar sensibilitat temporal o irritar les genives. Cal seguir les indicacions i interrompre l’ús si apareixen molèsties importants. Un producte comprat sense supervisió no permet saber què causa el canvi de color. Durant l’embaràs o en altres situacions, pot convenir ajornar el tractament.',
       ],
     },
     {
-      title: 'Composite, facetes i planificació mínimament invasiva',
+      title: 'Composite o facetes: què comparem',
       paragraphs: [
-        'El composite permet reparar vores, tancar alguns espais o modificar formes amb una preparació sovint reduïda. És reparable, però pot desgastar-se, pigmentar-se o necessitar poliment. Les facetes ceràmiques poden aportar estabilitat de color i forma en casos seleccionats, però acostumen a implicar una decisió menys reversible. La quantitat de teixit que cal preparar depèn de la posició, el color i l’objectiu.',
-        'Abans de restaurar, valorem si l’ortodòncia, l’emblanquiment o un petit recontornejat permeten assolir l’objectiu conservant més estructura. De vegades una combinació gradual evita tractar dents que estan sanes. Quan es proposa una prova estètica o mock-up, serveix per conversar sobre proporcions i fonètica abans de prendre decisions definitives.',
-        'Cap material és indestructible. Mossegar objectes, obrir envasos amb les dents, el bruxisme i una higiene insuficient poden afectar el resultat. Expliquem les cures, els controls i la possibilitat de manteniment o reparació. L’objectiu és que la persona entengui no només com pot quedar, sinó què exigeix conservar-ho. També revisem periòdicament les vores, el color, la mossegada i la salut de les genives per detectar canvis abans que es converteixin en un problema més gran.',
+        'El composite és un material que permet reparar una vora, tancar alguns espais o canviar una forma. Sovint requereix preparar poca superfície de les dents. Es pot reparar, tot i que també es desgasta, es pot tenyir i pot necessitar poliment.',
+        'Les facetes de ceràmica poden mantenir bé el color i la forma en casos seleccionats. Solen implicar una decisió menys reversible. La superfície que cal preparar depèn de la posició, el color inicial i el canvi que busquem.',
+        'Abans de restaurar, valorem si l’ortodòncia, l’emblanquiment o un petit canvi de contorn conservarien més dent. A vegades convé combinar diverses mesures per etapes. Si proposem una prova estètica, serveix per parlar de proporcions i de com es nota en parlar.',
+      ],
+      items: [
+        'Què vols canviar i què prefereixes conservar.',
+        'Quanta dent cal preparar amb cada opció.',
+        'Com hi influeixen la mossegada i l’estat de les genives.',
+        'Quines cures, reparacions i controls pot necessitar.',
+      ],
+    },
+    {
+      title: 'Quant dura i quin manteniment necessita',
+      paragraphs: [
+        'El color inicial i l’estructura de la dent influeixen en el resultat de l’emblanquiment. També el tabac i el consum freqüent de begudes que tenyeixen. Pot caldre manteniment, però no s’ha de repetir de forma contínua sense revisió.',
+        'Cap material és indestructible. Mossegar objectes, obrir envasos amb les dents, el bruxisme o una higiene insuficient poden danyar una restauració. T’expliquem com cuidar-la i quan revisar-la.',
+        'Als controls comprovem les vores, el color, la mossegada i les genives. La decisió ha de tenir en compte tant el canvi que busques avui com el que necessitaràs per mantenir-lo.',
       ],
     },
   ],
@@ -537,19 +643,33 @@ pages['es-aesthetic'] = servicePage('es', {
   ],
   sections: [
     {
-      title: 'Blanqueamiento: indicación, límites y seguridad',
+      title: 'Qué puede cambiar el blanqueamiento',
       paragraphs: [
-        'El blanqueamiento puede aclarar dientes naturales, pero no cambia el color de empastes, coronas o carillas. Antes hay que descartar caries activas, fisuras, sensibilidad no estudiada o inflamación gingival. También identificamos manchas que pueden responder de forma desigual. La concentración, el sistema y el tiempo se adaptan a la situación; más producto o más tiempo no equivalen automáticamente a un mejor resultado.',
-        'La sensibilidad transitoria y la irritación de encías son efectos posibles. Hay que seguir las indicaciones e interrumpir el uso si aparecen molestias importantes. Los productos comprados sin supervisión varían en composición y ajuste, y no permiten diagnosticar la causa del cambio de color. Durante el embarazo o ante determinadas condiciones, puede recomendarse aplazar el tratamiento.',
-        'El resultado y su duración dependen del color inicial, la estructura del diente y hábitos como el tabaco o el consumo frecuente de bebidas pigmentadas. Puede ser necesario un tratamiento de mantenimiento, pero no deben realizarse de forma continua sin revisión. Si existe un único diente oscuro tras un traumatismo o una endodoncia, el abordaje puede ser distinto.',
+        'El blanqueamiento aclara dientes naturales. No cambia el color de empastes, coronas o carillas. Por eso comprobamos qué parte de la sonrisa cambiaría y cuál conservaría su color. Si solo hay un diente oscuro después de un golpe o una endodoncia, puede necesitar otro enfoque.',
+        'Antes revisamos caries, fisuras, sensibilidad y encías. No todas las manchas responden igual. Elegimos el sistema y el tiempo según el caso: usar más producto o durante más tiempo no asegura un mejor resultado.',
+        'Puede causar sensibilidad temporal o irritar las encías. Hay que seguir las indicaciones e interrumpir el uso si aparecen molestias importantes. Un producto comprado sin supervisión no permite saber qué causa el cambio de color. Durante el embarazo o en otras situaciones, puede convenir aplazar el tratamiento.',
       ],
     },
     {
-      title: 'Composite, carillas y planificación mínimamente invasiva',
+      title: 'Composite o carillas: qué comparamos',
       paragraphs: [
-        'El composite permite reparar bordes, cerrar algunos espacios o modificar formas con una preparación a menudo reducida. Es reparable, pero puede desgastarse, pigmentarse o necesitar pulido. Las carillas cerámicas pueden aportar estabilidad de color y forma en casos seleccionados, pero suelen implicar una decisión menos reversible. La cantidad de tejido que debe prepararse depende de la posición, el color y el objetivo.',
-        'Antes de restaurar, valoramos si la ortodoncia, el blanqueamiento o un pequeño recontorneado permiten alcanzar el objetivo conservando más estructura. A veces una combinación gradual evita tratar dientes sanos. Cuando se propone una prueba estética o mock-up, sirve para conversar sobre proporciones y fonética antes de tomar decisiones definitivas.',
-        'Ningún material es indestructible. Morder objetos, abrir envases con los dientes, el bruxismo y una higiene insuficiente pueden afectar al resultado. Explicamos los cuidados, los controles y la posibilidad de mantenimiento o reparación. El objetivo es que la persona entienda no solo cómo puede quedar, sino qué cuidados necesita.',
+        'El composite es un material que permite reparar un borde, cerrar algunos espacios o cambiar una forma. A menudo requiere preparar poca superficie del diente. Se puede reparar, aunque también se desgasta, puede teñirse y puede necesitar pulido.',
+        'Las carillas de cerámica pueden mantener bien el color y la forma en casos seleccionados. Suelen implicar una decisión menos reversible. La superficie que hay que preparar depende de la posición, el color inicial y el cambio que buscamos.',
+        'Antes de restaurar, valoramos si la ortodoncia, el blanqueamiento o un pequeño cambio de contorno conservarían más diente. A veces conviene combinar varias medidas por etapas. Si proponemos una prueba estética, sirve para hablar de proporciones y de cómo se siente al hablar.',
+      ],
+      items: [
+        'Qué quieres cambiar y qué prefieres conservar.',
+        'Cuánto diente hay que preparar con cada opción.',
+        'Cómo influyen la mordida y el estado de las encías.',
+        'Qué cuidados, reparaciones y controles puede necesitar.',
+      ],
+    },
+    {
+      title: 'Cuánto dura y qué mantenimiento necesita',
+      paragraphs: [
+        'El color inicial y la estructura del diente influyen en el resultado del blanqueamiento. También el tabaco y el consumo frecuente de bebidas que tiñen. Puede hacer falta mantenimiento, pero no se debe repetir de forma continua sin revisión.',
+        'Ningún material es indestructible. Morder objetos, abrir envases con los dientes, el bruxismo o una higiene insuficiente pueden dañar una restauración. Te explicamos cómo cuidarla y cuándo revisarla.',
+        'En los controles comprobamos los bordes, el color, la mordida y las encías. La decisión debe tener en cuenta tanto el cambio que buscas hoy como lo que necesitarás para mantenerlo.',
       ],
     },
   ],
@@ -597,27 +717,46 @@ pages['ca-lleida'] = locationPage('ca', {
   aside: 'Adreça: carrer Major, 74-76, 3r 3a, 25007 Lleida. Telèfon: 973 26 88 26. Horari: dilluns a divendres 9–20 h; dissabtes 9–14 h. Diumenges, tancat. Consulta amb recepció qualsevol necessitat d’accés.',
   sections: [
     {
-      title: 'Què podem valorar a la clínica de Lleida',
+      title: 'Quins tractaments podem valorar a Lleida',
       paragraphs: [
-        'Fem revisions, diagnòstic de càries i desgast, odontologia restauradora, periodòncia, endodòncia, pròtesi, cirurgia oral i implants. També valorem ortodòncia en diferents edats, estètica dental, bruxisme i trastorns de l’articulació temporomandibular. Aquesta llista descriu àrees de treball; no implica que qualsevol tècnica sigui adequada per a qualsevol persona.',
-        'Quan una visita comença per dolor, inflamació, una fractura o un canvi sobtat, primer busquem l’origen i prioritzem controlar el problema. Quan l’objectiu és preventiu o estètic, revisem igualment la salut de dents i genives abans de començar. Les radiografies o escàners s’indiquen segons la pregunta clínica i s’eviten si no poden aportar una decisió útil.',
-        'La primera visita acaba amb una explicació de troballes i opcions. Alguns tractaments poden començar després d’una fase d’higiene o estabilització; altres necessiten estudi o coordinació. Si hi ha una alternativa més simple o l’observació és raonable, també forma part de la conversa. El pressupost correspon al pla acordat i pot canviar si apareixen dades que no eren visibles inicialment.',
+        'Fem revisions, diagnòstic de càries i desgast, restauracions, pròtesis i cirurgia oral. L’exploració ens ajuda a decidir què necessites. No totes les tècniques són adequades per a tothom.',
+        'Pots ampliar la informació segons el motiu de la consulta:',
+      ],
+      items: [
+        'Si falta una dent: <a href="/implants-dentals.html">implants i les seves alternatives</a>.',
+        'Si vols corregir la posició de les dents: <a href="/ortodoncia.html">opcions d’ortodòncia</a>.',
+        'Si sagnen les genives o fa mal una dent: <a href="/periodoncia-endodoncia.html">periodòncia i endodòncia</a>.',
+        'Si hi ha tensió o dolor de mandíbula: <a href="/atm-bruxisme.html">ATM i bruxisme</a>.',
+        'Si vols revisar color o forma: <a href="/estetica-dental.html">estètica dental conservadora</a>.',
       ],
     },
     {
-      title: 'Com preparar la visita i arribar-hi',
+      title: 'Què passa a la primera visita',
       paragraphs: [
-        'Porta la llista de medicació, antecedents rellevants i, si en tens, radiografies o informes recents. Explica si prens anticoagulants, medicació per a l’os, si tens al·lèrgies, embaràs, diabetis o altres condicions que puguin modificar l’atenció. No interrompis cap medicament pel teu compte. Si la visita és per dolor, anota quan va començar, què el desencadena i si hi ha inflamació o febre.',
-        'La clínica es troba en una planta superior d’un edifici del carrer Major. Com que les condicions d’accés i aparcament poden canviar, recomanem confirmar amb recepció la millor opció segons mobilitat, transport o hora de la visita. Si necessites acompanyament, més temps per comunicar-te o alguna adaptació, indica-ho quan demanis cita perquè puguem preparar-la.',
-        'Per anul·lar o canviar una cita, avisa amb la màxima antelació possible. El formulari web serveix per sol·licitar contacte, però no és un canal d’urgències ni per enviar dades clíniques sensibles. Davant d’una urgència vital, truca al 112. Per una urgència dental, contacta directament per telèfon perquè puguem orientar la prioritat.',
+        'Comencem per escoltar-te i revisar la salut general, la medicació i les proves que ja tinguis. Després explorem la boca. Només proposem radiografies o escàners si poden ajudar a decidir el diagnòstic o el pla.',
+        'Si hi ha dolor, inflamació o una fractura, primer en busquem l’origen. Si vens per prevenció o estètica, revisem igualment dents i genives. A vegades cal controlar una càries o una inflamació abans de començar un altre tractament.',
+        'Al final expliquem què hem trobat i quines opcions tens. Comparem beneficis, riscos, temps i manteniment. Si observar o una alternativa més senzilla són raonables, també en parlem. El pressupost correspon al pla acordat; si apareixen dades noves, revisem amb tu els canvis.',
       ],
     },
     {
-      title: 'Continuïtat, prevenció i decisions compartides',
+      title: 'Com preparar la visita i arribar a la clínica',
       paragraphs: [
-        'La prevenció no significa fer el mateix control a tothom. La freqüència de revisions i higienes depèn del risc de càries, la salut periodontal, l’edat, els hàbits i els tractaments previs. Una persona amb implants o antecedents de periodontitis pot necessitar controls diferents d’una persona amb risc baix. Ho definim després de veure l’evolució, no amb un calendari universal.',
-        'Documentem el punt de partida amb els registres necessaris i revisem els canvis al llarg del temps. Aquesta continuïtat ajuda a detectar si una lesió està estable, si el desgast progressa o si un tractament necessita manteniment. També permet evitar intervencions precipitades quan observar és segur i actuar quan hi ha evidència de canvi.',
-        'Volem que la persona entengui què està decidint. Expliquem beneficis, riscos, alternatives i conseqüències de no tractar quan són rellevants. No prometem resultats idèntics per a tothom ni utilitzem la tecnologia com a substitut d’aquesta conversa. L’objectiu és construir un pla assumible, revisable i coherent amb la salut a llarg termini.',
+        'Som al carrer Major, 74-76, 3r 3a, al centre de Lleida. La clínica és en una planta superior. Consulta amb recepció qualsevol necessitat d’accés, acompanyament o adaptació quan demanis cita.',
+        'Porta la llista de medicació i, si en tens, informes o radiografies recents. Explica si tens al·lèrgies, diabetis, embaràs o alguna altra condició rellevant. Indica si prens anticoagulants o medicació per a l’os. No deixis cap medicament pel teu compte.',
+        'Si vens per dolor, anota quan va començar i què el provoca. Indica també si hi ha inflor o febre. Si necessites canviar la cita, avisa amb la màxima antelació possible.',
+      ],
+      items: [
+        'Adreça: carrer Major, 74-76, 3r 3a, 25007 Lleida.',
+        'Horari: dilluns a divendres de 9 a 20 h i dissabtes de 9 a 14 h.',
+        'Telèfon de recepció: <a href="tel:+34973268826">973 26 88 26</a>.',
+      ],
+    },
+    {
+      title: 'Després de la visita: seguiment i contacte',
+      paragraphs: [
+        'La freqüència de revisió depèn de les teves genives, el risc de càries, els hàbits i els tractaments previs. Una persona amb implants o periodontitis pot necessitar controls diferents. Revisem els canvis per decidir quan tractar i quan observar.',
+        'Pots demanar contacte pel formulari o WhatsApp. La sol·licitud no substitueix una visita ni confirma una cita fins que recepció la concreti. Evita enviar dades clíniques sensibles per aquests canals.',
+        'Per a una urgència dental, truca i valorarem la prioritat i la disponibilitat. No esperis una resposta del formulari si necessites atenció urgent. Davant d’una urgència vital, truca al 112.',
       ],
     },
   ],
@@ -656,27 +795,46 @@ pages['es-lleida'] = locationPage('es', {
   aside: 'Dirección: carrer Major, 74-76, 3.º 3.ª, 25007 Lleida. Teléfono: 973 26 88 26. Horario: lunes a viernes 9–20 h; sábados 9–14 h. Domingos, cerrado. Consulta con recepción cualquier necesidad de acceso.',
   sections: [
     {
-      title: 'Tratamientos dentales en Lleida que podemos valorar',
+      title: 'Qué tratamientos podemos valorar en Lleida',
       paragraphs: [
-        'Realizamos revisiones, diagnóstico de caries y desgaste, odontología restauradora, prótesis y cirugía oral. Puedes consultar cómo valoramos los <a href="/es/implantes-dentales.html">implantes dentales</a>, la <a href="/es/ortodoncia.html">ortodoncia</a>, la <a href="/es/periodoncia-endodoncia.html">periodoncia y la endodoncia</a>, la <a href="/es/estetica-dental.html">estética dental</a> y los problemas de <a href="/es/atm-bruxismo.html">ATM y bruxismo</a>. Esta lista describe áreas de trabajo; no implica que cualquier técnica sea adecuada para cualquier persona.',
-        'Cuando una visita empieza por dolor, inflamación, una fractura o un cambio brusco, primero buscamos el origen y priorizamos controlar el problema. Cuando el objetivo es preventivo o estético, revisamos igualmente la salud de dientes y encías antes de empezar. Las radiografías o escáneres se indican según la pregunta clínica y se evitan si no pueden aportar una decisión útil.',
-        'La primera visita termina con una explicación de hallazgos y opciones. Algunos tratamientos pueden empezar después de una fase de higiene o estabilización; otros necesitan estudio o coordinación. Si existe una alternativa más simple o la observación es razonable, también forma parte de la conversación. El presupuesto corresponde al plan acordado y puede cambiar si aparecen datos que no eran visibles inicialmente.',
+        'Hacemos revisiones, diagnóstico de caries y desgaste, restauraciones, prótesis y cirugía oral. La exploración nos ayuda a decidir qué necesitas. No todas las técnicas son adecuadas para todas las personas.',
+        'Puedes ampliar la información según el motivo de tu consulta:',
+      ],
+      items: [
+        'Si falta un diente: <a href="/es/implantes-dentales.html">implantes y sus alternativas</a>.',
+        'Si quieres corregir la posición de los dientes: <a href="/es/ortodoncia.html">opciones de ortodoncia</a>.',
+        'Si sangran las encías o duele un diente: <a href="/es/periodoncia-endodoncia.html">periodoncia y endodoncia</a>.',
+        'Si hay tensión o dolor de mandíbula: <a href="/es/atm-bruxismo.html">ATM y bruxismo</a>.',
+        'Si quieres revisar color o forma: <a href="/es/estetica-dental.html">estética dental conservadora</a>.',
       ],
     },
     {
-      title: 'Cómo preparar la visita y llegar',
+      title: 'Qué ocurre en la primera visita',
       paragraphs: [
-        'Trae la lista de medicación, antecedentes relevantes y, si los tienes, radiografías o informes recientes. Explica si tomas anticoagulantes, medicación para el hueso, si tienes alergias, embarazo, diabetes u otras condiciones que puedan modificar la atención. No interrumpas ningún medicamento por tu cuenta. Si la visita es por dolor, anota cuándo empezó, qué lo desencadena y si existe inflamación o fiebre.',
-        'La clínica se encuentra en una planta superior de un edificio de carrer Major. Como las condiciones de acceso y aparcamiento pueden cambiar, recomendamos confirmar con recepción la mejor opción según movilidad, transporte u hora de la visita. Si necesitas acompañamiento, más tiempo para comunicarte o alguna adaptación, indícalo al pedir cita para que podamos prepararla.',
-        'Para anular o cambiar una cita, avisa con la máxima antelación posible. El formulario web sirve para solicitar contacto, pero no es un canal de urgencias ni para enviar datos clínicos sensibles. Ante una urgencia vital, llama al 112. Para una urgencia dental, contacta directamente por teléfono para que podamos orientar la prioridad.',
+        'Empezamos por escucharte y revisar tu salud general, la medicación y las pruebas que ya tengas. Después exploramos la boca. Solo proponemos radiografías o escáneres si pueden ayudar a decidir el diagnóstico o el plan.',
+        'Si hay dolor, inflamación o una fractura, buscamos primero el origen. Si vienes por prevención o estética, revisamos igualmente dientes y encías. A veces hay que controlar una caries o una inflamación antes de empezar otro tratamiento.',
+        'Al final explicamos qué hemos encontrado y qué opciones tienes. Comparamos beneficios, riesgos, tiempos y mantenimiento. Si observar o una alternativa más sencilla son razonables, también lo hablamos. El presupuesto corresponde al plan acordado; si aparecen datos nuevos, revisamos contigo los cambios.',
       ],
     },
     {
-      title: 'Continuidad, prevención y decisiones compartidas',
+      title: 'Cómo preparar la visita y llegar a la clínica',
       paragraphs: [
-        'La prevención no significa hacer el mismo control a todo el mundo. La frecuencia de revisiones e higienes depende del riesgo de caries, la salud periodontal, la edad, los hábitos y los tratamientos previos. Una persona con implantes o antecedentes de periodontitis puede necesitar controles distintos de una persona con riesgo bajo. Lo definimos después de ver la evolución, no con un calendario universal.',
-        'Documentamos el punto de partida con los registros necesarios y revisamos los cambios a lo largo del tiempo. Esta continuidad ayuda a detectar si una lesión está estable, si el desgaste progresa o si un tratamiento necesita mantenimiento. También permite evitar intervenciones precipitadas cuando observar es seguro y actuar cuando existe evidencia de cambio.',
-        'Queremos que la persona entienda qué está decidiendo. Explicamos beneficios, riesgos, alternativas y consecuencias de no tratar cuando son relevantes. No prometemos resultados idénticos para todos ni utilizamos la tecnología como sustituto de esta conversación. El objetivo es construir un plan asumible, revisable y coherente con la salud a largo plazo.',
+        'Estamos en carrer Major, 74-76, 3.º 3.ª, en el centro de Lleida. La clínica está en una planta superior. Consulta con recepción cualquier necesidad de acceso, acompañamiento o adaptación al pedir cita.',
+        'Trae la lista de medicación y, si los tienes, informes o radiografías recientes. Explica si tienes alergias, diabetes, embarazo u otra condición relevante. Indica si tomas anticoagulantes o medicación para el hueso. No dejes ningún medicamento por tu cuenta.',
+        'Si vienes por dolor, anota cuándo empezó y qué lo provoca. Indica también si hay hinchazón o fiebre. Si necesitas cambiar la cita, avisa con la mayor antelación posible.',
+      ],
+      items: [
+        'Dirección: carrer Major, 74-76, 3.º 3.ª, 25007 Lleida.',
+        'Horario: lunes a viernes de 9 a 20 h y sábados de 9 a 14 h.',
+        'Teléfono de recepción: <a href="tel:+34973268826">973 26 88 26</a>.',
+      ],
+    },
+    {
+      title: 'Después de la visita: seguimiento y contacto',
+      paragraphs: [
+        'La frecuencia de revisión depende de tus encías, el riesgo de caries, los hábitos y los tratamientos previos. Una persona con implantes o periodontitis puede necesitar controles distintos. Revisamos los cambios para decidir cuándo tratar y cuándo observar.',
+        'Puedes pedir contacto por el formulario o WhatsApp. La solicitud no sustituye una visita ni confirma una cita hasta que recepción la concrete. Evita enviar datos clínicos sensibles por estos canales.',
+        'Para una urgencia dental, llama y valoraremos la prioridad y la disponibilidad. No esperes una respuesta del formulario si necesitas atención urgente. Ante una urgencia vital, llama al 112.',
       ],
     },
   ],
@@ -715,27 +873,39 @@ pages['ca-tremp'] = locationPage('ca', {
   aside: 'Adreça: carrer Montllobar, 22 baixos, 25620 Tremp. Telèfon i WhatsApp: 650 60 01 72. Confirma horaris, accessibilitat o necessitats concretes amb recepció.',
   sections: [
     {
-      title: 'Serveis i primera visita a Tremp',
+      title: 'Què podem valorar a la clínica de Tremp',
       paragraphs: [
-        'A Tremp fem revisions, prevenció, diagnòstic de càries i dolor, odontologia restauradora, seguiment de genives, endodòncia, pròtesi i valoració d’implants. També estudiem ortodòncia, estètica dental, bruxisme i molèsties de l’articulació temporomandibular. La indicació depèn de la història, l’exploració i les proves necessàries; una llista de serveis no substitueix aquesta valoració.',
-        'A la primera visita revisem el motiu de consulta, la salut general i la medicació. Si hi ha radiografies o informes recents, porta’ls perquè puguem valorar si continuen sent útils. Després de l’exploració expliquem les troballes i prioritzem: controlar dolor o infecció, estabilitzar genives i càries, o planificar un objectiu funcional o estètic. No tots els passos s’han de fer alhora.',
-        'Si existeixen diverses alternatives, comparem conservació de teixit, riscos, temps, manteniment i cost. També expliquem què pot passar si es decideix esperar. En situacions estables, observar amb controls pot ser una decisió adequada. En altres, retardar pot complicar el pronòstic. Aquesta diferència només es pot establir després d’examinar el cas.',
+        'Fem revisions, prevenció, diagnòstic de càries i dolor, restauracions i pròtesis. També valorem genives, endodòncia, implants, ortodòncia i estètica dental. Si tens bruxisme o molèsties de mandíbula, comencem per estudiar-ne la causa.',
+        'No cal que sàpigues quin tractament necessites per demanar una visita. Pots explicar què notes o què vols revisar. L’exploració i les proves que estiguin indicades ens ajudaran a proposar el pas següent.',
       ],
     },
     {
-      title: 'Coordinació, desplaçaments i continuïtat',
+      title: 'Com preparem la primera visita',
       paragraphs: [
-        'Viure al Pallars no hauria de convertir cada control en un desplaçament innecessari. Organitzem el seguiment segons la fase del tractament i indiquem quines visites es poden fer a Tremp. Quan una prova, equipament o professional requereix coordinació amb Lleida, ho expliquem amb antelació. L’objectiu és mantenir qualitat clínica i reduir trajectes que no aporten valor.',
-        'La continuïtat facilita detectar canvis en genives, desgast, restauracions, pròtesis o implants. La freqüència no és igual per a tothom: s’adapta al risc de càries, antecedents de periodontitis, higiene, tabac i tractaments previs. Entre visites, una bona higiene i consultar davant de símptomes nous són més útils que seguir un calendari de forma automàtica.',
-        'El formulari web i WhatsApp serveixen per demanar contacte, no per enviar històries clíniques, fotografies íntimes o dades sensibles. Si hi ha dolor intens, inflamació, febre, traumatisme o dificultat per empassar o respirar, truca directament per rebre orientació; davant d’una urgència vital, contacta amb el 112.',
+        'Revisem el motiu de consulta, la salut general i la medicació. Porta radiografies o informes recents si en tens. Valorarem si encara són útils per no repetir proves sense motiu.',
+        'Després d’explorar, ordenem les prioritats. Pot caldre controlar dolor o infecció, tractar les genives o una càries abans d’abordar un altre objectiu. No tots els passos s’han de fer alhora.',
+        'Expliquem les alternatives, els riscos, el temps, el cost i el manteniment. També què implica esperar. A vegades observar amb controls és adequat; en altres casos, endarrerir pot complicar el problema. Ho decidim després d’estudiar el teu cas.',
       ],
     },
     {
-      title: 'Prevenció i manteniment al llarg del temps',
+      title: 'Quines visites es fan a Tremp i quan anar a Lleida',
       paragraphs: [
-        'La prevenció combina hàbits diaris, control professional i actuacions proporcionades al risc. Revisem la tècnica de raspallat, la higiene interdental, la dieta i l’exposició a fluor quan és rellevant. En infants, adults i persones grans, les necessitats canvien. No recomanem procediments només perquè hagi passat un interval fix si no hi ha una indicació.',
-        'Després d’un tractament, expliquem què s’ha de vigilar i quan convé revisar. Les restauracions poden desgastar-se, les pròtesis necessiten ajustos i els implants requereixen control dels teixits. La sensació que “ja està acabat” no elimina el manteniment, però tampoc implica visites o radiografies innecessàries. El pla es revisa segons l’evolució.',
-        'La informació d’aquesta pàgina és general. A la consulta adaptem les recomanacions a la salut, l’edat, la medicació i les preferències de cada persona. Si alguna explicació no queda clara, demanem que ens ho diguis: entendre el pla és una part essencial del consentiment i ajuda a prendre decisions sostenibles.',
+        'Organitzem els controls segons cada fase del tractament i indiquem quins es poden fer a Tremp. Si una prova, un equip o un professional requereixen una visita a Lleida, t’ho expliquem abans i acordem com coordinar-la.',
+        'La clínica és al carrer Montllobar, 22 baixos, 25620 Tremp, Lleida. Si vens d’una altra població del Pallars, confirma la cita abans de desplaçar-te. Recepció pot resoldre dubtes d’accés i de preparació de la visita.',
+      ],
+      items: [
+        'Consulta a quina clínica correspon cada cita.',
+        'Confirma si has de portar alguna prova o informe.',
+        'Comunica les necessitats d’accés o acompanyament.',
+        'Per canviar una cita, truca al <a href="tel:+34650600172">650 60 01 72</a>.',
+      ],
+    },
+    {
+      title: 'Com cuidem la continuïtat del tractament',
+      paragraphs: [
+        'Els controls permeten revisar genives, desgast, empastaments, pròtesis i implants. La freqüència depèn de la higiene, el risc de càries, el tabac i els tractaments previs. Adaptem el pla als canvis que veiem.',
+        'La prevenció inclou el raspallat, la neteja entre dents i la revisió de la dieta o de l’ús de fluor quan cal. Les necessitats canvien amb l’edat i la salut. Després d’un tractament, expliquem què has de vigilar i quan convé tornar.',
+        'El formulari i WhatsApp serveixen per demanar contacte. Recepció ha de concretar la cita. No substitueixen una exploració ni són canals per enviar dades clíniques sensibles. Si hi ha dolor intens, inflamació, febre o un cop, truca per rebre orientació. Davant d’una urgència vital, truca al 112.',
       ],
     },
   ],
@@ -774,27 +944,39 @@ pages['es-tremp'] = locationPage('es', {
   aside: 'Dirección: carrer Montllobar, 22, bajos, 25620 Tremp. Teléfono y WhatsApp: 650 60 01 72. Confirma horarios, accesibilidad o necesidades concretas con recepción.',
   sections: [
     {
-      title: 'Servicios y primera visita en Tremp',
+      title: 'Qué podemos valorar en la clínica de Tremp',
       paragraphs: [
-        'En Tremp realizamos revisiones, prevención, diagnóstico de caries y dolor, odontología restauradora, seguimiento de encías, endodoncia, prótesis y valoración de implantes. También estudiamos ortodoncia, estética dental, bruxismo y molestias de la articulación temporomandibular. La indicación depende de la historia, la exploración y las pruebas necesarias; una lista de servicios no sustituye esta valoración.',
-        'En la primera visita revisamos el motivo de consulta, la salud general y la medicación. Si existen radiografías o informes recientes, tráelos para valorar si siguen siendo útiles. Después de la exploración explicamos los hallazgos y priorizamos: controlar dolor o infección, estabilizar encías y caries, o planificar un objetivo funcional o estético. No todos los pasos deben hacerse a la vez.',
-        'Si existen varias alternativas, comparamos conservación de tejido, riesgos, tiempo, mantenimiento y coste. También explicamos qué puede ocurrir si se decide esperar. En situaciones estables, observar con controles puede ser una decisión adecuada. En otras, retrasar puede complicar el pronóstico. Esta diferencia solo puede establecerse después de examinar el caso.',
+        'Hacemos revisiones, prevención, diagnóstico de caries y dolor, restauraciones y prótesis. También valoramos encías, endodoncia, implantes, ortodoncia y estética dental. Si tienes bruxismo o molestias de mandíbula, empezamos por estudiar la causa.',
+        'No hace falta que sepas qué tratamiento necesitas para pedir una visita. Puedes explicar qué notas o qué quieres revisar. La exploración y las pruebas que estén indicadas nos ayudarán a proponer el siguiente paso.',
       ],
     },
     {
-      title: 'Coordinación, desplazamientos y continuidad',
+      title: 'Cómo preparamos tu primera visita',
       paragraphs: [
-        'Vivir en el Pallars no debería convertir cada control en un desplazamiento innecesario. Organizamos el seguimiento según la fase del tratamiento e indicamos qué visitas pueden hacerse en Tremp. Cuando una prueba, el uso de un equipo o la intervención de un profesional requieren coordinación con Lleida, lo explicamos con antelación. El objetivo es mantener calidad clínica y reducir trayectos que no aportan valor.',
-        'La continuidad facilita detectar cambios en encías, desgaste, restauraciones, prótesis o implantes. La frecuencia no es igual para todos: se adapta al riesgo de caries, antecedentes de periodontitis, higiene, tabaco y tratamientos previos. Entre visitas, una buena higiene y consultar ante síntomas nuevos son más útiles que seguir un calendario de forma automática.',
-        'El formulario web y WhatsApp sirven para pedir contacto, no para enviar historias clínicas, fotografías íntimas o datos sensibles. Si hay dolor intenso, inflamación, fiebre, traumatismo o dificultad para tragar o respirar, llama directamente para recibir orientación; ante una urgencia vital, contacta con el 112.',
+        'Revisamos el motivo de consulta, la salud general y la medicación. Trae radiografías o informes recientes si los tienes. Valoraremos si siguen siendo útiles para no repetir pruebas sin motivo.',
+        'Después de explorar, ordenamos las prioridades. Puede hacer falta controlar dolor o infección, tratar las encías o una caries antes de abordar otro objetivo. No todos los pasos tienen que hacerse a la vez.',
+        'Explicamos las alternativas, los riesgos, el tiempo, el coste y el mantenimiento. También qué implica esperar. A veces observar con controles es adecuado; en otros casos, retrasar puede complicar el problema. Lo decidimos después de estudiar tu caso.',
       ],
     },
     {
-      title: 'Prevención y mantenimiento a lo largo del tiempo',
+      title: 'Qué visitas se hacen en Tremp y cuándo ir a Lleida',
       paragraphs: [
-        'La prevención combina hábitos diarios, control profesional y actuaciones proporcionadas al riesgo. Revisamos la técnica de cepillado, la higiene interdental, la dieta y la exposición a flúor cuando es relevante. En niños, adultos y personas mayores, las necesidades cambian. No recomendamos procedimientos solo porque haya pasado un intervalo fijo si no existe una indicación.',
-        'Después de un tratamiento, explicamos qué debe vigilarse y cuándo conviene revisar. Las restauraciones pueden desgastarse, las prótesis necesitan ajustes y los implantes requieren control de los tejidos. La sensación de que “ya está terminado” no elimina el mantenimiento, pero tampoco implica visitas o radiografías innecesarias. El plan se revisa según la evolución.',
-        'La información de esta página es general. En consulta adaptamos las recomendaciones a la salud, la edad, la medicación y las preferencias de cada persona. Si alguna explicación no queda clara, pedimos que nos lo digas: entender el plan es una parte esencial del consentimiento y ayuda a tomar decisiones informadas.',
+        'Organizamos los controles según cada fase del tratamiento e indicamos cuáles se pueden hacer en Tremp. Si una prueba, un equipo o un profesional requieren una visita a Lleida, te lo explicamos antes y acordamos cómo coordinarla.',
+        'La clínica está en carrer Montllobar, 22, bajos, 25620 Tremp, Lleida. Si vienes de otra población del Pallars, confirma la cita antes de desplazarte. Recepción puede resolver dudas de acceso y preparación de la visita.',
+      ],
+      items: [
+        'Consulta qué clínica corresponde a cada cita.',
+        'Confirma si debes traer alguna prueba o informe.',
+        'Comunica las necesidades de acceso o acompañamiento.',
+        'Para cambiar una cita, llama al <a href="tel:+34650600172">650 60 01 72</a>.',
+      ],
+    },
+    {
+      title: 'Cómo cuidamos la continuidad del tratamiento',
+      paragraphs: [
+        'Los controles permiten revisar encías, desgaste, empastes, prótesis e implantes. Su frecuencia depende de la higiene, el riesgo de caries, el tabaco y los tratamientos previos. Adaptamos el plan a los cambios que vemos.',
+        'La prevención incluye el cepillado, la limpieza entre dientes y la revisión de la dieta o del uso de flúor cuando hace falta. Las necesidades cambian con la edad y la salud. Tras un tratamiento, explicamos qué debes vigilar y cuándo conviene volver.',
+        'El formulario y WhatsApp sirven para pedir contacto. Recepción debe concretar la cita. No sustituyen una exploración ni son canales para enviar datos clínicos sensibles. Si hay dolor intenso, inflamación, fiebre o un golpe, llama para recibir orientación. Ante una urgencia vital, llama al 112.',
       ],
     },
   ],
