@@ -429,7 +429,7 @@ console.log(
   const I18N = {
     ca: {
       bannerTitle: 'Cookies i privacitat',
-      bannerText: 'Fem servir Umami sense cookies per a estadístiques bàsiques. Google Analytics i Google Maps només s\'activen si ho acceptes. <a href="cookies.html">Més informació</a>.',
+      bannerText: 'Fem servir Umami sense cookies per a estadístiques bàsiques. Google Analytics envia senyals sense cookies. Les cookies d\'Analytics i Google Maps només s\'activen si ho acceptes. <a href="cookies.html">Més informació</a>.',
       prefs: 'Preferències', reject: 'Rebutjar', accept: 'Acceptar',
       bannerAria: 'Consentiment de cookies',
       modalTitle: 'Preferències de cookies',
@@ -444,12 +444,12 @@ console.log(
         { key: 'maps', label: 'Mapes de Google Maps', tag: 'De tercers',
           desc: 'Carrega els mapes integrats a la pàgina de seus perquè puguis veure la ubicació de les clíniques. Google pot establir cookies pròpies segons la seva política.', required: false },
         { key: 'analytics', label: 'Estadístiques ampliades (Google Analytics)', tag: 'Amb consentiment',
-          desc: 'Ens ajuden a entendre de forma anònima i agregada com es fa servir el web (pàgines vistes, clics a telèfon o WhatsApp) per millorar-lo. No carreguem Google Analytics fins que ho acceptes.', required: false }
+          desc: 'Ens ajuden a entendre de forma anònima i agregada com es fa servir el web (pàgines vistes, clics a telèfon o WhatsApp) per millorar-lo. L’etiqueta es carrega automàticament i envia senyals sense cookies; les cookies d’Analytics només s’activen si ho acceptes.', required: false }
       ]
     },
     es: {
       bannerTitle: 'Cookies y privacidad',
-      bannerText: 'Usamos Umami sin cookies para estadísticas básicas. Google Analytics y Google Maps solo se activan si lo aceptas. <a href="cookies.html">Más información</a>.',
+      bannerText: 'Usamos Umami sin cookies para estadísticas básicas. Google Analytics envía señales sin cookies. Las cookies de Analytics y Google Maps solo se activan si lo aceptas. <a href="cookies.html">Más información</a>.',
       prefs: 'Preferencias', reject: 'Rechazar', accept: 'Aceptar',
       bannerAria: 'Consentimiento de cookies',
       modalTitle: 'Preferencias de cookies',
@@ -464,7 +464,7 @@ console.log(
         { key: 'maps', label: 'Mapas de Google Maps', tag: 'De terceros',
           desc: 'Carga los mapas integrados en la página de sedes para que puedas ver la ubicación de las clínicas. Google puede establecer sus propias cookies según su política.', required: false },
         { key: 'analytics', label: 'Estadísticas ampliadas (Google Analytics)', tag: 'Con consentimiento',
-          desc: 'Nos ayudan a entender de forma anónima y agregada cómo se usa el sitio (páginas vistas, clics en teléfono o WhatsApp) para mejorarlo. No cargamos Google Analytics hasta que lo aceptes.', required: false }
+          desc: 'Nos ayudan a entender de forma anónima y agregada cómo se usa el sitio (páginas vistas, clics en teléfono o WhatsApp) para mejorarlo. La etiqueta se carga automáticamente y envía señales sin cookies; las cookies de Analytics solo se activan si lo aceptas.', required: false }
       ]
     }
   };
@@ -577,55 +577,13 @@ console.log(
     }
   };
 
-  /* ---- Google Analytics 4 gate ----
-     GA is loaded lazily, ONLY after the visitor grants the "analytics"
-     category. Until then no request is made to Google's servers. The
-     gtag() stub + Consent Mode defaults live in each page's <head>. */
-  let gaLoaded = false;
-  let gaLoading = false;
+  /* ---- Google Analytics 4 consent updates ----
+     The Google tag loads in <head> with denied defaults. Cookie choices
+     update its storage permission without loading or configuring it again. */
   function applyAnalytics(prefs) {
-    const allow = !!(prefs && prefs.analytics);
-    if (!allow) {
-      if (typeof window.gtag === 'function') {
-        window.gtag('consent', 'update', { analytics_storage: 'denied' });
-      }
-      return;
-    }
     if (typeof window.gtag === 'function') {
-      window.gtag('consent', 'update', { analytics_storage: 'granted' });
-    }
-    loadGA();
-  }
-  async function loadGA() {
-    if (gaLoaded || gaLoading) return;
-    gaLoading = true;
-    let id = window.GA4_ID;
-    if (!id) {
-      try {
-        const response = await fetch('/api/public-config', { headers: { Accept: 'application/json' } });
-        const config = response.ok ? await response.json() : null;
-        id = config && config.ga4Id;
-      } catch (_) {
-        id = null;
-      }
-    }
-    if (!/^G-[A-Z0-9]+$/i.test(id || '')) {
-      gaLoading = false;
-      return;
-    }
-    gaLoaded = true;
-    gaLoading = false;
-    window.GA4_ID = id;
-    const s = document.createElement('script');
-    s.async = true;
-    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(id);
-    document.head.appendChild(s);
-    if (typeof window.gtag === 'function') {
-      window.gtag('js', new Date());
-      window.gtag('config', id, {
-        anonymize_ip: true,
-        allow_google_signals: false,
-        allow_ad_personalization_signals: false
+      window.gtag('consent', 'update', {
+        analytics_storage: prefs && prefs.analytics === true ? 'granted' : 'denied'
       });
     }
   }
@@ -831,7 +789,7 @@ console.log(
 
 /* ---------- CONVERSION EVENT TRACKING ----------
    Thin wrapper over Umami and GA4. Umami is cookieless and can be disabled
-   from preferences; GA4 remains consent-gated. We
+   from preferences; custom GA4 contact events remain consent-gated. We
    capture the conversion-critical micro-actions: phone taps, WhatsApp
    taps, appointment CTAs and form submissions. Delegated from document
    so it covers nav, footer, FAB, mobile bar and any injected markup. */

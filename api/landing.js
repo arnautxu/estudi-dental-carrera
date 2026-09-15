@@ -85,10 +85,30 @@ function render(page) {
 <html lang="${page.lang}">
 <head>
   <meta charset="UTF-8" />
+  <!-- Google tag (gtag.js) — advanced consent mode: cookies remain denied until consent. -->
   <script>
-    window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}window.GA4_ID='G-23SQ9SDX52';
-    gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.GA4_ID = 'G-23SQ9SDX52';
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+    try {
+      var savedConsent = JSON.parse(localStorage.getItem('edc_consent_v1'));
+      if (savedConsent && savedConsent.analytics === true) {
+        gtag('consent', 'update', { analytics_storage: 'granted' });
+      }
+    } catch (_) {}
+    gtag('js', new Date());
+    gtag('config', window.GA4_ID, {
+      allow_google_signals: false,
+      allow_ad_personalization_signals: false
+    });
   </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-23SQ9SDX52"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>${escapeHtml(page.title)}</title>
   <meta name="description" content="${escapeHtml(page.description)}" />
@@ -152,7 +172,7 @@ function render(page) {
     <section class="landing-cta"><div class="container landing-cta__inner"><div><h2>${page.ctaTitle}</h2><p>${page.ctaText}</p></div><a href="${contact}" class="btn btn--primary btn--lg" data-track="appointment_cta_click" data-track-label="landing-footer">${isEs ? 'Pedir visita' : 'Demanar visita'}</a></div></section>
   </main>
   <footer class="landing-footer"><div class="landing-footer__grid"><div><h2>Estudi Dental Carrera</h2><p>${isEs ? 'Odontología conservadora y decisiones explicadas con claridad.' : 'Odontologia conservadora i decisions explicades amb claredat.'}</p></div><div><h2>Lleida</h2><p>Carrer Major, 74-76, 3r 3a<br />25007 Lleida<br /><a href="tel:+34973268826">973 26 88 26</a></p></div><div><h2>Tremp</h2><p>Carrer Montllobar, 22 Baixos<br />25620 Tremp<br /><a href="tel:+34650600172">650 60 01 72</a></p></div></div><div class="landing-footer__legal"><span>© 2026 Estudi Dental Carrera</span><a href="${isEs ? '/es/privacidad.html' : '/privacitat.html'}">${isEs ? 'Privacidad' : 'Privacitat'}</a><a href="${isEs ? '/es/aviso-legal.html' : '/avis-legal.html'}">${isEs ? 'Aviso legal' : 'Avís legal'}</a><a href="${isEs ? '/es/cookies.html' : '/cookies.html'}">Cookies</a><button type="button" data-consent-open>${isEs ? 'Preferencias de cookies' : 'Preferències de cookies'}</button></div></footer>
-  <script src="/assets/js/main.js?v=20260910-cita"></script>
+  <script src="/assets/js/main.js?v=20260915-consent-advanced"></script>
 </body>
 </html>`;
 }
