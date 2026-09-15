@@ -1,11 +1,11 @@
-# Proposta local de contingut SEO · 15 de setembre de 2026
+# Contingut SEO publicat · 15 de setembre de 2026
 
 ## Objectiu i estat
 
 1. Millorar les pàgines existents amb respostes útils, navegació clara, professionals reals i enllaços contextuals.
 2. Afegir sis guies que ajudin a preparar una consulta, connectades amb els serveis corresponents (dotze pàgines entre català i castellà).
 
-**Proposta local, no publicada.** El checkout principal i el web de producció no s’han modificat en aquesta execució. Les guies estan pendents de validació clínica; no s’atribueix revisió ni autoria als professionals de la clínica.
+**Publicat a producció des de `main`, commit `3c53e8a`.** Les guies presenten informació general basada en fonts sanitàries. A petició de l’usuari, es retiren les etiquetes editorials de provisionalitat. No s’atribueix revisió ni autoria als professionals de la clínica.
 
 - Còpia de treball: `/Users/arnau/WEBS/carrera-seo-content-preview`.
 - Branca: `codex/seo-content-preview`.
@@ -66,7 +66,7 @@ npm run build
 PREVIEW_PORT=4176 node scripts/preview-content.cjs
 ```
 
-Començar per <http://localhost:4176/serveis.html#endodoncia> per veure la integració, o per qualsevol ruta de les taules. Aquest servidor és local; no equival a un desplegament públic. L’usuari ha reiterat que vol revisar-ho abans de publicar.
+Començar per <http://localhost:4176/serveis.html#endodoncia> per veure la integració, o per qualsevol ruta de les taules. Aquest servidor és local. La versió publicada és <https://www.estudidentalcarrera.com/serveis.html>.
 
 ## Validació registrada
 
@@ -77,6 +77,6 @@ Comprovacions de la primera tanda (anteriors a l’ampliació):
 - 670 enllaços interns, 288 àncores i 162 recursos estàtics verificats, sense errors.
 - Càrrega del mòdul d’ampliació i execució repetida sense duplicar contingut comprovades.
 
-Ampliació de la segona tanda: build correcte, 70 proves superades i `git diff --check` correcte. Les proves inclouen les sis rutes noves, alternates, sitemap, enllaços de tornada al tractament i àncores. Comprovat al navegador el recorregut Serveis → implant/pont i el canvi CA → ES des del menú mòbil; captures d’escriptori i mòbil a la carpeta de visualitzacions. Aquestes comprovacions no substitueixen la validació clínica ni un desplegament.
+Ampliació de la segona tanda: build correcte, 70 proves superades i `git diff --check` correcte. Les proves inclouen les sis rutes noves, alternates, sitemap, enllaços de tornada al tractament i àncores. Comprovat al navegador el recorregut Serveis → implant/pont i el canvi CA → ES des del menú mòbil; captures d’escriptori i mòbil a la carpeta de visualitzacions.
 
-Per continuar: revisar la proposta visual local i validar clínicament les guies. No donar aquests textos per publicats ni atribuir-los resultats de posicionament o captació.
+Producció verificada després del push a `main`: Vercel completat, 14/14 rutes noves accessibles, títols, canonical, alternates i sitemap correctes. La publicació no acredita resultats de posicionament o captació.

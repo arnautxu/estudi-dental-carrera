@@ -1,4 +1,4 @@
-// Preview content. Clinical review is pending; no clinical reviewer is attributed.
+// Dental information with supporting health sources.
 const guides = {
   'alineadors-o-braquets': {
     key: 'alineadors-o-braquets',
@@ -92,7 +92,7 @@ const guides = {
     relatedGuides: [
       { href: '/guies/ferula-descarrega.html', label: 'Fèrula de descàrrega: funció i seguiment' },
     ],
-    editorial: 'Informació general basada en fonts sanitàries. Esborrany pendent de revisió clínica; la valoració odontològica individual determina el diagnòstic i el tractament.',
+    editorial: 'Informació general basada en fonts sanitàries. La valoració odontològica individual determina el diagnòstic i el tractament.',
   },
 
   'alineadores-o-brackets': {
@@ -187,7 +187,7 @@ const guides = {
     relatedGuides: [
       { href: '/es/guias/ferula-descarga.html', label: 'Férula de descarga: función y seguimiento' },
     ],
-    editorial: 'Información general basada en fuentes sanitarias. Borrador pendiente de revisión clínica; la valoración odontológica individual determina el diagnóstico y el tratamiento.',
+    editorial: 'Información general basada en fuentes sanitarias. La valoración odontológica individual determina el diagnóstico y el tratamiento.',
   },
 };
 

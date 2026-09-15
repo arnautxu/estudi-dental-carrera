@@ -1,4 +1,4 @@
-// Local editorial draft. Clinical review is pending; no clinical authorship is assigned.
+// Dental information with supporting health sources.
 const sources = [
   { href: 'https://www.fda.gov/medical-devices/dental-devices/dental-implants-what-you-should-know', label: 'FDA: Dental Implants: What You Should Know' },
   { href: 'https://www.leedsth.nhs.uk/patients/resources/bridges/', label: 'Leeds Teaching Hospitals NHS Trust: Bridges' },
@@ -93,7 +93,7 @@ const guides = {
     relatedGuides: [
       { href: '/guies/endodoncia-dubtes.html', label: 'Dubtes abans d’una endodòncia' },
     ],
-    editorial: 'Informació general basada en fonts sanitàries. Esborrany pendent de revisió clínica; la valoració odontològica individual determina el diagnòstic i el tractament.',
+    editorial: 'Informació general basada en fonts sanitàries. La valoració odontològica individual determina el diagnòstic i el tractament.',
   },
 
   'implante-o-puente': {
@@ -181,7 +181,7 @@ const guides = {
     relatedGuides: [
       { href: '/es/guias/endodoncia-dudas.html', label: 'Dudas antes de una endodoncia' },
     ],
-    editorial: 'Información general basada en fuentes sanitarias. Borrador pendiente de revisión clínica; la valoración odontológica individual determina el diagnóstico y el tratamiento.',
+    editorial: 'Información general basada en fuentes sanitarias. La valoración odontológica individual determina el diagnóstico y el tratamiento.',
   },
 };
 

@@ -1,4 +1,4 @@
-// Preview content. Clinical review is pending; this module does not establish clinical authorship.
+// Dental information with supporting health sources.
 const guides = {
   'endodoncia-dubtes': {
     key: 'endodoncia-dubtes',
@@ -92,7 +92,7 @@ const guides = {
       { href: '/guies/sagnat-genives.html', label: 'Sagnat de genives: què convé observar' },
       { href: '/guies/ferula-descarrega.html', label: 'Fèrula de descàrrega: funció i seguiment' },
     ],
-    editorial: 'Informació general basada en fonts sanitàries. Esborrany pendent de revisió clínica; la valoració odontològica individual determina el diagnòstic i el tractament.',
+    editorial: 'Informació general basada en fonts sanitàries. La valoració odontològica individual determina el diagnòstic i el tractament.',
   },
 
   'endodoncia-dudas': {
@@ -187,7 +187,7 @@ const guides = {
       { href: '/es/guias/sangrado-encias.html', label: 'Sangrado de encías: qué conviene observar' },
       { href: '/es/guias/ferula-descarga.html', label: 'Férula de descarga: función y seguimiento' },
     ],
-    editorial: 'Información general basada en fuentes sanitarias. Borrador pendiente de revisión clínica; la valoración odontológica individual determina el diagnóstico y el tratamiento.',
+    editorial: 'Información general basada en fuentes sanitarias. La valoración odontológica individual determina el diagnóstico y el tratamiento.',
   },
 
   'sagnat-genives': {
@@ -283,7 +283,7 @@ const guides = {
       { href: '/guies/endodoncia-dubtes.html', label: 'Dubtes abans d’una endodòncia' },
       { href: '/guies/ferula-descarrega.html', label: 'Fèrula de descàrrega: funció i seguiment' },
     ],
-    editorial: 'Informació general basada en fonts sanitàries. Esborrany pendent de revisió clínica; la valoració odontològica individual determina el diagnòstic i el tractament.',
+    editorial: 'Informació general basada en fonts sanitàries. La valoració odontològica individual determina el diagnòstic i el tractament.',
   },
 
   'sangrado-encias': {
@@ -379,7 +379,7 @@ const guides = {
       { href: '/es/guias/endodoncia-dudas.html', label: 'Dudas antes de una endodoncia' },
       { href: '/es/guias/ferula-descarga.html', label: 'Férula de descarga: función y seguimiento' },
     ],
-    editorial: 'Información general basada en fuentes sanitarias. Borrador pendiente de revisión clínica; la valoración odontológica individual determina el diagnóstico y el tratamiento.',
+    editorial: 'Información general basada en fuentes sanitarias. La valoración odontológica individual determina el diagnóstico y el tratamiento.',
   },
 
   'ferula-descarrega': {
@@ -475,7 +475,7 @@ const guides = {
       { href: '/guies/endodoncia-dubtes.html', label: 'Dubtes abans d’una endodòncia' },
       { href: '/guies/sagnat-genives.html', label: 'Sagnat de genives: què convé observar' },
     ],
-    editorial: 'Informació general basada en fonts sanitàries. Esborrany pendent de revisió clínica; la valoració odontològica individual determina el diagnòstic i el tractament.',
+    editorial: 'Informació general basada en fonts sanitàries. La valoració odontològica individual determina el diagnòstic i el tractament.',
   },
 
   'ferula-descarga': {
@@ -571,7 +571,7 @@ const guides = {
       { href: '/es/guias/endodoncia-dudas.html', label: 'Dudas antes de una endodoncia' },
       { href: '/es/guias/sangrado-encias.html', label: 'Sangrado de encías: qué conviene observar' },
     ],
-    editorial: 'Información general basada en fuentes sanitarias. Borrador pendiente de revisión clínica; la valoración odontológica individual determina el diagnóstico y el tratamiento.',
+    editorial: 'Información general basada en fuentes sanitarias. La valoración odontológica individual determina el diagnóstico y el tratamiento.',
   },
 };
 

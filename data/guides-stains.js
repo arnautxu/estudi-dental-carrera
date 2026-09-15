@@ -1,4 +1,4 @@
-// Editorial preview. Clinical review is pending; no clinical authorship is implied.
+// Dental information with supporting health sources.
 const guides = {
   'taques-dents': {
     key: 'taques-dents',
@@ -92,7 +92,7 @@ const guides = {
       { href: '/guies/sagnat-genives.html', label: 'Si també et sagnen les genives' },
       { href: '/guies/endodoncia-dubtes.html', label: 'Si et proposen una endodòncia: dubtes per a la visita' },
     ],
-    editorial: 'Informació general basada en fonts sanitàries. Esborrany pendent de revisió clínica; la valoració odontològica individual determina el diagnòstic i el tractament.',
+    editorial: 'Informació general basada en fonts sanitàries. La valoració odontològica individual determina el diagnòstic i el tractament.',
   },
 
   'manchas-dientes': {
@@ -187,7 +187,7 @@ const guides = {
       { href: '/es/guias/sangrado-encias.html', label: 'Si también te sangran las encías' },
       { href: '/es/guias/endodoncia-dudas.html', label: 'Si te proponen una endodoncia: dudas para la visita' },
     ],
-    editorial: 'Información general basada en fuentes sanitarias. Borrador pendiente de revisión clínica; la valoración odontológica individual determina el diagnóstico y el tratamiento.',
+    editorial: 'Información general basada en fuentes sanitarias. La valoración odontológica individual determina el diagnóstico y el tratamiento.',
   },
 };
 
