@@ -149,7 +149,7 @@ input, select, textarea { font:inherit; }
 
 /* Anchor targets land clear of the fixed 88px header instead of tucking
    underneath it (affects both same-page and cross-page #anchor links). */
-section[id] { scroll-margin-top: 96px; }
+section[id], .team-card[id] { scroll-margin-top: 96px; }
 
 .label {
   display:inline-block;

@@ -115,6 +115,23 @@ const carmeProfile = {
   },
 };
 
+const joanProfile = {
+  ca: {
+    name: 'Dr. Joan Carrera Carrillo',
+    role: 'Odontòleg · Implantologia i cirurgia oral',
+    href: '/equip.html#joan-carrera-carrillo',
+    image: '/assets/img/equip/joan-carrera-carrillo.webp',
+    imageWidth: 900, imageHeight: 1080,
+  },
+  es: {
+    name: 'Dr. Joan Carrera Carrillo',
+    role: 'Odontólogo · Implantología y cirugía oral',
+    href: '/es/equipo.html#joan-carrera-carrillo',
+    image: '/assets/img/equip/joan-carrera-carrillo.webp',
+    imageWidth: 900, imageHeight: 1080,
+  },
+};
+
 pages['ca-atm'] = servicePage('ca', {
   professional: carmeProfile.ca,
   related: [
@@ -241,6 +258,7 @@ pages['es-atm'] = servicePage('es', {
 });
 
 pages['ca-implants'] = servicePage('ca', {
+  professional: joanProfile.ca,
   dateModified: '2026-09-15', updatedLabel: '15 de setembre de 2026',
   path: 'implants-dentals.html', alternatePath: 'es/implantes-dentales.html',
   title: 'Implants dentals a Lleida i Tremp | Estudi Dental Carrera',
@@ -257,7 +275,8 @@ pages['ca-implants'] = servicePage('ca', {
     {
       title: 'Què decidim abans d’extreure una dent',
       paragraphs: [
-        'Primer revisem si la dent encara es pot conservar. Si cal extreure-la, expliquem les opcions: esperar que cicatritzi, conservar l’os de la zona o col·locar l’implant en aquell moment. La tria depèn de l’os, la infecció, l’estabilitat i la força de la mossegada.',
+        'Primer revisem si la dent encara es pot conservar. Si el problema és a l’interior de la dent, valorem si un <a href="/periodoncia-endodoncia.html#endodoncia">tractament d’endodòncia i una restauració</a> poden ser adequats.',
+        'Si cal extreure-la, expliquem les opcions: esperar que cicatritzi, conservar l’os de la zona o col·locar l’implant en aquell moment. La tria depèn de l’os, la infecció, l’estabilitat i la força de la mossegada.',
         'Col·locar un implant el mateix dia de l’extracció no vol dir que es pugui posar també una dent fixa aquell dia. Són dues decisions diferents. La càrrega immediata només es planteja quan l’estudi del cas ho permet.',
         'Si falta os, podem valorar una regeneració. També comparem altres opcions, com una pròtesi diferent, un implant més curt o no reposar una peça posterior. Revisem què aporta cada alternativa i què exigeix en temps, cirurgia i manteniment.',
       ],
@@ -281,7 +300,7 @@ pages['ca-implants'] = servicePage('ca', {
       paragraphs: [
         'Hi pot haver infecció, sagnat o lesió d’estructures properes. També pot fallar la integració, perdre’s os o aparèixer una complicació de la pròtesi. El risc canvia segons la zona i la persona. El tabac i una malaltia de les genives sense controlar poden empitjorar l’evolució.',
         'Expliquem aquests riscos abans de començar i revisem quins es poden reduir. El consentiment inclou les limitacions del tractament i les alternatives. Cap implant es pot presentar com una solució garantida per a tota la vida.',
-        'Un implant no té càries, però la geniva i l’os que l’envolten poden emmalaltir. La neteja diària i els controls continuen sent necessaris. T’ensenyem com netejar la pròtesi i adaptem les revisions al risc. Consulta si hi ha sagnat, pus, mal gust, mobilitat o molèsties persistents.',
+        'Un implant no té càries, però la geniva i l’os que l’envolten poden emmalaltir. La neteja diària i els controls continuen sent necessaris. T’ensenyem com netejar la pròtesi i adaptem les revisions al risc. Pots consultar com valorem la <a href="/periodoncia-endodoncia.html#periodoncia">salut de les genives</a>. Consulta si hi ha sagnat, pus, mal gust, mobilitat o molèsties persistents.',
       ],
     },
   ],
@@ -295,11 +314,13 @@ pages['ca-implants'] = servicePage('ca', {
   serviceType: 'Planificació, cirurgia i rehabilitació amb implants dentals',
   sources: [
     { href: 'https://www.fda.gov/medical-devices/dental-devices/dental-implants-what-you-should-know', label: 'FDA: dental implants' },
+    { href: 'https://www.nhs.uk/tests-and-treatments/root-canal-treatment/', label: 'NHS: conservar la dent amb endodòncia' },
     { href: 'https://www.efp.org/for-patients/home/', label: 'EFP: informació per a pacients' },
   ],
 });
 
 pages['es-implants'] = servicePage('es', {
+  professional: joanProfile.es,
   dateModified: '2026-09-15', updatedLabel: '15 de septiembre de 2026',
   path: 'es/implantes-dentales.html', alternatePath: 'implants-dentals.html',
   title: 'Implantes dentales en Lleida y Tremp | Estudi Dental Carrera',
@@ -316,7 +337,8 @@ pages['es-implants'] = servicePage('es', {
     {
       title: 'Qué decidimos antes de extraer un diente',
       paragraphs: [
-        'Primero revisamos si el diente todavía puede conservarse. Si hay que extraerlo, explicamos las opciones: esperar a que cicatrice, conservar el hueso de la zona o colocar el implante en ese momento. La elección depende del hueso, la infección, la estabilidad y la fuerza de la mordida.',
+        'Primero revisamos si el diente todavía puede conservarse. Si el problema está en su interior, valoramos si un <a href="/es/periodoncia-endodoncia.html#endodoncia">tratamiento de endodoncia y una restauración</a> pueden ser adecuados.',
+        'Si hay que extraerlo, explicamos las opciones: esperar a que cicatrice, conservar el hueso de la zona o colocar el implante en ese momento. La elección depende del hueso, la infección, la estabilidad y la fuerza de la mordida.',
         'Colocar un implante el mismo día de la extracción no significa que se pueda colocar también un diente fijo ese día. Son dos decisiones distintas. La carga inmediata solo se plantea cuando el estudio del caso lo permite.',
         'Si falta hueso, podemos valorar una regeneración. También comparamos otras opciones, como una prótesis distinta, un implante más corto o no reponer una pieza posterior. Revisamos qué aporta cada alternativa y qué exige en tiempo, cirugía y mantenimiento.',
       ],
@@ -340,7 +362,7 @@ pages['es-implants'] = servicePage('es', {
       paragraphs: [
         'Puede haber infección, sangrado o lesión de estructuras cercanas. También puede fallar la integración, perderse hueso o aparecer una complicación de la prótesis. El riesgo cambia según la zona y la persona. El tabaco y una enfermedad de las encías sin controlar pueden empeorar la evolución.',
         'Explicamos estos riesgos antes de empezar y revisamos cuáles se pueden reducir. El consentimiento incluye las limitaciones del tratamiento y sus alternativas. Ningún implante puede presentarse como una solución garantizada para toda la vida.',
-        'Un implante no tiene caries, pero la encía y el hueso que lo rodean pueden enfermar. La limpieza diaria y los controles siguen siendo necesarios. Te enseñamos cómo limpiar la prótesis y adaptamos las revisiones al riesgo. Consulta si hay sangrado, pus, mal sabor, movilidad o molestias persistentes.',
+        'Un implante no tiene caries, pero la encía y el hueso que lo rodean pueden enfermar. La limpieza diaria y los controles siguen siendo necesarios. Te enseñamos cómo limpiar la prótesis y adaptamos las revisiones al riesgo. Puedes consultar cómo valoramos la <a href="/es/periodoncia-endodoncia.html#periodoncia">salud de las encías</a>. Consulta si hay sangrado, pus, mal sabor, movilidad o molestias persistentes.',
       ],
     },
   ],
@@ -354,6 +376,7 @@ pages['es-implants'] = servicePage('es', {
   serviceType: 'Planificación, cirugía y rehabilitación con implantes dentales',
   sources: [
     { href: 'https://www.fda.gov/medical-devices/dental-devices/dental-implants-what-you-should-know', label: 'FDA: dental implants' },
+    { href: 'https://www.nhs.uk/tests-and-treatments/root-canal-treatment/', label: 'NHS: conservar el diente con endodoncia' },
     { href: 'https://www.efp.org/for-patients/home/', label: 'EFP: información para pacientes' },
   ],
 });
@@ -366,8 +389,8 @@ pages['ca-ortho'] = servicePage('ca', {
     { href: '/equip.html#carme-roure', type: 'Equip', label: 'Dra. Carme Roure · Ortodòncia i ATM' }
   ],
   path: 'ortodoncia.html', alternatePath: 'es/ortodoncia.html',
-  title: 'Ortodòncia a Lleida i Tremp | Estudi Dental Carrera',
-  description: 'Ortodòncia amb alineadors o aparells a Lleida i Tremp. Estudi individual de mossegada, salut periodontal, alternatives i retenció.',
+  title: 'Ortodòncia invisible i brackets a Lleida i Tremp | Carrera',
+  description: 'Ortodòncia invisible amb alineadors i tractaments amb brackets a Lleida i Tremp. Estudi de mossegada, salut periodontal i retenció segons cada cas.',
   dateModified: '2026-09-15', updatedLabel: '15 de setembre de 2026',
   eyebrow: 'Ortodòncia en infants, adolescents i adults', h1: 'Ortodòncia a Lleida i Tremp: alineadors i brackets',
   lead: 'L’ortodòncia pot millorar posició, funció i higiene, però necessita un diagnòstic complet, expectatives realistes i una fase de retenció planificada des del principi.',
@@ -387,8 +410,8 @@ pages['ca-ortho'] = servicePage('ca', {
       ],
     },
     {
-      title: 'Ortodòncia invisible o brackets: com triem',
-      id: 'ortodoncia-invisible',
+      title: 'Ortodòncia invisible a Lleida: com triem el sistema',
+      id: 'ortodoncia-invisible', jumpLabel: 'Alineadors o brackets',
       paragraphs: [
         'Els alineadors transparents es coneixen com a ortodòncia invisible. Els brackets són una altra opció. Triem el sistema segons els moviments que necessita la teva boca, la higiene i les hores d’ús que exigeix. Cap opció és millor per a tots els casos.',
         'Els alineadors s’han de portar les hores indicades i netejar bé. Si es fan servir menys temps del necessari, les dents poden no seguir el pla. Amb brackets, també cal netejar amb cura al voltant de l’aparell.',
@@ -439,8 +462,8 @@ pages['es-ortho'] = servicePage('es', {
     { href: '/es/equipo.html#carme-roure', type: 'Equipo', label: 'Dra. Carme Roure · Ortodoncia y ATM' }
   ],
   path: 'es/ortodoncia.html', alternatePath: 'ortodoncia.html',
-  title: 'Ortodoncia en Lleida y Tremp | Estudi Dental Carrera',
-  description: 'Ortodoncia con alineadores o aparatos en Lleida y Tremp. Estudio individual de mordida, salud periodontal, alternativas y retención.',
+  title: 'Ortodoncia invisible y brackets en Lleida y Tremp | Carrera',
+  description: 'Ortodoncia invisible con alineadores y tratamientos con brackets en Lleida y Tremp. Estudio de mordida, salud periodontal y retención según cada caso.',
   dateModified: '2026-09-15', updatedLabel: '15 de septiembre de 2026',
   eyebrow: 'Ortodoncia en niños, adolescentes y adultos', h1: 'Ortodoncia en Lleida y Tremp: alineadores y brackets',
   lead: 'La ortodoncia puede mejorar posición, función e higiene, pero necesita un diagnóstico completo, expectativas realistas y una fase de retención planificada desde el principio.',
@@ -460,8 +483,8 @@ pages['es-ortho'] = servicePage('es', {
       ],
     },
     {
-      title: 'Ortodoncia invisible o brackets: cómo elegimos',
-      id: 'ortodoncia-invisible',
+      title: 'Ortodoncia invisible en Lleida: cómo elegimos el sistema',
+      id: 'ortodoncia-invisible', jumpLabel: 'Alineadores o brackets',
       paragraphs: [
         'Los alineadores transparentes suelen conocerse como ortodoncia invisible. Los brackets son otra opción. Elegimos el sistema según los movimientos que necesita tu boca, tu higiene y las horas de uso que exige. Ninguna opción es mejor para todos los casos.',
         'Los alineadores deben llevarse las horas indicadas y limpiarse bien. Si se usan menos tiempo del necesario, los dientes pueden no seguir el plan. Con brackets, también hay que limpiar con cuidado alrededor del aparato.',
@@ -505,6 +528,7 @@ pages['es-ortho'] = servicePage('es', {
 });
 
 pages['ca-perio'] = servicePage('ca', {
+  sectionNavLabel: 'Genives, neteja dental i endodòncia',
   dateModified: '2026-09-15', updatedLabel: '15 de setembre de 2026',
   path: 'periodoncia-endodoncia.html', alternatePath: 'es/periodoncia-endodoncia.html',
   title: 'Periodòncia i endodòncia a Lleida i Tremp | Estudi Dental',
@@ -520,16 +544,21 @@ pages['ca-perio'] = servicePage('ca', {
   sections: [
     {
       title: 'Genives que sagnen: què revisem primer',
+      id: 'periodoncia', jumpLabel: 'Genives que sagnen',
       paragraphs: [
         'La gingivitis és una inflamació de la geniva que sovint es relaciona amb la placa. Pot causar sagnat, envermelliment o inflor. La periodontitis afecta també els teixits que subjecten la dent i pot avançar amb poques molèsties.',
         'Convé consultar si les genives sagnen sovint, es retreuen o deixen veure més dent. També si notes mobilitat, mal alè persistent o espais nous entre dents. Fumar pot ocultar el sagnat i augmentar el risc.',
         'A l’estudi periodontal mesurem els espais entre la geniva i la dent. Anotem el sagnat, la mobilitat i la retracció. Quan cal, una radiografia ajuda a valorar quant os sosté cada peça.',
+        'Al nostre equip, el <a href="/equip.html#albert-vim">Dr. Albert Vim</a> es dedica a la periodòncia i la rehabilitació oral. Pots conèixer la seva dedicació abans de demanar visita.',
       ],
     },
     {
-      title: 'Com s’organitza el tractament de les genives',
+      title: 'Neteja dental a Lleida: què necessiten les genives',
+      id: 'neteja-dental', jumpLabel: 'Neteja dental',
+      ctaText: 'Valorem si necessites una higiene o un tractament de les genives.',
       paragraphs: [
-        'La primera fase sol combinar higiene a casa i neteja professional per sobre i per sota de la geniva. Després revisem la resposta. Només llavors valorem si alguna zona necessita un altre tractament o cirurgia.',
+        'Una neteja dental professional ajuda a retirar els dipòsits que s’acumulen a les dents. Abans revisem les genives per saber si la higiene és suficient o si cal un tractament periodontal. El sagnat, la pèrdua d’os i la profunditat dels espais entre dent i geniva orienten aquesta decisió.',
+        'Quan cal tractar les genives, la primera fase sol combinar higiene a casa i neteja professional per sobre i per sota de la geniva. Després revisem la resposta. Només llavors valorem si alguna zona necessita un altre tractament o cirurgia.',
         'Els controls formen part del tractament. La freqüència depèn de la placa, el tabac, la diabetis i l’estat de les genives després de la primera fase. Una neteja aïllada no substitueix el seguiment d’una periodontitis. Si portes implants, revisem també els teixits que els envolten.',
       ],
       items: [
@@ -541,16 +570,20 @@ pages['ca-perio'] = servicePage('ca', {
     },
     {
       title: 'En què consisteix un tractament d’endodòncia',
+      id: 'endodoncia', jumpLabel: 'Endodòncia',
+      ctaText: 'Revisem l’origen del problema i si la dent es pot conservar.',
       paragraphs: [
         'Una càries profunda, una fractura o un cop poden danyar la polpa. El dolor espontani, el dolor en mossegar o la sensibilitat que dura després del fred o la calor poden orientar. Un canvi de color o una inflamació també mereixen revisió. A vegades hi ha infecció sense dolor.',
         'El tractament d’endodòncia neteja i desinfecta els conductes de l’interior de la dent i després els segella. Els conductes poden tenir una forma complexa. Cap procediment garanteix eliminar tots els microorganismes.',
         'El pas següent és reconstruir la dent perquè quedi segellada i pugui suportar la mossegada. Endarrerir aquesta restauració pot afavorir una fractura o l’entrada de bacteris. A la visita expliquem quina part del tractament correspon als conductes i quina a la reconstrucció.',
+        'Al nostre equip, la <a href="/equip.html#isabel-sierra">Dra. Isabel Sierra</a> es dedica a l’endodòncia, les pròtesis i la rehabilitació oral mínimament invasiva.',
       ],
     },
     {
       title: 'Què passa després del tractament',
       paragraphs: [
         'Una endodòncia necessita seguiment. Si una lesió persisteix o reapareix, revisem la causa i si la dent encara es pot restaurar. Segons el cas, es pot plantejar repetir el tractament, una cirurgia a l’extrem de l’arrel o extreure la peça.',
+        'Si la dent no es pot conservar, expliquem les opcions per substituir-la. La guia d’<a href="/implants-dentals.html">implants dentals i alternatives</a> descriu què es valora abans de triar. Una infecció no implica, per si sola, que calgui posar un implant.',
         'Els antibiòtics no substitueixen el tractament de la causa local. No s’indiquen de forma rutinària: el professional valora si calen segons la infecció i el seu efecte en la salut general.',
       ],
     },
@@ -564,12 +597,14 @@ pages['ca-perio'] = servicePage('ca', {
   serviceType: 'Diagnòstic i tractament periodontal i endodòntic',
   sources: [
     { href: 'https://www.nhs.uk/conditions/gum-disease/', label: 'NHS: gum disease' },
+    { href: 'https://www.nidcr.nih.gov/health-info/gum-disease', label: 'NIDCR: diagnòstic i tractament de les genives' },
     { href: 'https://www.nhs.uk/tests-and-treatments/root-canal-treatment/', label: 'NHS: root canal treatment' },
     { href: 'https://www.efp.org/for-patients/home/', label: 'EFP: salut periodontal' },
   ],
 });
 
 pages['es-perio'] = servicePage('es', {
+  sectionNavLabel: 'Encías, limpieza dental y endodoncia',
   dateModified: '2026-09-15', updatedLabel: '15 de septiembre de 2026',
   path: 'es/periodoncia-endodoncia.html', alternatePath: 'periodoncia-endodoncia.html',
   title: 'Periodoncia y endodoncia en Lleida y Tremp | Estudi Dental',
@@ -585,16 +620,21 @@ pages['es-perio'] = servicePage('es', {
   sections: [
     {
       title: 'Encías que sangran: qué revisamos primero',
+      id: 'periodoncia', jumpLabel: 'Encías que sangran',
       paragraphs: [
         'La gingivitis es una inflamación de la encía que suele relacionarse con la placa. Puede causar sangrado, enrojecimiento o hinchazón. La periodontitis afecta además a los tejidos que sujetan el diente y puede avanzar con pocas molestias.',
         'Conviene consultar si las encías sangran a menudo, se retraen o dejan ver más diente. También si notas movilidad, mal aliento persistente o espacios nuevos entre dientes. Fumar puede ocultar el sangrado y aumentar el riesgo.',
         'En el estudio periodontal medimos los espacios entre la encía y el diente. Anotamos el sangrado, la movilidad y la retracción. Cuando hace falta, una radiografía ayuda a valorar cuánto hueso sostiene cada pieza.',
+        'En nuestro equipo, el <a href="/es/equipo.html#albert-vim">Dr. Albert Vim</a> se dedica a la periodoncia y la rehabilitación oral. Puedes conocer su dedicación antes de pedir visita.',
       ],
     },
     {
-      title: 'Cómo se organiza el tratamiento de las encías',
+      title: 'Limpieza dental en Lleida: qué necesitan tus encías',
+      id: 'limpieza-dental', jumpLabel: 'Limpieza dental',
+      ctaText: 'Valoramos si necesitas una higiene o un tratamiento de las encías.',
       paragraphs: [
-        'La primera fase suele combinar higiene en casa y limpieza profesional por encima y por debajo de la encía. Después revisamos la respuesta. Solo entonces valoramos si alguna zona necesita otro tratamiento o cirugía.',
+        'Una limpieza dental profesional ayuda a retirar los depósitos que se acumulan en los dientes. Antes revisamos las encías para saber si la higiene es suficiente o si hace falta un tratamiento periodontal. El sangrado, la pérdida de hueso y la profundidad de los espacios entre diente y encía orientan esta decisión.',
+        'Cuando hace falta tratar las encías, la primera fase suele combinar higiene en casa y limpieza profesional por encima y por debajo de la encía. Después revisamos la respuesta. Solo entonces valoramos si alguna zona necesita otro tratamiento o cirugía.',
         'Los controles forman parte del tratamiento. Su frecuencia depende de la placa, el tabaco, la diabetes y el estado de las encías tras la primera fase. Una limpieza aislada no sustituye el seguimiento de una periodontitis. Si llevas implantes, revisamos también los tejidos que los rodean.',
       ],
       items: [
@@ -606,16 +646,20 @@ pages['es-perio'] = servicePage('es', {
     },
     {
       title: 'En qué consiste un tratamiento de endodoncia',
+      id: 'endodoncia', jumpLabel: 'Endodoncia',
+      ctaText: 'Revisamos el origen del problema y si el diente puede conservarse.',
       paragraphs: [
         'Una caries profunda, una fractura o un golpe pueden dañar la pulpa. El dolor espontáneo, el dolor al morder o la sensibilidad que dura tras el frío o el calor pueden orientar. Un cambio de color o una inflamación también merecen revisión. A veces existe infección sin dolor.',
         'El tratamiento de endodoncia limpia y desinfecta los conductos del interior del diente y después los sella. Los conductos pueden tener una forma compleja. Ningún procedimiento garantiza eliminar todos los microorganismos.',
         'El siguiente paso es reconstruir el diente para que quede sellado y pueda soportar la mordida. Retrasar esa restauración puede favorecer una fractura o la entrada de bacterias. En la visita explicamos qué parte del tratamiento corresponde a los conductos y cuál a la reconstrucción.',
+        'En nuestro equipo, la <a href="/es/equipo.html#isabel-sierra">Dra. Isabel Sierra</a> se dedica a la endodoncia, las prótesis y la rehabilitación oral mínimamente invasiva.',
       ],
     },
     {
       title: 'Qué pasa después del tratamiento',
       paragraphs: [
         'Una endodoncia necesita seguimiento. Si una lesión persiste o reaparece, revisamos la causa y si el diente aún se puede restaurar. Según el caso, puede plantearse repetir el tratamiento, una cirugía en el extremo de la raíz o extraer la pieza.',
+        'Si el diente no puede conservarse, explicamos las opciones para sustituirlo. La guía de <a href="/es/implantes-dentales.html">implantes dentales y alternativas</a> describe qué se valora antes de elegir. Una infección no implica, por sí sola, que haya que colocar un implante.',
         'Los antibióticos no sustituyen el tratamiento de la causa local. No se indican de forma rutinaria: el profesional valora si hacen falta según la infección y su efecto en la salud general.',
       ],
     },
@@ -629,6 +673,7 @@ pages['es-perio'] = servicePage('es', {
   serviceType: 'Diagnóstico y tratamiento periodontal y endodóntico',
   sources: [
     { href: 'https://www.nhs.uk/conditions/gum-disease/', label: 'NHS: gum disease' },
+    { href: 'https://www.nidcr.nih.gov/health-info/gum-disease', label: 'NIDCR: diagnóstico y tratamiento de las encías' },
     { href: 'https://www.nhs.uk/tests-and-treatments/root-canal-treatment/', label: 'NHS: root canal treatment' },
     { href: 'https://www.efp.org/for-patients/home/', label: 'EFP: salud periodontal' },
   ],
@@ -637,8 +682,8 @@ pages['es-perio'] = servicePage('es', {
 pages['ca-aesthetic'] = servicePage('ca', {
   dateModified: '2026-09-15', updatedLabel: '15 de setembre de 2026',
   path: 'estetica-dental.html', alternatePath: 'es/estetica-dental.html',
-  title: 'Estètica dental a Lleida i Tremp | Estudi Dental Carrera',
-  description: 'Estètica dental a Lleida i Tremp amb diagnòstic, emblanquiment, restauracions i plans conservadors adaptats a la salut i al somriure.',
+  title: 'Estètica dental a Lleida: carilles i blanquejament | Carrera',
+  description: 'Estètica dental a Lleida i Tremp: blanquejament, carilles i composite. Revisem dents, genives i mossegada per comparar opcions conservadores.',
   eyebrow: 'Estètica dental conservadora', h1: 'Estètica dental a Lleida i Tremp',
   lead: 'Color, forma, posició i genives s’han de valorar conjuntament. Prioritzem les opcions reversibles o mínimament invasives abans de proposar restauracions.',
   image: 'assets/img/serveis/estetica-llum.webp', imageWidth: 1280, imageHeight: 1600, imageAlt: 'Valoració de llum i color per a un tractament d’estètica dental',
@@ -649,7 +694,7 @@ pages['ca-aesthetic'] = servicePage('ca', {
   ],
   sections: [
     {
-      title: 'Què pot canviar l’emblanquiment',
+      title: 'Blanquejament dental a Lleida: què pot canviar',
       id: 'blanquejament', jumpLabel: 'Blanquejament dental',
       ctaText: 'Parlem del canvi de color que busques.',
       paragraphs: [
@@ -659,10 +704,11 @@ pages['ca-aesthetic'] = servicePage('ca', {
       ],
     },
     {
-      title: 'Composite o facetes: què comparem',
+      title: 'Carilles dentals a Lleida: composite i ceràmica',
       id: 'carilles', jumpLabel: 'Carilles i composite',
       ctaText: 'Valorem la forma i les vores que voldries canviar.',
       paragraphs: [
+        'Una carilla cobreix la cara visible de la dent. Pot ser de ceràmica o de composite: «carilla» descriu la restauració, i «composite» és un dels materials possibles. Reparar només una vora amb composite no és el mateix que recobrir la cara de la dent. Comparem quanta superfície necessita realment un canvi.',
         'El composite és un material que permet reparar una vora, tancar alguns espais o canviar una forma. Sovint requereix preparar poca superfície de les dents. Es pot reparar, tot i que també es desgasta, es pot tenyir i pot necessitar poliment.',
         'Les facetes de ceràmica, també anomenades carilles, poden mantenir bé el color i la forma en casos seleccionats. Solen implicar una decisió menys reversible. La superfície que cal preparar depèn de la posició, el color inicial i el canvi que busquem.',
         'Abans de restaurar, valorem si l’ortodòncia, l’emblanquiment o un petit canvi de contorn conservarien més dent. A vegades convé combinar diverses mesures per etapes. Si proposem una prova estètica, serveix per parlar de proporcions i de com es nota en parlar.',
@@ -693,6 +739,7 @@ pages['ca-aesthetic'] = servicePage('ca', {
   serviceType: 'Diagnòstic i tractaments conservadors d’estètica dental',
   sources: [
     { href: 'https://www.nhs.uk/tests-and-treatments/teeth-whitening/', label: 'NHS: teeth whitening' },
+    { href: 'https://www.mouthhealthy.org/all-topics-a-z/veneers', label: 'ADA: carilles de ceràmica i composite' },
     { href: 'https://consejodentistas.es/informacion-publica/informacion-clinica/', label: 'Consejo General de Dentistas' },
   ],
 });
@@ -700,8 +747,8 @@ pages['ca-aesthetic'] = servicePage('ca', {
 pages['es-aesthetic'] = servicePage('es', {
   dateModified: '2026-09-15', updatedLabel: '15 de septiembre de 2026',
   path: 'es/estetica-dental.html', alternatePath: 'estetica-dental.html',
-  title: 'Estética dental en Lleida y Tremp | Estudi Dental Carrera',
-  description: 'Estética dental en Lleida y Tremp con diagnóstico, blanqueamiento, restauraciones y planes conservadores adaptados a la salud y a la sonrisa.',
+  title: 'Estética dental en Lleida: carillas y blanqueamiento | Carrera',
+  description: 'Estética dental en Lleida y Tremp: blanqueamiento, carillas y composite. Revisamos dientes, encías y mordida para comparar opciones conservadoras.',
   eyebrow: 'Estética dental conservadora', h1: 'Estética dental en Lleida y Tremp',
   lead: 'Color, forma, posición y encías deben valorarse conjuntamente. Priorizamos las opciones reversibles o mínimamente invasivas antes de proponer restauraciones.',
   image: 'assets/img/serveis/estetica-llum.webp', imageWidth: 1280, imageHeight: 1600, imageAlt: 'Valoración de luz y color para un tratamiento de estética dental',
@@ -712,7 +759,7 @@ pages['es-aesthetic'] = servicePage('es', {
   ],
   sections: [
     {
-      title: 'Qué puede cambiar el blanqueamiento',
+      title: 'Blanqueamiento dental en Lleida: qué puede cambiar',
       id: 'blanqueamiento', jumpLabel: 'Blanqueamiento dental',
       ctaText: 'Hablemos del cambio de color que buscas.',
       paragraphs: [
@@ -722,10 +769,11 @@ pages['es-aesthetic'] = servicePage('es', {
       ],
     },
     {
-      title: 'Composite o carillas: qué comparamos',
+      title: 'Carillas dentales en Lleida: composite y cerámica',
       id: 'carillas', jumpLabel: 'Carillas y composite',
       ctaText: 'Valoramos la forma y los bordes que te gustaría cambiar.',
       paragraphs: [
+        'Una carilla cubre la cara visible del diente. Puede ser de cerámica o de composite: «carilla» describe la restauración, y «composite» es uno de los materiales posibles. Reparar solo un borde con composite no es lo mismo que cubrir la cara del diente. Comparamos cuánta superficie necesita realmente un cambio.',
         'El composite es un material que permite reparar un borde, cerrar algunos espacios o cambiar una forma. A menudo requiere preparar poca superficie del diente. Se puede reparar, aunque también se desgasta, puede teñirse y puede necesitar pulido.',
         'Las carillas de cerámica pueden mantener bien el color y la forma en casos seleccionados. Suelen implicar una decisión menos reversible. La superficie que hay que preparar depende de la posición, el color inicial y el cambio que buscamos.',
         'Antes de restaurar, valoramos si la ortodoncia, el blanqueamiento o un pequeño cambio de contorno conservarían más diente. A veces conviene combinar varias medidas por etapas. Si proponemos una prueba estética, sirve para hablar de proporciones y de cómo se siente al hablar.',
@@ -756,6 +804,7 @@ pages['es-aesthetic'] = servicePage('es', {
   serviceType: 'Diagnóstico y tratamientos conservadores de estética dental',
   sources: [
     { href: 'https://www.nhs.uk/tests-and-treatments/teeth-whitening/', label: 'NHS: teeth whitening' },
+    { href: 'https://www.mouthhealthy.org/all-topics-a-z/veneers', label: 'ADA: carillas de cerámica y composite' },
     { href: 'https://consejodentistas.es/informacion-publica/informacion-clinica/', label: 'Consejo General de Dentistas' },
   ],
 });
@@ -798,10 +847,24 @@ pages['ca-lleida'] = locationPage('ca', {
       items: [
         'Si falta una dent: <a href="/implants-dentals.html">implants i les seves alternatives</a>.',
         'Si vols corregir la posició de les dents: <a href="/ortodoncia.html#ortodoncia-invisible">ortodòncia invisible o brackets</a>.',
-        'Si sagnen les genives o fa mal una dent: <a href="/periodoncia-endodoncia.html">periodòncia i endodòncia</a>.',
+        'Si sagnen les genives: <a href="/periodoncia-endodoncia.html#periodoncia">valoració periodontal</a>.',
+        'Si busques una higiene: <a href="/periodoncia-endodoncia.html#neteja-dental">neteja dental i salut de les genives</a>.',
+        'Si fa mal una dent: <a href="/periodoncia-endodoncia.html#endodoncia">valoració i tractament d’endodòncia quan està indicat</a>.',
         'Si hi ha tensió o dolor de mandíbula: <a href="/atm-bruxisme.html">valoració d’ATM i bruxisme</a>.',
         'Si vols aclarir el color de les dents: <a href="/estetica-dental.html#blanquejament">blanquejament dental</a>.',
         'Si vols revisar la forma o una vora: <a href="/estetica-dental.html#carilles">carilles i composite</a>.',
+      ],
+    },
+    {
+      title: 'Professionals de l’equip de Lleida',
+      paragraphs: [
+        'Pots conèixer la dedicació i la trajectòria dels professionals abans de demanar visita. Si el cas combina diverses necessitats, l’equip coordina les diferents àrees.',
+      ],
+      items: [
+        '<a href="/equip.html#joan-carrera-carrillo">Dr. Joan Carrera Carrillo</a>: implantologia i cirurgia oral.',
+        '<a href="/equip.html#albert-vim">Dr. Albert Vim</a>: periodòncia i rehabilitació oral.',
+        '<a href="/equip.html#isabel-sierra">Dra. Isabel Sierra</a>: endodòncia, pròtesis i rehabilitació oral mínimament invasiva.',
+        '<a href="/equip.html#carme-roure">Dra. Carme Roure Miquel</a>: ortodòncia, disfunció craniomandibular i bruxisme.',
       ],
     },
     {
@@ -821,6 +884,7 @@ pages['ca-lleida'] = locationPage('ca', {
       ],
       items: [
         'Adreça: carrer Major, 74-76, 3r 3a, 25007 Lleida.',
+        '<a href="https://maps.google.com/?q=Carrer+Major+74-76,+25007+Lleida" target="_blank" rel="noopener">Obre la ubicació a Google Maps</a>.',
         'Horari: dilluns a divendres de 9 a 20 h i dissabtes de 9 a 14 h.',
         'Telèfon de recepció: <a href="tel:+34973268826">973 26 88 26</a>.',
       ],
@@ -829,7 +893,7 @@ pages['ca-lleida'] = locationPage('ca', {
       title: 'Després de la visita: seguiment i contacte',
       paragraphs: [
         'La freqüència de revisió depèn de les teves genives, el risc de càries, els hàbits i els tractaments previs. Una persona amb implants o periodontitis pot necessitar controls diferents. Revisem els canvis per decidir quan tractar i quan observar.',
-        'Pots demanar contacte pel formulari o WhatsApp. La sol·licitud no substitueix una visita ni confirma una cita fins que recepció la concreti. Evita enviar dades clíniques sensibles per aquests canals.',
+        'Pots demanar contacte pel <a href="/seus.html#contacte-carrera">formulari de Lleida</a> o per <a href="https://wa.me/34615983352" target="_blank" rel="noopener">WhatsApp de recepció</a>. La sol·licitud no substitueix una visita ni confirma una cita fins que recepció la concreti. Evita enviar dades clíniques sensibles per aquests canals.',
         'Per a una urgència dental, truca i valorarem la prioritat i la disponibilitat. No esperis una resposta del formulari si necessites atenció urgent. Davant d’una urgència vital, truca al 112.',
       ],
     },
@@ -877,10 +941,24 @@ pages['es-lleida'] = locationPage('es', {
       items: [
         'Si falta un diente: <a href="/es/implantes-dentales.html">implantes y sus alternativas</a>.',
         'Si quieres corregir la posición de los dientes: <a href="/es/ortodoncia.html#ortodoncia-invisible">ortodoncia invisible o brackets</a>.',
-        'Si sangran las encías o duele un diente: <a href="/es/periodoncia-endodoncia.html">periodoncia y endodoncia</a>.',
+        'Si sangran las encías: <a href="/es/periodoncia-endodoncia.html#periodoncia">valoración periodontal</a>.',
+        'Si buscas una higiene: <a href="/es/periodoncia-endodoncia.html#limpieza-dental">limpieza dental y salud de las encías</a>.',
+        'Si duele un diente: <a href="/es/periodoncia-endodoncia.html#endodoncia">valoración y tratamiento de endodoncia cuando está indicado</a>.',
         'Si hay tensión o dolor de mandíbula: <a href="/es/atm-bruxismo.html">valoración de ATM y bruxismo</a>.',
         'Si quieres aclarar el color de los dientes: <a href="/es/estetica-dental.html#blanqueamiento">blanqueamiento dental</a>.',
         'Si quieres revisar la forma o un borde: <a href="/es/estetica-dental.html#carillas">carillas y composite</a>.',
+      ],
+    },
+    {
+      title: 'Profesionales del equipo de Lleida',
+      paragraphs: [
+        'Puedes conocer la dedicación y la trayectoria de los profesionales antes de pedir visita. Si el caso combina varias necesidades, el equipo coordina las distintas áreas.',
+      ],
+      items: [
+        '<a href="/es/equipo.html#joan-carrera-carrillo">Dr. Joan Carrera Carrillo</a>: implantología y cirugía oral.',
+        '<a href="/es/equipo.html#albert-vim">Dr. Albert Vim</a>: periodoncia y rehabilitación oral.',
+        '<a href="/es/equipo.html#isabel-sierra">Dra. Isabel Sierra</a>: endodoncia, prótesis y rehabilitación oral mínimamente invasiva.',
+        '<a href="/es/equipo.html#carme-roure">Dra. Carme Roure Miquel</a>: ortodoncia, disfunción craneomandibular y bruxismo.',
       ],
     },
     {
@@ -900,6 +978,7 @@ pages['es-lleida'] = locationPage('es', {
       ],
       items: [
         'Dirección: carrer Major, 74-76, 3.º 3.ª, 25007 Lleida.',
+        '<a href="https://maps.google.com/?q=Carrer+Major+74-76,+25007+Lleida" target="_blank" rel="noopener">Abre la ubicación en Google Maps</a>.',
         'Horario: lunes a viernes de 9 a 20 h y sábados de 9 a 14 h.',
         'Teléfono de recepción: <a href="tel:+34973268826">973 26 88 26</a>.',
       ],
@@ -908,7 +987,7 @@ pages['es-lleida'] = locationPage('es', {
       title: 'Después de la visita: seguimiento y contacto',
       paragraphs: [
         'La frecuencia de revisión depende de tus encías, el riesgo de caries, los hábitos y los tratamientos previos. Una persona con implantes o periodontitis puede necesitar controles distintos. Revisamos los cambios para decidir cuándo tratar y cuándo observar.',
-        'Puedes pedir contacto por el formulario o WhatsApp. La solicitud no sustituye una visita ni confirma una cita hasta que recepción la concrete. Evita enviar datos clínicos sensibles por estos canales.',
+        'Puedes pedir contacto por el <a href="/es/sedes.html#contacto-carrera">formulario de Lleida</a> o por <a href="https://wa.me/34615983352" target="_blank" rel="noopener">WhatsApp de recepción</a>. La solicitud no sustituye una visita ni confirma una cita hasta que recepción la concrete. Evita enviar datos clínicos sensibles por estos canales.',
         'Para una urgencia dental, llama y valoraremos la prioridad y la disponibilidad. No esperes una respuesta del formulario si necesitas atención urgente. Ante una urgencia vital, llama al 112.',
       ],
     },

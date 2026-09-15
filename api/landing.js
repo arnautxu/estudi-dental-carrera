@@ -88,8 +88,9 @@ function render(page) {
     ? `<div class="landing-professional"><img src="${escapeHtml(page.professional.image)}" width="${page.professional.imageWidth}" height="${page.professional.imageHeight}" alt="" loading="lazy" decoding="async" /><div><span>${isEs ? 'En nuestro equipo' : 'Al nostre equip'}</span><strong>${escapeHtml(page.professional.name)}</strong><p>${escapeHtml(page.professional.role)}</p><a href="${escapeHtml(page.professional.href)}">${isEs ? 'Conoce su trayectoria' : 'Coneix la seva trajectòria'} <span aria-hidden="true">→</span></a></div></div>`
     : '';
   const jumpSections = page.sections.filter(section => section.id && section.jumpLabel);
+  const sectionNavLabel = page.sectionNavLabel || (isEs ? 'Apartados del tratamiento' : 'Apartats del tractament');
   const sectionNav = jumpSections.length
-    ? `<nav class="landing-section-nav" aria-label="${isEs ? 'Opciones de estética dental' : 'Opcions d’estètica dental'}"><span>${isEs ? '¿Qué te gustaría revisar?' : 'Què t’agradaria revisar?'}</span><ul>${jumpSections.map(section => `<li><a href="#${escapeHtml(section.id)}">${escapeHtml(section.jumpLabel)} <span aria-hidden="true">↓</span></a></li>`).join('')}</ul></nav>`
+    ? `<nav class="landing-section-nav" aria-label="${escapeHtml(sectionNavLabel)}"><span>${isEs ? '¿Qué te gustaría revisar?' : 'Què t’agradaria revisar?'}</span><ul>${jumpSections.map(section => `<li><a href="#${escapeHtml(section.id)}">${escapeHtml(section.jumpLabel)} <span aria-hidden="true">↓</span></a></li>`).join('')}</ul></nav>`
     : '';
   const url = `${ORIGIN}/${page.path}`;
   const altUrl = `${ORIGIN}/${page.alternatePath}`;
@@ -145,7 +146,7 @@ function render(page) {
   <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&amp;display=optional" rel="stylesheet" /></noscript>
   <link rel="preload" href="/assets/fonts/N27-Regular.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="/assets/css/main.min.css?v=20260915-seo2" />
-  <link rel="stylesheet" href="/assets/css/landing.min.css?v=20260915-conversion" />
+  <link rel="stylesheet" href="/assets/css/landing.min.css?v=20260915-content5" />
   <link rel="icon" type="image/svg+xml" href="/assets/img/logos/favicon.svg" />
   <script type="application/ld+json">${jsonLd(page)}</script>
 </head>

@@ -66,6 +66,7 @@
 .landing-prose h3 { margin:2.3rem 0 .85rem; font-family:var(--font-display); font-size:1.55rem; font-weight:500; }
 .landing-prose ul { margin:0 0 1.6rem; padding-left:1.2rem; color:var(--ink-soft); }
 .landing-prose li { margin:.65rem 0; line-height:1.65; }
+.landing-prose p a, .landing-prose li a { color:var(--ink); text-decoration:underline; text-underline-offset:4px; }
 .landing-section-nav { margin-top:2rem; }
 .landing-section-nav > span { display:block; color:var(--ink); font-size:1rem; font-weight:500; }
 .landing-section-nav ul { display:flex; flex-wrap:wrap; gap:.25rem 1.5rem; margin:.5rem 0 0; padding:0; list-style:none; }
