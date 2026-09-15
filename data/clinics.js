@@ -24,27 +24,21 @@ module.exports = {
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Monday",
-        "opens": "09:30",
-        "closes": "19:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
         "dayOfWeek": [
+          "Monday",
           "Tuesday",
+          "Wednesday",
+          "Thursday",
           "Friday"
         ],
         "opens": "09:00",
-        "closes": "17:00"
+        "closes": "20:00"
       },
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Wednesday",
-          "Thursday"
-        ],
+        "dayOfWeek": "Saturday",
         "opens": "09:00",
-        "closes": "19:00"
+        "closes": "14:00"
       }
     ],
     "areaServed": {

@@ -82,9 +82,8 @@
           "addressCountry": "ES"
         },
         "openingHoursSpecification": [
-          {"@type":"OpeningHoursSpecification","dayOfWeek":"Monday","opens":"09:30","closes":"19:00"},
-          {"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Friday"],"opens":"09:00","closes":"17:00"},
-          {"@type":"OpeningHoursSpecification","dayOfWeek":["Wednesday","Thursday"],"opens":"09:00","closes":"19:00"}
+          {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"20:00"},
+          {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"14:00"}
         ],
         "areaServed": {"@type": "City", "name": "Lleida"},
         "medicalSpecialty": "https://schema.org/Dentistry"
@@ -263,7 +262,7 @@
             </div>
             <div class="form-group"><label for="email">Correu electrònic (opcional)</label><input type="email" id="email" name="email" autocomplete="email" maxlength="180" /><span class="field-error" id="email-error" hidden></span></div>
             <div class="form-group"><label for="horari">Quan et va millor que et truquem? (opcional)</label><select id="horari" name="horari"><option value="">Sense preferència</option><option value="morning">Al matí</option><option value="afternoon">A la tarda</option></select><p class="appointment-note">Dins de l'horari d'atenció de la clínica. No és una reserva d'hora.</p></div>
-            <p class="appointment-visit">La primera visita és de pagament. T'indicarem l'import abans de confirmar-la.</p>
+            <p class="appointment-visit">La primera visita és de pagament. T’indicarem l’import abans de confirmar-la. A Lleida, amb el Carnet Jove, la primera visita i una neteja anual són gratuïtes i tens un 20% de descompte en la resta de serveis. Presenta el carnet a recepció. <a href="https://www.carnetjove.cat/ca/cjm/1579/descomptes/cj-clinica-dental-carrera-lleida">Consulta el conveni del Carnet Jove</a>.</p>
             <div class="form-group"><label class="appointment-consent" for="consent"><input type="checkbox" id="consent" name="consent" required /><span>He llegit la <a href="privacitat.html" target="_blank" rel="noopener">política de privacitat</a> i accepto el tractament de les meves dades per gestionar aquesta sol·licitud. *</span></label><span class="field-error" id="consent-error" hidden></span></div>
             <div class="appointment-actions"><button type="button" class="btn btn--outline" data-back>Enrere</button><button type="submit" class="btn btn--primary submit-btn" disabled>Enviar sol·licitud</button></div>
           </fieldset>
@@ -313,10 +312,9 @@
                   Horari
                 </div>
                 <table class="horari-table">
-                  <tr><td>Dilluns</td><td>9:30 – 19:00</td></tr>
-                  <tr><td>Dimarts i divendres</td><td>9:00 – 17:00</td></tr>
-                  <tr><td>Dimecres i dijous</td><td>9:00 – 19:00</td></tr>
-                  <tr><td>Dissabte i diumenge</td><td>Tancat</td></tr>
+                  <tr><td>Dilluns – Divendres</td><td>9:00 – 20:00</td></tr>
+                  <tr><td>Dissabte</td><td>9:00 – 14:00</td></tr>
+                  <tr><td>Diumenge</td><td>Tancat</td></tr>
                 </table>
               </div>
               <div class="seu-data-item">
@@ -551,7 +549,7 @@
           <ul>
             <li>Carrer Major, 74-76, 3r 3a</li><li>25007 Lleida</li>
             <li><a href="tel:+34973268826">973 26 88 26</a></li>
-            <li>Dl: 9.30–19h · Dt i Dv: 9–17h</li><li>Dc i Dj: 9–19h</li><li>Cap de setmana tancat</li>
+            <li>Dl–Dv: 9h – 20h</li><li>Ds: 9h – 14h</li>
           </ul>
         </div>
         <div class="footer__col">

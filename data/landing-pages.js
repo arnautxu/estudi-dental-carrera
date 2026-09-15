@@ -229,7 +229,7 @@ pages['ca-implants'] = servicePage('ca', {
     },
   ],
   faqs: [
-    { q: 'Com es calcula el preu del tractament?', a: 'El pressupost depèn del que necessiti el teu cas. A la primera visita valorem les opcions i expliquem les fases, els controls i el manteniment previstos. La primera visita és de pagament; recepció pot confirmar-ne l’import i què inclou abans de reservar.' },
+    { q: 'Com es calcula el preu del tractament?', a: 'El pressupost depèn del que necessiti el teu cas. A la primera visita valorem les opcions i expliquem les fases, els controls i el manteniment previstos. La primera visita és de pagament, excepte per a titulars del Carnet Jove a Lleida. Recepció pot confirmar-ne l’import, què inclou i els descomptes aplicables abans de reservar.' },
     { q: 'Tothom pot portar implants?', a: 'No. Cal valorar salut, medicació, os, genives, higiene, tabac i possibilitat de manteniment. També s’han de comparar alternatives.' },
     { q: 'Es pot posar implant i dent el mateix dia?', a: 'En casos seleccionats es pot plantejar càrrega immediata, però depèn de l’estabilitat i del risc. No es pot confirmar sense estudi.' },
     { q: 'Un implant dura tota la vida?', a: 'No es pot garantir. El pronòstic depèn de factors biològics, mecànics i del manteniment continuat.' },
@@ -274,7 +274,7 @@ pages['es-implants'] = servicePage('es', {
     },
   ],
   faqs: [
-    { q: '¿Cómo se calcula el precio del tratamiento?', a: 'El presupuesto depende de lo que necesite tu caso. En la primera visita valoramos las opciones y explicamos las fases, los controles y el mantenimiento previstos. La primera visita es de pago; recepción puede confirmar su importe y qué incluye antes de reservar.' },
+    { q: '¿Cómo se calcula el precio del tratamiento?', a: 'El presupuesto depende de lo que necesite tu caso. En la primera visita valoramos las opciones y explicamos las fases, los controles y el mantenimiento previstos. La primera visita es de pago, excepto para titulares del Carnet Jove en Lleida. Recepción puede confirmar su importe, qué incluye y los descuentos aplicables antes de reservar.' },
     { q: '¿Todo el mundo puede llevar implantes?', a: 'No. Hay que valorar salud, medicación, hueso, encías, higiene, tabaco y posibilidad de mantenimiento. También deben compararse alternativas.' },
     { q: '¿Se puede poner el implante y el diente el mismo día?', a: 'En casos seleccionados puede plantearse carga inmediata, pero depende de la estabilidad y del riesgo. No puede confirmarse sin estudio.' },
     { q: '¿Un implante dura toda la vida?', a: 'No puede garantizarse. El pronóstico depende de factores biológicos, mecánicos y del mantenimiento continuado.' },
@@ -324,7 +324,7 @@ pages['ca-ortho'] = servicePage('ca', {
     },
   ],
   faqs: [
-    { q: 'Com es calcula el preu del tractament?', a: 'El pressupost depèn del que necessiti el teu cas. A la primera visita valorem les opcions i expliquem les fases, els controls i el manteniment previstos. La primera visita és de pagament; recepció pot confirmar-ne l’import i què inclou abans de reservar.' },
+    { q: 'Com es calcula el preu del tractament?', a: 'El pressupost depèn del que necessiti el teu cas. A la primera visita valorem les opcions i expliquem les fases, els controls i el manteniment previstos. La primera visita és de pagament, excepte per a titulars del Carnet Jove a Lleida. Recepció pot confirmar-ne l’import, què inclou i els descomptes aplicables abans de reservar.' },
     { q: 'Alineadors o brackets: què és millor?', a: 'Depèn dels moviments necessaris, la higiene, la col·laboració i els objectius. Cap sistema és universalment millor.' },
     { q: 'Quant dura una ortodòncia?', a: 'La durada varia segons la complexitat, la resposta biològica i el compliment. Només es pot estimar després de l’estudi.' },
     { q: 'Es pot fer ortodòncia amb malaltia periodontal?', a: 'Pot ser possible si la inflamació està controlada i hi ha seguiment periodontal específic. Requereix valoració coordinada.' },
@@ -374,7 +374,7 @@ pages['es-ortho'] = servicePage('es', {
     },
   ],
   faqs: [
-    { q: '¿Cómo se calcula el precio del tratamiento?', a: 'El presupuesto depende de lo que necesite tu caso. En la primera visita valoramos las opciones y explicamos las fases, los controles y el mantenimiento previstos. La primera visita es de pago; recepción puede confirmar su importe y qué incluye antes de reservar.' },
+    { q: '¿Cómo se calcula el precio del tratamiento?', a: 'El presupuesto depende de lo que necesite tu caso. En la primera visita valoramos las opciones y explicamos las fases, los controles y el mantenimiento previstos. La primera visita es de pago, excepto para titulares del Carnet Jove en Lleida. Recepción puede confirmar su importe, qué incluye y los descuentos aplicables antes de reservar.' },
     { q: '¿Alineadores o brackets: qué es mejor?', a: 'Depende de los movimientos necesarios, la higiene, la colaboración y los objetivos. Ningún sistema es universalmente mejor.' },
     { q: '¿Cuánto dura una ortodoncia?', a: 'La duración varía según la complejidad, la respuesta biológica y el cumplimiento. Solo puede estimarse después del estudio.' },
     { q: '¿Puede hacerse ortodoncia con enfermedad periodontal?', a: 'Puede ser posible si la inflamación está controlada y existe seguimiento periodontal específico. Requiere valoración coordinada.' },
@@ -509,7 +509,7 @@ pages['ca-aesthetic'] = servicePage('ca', {
     },
   ],
   faqs: [
-    { q: 'Com es calcula el preu del tractament?', a: 'El pressupost depèn del que necessiti el teu cas. A la primera visita valorem les opcions i expliquem les fases, els controls i el manteniment previstos. La primera visita és de pagament; recepció pot confirmar-ne l’import i què inclou abans de reservar.' },
+    { q: 'Com es calcula el preu del tractament?', a: 'El pressupost depèn del que necessiti el teu cas. A la primera visita valorem les opcions i expliquem les fases, els controls i el manteniment previstos. La primera visita és de pagament, excepte per a titulars del Carnet Jove a Lleida. Recepció pot confirmar-ne l’import, què inclou i els descomptes aplicables abans de reservar.' },
     { q: 'L’emblanquiment fa malbé l’esmalt?', a: 'Els sistemes indicats i supervisats tenen un perfil de seguretat conegut, però poden causar sensibilitat temporal i no són adequats en qualsevol situació.' },
     { q: 'Les corones i els empastaments s’emblanqueixen?', a: 'No. Els materials restauradors no canvien de color com la dent natural i pot caldre replantejar-los després.' },
     { q: 'Composite o ceràmica?', a: 'Depèn del teixit disponible, el canvi necessari, la mossegada, la reparabilitat i les preferències. Cal comparar avantatges i límits.' },
@@ -554,7 +554,7 @@ pages['es-aesthetic'] = servicePage('es', {
     },
   ],
   faqs: [
-    { q: '¿Cómo se calcula el precio del tratamiento?', a: 'El presupuesto depende de lo que necesite tu caso. En la primera visita valoramos las opciones y explicamos las fases, los controles y el mantenimiento previstos. La primera visita es de pago; recepción puede confirmar su importe y qué incluye antes de reservar.' },
+    { q: '¿Cómo se calcula el precio del tratamiento?', a: 'El presupuesto depende de lo que necesite tu caso. En la primera visita valoramos las opciones y explicamos las fases, los controles y el mantenimiento previstos. La primera visita es de pago, excepto para titulares del Carnet Jove en Lleida. Recepción puede confirmar su importe, qué incluye y los descuentos aplicables antes de reservar.' },
     { q: '¿El blanqueamiento daña el esmalte?', a: 'Los sistemas indicados y supervisados tienen un perfil de seguridad conocido, pero pueden causar sensibilidad temporal y no son adecuados en cualquier situación.' },
     { q: '¿Las coronas y los empastes se blanquean?', a: 'No. Los materiales restauradores no cambian de color como el diente natural y puede ser necesario replantearlos después.' },
     { q: '¿Composite o cerámica?', a: 'Depende del tejido disponible, el cambio necesario, la mordida, la reparabilidad y las preferencias. Hay que comparar ventajas y límites.' },
@@ -594,7 +594,7 @@ pages['ca-lleida'] = locationPage('ca', {
     'Estudi Dental Carrera és una clínica dental al centre de Lleida, al carrer Major, 74-76, 3r 3a. Hi fem visites de diagnòstic, prevenció i tractament. Abans de substituir o moure una dent, valorem què podem conservar i quin benefici tindria cada pas.',
     'Si el cas necessita diversos professionals, ordenem les visites entre l’equip. Pot caldre tractar les genives abans de posar una pròtesi o revisar la mossegada abans de restaurar una dent. T’expliquem què proposem, en quin ordre i per què.',
   ],
-  aside: 'Adreça: carrer Major, 74-76, 3r 3a, 25007 Lleida. Telèfon: 973 26 88 26. Horari: dilluns 9.30–19 h; dimarts i divendres 9–17 h; dimecres i dijous 9–19 h. Dissabtes i diumenges, tancat. Consulta amb recepció qualsevol necessitat d’accés.',
+  aside: 'Adreça: carrer Major, 74-76, 3r 3a, 25007 Lleida. Telèfon: 973 26 88 26. Horari: dilluns a divendres 9–20 h; dissabtes 9–14 h. Diumenges, tancat. Consulta amb recepció qualsevol necessitat d’accés.',
   sections: [
     {
       title: 'Què podem valorar a la clínica de Lleida',
@@ -622,7 +622,7 @@ pages['ca-lleida'] = locationPage('ca', {
     },
   ],
   faqs: [
-    { q: 'La primera visita és gratuïta?', a: 'La primera visita és de pagament. Contacta amb recepció per saber-ne l’import i què inclou abans de reservar.' },
+    { q: 'La primera visita és gratuïta?', a: 'La primera visita és de pagament. A Lleida, amb el Carnet Jove, la primera visita i una neteja anual són gratuïtes i tens un 20% de descompte en la resta de serveis. Presenta el carnet a recepció. Contacta amb recepció per confirmar què inclou abans de reservar.' },
     { q: 'On és la clínica de Lleida?', a: 'Al carrer Major, 74-76, 3r 3a, 25007 Lleida. Recomanem confirmar amb recepció qualsevol necessitat d’accés.' },
     { q: 'Què he de portar a la primera visita?', a: 'Medicació, antecedents rellevants i radiografies o informes recents si en tens. No cal repetir proves útils sense motiu.' },
     { q: 'Puc demanar cita per WhatsApp?', a: 'Sí, com a canal de contacte. Evita enviar-hi dades clíniques sensibles i no l’utilitzis per a emergències.' },
@@ -653,7 +653,7 @@ pages['es-lleida'] = locationPage('es', {
     'Estudi Dental Carrera es una clínica dental en el centro de Lleida, en carrer Major, 74-76, 3.º 3.ª. Hacemos visitas de diagnóstico, prevención y tratamiento. Antes de sustituir o mover un diente, valoramos qué podemos conservar y qué beneficio tendría cada paso.',
     'Si el caso necesita varios profesionales, ordenamos las visitas entre el equipo. Puede hacer falta tratar las encías antes de poner una prótesis o revisar la mordida antes de restaurar un diente. Te explicamos qué proponemos, en qué orden y por qué.',
   ],
-  aside: 'Dirección: carrer Major, 74-76, 3.º 3.ª, 25007 Lleida. Teléfono: 973 26 88 26. Horario: lunes 9.30–19 h; martes y viernes 9–17 h; miércoles y jueves 9–19 h. Sábados y domingos, cerrado. Consulta con recepción cualquier necesidad de acceso.',
+  aside: 'Dirección: carrer Major, 74-76, 3.º 3.ª, 25007 Lleida. Teléfono: 973 26 88 26. Horario: lunes a viernes 9–20 h; sábados 9–14 h. Domingos, cerrado. Consulta con recepción cualquier necesidad de acceso.',
   sections: [
     {
       title: 'Tratamientos dentales en Lleida que podemos valorar',
@@ -681,7 +681,7 @@ pages['es-lleida'] = locationPage('es', {
     },
   ],
   faqs: [
-    { q: '¿La primera visita es gratuita?', a: 'La primera visita es de pago. Contacta con recepción para conocer el importe y qué incluye antes de reservar.' },
+    { q: '¿La primera visita es gratuita?', a: 'La primera visita es de pago. En Lleida, con el Carnet Jove, la primera visita y una limpieza anual son gratuitas y tienes un 20% de descuento en el resto de servicios. Presenta el carnet en recepción. Contacta con recepción para confirmar qué incluye antes de reservar.' },
     { q: '¿Dónde está la clínica de Lleida?', a: 'En carrer Major, 74-76, 3.º 3.ª, 25007 Lleida. Recomendamos confirmar con recepción cualquier necesidad de acceso.' },
     { q: '¿Qué debo llevar a la primera visita?', a: 'Medicación, antecedentes relevantes y radiografías o informes recientes si los tienes. No hace falta repetir pruebas útiles sin motivo.' },
     { q: '¿Puedo pedir cita por WhatsApp?', a: 'Sí, como canal de contacto. Evita enviar datos clínicos sensibles y no lo utilices para emergencias.' },
