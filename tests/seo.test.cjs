@@ -28,7 +28,7 @@ for (const [key, page] of Object.entries(pages)) {
       if (anchor) assert.ok(fs.readFileSync(localFile, 'utf8').includes(`id="${anchor}"`), link.href);
     }
     for (const asset of html.matchAll(/(?:src|href)="\/(assets\/[^"?]+\.min\.(?:js|css))/g)) {
-      assert.ok(fs.existsSync(path.join(__dirname, '..', asset[1])), `Run npm run build: ${asset[1]}`);
+      assert.ok(fs.existsSync(path.join(__dirname, '../public', asset[1])), `Run npm run build: ${asset[1]}`);
     }
     const expectedClinic = page.location?.id === 'tremp' ? 'tremp' : page.type === 'location' ? 'carrera' : null;
     if (expectedClinic) assert.ok(html.includes(`?seu=${expectedClinic}#`));
