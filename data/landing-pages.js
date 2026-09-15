@@ -359,19 +359,40 @@ pages['ca-ortho'] = servicePage('ca', {
   ],
   sections: [
     {
-      title: 'L’estudi d’ortodòncia i les opcions possibles',
+      title: 'Què estudiem abans de moure les dents',
       paragraphs: [
-        'L’estudi pot incloure fotografies, registres digitals, radiografies justificades i anàlisi de la mossegada i del perfil. No es tracta de generar una simulació atractiva, sinó d’identificar límits biològics i objectius mesurables. En infants i adolescents també valorem el creixement i el moment adequat per intervenir. Tractar abans no sempre significa tractar millor; depèn del problema que es vulgui modificar.',
-        'Expliquem les alternatives raonables, inclosa l’opció de no tractar si no hi ha un benefici clar. Alguns plans poden requerir crear espai amb desgast interproximal, expansió o extraccions; altres no. Aquestes decisions no es poden generalitzar a partir d’una fotografia. Cal entendre com afecten el perfil, l’estabilitat, les arrels, les genives i la durada.',
-        'En adults amb pèrdua de suport periodontal, restauracions extenses o dents absents, el moviment pot continuar sent possible, però requereix un control específic i coordinació. L’objectiu pot ser facilitar una higiene millor, preparar un espai protètic o distribuir forces, i no necessàriament perseguir una alineació idealitzada.',
+        'L’estudi pot incloure fotografies, registres digitals i radiografies quan calen. Revisem la mossegada i el perfil. Busquem quins moviments es poden fer i quins límits tenen les genives, l’os i les arrels.',
+        'En infants i adolescents, valorem també el creixement. Començar abans no sempre és millor: el moment depèn del problema que volem corregir. Expliquem les opcions i si té sentit esperar. Si no hi ha un benefici clar, també valorem no tractar.',
+        'Per crear espai, alguns casos requereixen ampliar l’arcada, reduir una mica l’esmalt entre dents o fer extraccions. Altres no. Són decisions que necessiten un estudi complet, no només una fotografia. Abans de decidir, expliquem com poden afectar el perfil, l’estabilitat i la durada.',
       ],
     },
     {
-      title: 'Durant el tractament i després: higiene i retenció',
+      title: 'Ortodòncia invisible o brackets: com triem',
       paragraphs: [
-        'Amb qualsevol aparell, la higiene és essencial. La placa al voltant dels brackets o dels ancoratges dels alineadors pot afavorir inflamació gingival i desmineralitzacions. Revisem la tècnica, recomanem eines adaptades i coordinem higienes quan cal. Els alineadors s’han de portar les hores indicades i netejar correctament; si no hi ha prou ús, els moviments poden no seguir el pla.',
-        'És normal notar pressió o sensibilitat temporal després d’alguns canvis, però dolor intens, ferides persistents, un aparell trencat o moviments imprevistos s’han de comunicar. Els controls permeten comprovar que dents i teixits responen de manera segura. De vegades cal refinar el pla, canviar auxiliars o allargar terminis; no és prudent prometre una data exacta abans de veure l’evolució.',
-        'Quan acaba el moviment actiu, les dents tenen tendència a canviar. La retenció, fixa o removible segons el cas, ajuda a mantenir el resultat, però també necessita controls i manteniment. Si un retenidor es desenganxa, deixa d’ajustar o es perd, convé revisar-lo aviat. La retenció no és un detall final: forma part del tractament des del primer dia.',
+        'Els alineadors transparents es coneixen com a ortodòncia invisible. Els brackets són una altra opció. Triem el sistema segons els moviments que necessita la teva boca, la higiene i les hores d’ús que exigeix. Cap opció és millor per a tots els casos.',
+        'Els alineadors s’han de portar les hores indicades i netejar bé. Si es fan servir menys temps del necessari, les dents poden no seguir el pla. Amb brackets, també cal netejar amb cura al voltant de l’aparell.',
+        'En adults amb malaltia de les genives, restauracions grans o dents absents pot ser possible fer ortodòncia. Cal un control específic i coordinar el pla amb altres tractaments. L’objectiu pot ser facilitar la neteja o preparar l’espai per a una pròtesi.',
+      ],
+      items: [
+        'Quins moviments calen i què pot aconseguir cada opció.',
+        'Quin ús diari i quina higiene requereix l’aparell.',
+        'Si cal tractar abans les genives o coordinar altres àrees.',
+        'Com es mantindrà la posició en acabar.',
+      ],
+    },
+    {
+      title: 'Què revisem durant el tractament',
+      paragraphs: [
+        'La placa al voltant dels brackets o dels suports dels alineadors pot inflamar les genives i danyar l’esmalt. T’expliquem com netejar aquestes zones i quines eines fer servir. Coordinem neteges professionals quan calen.',
+        'Després d’alguns ajustos pots notar pressió o sensibilitat temporal. Comunica el dolor intens, una ferida que no millora, un aparell trencat o un canvi inesperat. Els controls serveixen per comprovar com responen les genives i les dents.',
+        'A vegades cal ajustar el pla, canviar algun element de l’aparell o allargar el tractament. La durada s’estima després de l’estudi i es revisa segons l’evolució. No es pot prometre una data exacta de finalització.',
+      ],
+    },
+    {
+      title: 'Per a què serveixen els retenidors',
+      paragraphs: [
+        'Quan acaba el moviment actiu, les dents poden tornar a canviar de posició. Els retenidors ajuden a mantenir el resultat. Poden ser fixos o removibles segons el cas, i també necessiten neteja i controls.',
+        'Si un retenidor es desenganxa, deixa d’encaixar o es perd, convé revisar-lo aviat. Des de l’inici expliquem quina retenció es preveu i com cuidar-la. És part del tractament, no un afegit al final.',
       ],
     },
   ],
@@ -409,19 +430,40 @@ pages['es-ortho'] = servicePage('es', {
   ],
   sections: [
     {
-      title: 'El estudio de ortodoncia y las opciones posibles',
+      title: 'Qué estudiamos antes de mover los dientes',
       paragraphs: [
-        'El estudio puede incluir fotografías, registros digitales, radiografías justificadas y análisis de la mordida y del perfil. No se trata de generar una simulación atractiva, sino de identificar límites biológicos y objetivos medibles. En niños y adolescentes también valoramos el crecimiento y el momento adecuado para intervenir. Tratar antes no siempre significa tratar mejor; depende del problema que se quiera modificar.',
-        'Explicamos las alternativas razonables, incluida la opción de no tratar si no existe un beneficio claro. Algunos planes pueden requerir crear espacio con desgaste interproximal, expansión o extracciones; otros no. Estas decisiones no pueden generalizarse a partir de una fotografía. Hay que entender cómo afectan al perfil, la estabilidad, las raíces, las encías y la duración.',
-        'En adultos con pérdida de soporte periodontal, restauraciones extensas o dientes ausentes, el movimiento puede seguir siendo posible, pero requiere un control específico y coordinación. El objetivo puede ser facilitar una mejor higiene, preparar un espacio protésico o distribuir fuerzas, y no necesariamente perseguir una alineación idealizada.',
+        'El estudio puede incluir fotografías, registros digitales y radiografías cuando hacen falta. Revisamos la mordida y el perfil. Buscamos qué movimientos pueden hacerse y qué límites tienen las encías, el hueso y las raíces.',
+        'En niños y adolescentes, valoramos también el crecimiento. Empezar antes no siempre es mejor: el momento depende del problema que queremos corregir. Explicamos las opciones y si tiene sentido esperar. Si no hay un beneficio claro, también valoramos no tratar.',
+        'Para crear espacio, algunos casos requieren ampliar la arcada, reducir un poco el esmalte entre dientes o hacer extracciones. Otros no. Son decisiones que necesitan un estudio completo, no solo una fotografía. Antes de decidir, explicamos cómo pueden afectar al perfil, la estabilidad y la duración.',
       ],
     },
     {
-      title: 'Durante el tratamiento y después: higiene y retención',
+      title: 'Ortodoncia invisible o brackets: cómo elegimos',
       paragraphs: [
-        'Con cualquier aparato, la higiene es esencial. La placa alrededor de brackets o aditamentos de los alineadores puede favorecer inflamación gingival y desmineralizaciones. Revisamos la técnica, recomendamos herramientas adaptadas y coordinamos las limpiezas dentales cuando es necesario. Los alineadores deben llevarse las horas indicadas y limpiarse correctamente; si no se usan el tiempo necesario, los movimientos pueden no seguir el plan.',
-        'Es normal notar presión o sensibilidad temporal después de algunos cambios, pero el dolor intenso, las heridas persistentes, un aparato roto o movimientos imprevistos deben comunicarse. Los controles permiten comprobar que dientes y tejidos responden de forma segura. A veces hay que refinar el plan, cambiar auxiliares o alargar plazos; no es prudente prometer una fecha exacta antes de ver la evolución.',
-        'Cuando termina el movimiento activo, los dientes tienden a cambiar. La retención, fija o removible según el caso, ayuda a mantener el resultado, pero también necesita controles y mantenimiento. Si un retenedor se despega, deja de ajustar o se pierde, conviene revisarlo pronto. La retención no es un detalle final: forma parte del tratamiento desde el primer día.',
+        'Los alineadores transparentes suelen conocerse como ortodoncia invisible. Los brackets son otra opción. Elegimos el sistema según los movimientos que necesita tu boca, tu higiene y las horas de uso que exige. Ninguna opción es mejor para todos los casos.',
+        'Los alineadores deben llevarse las horas indicadas y limpiarse bien. Si se usan menos tiempo del necesario, los dientes pueden no seguir el plan. Con brackets, también hay que limpiar con cuidado alrededor del aparato.',
+        'En adultos con enfermedad de las encías, restauraciones grandes o dientes ausentes puede ser posible hacer ortodoncia. Hace falta un control específico y coordinar el plan con otros tratamientos. El objetivo puede ser facilitar la limpieza o preparar el espacio para una prótesis.',
+      ],
+      items: [
+        'Qué movimientos hacen falta y qué puede conseguir cada opción.',
+        'Qué uso diario y qué higiene requiere el aparato.',
+        'Si hay que tratar antes las encías o coordinar otras áreas.',
+        'Cómo se mantendrá la posición al terminar.',
+      ],
+    },
+    {
+      title: 'Qué revisamos durante el tratamiento',
+      paragraphs: [
+        'La placa alrededor de brackets o de los apoyos de los alineadores puede inflamar las encías y dañar el esmalte. Te explicamos cómo limpiar esas zonas y qué herramientas usar. Coordinamos limpiezas profesionales cuando hacen falta.',
+        'Tras algunos ajustes puedes notar presión o sensibilidad temporal. Comunica el dolor intenso, una herida que no mejora, un aparato roto o un cambio inesperado. Los controles sirven para comprobar cómo responden las encías y los dientes.',
+        'A veces hay que ajustar el plan, cambiar algún elemento del aparato o alargar el tratamiento. La duración se estima tras el estudio y se revisa según la evolución. No se puede prometer una fecha exacta de finalización.',
+      ],
+    },
+    {
+      title: 'Para qué sirven los retenedores',
+      paragraphs: [
+        'Cuando termina el movimiento activo, los dientes pueden volver a cambiar de posición. Los retenedores ayudan a mantener el resultado. Pueden ser fijos o removibles según el caso, y también necesitan limpieza y controles.',
+        'Si un retenedor se despega, deja de encajar o se pierde, conviene revisarlo pronto. Desde el inicio explicamos qué retención se prevé y cómo cuidarla. Es parte del tratamiento, no un añadido al final.',
       ],
     },
   ],
