@@ -284,7 +284,7 @@ pages['ca-implants'] = servicePage('ca', {
     {
       title: 'Les fases del tractament amb implants',
       paragraphs: [
-        'El pla comença per definir les dents que volem recuperar. Després decidim la posició dels implants i si cal preparar abans l’os o les genives. L’ordre i la durada canvien segons el cas.',
+        'El tractament combina cirurgia oral, per col·locar l’implant a l’os, i rehabilitació, per preparar la dent que s’hi recolza. El pla comença per definir les dents que volem recuperar. Després decidim la posició dels implants i si cal preparar abans l’os o les genives. L’ordre i la durada canvien segons el cas.',
         'La cirurgia guiada fa servir una guia preparada a partir de la planificació digital. Pot ajudar a col·locar l’implant en la posició prevista. Requereix registres precisos i criteri clínic. No garanteix una cirurgia sense incisions ni una recuperació concreta.',
         'Després de la integració de l’implant es prepara la corona, el pont o la pròtesi. Comprovem com encaixa, com mossegues i com parles. També revisem l’aspecte i l’espai per netejar.',
       ],
@@ -346,7 +346,7 @@ pages['es-implants'] = servicePage('es', {
     {
       title: 'Las fases del tratamiento con implantes',
       paragraphs: [
-        'El plan empieza por definir los dientes que queremos recuperar. Después decidimos la posición de los implantes y si hace falta preparar antes el hueso o las encías. El orden y la duración cambian según el caso.',
+        'El tratamiento combina cirugía oral, para colocar el implante en el hueso, y rehabilitación, para preparar el diente que se apoya en él. El plan empieza por definir los dientes que queremos recuperar. Después decidimos la posición de los implantes y si hace falta preparar antes el hueso o las encías. El orden y la duración cambian según el caso.',
         'La cirugía guiada usa una guía preparada a partir de la planificación digital. Puede ayudar a colocar el implante en la posición prevista. Requiere registros precisos y criterio clínico. No garantiza una cirugía sin incisiones ni una recuperación concreta.',
         'Tras la integración del implante se prepara la corona, el puente o la prótesis. Comprobamos cómo encaja, cómo muerdes y cómo hablas. También revisamos el aspecto y el espacio para limpiar.',
       ],
@@ -389,7 +389,7 @@ pages['ca-ortho'] = servicePage('ca', {
     { href: '/equip.html#carme-roure', type: 'Equip', label: 'Dra. Carme Roure · Ortodòncia i ATM' }
   ],
   path: 'ortodoncia.html', alternatePath: 'es/ortodoncia.html',
-  title: 'Ortodòncia invisible i brackets a Lleida i Tremp | Carrera',
+  title: 'Ortodòncia invisible a Lleida i Tremp | Carrera',
   description: 'Ortodòncia invisible amb alineadors i tractaments amb brackets a Lleida i Tremp. Estudi de mossegada, salut periodontal i retenció segons cada cas.',
   dateModified: '2026-09-15', updatedLabel: '15 de setembre de 2026',
   eyebrow: 'Ortodòncia en infants, adolescents i adults', h1: 'Ortodòncia a Lleida i Tremp: alineadors i brackets',
@@ -462,7 +462,7 @@ pages['es-ortho'] = servicePage('es', {
     { href: '/es/equipo.html#carme-roure', type: 'Equipo', label: 'Dra. Carme Roure · Ortodoncia y ATM' }
   ],
   path: 'es/ortodoncia.html', alternatePath: 'ortodoncia.html',
-  title: 'Ortodoncia invisible y brackets en Lleida y Tremp | Carrera',
+  title: 'Ortodoncia invisible en Lleida y Tremp | Carrera',
   description: 'Ortodoncia invisible con alineadores y tratamientos con brackets en Lleida y Tremp. Estudio de mordida, salud periodontal y retención según cada caso.',
   dateModified: '2026-09-15', updatedLabel: '15 de septiembre de 2026',
   eyebrow: 'Ortodoncia en niños, adolescentes y adultos', h1: 'Ortodoncia en Lleida y Tremp: alineadores y brackets',
