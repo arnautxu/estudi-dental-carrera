@@ -1,4 +1,5 @@
 const { pages } = require('../data/landing-pages');
+const clinics = require('../data/clinics');
 
 const ORIGIN = 'https://www.estudidentalcarrera.com';
 
@@ -14,7 +15,7 @@ function jsonLd(page) {
     '@type': 'BreadcrumbList',
     '@id': `${url}#breadcrumb`,
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: page.lang === 'es' ? 'Inicio' : 'Inici', item: `${ORIGIN}/` },
+      { '@type': 'ListItem', position: 1, name: page.lang === 'es' ? 'Inicio' : 'Inici', item: page.lang === 'es' ? `${ORIGIN}/es/` : `${ORIGIN}/` },
       { '@type': 'ListItem', position: 2, name: page.type === 'location' ? (page.lang === 'es' ? 'Clínicas' : 'Clíniques') : (page.lang === 'es' ? 'Tratamientos' : 'Tractaments'), item: page.type === 'location' ? (page.lang === 'es' ? `${ORIGIN}/es/sedes.html` : `${ORIGIN}/seus.html`) : (page.lang === 'es' ? `${ORIGIN}/es/servicios.html` : `${ORIGIN}/serveis.html`) },
       { '@type': 'ListItem', position: 3, name: page.h1, item: url },
     ],
@@ -46,7 +47,7 @@ function jsonLd(page) {
         url,
       };
   webPage.mainEntity = mainEntity;
-  const graph = page.type === 'location' ? [webPage, breadcrumb] : [webPage, mainEntity, breadcrumb];
+  const graph = page.type === 'location' ? [webPage, clinics[page.location.id], breadcrumb] : [webPage, mainEntity, breadcrumb];
   return JSON.stringify({ '@context': 'https://schema.org', '@graph': graph });
 }
 
@@ -75,7 +76,7 @@ function render(page) {
   const team = isEs ? '/es/equipo.html' : '/equip.html';
   const locations = isEs ? '/es/sedes.html' : '/seus.html';
   const clinicId = page.location?.id === 'tremp' ? 'tremp' : (page.type === 'location' ? 'carrera' : '');
-  const contact = `${locations}${clinicId ? `?seu=${clinicId}` : ''}#${isEs ? 'contacto' : 'contacte'}`;
+  const contact = `${locations}#${isEs ? 'contacto' : 'contacte'}${clinicId ? `-${clinicId}` : ''}`;
   const url = `${ORIGIN}/${page.path}`;
   const altUrl = `${ORIGIN}/${page.alternatePath}`;
   const phone = page.location && page.location.id === 'tremp' ? '+34650600172' : '+34973268826';
@@ -129,8 +130,8 @@ function render(page) {
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&amp;display=optional" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&amp;display=optional" rel="stylesheet" /></noscript>
   <link rel="preload" href="/assets/fonts/N27-Regular.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="/assets/css/main.min.css?v=20260915-seo" />
-  <link rel="stylesheet" href="/assets/css/landing.min.css?v=20260915-seo" />
+  <link rel="stylesheet" href="/assets/css/main.min.css?v=20260915-seo2" />
+  <link rel="stylesheet" href="/assets/css/landing.min.css?v=20260915-seo2" />
   <link rel="icon" type="image/svg+xml" href="/assets/img/logos/favicon.svg" />
   <script type="application/ld+json">${jsonLd(page)}</script>
 </head>
@@ -172,7 +173,7 @@ function render(page) {
     <section class="landing-cta"><div class="container landing-cta__inner"><div><h2>${page.ctaTitle}</h2><p>${page.ctaText}</p></div><a href="${contact}" class="btn btn--primary btn--lg" data-track="appointment_cta_click" data-track-label="landing-footer">${isEs ? 'Pedir visita' : 'Demanar visita'}</a></div></section>
   </main>
   <footer class="landing-footer"><div class="landing-footer__grid"><div><h2>Estudi Dental Carrera</h2><p>${isEs ? 'Odontología conservadora y decisiones explicadas con claridad.' : 'Odontologia conservadora i decisions explicades amb claredat.'}</p></div><div><h2>Lleida</h2><p>Carrer Major, 74-76, 3r 3a<br />25007 Lleida<br /><a href="tel:+34973268826">973 26 88 26</a></p></div><div><h2>Tremp</h2><p>Carrer Montllobar, 22 Baixos<br />25620 Tremp<br /><a href="tel:+34650600172">650 60 01 72</a></p></div></div><div class="landing-footer__legal"><span>© 2026 Estudi Dental Carrera</span><a href="${isEs ? '/es/privacidad.html' : '/privacitat.html'}">${isEs ? 'Privacidad' : 'Privacitat'}</a><a href="${isEs ? '/es/aviso-legal.html' : '/avis-legal.html'}">${isEs ? 'Aviso legal' : 'Avís legal'}</a><a href="${isEs ? '/es/cookies.html' : '/cookies.html'}">Cookies</a><button type="button" data-consent-open>${isEs ? 'Preferencias de cookies' : 'Preferències de cookies'}</button></div></footer>
-  <script src="/assets/js/main.min.js?v=20260915-seo"></script>
+  <script src="/assets/js/main.min.js?v=20260915-seo2"></script>
 </body>
 </html>`;
 }

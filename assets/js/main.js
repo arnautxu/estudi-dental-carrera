@@ -853,7 +853,7 @@ window.track = function track(name, params) {
     const second = bar.querySelector('[data-bar-secondary]');
     first.href = c ? `tel:${c.phone}` : contact + hash;
     first.textContent = c ? `${es ? 'Llamar' : 'Trucar'} · ${c.city}` : (es ? 'Pedir cita' : 'Demanar cita');
-    second.href = c ? `https://wa.me/${c.wa}` : contact + '?canal=directe' + hash;
+    second.href = c ? `https://wa.me/${c.wa}` : contact + hash + '-directe';
     second.textContent = c ? `WhatsApp · ${c.city}` : (es ? 'Llamar / WhatsApp' : 'Trucar / WhatsApp');
     if (c) { second.target = '_blank'; second.rel = 'noopener'; second.dataset.seu = c.city.toLowerCase(); }
     else { second.removeAttribute('target'); second.removeAttribute('data-seu'); }

@@ -49,9 +49,9 @@
     submit.textContent = c ? text(`Enviar sol·licitud a ${c.city}`, `Enviar solicitud a ${c.city}`) : text('Enviar sol·licitud', 'Enviar solicitud');
     document.querySelectorAll('a[hreflang].nav__lang-link, a[hreflang].mobile-menu__lang-link').forEach(link => {
       const url = new URL(link.href, window.location.href);
-      if (c) url.searchParams.set('seu', selected());
-      else url.searchParams.delete('seu');
-      url.hash = es ? 'contacte' : 'contacto';
+      url.searchParams.delete('seu');
+      url.searchParams.delete('canal');
+      url.hash = (es ? 'contacte' : 'contacto') + (c ? `-${selected()}` : '');
       link.href = url.pathname + url.search + url.hash;
     });
     document.dispatchEvent(new CustomEvent('appointment:clinic', { detail: { id: selected() } }));
@@ -120,13 +120,19 @@
     form.querySelector('[data-orientation-feedback]').textContent = orientation[Number(radio.value)] || '';
   }));
 
-  const params = new URLSearchParams(location.search);
-  const preselected = params.get('seu');
-  if (clinics[preselected]) form.querySelector(`[name="seu"][value="${preselected}"]`).checked = true;
-  updateClinic();
-  if (params.has('canal')) {
-    document.querySelector('.appointment-direct').open = true;
+  function applyContactLink() {
+    const params = new URLSearchParams(location.search);
+    const match = location.hash.match(/^#contact[eo]-(carrera|tremp|whatsapp|directe)(?:-(whatsapp|directe))?$/);
+    const fragment = match?.[1];
+    const preselected = fragment || params.get('seu');
+    if (clinics[preselected]) form.querySelector(`[name="seu"][value="${preselected}"]`).checked = true;
+    updateClinic();
+    if (params.has('canal') || fragment === 'whatsapp' || fragment === 'directe' || match?.[2]) {
+      document.querySelector('.appointment-direct').open = true;
+    }
   }
+  applyContactLink();
+  window.addEventListener('hashchange', applyContactLink);
 
   function recovery() {
     const c = clinic();

@@ -74,3 +74,5 @@
   .appointment .submit-btn { width: 100%; }
   .appointment-in-view .mobile-cta-bar, .appointment-in-view .back-top, .appointment-in-view .whatsapp-fab { display: none; }
 }
+
+.contact-anchor { display: block; height: 0; scroll-margin-top: 6rem; }

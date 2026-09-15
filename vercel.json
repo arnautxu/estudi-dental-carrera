@@ -73,6 +73,10 @@
     { "source": "/politica-de-galetes", "destination": "/cookies.html", "permanent": true }
   ],
   "rewrites": [
+    {"source": "/seus.html", "has": [{"type": "query", "key": "seu"}], "destination": "/api/contact-route?lang=ca"},
+    {"source": "/seus.html", "has": [{"type": "query", "key": "canal"}], "destination": "/api/contact-route?lang=ca"},
+    {"source": "/es/sedes.html", "has": [{"type": "query", "key": "seu"}], "destination": "/api/contact-route?lang=es"},
+    {"source": "/es/sedes.html", "has": [{"type": "query", "key": "canal"}], "destination": "/api/contact-route?lang=es"},
     { "source": "/stats/:path*", "destination": "https://estudi-dental-carrera-umami.vercel.app/:path*" },
     { "source": "/atm-bruxisme.html", "destination": "/api/landing?key=ca-atm" },
     { "source": "/implants-dentals.html", "destination": "/api/landing?key=ca-implants" },

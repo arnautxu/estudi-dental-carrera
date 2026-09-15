@@ -1,0 +1,39 @@
+# Estudi Dental Carrera
+
+> Web oficial d'Estudi Dental Carrera, amb clíniques dentals a Lleida i Tremp, Catalunya. Contingut disponible en català i castellà.
+
+## Identitat i contacte
+
+- Nom: Estudi Dental Carrera. La seu de Tremp també es presenta com Estudi Dental Tremp.
+- Lleida: Carrer Major, 74-76, 3r 3a, 25007 Lleida. Telèfon: +34 973 26 88 26.
+- Tremp: Carrer Montllobar, 22 baixos, 25620 Tremp. Telèfon: +34 650 60 01 72.
+- La primera visita és de pagament. Recepció confirma el preu i què inclou abans de reservar.
+- La informació del web és general. El diagnòstic, la indicació d'un tractament i el pressupost requereixen valoració individual.
+
+## Pàgines oficials en català
+
+- [Inici](https://www.estudidentalcarrera.com/): presentació de la clínica.
+- [Equip](https://www.estudidentalcarrera.com/equip.html): professionals i àrees de treball.
+- [Clínica dental a Lleida](https://www.estudidentalcarrera.com/clinica-dental-lleida.html): serveis, ubicació i primera visita.
+- [Dentista a Tremp](https://www.estudidentalcarrera.com/dentista-tremp.html): atenció dental al Pallars.
+- [Contacte i seus](https://www.estudidentalcarrera.com/seus.html): dades de contacte i sol·licitud de visita.
+- [Tractaments](https://www.estudidentalcarrera.com/serveis.html): índex de serveis.
+- [ATM i bruxisme](https://www.estudidentalcarrera.com/atm-bruxisme.html): dolor mandibular, valoració i seguiment.
+- [Implants dentals](https://www.estudidentalcarrera.com/implants-dentals.html): diagnòstic, alternatives i manteniment.
+- [Ortodòncia](https://www.estudidentalcarrera.com/ortodoncia.html): alineadors, brackets i retenció.
+- [Periodòncia i endodòncia](https://www.estudidentalcarrera.com/periodoncia-endodoncia.html): genives i conservació de les dents.
+- [Estètica dental](https://www.estudidentalcarrera.com/estetica-dental.html): opcions per al color i la forma de les dents.
+
+## Páginas oficiales en castellano
+
+- [Inicio](https://www.estudidentalcarrera.com/es/)
+- [Equipo](https://www.estudidentalcarrera.com/es/equipo.html)
+- [Clínica dental en Lleida](https://www.estudidentalcarrera.com/es/clinica-dental-lleida.html)
+- [Dentista en Tremp](https://www.estudidentalcarrera.com/es/dentista-tremp.html)
+- [Contacto y sedes](https://www.estudidentalcarrera.com/es/sedes.html)
+- [Tratamientos](https://www.estudidentalcarrera.com/es/servicios.html)
+- [ATM y bruxismo](https://www.estudidentalcarrera.com/es/atm-bruxismo.html)
+- [Implantes dentales](https://www.estudidentalcarrera.com/es/implantes-dentales.html)
+- [Ortodoncia](https://www.estudidentalcarrera.com/es/ortodoncia.html)
+- [Periodoncia y endodoncia](https://www.estudidentalcarrera.com/es/periodoncia-endodoncia.html)
+- [Estética dental](https://www.estudidentalcarrera.com/es/estetica-dental.html)

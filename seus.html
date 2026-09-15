@@ -51,7 +51,7 @@
   <link rel="preload" href="assets/fonts/N27-Regular.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="assets/fonts/N27-Light.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="assets/img/headers/hero-seus.webp" as="image" fetchpriority="high" />
-  <link rel="stylesheet" href="assets/css/main.min.css?v=20260915-seo" />
+  <link rel="stylesheet" href="assets/css/main.min.css?v=20260915-seo2" />
   <link rel="icon" type="image/png" sizes="64x64" href="assets/img/logos/favicon.png" />
   <link rel="icon" type="image/svg+xml" href="assets/img/logos/favicon.svg" />
 
@@ -82,8 +82,9 @@
           "addressCountry": "ES"
         },
         "openingHoursSpecification": [
-          {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"20:00"},
-          {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"14:00"}
+          {"@type":"OpeningHoursSpecification","dayOfWeek":"Monday","opens":"09:30","closes":"19:00"},
+          {"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Friday"],"opens":"09:00","closes":"17:00"},
+          {"@type":"OpeningHoursSpecification","dayOfWeek":["Wednesday","Thursday"],"opens":"09:00","closes":"19:00"}
         ],
         "areaServed": {"@type": "City", "name": "Lleida"},
         "medicalSpecialty": "https://schema.org/Dentistry"
@@ -117,7 +118,7 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="assets/css/appointment.min.css?v=20260915-seo" />
+  <link rel="stylesheet" href="assets/css/appointment.min.css?v=20260915-seo2" />
 </head>
 <body>
   <a href="#main" class="skip-link">Salta al contingut</a>
@@ -195,7 +196,7 @@
           <a href="https://www.instagram.com/clinicarrera/" class="mobile-menu__social-link" target="_blank" rel="noopener" aria-label="Instagram">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
           </a>
-          <a href="seus.html?canal=whatsapp#contacte" class="mobile-menu__social-link" rel="noopener" aria-label="WhatsApp: tria una clínica">
+          <a href="seus.html#contacte-whatsapp" class="mobile-menu__social-link" rel="noopener" aria-label="WhatsApp: tria una clínica">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.556 4.122 1.528 5.855L.057 23.175a.75.75 0 00.918.899l5.42-1.424A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 01-4.965-1.364l-.356-.211-3.677.964.982-3.592-.231-.369A9.713 9.713 0 012.25 12C2.25 6.613 6.613 2.25 12 2.25S21.75 6.613 21.75 12 17.387 21.75 12 21.75z"/></svg>
           </a>
         </div>
@@ -219,6 +220,8 @@
     </section>
 
     <!-- APPOINTMENT: orientation stays in this browser; only contact details are submitted. -->
+    <span id="contacte-carrera" class="contact-anchor" aria-hidden="true"></span><span id="contacte-tremp" class="contact-anchor" aria-hidden="true"></span><span id="contacte-whatsapp" class="contact-anchor" aria-hidden="true"></span><span id="contacte-directe" class="contact-anchor" aria-hidden="true"></span>
+    <span id="contacte-carrera-whatsapp" class="contact-anchor" aria-hidden="true"></span><span id="contacte-carrera-directe" class="contact-anchor" aria-hidden="true"></span><span id="contacte-tremp-whatsapp" class="contact-anchor" aria-hidden="true"></span><span id="contacte-tremp-directe" class="contact-anchor" aria-hidden="true"></span>
     <section class="contact-full appointment-section" id="contacte" aria-labelledby="appointment-title">
       <div class="container appointment-layout">
         <div class="appointment-intro">
@@ -310,9 +313,10 @@
                   Horari
                 </div>
                 <table class="horari-table">
-                  <tr><td>Dilluns – Divendres</td><td>9:00 – 20:00</td></tr>
-                  <tr><td>Dissabte</td><td>9:00 – 14:00</td></tr>
-                  <tr><td>Diumenge</td><td>Tancat</td></tr>
+                  <tr><td>Dilluns</td><td>9:30 – 19:00</td></tr>
+                  <tr><td>Dimarts i divendres</td><td>9:00 – 17:00</td></tr>
+                  <tr><td>Dimecres i dijous</td><td>9:00 – 19:00</td></tr>
+                  <tr><td>Dissabte i diumenge</td><td>Tancat</td></tr>
                 </table>
               </div>
               <div class="seu-data-item">
@@ -320,7 +324,7 @@
                   <svg viewBox="0 0 20 20" fill="none"><rect x="2" y="4" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M2 8h16M6 4V2M14 4V2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
                   Email
                 </div>
-                <p><a href="mailto:carrera@clinicarrera.cat">carrera@clinicarrera.cat</a></p><p><a class="seu-request" href="seus.html?seu=carrera#contacte">Demanar cita a Lleida →</a></p>
+                <p><a href="mailto:carrera@clinicarrera.cat">carrera@clinicarrera.cat</a></p><p><a class="seu-request" href="seus.html#contacte-carrera">Demanar cita a Lleida →</a></p>
               </div>
             </div>
           </div>
@@ -458,7 +462,7 @@
                   <svg viewBox="0 0 20 20" fill="none"><rect x="2" y="4" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M2 8h16M6 4V2M14 4V2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
                   Email
                 </div>
-                <p><a href="mailto:tremp@clinicarrera.cat">tremp@clinicarrera.cat</a></p><p><a class="seu-request" href="seus.html?seu=tremp#contacte">Demanar cita a Tremp →</a></p>
+                <p><a href="mailto:tremp@clinicarrera.cat">tremp@clinicarrera.cat</a></p><p><a class="seu-request" href="seus.html#contacte-tremp">Demanar cita a Tremp →</a></p>
               </div>
             </div>
           </div>
@@ -527,7 +531,7 @@
             <a href="https://www.instagram.com/clinicarrera/" class="footer__social-link" target="_blank" rel="noopener" aria-label="Instagram d'Estudi Dental Carrera">
               <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
             </a>
-            <a href="seus.html?canal=whatsapp#contacte" class="footer__social-link" rel="noopener" aria-label="WhatsApp: tria una clínica">
+            <a href="seus.html#contacte-whatsapp" class="footer__social-link" rel="noopener" aria-label="WhatsApp: tria una clínica">
               <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.556 4.122 1.528 5.855L.057 23.175a.75.75 0 00.918.899l5.42-1.424A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 01-4.965-1.364l-.356-.211-3.677.964.982-3.592-.231-.369A9.713 9.713 0 012.25 12C2.25 6.613 6.613 2.25 12 2.25S21.75 6.613 21.75 12 17.387 21.75 12 21.75z"/></svg>
             </a>
           </div>
@@ -574,11 +578,11 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.min.js?v=20260915-seo"></script>
+  <script src="assets/js/main.min.js?v=20260915-seo2"></script>
   <!-- WhatsApp FAB -->
-  <a href="seus.html?canal=whatsapp#contacte" class="whatsapp-fab" rel="noopener" aria-label="WhatsApp: tria una clínica">
+  <a href="seus.html#contacte-whatsapp" class="whatsapp-fab" rel="noopener" aria-label="WhatsApp: tria una clínica">
     <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.556 4.122 1.528 5.855L.057 23.175a.75.75 0 00.918.899l5.42-1.424A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 01-4.965-1.364l-.356-.211-3.677.964.982-3.592-.231-.369A9.713 9.713 0 012.25 12C2.25 6.613 6.613 2.25 12 2.25S21.75 6.613 21.75 12 17.387 21.75 12 21.75z"/></svg>
   </a>
-  <script src="assets/js/appointment.min.js?v=20260915-seo"></script>
+  <script src="assets/js/appointment.min.js?v=20260915-seo2"></script>
 </body>
 </html>

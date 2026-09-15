@@ -69,12 +69,14 @@ const related = {
   ca: [
     { href: '/serveis.html', type: 'Guia', label: 'Tots els tractaments' },
     { href: '/equip.html', type: 'Equip', label: 'Professionals i criteri de treball' },
-    { href: '/seus.html', type: 'Visita', label: 'Clíniques de Lleida i Tremp' },
+    { href: '/clinica-dental-lleida.html', type: 'Clínica', label: 'Clínica dental a Lleida' },
+    { href: '/dentista-tremp.html', type: 'Clínica', label: 'Clínica dental a Tremp' },
   ],
   es: [
     { href: '/es/servicios.html', type: 'Guía', label: 'Todos los tratamientos' },
     { href: '/es/equipo.html', type: 'Equipo', label: 'Profesionales y criterio de trabajo' },
-    { href: '/es/sedes.html', type: 'Visita', label: 'Clínicas de Lleida y Tremp' },
+    { href: '/es/clinica-dental-lleida.html', type: 'Clínica', label: 'Clínica dental en Lleida' },
+    { href: '/es/dentista-tremp.html', type: 'Clínica', label: 'Clínica dental en Tremp' },
   ],
 };
 
@@ -111,8 +113,8 @@ pages['ca-atm'] = servicePage('ca', {
   image: 'assets/img/serveis/atm-carme.webp', imageWidth: 1280, imageHeight: 1600, imageAlt: 'Professional d’Estudi Dental Carrera durant una valoració de la mandíbula',
   introTitle: 'Bruxisme no és sinònim de dolor mandibular',
   intro: [
-    'L’articulació temporomandibular, els músculs de la masticació, les dents i els hàbits treballen com un sistema. Apretar o grinyolar pot deixar senyals, però trobar desgast dental no demostra per si sol l’origen d’un dolor. També hi poden influir sobrecàrregues musculars, canvis articulars, hàbits diürns, son, estrès o altres problemes de salut. Per això evitem atribuir tots els símptomes a una sola etiqueta.',
-    'La valoració combina el relat de la persona amb l’exploració del moviment, els músculs, l’articulació, l’oclusió i les dents. Preguntem quan apareix el dolor, què el modifica, si hi ha bloquejos i com afecta menjar, parlar o dormir. Les proves d’imatge no són automàtiques: es consideren quan la història i l’exploració indiquen que poden aportar una resposta útil.',
+    'A la clínica dental valorem el dolor de mandíbula i el bruxisme a Lleida i Tremp. L’ATM és l’articulació que uneix la mandíbula amb el crani. Treballa juntament amb els músculs i les dents. Apretar o grinyolar les dents pot deixar marques, però el desgast no explica sempre un dolor. També hi poden influir el son, l’estrès i altres problemes de salut.',
+    'Et preguntem quan apareix el dolor i com afecta menjar, parlar o dormir. Revisem el moviment, els músculs, l’articulació i la manera de mossegar. També comprovem si la mandíbula es bloqueja. Només proposem proves d’imatge si poden ajudar a aclarir el cas.',
   ],
   sections: [
     {
@@ -161,8 +163,8 @@ pages['es-atm'] = servicePage('es', {
   image: 'assets/img/serveis/atm-carme.webp', imageWidth: 1280, imageHeight: 1600, imageAlt: 'Profesional de Estudi Dental Carrera durante una valoración de la mandíbula',
   introTitle: 'Bruxismo no es sinónimo de dolor mandibular',
   intro: [
-    'La articulación temporomandibular, los músculos de la masticación, los dientes y los hábitos trabajan como un sistema. Apretar o rechinar puede dejar señales, pero encontrar desgaste dental no demuestra por sí solo el origen de un dolor. También pueden influir sobrecargas musculares, cambios articulares, hábitos diurnos, sueño, estrés u otros problemas de salud. Por eso evitamos atribuir todos los síntomas a una sola etiqueta.',
-    'La valoración combina el relato de la persona con la exploración del movimiento, los músculos, la articulación, la oclusión y los dientes. Preguntamos cuándo aparece el dolor, qué lo modifica, si existen bloqueos y cómo afecta a la hora de comer, hablar o dormir. Las pruebas de imagen no son automáticas: se consideran cuando la historia y la exploración indican que pueden aportar una respuesta útil.',
+    'En la clínica dental valoramos el dolor de mandíbula y el bruxismo en Lleida y Tremp. La ATM es la articulación que une la mandíbula con el cráneo. Trabaja junto con los músculos y los dientes. Apretar o rechinar los dientes puede dejar marcas, pero el desgaste no siempre explica un dolor. También pueden influir el sueño, el estrés y otros problemas de salud.',
+    'Te preguntamos cuándo aparece el dolor y cómo afecta a comer, hablar o dormir. Revisamos el movimiento, los músculos, la articulación y la forma de morder. También comprobamos si la mandíbula se bloquea. Solo proponemos pruebas de imagen si pueden ayudar a aclarar el caso.',
   ],
   sections: [
     {
@@ -196,16 +198,17 @@ pages['es-atm'] = servicePage('es', {
 });
 
 pages['ca-implants'] = servicePage('ca', {
+  dateModified: '2026-09-15', updatedLabel: '15 de setembre de 2026',
   path: 'implants-dentals.html', alternatePath: 'es/implantes-dentales.html',
   title: 'Implants dentals a Lleida i Tremp | Estudi Dental Carrera',
   description: 'Planificació d’implants dentals a Lleida i Tremp: diagnòstic, alternatives, cirurgia guiada quan està indicada i manteniment posterior.',
-  eyebrow: 'Implantologia i rehabilitació oral', h1: 'Implants dentals planificats des de la funció i el manteniment',
+  eyebrow: 'Implantologia i rehabilitació oral', h1: 'Implants dentals a Lleida i Tremp',
   lead: 'Substituir una dent no és només col·locar un implant. Valorem si cal fer-ho, quines alternatives existeixen i com es podrà netejar i mantenir el resultat a llarg termini.',
   image: 'assets/img/serveis/implants-planificacio.webp', imageWidth: 1280, imageHeight: 1600, imageAlt: 'Planificació digital d’un tractament amb implants dentals',
   introTitle: 'Primer decidim si l’implant és l’opció adequada',
   intro: [
-    'Un implant és un dispositiu que s’insereix a l’os per suportar una restauració, però no és l’única manera de substituir una dent. Segons el cas, es pot considerar conservar la dent, no intervenir de moment, utilitzar un pont o una pròtesi removible. L’edat per si sola no decideix la indicació: importen l’estat de salut, l’os disponible, les genives, la higiene, el tabac, la mossegada i les expectatives.',
-    'La planificació comença amb una exploració completa i radiografies proporcionades al cas. Una tomografia tridimensional pot ser necessària per conèixer el volum ossi i les estructures anatòmiques, però no s’ha de fer sense indicació. També definim la futura dent abans de decidir la posició de l’implant, perquè una bona cirurgia ha de facilitar una pròtesi funcional, estètica i accessible per a la higiene.',
+    'A la nostra clínica dental valorem els implants dentals a Lleida i Tremp. Un implant s’insereix a l’os i sosté la dent que falta. Abans de proposar-lo, estudiem si podem conservar la dent o si convé un pont o una pròtesi removible. També pot ser raonable esperar, segons el cas.',
+    'Revisem les genives, l’os, la higiene, el tabac i la manera de mossegar. Fem les radiografies que necessita el cas. Una imatge en tres dimensions pot ajudar a planificar, però no sempre cal. Primer definim la dent que volem recuperar; després decidim on col·locar l’implant. També preveiem com es podrà netejar.',
   ],
   sections: [
     {
@@ -226,6 +229,7 @@ pages['ca-implants'] = servicePage('ca', {
     },
   ],
   faqs: [
+    { q: 'Com es calcula el preu del tractament?', a: 'El pressupost depèn del que necessiti el teu cas. A la primera visita valorem les opcions i expliquem les fases, els controls i el manteniment previstos. La primera visita és de pagament; recepció pot confirmar-ne l’import i què inclou abans de reservar.' },
     { q: 'Tothom pot portar implants?', a: 'No. Cal valorar salut, medicació, os, genives, higiene, tabac i possibilitat de manteniment. També s’han de comparar alternatives.' },
     { q: 'Es pot posar implant i dent el mateix dia?', a: 'En casos seleccionats es pot plantejar càrrega immediata, però depèn de l’estabilitat i del risc. No es pot confirmar sense estudi.' },
     { q: 'Un implant dura tota la vida?', a: 'No es pot garantir. El pronòstic depèn de factors biològics, mecànics i del manteniment continuat.' },
@@ -239,16 +243,17 @@ pages['ca-implants'] = servicePage('ca', {
 });
 
 pages['es-implants'] = servicePage('es', {
+  dateModified: '2026-09-15', updatedLabel: '15 de septiembre de 2026',
   path: 'es/implantes-dentales.html', alternatePath: 'implants-dentals.html',
   title: 'Implantes dentales en Lleida y Tremp | Estudi Dental Carrera',
   description: 'Planificación de implantes dentales en Lleida y Tremp: diagnóstico, alternativas, cirugía guiada cuando está indicada y mantenimiento posterior.',
-  eyebrow: 'Implantología y rehabilitación oral', h1: 'Implantes dentales: planificación y cuidados',
+  eyebrow: 'Implantología y rehabilitación oral', h1: 'Implantes dentales en Lleida y Tremp',
   lead: 'Sustituir un diente no consiste solo en colocar un implante. Valoramos si hace falta, qué alternativas existen y cómo podrá limpiarse y mantenerse el resultado a largo plazo.',
   image: 'assets/img/serveis/implants-planificacio.webp', imageWidth: 1280, imageHeight: 1600, imageAlt: 'Planificación digital de un tratamiento con implantes dentales',
   introTitle: 'Primero decidimos si el implante es la opción adecuada',
   intro: [
-    'Un implante es un dispositivo que se inserta en el hueso para soportar una restauración, pero no es la única forma de sustituir un diente. Según el caso, se puede valorar conservar el diente, no intervenir de momento, utilizar un puente o una prótesis removible. La edad por sí sola no decide la indicación: importan el estado de salud, el hueso disponible, las encías, la higiene, el tabaco, la mordida y las expectativas.',
-    'La planificación empieza con una exploración completa y radiografías adecuadas para el caso. Una tomografía tridimensional puede ser necesaria para conocer el volumen óseo y las estructuras anatómicas, pero no debe realizarse sin indicación. También definimos el futuro diente antes de decidir la posición del implante, porque una buena cirugía debe facilitar una prótesis funcional, estética y accesible para la higiene.',
+    'En nuestra clínica dental valoramos los implantes dentales en Lleida y Tremp. Un implante se coloca en el hueso y sostiene el diente que falta. Antes de proponerlo, estudiamos si podemos conservar el diente o si conviene un puente o una prótesis removible. También puede ser razonable esperar, según el caso.',
+    'Revisamos las encías, el hueso, la higiene, el tabaco y la forma de morder. Hacemos las radiografías que necesita el caso. Una imagen en tres dimensiones puede ayudar a planificar, pero no siempre hace falta. Primero definimos el diente que queremos recuperar; después decidimos dónde colocar el implante. También prevemos cómo podrá limpiarse.',
   ],
   sections: [
     {
@@ -269,6 +274,7 @@ pages['es-implants'] = servicePage('es', {
     },
   ],
   faqs: [
+    { q: '¿Cómo se calcula el precio del tratamiento?', a: 'El presupuesto depende de lo que necesite tu caso. En la primera visita valoramos las opciones y explicamos las fases, los controles y el mantenimiento previstos. La primera visita es de pago; recepción puede confirmar su importe y qué incluye antes de reservar.' },
     { q: '¿Todo el mundo puede llevar implantes?', a: 'No. Hay que valorar salud, medicación, hueso, encías, higiene, tabaco y posibilidad de mantenimiento. También deben compararse alternativas.' },
     { q: '¿Se puede poner el implante y el diente el mismo día?', a: 'En casos seleccionados puede plantearse carga inmediata, pero depende de la estabilidad y del riesgo. No puede confirmarse sin estudio.' },
     { q: '¿Un implante dura toda la vida?', a: 'No puede garantizarse. El pronóstico depende de factores biológicos, mecánicos y del mantenimiento continuado.' },
@@ -296,8 +302,8 @@ pages['ca-ortho'] = servicePage('ca', {
   image: 'assets/img/serveis/ortodoncia-model.webp', imageWidth: 1280, imageHeight: 1600, imageAlt: 'Model digital utilitzat per planificar un tractament d’ortodòncia',
   introTitle: 'Alineadors i brackets són eines, no diagnòstics',
   intro: [
-    'El primer pas és definir què es vol corregir i per què. Dents apinyades, espais, mossegades obertes o creuades i discrepàncies entre maxil·lars no comparteixen el mateix pla. També revisem l’estat de les genives, l’os, les càries, les restauracions, l’articulació i el creixement quan encara no ha acabat. Moure dents sobre teixits inflamats o sense controlar altres problemes pot augmentar el risc.',
-    'Els alineadors transparents poden ser una bona opció en molts casos, i els aparells fixos continuen sent útils en d’altres. La decisió no depèn només de l’estètica: importen el tipus de moviment, la col·laboració, el temps d’ús, la higiene i la predictibilitat. En alguns plans es combinen tècniques o es coordina l’ortodòncia amb periodòncia, cirurgia, pròtesi o odontologia restauradora.',
+    'A la clínica dental estudiem l’ortodòncia a Lleida i Tremp. Primer parlem del que vols corregir: dents apinyades, espais o dificultats en mossegar. Revisem les genives, l’os i les càries abans de moure les dents. En infants i adolescents, també tenim en compte el creixement.',
+    'Els alineadors transparents i els brackets són eines diferents. Per escollir, valorem els moviments necessaris, la higiene i les hores d’ús. Alguns casos necessiten coordinar l’ortodòncia amb altres tractaments. T’expliquem les fases i com mantindrem la posició de les dents quan acabem.',
   ],
   sections: [
     {
@@ -318,6 +324,7 @@ pages['ca-ortho'] = servicePage('ca', {
     },
   ],
   faqs: [
+    { q: 'Com es calcula el preu del tractament?', a: 'El pressupost depèn del que necessiti el teu cas. A la primera visita valorem les opcions i expliquem les fases, els controls i el manteniment previstos. La primera visita és de pagament; recepció pot confirmar-ne l’import i què inclou abans de reservar.' },
     { q: 'Alineadors o brackets: què és millor?', a: 'Depèn dels moviments necessaris, la higiene, la col·laboració i els objectius. Cap sistema és universalment millor.' },
     { q: 'Quant dura una ortodòncia?', a: 'La durada varia segons la complexitat, la resposta biològica i el compliment. Només es pot estimar després de l’estudi.' },
     { q: 'Es pot fer ortodòncia amb malaltia periodontal?', a: 'Pot ser possible si la inflamació està controlada i hi ha seguiment periodontal específic. Requereix valoració coordinada.' },
@@ -345,8 +352,8 @@ pages['es-ortho'] = servicePage('es', {
   image: 'assets/img/serveis/ortodoncia-model.webp', imageWidth: 1280, imageHeight: 1600, imageAlt: 'Modelo digital utilizado para planificar un tratamiento de ortodoncia',
   introTitle: 'Alineadores y brackets son herramientas, no diagnósticos',
   intro: [
-    'El primer paso es definir qué se quiere corregir y por qué. Dientes apiñados, espacios, mordidas abiertas o cruzadas y discrepancias entre maxilares no comparten el mismo plan. También revisamos el estado de las encías, el hueso, las caries, las restauraciones, la articulación y el crecimiento cuando todavía no ha terminado. Mover dientes sobre tejidos inflamados o sin controlar otros problemas puede aumentar el riesgo.',
-    'Los alineadores transparentes pueden ser una buena opción en muchos casos, y los aparatos fijos siguen siendo útiles en otros. La decisión no depende solo de la estética: importan el tipo de movimiento, la colaboración, el tiempo de uso, la higiene y la predictibilidad. En algunos planes se combinan técnicas o se coordina la ortodoncia con periodoncia, cirugía, prótesis u odontología restauradora.',
+    'En la clínica dental estudiamos la ortodoncia en Lleida y Tremp. Primero hablamos de lo que quieres corregir: dientes apiñados, espacios o dificultades al morder. Revisamos las encías, el hueso y las caries antes de mover los dientes. En niños y adolescentes, también tenemos en cuenta el crecimiento.',
+    'Los alineadores transparentes y los brackets son herramientas distintas. Para elegir, valoramos los movimientos necesarios, la higiene y las horas de uso. Algunos casos necesitan coordinar la ortodoncia con otros tratamientos. Te explicamos las fases y cómo mantendremos la posición de los dientes al terminar.',
   ],
   sections: [
     {
@@ -367,6 +374,7 @@ pages['es-ortho'] = servicePage('es', {
     },
   ],
   faqs: [
+    { q: '¿Cómo se calcula el precio del tratamiento?', a: 'El presupuesto depende de lo que necesite tu caso. En la primera visita valoramos las opciones y explicamos las fases, los controles y el mantenimiento previstos. La primera visita es de pago; recepción puede confirmar su importe y qué incluye antes de reservar.' },
     { q: '¿Alineadores o brackets: qué es mejor?', a: 'Depende de los movimientos necesarios, la higiene, la colaboración y los objetivos. Ningún sistema es universalmente mejor.' },
     { q: '¿Cuánto dura una ortodoncia?', a: 'La duración varía según la complejidad, la respuesta biológica y el cumplimiento. Solo puede estimarse después del estudio.' },
     { q: '¿Puede hacerse ortodoncia con enfermedad periodontal?', a: 'Puede ser posible si la inflamación está controlada y existe seguimiento periodontal específico. Requiere valoración coordinada.' },
@@ -380,10 +388,11 @@ pages['es-ortho'] = servicePage('es', {
 });
 
 pages['ca-perio'] = servicePage('ca', {
+  dateModified: '2026-09-15', updatedLabel: '15 de setembre de 2026',
   path: 'periodoncia-endodoncia.html', alternatePath: 'es/periodoncia-endodoncia.html',
   title: 'Periodòncia i endodòncia a Lleida i Tremp | Estudi Dental',
   description: 'Diagnòstic i tractament de genives, periodontitis, dolor pulpar i endodòncia a Lleida i Tremp, amb seguiment i manteniment individual.',
-  eyebrow: 'Conservar dents i teixits', h1: 'Periodòncia i endodòncia: tractar la causa per conservar',
+  eyebrow: 'Conservar dents i teixits', h1: 'Periodòncia i endodòncia a Lleida i Tremp',
   lead: 'El sagnat de genives i el dolor dental no s’han de normalitzar. Identificar si el problema ve dels teixits de suport, de la polpa o d’una altra causa permet actuar amb més precisió.',
   image: 'assets/img/headers/hero-serveis.webp', imageWidth: 2200, imageHeight: 942, imageAlt: 'Gabinet d’Estudi Dental Carrera preparat per a tractaments conservadors',
   introTitle: 'Dues àrees diferents amb un objectiu compartit',
@@ -424,10 +433,11 @@ pages['ca-perio'] = servicePage('ca', {
 });
 
 pages['es-perio'] = servicePage('es', {
+  dateModified: '2026-09-15', updatedLabel: '15 de septiembre de 2026',
   path: 'es/periodoncia-endodoncia.html', alternatePath: 'periodoncia-endodoncia.html',
   title: 'Periodoncia y endodoncia en Lleida y Tremp | Estudi Dental',
   description: 'Diagnóstico y tratamiento de encías, periodontitis, dolor pulpar y endodoncia en Lleida y Tremp, con seguimiento y mantenimiento individual.',
-  eyebrow: 'Conservar dientes y tejidos', h1: 'Periodoncia y endodoncia: tratar la causa para conservar',
+  eyebrow: 'Conservar dientes y tejidos', h1: 'Periodoncia y endodoncia en Lleida y Tremp',
   lead: 'El sangrado de encías y el dolor dental no deben normalizarse. Identificar si el problema procede de los tejidos de soporte, de la pulpa o de otra causa permite actuar con mayor precisión.',
   image: 'assets/img/headers/hero-serveis.webp', imageWidth: 2200, imageHeight: 942, imageAlt: 'Gabinete de Estudi Dental Carrera preparado para tratamientos conservadores',
   introTitle: 'Dos áreas distintas con un objetivo compartido',
@@ -468,16 +478,17 @@ pages['es-perio'] = servicePage('es', {
 });
 
 pages['ca-aesthetic'] = servicePage('ca', {
+  dateModified: '2026-09-15', updatedLabel: '15 de setembre de 2026',
   path: 'estetica-dental.html', alternatePath: 'es/estetica-dental.html',
   title: 'Estètica dental a Lleida i Tremp | Estudi Dental Carrera',
   description: 'Estètica dental a Lleida i Tremp amb diagnòstic, emblanquiment, restauracions i plans conservadors adaptats a la salut i al somriure.',
-  eyebrow: 'Estètica dental conservadora', h1: 'Un somriure natural comença preservant teixit sa',
+  eyebrow: 'Estètica dental conservadora', h1: 'Estètica dental a Lleida i Tremp',
   lead: 'Color, forma, posició i genives s’han de valorar conjuntament. Prioritzem les opcions reversibles o mínimament invasives abans de proposar restauracions.',
   image: 'assets/img/serveis/estetica-llum.webp', imageWidth: 1280, imageHeight: 1600, imageAlt: 'Valoració de llum i color per a un tractament d’estètica dental',
   introTitle: 'L’estètica no es pot separar de la salut',
   intro: [
-    'Una taca, una dent fosca, una vora trencada o un somriure que ha canviat poden tenir causes diferents. Abans de parlar de color o forma revisem càries, esquerdes, desgast, genives, mossegada i hàbits. Tractar només l’aparença sense identificar la causa pot donar un resultat fràgil o ocultar un problema que necessita una altra actuació.',
-    'També concretem què voldria canviar la persona i què prefereix conservar. Les fotografies i simulacions poden ajudar a comunicar, però no són una garantia exacta del resultat. Materials i dents interactuen amb la llum de manera diferent, i les genives i els llavis influeixen en la percepció. Un objectiu natural sol requerir decisions petites i coordinades, no necessàriament moltes peces tractades.',
+    'L’estètica dental a Lleida i Tremp comença amb una revisió de la boca. A la clínica dental escoltem què voldries canviar i què prefereixes conservar. Una taca, una dent fosca o una vora trencada poden tenir causes diferents. Revisem càries, genives, desgast i mossegada abans de proposar un tractament.',
+    'Les fotografies i simulacions ajuden a parlar del resultat que busquem. No en són una garantia exacta. La llum, els materials, les genives i els llavis influeixen en l’aspecte final. Sovint podem plantejar canvis petits i coordinats, sense haver de tractar moltes dents.',
   ],
   sections: [
     {
@@ -498,6 +509,7 @@ pages['ca-aesthetic'] = servicePage('ca', {
     },
   ],
   faqs: [
+    { q: 'Com es calcula el preu del tractament?', a: 'El pressupost depèn del que necessiti el teu cas. A la primera visita valorem les opcions i expliquem les fases, els controls i el manteniment previstos. La primera visita és de pagament; recepció pot confirmar-ne l’import i què inclou abans de reservar.' },
     { q: 'L’emblanquiment fa malbé l’esmalt?', a: 'Els sistemes indicats i supervisats tenen un perfil de seguretat conegut, però poden causar sensibilitat temporal i no són adequats en qualsevol situació.' },
     { q: 'Les corones i els empastaments s’emblanqueixen?', a: 'No. Els materials restauradors no canvien de color com la dent natural i pot caldre replantejar-los després.' },
     { q: 'Composite o ceràmica?', a: 'Depèn del teixit disponible, el canvi necessari, la mossegada, la reparabilitat i les preferències. Cal comparar avantatges i límits.' },
@@ -511,16 +523,17 @@ pages['ca-aesthetic'] = servicePage('ca', {
 });
 
 pages['es-aesthetic'] = servicePage('es', {
+  dateModified: '2026-09-15', updatedLabel: '15 de septiembre de 2026',
   path: 'es/estetica-dental.html', alternatePath: 'estetica-dental.html',
   title: 'Estética dental en Lleida y Tremp | Estudi Dental Carrera',
   description: 'Estética dental en Lleida y Tremp con diagnóstico, blanqueamiento, restauraciones y planes conservadores adaptados a la salud y a la sonrisa.',
-  eyebrow: 'Estética dental conservadora', h1: 'Una sonrisa natural empieza preservando tejido sano',
+  eyebrow: 'Estética dental conservadora', h1: 'Estética dental en Lleida y Tremp',
   lead: 'Color, forma, posición y encías deben valorarse conjuntamente. Priorizamos las opciones reversibles o mínimamente invasivas antes de proponer restauraciones.',
   image: 'assets/img/serveis/estetica-llum.webp', imageWidth: 1280, imageHeight: 1600, imageAlt: 'Valoración de luz y color para un tratamiento de estética dental',
   introTitle: 'La estética no puede separarse de la salud',
   intro: [
-    'Una mancha, un diente oscuro, un borde roto o una sonrisa que ha cambiado pueden tener causas distintas. Antes de hablar de color o forma revisamos caries, grietas, desgaste, encías, mordida y hábitos. Tratar solo la apariencia sin identificar la causa puede dar un resultado frágil u ocultar un problema que necesita otra actuación.',
-    'También concretamos qué le gustaría cambiar a la persona y qué prefiere conservar. Las fotografías y simulaciones pueden ayudar a comunicar, pero no son una garantía exacta del resultado. Materiales y dientes interactúan con la luz de forma distinta, y las encías y los labios influyen en la percepción. Un objetivo natural suele requerir decisiones pequeñas y coordinadas, no necesariamente muchas piezas tratadas.',
+    'La estética dental en Lleida y Tremp empieza con una revisión de la boca. En la clínica dental escuchamos qué te gustaría cambiar y qué prefieres conservar. Una mancha, un diente oscuro o un borde roto pueden tener causas distintas. Revisamos caries, encías, desgaste y mordida antes de proponer un tratamiento.',
+    'Las fotografías y simulaciones ayudan a hablar del resultado que buscamos. No son una garantía exacta. La luz, los materiales, las encías y los labios influyen en el aspecto final. A menudo podemos plantear cambios pequeños y coordinados, sin tener que tratar muchos dientes.',
   ],
   sections: [
     {
@@ -541,6 +554,7 @@ pages['es-aesthetic'] = servicePage('es', {
     },
   ],
   faqs: [
+    { q: '¿Cómo se calcula el precio del tratamiento?', a: 'El presupuesto depende de lo que necesite tu caso. En la primera visita valoramos las opciones y explicamos las fases, los controles y el mantenimiento previstos. La primera visita es de pago; recepción puede confirmar su importe y qué incluye antes de reservar.' },
     { q: '¿El blanqueamiento daña el esmalte?', a: 'Los sistemas indicados y supervisados tienen un perfil de seguridad conocido, pero pueden causar sensibilidad temporal y no son adecuados en cualquier situación.' },
     { q: '¿Las coronas y los empastes se blanquean?', a: 'No. Los materiales restauradores no cambian de color como el diente natural y puede ser necesario replantearlos después.' },
     { q: '¿Composite o cerámica?', a: 'Depende del tejido disponible, el cambio necesario, la mordida, la reparabilidad y las preferencias. Hay que comparar ventajas y límites.' },
@@ -577,10 +591,10 @@ pages['ca-lleida'] = locationPage('ca', {
   image: 'assets/img/lleida-edifici.webp', imageWidth: 1333, imageHeight: 2000, imageAlt: 'Edifici de la clínica Estudi Dental Carrera al carrer Major de Lleida',
   introTitle: 'Odontologia al centre de Lleida, amb temps per explicar',
   intro: [
-    'La clínica de Lleida és al carrer Major, 74-76, 3r 3a, al centre de la ciutat. Atén visites de diagnòstic, prevenció i tractament en diferents àrees de l’odontologia. El nostre punt de partida és conservador: abans de substituir, reconstruir o moure una dent, valorem què es pot mantenir i quin benefici real tindria cada pas.',
-    'L’equip treballa de manera coordinada perquè els casos que impliquen més d’una àrea no es converteixin en decisions desconnectades. Una rehabilitació pot necessitar controlar les genives, ajustar la mossegada o moure dents abans de restaurar; un dolor mandibular pot requerir descartar causes dentals i musculars. La coordinació permet ordenar les fases i explicar per què es proposen.',
+    'Estudi Dental Carrera és una clínica dental al centre de Lleida, al carrer Major, 74-76, 3r 3a. Hi fem visites de diagnòstic, prevenció i tractament. Abans de substituir o moure una dent, valorem què podem conservar i quin benefici tindria cada pas.',
+    'Si el cas necessita diversos professionals, ordenem les visites entre l’equip. Pot caldre tractar les genives abans de posar una pròtesi o revisar la mossegada abans de restaurar una dent. T’expliquem què proposem, en quin ordre i per què.',
   ],
-  aside: 'Adreça: carrer Major, 74-76, 3r 3a, 25007 Lleida. Telèfon: 973 26 88 26. Per confirmar accessibilitat, horaris o una necessitat concreta, contacta amb recepció abans de venir.',
+  aside: 'Adreça: carrer Major, 74-76, 3r 3a, 25007 Lleida. Telèfon: 973 26 88 26. Horari: dilluns 9.30–19 h; dimarts i divendres 9–17 h; dimecres i dijous 9–19 h. Dissabtes i diumenges, tancat. Consulta amb recepció qualsevol necessitat d’accés.',
   sections: [
     {
       title: 'Què podem valorar a la clínica de Lleida',
@@ -636,10 +650,10 @@ pages['es-lleida'] = locationPage('es', {
   image: 'assets/img/lleida-edifici.webp', imageWidth: 1333, imageHeight: 2000, imageAlt: 'Edificio de la clínica Estudi Dental Carrera en el carrer Major de Lleida',
   introTitle: 'Tu clínica dental en Lleida, con tiempo para explicar',
   intro: [
-    'Estudi Dental Carrera es una clínica dental en Lleida situada en carrer Major, 74-76, 3.º 3.ª, en el centro de la ciudad. Atendemos visitas de diagnóstico, prevención y tratamiento en distintas áreas de la odontología. Nuestro punto de partida es conservador: antes de sustituir, reconstruir o mover un diente, valoramos qué puede mantenerse y qué beneficio real tendría cada paso.',
-    'El equipo trabaja de forma coordinada para que los casos que implican más de un área no se conviertan en decisiones desconectadas. Una rehabilitación puede necesitar controlar las encías, ajustar la mordida o mover dientes antes de restaurar; un dolor mandibular puede requerir descartar causas dentales y musculares. La coordinación permite ordenar las fases y explicar por qué se proponen.',
+    'Estudi Dental Carrera es una clínica dental en el centro de Lleida, en carrer Major, 74-76, 3.º 3.ª. Hacemos visitas de diagnóstico, prevención y tratamiento. Antes de sustituir o mover un diente, valoramos qué podemos conservar y qué beneficio tendría cada paso.',
+    'Si el caso necesita varios profesionales, ordenamos las visitas entre el equipo. Puede hacer falta tratar las encías antes de poner una prótesis o revisar la mordida antes de restaurar un diente. Te explicamos qué proponemos, en qué orden y por qué.',
   ],
-  aside: 'Dirección: carrer Major, 74-76, 3.º 3.ª, 25007 Lleida. Teléfono: 973 26 88 26. Para confirmar accesibilidad, horarios o una necesidad concreta, contacta con recepción antes de venir.',
+  aside: 'Dirección: carrer Major, 74-76, 3.º 3.ª, 25007 Lleida. Teléfono: 973 26 88 26. Horario: lunes 9.30–19 h; martes y viernes 9–17 h; miércoles y jueves 9–19 h. Sábados y domingos, cerrado. Consulta con recepción cualquier necesidad de acceso.',
   sections: [
     {
       title: 'Tratamientos dentales en Lleida que podemos valorar',
@@ -691,7 +705,7 @@ pages['ca-tremp'] = locationPage('ca', {
   title: 'Dentista a Tremp | Estudi Dental Carrera',
   description: 'Clínica dental a Tremp per al Pallars: prevenció, odontologia conservadora, implants, ortodòncia, genives, ATM i seguiment proper.',
   eyebrow: 'Carrer Montllobar, Tremp', h1: 'Dentista a Tremp per cuidar la salut oral al Pallars',
-  lead: 'Una clínica de proximitat a Tremp amb diagnòstic, tractament i manteniment coordinats, i suport de l’equip d’Estudi Dental Carrera quan el cas ho requereix.',
+  lead: 'La nostra clínica dental a Tremp ofereix diagnòstic, tractament i seguiment al Pallars. Quan el cas ho necessita, coordinem les visites amb l’equip de Lleida.',
   image: 'assets/img/tremp-exterior.webp', imageWidth: 2200, imageHeight: 1466, imageAlt: 'Exterior de la clínica Estudi Dental Carrera a Tremp',
   introTitle: 'Atenció dental de proximitat, sense simplificar el diagnòstic',
   intro: [
@@ -750,7 +764,7 @@ pages['es-tremp'] = locationPage('es', {
   title: 'Dentista en Tremp | Estudi Dental Carrera',
   description: 'Clínica dental en Tremp para el Pallars: prevención, odontología conservadora, implantes, ortodoncia, encías, ATM y seguimiento cercano.',
   eyebrow: 'Carrer Montllobar, Tremp', h1: 'Dentista en Tremp para cuidar la salud oral en el Pallars',
-  lead: 'Una clínica de proximidad en Tremp con diagnóstico, tratamiento y mantenimiento coordinados, y apoyo del equipo de Estudi Dental Carrera cuando el caso lo requiere.',
+  lead: 'Nuestra clínica dental en Tremp ofrece diagnóstico, tratamiento y seguimiento en el Pallars. Cuando el caso lo necesita, coordinamos las visitas con el equipo de Lleida.',
   image: 'assets/img/tremp-exterior.webp', imageWidth: 2200, imageHeight: 1466, imageAlt: 'Exterior de la clínica Estudi Dental Carrera en Tremp',
   introTitle: 'Atención dental de proximidad, sin simplificar el diagnóstico',
   intro: [

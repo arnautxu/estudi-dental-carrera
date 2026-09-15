@@ -31,7 +31,7 @@ for (const [key, page] of Object.entries(pages)) {
       assert.ok(fs.existsSync(path.join(__dirname, '../public', asset[1])), `Run npm run build: ${asset[1]}`);
     }
     const expectedClinic = page.location?.id === 'tremp' ? 'tremp' : page.type === 'location' ? 'carrera' : null;
-    if (expectedClinic) assert.ok(html.includes(`?seu=${expectedClinic}#`));
+    if (expectedClinic) assert.ok(html.includes(`#${page.lang === 'es' ? 'contacto' : 'contacte'}-${expectedClinic}`));
   });
 }
 
