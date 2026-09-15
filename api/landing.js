@@ -86,7 +86,7 @@ function render(page) {
 <head>
   <meta charset="UTF-8" />
   <script>
-    window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}window.GA4_ID='';
+    window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}window.GA4_ID='G-23SQ9SDX52';
     gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
