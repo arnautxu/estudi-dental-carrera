@@ -397,7 +397,7 @@ pages['ca-perio'] = servicePage('ca', {
   image: 'assets/img/headers/hero-serveis.webp', imageWidth: 2200, imageHeight: 942, imageAlt: 'Gabinet d’Estudi Dental Carrera preparat per a tractaments conservadors',
   introTitle: 'Dues àrees diferents amb un objectiu compartit',
   intro: [
-    'La periodòncia tracta les genives i els teixits que sostenen les dents. L’endodòncia tracta l’interior de la dent quan la polpa està inflamada o infectada. Poden donar símptomes semblants, com sensibilitat, dolor en mastegar o molèsties localitzades, però el tractament no és el mateix. Explorar, fer proves de sensibilitat i interpretar radiografies quan estan indicades ajuda a diferenciar-ne l’origen.',
+    'A la nostra clínica dental, valorem tractaments de periodòncia a Lleida i Tremp. La periodòncia tracta les genives i els teixits que sostenen les dents. L’endodòncia tracta l’interior de la dent quan la polpa està inflamada o infectada. Poden donar símptomes semblants, com sensibilitat, dolor en mastegar o molèsties localitzades, però el tractament no és el mateix. Explorar, fer proves de sensibilitat i interpretar radiografies quan estan indicades ajuda a diferenciar-ne l’origen.',
     'Conservar una dent és una prioritat quan el pronòstic ho permet, però no qualsevol dent es pot salvar ni qualsevol endodòncia o tractament periodontal és justificable. Valorem quant teixit queda, el suport ossi, les fractures, la possibilitat de restaurar, la higiene i el valor funcional de la peça. L’objectiu no és allargar tractaments sense límit, sinó prendre una decisió proporcionada.',
   ],
   sections: [
@@ -442,7 +442,7 @@ pages['es-perio'] = servicePage('es', {
   image: 'assets/img/headers/hero-serveis.webp', imageWidth: 2200, imageHeight: 942, imageAlt: 'Gabinete de Estudi Dental Carrera preparado para tratamientos conservadores',
   introTitle: 'Dos áreas distintas con un objetivo compartido',
   intro: [
-    'La periodoncia trata las encías y los tejidos que sostienen los dientes. La endodoncia trata el interior del diente cuando la pulpa está inflamada o infectada. Pueden producir síntomas parecidos, como sensibilidad, dolor al masticar o molestias localizadas, pero el tratamiento no es el mismo. Explorar, realizar pruebas de sensibilidad e interpretar radiografías cuando están indicadas ayuda a diferenciar su origen.',
+    'En nuestra clínica dental valoramos tratamientos de periodoncia en Lleida y Tremp. La periodoncia trata las encías y los tejidos que sostienen los dientes. La endodoncia trata el interior del diente cuando la pulpa está inflamada o infectada. Pueden producir síntomas parecidos, como sensibilidad, dolor al masticar o molestias localizadas, pero el tratamiento no es el mismo. Explorar, realizar pruebas de sensibilidad e interpretar radiografías cuando están indicadas ayuda a diferenciar su origen.',
     'Conservar un diente es prioritario cuando el pronóstico lo permite, pero no cualquier pieza puede salvarse ni cualquier endodoncia o tratamiento periodontal está justificado. Valoramos cuánto tejido queda, el soporte óseo, las fracturas, la posibilidad de restaurar, la higiene y el valor funcional de la pieza. El objetivo no es prolongar tratamientos sin límite, sino tomar una decisión proporcionada.',
   ],
   sections: [
@@ -709,8 +709,8 @@ pages['ca-tremp'] = locationPage('ca', {
   image: 'assets/img/tremp-exterior.webp', imageWidth: 2200, imageHeight: 1466, imageAlt: 'Exterior de la clínica Estudi Dental Carrera a Tremp',
   introTitle: 'Atenció dental de proximitat, sense simplificar el diagnòstic',
   intro: [
-    'La clínica és al carrer Montllobar, 22 baixos, 25620 Tremp. Atén persones de Tremp i d’altres poblacions del Pallars que busquen seguiment preventiu, valoració d’un problema o un pla de tractament. La proximitat és important per mantenir controls, però no canvia el criteri: expliquem què observem, què es pot fer i què encara necessita estudi.',
-    'Els casos senzills i els que impliquen diverses àrees comparteixen la mateixa prioritat: conservar salut i funció amb el mínim tractament necessari. Quan cal una valoració específica o coordinar fases, l’equip pot treballar conjuntament entre les dues clíniques. Qualsevol derivació o desplaçament s’explica abans i només es proposa si aporta utilitat al cas.',
+    'La clínica és al carrer Montllobar, 22 baixos, 25620 Tremp, Lleida. Atenem persones de Tremp i del Pallars que volen una revisió o consultar un problema dental. Tenir la clínica a prop facilita els controls. A cada visita expliquem què veiem, què podem fer i què cal estudiar millor.',
+    'La prioritat és conservar les dents i la seva funció amb el tractament que calgui. Si el cas necessita més d’un professional, coordinem les visites entre les dues clíniques. T’expliquem abans qualsevol desplaçament a Lleida i per què el proposem.',
   ],
   aside: 'Adreça: carrer Montllobar, 22 baixos, 25620 Tremp. Telèfon i WhatsApp: 650 60 01 72. Confirma horaris, accessibilitat o necessitats concretes amb recepció.',
   sections: [
@@ -768,8 +768,8 @@ pages['es-tremp'] = locationPage('es', {
   image: 'assets/img/tremp-exterior.webp', imageWidth: 2200, imageHeight: 1466, imageAlt: 'Exterior de la clínica Estudi Dental Carrera en Tremp',
   introTitle: 'Atención dental de proximidad, sin simplificar el diagnóstico',
   intro: [
-    'La clínica está en carrer Montllobar, 22, bajos, 25620 Tremp. Atiende a personas de Tremp y de otras poblaciones del Pallars que buscan seguimiento preventivo, valoración de un problema o un plan de tratamiento. La proximidad es importante para mantener controles, pero no cambia el criterio: explicamos qué observamos, qué puede hacerse y qué necesita todavía estudio.',
-    'Los casos sencillos y los que implican varias áreas comparten la misma prioridad: conservar salud y función con el mínimo tratamiento necesario. Cuando hace falta una valoración específica o coordinar fases, el equipo puede trabajar conjuntamente entre las dos clínicas. Cualquier derivación o desplazamiento se explica antes y solo se propone si aporta utilidad al caso.',
+    'La clínica está en carrer Montllobar, 22, bajos, 25620 Tremp, Lleida. Atendemos a personas de Tremp y del Pallars que quieren una revisión o consultar un problema dental. Tener la clínica cerca facilita los controles. En cada visita explicamos qué vemos, qué podemos hacer y qué falta estudiar.',
+    'La prioridad es conservar los dientes y su función con el tratamiento necesario. Si el caso requiere más de un profesional, coordinamos las visitas entre las dos clínicas. Te explicamos antes cualquier desplazamiento a Lleida y por qué lo proponemos.',
   ],
   aside: 'Dirección: carrer Montllobar, 22, bajos, 25620 Tremp. Teléfono y WhatsApp: 650 60 01 72. Confirma horarios, accesibilidad o necesidades concretas con recepción.',
   sections: [
