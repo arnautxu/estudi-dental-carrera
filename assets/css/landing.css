@@ -38,6 +38,17 @@
 .landing-hero h1 { margin:.8rem 0 1.25rem; font-family:var(--font-display); font-weight:400; font-size:clamp(3rem,7vw,6rem); line-height:1.02; text-wrap:balance; }
 .landing-hero__lead { max-width:760px; font-size:clamp(1.05rem,2vw,1.3rem); line-height:1.65; color:rgba(255,255,255,.9); }
 .landing-hero__actions { display:flex; flex-wrap:wrap; gap:.9rem; margin-top:2rem; }
+.landing-clinic-alternative { display:inline-flex; align-items:center; min-height:44px; padding:.4rem 0; color:var(--ink); font-size:1rem; text-decoration:underline; text-underline-offset:4px; }
+.landing-hero__content > .landing-clinic-alternative { margin-top:.35rem; }
+.landing-hero .landing-clinic-alternative,
+.landing-cta .landing-clinic-alternative { color:var(--white); }
+.landing-professional { display:flex; align-items:center; gap:1.1rem; max-width:580px; margin-top:1.2rem; padding-top:1.4rem; border-top:1px solid rgba(255,255,255,.3); }
+.landing-professional img { width:72px; height:78px; flex:0 0 72px; object-fit:cover; }
+.landing-professional > div { min-width:0; }
+.landing-professional > div > span { display:block; margin-bottom:.2rem; font-size:1rem; color:rgba(255,255,255,.8); }
+.landing-professional strong { display:block; font-size:1.08rem; font-weight:500; line-height:1.4; }
+.landing-professional p { margin:.2rem 0 0; color:rgba(255,255,255,.9); font-size:1rem; line-height:1.5; }
+.landing-professional a { display:inline-flex; align-items:center; gap:.6rem; min-height:44px; color:var(--white); font-size:1rem; text-decoration:underline; text-underline-offset:4px; }
 
 .landing-page { background:var(--off-white); }
 .landing-intro,
@@ -55,15 +66,24 @@
 .landing-prose h3 { margin:2.3rem 0 .85rem; font-family:var(--font-display); font-size:1.55rem; font-weight:500; }
 .landing-prose ul { margin:0 0 1.6rem; padding-left:1.2rem; color:var(--ink-soft); }
 .landing-prose li { margin:.65rem 0; line-height:1.65; }
+.landing-section-nav { margin-top:2rem; }
+.landing-section-nav > span { display:block; color:var(--ink); font-size:1rem; font-weight:500; }
+.landing-section-nav ul { display:flex; flex-wrap:wrap; gap:.25rem 1.5rem; margin:.5rem 0 0; padding:0; list-style:none; }
+.landing-section-nav li { margin:0; }
+.landing-section-nav a { display:inline-flex; align-items:center; gap:.7rem; min-height:44px; color:var(--ink); text-decoration:underline; text-underline-offset:5px; }
 .landing-aside { position:sticky; top:108px; padding:1.7rem; border:1px solid rgba(24,24,24,.12); background:var(--white); }
 .landing-aside h2 { font-size:1.5rem; margin:0 0 .8rem; }
 .landing-aside p { color:var(--gris); line-height:1.65; }
 .landing-aside__links { display:grid; gap:.7rem; margin-top:1.2rem; }
 .landing-aside__links a { color:var(--ink); text-decoration:underline; text-underline-offset:4px; }
 .landing-section--alt { background:var(--white); }
+.landing-section[id] { scroll-margin-top:100px; }
 .landing-section__grid { display:grid; grid-template-columns:minmax(0,.72fr) minmax(0,1.28fr); gap:clamp(2.5rem,7vw,7rem); }
 .landing-section__title { position:sticky; top:110px; align-self:start; }
 .landing-section__index { display:block; color:var(--beix-deep); font-size:.76rem; letter-spacing:.14em; }
+.landing-section__contact { margin-top:2rem; padding-top:1.5rem; border-top:1px solid rgba(24,24,24,.15); }
+.landing-section__contact > p { color:var(--ink); font-weight:500; }
+.landing-section__actions { display:flex; align-items:center; flex-wrap:wrap; gap:.7rem 1.4rem; }
 
 .landing-trust {
   display:grid;
@@ -92,6 +112,7 @@
 
 .landing-cta { padding:clamp(4rem,8vw,7rem) 0; background:var(--ink); color:var(--white); }
 .landing-cta__inner { display:flex; align-items:end; justify-content:space-between; gap:2rem; }
+.landing-cta__actions { display:flex; flex:0 0 auto; flex-direction:column; align-items:flex-start; gap:.4rem; }
 .landing-cta h2 { margin:0; max-width:700px; font-family:var(--font-display); font-size:clamp(2.4rem,5vw,4.7rem); font-weight:400; line-height:1.06; }
 .landing-cta p { color:rgba(255,255,255,.72); }
 
@@ -120,6 +141,7 @@
   .landing-nav__links a:not(.landing-nav__lang) { display:none; }
   .landing-hero { min-height:560px; }
   .landing-hero__actions .btn { width:100%; justify-content:center; }
+  .landing-section__actions .btn { width:100%; justify-content:center; }
 }
 
 .landing-faq .landing-references { margin-top:1rem; border:0; background:transparent; color:var(--ink-soft); font-size:.875rem; }

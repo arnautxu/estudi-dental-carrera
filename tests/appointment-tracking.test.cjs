@@ -18,7 +18,7 @@ class Element {
   focus() {}
 }
 
-function appointmentHarness(clinic = 'carrera') {
+function appointmentHarness(clinic = 'carrera', { lang = 'ca', hash = '', search = '' } = {}) {
   const form = new Element();
   const steps = [new Element(), new Element(), new Element()];
   const radios = ['carrera', 'tremp'].map(value => Object.assign(new Element(), { value, checked: value === clinic }));
@@ -44,17 +44,30 @@ function appointmentHarness(clinic = 'carrera') {
     return form.elements[field] ? [form.elements[field]] : [];
   };
   form.reset = () => { radios.forEach(r => { r.checked = false; }); controls.forEach(key => { form.elements[key].value = ''; form.elements[key].checked = false; }); };
-  const document = { documentElement: { lang: 'ca' }, querySelector: selector => selector === '[data-appointment]' ? form : new Element(), querySelectorAll: () => [], dispatchEvent() {}, body: new Element() };
-  const location = new URL('https://www.estudidentalcarrera.com/seus.html');
-  const window = { location, addEventListener() {}, track: (name, params) => events.push({ name, params: { ...params } }) };
+  const document = new Element();
+  const intro = Object.assign(new Element(), { textContent: 'Generic clinic selection introduction' });
+  const direct = new Element();
+  const languageLink = { href: lang === 'es' ? 'https://www.estudidentalcarrera.com/seus.html' : 'https://www.estudidentalcarrera.com/es/sedes.html' };
+  Object.assign(document, {
+    documentElement: { lang },
+    querySelector: selector => selector === '[data-appointment]' ? form : selector === '[data-appointment-intro]' ? intro : direct,
+    querySelectorAll: selector => selector.includes('a[hreflang]') ? [languageLink] : [],
+    dispatchEvent() {}, body: new Element()
+  });
+  const location = new URL(`https://www.estudidentalcarrera.com/${lang === 'es' ? 'es/sedes.html' : 'seus.html'}${search}${hash}`);
+  const window = Object.assign(new Element(), { location, track: (name, params) => events.push({ name, params: { ...params } }) });
   let response = { ok: true, status: 200, json: async () => ({ ok: true }) };
   vm.runInNewContext(appointmentSource, {
     document, window, location, URL, URLSearchParams, AbortController, setTimeout, clearTimeout,
     CustomEvent: class { constructor(type, options) { this.type = type; this.detail = options.detail; } },
     crypto: { randomUUID: () => '123e4567-e89b-42d3-a456-426614174000' },
-    fetch: async (_url, options) => { requests.push(JSON.parse(options.body)); if (response instanceof Error) throw response; return response; }
+    fetch: async (_url, options) => { requests.push(JSON.parse(options.body)); if (response instanceof Error) throw response; return typeof response === 'function' ? response() : response; }
   });
-  return { form, steps, radios, events, requests, response: value => { response = value; }, fill() { Object.assign(form.elements.name, { value: 'Private patient' }); form.elements.phone.value = '+34 600 000 000'; form.elements.email.value = 'private@example.invalid'; form.elements.consent.checked = true; } };
+  return { form, steps, radios, events, requests, window, document, location, intro, direct, languageLink,
+    response: value => { response = value; },
+    async chooseClinic(value) { radios.forEach(r => { r.checked = r.value === value; }); await radios.find(r => r.value === value).emit('change'); },
+    fill() { Object.assign(form.elements.name, { value: 'Private patient' }); form.elements.phone.value = '+34 600 000 000'; form.elements.email.value = 'private@example.invalid'; form.elements.consent.checked = true; }
+  };
 }
 
 test('form measurement deduplicates steps, excludes private values and counts only a confirmed lead', async () => {
@@ -80,7 +93,7 @@ test('form measurement deduplicates steps, excludes private values and counts on
   assert.equal(h.events.filter(e => e.name === 'generate_lead').length, 1);
   assert.equal(h.events.at(-1).params.clinic, 'lleida');
   assert.equal(h.requests[0].requestId, h.requests[1].requestId, 'same retry remains idempotent');
-  for (const { params } of h.events) assert.ok(Object.keys(params).every(k => ['form_name', 'clinic', 'form_step', 'error_type'].includes(k)));
+  for (const { params } of h.events) assert.ok(Object.keys(params).every(k => ['form_name', 'form_entry', 'clinic', 'form_step', 'error_type'].includes(k)));
   assert.doesNotMatch(JSON.stringify(h.events), /Private|600 000|private@example|requestId|orientation|upstream/);
 });
 
@@ -94,6 +107,98 @@ test('Tremp stays separate and rejected requests never become leads', async () =
   assert.ok(h.events.every(e => e.params.clinic === 'tremp'));
   assert.equal(h.events.at(-1).params.error_type, 'rate_limited');
   assert.ok(!h.events.some(e => e.name === 'generate_lead'));
+});
+
+for (const lang of ['ca', 'es']) for (const clinic of ['carrera', 'tremp']) {
+  test(`${lang}/${clinic}: a clinic link starts at contact details with honest progress and language continuity`, async () => {
+    const h = appointmentHarness('', { lang, hash: `#${lang === 'es' ? 'contacto' : 'contacte'}-${clinic}` });
+    assert.deepEqual(h.steps.map(s => s.hidden), [true, true, false]);
+    assert.equal(h.radios.find(r => r.checked).value, clinic);
+    assert.equal(h.form.querySelector('[data-step-count]').textContent, lang === 'es' ? 'Datos de contacto' : 'Dades de contacte');
+    assert.equal(h.form.querySelector('.appointment-steps').hidden, true);
+    assert.equal(h.steps[2].querySelector('[data-back]').hidden, true);
+    assert.match(h.intro.textContent, new RegExp(clinic === 'tremp' ? 'Tremp' : 'Lleida'));
+    assert.equal(h.languageLink.href, `${lang === 'es' ? '/seus.html#contacte' : '/es/sedes.html#contacto'}-${clinic}`);
+    assert.equal(h.events.length, 0, 'preselection is not user interaction or a lead');
+    await h.form.emit('input', { target: h.form.elements.name });
+    assert.deepEqual(h.events.map(e => [e.name, e.params.form_entry, e.params.form_step]), [
+      ['appointment_start', 'clinic_link', undefined], ['appointment_step', 'clinic_link', 3]
+    ]);
+    await h.form.emit('submit');
+    assert.equal(h.requests.length, 0, 'the shortcut cannot skip name, phone or consent validation');
+  });
+}
+
+test('editing the clinic from direct entry returns to contact and preserves typed details', async () => {
+  const h = appointmentHarness('', { hash: '#contacte-carrera' });
+  h.fill();
+  await h.form.querySelector('[data-edit-clinic]').click();
+  assert.deepEqual(h.steps.map(s => s.hidden), [true, false, true]);
+  assert.equal(h.steps[1].querySelector('[data-back]').textContent, 'Tornar al contacte');
+  await h.chooseClinic('tremp');
+  await h.steps[1].querySelector('[data-back]').click();
+  assert.deepEqual(h.steps.map(s => s.hidden), [true, true, false]);
+  assert.equal(h.form.elements.name.value, 'Private patient');
+  assert.equal(h.form.elements.consent.checked, true);
+  assert.match(h.form.querySelector('[data-clinic-summary]').textContent, /Tremp/);
+  assert.equal(h.languageLink.href, '/es/sedes.html#contacto-tremp');
+});
+
+test('hash changes preserve typed details, and a repeated clinic link reopens contact from clinic editing', async () => {
+  const h = appointmentHarness('', { hash: '#contacte-carrera' });
+  h.fill();
+  h.location.hash = '#contacte-tremp-whatsapp';
+  await h.window.emit('hashchange');
+  assert.equal(h.radios.find(r => r.checked).value, 'tremp');
+  assert.equal(h.form.elements.phone.value, '+34 600 000 000');
+  assert.equal(h.direct.open, true);
+  await h.form.querySelector('[data-edit-clinic]').click();
+  await h.document.emit('click', { target: { closest: () => ({ href: h.location.href }) } });
+  assert.deepEqual(h.steps.map(s => s.hidden), [true, true, false]);
+});
+
+test('a fragment cannot change the recipient in flight or reopen a sent request; restart is explicit', async () => {
+  const h = appointmentHarness('', { hash: '#contacte-carrera' });
+  h.fill();
+  let accept;
+  h.response(() => new Promise(resolve => { accept = resolve; }));
+  const submission = h.form.emit('submit');
+  h.location.hash = '#contacte-tremp';
+  await h.window.emit('hashchange');
+  assert.equal(h.radios.find(r => r.checked).value, 'carrera');
+  assert.equal(h.requests[0].seu, 'carrera');
+  accept({ ok: true, status: 200, json: async () => ({ ok: true }) });
+  await submission;
+  assert.match(h.form.querySelector('[data-success]').querySelector('[data-success-message]').textContent, /Lleida/);
+  await h.window.emit('hashchange');
+  assert.ok(h.steps.every(s => s.hidden));
+  assert.equal(h.form.querySelector('[data-step-count]').textContent, 'Enviada');
+  assert.equal(h.events.filter(e => e.name === 'generate_lead').length, 1);
+  await h.form.querySelector('[data-restart]').click();
+  assert.deepEqual(h.steps.map(s => s.hidden), [false, true, true]);
+  assert.equal(h.form.querySelector('[data-step-count]').textContent, '1 de 3');
+  assert.equal(h.form.elements.name.value, '');
+  assert.equal(h.form.elements.consent.checked, false);
+});
+
+test('generic and invalid links keep the clinic selection and optional orientation steps', async () => {
+  for (const hash of ['#contacte', '#contacte-whatsapp', '#contacte-unknown']) {
+    const h = appointmentHarness('', { hash });
+    assert.deepEqual(h.steps.map(s => s.hidden), [false, true, true]);
+    await h.steps[0].querySelector('[data-next]').click();
+    await h.steps[1].querySelector('[data-next]').click();
+    assert.deepEqual(h.steps.map(s => s.hidden), [true, false, true]);
+    assert.equal(h.requests.length, 0);
+    assert.equal(h.events.at(-1).params.error_type, 'clinic_required');
+  }
+});
+
+test('legacy clinic query also opens the short form and does not leak attribution into events', async () => {
+  const h = appointmentHarness('', { search: '?seu=tremp&utm_source=test-only&canal=whatsapp' });
+  assert.deepEqual(h.steps.map(s => s.hidden), [true, true, false]);
+  assert.equal(h.direct.open, true);
+  await h.form.emit('input', { target: h.form.elements.name });
+  assert.doesNotMatch(JSON.stringify(h.events), /utm_|test-only/);
 });
 
 test('conversion events obey analytics choices and never turn contact taps into leads', async () => {

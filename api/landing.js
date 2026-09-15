@@ -51,19 +51,22 @@ function jsonLd(page) {
   return JSON.stringify({ '@context': 'https://schema.org', '@graph': graph });
 }
 
-function renderSection(section, index) {
+function renderSection(section, index, { contact, trempContact, isEs }) {
   const paragraphs = section.paragraphs.map(text => `<p>${text}</p>`).join('');
   const list = section.items && section.items.length
     ? `<ul>${section.items.map(item => `<li>${item}</li>`).join('')}</ul>`
     : '';
+  const sectionCta = section.ctaText
+    ? `<div class="landing-section__contact"><p>${escapeHtml(section.ctaText)}</p><div class="landing-section__actions"><a href="${contact}" class="btn btn--primary" data-track="appointment_cta_click" data-track-label="landing-section">${isEs ? 'Pedir una valoración en Lleida' : 'Demana una valoració a Lleida'}</a><a href="${trempContact}" class="landing-clinic-alternative" data-track="appointment_cta_click" data-track-label="landing-section-tremp">${isEs ? '¿Prefieres Tremp?' : 'Prefereixes Tremp?'}</a></div></div>`
+    : '';
   return `
-    <section class="landing-section${index % 2 ? ' landing-section--alt' : ''}">
+    <section${section.id ? ` id="${escapeHtml(section.id)}"` : ''} class="landing-section${index % 2 ? ' landing-section--alt' : ''}">
       <div class="container landing-section__grid">
         <div class="landing-section__title">
           <span class="landing-section__index">0${index + 1}</span>
           <h2>${section.title}</h2>
         </div>
-        <div class="landing-prose">${paragraphs}${list}</div>
+        <div class="landing-prose">${paragraphs}${list}${sectionCta}</div>
       </div>
     </section>`;
 }
@@ -75,8 +78,19 @@ function render(page) {
   const services = isEs ? '/es/servicios.html' : '/serveis.html';
   const team = isEs ? '/es/equipo.html' : '/equip.html';
   const locations = isEs ? '/es/sedes.html' : '/seus.html';
-  const clinicId = page.location?.id === 'tremp' ? 'tremp' : (page.type === 'location' ? 'carrera' : '');
-  const contact = `${locations}#${isEs ? 'contacto' : 'contacte'}${clinicId ? `-${clinicId}` : ''}`;
+  const isService = page.type === 'service';
+  const clinicId = page.location?.id === 'tremp' ? 'tremp' : 'carrera';
+  const contact = `${locations}#${isEs ? 'contacto' : 'contacte'}-${clinicId}`;
+  const trempContact = `${locations}#${isEs ? 'contacto' : 'contacte'}-tremp`;
+  const primaryCtaLabel = isService ? (isEs ? 'Pedir visita en Lleida' : 'Demana visita a Lleida') : (isEs ? 'Pedir una primera visita' : 'Demana una primera visita');
+  const alternateClinicLink = isService ? `<a href="${trempContact}" class="landing-clinic-alternative" data-track="appointment_cta_click" data-track-label="landing-alternative-tremp">${isEs ? '¿Prefieres Tremp?' : 'Prefereixes Tremp?'}</a>` : '';
+  const professional = page.professional
+    ? `<div class="landing-professional"><img src="${escapeHtml(page.professional.image)}" width="${page.professional.imageWidth}" height="${page.professional.imageHeight}" alt="" loading="lazy" decoding="async" /><div><span>${isEs ? 'En nuestro equipo' : 'Al nostre equip'}</span><strong>${escapeHtml(page.professional.name)}</strong><p>${escapeHtml(page.professional.role)}</p><a href="${escapeHtml(page.professional.href)}">${isEs ? 'Conoce su trayectoria' : 'Coneix la seva trajectòria'} <span aria-hidden="true">→</span></a></div></div>`
+    : '';
+  const jumpSections = page.sections.filter(section => section.id && section.jumpLabel);
+  const sectionNav = jumpSections.length
+    ? `<nav class="landing-section-nav" aria-label="${isEs ? 'Opciones de estética dental' : 'Opcions d’estètica dental'}"><span>${isEs ? '¿Qué te gustaría revisar?' : 'Què t’agradaria revisar?'}</span><ul>${jumpSections.map(section => `<li><a href="#${escapeHtml(section.id)}">${escapeHtml(section.jumpLabel)} <span aria-hidden="true">↓</span></a></li>`).join('')}</ul></nav>`
+    : '';
   const url = `${ORIGIN}/${page.path}`;
   const altUrl = `${ORIGIN}/${page.alternatePath}`;
   const phone = page.location && page.location.id === 'tremp' ? '+34650600172' : '+34973268826';
@@ -131,7 +145,7 @@ function render(page) {
   <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&amp;display=optional" rel="stylesheet" /></noscript>
   <link rel="preload" href="/assets/fonts/N27-Regular.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="/assets/css/main.min.css?v=20260915-seo2" />
-  <link rel="stylesheet" href="/assets/css/landing.min.css?v=20260915-seo2" />
+  <link rel="stylesheet" href="/assets/css/landing.min.css?v=20260915-conversion" />
   <link rel="icon" type="image/svg+xml" href="/assets/img/logos/favicon.svg" />
   <script type="application/ld+json">${jsonLd(page)}</script>
 </head>
@@ -156,21 +170,23 @@ function render(page) {
         <span class="label">${escapeHtml(page.eyebrow)}</span>
         <h1>${page.h1}</h1>
         <p class="landing-hero__lead">${page.lead}</p>
-        <div class="landing-hero__actions"><a href="${contact}" class="btn btn--primary btn--lg" data-track="appointment_cta_click" data-track-label="landing-hero">${isEs ? 'Pedir una primera visita' : 'Demana una primera visita'}</a><a href="tel:${phone}" class="btn btn--ghost btn--lg">${isEs ? 'Llamar' : 'Trucar'} · ${clinicId === 'tremp' ? 'Tremp' : 'Lleida'}</a></div>
+        <div class="landing-hero__actions"><a href="${contact}" class="btn btn--primary btn--lg" data-track="appointment_cta_click" data-track-label="landing-hero">${primaryCtaLabel}</a><a href="tel:${phone}" class="btn btn--ghost btn--lg">${isEs ? 'Llamar' : 'Trucar'} · ${clinicId === 'tremp' ? 'Tremp' : 'Lleida'}</a></div>
+        ${alternateClinicLink}
+        ${professional}
       </div>
     </section>
     <section class="landing-intro">
       <div class="container landing-intro__grid">
-        <div class="landing-prose"><span class="landing-kicker">${escapeHtml(page.introKicker)}</span><h2>${page.introTitle}</h2>${page.intro.map(text => `<p>${text}</p>`).join('')}
+        <div class="landing-prose"><span class="landing-kicker">${escapeHtml(page.introKicker)}</span><h2>${page.introTitle}</h2>${page.intro.map(text => `<p>${text}</p>`).join('')}${sectionNav}
           <div class="landing-trust">${page.trust.map(item => `<div class="landing-trust__item"><strong>${item.title}</strong><span>${item.text}</span></div>`).join('')}</div>
         </div>
-        <aside class="landing-aside"><h2>${isEs ? 'Información práctica' : 'Informació pràctica'}</h2><p>${page.aside}</p><div class="landing-aside__links"><a href="${team}">${isEs ? 'Conoce al equipo' : 'Coneix l’equip'}</a><a href="${locations}">${isEs ? 'Ver las dos clínicas' : 'Veure les dues clíniques'}</a><a href="${contact}">${isEs ? 'Contactar' : 'Contactar'}</a></div></aside>
+        <aside class="landing-aside"><h2>${isEs ? 'Información práctica' : 'Informació pràctica'}</h2><p>${page.aside}</p><div class="landing-aside__links"><a href="${team}">${isEs ? 'Conoce al equipo' : 'Coneix l’equip'}</a><a href="${locations}">${isEs ? 'Ver las dos clínicas' : 'Veure les dues clíniques'}</a><a href="${contact}">${isService ? (isEs ? 'Contactar con Lleida' : 'Contactar amb Lleida') : 'Contactar'}</a>${isService ? `<a href="${trempContact}">${isEs ? 'Contactar con Tremp' : 'Contactar amb Tremp'}</a>` : ''}</div></aside>
       </div>
     </section>
-    ${page.sections.map(renderSection).join('')}
+    ${page.sections.map((section, index) => renderSection(section, index, { contact, trempContact, isEs })).join('')}
     <section class="landing-faq"><div class="container"><span class="landing-kicker">FAQ</span><h2>${isEs ? 'Preguntas frecuentes' : 'Preguntes freqüents'}</h2><div class="landing-faq__list">${page.faqs.map(faq => `<details><summary>${faq.q}</summary><p>${faq.a}</p></details>`).join('')}</div><div class="landing-editorial">${page.editorial} ${isEs ? `Última actualización editorial: ${page.updatedLabel || '25 de agosto de 2026'}.` : `Darrera actualització editorial: ${page.updatedLabel || '25 d’agost de 2026'}.`}</div>${references}</div></section>
     <section class="landing-related"><div class="container"><span class="landing-kicker">${isEs ? 'Siguiente paso' : 'Següent pas'}</span><h2>${isEs ? 'Contenido relacionado' : 'Contingut relacionat'}</h2><div class="landing-related__grid">${page.related.map(item => `<a class="landing-related__card" href="${item.href}"><span>${item.type}</span><strong>${item.label}</strong><b>→</b></a>`).join('')}</div></div></section>
-    <section class="landing-cta"><div class="container landing-cta__inner"><div><h2>${page.ctaTitle}</h2><p>${page.ctaText}</p></div><a href="${contact}" class="btn btn--primary btn--lg" data-track="appointment_cta_click" data-track-label="landing-footer">${isEs ? 'Pedir visita' : 'Demanar visita'}</a></div></section>
+    <section class="landing-cta"><div class="container landing-cta__inner"><div><h2>${page.ctaTitle}</h2><p>${page.ctaText}</p></div><div class="landing-cta__actions"><a href="${contact}" class="btn btn--primary btn--lg" data-track="appointment_cta_click" data-track-label="landing-footer">${isService ? primaryCtaLabel : (isEs ? 'Pedir visita' : 'Demanar visita')}</a>${alternateClinicLink}</div></div></section>
   </main>
   <footer class="landing-footer"><div class="landing-footer__grid"><div><h2>Estudi Dental Carrera</h2><p>${isEs ? 'Odontología conservadora y decisiones explicadas con claridad.' : 'Odontologia conservadora i decisions explicades amb claredat.'}</p></div><div><h2>Lleida</h2><p>Carrer Major, 74-76, 3r 3a<br />25007 Lleida<br /><a href="tel:+34973268826">973 26 88 26</a></p></div><div><h2>Tremp</h2><p>Carrer Montllobar, 22 Baixos<br />25620 Tremp<br /><a href="tel:+34650600172">650 60 01 72</a></p></div></div><div class="landing-footer__legal"><span>© 2026 Estudi Dental Carrera</span><a href="${isEs ? '/es/privacidad.html' : '/privacitat.html'}">${isEs ? 'Privacidad' : 'Privacitat'}</a><a href="${isEs ? '/es/aviso-legal.html' : '/avis-legal.html'}">${isEs ? 'Aviso legal' : 'Avís legal'}</a><a href="${isEs ? '/es/cookies.html' : '/cookies.html'}">Cookies</a><button type="button" data-consent-open>${isEs ? 'Preferencias de cookies' : 'Preferències de cookies'}</button></div></footer>
   <script src="/assets/js/main.min.js?v=20260915-growth"></script>

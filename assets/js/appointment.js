@@ -11,7 +11,10 @@
   const steps = [...form.querySelectorAll('[data-step]')];
   const status = form.querySelector('[data-form-status]');
   const submit = form.querySelector('[type="submit"]');
+  const intro = document.querySelector('[data-appointment-intro]');
+  const genericIntro = intro?.textContent;
   let step = 0;
+  let directEntry = false;
   let busy = false;
   let sent = false;
   let requestId = '';
@@ -26,6 +29,7 @@
   function measure(name, extra = {}) {
     window.track?.(name, {
       form_name: 'appointment',
+      form_entry: directEntry ? 'clinic_link' : 'guided',
       clinic: selected() === 'carrera' ? 'lleida' : selected() === 'tremp' ? 'tremp' : 'unselected',
       ...extra
     });
@@ -73,6 +77,9 @@
     form.querySelector('[data-clinic-context]').textContent = c ? `${text('Clínica de', 'Clínica de')} ${c.city}` : 'Lleida · Tremp';
     form.querySelector('[data-clinic-summary]').textContent = c ? `${c.name} · ${c.city}` : '';
     submit.textContent = c ? text(`Enviar sol·licitud a ${c.city}`, `Enviar solicitud a ${c.city}`) : text('Enviar sol·licitud', 'Enviar solicitud');
+    if (intro) intro.textContent = directEntry && c
+      ? text(`Deixa les teves dades. La recepció de ${c.city} et trucarà per concretar la visita.`, `Deja tus datos. La recepción de ${c.city} te llamará para concretar la visita.`)
+      : genericIntro;
     document.querySelectorAll('a[hreflang].nav__lang-link, a[hreflang].mobile-menu__lang-link').forEach(link => {
       const url = new URL(link.href, window.location.href);
       url.searchParams.delete('seu');
@@ -86,7 +93,13 @@
   function showStep(next, focus = true) {
     step = Math.max(0, Math.min(2, next));
     steps.forEach((el, i) => { el.hidden = i !== step; });
-    form.querySelector('[data-step-count]').textContent = `${step + 1} de 3`;
+    form.classList.toggle('appointment--direct', directEntry);
+    form.querySelector('[data-step-count]').textContent = directEntry
+      ? (step === 1 ? text('Tria la clínica', 'Elige la clínica') : text('Dades de contacte', 'Datos de contacto'))
+      : `${step + 1} de 3`;
+    form.querySelector('.appointment-steps').hidden = directEntry;
+    steps[2].querySelector('[data-back]').hidden = directEntry;
+    steps[1].querySelector('[data-back]').textContent = directEntry ? text('Tornar al contacte', 'Volver al contacto') : text('Enrere', 'Atrás');
     form.querySelectorAll('.appointment-steps li').forEach((el, i) => {
       if (i === step) el.setAttribute('aria-current', 'step');
       else el.removeAttribute('aria-current');
@@ -130,14 +143,18 @@
   form.classList.add('is-ready');
   showStep(0, false);
   form.querySelectorAll('[data-next]').forEach(button => button.addEventListener('click', () => {
-    if (busy) return;
+    if (busy || sent) return;
     startMeasurement();
     clearErrors();
     if (step === 1 && !validateClinic()) return;
     showStep(step + 1);
   }));
-  form.querySelectorAll('[data-back]').forEach(button => button.addEventListener('click', () => { if (!busy) showStep(step - 1); }));
-  form.querySelector('[data-edit-clinic]').addEventListener('click', () => { if (!busy) showStep(1); });
+  form.querySelectorAll('[data-back]').forEach(button => button.addEventListener('click', () => {
+    if (busy || sent) return;
+    if (directEntry && step === 1) { if (validateClinic()) showStep(2); }
+    else showStep(step - 1);
+  }));
+  form.querySelector('[data-edit-clinic]').addEventListener('click', () => { if (!busy && !sent) showStep(1); });
   form.querySelectorAll('[name="seu"]').forEach(radio => radio.addEventListener('change', () => {
     startMeasurement(); clearErrors(); updateClinic(); measureStep();
   }));
@@ -157,19 +174,34 @@
     form.querySelector('[data-orientation-feedback]').textContent = orientation[Number(radio.value)] || '';
   }));
 
-  function applyContactLink() {
+  function applyContactLink(focus = false) {
+    // A fragment must never change the recipient while a request is in flight,
+    // or reopen a successfully submitted form. Typed details remain in place.
+    if (busy || sent) return;
     const params = new URLSearchParams(location.search);
     const match = location.hash.match(/^#contact[eo]-(carrera|tremp|whatsapp|directe)(?:-(whatsapp|directe))?$/);
     const fragment = match?.[1];
-    const preselected = fragment || params.get('seu');
-    if (clinics[preselected]) form.querySelector(`[name="seu"][value="${preselected}"]`).checked = true;
+    const preselected = clinics[fragment] ? fragment : params.get('seu');
+    if (clinics[preselected]) {
+      form.querySelectorAll('[name="seu"]').forEach(radio => { radio.checked = radio.value === preselected; });
+      directEntry = true;
+      showStep(2, focus);
+    }
     updateClinic();
     if (params.has('canal') || fragment === 'whatsapp' || fragment === 'directe' || match?.[2]) {
       document.querySelector('.appointment-direct').open = true;
     }
   }
   applyContactLink();
-  window.addEventListener('hashchange', applyContactLink);
+  window.addEventListener('hashchange', () => applyContactLink(true));
+  document.addEventListener('click', event => {
+    const link = event.target.closest('a[href]');
+    if (!link) return;
+    const url = new URL(link.href, location.href);
+    // Clicking the current clinic link again does not emit hashchange.
+    if (url.origin === location.origin && url.pathname === location.pathname && url.hash === location.hash
+      && /^#contact[eo]-(?:carrera|tremp|whatsapp|directe)(?:-(?:whatsapp|directe))?$/.test(url.hash)) applyContactLink(true);
+  });
 
   function recovery() {
     const c = clinic();
@@ -261,6 +293,7 @@
 
   form.querySelector('[data-restart]').addEventListener('click', () => {
     sent = false; requestId = ''; previousPayload = '';
+    directEntry = false;
     started = false; measuredSteps.clear();
     form.querySelector('[data-success]').hidden = true;
     form.querySelector('.appointment-steps').hidden = false;

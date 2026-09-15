@@ -98,7 +98,25 @@ function servicePage(lang, spec) {
 
 const pages = {};
 
+const carmeProfile = {
+  ca: {
+    name: 'Dra. Carme Roure Miquel',
+    role: 'Metgessa odontòloga · Ortodòncia i ATM',
+    href: '/equip.html#carme-roure',
+    image: '/assets/img/equip/carme-roure-featured.webp',
+    imageWidth: 1086, imageHeight: 1181,
+  },
+  es: {
+    name: 'Dra. Carme Roure Miquel',
+    role: 'Médica odontóloga · Ortodoncia y ATM',
+    href: '/es/equipo.html#carme-roure',
+    image: '/assets/img/equip/carme-roure-featured.webp',
+    imageWidth: 1086, imageHeight: 1181,
+  },
+};
+
 pages['ca-atm'] = servicePage('ca', {
+  professional: carmeProfile.ca,
   related: [
     { href: '/clinica-dental-lleida.html', type: 'Clínica', label: 'Clínica dental a Lleida' },
     { href: '/dentista-tremp.html', type: 'Clínica', label: 'Dentista a Tremp' },
@@ -160,6 +178,7 @@ pages['ca-atm'] = servicePage('ca', {
 });
 
 pages['es-atm'] = servicePage('es', {
+  professional: carmeProfile.es,
   related: [
     { href: '/es/clinica-dental-lleida.html', type: 'Clínica', label: 'Clínica dental en Lleida' },
     { href: '/es/dentista-tremp.html', type: 'Clínica', label: 'Dentista en Tremp' },
@@ -267,7 +286,7 @@ pages['ca-implants'] = servicePage('ca', {
     },
   ],
   faqs: [
-    { q: 'Com es calcula el preu del tractament?', a: 'El pressupost depèn del que necessiti el teu cas. A la primera visita valorem les opcions i expliquem les fases, els controls i el manteniment previstos. La primera visita és de pagament, excepte per a titulars del Carnet Jove a Lleida. Recepció pot confirmar-ne l’import, què inclou i els descomptes aplicables abans de reservar.' },
+    { q: 'Què valorareu a la primera visita?', a: 'A la primera visita valorem el teu cas i les opcions de tractament. T’expliquem les fases, els controls i el manteniment que es preveuen segons les teves necessitats.' },
     { q: 'Tothom pot portar implants?', a: 'No. Cal valorar salut, medicació, os, genives, higiene, tabac i possibilitat de manteniment. També s’han de comparar alternatives.' },
     { q: 'Es pot posar implant i dent el mateix dia?', a: 'En casos seleccionats es pot plantejar càrrega immediata, però depèn de l’estabilitat i del risc. No es pot confirmar sense estudi.' },
     { q: 'Un implant dura tota la vida?', a: 'No es pot garantir. El pronòstic depèn de factors biològics, mecànics i del manteniment continuat.' },
@@ -326,7 +345,7 @@ pages['es-implants'] = servicePage('es', {
     },
   ],
   faqs: [
-    { q: '¿Cómo se calcula el precio del tratamiento?', a: 'El presupuesto depende de lo que necesite tu caso. En la primera visita valoramos las opciones y explicamos las fases, los controles y el mantenimiento previstos. La primera visita es de pago, excepto para titulares del Carnet Jove en Lleida. Recepción puede confirmar su importe, qué incluye y los descuentos aplicables antes de reservar.' },
+    { q: '¿Qué valoraréis en la primera visita?', a: 'En la primera visita valoramos tu caso y las opciones de tratamiento. Te explicamos las fases, los controles y el mantenimiento que se prevén según tus necesidades.' },
     { q: '¿Todo el mundo puede llevar implantes?', a: 'No. Hay que valorar salud, medicación, hueso, encías, higiene, tabaco y posibilidad de mantenimiento. También deben compararse alternativas.' },
     { q: '¿Se puede poner el implante y el diente el mismo día?', a: 'En casos seleccionados puede plantearse carga inmediata, pero depende de la estabilidad y del riesgo. No puede confirmarse sin estudio.' },
     { q: '¿Un implante dura toda la vida?', a: 'No puede garantizarse. El pronóstico depende de factores biológicos, mecánicos y del mantenimiento continuado.' },
@@ -340,6 +359,7 @@ pages['es-implants'] = servicePage('es', {
 });
 
 pages['ca-ortho'] = servicePage('ca', {
+  professional: carmeProfile.ca,
   related: [
     { href: '/clinica-dental-lleida.html', type: 'Clínica', label: 'Clínica dental a Lleida' },
     { href: '/dentista-tremp.html', type: 'Clínica', label: 'Dentista a Tremp' },
@@ -368,6 +388,7 @@ pages['ca-ortho'] = servicePage('ca', {
     },
     {
       title: 'Ortodòncia invisible o brackets: com triem',
+      id: 'ortodoncia-invisible',
       paragraphs: [
         'Els alineadors transparents es coneixen com a ortodòncia invisible. Els brackets són una altra opció. Triem el sistema segons els moviments que necessita la teva boca, la higiene i les hores d’ús que exigeix. Cap opció és millor per a tots els casos.',
         'Els alineadors s’han de portar les hores indicades i netejar bé. Si es fan servir menys temps del necessari, les dents poden no seguir el pla. Amb brackets, també cal netejar amb cura al voltant de l’aparell.',
@@ -397,7 +418,7 @@ pages['ca-ortho'] = servicePage('ca', {
     },
   ],
   faqs: [
-    { q: 'Com es calcula el preu del tractament?', a: 'El pressupost depèn del que necessiti el teu cas. A la primera visita valorem les opcions i expliquem les fases, els controls i el manteniment previstos. La primera visita és de pagament, excepte per a titulars del Carnet Jove a Lleida. Recepció pot confirmar-ne l’import, què inclou i els descomptes aplicables abans de reservar.' },
+    { q: 'Què valorareu a la primera visita?', a: 'A la primera visita valorem el teu cas i les opcions de tractament. T’expliquem les fases, els controls i el manteniment que es preveuen segons les teves necessitats.' },
     { q: 'Alineadors o brackets: què és millor?', a: 'Depèn dels moviments necessaris, la higiene, la col·laboració i els objectius. Cap sistema és universalment millor.' },
     { q: 'Quant dura una ortodòncia?', a: 'La durada varia segons la complexitat, la resposta biològica i el compliment. Només es pot estimar després de l’estudi.' },
     { q: 'Es pot fer ortodòncia amb malaltia periodontal?', a: 'Pot ser possible si la inflamació està controlada i hi ha seguiment periodontal específic. Requereix valoració coordinada.' },
@@ -411,6 +432,7 @@ pages['ca-ortho'] = servicePage('ca', {
 });
 
 pages['es-ortho'] = servicePage('es', {
+  professional: carmeProfile.es,
   related: [
     { href: '/es/clinica-dental-lleida.html', type: 'Clínica', label: 'Clínica dental en Lleida' },
     { href: '/es/dentista-tremp.html', type: 'Clínica', label: 'Dentista en Tremp' },
@@ -439,6 +461,7 @@ pages['es-ortho'] = servicePage('es', {
     },
     {
       title: 'Ortodoncia invisible o brackets: cómo elegimos',
+      id: 'ortodoncia-invisible',
       paragraphs: [
         'Los alineadores transparentes suelen conocerse como ortodoncia invisible. Los brackets son otra opción. Elegimos el sistema según los movimientos que necesita tu boca, tu higiene y las horas de uso que exige. Ninguna opción es mejor para todos los casos.',
         'Los alineadores deben llevarse las horas indicadas y limpiarse bien. Si se usan menos tiempo del necesario, los dientes pueden no seguir el plan. Con brackets, también hay que limpiar con cuidado alrededor del aparato.',
@@ -468,7 +491,7 @@ pages['es-ortho'] = servicePage('es', {
     },
   ],
   faqs: [
-    { q: '¿Cómo se calcula el precio del tratamiento?', a: 'El presupuesto depende de lo que necesite tu caso. En la primera visita valoramos las opciones y explicamos las fases, los controles y el mantenimiento previstos. La primera visita es de pago, excepto para titulares del Carnet Jove en Lleida. Recepción puede confirmar su importe, qué incluye y los descuentos aplicables antes de reservar.' },
+    { q: '¿Qué valoraréis en la primera visita?', a: 'En la primera visita valoramos tu caso y las opciones de tratamiento. Te explicamos las fases, los controles y el mantenimiento que se prevén según tus necesidades.' },
     { q: '¿Alineadores o brackets: qué es mejor?', a: 'Depende de los movimientos necesarios, la higiene, la colaboración y los objetivos. Ningún sistema es universalmente mejor.' },
     { q: '¿Cuánto dura una ortodoncia?', a: 'La duración varía según la complejidad, la respuesta biológica y el cumplimiento. Solo puede estimarse después del estudio.' },
     { q: '¿Puede hacerse ortodoncia con enfermedad periodontal?', a: 'Puede ser posible si la inflamación está controlada y existe seguimiento periodontal específico. Requiere valoración coordinada.' },
@@ -627,6 +650,8 @@ pages['ca-aesthetic'] = servicePage('ca', {
   sections: [
     {
       title: 'Què pot canviar l’emblanquiment',
+      id: 'blanquejament', jumpLabel: 'Blanquejament dental',
+      ctaText: 'Parlem del canvi de color que busques.',
       paragraphs: [
         'L’emblanquiment aclareix dents naturals. No canvia el color d’empastaments, corones o facetes. Per això comprovem quina part del somriure canviaria i quina conservaria el color. Si només hi ha una dent fosca després d’un cop o una endodòncia, pot necessitar un altre enfocament.',
         'Abans revisem càries, fissures, sensibilitat i genives. No totes les taques responen igual. Triem el sistema i el temps segons el cas: fer servir més producte o durant més temps no assegura un resultat millor.',
@@ -635,9 +660,11 @@ pages['ca-aesthetic'] = servicePage('ca', {
     },
     {
       title: 'Composite o facetes: què comparem',
+      id: 'carilles', jumpLabel: 'Carilles i composite',
+      ctaText: 'Valorem la forma i les vores que voldries canviar.',
       paragraphs: [
         'El composite és un material que permet reparar una vora, tancar alguns espais o canviar una forma. Sovint requereix preparar poca superfície de les dents. Es pot reparar, tot i que també es desgasta, es pot tenyir i pot necessitar poliment.',
-        'Les facetes de ceràmica poden mantenir bé el color i la forma en casos seleccionats. Solen implicar una decisió menys reversible. La superfície que cal preparar depèn de la posició, el color inicial i el canvi que busquem.',
+        'Les facetes de ceràmica, també anomenades carilles, poden mantenir bé el color i la forma en casos seleccionats. Solen implicar una decisió menys reversible. La superfície que cal preparar depèn de la posició, el color inicial i el canvi que busquem.',
         'Abans de restaurar, valorem si l’ortodòncia, l’emblanquiment o un petit canvi de contorn conservarien més dent. A vegades convé combinar diverses mesures per etapes. Si proposem una prova estètica, serveix per parlar de proporcions i de com es nota en parlar.',
       ],
       items: [
@@ -657,7 +684,7 @@ pages['ca-aesthetic'] = servicePage('ca', {
     },
   ],
   faqs: [
-    { q: 'Com es calcula el preu del tractament?', a: 'El pressupost depèn del que necessiti el teu cas. A la primera visita valorem les opcions i expliquem les fases, els controls i el manteniment previstos. La primera visita és de pagament, excepte per a titulars del Carnet Jove a Lleida. Recepció pot confirmar-ne l’import, què inclou i els descomptes aplicables abans de reservar.' },
+    { q: 'Què valorareu a la primera visita?', a: 'A la primera visita valorem el teu cas i les opcions de tractament. T’expliquem les fases, els controls i el manteniment que es preveuen segons les teves necessitats.' },
     { q: 'L’emblanquiment fa malbé l’esmalt?', a: 'Els sistemes indicats i supervisats tenen un perfil de seguretat conegut, però poden causar sensibilitat temporal i no són adequats en qualsevol situació.' },
     { q: 'Les corones i els empastaments s’emblanqueixen?', a: 'No. Els materials restauradors no canvien de color com la dent natural i pot caldre replantejar-los després.' },
     { q: 'Composite o ceràmica?', a: 'Depèn del teixit disponible, el canvi necessari, la mossegada, la reparabilitat i les preferències. Cal comparar avantatges i límits.' },
@@ -686,6 +713,8 @@ pages['es-aesthetic'] = servicePage('es', {
   sections: [
     {
       title: 'Qué puede cambiar el blanqueamiento',
+      id: 'blanqueamiento', jumpLabel: 'Blanqueamiento dental',
+      ctaText: 'Hablemos del cambio de color que buscas.',
       paragraphs: [
         'El blanqueamiento aclara dientes naturales. No cambia el color de empastes, coronas o carillas. Por eso comprobamos qué parte de la sonrisa cambiaría y cuál conservaría su color. Si solo hay un diente oscuro después de un golpe o una endodoncia, puede necesitar otro enfoque.',
         'Antes revisamos caries, fisuras, sensibilidad y encías. No todas las manchas responden igual. Elegimos el sistema y el tiempo según el caso: usar más producto o durante más tiempo no asegura un mejor resultado.',
@@ -694,6 +723,8 @@ pages['es-aesthetic'] = servicePage('es', {
     },
     {
       title: 'Composite o carillas: qué comparamos',
+      id: 'carillas', jumpLabel: 'Carillas y composite',
+      ctaText: 'Valoramos la forma y los bordes que te gustaría cambiar.',
       paragraphs: [
         'El composite es un material que permite reparar un borde, cerrar algunos espacios o cambiar una forma. A menudo requiere preparar poca superficie del diente. Se puede reparar, aunque también se desgasta, puede teñirse y puede necesitar pulido.',
         'Las carillas de cerámica pueden mantener bien el color y la forma en casos seleccionados. Suelen implicar una decisión menos reversible. La superficie que hay que preparar depende de la posición, el color inicial y el cambio que buscamos.',
@@ -716,7 +747,7 @@ pages['es-aesthetic'] = servicePage('es', {
     },
   ],
   faqs: [
-    { q: '¿Cómo se calcula el precio del tratamiento?', a: 'El presupuesto depende de lo que necesite tu caso. En la primera visita valoramos las opciones y explicamos las fases, los controles y el mantenimiento previstos. La primera visita es de pago, excepto para titulares del Carnet Jove en Lleida. Recepción puede confirmar su importe, qué incluye y los descuentos aplicables antes de reservar.' },
+    { q: '¿Qué valoraréis en la primera visita?', a: 'En la primera visita valoramos tu caso y las opciones de tratamiento. Te explicamos las fases, los controles y el mantenimiento que se prevén según tus necesidades.' },
     { q: '¿El blanqueamiento daña el esmalte?', a: 'Los sistemas indicados y supervisados tienen un perfil de seguridad conocido, pero pueden causar sensibilidad temporal y no son adecuados en cualquier situación.' },
     { q: '¿Las coronas y los empastes se blanquean?', a: 'No. Los materiales restauradores no cambian de color como el diente natural y puede ser necesario replantearlos después.' },
     { q: '¿Composite o cerámica?', a: 'Depende del tejido disponible, el cambio necesario, la mordida, la reparabilidad y las preferencias. Hay que comparar ventajas y límites.' },
@@ -766,10 +797,11 @@ pages['ca-lleida'] = locationPage('ca', {
       ],
       items: [
         'Si falta una dent: <a href="/implants-dentals.html">implants i les seves alternatives</a>.',
-        'Si vols corregir la posició de les dents: <a href="/ortodoncia.html">opcions d’ortodòncia</a>.',
+        'Si vols corregir la posició de les dents: <a href="/ortodoncia.html#ortodoncia-invisible">ortodòncia invisible o brackets</a>.',
         'Si sagnen les genives o fa mal una dent: <a href="/periodoncia-endodoncia.html">periodòncia i endodòncia</a>.',
-        'Si hi ha tensió o dolor de mandíbula: <a href="/atm-bruxisme.html">ATM i bruxisme</a>.',
-        'Si vols revisar color o forma: <a href="/estetica-dental.html">estètica dental conservadora</a>.',
+        'Si hi ha tensió o dolor de mandíbula: <a href="/atm-bruxisme.html">valoració d’ATM i bruxisme</a>.',
+        'Si vols aclarir el color de les dents: <a href="/estetica-dental.html#blanquejament">blanquejament dental</a>.',
+        'Si vols revisar la forma o una vora: <a href="/estetica-dental.html#carilles">carilles i composite</a>.',
       ],
     },
     {
@@ -803,7 +835,7 @@ pages['ca-lleida'] = locationPage('ca', {
     },
   ],
   faqs: [
-    { q: 'La primera visita és gratuïta?', a: 'La primera visita és de pagament. A Lleida, amb el Carnet Jove, la primera visita i una neteja anual són gratuïtes i tens un 20% de descompte en la resta de serveis. Presenta el carnet a recepció. Contacta amb recepció per confirmar què inclou abans de reservar.' },
+    { q: 'Quin conveni teniu amb el Carnet Jove?', a: 'A Lleida, amb el Carnet Jove, la primera visita i una neteja anual són gratuïtes i tens un 20% de descompte en la resta de serveis. Presenta el carnet a recepció.' },
     { q: 'On és la clínica de Lleida?', a: 'Al carrer Major, 74-76, 3r 3a, 25007 Lleida. Recomanem confirmar amb recepció qualsevol necessitat d’accés.' },
     { q: 'Què he de portar a la primera visita?', a: 'Medicació, antecedents rellevants i radiografies o informes recents si en tens. No cal repetir proves útils sense motiu.' },
     { q: 'Puc demanar cita per WhatsApp?', a: 'Sí, com a canal de contacte. Evita enviar-hi dades clíniques sensibles i no l’utilitzis per a emergències.' },
@@ -844,10 +876,11 @@ pages['es-lleida'] = locationPage('es', {
       ],
       items: [
         'Si falta un diente: <a href="/es/implantes-dentales.html">implantes y sus alternativas</a>.',
-        'Si quieres corregir la posición de los dientes: <a href="/es/ortodoncia.html">opciones de ortodoncia</a>.',
+        'Si quieres corregir la posición de los dientes: <a href="/es/ortodoncia.html#ortodoncia-invisible">ortodoncia invisible o brackets</a>.',
         'Si sangran las encías o duele un diente: <a href="/es/periodoncia-endodoncia.html">periodoncia y endodoncia</a>.',
-        'Si hay tensión o dolor de mandíbula: <a href="/es/atm-bruxismo.html">ATM y bruxismo</a>.',
-        'Si quieres revisar color o forma: <a href="/es/estetica-dental.html">estética dental conservadora</a>.',
+        'Si hay tensión o dolor de mandíbula: <a href="/es/atm-bruxismo.html">valoración de ATM y bruxismo</a>.',
+        'Si quieres aclarar el color de los dientes: <a href="/es/estetica-dental.html#blanqueamiento">blanqueamiento dental</a>.',
+        'Si quieres revisar la forma o un borde: <a href="/es/estetica-dental.html#carillas">carillas y composite</a>.',
       ],
     },
     {
@@ -881,7 +914,7 @@ pages['es-lleida'] = locationPage('es', {
     },
   ],
   faqs: [
-    { q: '¿La primera visita es gratuita?', a: 'La primera visita es de pago. En Lleida, con el Carnet Jove, la primera visita y una limpieza anual son gratuitas y tienes un 20% de descuento en el resto de servicios. Presenta el carnet en recepción. Contacta con recepción para confirmar qué incluye antes de reservar.' },
+    { q: '¿Qué convenio tenéis con el Carnet Jove?', a: 'En Lleida, con el Carnet Jove, la primera visita y una limpieza anual son gratuitas y tienes un 20% de descuento en el resto de servicios. Presenta el carnet en recepción.' },
     { q: '¿Dónde está la clínica de Lleida?', a: 'En carrer Major, 74-76, 3.º 3.ª, 25007 Lleida. Recomendamos confirmar con recepción cualquier necesidad de acceso.' },
     { q: '¿Qué debo llevar a la primera visita?', a: 'Medicación, antecedentes relevantes y radiografías o informes recientes si los tienes. No hace falta repetir pruebas útiles sin motivo.' },
     { q: '¿Puedo pedir cita por WhatsApp?', a: 'Sí, como canal de contacto. Evita enviar datos clínicos sensibles y no lo utilices para emergencias.' },
@@ -952,7 +985,7 @@ pages['ca-tremp'] = locationPage('ca', {
     },
   ],
   faqs: [
-    { q: 'La primera visita és gratuïta?', a: 'La primera visita és de pagament. Contacta amb recepció per saber-ne l’import i què inclou abans de reservar.' },
+    { q: 'Com puc demanar una primera visita a Tremp?', a: 'Pots trucar al 650 60 01 72 o enviar el formulari de contacte. La recepció de Tremp es posarà en contacte amb tu per concretar la visita.' },
     { q: 'On és la clínica de Tremp?', a: 'Al carrer Montllobar, 22 baixos, 25620 Tremp. Pots confirmar com arribar-hi i qualsevol necessitat d’accés amb recepció.' },
     { q: 'Ateneu persones d’altres poblacions del Pallars?', a: 'Sí. La planificació de visites s’adapta al tractament i, si cal coordinació amb Lleida, s’explica prèviament.' },
     { q: 'Puc enviar fotografies per WhatsApp per obtenir un diagnòstic?', a: 'WhatsApp és un canal de contacte, no substitueix una exploració ni és adequat per enviar dades clíniques sensibles sense indicació.' },
@@ -1023,7 +1056,7 @@ pages['es-tremp'] = locationPage('es', {
     },
   ],
   faqs: [
-    { q: '¿La primera visita es gratuita?', a: 'La primera visita es de pago. Contacta con recepción para conocer el importe y qué incluye antes de reservar.' },
+    { q: '¿Cómo puedo pedir una primera visita en Tremp?', a: 'Puedes llamar al 650 60 01 72 o enviar el formulario de contacto. La recepción de Tremp se pondrá en contacto contigo para concretar la visita.' },
     { q: '¿Dónde está la clínica de Tremp?', a: 'En carrer Montllobar, 22, bajos, 25620 Tremp. Puedes confirmar cómo llegar y cualquier necesidad de acceso con recepción.' },
     { q: '¿Atendéis a personas de otras poblaciones del Pallars?', a: 'Sí. La planificación de visitas se adapta al tratamiento y, si hace falta coordinación con Lleida, se explica previamente.' },
     { q: '¿Puedo enviar fotografías por WhatsApp para obtener un diagnóstico?', a: 'WhatsApp es un canal de contacto, no sustituye una exploración ni es adecuado para enviar datos clínicos sensibles sin indicación.' },
