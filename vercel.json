@@ -7,6 +7,8 @@
     "api/contact-route.js": { "includeFiles": "{seus.html,es/sedes.html}" }
   },
   "redirects": [
+    { "source": "/guies.html", "destination": "/blog.html", "permanent": true },
+    { "source": "/es/guias.html", "destination": "/es/blog.html", "permanent": true },
     {
       "source": "/:path*",
       "has": [{ "type": "host", "value": "estudi-dental-carrera.vercel.app" }],
@@ -76,14 +78,16 @@
     { "source": "/politica-de-galetes", "destination": "/cookies.html", "permanent": true }
   ],
   "rewrites": [
+    { "source": "/guies/dolor-mandibula-despertar.html", "destination": "/api/guide?key=dolor-mandibula-despertar" },
+    { "source": "/es/guias/dolor-mandibula-despertar.html", "destination": "/api/guide?key=dolor-mandibula-despertar-es" },
     { "source": "/guies/implant-o-pont.html", "destination": "/api/guide?key=implant-o-pont" },
     { "source": "/es/guias/implante-o-puente.html", "destination": "/api/guide?key=implante-o-puente" },
     { "source": "/guies/alineadors-o-braquets.html", "destination": "/api/guide?key=alineadors-o-braquets" },
     { "source": "/es/guias/alineadores-o-brackets.html", "destination": "/api/guide?key=alineadores-o-brackets" },
     { "source": "/guies/taques-dents.html", "destination": "/api/guide?key=taques-dents" },
     { "source": "/es/guias/manchas-dientes.html", "destination": "/api/guide?key=manchas-dientes" },
-    {"source": "/guies.html", "destination": "/api/guide?key=index-ca"},
-    {"source": "/es/guias.html", "destination": "/api/guide?key=index-es"},
+    {"source": "/blog.html", "destination": "/api/guide?key=index-ca"},
+    {"source": "/es/blog.html", "destination": "/api/guide?key=index-es"},
     {"source": "/guies/endodoncia-dubtes.html", "destination": "/api/guide?key=endodoncia-dubtes"},
     {"source": "/es/guias/endodoncia-dudas.html", "destination": "/api/guide?key=endodoncia-dudas"},
     {"source": "/guies/sagnat-genives.html", "destination": "/api/guide?key=sagnat-genives"},

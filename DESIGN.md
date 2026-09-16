@@ -264,3 +264,4 @@ Cards are used **sparingly and with variety** — never a uniform grid of identi
 - **Don't** bounce / elastic ease anywhere. All motion uses `cubic-bezier(0.23, 1, 0.32, 1)` or equivalent exponential ease-out.
 - **Don't** animate layout properties. Transform and opacity only. Already respected in `.reveal`, `.btn`, `.nav__logo-icon` — keep it.
 - **Don't** break `prefers-reduced-motion`. The CSS already honors it globally; new animations must too.
+- **Line breaks:** balance headings and avoid isolated final words. Keep the last two words together when they fit the available width; preserve compound words such as `despertar-me`. Let italic emphasis wrap inline. Do not add manual heading breaks that strand a single word. Use pretty wrapping for paragraphs, and verify headings at desktop and mobile widths without reducing text size to hide a wrapping problem.

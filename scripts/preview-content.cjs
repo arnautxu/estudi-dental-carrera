@@ -85,19 +85,25 @@ function createPreviewServer({ root = ROOT } = {}) {
       if (pathname.startsWith('/stats/')) return json(409, { ok: false, error: 'preview_mode' });
       if (pathname.startsWith('/api/')) return send(404, 'Not found');
 
+      const legacyBlog = { '/guies.html': '/blog.html', '/es/guias.html': '/es/blog.html' }[pathname];
+      if (legacyBlog) return send(308, '', MIME['.html'], { Location: legacyBlog });
+      for (const module of ['lib/blog.js', 'data/blog.js']) {
+        const filename = path.join(root, module);
+        if (fs.existsSync(filename)) delete require.cache[require.resolve(filename)];
+      }
       const shell = path.join(root, 'lib/site-shell.js');
       if (fs.existsSync(shell)) delete require.cache[require.resolve(shell)];
       const enrichment = path.join(root, 'data/service-enrichment.js');
       if (fs.existsSync(enrichment)) delete require.cache[require.resolve(enrichment)];
       const { pages } = reload(root, 'data/landing-pages.js');
-      for (const module of ['guides-implants.js', 'guides-ortho.js', 'guides-stains.js']) {
+      for (const module of ['guides-implants.js', 'guides-ortho.js', 'guides-stains.js', 'guides-jaw-morning.js']) {
         const filename = path.join(root, 'data', module);
         if (fs.existsSync(filename)) delete require.cache[require.resolve(filename)];
       }
       const guideData = reload(root, 'data/guides.js', true);
       const landingEntry = Object.entries(pages).find(([, page]) => '/' + page.path.replace(/^\//, '') === pathname);
       const guideEntry = Object.entries(guideData?.guides || {}).find(([, guide]) => '/' + guide.path.replace(/^\//, '') === pathname);
-      const guideIndex = { '/guies.html': 'index-ca', '/es/guias.html': 'index-es' }[pathname];
+      const guideIndex = { '/blog.html': 'index-ca', '/es/blog.html': 'index-es' }[pathname];
       const key = landingEntry?.[0] || guideEntry?.[0] || guideIndex;
       if (key) {
         const handler = reload(root, landingEntry ? 'api/landing.js' : 'api/guide.js', true);

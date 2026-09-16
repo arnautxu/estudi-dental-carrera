@@ -1,3 +1,4 @@
+const { isVisible } = require('./blog');
 // Editorial additions for the local content preview. Sources support the
 // explanations; they do not imply review or authorship by the clinic's staff.
 
@@ -52,7 +53,7 @@ function enrichPages(pages) {
   for (const lang of ['ca', 'es']) {
     const es = lang === 'es';
     const prefix = es ? '/es' : '';
-    const guideIndex = es ? '/es/guias.html' : '/guies.html';
+    const guideIndex = es ? '/es/blog.html' : '/blog.html';
     const guides = es ? {
       endo: '/es/guias/endodoncia-dudas.html',
       gums: '/es/guias/sangrado-encias.html',
@@ -241,6 +242,9 @@ function enrichPages(pages) {
         ],
         ctaText: es ? 'Pide una valoración para revisar el dolor, el movimiento o un aparato que ya utilices.' : 'Demana una valoració per revisar el dolor, el moviment o un aparell que ja facis servir.',
       });
+      if (isVisible(es ? 'dolor-mandibula-despertar-es' : 'dolor-mandibula-despertar')) {
+        addRelated(jaw, es ? '/es/guias/dolor-mandibula-despertar.html' : '/guies/dolor-mandibula-despertar.html', es ? 'Dolor de mandíbula al despertar: qué observar' : 'Dolor de mandíbula en despertar: què observar');
+      }
       addRelated(jaw, guides.splint, es ? 'Férula de descarga: qué hace y qué no' : 'Fèrula de descàrrega: què fa i què no');
       addSource(jaw, 'https://www.nidcr.nih.gov/health-info/tmd', es ? 'NIDCR: objetivos y seguimiento de los trastornos temporomandibulares' : 'NIDCR: objectius i seguiment dels trastorns temporomandibulars');
     }

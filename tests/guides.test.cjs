@@ -2,6 +2,7 @@ const { test } = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
+const { isPublished } = require('../data/blog');
 const { guides } = require('../data/guides');
 const { pages } = require('../data/landing-pages');
 const guideHandler = require('../api/guide');
@@ -26,13 +27,13 @@ function resolveLocal(href, fromPath) {
   const service = Object.entries(pages).find(([, page]) => page.path === pathname);
   if (guide) return { html: render(guideHandler, guide[0]).html, anchor: url.hash.slice(1) };
   if (service) return { html: render(landingHandler, service[0]).html, anchor: url.hash.slice(1) };
-  if (['guies.html', 'es/guias.html'].includes(pathname)) return { html: render(guideHandler, pathname === 'guies.html' ? 'index-ca' : 'index-es').html, anchor: url.hash.slice(1) };
+  if (['blog.html', 'es/blog.html'].includes(pathname)) return { html: render(guideHandler, pathname === 'blog.html' ? 'index-ca' : 'index-es').html, anchor: url.hash.slice(1) };
   const filename = path.join(root, pathname === '' ? 'index.html' : pathname.endsWith('/') ? pathname + 'index.html' : pathname);
   assert.ok(fs.existsSync(filename), 'Missing destination: ' + href);
   return { html: fs.readFileSync(filename, 'utf8'), anchor: url.hash.slice(1) };
 }
 
-for (const [key, guide] of Object.entries(guides)) {
+for (const [key, guide] of Object.entries(guides).filter(([key]) => isPublished(key))) {
   test(key + ': guide is discoverable, bilingual and connected to a treatment', () => {
     const { html, status } = render(guideHandler, key);
     assert.equal(status, 200);
@@ -67,7 +68,7 @@ for (const lang of ['ca', 'es']) {
   test(lang + ': the guide index exposes every guide in its language', () => {
     const { html, status } = render(guideHandler, 'index-' + lang);
     assert.equal(status, 200);
-    for (const guide of Object.values(guides).filter(page => page.lang === lang)) {
+    for (const guide of Object.values(guides).filter(page => page.lang === lang && isPublished(page.key))) {
       assert.ok(html.includes('href="/' + guide.path + '"'));
     }
   });

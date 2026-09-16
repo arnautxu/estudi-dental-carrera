@@ -579,6 +579,7 @@ Object.assign(guides,
   require('./guides-implants').guides,
   require('./guides-ortho').guides,
   require('./guides-stains').guides,
+  require('./guides-jaw-morning').guides,
 );
 
 module.exports = { guides };

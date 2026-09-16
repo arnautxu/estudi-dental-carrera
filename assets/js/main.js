@@ -2,6 +2,61 @@
    ESTUDI DENTAL CARRERA — Main JS
    ============================================================ */
 
+/* ---------- HEADING LINE BREAKS ----------
+   Keep the final two words together when they fit, and protect compound
+   words such as despertar-me. Inline emphasis and accessible text survive. */
+(() => {
+  const headings = [...document.querySelectorAll('h1,h2,h3,h4,h5,h6')];
+  const tails = [];
+  const textNodes = element => {
+    const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT);
+    const nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+    return nodes;
+  };
+  headings.forEach(heading => {
+    const words = textNodes(heading).flatMap(node => [...node.data.matchAll(/\S+/g)].map(match => ({ node, start:match.index, end:match.index + match[0].length })));
+    if (words.length > 2) {
+      const before = words[words.length - 2], last = words[words.length - 1];
+      const range = document.createRange();
+      range.setStart(before.node, before.start);
+      range.setEnd(last.node, last.end);
+      if (!range.cloneContents().querySelector('br')) {
+        const tail = document.createElement('span');
+        tail.className = 'heading-tail';
+        tail.append(range.extractContents());
+        range.insertNode(tail);
+        tails.push({ heading, tail });
+      }
+    }
+    textNodes(heading).forEach(node => {
+      const matches = [...node.data.matchAll(/[\p{L}\p{N}]+(?:-[\p{L}\p{N}]+)+/gu)];
+      if (!matches.length) return;
+      const fragment = document.createDocumentFragment();
+      let offset = 0;
+      matches.forEach(match => {
+        fragment.append(node.data.slice(offset, match.index));
+        const word = document.createElement('span');
+        word.className = 'heading-word';
+        word.textContent = match[0];
+        fragment.append(word);
+        offset = match.index + match[0].length;
+      });
+      fragment.append(node.data.slice(offset));
+      node.replaceWith(fragment);
+    });
+  });
+  function fitTails() {
+    tails.forEach(({ heading, tail }) => {
+      tail.style.whiteSpace = 'nowrap';
+      if (tail.getBoundingClientRect().width > heading.clientWidth) tail.style.whiteSpace = 'normal';
+    });
+  }
+  fitTails();
+  document.fonts?.ready.then(fitTails);
+  window.addEventListener('resize', fitTails, { passive:true });
+})();
+
 /* ---------- NAV ---------- */
 const nav = document.getElementById('nav');
 const hero = document.querySelector('.hero') || document.querySelector('.page-hero:not(.page-hero--light)');

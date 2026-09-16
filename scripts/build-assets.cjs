@@ -1,6 +1,8 @@
 const { transform } = require('esbuild');
 const { readFile, writeFile, mkdir, readdir, cp, rm } = require('node:fs/promises');
 
+const { renderBlogHome } = require('../lib/blog');
+
 async function build() {
   await rm('public', { recursive: true, force: true });
   await mkdir('public/assets/css', { recursive: true });
@@ -11,11 +13,12 @@ async function build() {
     for (const file of (await readdir(folder)).filter(file => file.endsWith('.html'))) {
       // The contact handler serves these documents and redirects legacy query URLs.
       if ((folder === '.' && file === 'seus.html') || (folder === 'es' && file === 'sedes.html')) continue;
-      await cp(`${folder}/${file}`, `public/${folder}/${file}`);
+      const html = await readFile(`${folder}/${file}`, 'utf8');
+      await writeFile(`public/${folder}/${file}`, html.replace('<!-- BLOG_HOME -->', () => renderBlogHome(folder === 'es' ? 'es' : 'ca')));
     }
   }
   for (const file of ['robots.txt', 'sitemap.xml', 'llms.txt']) await cp(file, `public/${file}`);
-  for (const file of ['css/main.css', 'css/landing.css', 'css/lleida.css', 'css/guides.css', 'css/appointment.css', 'js/main.js', 'js/appointment.js']) {
+  for (const file of ['css/main.css', 'css/landing.css', 'css/lleida.css', 'css/guides.css', 'css/blog.css', 'js/blog.js', 'css/appointment.css', 'js/main.js', 'js/appointment.js']) {
     const source = await readFile(`assets/${file}`, 'utf8');
     const loader = file.endsWith('.css') ? 'css' : 'js';
     const result = await transform(source, { loader, minify: true, legalComments: 'none', target: 'es2020' });

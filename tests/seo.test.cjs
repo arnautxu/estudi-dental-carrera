@@ -24,7 +24,7 @@ for (const [key, page] of Object.entries(pages)) {
     for (const link of page.related) {
       const [target, anchor] = link.href.slice(1).split('#');
       const generated = [...Object.values(pages), ...Object.values(guides)].some(p => p.path === target)
-        || ['guies.html', 'es/guias.html'].includes(target);
+        || ['blog.html', 'es/blog.html'].includes(target);
       const localFile = path.join(__dirname, '..', target);
       assert.ok(generated || fs.existsSync(localFile), link.href);
       if (anchor) assert.ok(fs.readFileSync(localFile, 'utf8').includes(`id="${anchor}"`), link.href);

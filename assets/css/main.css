@@ -111,9 +111,17 @@ html { scroll-behavior:smooth; font-size:100%; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } }
 body { font-family:var(--font-body); font-weight:300; color:var(--ink); background:var(--off-white); -webkit-font-smoothing:antialiased; overflow-x:hidden; }
 
-/* Balanced line breaks on headings sitewide — the ragged edge of a
-   wrapped title should never look lopsided. */
-h1, h2, h3, h4 { text-wrap:balance; }
+/* Sitewide typography: balance headings, keep words intact (including
+   explicit hyphens), and avoid short last lines in running text. */
+h1, h2, h3, h4, h5, h6 {
+  text-wrap:balance;
+  -webkit-hyphens:none;
+  hyphens:none;
+  word-break:normal;
+  overflow-wrap:normal;
+}
+p { text-wrap:pretty; }
+.heading-word { white-space:nowrap; }
 img, svg { display:block; max-width:100%; }
 a { color:inherit; text-decoration:none; }
 ul { list-style:none; }
@@ -2342,6 +2350,7 @@ section[id], .team-card[id] { scroll-margin-top: 96px; }
   transform: translateY(18px);
   transition: opacity 0.42s var(--ease), transform 0.42s var(--ease), color var(--trans), border-color var(--trans);
 }
+.mobile-menu.open .mobile-menu__nav > .mobile-menu__link { opacity:1; transform:none; transition-delay:400ms; }
 .mobile-menu.open .mobile-menu__nav > .mobile-menu__link:nth-child(1) { opacity:1; transform:none; transition-delay:120ms; }
 .mobile-menu.open .mobile-menu__nav > .mobile-menu__link:nth-child(2) { opacity:1; transform:none; transition-delay:200ms; }
 .mobile-menu.open .mobile-menu__nav > .mobile-menu__link:nth-child(3) { opacity:1; transform:none; transition-delay:280ms; }
@@ -2621,25 +2630,22 @@ section[id], .team-card[id] { scroll-margin-top: 96px; }
   to { opacity:1; transform:none; }
 }
 
-/* Italic emphasis underline — draws a 1px architectural rule beneath
+/* Italic emphasis underline — reveals a 1px architectural rule beneath
    any <em> inside an h2 when its .reveal ancestor enters the viewport.
    Excludes .hero__title because the hero em already has its own
    entrance via the line stagger above. */
 h2 em {
-  position:relative; display:inline-block;
-}
-h2 em::after {
-  content:""; position:absolute;
-  left:0; right:0; bottom:-0.06em;
-  height:1px; background:currentColor;
-  opacity:0.32;
-  transform:scaleX(0); transform-origin:left;
-  transition:transform 1400ms var(--ease);
+  display:inline;
+  text-decoration-line:underline;
+  text-decoration-thickness:1px;
+  text-underline-offset:.12em;
+  text-decoration-color:transparent;
+  transition:text-decoration-color 1400ms var(--ease);
   transition-delay:420ms;
 }
-.reveal.visible h2 em::after,
-h2.reveal.visible em::after,
-h2.em-lit em::after { transform:scaleX(1); }
+.reveal.visible h2 em,
+h2.reveal.visible em,
+h2.em-lit em { text-decoration-color:color-mix(in srgb, currentColor 32%, transparent); }
 
 /* ============================================================
    REDUCED MOTION
@@ -2669,7 +2675,7 @@ h2.em-lit em::after { transform:scaleX(1); }
   /* Hero line stagger: skip the stagger, show lines immediately */
   .hero__title .hero__line { opacity: 1; transform: none; animation: none; }
   /* Italic underline: skip the draw, show the rule immediately */
-  h2 em::after { transform: scaleX(1); transition: none; }
+  h2 em { text-decoration-color:color-mix(in srgb, currentColor 32%, transparent); transition:none; }
   /* Service illustrations: skip stroke-draw + mark-pop + breathing */
   .sdc-illo svg { opacity: 1; animation: none; }
   .sdc-illo svg path:not([stroke-dasharray]),
@@ -3208,4 +3214,11 @@ body.cookie-modal-open { overflow: hidden; }
 @media (min-width:561px) {
   .team-card--compact .team-card__photo { position:relative; }
   .team-card--compact .team-card__photo img { position:absolute; inset:0; }
+}
+
+/* Keep the five-item navigation comfortable on compact tablets. */
+@media (min-width:769px) and (max-width:1000px) {
+  .nav__links, .nav__cta { display:none; }
+  .nav__burger { display:flex; }
+  .nav__lang { margin-left:auto; }
 }

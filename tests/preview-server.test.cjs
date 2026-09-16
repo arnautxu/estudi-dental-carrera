@@ -49,16 +49,16 @@ test('dynamic routes use their mapped key and preview headers without changing c
 
 test('guides and both indexes appear after server startup and reload without restart', async t => {
   const { put, request } = await fixture(t);
-  assert.equal((await request('/guies.html')).status, 404);
+  assert.equal((await request('/blog.html')).status, 404);
   await put('data/guides.js', "exports.guides = { ca: { path: 'guies/primera-visita.html' }, es: { path: 'es/guias/primera-visita.html' } };");
   await put('api/guide.js', "module.exports = (req, res) => res.status(200).send(req.query.key);");
-  for (const [url, key] of [['/guies.html', 'index-ca'], ['/es/guias.html', 'index-es'], ['/guies/primera-visita.html', 'ca'], ['/es/guias/primera-visita.html', 'es']]) {
+  for (const [url, key] of [['/blog.html', 'index-ca'], ['/es/blog.html', 'index-es'], ['/guies/primera-visita.html', 'ca'], ['/es/guias/primera-visita.html', 'es']]) {
     const res = await request(url);
     assert.equal(res.status, 200);
     assert.equal(res.body, key);
   }
   await put('api/guide.js', "module.exports = (req, res) => res.status(200).send('updated:' + req.query.key);");
-  assert.equal((await request('/guies.html')).body, 'updated:index-ca');
+  assert.equal((await request('/blog.html')).body, 'updated:index-ca');
 });
 
 test('public files, source contacts, safe encoded paths and source assets have correct MIME', async t => {
