@@ -47,7 +47,7 @@ function document(page, main, graph) {
   <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&amp;display=swap" rel="stylesheet" />
   <link rel="preload" href="/assets/fonts/N27-Regular.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="/assets/css/main.min.css?v=content-preview" />
+  <link rel="stylesheet" href="/assets/css/main.min.css?v=20260916-blog" />
   <link rel="stylesheet" href="/assets/css/guides.min.css?v=content-preview" />
   <link rel="stylesheet" href="/assets/css/blog.min.css?v=2" />
   ${page.type === 'index' ? `<link rel="preload" as="image" href="/${page.image}" />` : ''}
@@ -58,7 +58,7 @@ function document(page, main, graph) {
 ${renderHeader(page.lang, page.alternatePath, { active: 'blog', hero: true })}
 <main id="main">${main}</main>
 ${renderFooter(page.lang)}
-<script src="/assets/js/main.min.js?v=content-preview"></script>
+<script src="/assets/js/main.min.js?v=20260916-blog"></script>
 ${page.type === 'index' ? '<script src="/assets/js/blog.min.js?v=1" defer></script>' : ''}
 </body></html>`;
 }
@@ -109,7 +109,7 @@ function renderGuide(guide) {
     ${sections}${faqs}
     <section class="guide-next-step"><h2>${l.es ? 'De la información a tu caso' : 'De la informació al teu cas'}</h2><p>${l.es ? 'Conoce cómo valoramos este motivo de consulta en Carrera y qué opciones explicamos en la visita.' : 'Coneix com valorem aquest motiu de consulta a Carrera i quines opcions expliquem a la visita.'}</p><a class="guide-text-link" href="${guide.relatedService.href}" data-track="blog_service_click" data-track-label="${escapeHtml(guide.key)}">${escapeHtml(guide.relatedService.label)} ${arrow}</a></section>
     <p class="guide-appointment"><a class="guide-text-link" href="${l.contact}" data-track="appointment_cta_click" data-track-label="guide-contact">${l.es ? 'Pedir visita en Lleida' : 'Demana visita a Lleida'} ${arrow}</a></p>
-    <footer class="guide-editorial"><p>${escapeHtml(guide.editorial)}</p><details class="guide-references"><summary>${l.es ? 'Fuentes consultadas' : 'Fonts consultades'}</summary><ul>${guide.sources.map(source => `<li><a href="${escapeHtml(source.href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.label)}</a></li>`).join('')}</ul></details></footer>
+    <footer class="guide-editorial"><p>${escapeHtml(guide.editorial)}</p><details class="guide-references"><summary>${l.es ? 'Para saber más' : 'Per saber-ne més'}</summary><ul>${guide.sources.map(source => `<li><a href="${escapeHtml(source.href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.label)}</a></li>`).join('')}</ul></details></footer>
     <aside class="guide-more"><p>${l.es ? 'También puede interesarte' : 'També et pot interessar'}</p><ul>${guide.relatedGuides.map(item => `<li><a href="${item.href}">${escapeHtml(item.label)}</a></li>`).join('')}</ul></aside>
   </div></div></article>`;
   const url = `${ORIGIN}/${guide.path}`;

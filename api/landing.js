@@ -53,6 +53,33 @@ function jsonLd(page) {
   return JSON.stringify({ '@context': 'https://schema.org', '@graph': graph });
 }
 
+function renderComparison(comparison, index) {
+  if (!comparison?.rows?.length) return '';
+  const id = `comparison-${index}`;
+  return `<table class="landing-comparison" role="table">
+    <caption>${escapeHtml(comparison.caption)}</caption>
+    <thead role="rowgroup"><tr role="row">${comparison.columns.map((column, columnIndex) => `<th id="${id}-column-${columnIndex}" scope="col" role="columnheader">${escapeHtml(column)}</th>`).join('')}</tr></thead>
+    <tbody role="rowgroup">${comparison.rows.map((row, rowIndex) => `<tr role="row"><th id="${id}-row-${rowIndex}" scope="row" role="rowheader">${escapeHtml(row[0])}</th>${row.slice(1).map((value, columnIndex) => `<td role="cell" headers="${id}-column-${columnIndex + 1} ${id}-row-${rowIndex}"><span class="landing-comparison__label" aria-hidden="true">${escapeHtml(comparison.columns[columnIndex + 1])}</span>${escapeHtml(value)}</td>`).join('')}</tr>`).join('')}</tbody>
+  </table>`;
+}
+
+function renderClinicDetails(clinic, isEs, wa) {
+  if (!clinic) return '';
+  const days = isEs
+    ? { Monday: 'Lun', Tuesday: 'Mar', Wednesday: 'Mié', Thursday: 'Jue', Friday: 'Vie', Saturday: 'Sáb', Sunday: 'Dom' }
+    : { Monday: 'Dl', Tuesday: 'Dt', Wednesday: 'Dc', Thursday: 'Dj', Friday: 'Dv', Saturday: 'Ds', Sunday: 'Dg' };
+  const hours = clinic.openingHoursSpecification.map(slot => {
+    const week = [].concat(slot.dayOfWeek);
+    const label = week.length > 1 ? `${days[week[0]]}–${days[week[week.length - 1]]}` : days[week[0]];
+    return `${label}: ${slot.opens}–${slot.closes}`;
+  }).join(' · ');
+  return `<dl class="landing-clinic-facts">
+    <div><dt>${isEs ? 'Dirección' : 'Adreça'}</dt><dd>${escapeHtml(clinic.address.streetAddress)}<br>${escapeHtml(clinic.address.postalCode)} ${escapeHtml(clinic.address.addressLocality)}</dd></div>
+    <div><dt>${isEs ? 'Horario' : 'Horari'}</dt><dd>${escapeHtml(hours)}</dd></div>
+    <div><dt>${isEs ? 'Teléfono' : 'Telèfon'}</dt><dd><a href="tel:${escapeHtml(clinic.telephone)}">${escapeHtml(clinic.telephone.replace('+34', '').replace(/(\d{3})(\d{2})(\d{2})(\d{2})/, '$1 $2 $3 $4'))}</a></dd></div>
+  </dl><div class="landing-clinic-actions"><a href="${escapeHtml(clinic.hasMap)}" target="_blank" rel="noopener" data-track="directions_click" data-track-label="landing-practical">${isEs ? 'Cómo llegar' : 'Com arribar'}</a><a href="https://wa.me/${escapeHtml(wa)}" target="_blank" rel="noopener">${isEs ? 'Escribir por WhatsApp' : 'Escriu per WhatsApp'}</a></div>`;
+}
+
 function renderSection(section, index, { contact, trempContact, isEs }) {
   const paragraphs = (section.paragraphs || []).map(text => `<p>${text}</p>`).join('');
   const blocks = section.blocks?.length
@@ -71,7 +98,7 @@ function renderSection(section, index, { contact, trempContact, isEs }) {
           <span class="landing-section__index">0${index + 1}</span>
           <h2>${section.title}</h2>
         </div>
-        <div class="landing-prose">${paragraphs}${list}${blocks}${sectionCta}</div>
+        <div class="landing-prose">${paragraphs}${renderComparison(section.comparison, index)}${list}${blocks}${sectionCta}</div>
       </div>
     </section>`;
 }
@@ -79,7 +106,7 @@ function renderSection(section, index, { contact, trempContact, isEs }) {
 function render(page) {
   const isEs = page.lang === 'es';
   const isLleida = page.type === 'location' && page.location?.id === 'lleida';
-  const references = page.sources?.length ? `<details class="landing-references"><summary>${isEs ? 'Referencias' : 'Referències'}</summary><ul>${page.sources.map(source => `<li><a href="${escapeHtml(source.href)}" target="_blank" rel="noopener">${escapeHtml(source.label)}</a></li>`).join('')}</ul></details>` : '';
+  const references = page.sources?.length ? `<details class="landing-references"><summary>${isEs ? 'Para saber más' : 'Per saber-ne més'}</summary><ul>${page.sources.map(source => `<li><a href="${escapeHtml(source.href)}" target="_blank" rel="noopener">${escapeHtml(source.label)}</a></li>`).join('')}</ul></details>` : '';
   const home = isEs ? '/es/' : '/';
   const services = isEs ? '/es/servicios.html' : '/serveis.html';
   const team = isEs ? '/es/equipo.html' : '/equip.html';
@@ -102,6 +129,10 @@ function render(page) {
   const altUrl = `${ORIGIN}/${page.alternatePath}`;
   const phone = page.location && page.location.id === 'tremp' ? '+34650600172' : '+34973268826';
   const wa = page.location && page.location.id === 'tremp' ? '34650600172' : '34615983352';
+  const clinicDetails = page.type === 'location' ? renderClinicDetails(clinics[page.location.id], isEs, wa) : '';
+  const editorialTeam = page.professional
+    ? `<p class="landing-editorial__team">${isEs ? 'Profesional de referencia del área:' : 'Professional de referència de l’àrea:'} <a href="${escapeHtml(page.professional.href)}">${escapeHtml(page.professional.name)}</a>. ${escapeHtml(page.professional.role)}.</p>`
+    : '';
 
   return `<!DOCTYPE html>
 <html lang="${page.lang}">
@@ -151,8 +182,8 @@ function render(page) {
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&amp;display=optional" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&amp;display=optional" rel="stylesheet" /></noscript>
   <link rel="preload" href="/assets/fonts/N27-Regular.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="/assets/css/main.min.css?v=20260915-seo2" />
-  <link rel="stylesheet" href="/assets/css/landing.min.css?v=20260915-content5" />
+  <link rel="stylesheet" href="/assets/css/main.min.css?v=20260916-blog" />
+  <link rel="stylesheet" href="/assets/css/landing.min.css?v=20260916-onpage" />
   ${isLleida ? '<link rel="stylesheet" href="/assets/css/lleida.min.css?v=20260916-home1" />' : ''}
   <link rel="icon" type="image/svg+xml" href="/assets/img/logos/favicon.svg" />
   <script type="application/ld+json">${jsonLd(page)}</script>
@@ -179,16 +210,16 @@ ${renderHeader(page.lang, page.alternatePath, { active: isService ? 'services' :
         <div class="landing-prose"><span class="landing-kicker">${escapeHtml(page.introKicker)}</span><h2>${page.introTitle}</h2>${page.intro.map(text => `<p>${text}</p>`).join('')}${sectionNav}
           <div class="landing-trust">${page.trust.map(item => `<div class="landing-trust__item"><strong>${item.title}</strong><span>${item.text}</span></div>`).join('')}</div>
         </div>
-        <aside class="landing-aside"><h2>${isEs ? 'Información práctica' : 'Informació pràctica'}</h2><p>${page.aside}</p><div class="landing-aside__links"><a href="${team}">${isEs ? 'Conoce al equipo' : 'Coneix l’equip'}</a><a href="${locations}">${isEs ? 'Ver las dos clínicas' : 'Veure les dues clíniques'}</a><a href="${contact}">${isService ? (isEs ? 'Contactar con Lleida' : 'Contactar amb Lleida') : 'Contactar'}</a>${isService ? `<a href="${trempContact}">${isEs ? 'Contactar con Tremp' : 'Contactar amb Tremp'}</a>` : ''}</div></aside>
+        <aside class="landing-aside"><h2>${isEs ? 'Información práctica' : 'Informació pràctica'}</h2>${clinicDetails}<p>${page.aside}</p><div class="landing-aside__links"><a href="${team}">${isEs ? 'Conoce al equipo' : 'Coneix l’equip'}</a><a href="${locations}">${isEs ? 'Ver las dos clínicas' : 'Veure les dues clíniques'}</a><a href="${contact}">${isService ? (isEs ? 'Contactar con Lleida' : 'Contactar amb Lleida') : 'Contactar'}</a>${isService ? `<a href="${trempContact}">${isEs ? 'Contactar con Tremp' : 'Contactar amb Tremp'}</a>` : ''}</div></aside>
       </div>
     </section>
     ${page.sections.map((section, index) => renderSection(section, index, { contact, trempContact, isEs })).join('')}
-    <section class="landing-faq"><div class="container"><span class="landing-kicker">FAQ</span><h2>${isEs ? 'Preguntas frecuentes' : 'Preguntes freqüents'}</h2><div class="landing-faq__list">${page.faqs.map(faq => `<details><summary>${faq.q}</summary><p>${faq.a}</p></details>`).join('')}</div><div class="landing-editorial">${page.editorial} ${isEs ? `Última actualización editorial: ${page.updatedLabel || '25 de agosto de 2026'}.` : `Darrera actualització editorial: ${page.updatedLabel || '25 d’agost de 2026'}.`}</div>${references}</div></section>
+    <section class="landing-faq"><div class="container"><span class="landing-kicker">FAQ</span><h2>${isEs ? 'Preguntas frecuentes' : 'Preguntes freqüents'}</h2><div class="landing-faq__list">${page.faqs.map(faq => `<details><summary>${faq.q}</summary><p>${faq.a}</p></details>`).join('')}</div><div class="landing-editorial">${editorialTeam}<p>${page.editorial} ${isEs ? `Última actualización editorial: ${page.updatedLabel || '25 de agosto de 2026'}.` : `Darrera actualització editorial: ${page.updatedLabel || '25 d’agost de 2026'}.`}</p></div>${references}</div></section>
     <section class="landing-related"><div class="container"><span class="landing-kicker">${isEs ? 'Siguiente paso' : 'Següent pas'}</span><h2>${isEs ? 'Contenido relacionado' : 'Contingut relacionat'}</h2><div class="landing-related__grid">${page.related.map(item => `<a class="landing-related__card" href="${item.href}"><span>${item.type}</span><strong>${item.label}</strong><b>→</b></a>`).join('')}</div></div></section>
     <section class="landing-cta"><div class="container landing-cta__inner"><div><h2>${page.ctaTitle}</h2><p>${page.ctaText}</p></div><div class="landing-cta__actions"><a href="${contact}" class="btn btn--primary btn--lg" data-track="appointment_cta_click" data-track-label="landing-footer">${isService ? primaryCtaLabel : (isEs ? 'Pedir visita' : 'Demanar visita')}</a>${alternateClinicLink}</div></div></section>
   </main>`}
 ${renderFooter(page.lang)}
-  <script src="/assets/js/main.min.js?v=20260915-growth"></script>
+  <script src="/assets/js/main.min.js?v=20260916-blog"></script>
 </body>
 </html>`;
 }

@@ -391,7 +391,7 @@ pages['ca-ortho'] = servicePage('ca', {
   path: 'ortodoncia.html', alternatePath: 'es/ortodoncia.html',
   title: 'Ortodòncia invisible a Lleida i Tremp | Carrera',
   description: 'Ortodòncia invisible amb alineadors i tractaments amb brackets a Lleida i Tremp. Estudi de mossegada, salut periodontal i retenció segons cada cas.',
-  dateModified: '2026-09-15', updatedLabel: '15 de setembre de 2026',
+  dateModified: '2026-09-16', updatedLabel: '16 de setembre de 2026',
   eyebrow: 'Ortodòncia en infants, adolescents i adults', h1: 'Ortodòncia a Lleida i Tremp: alineadors i brackets',
   lead: 'L’ortodòncia pot millorar posició, funció i higiene, però necessita un diagnòstic complet, expectatives realistes i una fase de retenció planificada des del principi.',
   image: 'assets/img/serveis/ortodoncia-model.webp', imageWidth: 1280, imageHeight: 1600, imageAlt: 'Model de dents amb bràquets en un prestatge de la clínica',
@@ -413,16 +413,19 @@ pages['ca-ortho'] = servicePage('ca', {
       title: 'Ortodòncia invisible a Lleida: com triem el sistema',
       id: 'ortodoncia-invisible', jumpLabel: 'Alineadors o brackets',
       paragraphs: [
-        'Els alineadors transparents es coneixen com a ortodòncia invisible. Els brackets són una altra opció. Triem el sistema segons els moviments que necessita la teva boca, la higiene i les hores d’ús que exigeix. Cap opció és millor per a tots els casos.',
-        'Els alineadors s’han de portar les hores indicades i netejar bé. Si es fan servir menys temps del necessari, les dents poden no seguir el pla. Amb brackets, també cal netejar amb cura al voltant de l’aparell.',
-        'En adults amb malaltia de les genives, restauracions grans o dents absents pot ser possible fer ortodòncia. Cal un control específic i coordinar el pla amb altres tractaments. L’objectiu pot ser facilitar la neteja o preparar l’espai per a una pròtesi.',
+        'Els alineadors transparents es coneixen com a ortodòncia invisible. Per triar entre alineadors i brackets, estudiem els moviments necessaris i com encaixa cada aparell en el teu dia a dia. Cap sistema és millor per a tothom.',
+        'Si hi ha malaltia de les genives, restauracions grans o dents absents, cal valorar un seguiment específic i coordinar altres tractaments. L’objectiu pot ser facilitar la neteja o preparar l’espai per a una pròtesi.',
       ],
-      items: [
-        'Quins moviments calen i què pot aconseguir cada opció.',
-        'Quin ús diari i quina higiene requereix l’aparell.',
-        'Si cal tractar abans les genives o coordinar altres àrees.',
-        'Com es mantindrà la posició en acabar.',
-      ],
+      comparison: {
+        caption: 'Alineadors i brackets: què cal comparar abans de decidir',
+        columns: ['Aspecte', 'Alineadors transparents', 'Brackets'],
+        rows: [
+          ['Indicació', 'L’estudi confirma si poden fer els moviments previstos.', 'L’estudi defineix els moviments i els límits del tractament.'],
+          ['Ús diari', 'Cal complir les hores d’ús indicades.', 'Queden fixats a les dents durant el tractament.'],
+          ['Higiene', 'Cal netejar les dents, els suports i els alineadors.', 'Cal netejar amb cura al voltant dels brackets i entre les dents.'],
+          ['Controls', 'Revisem l’adaptació i la resposta de dents i genives.', 'Revisem els ajustos i la resposta de dents i genives.'],
+        ],
+      },
     },
     {
       title: 'Què revisem durant el tractament',
@@ -464,7 +467,7 @@ pages['es-ortho'] = servicePage('es', {
   path: 'es/ortodoncia.html', alternatePath: 'ortodoncia.html',
   title: 'Ortodoncia invisible en Lleida y Tremp | Carrera',
   description: 'Ortodoncia invisible con alineadores y tratamientos con brackets en Lleida y Tremp. Estudio de mordida, salud periodontal y retención según cada caso.',
-  dateModified: '2026-09-15', updatedLabel: '15 de septiembre de 2026',
+  dateModified: '2026-09-16', updatedLabel: '16 de septiembre de 2026',
   eyebrow: 'Ortodoncia en niños, adolescentes y adultos', h1: 'Ortodoncia en Lleida y Tremp: alineadores y brackets',
   lead: 'La ortodoncia puede mejorar posición, función e higiene, pero necesita un diagnóstico completo, expectativas realistas y una fase de retención planificada desde el principio.',
   image: 'assets/img/serveis/ortodoncia-model.webp', imageWidth: 1280, imageHeight: 1600, imageAlt: 'Modelo de dientes con brackets en un estante de la clínica',
@@ -486,16 +489,19 @@ pages['es-ortho'] = servicePage('es', {
       title: 'Ortodoncia invisible en Lleida: cómo elegimos el sistema',
       id: 'ortodoncia-invisible', jumpLabel: 'Alineadores o brackets',
       paragraphs: [
-        'Los alineadores transparentes suelen conocerse como ortodoncia invisible. Los brackets son otra opción. Elegimos el sistema según los movimientos que necesita tu boca, tu higiene y las horas de uso que exige. Ninguna opción es mejor para todos los casos.',
-        'Los alineadores deben llevarse las horas indicadas y limpiarse bien. Si se usan menos tiempo del necesario, los dientes pueden no seguir el plan. Con brackets, también hay que limpiar con cuidado alrededor del aparato.',
-        'En adultos con enfermedad de las encías, restauraciones grandes o dientes ausentes puede ser posible hacer ortodoncia. Hace falta un control específico y coordinar el plan con otros tratamientos. El objetivo puede ser facilitar la limpieza o preparar el espacio para una prótesis.',
+        'Los alineadores transparentes suelen conocerse como ortodoncia invisible. Para elegir entre alineadores y brackets, estudiamos los movimientos necesarios y cómo encaja cada aparato en tu día a día. Ningún sistema es mejor para todo el mundo.',
+        'Si hay enfermedad de las encías, restauraciones grandes o dientes ausentes, hay que valorar un seguimiento específico y coordinar otros tratamientos. El objetivo puede ser facilitar la limpieza o preparar el espacio para una prótesis.',
       ],
-      items: [
-        'Qué movimientos hacen falta y qué puede conseguir cada opción.',
-        'Qué uso diario y qué higiene requiere el aparato.',
-        'Si hay que tratar antes las encías o coordinar otras áreas.',
-        'Cómo se mantendrá la posición al terminar.',
-      ],
+      comparison: {
+        caption: 'Alineadores y brackets: qué comparar antes de decidir',
+        columns: ['Aspecto', 'Alineadores transparentes', 'Brackets'],
+        rows: [
+          ['Indicación', 'El estudio confirma si pueden realizar los movimientos previstos.', 'El estudio define los movimientos y los límites del tratamiento.'],
+          ['Uso diario', 'Hay que cumplir las horas de uso indicadas.', 'Quedan fijados a los dientes durante el tratamiento.'],
+          ['Higiene', 'Hay que limpiar los dientes, los apoyos y los alineadores.', 'Hay que limpiar con cuidado alrededor de los brackets y entre los dientes.'],
+          ['Controles', 'Revisamos la adaptación y la respuesta de dientes y encías.', 'Revisamos los ajustes y la respuesta de dientes y encías.'],
+        ],
+      },
     },
     {
       title: 'Qué revisamos durante el tratamiento',
@@ -680,7 +686,7 @@ pages['es-perio'] = servicePage('es', {
 });
 
 pages['ca-aesthetic'] = servicePage('ca', {
-  dateModified: '2026-09-15', updatedLabel: '15 de setembre de 2026',
+  dateModified: '2026-09-16', updatedLabel: '16 de setembre de 2026',
   path: 'estetica-dental.html', alternatePath: 'es/estetica-dental.html',
   title: 'Estètica dental a Lleida: carilles i blanquejament | Carrera',
   description: 'Estètica dental a Lleida i Tremp: blanquejament, carilles i composite. Revisem dents, genives i mossegada per comparar opcions conservadores.',
@@ -708,17 +714,18 @@ pages['ca-aesthetic'] = servicePage('ca', {
       id: 'carilles', jumpLabel: 'Carilles i composite',
       ctaText: 'Valorem la forma i les vores que voldries canviar.',
       paragraphs: [
-        'Una carilla cobreix la cara visible de la dent. Pot ser de ceràmica o de composite: «carilla» descriu la restauració, i «composite» és un dels materials possibles. Reparar només una vora amb composite no és el mateix que recobrir la cara de la dent. Comparem quanta superfície necessita realment un canvi.',
-        'El composite és un material que permet reparar una vora, tancar alguns espais o canviar una forma. Sovint requereix preparar poca superfície de les dents. Es pot reparar, tot i que també es desgasta, es pot tenyir i pot necessitar poliment.',
-        'Les facetes de ceràmica, també anomenades carilles, poden mantenir bé el color i la forma en casos seleccionats. Solen implicar una decisió menys reversible. La superfície que cal preparar depèn de la posició, el color inicial i el canvi que busquem.',
-        'Abans de restaurar, valorem si l’ortodòncia, l’emblanquiment o un petit canvi de contorn conservarien més dent. A vegades convé combinar diverses mesures per etapes. Si proposem una prova estètica, serveix per parlar de proporcions i de com es nota en parlar.',
+        'Una carilla cobreix la cara visible de la dent i pot ser de composite o de ceràmica. Reparar només una vora amb composite no és el mateix que recobrir-la. Comparem quanta superfície necessita un canvi, la mossegada i l’estat de les genives.',
+        'Abans de restaurar, valorem si l’ortodòncia, l’emblanquiment o un petit canvi de contorn conservarien més dent. Si cal retirar esmalt, aquest pas no és reversible. Una prova estètica pot ajudar a parlar de proporcions i de com es nota en parlar.',
       ],
-      items: [
-        'Què vols canviar i què prefereixes conservar.',
-        'Quanta dent cal preparar amb cada opció.',
-        'Com hi influeixen la mossegada i l’estat de les genives.',
-        'Quines cures, reparacions i controls pot necessitar.',
-      ],
+      comparison: {
+        caption: 'Composite i ceràmica: preparació, reparació i manteniment',
+        columns: ['Aspecte', 'Composite', 'Carilles de ceràmica'],
+        rows: [
+          ['Preparació de la dent', 'Sovint requereix preparar poca superfície.', 'Depèn de la posició, el color inicial i el canvi buscat.'],
+          ['Reparació', 'Es pot reparar si es desgasta o es danya.', 'Cal valorar si es pot reparar o s’ha de substituir la carilla.'],
+          ['Manteniment', 'Es pot tenyir, desgastar i necessitar poliment.', 'Pot mantenir bé el color i la forma, però també necessita controls.'],
+        ],
+      },
     },
     {
       title: 'Quant dura i quin manteniment necessita',
@@ -745,7 +752,7 @@ pages['ca-aesthetic'] = servicePage('ca', {
 });
 
 pages['es-aesthetic'] = servicePage('es', {
-  dateModified: '2026-09-15', updatedLabel: '15 de septiembre de 2026',
+  dateModified: '2026-09-16', updatedLabel: '16 de septiembre de 2026',
   path: 'es/estetica-dental.html', alternatePath: 'estetica-dental.html',
   title: 'Estética dental en Lleida: carillas y blanqueamiento | Carrera',
   description: 'Estética dental en Lleida y Tremp: blanqueamiento, carillas y composite. Revisamos dientes, encías y mordida para comparar opciones conservadoras.',
@@ -773,17 +780,18 @@ pages['es-aesthetic'] = servicePage('es', {
       id: 'carillas', jumpLabel: 'Carillas y composite',
       ctaText: 'Valoramos la forma y los bordes que te gustaría cambiar.',
       paragraphs: [
-        'Una carilla cubre la cara visible del diente. Puede ser de cerámica o de composite: «carilla» describe la restauración, y «composite» es uno de los materiales posibles. Reparar solo un borde con composite no es lo mismo que cubrir la cara del diente. Comparamos cuánta superficie necesita realmente un cambio.',
-        'El composite es un material que permite reparar un borde, cerrar algunos espacios o cambiar una forma. A menudo requiere preparar poca superficie del diente. Se puede reparar, aunque también se desgasta, puede teñirse y puede necesitar pulido.',
-        'Las carillas de cerámica pueden mantener bien el color y la forma en casos seleccionados. Suelen implicar una decisión menos reversible. La superficie que hay que preparar depende de la posición, el color inicial y el cambio que buscamos.',
-        'Antes de restaurar, valoramos si la ortodoncia, el blanqueamiento o un pequeño cambio de contorno conservarían más diente. A veces conviene combinar varias medidas por etapas. Si proponemos una prueba estética, sirve para hablar de proporciones y de cómo se siente al hablar.',
+        'Una carilla cubre la cara visible del diente y puede ser de composite o de cerámica. Reparar solo un borde con composite no es lo mismo que cubrirla. Comparamos cuánta superficie necesita un cambio, la mordida y el estado de las encías.',
+        'Antes de restaurar, valoramos si la ortodoncia, el blanqueamiento o un pequeño cambio de contorno conservarían más diente. Si hay que retirar esmalte, ese paso no es reversible. Una prueba estética puede ayudar a hablar de proporciones y de cómo se siente al hablar.',
       ],
-      items: [
-        'Qué quieres cambiar y qué prefieres conservar.',
-        'Cuánto diente hay que preparar con cada opción.',
-        'Cómo influyen la mordida y el estado de las encías.',
-        'Qué cuidados, reparaciones y controles puede necesitar.',
-      ],
+      comparison: {
+        caption: 'Composite y cerámica: preparación, reparación y mantenimiento',
+        columns: ['Aspecto', 'Composite', 'Carillas de cerámica'],
+        rows: [
+          ['Preparación del diente', 'A menudo requiere preparar poca superficie.', 'Depende de la posición, el color inicial y el cambio buscado.'],
+          ['Reparación', 'Se puede reparar si se desgasta o se daña.', 'Hay que valorar si puede repararse o debe sustituirse la carilla.'],
+          ['Mantenimiento', 'Puede teñirse, desgastarse y necesitar pulido.', 'Puede mantener bien el color y la forma, pero también necesita controles.'],
+        ],
+      },
     },
     {
       title: 'Cuánto dura y qué mantenimiento necesita',
@@ -1012,7 +1020,7 @@ pages['es-lleida'] = locationPage('es', {
 });
 
 pages['ca-tremp'] = locationPage('ca', {
-  dateModified: '2026-09-15', updatedLabel: '15 de setembre de 2026',
+  dateModified: '2026-09-16', updatedLabel: '16 de setembre de 2026',
   path: 'dentista-tremp.html', alternatePath: 'es/dentista-tremp.html', city: 'Tremp',
   title: 'Dentista a Tremp | Estudi Dental Carrera',
   description: 'Clínica dental a Tremp per al Pallars: prevenció, odontologia conservadora, implants, ortodòncia, genives, ATM i seguiment proper.',
@@ -1024,12 +1032,12 @@ pages['ca-tremp'] = locationPage('ca', {
     'La clínica és al carrer Montllobar, 22 baixos, 25620 Tremp, Lleida. Atenem persones de Tremp i del Pallars que volen una revisió o consultar un problema dental. Tenir la clínica a prop facilita els controls. A cada visita expliquem què veiem, què podem fer i què cal estudiar millor.',
     'La prioritat és conservar les dents i la seva funció amb el tractament que calgui. Si el cas necessita més d’un professional, coordinem les visites entre les dues clíniques. T’expliquem abans qualsevol desplaçament a Lleida i per què el proposem.',
   ],
-  aside: 'Adreça: carrer Montllobar, 22 baixos, 25620 Tremp. Telèfon i WhatsApp: 650 60 01 72. Confirma horaris, accessibilitat o necessitats concretes amb recepció.',
+  aside: 'Demana cita prèvia. Recepció confirmarà la disponibilitat i les necessitats d’accés abans de la visita.',
   sections: [
     {
       title: 'Què podem valorar a la clínica de Tremp',
       paragraphs: [
-        'Fem revisions, prevenció, diagnòstic de càries i dolor, restauracions i pròtesis. També valorem genives, endodòncia, implants, ortodòncia i estètica dental. Si tens bruxisme o molèsties de mandíbula, comencem per estudiar-ne la causa.',
+        'Fem revisions, prevenció, diagnòstic de càries i dolor, restauracions i pròtesis. També valorem <a href="/periodoncia-endodoncia.html#periodoncia">la salut de les genives</a>, <a href="/periodoncia-endodoncia.html#endodoncia">l’endodòncia per conservar dents</a>, <a href="/implants-dentals.html">els implants dentals</a>, l’ortodòncia i l’estètica dental. Si tens bruxisme o molèsties de mandíbula, comencem per estudiar-ne la causa.',
         'No cal que sàpigues quin tractament necessites per demanar una visita. Pots explicar què notes o què vols revisar. L’exploració i les proves que estiguin indicades ens ajudaran a proposar el pas següent.',
       ],
     },
@@ -1044,8 +1052,8 @@ pages['ca-tremp'] = locationPage('ca', {
     {
       title: 'Quines visites es fan a Tremp i quan anar a Lleida',
       paragraphs: [
-        'Organitzem els controls segons cada fase del tractament i indiquem quins es poden fer a Tremp. Si una prova, un equip o un professional requereixen una visita a Lleida, t’ho expliquem abans i acordem com coordinar-la.',
-        'La clínica és al carrer Montllobar, 22 baixos, 25620 Tremp, Lleida. Si vens d’una altra població del Pallars, confirma la cita abans de desplaçar-te. Recepció pot resoldre dubtes d’accés i de preparació de la visita.',
+        'A la primera valoració definim les fases del tractament i quines visites es poden fer a Tremp. La tècnica i el professional adequats depenen del teu cas. Si una prova, un equip o un professional requereixen una visita a Lleida, t’expliquem el motiu abans de programar-la.',
+        'Abans de cada desplaçament, confirma amb recepció la clínica, l’horari i què has de portar. Si vens d’una altra població del Pallars, comenta-ho quan demanis cita per coordinar les visites necessàries.',
       ],
       items: [
         'Consulta a quina clínica correspon cada cita.',
@@ -1083,7 +1091,7 @@ pages['ca-tremp'] = locationPage('ca', {
 });
 
 pages['es-tremp'] = locationPage('es', {
-  dateModified: '2026-09-15', updatedLabel: '15 de septiembre de 2026',
+  dateModified: '2026-09-16', updatedLabel: '16 de septiembre de 2026',
   path: 'es/dentista-tremp.html', alternatePath: 'dentista-tremp.html', city: 'Tremp',
   title: 'Dentista en Tremp | Estudi Dental Carrera',
   description: 'Clínica dental en Tremp para el Pallars: prevención, odontología conservadora, implantes, ortodoncia, encías, ATM y seguimiento cercano.',
@@ -1095,12 +1103,12 @@ pages['es-tremp'] = locationPage('es', {
     'La clínica está en carrer Montllobar, 22, bajos, 25620 Tremp, Lleida. Atendemos a personas de Tremp y del Pallars que quieren una revisión o consultar un problema dental. Tener la clínica cerca facilita los controles. En cada visita explicamos qué vemos, qué podemos hacer y qué falta estudiar.',
     'La prioridad es conservar los dientes y su función con el tratamiento necesario. Si el caso requiere más de un profesional, coordinamos las visitas entre las dos clínicas. Te explicamos antes cualquier desplazamiento a Lleida y por qué lo proponemos.',
   ],
-  aside: 'Dirección: carrer Montllobar, 22, bajos, 25620 Tremp. Teléfono y WhatsApp: 650 60 01 72. Confirma horarios, accesibilidad o necesidades concretas con recepción.',
+  aside: 'Pide cita previa. Recepción confirmará la disponibilidad y las necesidades de acceso antes de la visita.',
   sections: [
     {
       title: 'Qué podemos valorar en la clínica de Tremp',
       paragraphs: [
-        'Hacemos revisiones, prevención, diagnóstico de caries y dolor, restauraciones y prótesis. También valoramos encías, endodoncia, implantes, ortodoncia y estética dental. Si tienes bruxismo o molestias de mandíbula, empezamos por estudiar la causa.',
+        'Hacemos revisiones, prevención, diagnóstico de caries y dolor, restauraciones y prótesis. También valoramos <a href="/es/periodoncia-endodoncia.html#periodoncia">la salud de las encías</a>, <a href="/es/periodoncia-endodoncia.html#endodoncia">la endodoncia para conservar dientes</a>, <a href="/es/implantes-dentales.html">los implantes dentales</a>, la ortodoncia y la estética dental. Si tienes bruxismo o molestias de mandíbula, empezamos por estudiar la causa.',
         'No hace falta que sepas qué tratamiento necesitas para pedir una visita. Puedes explicar qué notas o qué quieres revisar. La exploración y las pruebas que estén indicadas nos ayudarán a proponer el siguiente paso.',
       ],
     },
@@ -1115,8 +1123,8 @@ pages['es-tremp'] = locationPage('es', {
     {
       title: 'Qué visitas se hacen en Tremp y cuándo ir a Lleida',
       paragraphs: [
-        'Organizamos los controles según cada fase del tratamiento e indicamos cuáles se pueden hacer en Tremp. Si una prueba, un equipo o un profesional requieren una visita a Lleida, te lo explicamos antes y acordamos cómo coordinarla.',
-        'La clínica está en carrer Montllobar, 22, bajos, 25620 Tremp, Lleida. Si vienes de otra población del Pallars, confirma la cita antes de desplazarte. Recepción puede resolver dudas de acceso y preparación de la visita.',
+        'En la primera valoración definimos las fases del tratamiento y qué visitas pueden hacerse en Tremp. La técnica y el profesional adecuados dependen de tu caso. Si una prueba, un equipo o un profesional requieren una visita a Lleida, te explicamos el motivo antes de programarla.',
+        'Antes de cada desplazamiento, confirma con recepción la clínica, el horario y qué debes traer. Si vienes de otra población del Pallars, coméntalo al pedir cita para coordinar las visitas necesarias.',
       ],
       items: [
         'Consulta qué clínica corresponde a cada cita.',
