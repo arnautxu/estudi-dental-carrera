@@ -1,4 +1,4 @@
-// Editorial draft; clinical review is pending. Visible only in preview environments.
+// Published in both languages. Sources do not imply review or authorship by clinic staff.
 const sources = [
   { href: 'https://www.nidcr.nih.gov/health-info/bruxism', label: 'NIDCR: bruxisme / bruxismo' },
   { href: 'https://www.nidcr.nih.gov/health-info/tmd', label: 'NIDCR: trastorns temporomandibulars / trastornos temporomandibulares' },

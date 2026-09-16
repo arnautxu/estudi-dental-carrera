@@ -55,10 +55,10 @@ Els clics del blog cap a un tractament porten `blog_service_click`; llegir un ar
 
 **Dolor de mandíbula en despertar: és bruxisme?** / **Dolor de mandíbula al despertar: ¿es bruxismo?**
 
-- Fitxer: `data/guides-jaw-morning.js`; dues versions, estat `review`.
+- Fitxer: `data/guides-jaw-morning.js`; dues versions, estat `published` per petició de publicació del responsable del web.
 - Fotografia: `assets/img/blog/atencio-mandibula-carme.webp`, optimitzada a partir de `CARME/WORK/DSCF0278.jpg` del disc de fotos de Carrera. Original conservat sense canvis.
 - Intenció: dubte sobre un símptoma al matí. Consulta principal provisional: «dolor mandíbula al despertar»; català: «dolor mandíbula en despertar». Sense volum ni dificultat validats.
 - Diferenciació: la pàgina ATM explica la valoració del servei; la guia de fèrula tracta l'aparell; aquesta peça ajuda a descriure el símptoma i orientar la consulta.
 - Fonts consultades: NIDCR (bruxisme i TMD) i NHS (TMD, bruxisme, dolor dental i apnea). Fonts enllaçades dins de l'article. Contrast de causes/diagnòstic amb NIDCR; autocura i senyals d'alarma amb NHS. No s'atribueix autoria ni revisió al personal de Carrera.
 - Revisió clínica: **pendent**. Validar especialment l'autocura, la prioritat dels senyals d'alarma i la formulació sobre fèrules abans d'aprovar la publicació.
-- No s'ha afegit al sitemap ni als tres destacats de la home. La preview del Blog el mostra com a setè tema, en primera posició.
+- Publicat al Blog en català i castellà, en primera posició, i inclòs al sitemap amb alternances recíproques. No forma part dels tres destacats de la home. La publicació no acredita una revisió clínica ni atribueix autoria al personal de Carrera.

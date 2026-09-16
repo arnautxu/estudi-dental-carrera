@@ -21,7 +21,7 @@ for (const lang of ['ca', 'es']) {
     assert.ok(fs.readFileSync('sitemap.xml','utf8').includes(url + '</loc>'));
     const graph = JSON.parse(html.match(/<script type="application\/ld\+json">(.*?)<\/script>/s)[1])['@graph'];
     assert.equal(graph[0].mainEntity.itemListElement.length, entries(lang).length);
-    assert.equal((html.match(/data-blog-category=/g) || []).length, 6);
+    assert.equal((html.match(/data-blog-category=/g) || []).length, 7);
     for (const category of Object.keys(categories)) assert.ok(html.includes(`data-category="${category}"`));
     assert.equal((renderBlogHome(lang).match(/data-blog-category=/g) || []).length, 3);
   });
@@ -57,10 +57,30 @@ test('all existing guides belong to one category and have a reciprocal translati
   }
 });
 
-test('clinical review articles are available only in preview, never in production or its sitemap', () => {
+test('the jaw pain article is publicly accessible and discoverable in both languages', () => {
+  const previous = process.env.VERCEL_ENV;
+  try {
+    process.env.VERCEL_ENV = 'production';
+    for (const key of ['dolor-mandibula-despertar', 'dolor-mandibula-despertar-es']) {
+      const guide = guides[key];
+      const response = render(key);
+      assert.equal(response.status, 200);
+      assert.ok(render('index-' + guide.lang).html.includes('/' + guide.path));
+      assert.ok(fs.readFileSync('sitemap.xml', 'utf8').includes('<loc>https://www.estudidentalcarrera.com/' + guide.path + '</loc>'));
+      assert.ok(response.html.includes('atencio-mandibula-carme.webp'));
+      assert.doesNotMatch(response.html, /name="robots" content="noindex/);
+    }
+  } finally {
+    if (previous === undefined) delete process.env.VERCEL_ENV; else process.env.VERCEL_ENV = previous;
+  }
+});
+
+test('unpublished review articles remain available only in preview', () => {
   const oldVercel = process.env.VERCEL_ENV;
   const oldLocal = process.env.CONTENT_PREVIEW;
-  const pending = articles.find(item => item.status === 'review');
+  const pending = articles.find(item => item.ca === 'dolor-mandibula-despertar');
+  const oldStatus = pending.status;
+  pending.status = 'review';
   try {
     process.env.CONTENT_PREVIEW = '1';
     process.env.VERCEL_ENV = 'production';
@@ -68,7 +88,6 @@ test('clinical review articles are available only in preview, never in productio
       assert.equal(render(pending[lang]).status, 404);
       assert.ok(!render('index-' + lang).html.includes('/' + guides[pending[lang]].path));
       assert.ok(!renderBlogHome(lang).includes('/' + guides[pending[lang]].path));
-      assert.ok(!fs.readFileSync('sitemap.xml', 'utf8').includes(guides[pending[lang]].path));
     }
     process.env.VERCEL_ENV = 'preview';
     for (const lang of ['ca', 'es']) {
@@ -95,6 +114,7 @@ test('clinical review articles are available only in preview, never in productio
       assert.ok(fs.existsSync(guide.image));
     }
   } finally {
+    pending.status = oldStatus;
     if (oldVercel === undefined) delete process.env.VERCEL_ENV; else process.env.VERCEL_ENV = oldVercel;
     if (oldLocal === undefined) delete process.env.CONTENT_PREVIEW; else process.env.CONTENT_PREVIEW = oldLocal;
   }

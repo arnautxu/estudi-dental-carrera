@@ -7,7 +7,7 @@ const categories = {
   estetica: { ca: 'Estètica dental', es: 'Estética dental' },
 };
 const articles = [
-  { ca: 'dolor-mandibula-despertar', es: 'dolor-mandibula-despertar-es', category: 'atm', status: 'review' },
+  { ca: 'dolor-mandibula-despertar', es: 'dolor-mandibula-despertar-es', category: 'atm', status: 'published' },
   { ca: 'ferula-descarrega', es: 'ferula-descarga', category: 'atm', status: 'published', featured: true },
   { ca: 'sagnat-genives', es: 'sangrado-encias', category: 'salut', status: 'published', featured: true },
   { ca: 'implant-o-pont', es: 'implante-o-puente', category: 'tractaments', status: 'published', featured: true },
