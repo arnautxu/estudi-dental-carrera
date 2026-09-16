@@ -30,7 +30,32 @@ function document(page, main, graph) {
   const l = labels(page.lang);
   return `<!DOCTYPE html>
 <html lang="${page.lang}"><head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <!-- Google tag (gtag.js) — same consent defaults as the clinic and contact pages. -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.GA4_ID = 'G-23SQ9SDX52';
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+    try {
+      var savedConsent = JSON.parse(localStorage.getItem('edc_consent_v1'));
+      if (savedConsent && savedConsent.analytics === true) {
+        gtag('consent', 'update', { analytics_storage: 'granted' });
+      }
+    } catch (_) {}
+    gtag('js', new Date());
+    gtag('config', window.GA4_ID, {
+      allow_google_signals: false,
+      allow_ad_personalization_signals: false
+    });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-23SQ9SDX52"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>${escapeHtml(page.title)}</title><meta name="description" content="${escapeHtml(page.description)}" />
   <link rel="canonical" href="${url}" />
   <link rel="alternate" hreflang="ca" href="${l.es ? alt : url}" />
