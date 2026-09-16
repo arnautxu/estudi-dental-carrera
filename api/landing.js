@@ -1,6 +1,7 @@
 const { pages } = require('../data/landing-pages');
 const clinics = require('../data/clinics');
 const { renderHeader, renderFooter } = require('../lib/site-shell');
+const { renderLleida } = require('../lib/lleida-page');
 
 const ORIGIN = 'https://www.estudidentalcarrera.com';
 
@@ -77,6 +78,7 @@ function renderSection(section, index, { contact, trempContact, isEs }) {
 
 function render(page) {
   const isEs = page.lang === 'es';
+  const isLleida = page.type === 'location' && page.location?.id === 'lleida';
   const references = page.sources?.length ? `<details class="landing-references"><summary>${isEs ? 'Referencias' : 'Referències'}</summary><ul>${page.sources.map(source => `<li><a href="${escapeHtml(source.href)}" target="_blank" rel="noopener">${escapeHtml(source.label)}</a></li>`).join('')}</ul></details>` : '';
   const home = isEs ? '/es/' : '/';
   const services = isEs ? '/es/servicios.html' : '/serveis.html';
@@ -151,13 +153,14 @@ function render(page) {
   <link rel="preload" href="/assets/fonts/N27-Regular.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="/assets/css/main.min.css?v=20260915-seo2" />
   <link rel="stylesheet" href="/assets/css/landing.min.css?v=20260915-content5" />
+  ${isLleida ? '<link rel="stylesheet" href="/assets/css/lleida.min.css?v=20260916-home1" />' : ''}
   <link rel="icon" type="image/svg+xml" href="/assets/img/logos/favicon.svg" />
   <script type="application/ld+json">${jsonLd(page)}</script>
 </head>
 <body data-phone="${phone}" data-wa="${wa}" data-clinic="${clinicId}">
   <a href="#main" class="skip-link">${isEs ? 'Saltar al contenido' : 'Salta al contingut'}</a>
 ${renderHeader(page.lang, page.alternatePath, { active: isService ? 'services' : 'locations', hero: true })}
-  <main id="main" class="landing-page">
+  ${isLleida ? renderLleida(page, { contact, phone, wa, references, renderSection }) : `<main id="main" class="landing-page">
     <section class="landing-hero">
       <img class="landing-hero__image" src="/${page.image}" width="${page.imageWidth}" height="${page.imageHeight}" alt="${escapeHtml(page.imageAlt)}" fetchpriority="high" />
       <div class="landing-hero__shade"></div>
@@ -183,7 +186,7 @@ ${renderHeader(page.lang, page.alternatePath, { active: isService ? 'services' :
     <section class="landing-faq"><div class="container"><span class="landing-kicker">FAQ</span><h2>${isEs ? 'Preguntas frecuentes' : 'Preguntes freqüents'}</h2><div class="landing-faq__list">${page.faqs.map(faq => `<details><summary>${faq.q}</summary><p>${faq.a}</p></details>`).join('')}</div><div class="landing-editorial">${page.editorial} ${isEs ? `Última actualización editorial: ${page.updatedLabel || '25 de agosto de 2026'}.` : `Darrera actualització editorial: ${page.updatedLabel || '25 d’agost de 2026'}.`}</div>${references}</div></section>
     <section class="landing-related"><div class="container"><span class="landing-kicker">${isEs ? 'Siguiente paso' : 'Següent pas'}</span><h2>${isEs ? 'Contenido relacionado' : 'Contingut relacionat'}</h2><div class="landing-related__grid">${page.related.map(item => `<a class="landing-related__card" href="${item.href}"><span>${item.type}</span><strong>${item.label}</strong><b>→</b></a>`).join('')}</div></div></section>
     <section class="landing-cta"><div class="container landing-cta__inner"><div><h2>${page.ctaTitle}</h2><p>${page.ctaText}</p></div><div class="landing-cta__actions"><a href="${contact}" class="btn btn--primary btn--lg" data-track="appointment_cta_click" data-track-label="landing-footer">${isService ? primaryCtaLabel : (isEs ? 'Pedir visita' : 'Demanar visita')}</a>${alternateClinicLink}</div></div></section>
-  </main>
+  </main>`}
 ${renderFooter(page.lang)}
   <script src="/assets/js/main.min.js?v=20260915-growth"></script>
 </body>
