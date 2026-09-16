@@ -53,7 +53,7 @@ function document(page, main, graph) {
 ${renderHeader(page.lang, page.alternatePath, { active: 'services', hero: true })}
 <main id="main">${main}</main>
 ${renderFooter(page.lang)}
-<script src="/assets/js/main.min.js?v=content-preview"></script>
+<script src="/assets/js/main.min.js?v=20260916-onpage"></script>
 </body></html>`;
 }
 
@@ -107,7 +107,7 @@ function renderGuide(guide) {
     ${sections}${faqs}
     <section class="guide-next-step"><h2>${l.es ? 'De la información a tu caso' : 'De la informació al teu cas'}</h2><p>${l.es ? 'Conoce cómo valoramos este motivo de consulta en Carrera y qué opciones explicamos en la visita.' : 'Coneix com valorem aquest motiu de consulta a Carrera i quines opcions expliquem a la visita.'}</p><a class="guide-text-link" href="${guide.relatedService.href}">${escapeHtml(guide.relatedService.label)} ${arrow}</a></section>
     <p class="guide-appointment"><a class="guide-text-link" href="${l.contact}" data-track="appointment_cta_click" data-track-label="guide-contact">${l.es ? 'Pedir visita en Lleida' : 'Demana visita a Lleida'} ${arrow}</a></p>
-    <footer class="guide-editorial"><p>${escapeHtml(guide.editorial)}</p><details class="guide-references"><summary>${l.es ? 'Fuentes consultadas' : 'Fonts consultades'}</summary><ul>${guide.sources.map(source => `<li><a href="${escapeHtml(source.href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.label)}</a></li>`).join('')}</ul></details></footer>
+    <footer class="guide-editorial"><p>${escapeHtml(guide.editorial)}</p><details class="guide-references"><summary>${l.es ? 'Para saber más' : 'Per saber-ne més'}</summary><ul>${guide.sources.map(source => `<li><a href="${escapeHtml(source.href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.label)}</a></li>`).join('')}</ul></details></footer>
     <aside class="guide-more"><p>${l.es ? 'También puede interesarte' : 'També et pot interessar'}</p><ul>${guide.relatedGuides.map(item => `<li><a href="${item.href}">${escapeHtml(item.label)}</a></li>`).join('')}</ul></aside>
   </div></div></article>`;
   const url = `${ORIGIN}/${guide.path}`;

@@ -801,18 +801,45 @@ console.log(
    taps, appointment CTAs and form submissions. Delegated from document
    so it covers nav, footer, FAB, mobile bar and any injected markup. */
 window.track = function track(name, params) {
+  let consent;
   try {
-    const consent = window.EDCConsent && window.EDCConsent.get();
+    consent = window.EDCConsent && window.EDCConsent.get();
+  } catch (_) { return; }
+  const sourceClinic = document.body?.dataset.clinic;
+  const details = {
+    ...params,
+    // Share the same source context across links and the appointment funnel.
+    // Do not copy query strings, fragments, form fields or visible link text.
+    page_path: window.location.pathname,
+    page_language: document.documentElement?.lang === 'es' ? 'es' : 'ca',
+    page_clinic: sourceClinic === 'tremp' ? 'tremp' : sourceClinic === 'carrera' ? 'lleida' : 'general'
+  };
+  try {
     if (consent && consent.umami && window.EDCUmami) {
-      window.EDCUmami.track(name, params || {});
+      window.EDCUmami.track(name, details);
     }
+  } catch (_) {}
+  // One provider being blocked must not drop events for the other provider.
+  try {
     if (consent && consent.analytics && typeof window.gtag === 'function') {
-      window.gtag('event', name, params || {});
+      window.gtag('event', name, details);
     }
   } catch (_) {}
 };
 
 (function initTracking() {
+  const clickEvents = new Map([
+    ['click_cita', 'appointment_cta_click'],
+    ['appointment_cta_click', 'appointment_cta_click'],
+    ['contact_options_click', 'contact_options_click'],
+    ['directions_click', 'directions_click']
+  ]);
+  // Stable labels used by static HTML and the landing/guide renderers.
+  const clickLabels = new Set([
+    'hero', 'cta-band', 'serveis-cta', 'landing-hero', 'landing-section',
+    'landing-section-tremp', 'landing-footer', 'landing-alternative-tremp',
+    'landing-practical', 'guide-contact', 'lleida-first-visit'
+  ]);
   const clinicForNumber = value => {
     const digits = value.replace(/\D/g, '');
     if (digits.endsWith('650600172')) return 'tremp';
@@ -823,35 +850,43 @@ window.track = function track(name, params) {
     const tel = e.target.closest('a[href^="tel:"]');
     if (tel) {
       window.track('phone_click', {
-        clinic: clinicForNumber(tel.getAttribute('href')),
-        page_path: window.location.pathname
+        clinic: clinicForNumber(tel.getAttribute('href'))
       });
       return;
     }
     const wa = e.target.closest('a[href*="wa.me"]');
     if (wa) {
       window.track('whatsapp_click', {
-        clinic: clinicForNumber(new URL(wa.href).pathname),
-        page_path: window.location.pathname
+        clinic: clinicForNumber(new URL(wa.href).pathname)
       });
-      return;
-    }
-    const cta = e.target.closest('[data-track]');
-    if (cta) {
-      window.track(cta.getAttribute('data-track'), { etiqueta: cta.getAttribute('data-track-label') || cta.textContent.trim().slice(0, 60) });
       return;
     }
     // Navigation and the mobile bar also lead to the appointment form.
     // Count the intent once; a phone/WhatsApp tap is never a confirmed lead.
     const link = e.target.closest('a[href]');
-    if (!link || link.hasAttribute('hreflang')) return;
-    const url = new URL(link.href, window.location.href);
-    if (url.origin !== window.location.origin || !['/seus.html', '/es/sedes.html'].includes(url.pathname)) return;
-    if (!/^#contact[eo](?:-(?:carrera|tremp|whatsapp|directe))?(?:-(?:whatsapp|directe))?$/.test(url.hash)) return;
-    const direct = /-(whatsapp|directe)$/.test(url.hash);
-    const clinic = /-tremp(?:-|$)/.test(url.hash) ? 'tremp' : /-carrera(?:-|$)/.test(url.hash) ? 'lleida' : 'unselected';
-    const position = link.closest('.mobile-cta-bar') ? 'mobile-bar' : link.closest('.mobile-menu') ? 'mobile-menu' : link.closest('.nav') ? 'navigation' : link.closest('.footer') ? 'footer' : 'page';
-    window.track(direct ? 'contact_options_click' : 'appointment_cta_click', { clinic, etiqueta: position });
+    if (link?.hasAttribute('hreflang')) return;
+    const url = link ? new URL(link.href, window.location.href) : null;
+    const contactLink = url && url.origin === window.location.origin
+      && ['/seus.html', '/es/sedes.html'].includes(url.pathname)
+      && /^#contact[eo](?:-(?:carrera|tremp|whatsapp|directe))?(?:-(?:whatsapp|directe))?$/.test(url.hash);
+    const cta = e.target.closest('[data-track]');
+    const explicit = cta?.getAttribute('data-track');
+    if (!contactLink && !clickEvents.has(explicit)) return;
+    const eventName = contactLink
+      ? /-(whatsapp|directe)$/.test(url.hash) ? 'contact_options_click' : 'appointment_cta_click'
+      : clickEvents.get(explicit);
+    const destinationClinic = contactLink && /-tremp(?:-|$)/.test(url.hash) ? 'tremp'
+      : contactLink && /-carrera(?:-|$)/.test(url.hash) ? 'lleida' : 'unselected';
+    const sourceClinic = document.body?.dataset.clinic;
+    const clinic = eventName === 'directions_click'
+      ? sourceClinic === 'tremp' ? 'tremp' : sourceClinic === 'carrera' ? 'lleida' : 'general'
+      : destinationClinic;
+    const position = link?.closest('.mobile-cta-bar') ? 'mobile-bar' : link?.closest('.mobile-menu') ? 'mobile-menu'
+      : link?.closest('.nav') ? 'navigation' : link?.closest('.footer') ? 'footer' : 'page';
+    const label = cta?.getAttribute('data-track-label');
+    const etiqueta = clickLabels.has(label) ? label : position;
+    // Legacy click_cita attributes now join the same bilingual funnel.
+    window.track(eventName, { clinic, etiqueta });
   }, { passive: true });
 
 })();
