@@ -7,6 +7,7 @@ const addedSectionIds = new Set([
   'dubtes-genives-endodoncia', 'dudas-encias-endodoncia',
   'neteja-i-blanquejament', 'limpieza-y-blanqueamiento',
   'seguiment-atm', 'seguimiento-atm', 'guies-de-consulta', 'guias-de-consulta',
+  'urgencies-dentals', 'urgencias-dentales',
 ]);
 
 function addSection(page, section, position = page.sections.length) {
@@ -281,6 +282,25 @@ function enrichPages(pages) {
           { title: 'Carilles i composite', text: 'Si vols canviar una forma o reparar una vora, comparem la superfície que necessita restauració.', href: `${aesthetic}#carilles`, linkLabel: 'Comparar opcions conservadores' },
         ];
       }
+      addSection(lleida, {
+        id: es ? 'urgencias-dentales' : 'urgencies-dentals',
+        jumpLabel: es ? 'Urgencias dentales' : 'Urgències dentals',
+        title: es ? 'Urgencias dentales en Lleida: cómo pedir atención' : 'Urgències dentals a Lleida: com demanar atenció',
+        paragraphs: [es
+          ? 'Si tienes dolor intenso, hinchazón o te has dado un golpe en un diente, llama al <a href="tel:+34973268826">973 268 826</a>. Explica qué ha pasado y desde cuándo. Confirmaremos la prioridad y la disponibilidad antes de que te desplaces.'
+          : 'Si tens dolor intens, inflor o t’has donat un cop en una dent, truca al <a href="tel:+34973268826">973 268 826</a>. Explica què ha passat i des de quan. Confirmarem la prioritat i la disponibilitat abans que et desplacis.'],
+        items: es ? [
+          'Al llamar, indica si hay fiebre, hinchazón o dificultad para abrir la boca. Comenta también si el problema apareció tras un tratamiento dental.',
+          'Si la clínica está cerrada o no consigues atención, el 061 Salut Respon puede orientarte. No esperes la respuesta de un formulario ante una urgencia.',
+          'Si te cuesta respirar o tragar, o la hinchazón de la boca es importante, llama al 112.',
+        ] : [
+          'Quan truquis, indica si hi ha febre, inflor o dificultat per obrir la boca. Comenta també si el problema va aparèixer després d’un tractament dental.',
+          'Si la clínica està tancada o no aconsegueixes atenció, el 061 Salut Respon et pot orientar. No esperis la resposta d’un formulari davant d’una urgència.',
+          'Si et costa respirar o empassar, o la inflor de la boca és important, truca al 112.',
+        ],
+      });
+      addSource(lleida, 'https://canalsalut.gencat.cat/ca/contacte/', es ? 'Canal Salut: 061 Salut Respon y emergencias' : 'Canal Salut: 061 Salut Respon i emergències');
+      addSource(lleida, 'https://www.nhs.uk/conditions/dental-abscess/', es ? 'NHS: infección dental y señales de urgencia' : 'NHS: infecció dental i senyals d’urgència');
       addSection(lleida, {
         id: es ? 'guias-de-consulta' : 'guies-de-consulta',
         jumpLabel: es ? 'Guías para preparar la consulta' : 'Guies per preparar la consulta',

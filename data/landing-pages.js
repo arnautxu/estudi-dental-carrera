@@ -391,9 +391,9 @@ pages['ca-ortho'] = servicePage('ca', {
   path: 'ortodoncia.html', alternatePath: 'es/ortodoncia.html',
   title: 'Ortodòncia invisible a Lleida i Tremp | Carrera',
   description: 'Ortodòncia invisible a Lleida i Tremp. Comparem alineadors transparents i brackets segons la mossegada, la salut de les genives i les teves necessitats.',
-  dateModified: '2026-09-16', updatedLabel: '16 de setembre de 2026',
+  dateModified: '2026-09-18', updatedLabel: '18 de setembre de 2026',
   eyebrow: 'Ortodòncia en infants, adolescents i adults', h1: 'Ortodòncia invisible a Lleida i Tremp',
-  lead: 'L’ortodòncia pot millorar posició, funció i higiene, però necessita un diagnòstic complet, expectatives realistes i una fase de retenció planificada des del principi.',
+  lead: 'Abans de moure les dents, revisem la boca i què vols corregir. T’expliquem les opcions i com mantindrem la posició de les dents quan acabi el tractament.',
   image: 'assets/img/serveis/ortodoncia-model.webp', imageWidth: 1280, imageHeight: 1600, imageAlt: 'Model de dents amb bràquets en un prestatge de la clínica',
   introTitle: 'Alineadors i brackets són eines, no diagnòstics',
   intro: [
@@ -421,7 +421,7 @@ pages['ca-ortho'] = servicePage('ca', {
         columns: ['Aspecte', 'Alineadors transparents', 'Brackets'],
         rows: [
           ['Indicació', 'L’estudi confirma si poden fer els moviments previstos.', 'L’estudi defineix els moviments i els límits del tractament.'],
-          ['Ús diari', 'Cal complir les hores d’ús indicades.', 'Queden fixats a les dents durant el tractament.'],
+          ['Ús diari', 'Es retiren per menjar i raspallar-se les dents. Cal complir les hores d’ús indicades.', 'Queden fixats a les dents durant el tractament.'],
           ['Higiene', 'Cal netejar les dents, els suports i els alineadors.', 'Cal netejar amb cura al voltant dels brackets i entre les dents.'],
           ['Controls', 'Revisem l’adaptació i la resposta de dents i genives.', 'Revisem els ajustos i la resposta de dents i genives.'],
         ],
@@ -446,7 +446,7 @@ pages['ca-ortho'] = servicePage('ca', {
   faqs: [
     { q: 'Què valorareu a la primera visita?', a: 'A la primera visita valorem el teu cas i les opcions de tractament. T’expliquem les fases, els controls i el manteniment que es preveuen segons les teves necessitats.' },
     { q: 'Alineadors o brackets: què és millor?', a: 'Depèn dels moviments necessaris, la higiene, la col·laboració i els objectius. Cap sistema és universalment millor.' },
-    { q: 'Quant dura una ortodòncia?', a: 'La durada varia segons la complexitat, la resposta biològica i el compliment. Només es pot estimar després de l’estudi.' },
+    { q: 'Quant dura una ortodòncia?', a: 'Depèn dels moviments necessaris, de com responen les dents i de seguir les indicacions d’ús i els controls. Després de l’estudi podem donar una estimació i revisar-la segons l’evolució.' },
     { q: 'Es pot fer ortodòncia amb malaltia periodontal?', a: 'Pot ser possible si la inflamació està controlada i hi ha seguiment periodontal específic. Requereix valoració coordinada.' },
     { q: 'Cal portar retenidors per sempre?', a: 'La necessitat i el tipus varien, però mantenir la posició sol requerir retenció a llarg termini i controls.' },
   ],
@@ -454,6 +454,7 @@ pages['ca-ortho'] = servicePage('ca', {
   sources: [
     { href: 'https://www.nhs.uk/tests-and-treatments/braces/', label: 'NHS: braces and orthodontics' },
     { href: 'https://www.sedo.es/', label: 'Sociedad Española de Ortodoncia' },
+    { href: 'https://bos.org.uk/wp-content/uploads/2024/01/Aligners-version-2024.pdf', label: 'BOS: ús i cura dels alineadors' },
   ],
 });
 
@@ -467,9 +468,9 @@ pages['es-ortho'] = servicePage('es', {
   path: 'es/ortodoncia.html', alternatePath: 'ortodoncia.html',
   title: 'Ortodoncia invisible en Lleida y Tremp | Carrera',
   description: 'Ortodoncia invisible en Lleida y Tremp. Comparamos alineadores transparentes y brackets según la mordida, la salud de las encías y tus necesidades.',
-  dateModified: '2026-09-16', updatedLabel: '16 de septiembre de 2026',
+  dateModified: '2026-09-18', updatedLabel: '18 de septiembre de 2026',
   eyebrow: 'Ortodoncia en niños, adolescentes y adultos', h1: 'Ortodoncia invisible en Lleida y Tremp',
-  lead: 'La ortodoncia puede mejorar posición, función e higiene, pero necesita un diagnóstico completo, expectativas realistas y una fase de retención planificada desde el principio.',
+  lead: 'Antes de mover los dientes, revisamos la boca y qué quieres corregir. Te explicamos las opciones y cómo mantendremos la posición de los dientes al terminar el tratamiento.',
   image: 'assets/img/serveis/ortodoncia-model.webp', imageWidth: 1280, imageHeight: 1600, imageAlt: 'Modelo de dientes con brackets en un estante de la clínica',
   introTitle: 'Alineadores y brackets son herramientas, no diagnósticos',
   intro: [
@@ -497,7 +498,7 @@ pages['es-ortho'] = servicePage('es', {
         columns: ['Aspecto', 'Alineadores transparentes', 'Brackets'],
         rows: [
           ['Indicación', 'El estudio confirma si pueden realizar los movimientos previstos.', 'El estudio define los movimientos y los límites del tratamiento.'],
-          ['Uso diario', 'Hay que cumplir las horas de uso indicadas.', 'Quedan fijados a los dientes durante el tratamiento.'],
+          ['Uso diario', 'Se retiran para comer y cepillarse los dientes. Hay que cumplir las horas de uso indicadas.', 'Quedan fijados a los dientes durante el tratamiento.'],
           ['Higiene', 'Hay que limpiar los dientes, los apoyos y los alineadores.', 'Hay que limpiar con cuidado alrededor de los brackets y entre los dientes.'],
           ['Controles', 'Revisamos la adaptación y la respuesta de dientes y encías.', 'Revisamos los ajustes y la respuesta de dientes y encías.'],
         ],
@@ -522,7 +523,7 @@ pages['es-ortho'] = servicePage('es', {
   faqs: [
     { q: '¿Qué valoraréis en la primera visita?', a: 'En la primera visita valoramos tu caso y las opciones de tratamiento. Te explicamos las fases, los controles y el mantenimiento que se prevén según tus necesidades.' },
     { q: '¿Alineadores o brackets: qué es mejor?', a: 'Depende de los movimientos necesarios, la higiene, la colaboración y los objetivos. Ningún sistema es universalmente mejor.' },
-    { q: '¿Cuánto dura una ortodoncia?', a: 'La duración varía según la complejidad, la respuesta biológica y el cumplimiento. Solo puede estimarse después del estudio.' },
+    { q: '¿Cuánto dura una ortodoncia?', a: 'Depende de los movimientos necesarios, de cómo responden los dientes y de seguir las indicaciones de uso y los controles. Tras el estudio podemos dar una estimación y revisarla según la evolución.' },
     { q: '¿Puede hacerse ortodoncia con enfermedad periodontal?', a: 'Puede ser posible si la inflamación está controlada y existe seguimiento periodontal específico. Requiere valoración coordinada.' },
     { q: '¿Hay que llevar retenedores para siempre?', a: 'La necesidad y el tipo varían, pero mantener la posición suele requerir retención a largo plazo y controles.' },
   ],
@@ -530,12 +531,13 @@ pages['es-ortho'] = servicePage('es', {
   sources: [
     { href: 'https://www.nhs.uk/tests-and-treatments/braces/', label: 'NHS: braces and orthodontics' },
     { href: 'https://www.sedo.es/', label: 'Sociedad Española de Ortodoncia' },
+    { href: 'https://bos.org.uk/wp-content/uploads/2024/01/Aligners-version-2024.pdf', label: 'BOS: uso y cuidado de los alineadores' },
   ],
 });
 
 pages['ca-perio'] = servicePage('ca', {
   sectionNavLabel: 'Genives, neteja dental i endodòncia',
-  dateModified: '2026-09-16', updatedLabel: '16 de setembre de 2026',
+  dateModified: '2026-09-18', updatedLabel: '18 de setembre de 2026',
   path: 'periodoncia-endodoncia.html', alternatePath: 'es/periodoncia-endodoncia.html',
   title: 'Periodòncia i endodòncia a Lleida i Tremp | Estudi Dental',
   description: 'Periodòncia, neteja dental i endodòncia a Lleida i Tremp. Revisem genives, dolor dental i opcions per conservar les dents, amb seguiment individual.',
@@ -552,7 +554,7 @@ pages['ca-perio'] = servicePage('ca', {
       title: 'Genives que sagnen: què revisem primer',
       id: 'periodoncia', jumpLabel: 'Genives que sagnen',
       paragraphs: [
-        'La gingivitis és una inflamació de la geniva que sovint es relaciona amb la placa. Pot causar sagnat, envermelliment o inflor. La periodontitis afecta també els teixits que subjecten la dent i pot avançar amb poques molèsties.',
+        'La gingivitis és una forma de malaltia periodontal: la geniva s’inflama, sovint per la placa, i pot sagnar, envermellir-se o inflar-se. La periodontitis afecta també l’os i els teixits que subjecten les dents i pot avançar amb poques molèsties.',
         'Convé consultar si les genives sagnen sovint, es retreuen o deixen veure més dent. També si notes mobilitat, mal alè persistent o espais nous entre dents. Fumar pot ocultar el sagnat i augmentar el risc.',
         'A l’estudi periodontal mesurem els espais entre la geniva i la dent. Anotem el sagnat, la mobilitat i la retracció. Quan cal, una radiografia ajuda a valorar quant os sosté cada peça.',
         'Al nostre equip, el <a href="/equip.html#albert-vim">Dr. Albert Vim</a> es dedica a la periodòncia i la rehabilitació oral. Pots conèixer la seva dedicació abans de demanar visita.',
@@ -611,7 +613,7 @@ pages['ca-perio'] = servicePage('ca', {
 
 pages['es-perio'] = servicePage('es', {
   sectionNavLabel: 'Encías, limpieza dental y endodoncia',
-  dateModified: '2026-09-16', updatedLabel: '16 de septiembre de 2026',
+  dateModified: '2026-09-18', updatedLabel: '18 de septiembre de 2026',
   path: 'es/periodoncia-endodoncia.html', alternatePath: 'periodoncia-endodoncia.html',
   title: 'Periodoncia y endodoncia en Lleida y Tremp | Estudi Dental',
   description: 'Periodoncia, limpieza dental y endodoncia en Lleida y Tremp. Revisamos encías, dolor dental y opciones para conservar los dientes, con seguimiento individual.',
@@ -628,7 +630,7 @@ pages['es-perio'] = servicePage('es', {
       title: 'Encías que sangran: qué revisamos primero',
       id: 'periodoncia', jumpLabel: 'Encías que sangran',
       paragraphs: [
-        'La gingivitis es una inflamación de la encía que suele relacionarse con la placa. Puede causar sangrado, enrojecimiento o hinchazón. La periodontitis afecta además a los tejidos que sujetan el diente y puede avanzar con pocas molestias.',
+        'La gingivitis es una forma de enfermedad periodontal: la encía se inflama, a menudo por la placa, y puede sangrar, enrojecerse o hincharse. La periodontitis afecta también al hueso y a los tejidos que sujetan los dientes y puede avanzar con pocas molestias.',
         'Conviene consultar si las encías sangran a menudo, se retraen o dejan ver más diente. También si notas movilidad, mal aliento persistente o espacios nuevos entre dientes. Fumar puede ocultar el sangrado y aumentar el riesgo.',
         'En el estudio periodontal medimos los espacios entre la encía y el diente. Anotamos el sangrado, la movilidad y la retracción. Cuando hace falta, una radiografía ayuda a valorar cuánto hueso sostiene cada pieza.',
         'En nuestro equipo, el <a href="/es/equipo.html#albert-vim">Dr. Albert Vim</a> se dedica a la periodoncia y la rehabilitación oral. Puedes conocer su dedicación antes de pedir visita.',
@@ -833,9 +835,9 @@ function locationPage(lang, spec) {
 
 pages['ca-lleida'] = locationPage('ca', {
   path: 'clinica-dental-lleida.html', alternatePath: 'es/clinica-dental-lleida.html', city: 'Lleida',
-  dateModified: '2026-09-15', updatedLabel: '15 de setembre de 2026',
+  dateModified: '2026-09-18', updatedLabel: '18 de setembre de 2026',
   title: 'Clínica dental a Lleida | Estudi Dental Carrera',
-  description: 'Clínica dental al centre de Lleida. Odontologia conservadora, implants, ortodòncia, genives, ATM i estètica amb diagnòstic individual.',
+  description: 'Dentistes a Lleida: clínica dental al carrer Major per a diagnòstic, prevenció i tractaments coordinats. Coneix l’equip i demana una primera visita.',
   eyebrow: 'Carrer Major, Lleida', h1: 'Clínica dental a Lleida amb una mirada integral',
   lead: 'Al centre de Lleida, un equip coordinat per entendre el problema abans de proposar una solució. Primera visita, diagnòstic i seguiment en un mateix espai.',
   image: 'assets/img/lleida-edifici.webp', imageWidth: 1333, imageHeight: 2000, imageAlt: 'Edifici de la clínica Estudi Dental Carrera al carrer Major de Lleida',
@@ -927,9 +929,9 @@ pages['ca-lleida'] = locationPage('ca', {
 
 pages['es-lleida'] = locationPage('es', {
   path: 'es/clinica-dental-lleida.html', alternatePath: 'clinica-dental-lleida.html', city: 'Lleida',
-  dateModified: '2026-09-15', updatedLabel: '15 de septiembre de 2026',
+  dateModified: '2026-09-18', updatedLabel: '18 de septiembre de 2026',
   title: 'Clínica dental Lleida | Estudi Dental Carrera',
-  description: 'Clínica dental en Lleida para diagnóstico, prevención, implantes, ortodoncia, encías, ATM y estética. Conoce al equipo y pide una primera visita.',
+  description: 'Dentistas en Lleida: clínica dental en carrer Major para diagnóstico, prevención y tratamientos coordinados. Conoce al equipo y pide una primera visita.',
   eyebrow: 'Dentistas en carrer Major, Lleida', h1: 'Clínica dental en Lleida: diagnóstico y tratamientos coordinados',
   lead: 'Nuestro equipo de dentistas en Lleida reúne diagnóstico, prevención y seguimiento en un mismo espacio, con un plan explicado antes de empezar cualquier tratamiento.',
   image: 'assets/img/lleida-edifici.webp', imageWidth: 1333, imageHeight: 2000, imageAlt: 'Edificio de la clínica Estudi Dental Carrera en el carrer Major de Lleida',
@@ -1020,9 +1022,9 @@ pages['es-lleida'] = locationPage('es', {
 });
 
 pages['ca-tremp'] = locationPage('ca', {
-  dateModified: '2026-09-16', updatedLabel: '16 de setembre de 2026',
+  dateModified: '2026-09-18', updatedLabel: '18 de setembre de 2026',
   path: 'dentista-tremp.html', alternatePath: 'es/dentista-tremp.html', city: 'Tremp',
-  title: 'Dentista i clínica dental a Tremp | Carrera',
+  title: 'Dentista i clínica dental a Tremp | Estudi Dental Carrera',
   description: 'Clínica dental a Tremp per al Pallars: prevenció, odontologia conservadora, implants, ortodòncia, genives, ATM i seguiment proper.',
   eyebrow: 'Carrer Montllobar, Tremp', h1: 'Clínica dental a Tremp per cuidar la salut oral al Pallars',
   lead: 'La nostra clínica dental a Tremp ofereix diagnòstic, tractament i seguiment al Pallars. Quan el cas ho necessita, coordinem les visites amb l’equip de Lleida.',
@@ -1037,8 +1039,13 @@ pages['ca-tremp'] = locationPage('ca', {
     {
       title: 'Què podem valorar a la clínica de Tremp',
       paragraphs: [
-        'Fem revisions, prevenció, diagnòstic de càries i dolor, restauracions i pròtesis. També valorem <a href="/periodoncia-endodoncia.html#periodoncia">la salut de les genives</a>, <a href="/periodoncia-endodoncia.html#endodoncia">l’endodòncia per conservar dents</a>, <a href="/implants-dentals.html">els implants dentals</a>, l’ortodòncia i l’estètica dental. Si tens bruxisme o molèsties de mandíbula, comencem per estudiar-ne la causa.',
         'No cal que sàpigues quin tractament necessites per demanar una visita. Pots explicar què notes o què vols revisar. L’exploració i les proves que estiguin indicades ens ajudaran a proposar el pas següent.',
+        'Si tens bruxisme o molèsties de mandíbula, comencem per estudiar-ne la causa.',
+      ],
+      items: [
+        '<strong>Revisions, càries i dolor.</strong> Fem prevenció i valorem càries, dolor i reparacions de dents.',
+        '<strong>Genives i conservació de dents.</strong> Valorem <a href="/periodoncia-endodoncia.html#periodoncia">la salut de les genives</a> i <a href="/periodoncia-endodoncia.html#endodoncia">l’endodòncia per conservar dents</a>.',
+        '<strong>Dents absents, posició i estètica.</strong> Valorem pròtesis, <a href="/implants-dentals.html">implants dentals</a>, ortodòncia i estètica dental.',
       ],
     },
     {
@@ -1067,12 +1074,12 @@ pages['ca-tremp'] = locationPage('ca', {
       paragraphs: [
         'Els controls permeten revisar genives, desgast, empastaments, pròtesis i implants. La freqüència depèn de la higiene, el risc de càries, el tabac i els tractaments previs. Adaptem el pla als canvis que veiem.',
         'La prevenció inclou el raspallat, la neteja entre dents i la revisió de la dieta o de l’ús de fluor quan cal. Les necessitats canvien amb l’edat i la salut. Després d’un tractament, expliquem què has de vigilar i quan convé tornar.',
-        'El formulari i WhatsApp serveixen per demanar contacte. Recepció ha de concretar la cita. No substitueixen una exploració ni són canals per enviar dades clíniques sensibles. Si hi ha dolor intens, inflamació, febre o un cop, truca per rebre orientació. Davant d’una urgència vital, truca al 112.',
+        'El formulari i WhatsApp no substitueixen una exploració ni són canals per enviar dades clíniques sensibles. Si hi ha dolor intens, inflamació, febre o un cop, truca per rebre orientació. Davant d’una urgència vital, truca al 112.',
       ],
     },
   ],
   faqs: [
-    { q: 'Com puc demanar una primera visita a Tremp?', a: 'Pots trucar al 650 60 01 72 o enviar el formulari de contacte. La recepció de Tremp es posarà en contacte amb tu per concretar la visita.' },
+    { q: 'Com puc demanar una primera visita a Tremp?', a: 'Pots trucar al 650 60 01 72, escriure per WhatsApp o enviar el formulari. Aquests missatges són una sol·licitud de contacte. La cita queda confirmada quan recepció concreta el dia, l’hora i la clínica.' },
     { q: 'On és la clínica de Tremp?', a: 'Al carrer Montllobar, 22 baixos, 25620 Tremp. Pots confirmar com arribar-hi i qualsevol necessitat d’accés amb recepció.' },
     { q: 'Ateneu persones d’altres poblacions del Pallars?', a: 'Sí. La planificació de visites s’adapta al tractament i, si cal coordinació amb Lleida, s’explica prèviament.' },
     { q: 'Puc enviar fotografies per WhatsApp per obtenir un diagnòstic?', a: 'WhatsApp és un canal de contacte, no substitueix una exploració ni és adequat per enviar dades clíniques sensibles sense indicació.' },
@@ -1091,9 +1098,9 @@ pages['ca-tremp'] = locationPage('ca', {
 });
 
 pages['es-tremp'] = locationPage('es', {
-  dateModified: '2026-09-16', updatedLabel: '16 de septiembre de 2026',
+  dateModified: '2026-09-18', updatedLabel: '18 de septiembre de 2026',
   path: 'es/dentista-tremp.html', alternatePath: 'dentista-tremp.html', city: 'Tremp',
-  title: 'Dentista y clínica dental en Tremp | Carrera',
+  title: 'Dentista y clínica dental en Tremp | Estudi Dental Carrera',
   description: 'Clínica dental en Tremp para el Pallars: prevención, odontología conservadora, implantes, ortodoncia, encías, ATM y seguimiento cercano.',
   eyebrow: 'Carrer Montllobar, Tremp', h1: 'Clínica dental en Tremp para cuidar la salud oral en el Pallars',
   lead: 'Nuestra clínica dental en Tremp ofrece diagnóstico, tratamiento y seguimiento en el Pallars. Cuando el caso lo necesita, coordinamos las visitas con el equipo de Lleida.',
@@ -1108,8 +1115,13 @@ pages['es-tremp'] = locationPage('es', {
     {
       title: 'Qué podemos valorar en la clínica de Tremp',
       paragraphs: [
-        'Hacemos revisiones, prevención, diagnóstico de caries y dolor, restauraciones y prótesis. También valoramos <a href="/es/periodoncia-endodoncia.html#periodoncia">la salud de las encías</a>, <a href="/es/periodoncia-endodoncia.html#endodoncia">la endodoncia para conservar dientes</a>, <a href="/es/implantes-dentales.html">los implantes dentales</a>, la ortodoncia y la estética dental. Si tienes bruxismo o molestias de mandíbula, empezamos por estudiar la causa.',
         'No hace falta que sepas qué tratamiento necesitas para pedir una visita. Puedes explicar qué notas o qué quieres revisar. La exploración y las pruebas que estén indicadas nos ayudarán a proponer el siguiente paso.',
+        'Si tienes bruxismo o molestias de mandíbula, empezamos por estudiar la causa.',
+      ],
+      items: [
+        '<strong>Revisiones, caries y dolor.</strong> Hacemos prevención y valoramos caries, dolor y reparaciones de dientes.',
+        '<strong>Encías y conservación de dientes.</strong> Valoramos <a href="/es/periodoncia-endodoncia.html#periodoncia">la salud de las encías</a> y <a href="/es/periodoncia-endodoncia.html#endodoncia">la endodoncia para conservar dientes</a>.',
+        '<strong>Dientes ausentes, posición y estética.</strong> Valoramos prótesis, <a href="/es/implantes-dentales.html">implantes dentales</a>, ortodoncia y estética dental.',
       ],
     },
     {
@@ -1138,12 +1150,12 @@ pages['es-tremp'] = locationPage('es', {
       paragraphs: [
         'Los controles permiten revisar encías, desgaste, empastes, prótesis e implantes. Su frecuencia depende de la higiene, el riesgo de caries, el tabaco y los tratamientos previos. Adaptamos el plan a los cambios que vemos.',
         'La prevención incluye el cepillado, la limpieza entre dientes y la revisión de la dieta o del uso de flúor cuando hace falta. Las necesidades cambian con la edad y la salud. Tras un tratamiento, explicamos qué debes vigilar y cuándo conviene volver.',
-        'El formulario y WhatsApp sirven para pedir contacto. Recepción debe concretar la cita. No sustituyen una exploración ni son canales para enviar datos clínicos sensibles. Si hay dolor intenso, inflamación, fiebre o un golpe, llama para recibir orientación. Ante una urgencia vital, llama al 112.',
+        'El formulario y WhatsApp no sustituyen una exploración ni son canales para enviar datos clínicos sensibles. Si hay dolor intenso, inflamación, fiebre o un golpe, llama para recibir orientación. Ante una urgencia vital, llama al 112.',
       ],
     },
   ],
   faqs: [
-    { q: '¿Cómo puedo pedir una primera visita en Tremp?', a: 'Puedes llamar al 650 60 01 72 o enviar el formulario de contacto. La recepción de Tremp se pondrá en contacto contigo para concretar la visita.' },
+    { q: '¿Cómo puedo pedir una primera visita en Tremp?', a: 'Puedes llamar al 650 60 01 72, escribir por WhatsApp o enviar el formulario. Estos mensajes son una solicitud de contacto. La cita queda confirmada cuando recepción concreta el día, la hora y la clínica.' },
     { q: '¿Dónde está la clínica de Tremp?', a: 'En carrer Montllobar, 22, bajos, 25620 Tremp. Puedes confirmar cómo llegar y cualquier necesidad de acceso con recepción.' },
     { q: '¿Atendéis a personas de otras poblaciones del Pallars?', a: 'Sí. La planificación de visitas se adapta al tratamiento y, si hace falta coordinación con Lleida, se explica previamente.' },
     { q: '¿Puedo enviar fotografías por WhatsApp para obtener un diagnóstico?', a: 'WhatsApp es un canal de contacto, no sustituye una exploración ni es adecuado para enviar datos clínicos sensibles sin indicación.' },

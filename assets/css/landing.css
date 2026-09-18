@@ -139,7 +139,7 @@
   .landing-nav { align-items:flex-start; gap:1rem; }
   .landing-nav__links { overflow:auto; max-width:72vw; padding:.45rem 0; white-space:nowrap; }
   .landing-intro__grid,
-  .landing-section__grid { grid-template-columns:1fr; }
+  .landing-section__grid { grid-template-columns:minmax(0,1fr); }
   .landing-aside,
   .landing-section__title { position:static; }
   .landing-trust,
