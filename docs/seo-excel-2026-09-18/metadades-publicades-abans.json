@@ -1,0 +1,107 @@
+{
+  "date": "2026-09-18",
+  "started_at": "2026-09-18T07:30:20.515Z",
+  "completed_at": "2026-09-18T07:30:21.328Z",
+  "method": "Fresh direct public HTTP GET requests with Cache-Control:no-cache and Pragma:no-cache. No search-engine cache and no authenticated requests.",
+  "checks": [
+    {
+      "path": "/es/atm-bruxismo.html",
+      "kind": "title",
+      "keyword": "dolor mandibula lleida",
+      "url": "https://www.estudidentalcarrera.com/es/atm-bruxismo.html",
+      "final_url": "https://www.estudidentalcarrera.com/es/atm-bruxismo.html",
+      "status": 200,
+      "retrieved_at": "2026-09-18T07:30:21.311Z",
+      "request_headers": {
+        "Cache-Control": "no-cache",
+        "Pragma": "no-cache"
+      },
+      "response_headers": {
+        "date": "Fri, 18 Sep 2026 07:30:21 GMT",
+        "age": "0",
+        "cache-control": "public",
+        "etag": "W/\"7604-/HQLksJ0XFn5y8A8Vnw+Uc2lDIc\"",
+        "x-vercel-cache": "MISS",
+        "x-vercel-id": "cdg1::iad1::cntw6-1789716620669-3b45d74adf9b",
+        "content-type": "text/html; charset=utf-8"
+      },
+      "canonical": "https://www.estudidentalcarrera.com/es/atm-bruxismo.html",
+      "title": "Dolor de mandíbula y bruxismo en Lleida y Tremp | Carrera",
+      "description": "Valoración de dolor mandibular, ruidos, limitación de apertura y bruxismo en Lleida y Tremp. Diagnóstico individual, opciones y seguimiento.",
+      "checked_text": "Dolor de mandíbula y bruxismo en Lleida y Tremp | Carrera",
+      "exact_keyword_present": false,
+      "all_keyword_tokens_present": true,
+      "assessment": "El title diu «Dolor de mandíbula» i «en Lleida y Tremp». Cobreix motiu i ubicació de manera natural; no concatena literalment «dolor mandibula lleida».",
+      "change_recommended": false,
+      "body_sha256": "bbf7b3e07a63ced919f65411266d0a14ded1c94080652a5ff30e1831532ce1ca"
+    },
+    {
+      "path": "/es/periodoncia-endodoncia.html",
+      "kind": "description",
+      "keyword": "limpieza dental lleida",
+      "url": "https://www.estudidentalcarrera.com/es/periodoncia-endodoncia.html",
+      "final_url": "https://www.estudidentalcarrera.com/es/periodoncia-endodoncia.html",
+      "status": 200,
+      "retrieved_at": "2026-09-18T07:30:21.319Z",
+      "request_headers": {
+        "Cache-Control": "no-cache",
+        "Pragma": "no-cache"
+      },
+      "response_headers": {
+        "date": "Fri, 18 Sep 2026 07:30:21 GMT",
+        "age": "0",
+        "cache-control": "public",
+        "etag": "W/\"8306-EsqymqDCKwtxvkTy/tWX7ohnZcI\"",
+        "x-vercel-cache": "MISS",
+        "x-vercel-id": "cdg1::iad1::x9gbr-1789716620696-b698ab9f52b4",
+        "content-type": "text/html; charset=utf-8"
+      },
+      "canonical": "https://www.estudidentalcarrera.com/es/periodoncia-endodoncia.html",
+      "title": "Periodoncia y endodoncia en Lleida y Tremp | Estudi Dental",
+      "description": "Periodoncia, limpieza dental y endodoncia en Lleida y Tremp. Revisamos encías, dolor dental y opciones para conservar los dientes, con seguimiento individual.",
+      "checked_text": "Periodoncia, limpieza dental y endodoncia en Lleida y Tremp. Revisamos encías, dolor dental y opciones para conservar los dientes, con seguimiento individual.",
+      "exact_keyword_present": false,
+      "all_keyword_tokens_present": true,
+      "assessment": "La meta diu «limpieza dental» i «en Lleida y Tremp». El tractament i la ubicació estan presents; el connector i la llista de serveis separen la seqüència literal.",
+      "change_recommended": false,
+      "body_sha256": "3b13ce0b1f1c02f2a41371a1e150721271d0002fbc7b945887ce075ebadaa2a6"
+    },
+    {
+      "path": "/es/estetica-dental.html",
+      "kind": "description",
+      "keyword": "blanqueamiento dental lleida",
+      "url": "https://www.estudidentalcarrera.com/es/estetica-dental.html",
+      "final_url": "https://www.estudidentalcarrera.com/es/estetica-dental.html",
+      "status": 200,
+      "retrieved_at": "2026-09-18T07:30:21.328Z",
+      "request_headers": {
+        "Cache-Control": "no-cache",
+        "Pragma": "no-cache"
+      },
+      "response_headers": {
+        "date": "Fri, 18 Sep 2026 07:30:21 GMT",
+        "age": "0",
+        "cache-control": "public",
+        "etag": "W/\"837f-Rc1VTdb7st0BSWrkGzqtsHOeXnI\"",
+        "x-vercel-cache": "MISS",
+        "x-vercel-id": "cdg1::iad1::pmzx4-1789716620668-eb4aa0ecffed",
+        "content-type": "text/html; charset=utf-8"
+      },
+      "canonical": "https://www.estudidentalcarrera.com/es/estetica-dental.html",
+      "title": "Estética dental en Lleida: carillas y blanqueamiento | Carrera",
+      "description": "Estética dental en Lleida y Tremp: blanqueamiento dental, carillas y composite. Valoramos dientes, encías y mordida antes de proponer cambios.",
+      "checked_text": "Estética dental en Lleida y Tremp: blanqueamiento dental, carillas y composite. Valoramos dientes, encías y mordida antes de proponer cambios.",
+      "exact_keyword_present": false,
+      "all_keyword_tokens_present": true,
+      "assessment": "La meta identifica «Estética dental en Lleida y Tremp» i inclou «blanqueamiento dental». Cobreix tractament i ubicació en una frase natural, amb ordre diferent de la keyword.",
+      "change_recommended": false,
+      "body_sha256": "ebac92a47c93d445bb5a5fd6225a2c042320158631200ec0e0520412c95b128f"
+    }
+  ],
+  "conclusion": "Les tres etiquetes cobreixen de manera natural el servei o motiu i Lleida. No es reprodueix l’absència semàntica; la keyword exacta sense connectors no és present. L’exportació pot respondre a matching literal o a una captura anterior, però el seu mecanisme no s’ha verificat.",
+  "omissions": [
+    "No private Semrush crawl timestamp or matching algorithm verified",
+    "No rankings or traffic changes inferred",
+    "No website or account changes performed"
+  ]
+}

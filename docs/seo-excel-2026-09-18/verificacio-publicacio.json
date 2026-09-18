@@ -1,0 +1,146 @@
+{
+  "verifiedAt": "2026-09-18T07:39:00.896Z",
+  "sourceCommit": "78202a123d5a4fc550094c1e23adae64e06f6217",
+  "deployment": {
+    "id": "dpl_6QioQS1FJX4jCLKzvwxJwssPyroT",
+    "state": "READY",
+    "target": "production"
+  },
+  "checks": [
+    {
+      "key": "ca-ortho",
+      "url": "https://www.estudidentalcarrera.com/ortodoncia.html",
+      "status": 200,
+      "title": true,
+      "description": true,
+      "canonical": true,
+      "h1Count": 1,
+      "dateModified": true,
+      "updatedLabel": true,
+      "newCopy": true,
+      "indexable": true,
+      "bodySha256": "c62a14374c0072ddce735ae843ddba7d2f822d043e24376281a968472a6e2fea",
+      "ok": true
+    },
+    {
+      "key": "es-ortho",
+      "url": "https://www.estudidentalcarrera.com/es/ortodoncia.html",
+      "status": 200,
+      "title": true,
+      "description": true,
+      "canonical": true,
+      "h1Count": 1,
+      "dateModified": true,
+      "updatedLabel": true,
+      "newCopy": true,
+      "indexable": true,
+      "bodySha256": "9fbb6fbb9a49e51f814c1bbaa0da9c87566dae5561a9feeb878c90f666ea4d45",
+      "ok": true
+    },
+    {
+      "key": "ca-perio",
+      "url": "https://www.estudidentalcarrera.com/periodoncia-endodoncia.html",
+      "status": 200,
+      "title": true,
+      "description": true,
+      "canonical": true,
+      "h1Count": 1,
+      "dateModified": true,
+      "updatedLabel": true,
+      "newCopy": true,
+      "indexable": true,
+      "bodySha256": "2a0f13ae9a580afe375838c166fb87ef73bae1ec1d65d6beb4f24c032a7c73f7",
+      "ok": true
+    },
+    {
+      "key": "es-perio",
+      "url": "https://www.estudidentalcarrera.com/es/periodoncia-endodoncia.html",
+      "status": 200,
+      "title": true,
+      "description": true,
+      "canonical": true,
+      "h1Count": 1,
+      "dateModified": true,
+      "updatedLabel": true,
+      "newCopy": true,
+      "indexable": true,
+      "bodySha256": "c85a4b11c9b51818a6ab2f7285a3a11497aa7add802ac62861c33567c6ad0329",
+      "ok": true
+    },
+    {
+      "key": "ca-lleida",
+      "url": "https://www.estudidentalcarrera.com/clinica-dental-lleida.html",
+      "status": 200,
+      "title": true,
+      "description": true,
+      "canonical": true,
+      "h1Count": 1,
+      "dateModified": true,
+      "updatedLabel": true,
+      "newCopy": true,
+      "indexable": true,
+      "bodySha256": "5a3f5c8a854c1e56ca3b6357cddc44a11589d08edfe98576d756f9b1a7195803",
+      "ok": true
+    },
+    {
+      "key": "es-lleida",
+      "url": "https://www.estudidentalcarrera.com/es/clinica-dental-lleida.html",
+      "status": 200,
+      "title": true,
+      "description": true,
+      "canonical": true,
+      "h1Count": 1,
+      "dateModified": true,
+      "updatedLabel": true,
+      "newCopy": true,
+      "indexable": true,
+      "bodySha256": "0169037da41c97fe93b3660d868d29140b3bce4ba1484ada1558c67b2a379083",
+      "ok": true
+    },
+    {
+      "key": "ca-tremp",
+      "url": "https://www.estudidentalcarrera.com/dentista-tremp.html",
+      "status": 200,
+      "title": true,
+      "description": true,
+      "canonical": true,
+      "h1Count": 1,
+      "dateModified": true,
+      "updatedLabel": true,
+      "newCopy": true,
+      "indexable": true,
+      "bodySha256": "c7d210a8f3d06d7af0e2c6f0302c69aabee2c24b74bde86c9c348e4887c1cb7e",
+      "ok": true
+    },
+    {
+      "key": "es-tremp",
+      "url": "https://www.estudidentalcarrera.com/es/dentista-tremp.html",
+      "status": 200,
+      "title": true,
+      "description": true,
+      "canonical": true,
+      "h1Count": 1,
+      "dateModified": true,
+      "updatedLabel": true,
+      "newCopy": true,
+      "indexable": true,
+      "bodySha256": "f8508c4f942b83695257b22926e00caf6ccbd53b46eedc0b284bad4d464a651c",
+      "ok": true
+    }
+  ],
+  "sitemap": {
+    "status": 200,
+    "urls": 38,
+    "sha256": "fa42632d544825676a25f48195a270d6fdf6ad2d528ca8fc63ece92913dcc42a",
+    "matchesLocal": true
+  },
+  "landingCss": {
+    "status": 200,
+    "sha256": "f9750570af711bd2ce3de578c9e9dd22e67473bdd4ed38f41754d567825e82fa",
+    "matchesLocal": true
+  },
+  "semrushReanalysis": {
+    "executed": false,
+    "reason": "Safari had an active user save dialog; it was left untouched."
+  }
+}
