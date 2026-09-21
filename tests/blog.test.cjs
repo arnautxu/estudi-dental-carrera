@@ -21,12 +21,16 @@ for (const lang of ['ca', 'es']) {
     assert.ok(fs.readFileSync('sitemap.xml','utf8').includes(url + '</loc>'));
     const graph = JSON.parse(html.match(/<script type="application\/ld\+json">(.*?)<\/script>/s)[1])['@graph'];
     assert.equal(graph[0].mainEntity.itemListElement.length, entries(lang).length);
-    assert.equal((html.match(/data-blog-category=/g) || []).length, 7);
+    assert.equal((html.match(/data-blog-category=/g) || []).length, entries(lang).length);
     for (const category of Object.keys(categories)) assert.ok(html.includes(`data-category="${category}"`));
     assert.equal((renderBlogHome(lang).match(/data-blog-category=/g) || []).length, 3);
     const home = renderBlogHome(lang);
+    const featured = entries(lang, true).slice(0, 3);
+    const selected = [...featured, ...entries(lang).filter(guide => !featured.some(item => item.path === guide.path)).slice(0, 4)];
+    assert.equal((home.match(/href="\/(?:es\/guias|guies)\//g) || []).length, selected.length);
     for (const guide of entries(lang)) {
-      assert.equal(home.split(`href="/${guide.path}"`).length - 1, 1, `${guide.path}: one direct homepage link`);
+      const expected = selected.some(item => item.path === guide.path) ? 1 : 0;
+      assert.equal(home.split(`href="/${guide.path}"`).length - 1, expected, `${guide.path}: bounded homepage selection`);
       assert.ok(!home.includes(`href="/${guide.alternatePath}"`), 'homepage reading links stay in the selected language');
     }
   });

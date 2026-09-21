@@ -60,3 +60,5 @@
   .guide-toc ul { columns:1; }
   .guide-heading .page-hero__content h1 { font-size:clamp(2.25rem,8vw,2.8rem); }
 }
+
+.guide-appointment { display:flex; flex-wrap:wrap; gap:1rem 2rem; }

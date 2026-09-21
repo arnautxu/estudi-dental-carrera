@@ -335,6 +335,12 @@ function enrichPages(pages) {
       section.paragraphs.push(paragraph);
     }
   }
+  for (const guide of Object.values(require('./guides-library').guides)) {
+    if (!isVisible(guide.key)) continue;
+    const pathname = guide.relatedService.href.split('#')[0].slice(1);
+    const page = Object.values(pages).find(item => item.path === pathname);
+    if (page) addRelated(page, '/' + guide.path, guide.h1);
+  }
   return pages;
 }
 

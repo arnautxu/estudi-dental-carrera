@@ -62,3 +62,9 @@ Els clics del blog cap a un tractament porten `blog_service_click`; llegir un ar
 - Fonts consultades: NIDCR (bruxisme i TMD) i NHS (TMD, bruxisme, dolor dental i apnea). Fonts enllaçades dins de l'article. Contrast de causes/diagnòstic amb NIDCR; autocura i senyals d'alarma amb NHS. No s'atribueix autoria ni revisió al personal de Carrera.
 - Revisió clínica: **pendent**. Validar especialment l'autocura, la prioritat dels senyals d'alarma i la formulació sobre fèrules abans d'aprovar la publicació.
 - Publicat al Blog en català i castellà, en primera posició, i inclòs al sitemap amb alternances recíproques. No forma part dels tres destacats de la home. La publicació no acredita una revisió clínica ni atribueix autoria al personal de Carrera.
+
+## Ampliació conjunta del 21/09/2026
+
+Publicació conjunta autoritzada pel responsable del web: 14 temes nous en CA/ES i sis guies existents ampliades. Total de 21 temes en cada idioma. La petició substitueix el calendari esglaonat anterior. Fonts contrastades i cap atribució de revisió clínica a l'equip. Vegeu `docs/articles-serveis-2026-09-21/README.md` per a cobertura, fonts, límits editorials i verificació.
+
+Els nous temes viuen a `guides-family`, `guides-restoration`, `guides-aesthetics` i `guides-prevention`; `guides-library` els adapta al format del render i del catàleg. `guide-updates` amplia les sis guies sense canviar-ne les URLs.

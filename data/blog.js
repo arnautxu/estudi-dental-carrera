@@ -1,5 +1,5 @@
-// Existing published guides retain their URLs. New topics start as drafts.
-// Clinical review and keyword research are recorded in docs/BLOG.md before publication.
+// Published educational guides retain stable bilingual URLs.
+// Publication notes and source review are recorded in docs.
 const categories = {
   atm: { ca: 'ATM i bruxisme', es: 'ATM y bruxismo' },
   salut: { ca: 'Dents i genives', es: 'Dientes y encías' },
@@ -7,6 +7,7 @@ const categories = {
   estetica: { ca: 'Estètica dental', es: 'Estética dental' },
 };
 const articles = [
+  ...require('./guides-library').articles,
   { ca: 'dolor-mandibula-despertar', es: 'dolor-mandibula-despertar-es', category: 'atm', status: 'published' },
   { ca: 'ferula-descarrega', es: 'ferula-descarga', category: 'atm', status: 'published', featured: true },
   { ca: 'sagnat-genives', es: 'sangrado-encias', category: 'salut', status: 'published', featured: true },

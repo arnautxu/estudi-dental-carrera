@@ -580,6 +580,9 @@ Object.assign(guides,
   require('./guides-ortho').guides,
   require('./guides-stains').guides,
   require('./guides-jaw-morning').guides,
+  require('./guides-library').guides,
 );
+
+require('./guide-updates').enrichGuides(guides);
 
 module.exports = { guides };

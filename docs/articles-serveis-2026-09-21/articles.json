@@ -1,0 +1,258 @@
+[
+  {
+    "tema": "Primera visita al dentista infantil: quan i com preparar-la",
+    "ca": "https://www.estudidentalcarrera.com/guies/primera-visita-dentista-infantil.html",
+    "es": "https://www.estudidentalcarrera.com/es/guias/primera-visita-dentista-infantil.html",
+    "servei": "/serveis.html#odontopediatria",
+    "fonts": [
+      {
+        "href": "https://www.aapd.org/resources/parent/faq/",
+        "label": "AAPD: preguntes de les famílies / preguntas de las familias"
+      },
+      {
+        "href": "https://www.mouthhealthy.org/life-stages/babies-and-kids/first-dental-visit-for-baby",
+        "label": "ADA MouthHealthy: First Dental Visit for Baby"
+      }
+    ]
+  },
+  {
+    "tema": "Ortodòncia infantil: què es valora abans de començar?",
+    "ca": "https://www.estudidentalcarrera.com/guies/ortodoncia-infantil.html",
+    "es": "https://www.estudidentalcarrera.com/es/guias/ortodoncia-infantil.html",
+    "servei": "/ortodoncia.html",
+    "fonts": [
+      {
+        "href": "https://aaoinfo.org/whats-trending/when-should-your-child-see-an-orthodontist/",
+        "label": "AAO: primera valoració d’ortodòncia / primera valoración de ortodoncia"
+      },
+      {
+        "href": "https://www.nhs.uk/tests-and-treatments/braces/",
+        "label": "NHS: Braces"
+      }
+    ]
+  },
+  {
+    "tema": "Em fa clic la mandíbula: quan convé consultar?",
+    "ca": "https://www.estudidentalcarrera.com/guies/clic-mandibula.html",
+    "es": "https://www.estudidentalcarrera.com/es/guias/clic-mandibula.html",
+    "servei": "/atm-bruxisme.html",
+    "fonts": [
+      {
+        "href": "https://www.nidcr.nih.gov/health-info/tmd",
+        "label": "NIDCR: trastorns temporomandibulars / trastornos temporomandibulares"
+      },
+      {
+        "href": "https://www.nhs.uk/conditions/temporomandibular-disorder-tmd/",
+        "label": "NHS: Temporomandibular disorder"
+      }
+    ]
+  },
+  {
+    "tema": "Dolor de mandíbula: dentista o fisioterapeuta?",
+    "ca": "https://www.estudidentalcarrera.com/guies/dolor-mandibula-dentista-fisioterapeuta.html",
+    "es": "https://www.estudidentalcarrera.com/es/guias/dolor-mandibula-dentista-fisioterapeuta.html",
+    "servei": "/atm-bruxisme.html",
+    "fonts": [
+      {
+        "href": "https://www.nhs.uk/conditions/sleep-apnoea/",
+        "label": "NHS: Sleep apnoea"
+      },
+      {
+        "href": "https://www.nidcr.nih.gov/health-info/tmd",
+        "label": "NIDCR: TMD"
+      },
+      {
+        "href": "https://www.nhs.uk/conditions/temporomandibular-disorder-tmd/",
+        "label": "NHS: Temporomandibular disorder"
+      }
+    ]
+  },
+  {
+    "tema": "Implant immediat i càrrega immediata: són el mateix?",
+    "ca": "https://www.estudidentalcarrera.com/guies/implant-immediat-carrega-immediata.html",
+    "es": "https://www.estudidentalcarrera.com/es/guias/implante-inmediato-carga-inmediata.html",
+    "servei": "/implants-dentals.html",
+    "fonts": [
+      {
+        "href": "https://academy.iti.org/academy/consensus-database/consensus-statement/-/consensus/implant-placement-and-loading-protocols/1802",
+        "label": "ITI: Implant Placement and Loading Protocols"
+      },
+      {
+        "href": "https://www.fda.gov/medical-devices/dental-devices/dental-implants-what-you-should-know",
+        "label": "FDA: Dental Implants: What You Should Know"
+      },
+      {
+        "href": "https://www.cuh.nhs.uk/patient-information/dental-implants-in-restorative-dentistry/",
+        "label": "Cambridge University Hospitals: Dental implants in restorative dentistry"
+      }
+    ]
+  },
+  {
+    "tema": "Falten diverses dents: quines opcions es poden valorar?",
+    "ca": "https://www.estudidentalcarrera.com/guies/implants-multiples.html",
+    "es": "https://www.estudidentalcarrera.com/es/guias/implantes-multiples.html",
+    "servei": "/implants-dentals.html",
+    "fonts": [
+      {
+        "href": "https://www.fda.gov/medical-devices/dental-devices/dental-implants-what-you-should-know",
+        "label": "FDA: Dental Implants: What You Should Know"
+      },
+      {
+        "href": "https://www.cuh.nhs.uk/patient-information/dental-implants-in-restorative-dentistry/",
+        "label": "Cambridge University Hospitals: Dental implants in restorative dentistry"
+      },
+      {
+        "href": "https://www.mouthhealthy.org/all-topics-a-z/missing-teeth",
+        "label": "ADA MouthHealthy: Missing Teeth"
+      }
+    ]
+  },
+  {
+    "tema": "Arcada completa: quatre o sis implants?",
+    "ca": "https://www.estudidentalcarrera.com/guies/arcada-completa-quatre-sis-implants.html",
+    "es": "https://www.estudidentalcarrera.com/es/guias/arcada-completa-cuatro-seis-implantes.html",
+    "servei": "/implants-dentals.html",
+    "fonts": [
+      {
+        "href": "https://network.iti.org/academy/consensus-database/consensus-statement/-/consensus/number-of-implants-placed-for-complete-arch-fixed-prostheses/1701",
+        "label": "ITI: Number of Implants Placed for Complete-Arch Fixed Prostheses"
+      },
+      {
+        "href": "https://www.fda.gov/medical-devices/dental-devices/dental-implants-what-you-should-know",
+        "label": "FDA: Dental Implants: What You Should Know"
+      },
+      {
+        "href": "https://www.cuh.nhs.uk/patient-information/dental-implants-in-restorative-dentistry/",
+        "label": "Cambridge University Hospitals: Dental implants in restorative dentistry"
+      }
+    ]
+  },
+  {
+    "tema": "Pròtesi dental fixa o removible: com es comparen?",
+    "ca": "https://www.estudidentalcarrera.com/guies/protesi-fixa-removible.html",
+    "es": "https://www.estudidentalcarrera.com/es/guias/protesis-fija-removible.html",
+    "servei": "/serveis.html#protesi-dental",
+    "fonts": [
+      {
+        "href": "https://www.nhs.uk/tests-and-treatments/dentures/",
+        "label": "NHS: Dentures"
+      },
+      {
+        "href": "https://www.mouthhealthy.org/all-topics-a-z/bridges",
+        "label": "ADA MouthHealthy: Bridges"
+      },
+      {
+        "href": "https://www.mouthhealthy.org/all-topics-a-z/crowns",
+        "label": "ADA MouthHealthy: Crowns"
+      }
+    ]
+  },
+  {
+    "tema": "Facetes de composite o porcellana: què convé comparar?",
+    "ca": "https://www.estudidentalcarrera.com/guies/facetes-composite-porcellana.html",
+    "es": "https://www.estudidentalcarrera.com/es/guias/carillas-composite-porcelana.html",
+    "servei": "/estetica-dental.html#carilles",
+    "fonts": [
+      {
+        "href": "https://www.mouthhealthy.org/all-topics-a-z/veneers",
+        "label": "ADA MouthHealthy: Veneers"
+      },
+      {
+        "href": "https://www.mouthhealthy.org/ways-to-improve-smile",
+        "label": "ADA MouthHealthy: 8 Ways to Improve Your Smile"
+      }
+    ]
+  },
+  {
+    "tema": "Composite dental: reparar una vora o tancar un espai",
+    "ca": "https://www.estudidentalcarrera.com/guies/composite-dental.html",
+    "es": "https://www.estudidentalcarrera.com/es/guias/composite-dental.html",
+    "servei": "/estetica-dental.html",
+    "fonts": [
+      {
+        "href": "https://www.mouthhealthy.org/ways-to-improve-smile",
+        "label": "ADA MouthHealthy: 8 Ways to Improve Your Smile"
+      },
+      {
+        "href": "https://www.nhs.uk/conditions/chipped-broken-or-cracked-tooth/",
+        "label": "NHS: Chipped, broken or cracked tooth"
+      }
+    ]
+  },
+  {
+    "tema": "Queixals del seny: quan es valora una extracció?",
+    "ca": "https://www.estudidentalcarrera.com/guies/queixals-seny.html",
+    "es": "https://www.estudidentalcarrera.com/es/guias/muelas-juicio.html",
+    "servei": "/serveis.html#cirurgia-oral",
+    "fonts": [
+      {
+        "href": "https://www.nhs.uk/tests-and-treatments/wisdom-tooth-removal/",
+        "label": "NHS: Wisdom tooth removal"
+      },
+      {
+        "href": "https://www.mouthhealthy.org/all-topics-a-z/wisdom-teeth",
+        "label": "ADA MouthHealthy: Wisdom Teeth"
+      }
+    ]
+  },
+  {
+    "tema": "Dent trencada o cop a la boca: com demanar ajuda",
+    "ca": "https://www.estudidentalcarrera.com/guies/dent-trencada-cop.html",
+    "es": "https://www.estudidentalcarrera.com/es/guias/diente-roto-golpe.html",
+    "servei": "/clinica-dental-lleida.html#urgencies-dentals",
+    "fonts": [
+      {
+        "href": "https://www.nhs.uk/conditions/chipped-broken-or-cracked-tooth/",
+        "label": "NHS: Chipped, broken or cracked tooth"
+      },
+      {
+        "href": "https://www.nhs.uk/conditions/knocked-out-tooth/",
+        "label": "NHS: Knocked-out tooth"
+      },
+      {
+        "href": "https://www.nhs.uk/conditions/dental-abscess/",
+        "label": "NHS: Dental abscess"
+      },
+      {
+        "href": "https://canalsalut.gencat.cat/ca/contacte/",
+        "label": "Canal Salut: 061 Salut Respon i 112"
+      }
+    ]
+  },
+  {
+    "tema": "Radiografia panoràmica o CBCT dental: per què cada prova?",
+    "ca": "https://www.estudidentalcarrera.com/guies/radiografia-panoramica-cbct.html",
+    "es": "https://www.estudidentalcarrera.com/es/guias/radiografia-panoramica-cbct.html",
+    "servei": "/serveis.html#radiologia-digital",
+    "fonts": [
+      {
+        "href": "https://www.fda.gov/radiation-emitting-products/medical-x-ray-imaging/dental-cone-beam-computed-tomography",
+        "label": "FDA: Dental Cone-beam Computed Tomography"
+      },
+      {
+        "href": "https://www.mouthhealthy.org/all-topics-a-z/x-rays",
+        "label": "ADA MouthHealthy: X-rays"
+      },
+      {
+        "href": "https://www.radiologyinfo.org/en/info/panoramic-xray",
+        "label": "ACR/RSNA RadiologyInfo: Panoramic Dental X-ray"
+      }
+    ]
+  },
+  {
+    "tema": "Neteja dental o raspat periodontal: quina diferència hi ha?",
+    "ca": "https://www.estudidentalcarrera.com/guies/neteja-dental-raspat.html",
+    "es": "https://www.estudidentalcarrera.com/es/guias/limpieza-dental-raspado.html",
+    "servei": "/periodoncia-endodoncia.html#neteja-dental",
+    "fonts": [
+      {
+        "href": "https://www.nidcr.nih.gov/health-info/gum-disease",
+        "label": "NIDCR: Periodontal (Gum) Disease"
+      },
+      {
+        "href": "https://www.mouthhealthy.org/all-topics-a-z/scaling-and-root-planing",
+        "label": "ADA MouthHealthy: Scaling and Root Planing"
+      }
+    ]
+  }
+]
