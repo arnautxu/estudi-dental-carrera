@@ -24,6 +24,11 @@ for (const lang of ['ca', 'es']) {
     assert.equal((html.match(/data-blog-category=/g) || []).length, 7);
     for (const category of Object.keys(categories)) assert.ok(html.includes(`data-category="${category}"`));
     assert.equal((renderBlogHome(lang).match(/data-blog-category=/g) || []).length, 3);
+    const home = renderBlogHome(lang);
+    for (const guide of entries(lang)) {
+      assert.equal(home.split(`href="/${guide.path}"`).length - 1, 1, `${guide.path}: one direct homepage link`);
+      assert.ok(!home.includes(`href="/${guide.alternatePath}"`), 'homepage reading links stay in the selected language');
+    }
   });
   test(`${lang}: every static desktop, mobile and footer navigation includes Blog`, () => {
     const folder = lang === 'ca' ? '.' : 'es';

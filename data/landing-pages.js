@@ -142,7 +142,7 @@ pages['ca-atm'] = servicePage('ca', {
   path: 'atm-bruxisme.html', alternatePath: 'es/atm-bruxismo.html',
   title: 'Dolor de mandíbula i bruxisme a Lleida i Tremp | Carrera',
   description: 'Valoració de dolor mandibular, sorolls, limitació d’obertura i bruxisme a Lleida i Tremp. Diagnòstic individual, opcions i seguiment.',
-  dateModified: '2026-09-16', updatedLabel: '16 de setembre de 2026',
+  dateModified: '2026-09-21', updatedLabel: '21 de setembre de 2026',
   eyebrow: 'ATM, dolor orofacial i bruxisme', h1: 'Dolor de mandíbula i bruxisme a Lleida i Tremp',
   lead: 'Dolor en mastegar, tensió al despertar, sorolls o desgast dental no sempre tenen una única causa. Comencem escoltant, explorant i diferenciant què pot contribuir als símptomes.',
   image: 'assets/img/serveis/atm-carme.webp', imageWidth: 1280, imageHeight: 1600, imageAlt: 'Professional d’Estudi Dental Carrera durant una valoració de la mandíbula',
@@ -180,6 +180,16 @@ pages['ca-atm'] = servicePage('ca', {
         'Si el problema requereix una altra àrea d’atenció, proposem coordinació amb medicina, fisioteràpia o una unitat del son. Busquem quin professional pot respondre a cada necessitat i comencem per les opcions menys invasives que permeti el cas.',
       ],
     },
+    {
+      "title": "Tractament del bruxisme a Lleida i Tremp: per on comencem",
+      "id": "tractament-bruxisme",
+      "jumpLabel": "Valoració i tractament",
+      "paragraphs": [
+        "Si busques tractament per al bruxisme, el primer pas és explicar què notes: estrènyer o grinyolar les dents, desgast, tensió o dolor. A la visita diferenciem què necessita protecció, què requereix seguiment i si cal estudiar altres possibles causes del malestar.",
+        "El pla i el pressupost depenen de la valoració. Si es proposa una fèrula, convé aclarir-ne l’objectiu, l’adaptació i els controls. Pots preparar la visita amb la <a href=\"/guies/ferula-descarrega.html\">guia de la fèrula de descàrrega</a> i les preguntes sobre <a href=\"/guies/dolor-mandibula-despertar.html\">dolor de mandíbula en despertar</a>."
+      ],
+      "ctaText": "Explica’ns què notes i si ja portes una fèrula o un aparell d’ortodòncia."
+    },
   ],
   faqs: [
     { q: 'Un clic a la mandíbula significa que està lesionada?', a: 'No necessàriament. Els sorolls poden existir sense dolor ni limitació. Cal valorar-los sobretot si són nous, dolorosos, s’acompanyen de bloqueig o dificulten el moviment.' },
@@ -205,7 +215,7 @@ pages['es-atm'] = servicePage('es', {
   path: 'es/atm-bruxismo.html', alternatePath: 'atm-bruxisme.html',
   title: 'Dolor de mandíbula y bruxismo en Lleida y Tremp | Carrera',
   description: 'Valoración de dolor mandibular, ruidos, limitación de apertura y bruxismo en Lleida y Tremp. Diagnóstico individual, opciones y seguimiento.',
-  dateModified: '2026-09-16', updatedLabel: '16 de septiembre de 2026',
+  dateModified: '2026-09-21', updatedLabel: '21 de septiembre de 2026',
   eyebrow: 'ATM, dolor orofacial y bruxismo', h1: 'Dolor de mandíbula y bruxismo en Lleida y Tremp',
   lead: 'Dolor al masticar, tensión al despertar, ruidos o desgaste dental no siempre tienen una única causa. Empezamos escuchando, explorando y diferenciando qué puede contribuir a los síntomas.',
   image: 'assets/img/serveis/atm-carme.webp', imageWidth: 1280, imageHeight: 1600, imageAlt: 'Profesional de Estudi Dental Carrera durante una valoración de la mandíbula',
@@ -242,6 +252,16 @@ pages['es-atm'] = servicePage('es', {
         'Una férula puede proteger los dientes o ayudar en ciertos cuadros. No elimina automáticamente el bruxismo ni es adecuada para cualquier problema de ATM. Explicamos para qué la proponemos, comprobamos su ajuste y revisamos su uso. Una férula comprada sin diagnóstico puede adaptarse mal.',
         'Si el problema requiere otra área de atención, proponemos coordinación con medicina, fisioterapia o una unidad del sueño. Buscamos qué profesional puede responder a cada necesidad y empezamos por las opciones menos invasivas que permita el caso.',
       ],
+    },
+    {
+      "title": "Tratamiento del bruxismo en Lleida y Tremp: por dónde empezamos",
+      "id": "tratamiento-bruxismo",
+      "jumpLabel": "Valoración y tratamiento",
+      "paragraphs": [
+        "Si buscas tratamiento para el bruxismo, el primer paso es explicar qué notas: apretar o rechinar los dientes, desgaste, tensión o dolor. En la visita diferenciamos qué necesita protección, qué requiere seguimiento y si conviene estudiar otras posibles causas del malestar.",
+        "El plan y el presupuesto dependen de la valoración. Si se propone una férula, conviene aclarar su objetivo, la adaptación y los controles. Puedes preparar la visita con la <a href=\"/es/guias/ferula-descarga.html\">guía de la férula de descarga</a> y las preguntas sobre <a href=\"/es/guias/dolor-mandibula-despertar.html\">dolor de mandíbula al despertar</a>."
+      ],
+      "ctaText": "Cuéntanos qué notas y si ya llevas una férula o un aparato de ortodoncia."
     },
   ],
   faqs: [
@@ -391,7 +411,7 @@ pages['ca-ortho'] = servicePage('ca', {
   path: 'ortodoncia.html', alternatePath: 'es/ortodoncia.html',
   title: 'Ortodòncia invisible a Lleida i Tremp | Carrera',
   description: 'Ortodòncia invisible a Lleida i Tremp. Comparem alineadors transparents i brackets segons la mossegada, la salut de les genives i les teves necessitats.',
-  dateModified: '2026-09-18', updatedLabel: '18 de setembre de 2026',
+  dateModified: '2026-09-21', updatedLabel: '21 de setembre de 2026',
   eyebrow: 'Ortodòncia en infants, adolescents i adults', h1: 'Ortodòncia invisible a Lleida i Tremp',
   lead: 'Abans de moure les dents, revisem la boca i què vols corregir. T’expliquem les opcions i com mantindrem la posició de les dents quan acabi el tractament.',
   image: 'assets/img/serveis/ortodoncia-model.webp', imageWidth: 1280, imageHeight: 1600, imageAlt: 'Model de dents amb bràquets en un prestatge de la clínica',
@@ -442,6 +462,16 @@ pages['ca-ortho'] = servicePage('ca', {
         'Si un retenidor es desenganxa, deixa d’encaixar o es perd, convé revisar-lo aviat. Des de l’inici expliquem quina retenció es preveu i com cuidar-la. És part del tractament, no un afegit al final.',
       ],
     },
+    {
+      "title": "Preu de l’ortodòncia: què cal comparar",
+      "id": "preu-ortodoncia",
+      "jumpLabel": "Preu i pressupost",
+      "paragraphs": [
+        "El preu d’una ortodòncia a Lleida o Tremp depèn de l’estudi i del pla proposat. Per comparar pressupostos, convé mirar més enllà del tipus d’aparell: quins moviments es preveuen, quines fases calen i quin seguiment s’ha inclòs.",
+        "Abans de començar, pregunta si el pressupost inclou l’estudi inicial, els controls, possibles ajustos del pla i els retenidors. També convé aclarir com es pressupostarien altres tractaments que poguessin ser necessaris. T’explicarem les opcions després de valorar el teu cas."
+      ],
+      "ctaText": "Demana una primera visita per valorar les opcions i el pressupost."
+    },
   ],
   faqs: [
     { q: 'Què valorareu a la primera visita?', a: 'A la primera visita valorem el teu cas i les opcions de tractament. T’expliquem les fases, els controls i el manteniment que es preveuen segons les teves necessitats.' },
@@ -468,7 +498,7 @@ pages['es-ortho'] = servicePage('es', {
   path: 'es/ortodoncia.html', alternatePath: 'ortodoncia.html',
   title: 'Ortodoncia invisible en Lleida y Tremp | Carrera',
   description: 'Ortodoncia invisible en Lleida y Tremp. Comparamos alineadores transparentes y brackets según la mordida, la salud de las encías y tus necesidades.',
-  dateModified: '2026-09-18', updatedLabel: '18 de septiembre de 2026',
+  dateModified: '2026-09-21', updatedLabel: '21 de septiembre de 2026',
   eyebrow: 'Ortodoncia en niños, adolescentes y adultos', h1: 'Ortodoncia invisible en Lleida y Tremp',
   lead: 'Antes de mover los dientes, revisamos la boca y qué quieres corregir. Te explicamos las opciones y cómo mantendremos la posición de los dientes al terminar el tratamiento.',
   image: 'assets/img/serveis/ortodoncia-model.webp', imageWidth: 1280, imageHeight: 1600, imageAlt: 'Modelo de dientes con brackets en un estante de la clínica',
@@ -518,6 +548,16 @@ pages['es-ortho'] = servicePage('es', {
         'Cuando termina el movimiento activo, los dientes pueden volver a cambiar de posición. Los retenedores ayudan a mantener el resultado. Pueden ser fijos o removibles según el caso, y también necesitan limpieza y controles.',
         'Si un retenedor se despega, deja de encajar o se pierde, conviene revisarlo pronto. Desde el inicio explicamos qué retención se prevé y cómo cuidarla. Es parte del tratamiento, no un añadido al final.',
       ],
+    },
+    {
+      "title": "Precio de la ortodoncia: qué conviene comparar",
+      "id": "precio-ortodoncia",
+      "jumpLabel": "Precio y presupuesto",
+      "paragraphs": [
+        "El precio de una ortodoncia en Lleida o Tremp depende del estudio y del plan propuesto. Para comparar presupuestos, conviene mirar más allá del tipo de aparato: qué movimientos se prevén, qué fases hacen falta y qué seguimiento se ha incluido.",
+        "Antes de empezar, pregunta si el presupuesto incluye el estudio inicial, los controles, posibles ajustes del plan y los retenedores. También conviene aclarar cómo se presupuestarían otros tratamientos que pudieran ser necesarios. Te explicaremos las opciones después de valorar tu caso."
+      ],
+      "ctaText": "Pide una primera visita para valorar las opciones y el presupuesto."
     },
   ],
   faqs: [
@@ -688,10 +728,10 @@ pages['es-perio'] = servicePage('es', {
 });
 
 pages['ca-aesthetic'] = servicePage('ca', {
-  dateModified: '2026-09-16', updatedLabel: '16 de setembre de 2026',
+  dateModified: '2026-09-21', updatedLabel: '21 de setembre de 2026',
   path: 'estetica-dental.html', alternatePath: 'es/estetica-dental.html',
-  title: 'Estètica dental a Lleida: carilles i blanquejament | Carrera',
-  description: 'Estètica dental a Lleida i Tremp: blanquejament dental, carilles i composite. Valorem dents, genives i mossegada abans de proposar canvis.',
+  title: 'Facetes dentals i blanquejament a Lleida i Tremp | Carrera',
+  description: 'Estètica dental a Lleida i Tremp: blanquejament, facetes o carilles dentals i composite. Valorem dents, genives i mossegada abans de proposar canvis.',
   eyebrow: 'Estètica dental conservadora', h1: 'Estètica dental a Lleida i Tremp',
   lead: 'Color, forma, posició i genives s’han de valorar conjuntament. Prioritzem les opcions reversibles o mínimament invasives abans de proposar restauracions.',
   image: 'assets/img/serveis/estetica-llum.webp', imageWidth: 1280, imageHeight: 1600, imageAlt: 'Valoració de llum i color per a un tractament d’estètica dental',
@@ -712,11 +752,11 @@ pages['ca-aesthetic'] = servicePage('ca', {
       ],
     },
     {
-      title: 'Carilles dentals a Lleida: composite i ceràmica',
-      id: 'carilles', jumpLabel: 'Carilles i composite',
+      title: 'Facetes dentals a Lleida i Tremp: composite i ceràmica',
+      id: 'carilles', jumpLabel: 'Facetes i composite',
       ctaText: 'Valorem la forma i les vores que voldries canviar.',
       paragraphs: [
-        'Una carilla cobreix la cara visible de la dent i pot ser de composite o de ceràmica. Reparar només una vora amb composite no és el mateix que recobrir-la. Comparem quanta superfície necessita un canvi, la mossegada i l’estat de les genives.',
+        'Una faceta dental, també coneguda com a carilla, cobreix la cara visible de la dent i pot ser de composite o de ceràmica. Reparar només una vora amb composite no és el mateix que recobrir-la. Comparem quanta superfície necessita un canvi, la mossegada i l’estat de les genives.',
         'Abans de restaurar, valorem si l’ortodòncia, l’emblanquiment o un petit canvi de contorn conservarien més dent. Si cal retirar esmalt, aquest pas no és reversible. Una prova estètica pot ajudar a parlar de proporcions i de com es nota en parlar.',
       ],
       comparison: {
@@ -739,6 +779,7 @@ pages['ca-aesthetic'] = servicePage('ca', {
     },
   ],
   faqs: [
+    {"q": "Quant costen les facetes dentals o el blanquejament?", "a": "El pressupost depèn de les dents que es tractaran, el material o sistema proposat i l’estat inicial de la boca. A la visita comparem les alternatives i expliquem què inclou cada opció, els controls i el manteniment previst."},
     { q: 'Què valorareu a la primera visita?', a: 'A la primera visita valorem el teu cas i les opcions de tractament. T’expliquem les fases, els controls i el manteniment que es preveuen segons les teves necessitats.' },
     { q: 'L’emblanquiment fa malbé l’esmalt?', a: 'Els sistemes indicats i supervisats tenen un perfil de seguretat conegut, però poden causar sensibilitat temporal i no són adequats en qualsevol situació.' },
     { q: 'Les corones i els empastaments s’emblanqueixen?', a: 'No. Els materials restauradors no canvien de color com la dent natural i pot caldre replantejar-los després.' },
@@ -754,7 +795,7 @@ pages['ca-aesthetic'] = servicePage('ca', {
 });
 
 pages['es-aesthetic'] = servicePage('es', {
-  dateModified: '2026-09-16', updatedLabel: '16 de septiembre de 2026',
+  dateModified: '2026-09-21', updatedLabel: '21 de septiembre de 2026',
   path: 'es/estetica-dental.html', alternatePath: 'estetica-dental.html',
   title: 'Estética dental en Lleida: carillas y blanqueamiento | Carrera',
   description: 'Estética dental en Lleida y Tremp: blanqueamiento dental, carillas y composite. Valoramos dientes, encías y mordida antes de proponer cambios.',
@@ -805,6 +846,7 @@ pages['es-aesthetic'] = servicePage('es', {
     },
   ],
   faqs: [
+    {"q": "¿Cuánto cuestan las carillas dentales o el blanqueamiento?", "a": "El presupuesto depende de los dientes que se tratarán, el material o sistema propuesto y el estado inicial de la boca. En la visita comparamos las alternativas y explicamos qué incluye cada opción, los controles y el mantenimiento previsto."},
     { q: '¿Qué valoraréis en la primera visita?', a: 'En la primera visita valoramos tu caso y las opciones de tratamiento. Te explicamos las fases, los controles y el mantenimiento que se prevén según tus necesidades.' },
     { q: '¿El blanqueamiento daña el esmalte?', a: 'Los sistemas indicados y supervisados tienen un perfil de seguridad conocido, pero pueden causar sensibilidad temporal y no son adecuados en cualquier situación.' },
     { q: '¿Las coronas y los empastes se blanquean?', a: 'No. Los materiales restauradores no cambian de color como el diente natural y puede ser necesario replantearlos después.' },
@@ -835,15 +877,15 @@ function locationPage(lang, spec) {
 
 pages['ca-lleida'] = locationPage('ca', {
   path: 'clinica-dental-lleida.html', alternatePath: 'es/clinica-dental-lleida.html', city: 'Lleida',
-  dateModified: '2026-09-18', updatedLabel: '18 de setembre de 2026',
-  title: 'Clínica dental a Lleida | Estudi Dental Carrera',
+  dateModified: '2026-09-21', updatedLabel: '21 de setembre de 2026',
+  title: 'Dentista a Lleida | Clínica dental Estudi Dental Carrera',
   description: 'Dentistes a Lleida: clínica dental al carrer Major per a diagnòstic, prevenció i tractaments coordinats. Coneix l’equip i demana una primera visita.',
   eyebrow: 'Carrer Major, Lleida', h1: 'Clínica dental a Lleida amb una mirada integral',
   lead: 'Al centre de Lleida, un equip coordinat per entendre el problema abans de proposar una solució. Primera visita, diagnòstic i seguiment en un mateix espai.',
   image: 'assets/img/lleida-edifici.webp', imageWidth: 1333, imageHeight: 2000, imageAlt: 'Edifici de la clínica Estudi Dental Carrera al carrer Major de Lleida',
   introTitle: 'Odontologia al centre de Lleida, amb temps per explicar',
   intro: [
-    'Estudi Dental Carrera és una clínica dental al centre de Lleida, al carrer Major, 74-76, 3r 3a. Hi fem visites de diagnòstic, prevenció i tractament. Abans de substituir o moure una dent, valorem què podem conservar i quin benefici tindria cada pas.',
+    'Estudi Dental Carrera és una clínica dental al centre de Lleida, al carrer Major, 74-76, 3r 3a. El nostre equip de dentistes hi fa visites de diagnòstic, prevenció i tractament. Abans de substituir o moure una dent, valorem què podem conservar i quin benefici tindria cada pas.',
     'Si el cas necessita diversos professionals, ordenem les visites entre l’equip. Pot caldre tractar les genives abans de posar una pròtesi o revisar la mossegada abans de restaurar una dent. T’expliquem què proposem, en quin ordre i per què.',
   ],
   aside: 'Adreça: carrer Major, 74-76, 3r 3a, 25007 Lleida. Telèfon: 973 26 88 26. Horari: dilluns a divendres 9–20 h; dissabtes 9–14 h. Diumenges, tancat. Consulta amb recepció qualsevol necessitat d’accés.',
@@ -929,8 +971,8 @@ pages['ca-lleida'] = locationPage('ca', {
 
 pages['es-lleida'] = locationPage('es', {
   path: 'es/clinica-dental-lleida.html', alternatePath: 'clinica-dental-lleida.html', city: 'Lleida',
-  dateModified: '2026-09-18', updatedLabel: '18 de septiembre de 2026',
-  title: 'Clínica dental Lleida | Estudi Dental Carrera',
+  dateModified: '2026-09-21', updatedLabel: '21 de septiembre de 2026',
+  title: 'Dentista en Lleida | Clínica dental Estudi Dental Carrera',
   description: 'Dentistas en Lleida: clínica dental en carrer Major para diagnóstico, prevención y tratamientos coordinados. Conoce al equipo y pide una primera visita.',
   eyebrow: 'Dentistas en carrer Major, Lleida', h1: 'Clínica dental en Lleida: diagnóstico y tratamientos coordinados',
   lead: 'Nuestro equipo de dentistas en Lleida reúne diagnóstico, prevención y seguimiento en un mismo espacio, con un plan explicado antes de empezar cualquier tratamiento.',
