@@ -1,0 +1,52 @@
+[
+  {
+    "path": "/assets/img/editorial/recepcio-lleida.webp",
+    "status": 200,
+    "type": "image/webp"
+  },
+  {
+    "path": "/assets/img/editorial/conversa-consulta-tremp.webp",
+    "status": 200,
+    "type": "image/webp"
+  },
+  {
+    "path": "/assets/img/editorial/atm-exploracio-lleida.webp",
+    "status": 200,
+    "type": "image/webp"
+  },
+  {
+    "path": "/assets/img/editorial/higiene-dental-tremp.webp",
+    "status": 200,
+    "type": "image/webp"
+  },
+  {
+    "path": "/assets/img/editorial/recepcio-tremp.webp",
+    "status": 200,
+    "type": "image/webp"
+  },
+  {
+    "path": "/assets/img/editorial/restauracio-dental-lleida.webp",
+    "status": 200,
+    "type": "image/webp"
+  },
+  {
+    "path": "/assets/img/editorial/implant-preparacio-tremp.webp",
+    "status": 200,
+    "type": "image/webp"
+  },
+  {
+    "path": "/assets/img/editorial/escaner-intraoral-tremp.webp",
+    "status": 200,
+    "type": "image/webp"
+  },
+  {
+    "path": "/assets/img/editorial/gabinet-tremp.webp",
+    "status": 200,
+    "type": "image/webp"
+  },
+  {
+    "path": "/assets/img/editorial/implants-planificacio-lleida.webp",
+    "status": 200,
+    "type": "image/webp"
+  }
+]

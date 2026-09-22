@@ -1,0 +1,1422 @@
+{
+  "base": "https://www.estudidentalcarrera.com",
+  "pages": 94,
+  "guides": 70,
+  "blog_counts": {
+    "/blog.html": 35,
+    "/es/blog.html": 35
+  },
+  "errors": [],
+  "results": {
+    "/": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/",
+        "es": "https://www.estudidentalcarrera.com/es/",
+        "x-default": "https://www.estudidentalcarrera.com/"
+      },
+      "cards": 3,
+      "final": "https://www.estudidentalcarrera.com/"
+    },
+    "/es/": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/",
+        "es": "https://www.estudidentalcarrera.com/es/",
+        "x-default": "https://www.estudidentalcarrera.com/"
+      },
+      "cards": 3,
+      "final": "https://www.estudidentalcarrera.com/es/"
+    },
+    "/serveis.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/serveis.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/serveis.html",
+        "es": "https://www.estudidentalcarrera.com/es/servicios.html",
+        "x-default": "https://www.estudidentalcarrera.com/serveis.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/serveis.html"
+    },
+    "/es/servicios.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/servicios.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/serveis.html",
+        "es": "https://www.estudidentalcarrera.com/es/servicios.html",
+        "x-default": "https://www.estudidentalcarrera.com/serveis.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/servicios.html"
+    },
+    "/equip.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/equip.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/equip.html",
+        "es": "https://www.estudidentalcarrera.com/es/equipo.html",
+        "x-default": "https://www.estudidentalcarrera.com/equip.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/equip.html"
+    },
+    "/es/equipo.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/equipo.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/equip.html",
+        "es": "https://www.estudidentalcarrera.com/es/equipo.html",
+        "x-default": "https://www.estudidentalcarrera.com/equip.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/equipo.html"
+    },
+    "/seus.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/seus.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/seus.html",
+        "es": "https://www.estudidentalcarrera.com/es/sedes.html",
+        "x-default": "https://www.estudidentalcarrera.com/seus.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/seus.html"
+    },
+    "/es/sedes.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/sedes.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/seus.html",
+        "es": "https://www.estudidentalcarrera.com/es/sedes.html",
+        "x-default": "https://www.estudidentalcarrera.com/seus.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/sedes.html"
+    },
+    "/atm-bruxisme.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/atm-bruxisme.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/atm-bruxisme.html",
+        "es": "https://www.estudidentalcarrera.com/es/atm-bruxismo.html",
+        "x-default": "https://www.estudidentalcarrera.com/atm-bruxisme.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/atm-bruxisme.html"
+    },
+    "/es/atm-bruxismo.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/atm-bruxismo.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/atm-bruxisme.html",
+        "es": "https://www.estudidentalcarrera.com/es/atm-bruxismo.html",
+        "x-default": "https://www.estudidentalcarrera.com/atm-bruxisme.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/atm-bruxismo.html"
+    },
+    "/implants-dentals.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/implants-dentals.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/implants-dentals.html",
+        "es": "https://www.estudidentalcarrera.com/es/implantes-dentales.html",
+        "x-default": "https://www.estudidentalcarrera.com/implants-dentals.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/implants-dentals.html"
+    },
+    "/es/implantes-dentales.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/implantes-dentales.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/implants-dentals.html",
+        "es": "https://www.estudidentalcarrera.com/es/implantes-dentales.html",
+        "x-default": "https://www.estudidentalcarrera.com/implants-dentals.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/implantes-dentales.html"
+    },
+    "/ortodoncia.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/ortodoncia.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/ortodoncia.html",
+        "es": "https://www.estudidentalcarrera.com/es/ortodoncia.html",
+        "x-default": "https://www.estudidentalcarrera.com/ortodoncia.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/ortodoncia.html"
+    },
+    "/es/ortodoncia.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/ortodoncia.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/ortodoncia.html",
+        "es": "https://www.estudidentalcarrera.com/es/ortodoncia.html",
+        "x-default": "https://www.estudidentalcarrera.com/ortodoncia.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/ortodoncia.html"
+    },
+    "/periodoncia-endodoncia.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/periodoncia-endodoncia.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/periodoncia-endodoncia.html",
+        "es": "https://www.estudidentalcarrera.com/es/periodoncia-endodoncia.html",
+        "x-default": "https://www.estudidentalcarrera.com/periodoncia-endodoncia.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/periodoncia-endodoncia.html"
+    },
+    "/es/periodoncia-endodoncia.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/periodoncia-endodoncia.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/periodoncia-endodoncia.html",
+        "es": "https://www.estudidentalcarrera.com/es/periodoncia-endodoncia.html",
+        "x-default": "https://www.estudidentalcarrera.com/periodoncia-endodoncia.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/periodoncia-endodoncia.html"
+    },
+    "/estetica-dental.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/estetica-dental.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/estetica-dental.html",
+        "es": "https://www.estudidentalcarrera.com/es/estetica-dental.html",
+        "x-default": "https://www.estudidentalcarrera.com/estetica-dental.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/estetica-dental.html"
+    },
+    "/es/estetica-dental.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/estetica-dental.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/estetica-dental.html",
+        "es": "https://www.estudidentalcarrera.com/es/estetica-dental.html",
+        "x-default": "https://www.estudidentalcarrera.com/estetica-dental.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/estetica-dental.html"
+    },
+    "/clinica-dental-lleida.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/clinica-dental-lleida.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/clinica-dental-lleida.html",
+        "es": "https://www.estudidentalcarrera.com/es/clinica-dental-lleida.html",
+        "x-default": "https://www.estudidentalcarrera.com/clinica-dental-lleida.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/clinica-dental-lleida.html"
+    },
+    "/es/clinica-dental-lleida.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/clinica-dental-lleida.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/clinica-dental-lleida.html",
+        "es": "https://www.estudidentalcarrera.com/es/clinica-dental-lleida.html",
+        "x-default": "https://www.estudidentalcarrera.com/clinica-dental-lleida.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/clinica-dental-lleida.html"
+    },
+    "/dentista-tremp.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/dentista-tremp.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/dentista-tremp.html",
+        "es": "https://www.estudidentalcarrera.com/es/dentista-tremp.html",
+        "x-default": "https://www.estudidentalcarrera.com/dentista-tremp.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/dentista-tremp.html"
+    },
+    "/es/dentista-tremp.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/dentista-tremp.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/dentista-tremp.html",
+        "es": "https://www.estudidentalcarrera.com/es/dentista-tremp.html",
+        "x-default": "https://www.estudidentalcarrera.com/dentista-tremp.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/dentista-tremp.html"
+    },
+    "/blog.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/blog.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/blog.html",
+        "es": "https://www.estudidentalcarrera.com/es/blog.html",
+        "x-default": "https://www.estudidentalcarrera.com/blog.html"
+      },
+      "cards": 35,
+      "final": "https://www.estudidentalcarrera.com/blog.html"
+    },
+    "/es/blog.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/blog.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/blog.html",
+        "es": "https://www.estudidentalcarrera.com/es/blog.html",
+        "x-default": "https://www.estudidentalcarrera.com/blog.html"
+      },
+      "cards": 35,
+      "final": "https://www.estudidentalcarrera.com/es/blog.html"
+    },
+    "/guies/endodoncia-dubtes.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/guies/endodoncia-dubtes.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/endodoncia-dubtes.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/endodoncia-dudas.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/endodoncia-dubtes.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/guies/endodoncia-dubtes.html"
+    },
+    "/es/guias/endodoncia-dudas.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/guias/endodoncia-dudas.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/endodoncia-dubtes.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/endodoncia-dudas.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/endodoncia-dubtes.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/guias/endodoncia-dudas.html"
+    },
+    "/guies/sagnat-genives.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/guies/sagnat-genives.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/sagnat-genives.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/sangrado-encias.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/sagnat-genives.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/guies/sagnat-genives.html"
+    },
+    "/es/guias/sangrado-encias.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/guias/sangrado-encias.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/sagnat-genives.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/sangrado-encias.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/sagnat-genives.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/guias/sangrado-encias.html"
+    },
+    "/guies/ferula-descarrega.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/guies/ferula-descarrega.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/ferula-descarrega.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/ferula-descarga.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/ferula-descarrega.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/guies/ferula-descarrega.html"
+    },
+    "/es/guias/ferula-descarga.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/guias/ferula-descarga.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/ferula-descarrega.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/ferula-descarga.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/ferula-descarrega.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/guias/ferula-descarga.html"
+    },
+    "/guies/implant-o-pont.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/guies/implant-o-pont.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/implant-o-pont.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/implante-o-puente.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/implant-o-pont.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/guies/implant-o-pont.html"
+    },
+    "/es/guias/implante-o-puente.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/guias/implante-o-puente.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/implant-o-pont.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/implante-o-puente.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/implant-o-pont.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/guias/implante-o-puente.html"
+    },
+    "/guies/alineadors-o-braquets.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/guies/alineadors-o-braquets.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/alineadors-o-braquets.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/alineadores-o-brackets.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/alineadors-o-braquets.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/guies/alineadors-o-braquets.html"
+    },
+    "/es/guias/alineadores-o-brackets.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/guias/alineadores-o-brackets.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/alineadors-o-braquets.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/alineadores-o-brackets.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/alineadors-o-braquets.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/guias/alineadores-o-brackets.html"
+    },
+    "/guies/taques-dents.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/guies/taques-dents.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/taques-dents.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/manchas-dientes.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/taques-dents.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/guies/taques-dents.html"
+    },
+    "/es/guias/manchas-dientes.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/guias/manchas-dientes.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/taques-dents.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/manchas-dientes.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/taques-dents.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/guias/manchas-dientes.html"
+    },
+    "/guies/dolor-mandibula-despertar.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/guies/dolor-mandibula-despertar.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/dolor-mandibula-despertar.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/dolor-mandibula-despertar.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/dolor-mandibula-despertar.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/guies/dolor-mandibula-despertar.html"
+    },
+    "/es/guias/dolor-mandibula-despertar.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/guias/dolor-mandibula-despertar.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/dolor-mandibula-despertar.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/dolor-mandibula-despertar.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/dolor-mandibula-despertar.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/guias/dolor-mandibula-despertar.html"
+    },
+    "/guies/primera-visita-dentista-infantil.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/guies/primera-visita-dentista-infantil.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/primera-visita-dentista-infantil.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/primera-visita-dentista-infantil.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/primera-visita-dentista-infantil.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/guies/primera-visita-dentista-infantil.html"
+    },
+    "/es/guias/primera-visita-dentista-infantil.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/guias/primera-visita-dentista-infantil.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/primera-visita-dentista-infantil.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/primera-visita-dentista-infantil.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/primera-visita-dentista-infantil.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/guias/primera-visita-dentista-infantil.html"
+    },
+    "/guies/ortodoncia-infantil.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/guies/ortodoncia-infantil.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/ortodoncia-infantil.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/ortodoncia-infantil.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/ortodoncia-infantil.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/guies/ortodoncia-infantil.html"
+    },
+    "/es/guias/ortodoncia-infantil.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/guias/ortodoncia-infantil.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/ortodoncia-infantil.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/ortodoncia-infantil.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/ortodoncia-infantil.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/guias/ortodoncia-infantil.html"
+    },
+    "/guies/clic-mandibula.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/guies/clic-mandibula.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/clic-mandibula.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/clic-mandibula.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/clic-mandibula.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/guies/clic-mandibula.html"
+    },
+    "/es/guias/clic-mandibula.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/guias/clic-mandibula.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/clic-mandibula.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/clic-mandibula.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/clic-mandibula.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/guias/clic-mandibula.html"
+    },
+    "/guies/dolor-mandibula-dentista-fisioterapeuta.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/guies/dolor-mandibula-dentista-fisioterapeuta.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/dolor-mandibula-dentista-fisioterapeuta.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/dolor-mandibula-dentista-fisioterapeuta.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/dolor-mandibula-dentista-fisioterapeuta.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/guies/dolor-mandibula-dentista-fisioterapeuta.html"
+    },
+    "/es/guias/dolor-mandibula-dentista-fisioterapeuta.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/guias/dolor-mandibula-dentista-fisioterapeuta.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/dolor-mandibula-dentista-fisioterapeuta.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/dolor-mandibula-dentista-fisioterapeuta.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/dolor-mandibula-dentista-fisioterapeuta.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/guias/dolor-mandibula-dentista-fisioterapeuta.html"
+    },
+    "/guies/implant-immediat-carrega-immediata.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/guies/implant-immediat-carrega-immediata.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/implant-immediat-carrega-immediata.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/implante-inmediato-carga-inmediata.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/implant-immediat-carrega-immediata.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/guies/implant-immediat-carrega-immediata.html"
+    },
+    "/es/guias/implante-inmediato-carga-inmediata.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/guias/implante-inmediato-carga-inmediata.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/implant-immediat-carrega-immediata.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/implante-inmediato-carga-inmediata.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/implant-immediat-carrega-immediata.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/guias/implante-inmediato-carga-inmediata.html"
+    },
+    "/guies/implants-multiples.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/guies/implants-multiples.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/implants-multiples.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/implantes-multiples.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/implants-multiples.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/guies/implants-multiples.html"
+    },
+    "/es/guias/implantes-multiples.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/guias/implantes-multiples.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/implants-multiples.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/implantes-multiples.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/implants-multiples.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/guias/implantes-multiples.html"
+    },
+    "/guies/arcada-completa-quatre-sis-implants.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/guies/arcada-completa-quatre-sis-implants.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/arcada-completa-quatre-sis-implants.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/arcada-completa-cuatro-seis-implantes.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/arcada-completa-quatre-sis-implants.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/guies/arcada-completa-quatre-sis-implants.html"
+    },
+    "/es/guias/arcada-completa-cuatro-seis-implantes.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/guias/arcada-completa-cuatro-seis-implantes.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/arcada-completa-quatre-sis-implants.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/arcada-completa-cuatro-seis-implantes.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/arcada-completa-quatre-sis-implants.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/guias/arcada-completa-cuatro-seis-implantes.html"
+    },
+    "/guies/protesi-fixa-removible.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/guies/protesi-fixa-removible.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/protesi-fixa-removible.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/protesis-fija-removible.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/protesi-fixa-removible.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/guies/protesi-fixa-removible.html"
+    },
+    "/es/guias/protesis-fija-removible.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/guias/protesis-fija-removible.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/protesi-fixa-removible.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/protesis-fija-removible.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/protesi-fixa-removible.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/guias/protesis-fija-removible.html"
+    },
+    "/guies/facetes-composite-porcellana.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/guies/facetes-composite-porcellana.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/facetes-composite-porcellana.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/carillas-composite-porcelana.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/facetes-composite-porcellana.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/guies/facetes-composite-porcellana.html"
+    },
+    "/es/guias/carillas-composite-porcelana.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/guias/carillas-composite-porcelana.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/facetes-composite-porcellana.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/carillas-composite-porcelana.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/facetes-composite-porcellana.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/guias/carillas-composite-porcelana.html"
+    },
+    "/guies/composite-dental.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/guies/composite-dental.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/composite-dental.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/composite-dental.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/composite-dental.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/guies/composite-dental.html"
+    },
+    "/es/guias/composite-dental.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/guias/composite-dental.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/composite-dental.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/composite-dental.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/composite-dental.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/guias/composite-dental.html"
+    },
+    "/guies/queixals-seny.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/guies/queixals-seny.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/queixals-seny.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/muelas-juicio.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/queixals-seny.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/guies/queixals-seny.html"
+    },
+    "/es/guias/muelas-juicio.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/guias/muelas-juicio.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/queixals-seny.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/muelas-juicio.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/queixals-seny.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/guias/muelas-juicio.html"
+    },
+    "/guies/dent-trencada-cop.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/guies/dent-trencada-cop.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/dent-trencada-cop.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/diente-roto-golpe.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/dent-trencada-cop.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/guies/dent-trencada-cop.html"
+    },
+    "/es/guias/diente-roto-golpe.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/guias/diente-roto-golpe.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/dent-trencada-cop.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/diente-roto-golpe.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/dent-trencada-cop.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/guias/diente-roto-golpe.html"
+    },
+    "/guies/radiografia-panoramica-cbct.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/guies/radiografia-panoramica-cbct.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/radiografia-panoramica-cbct.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/radiografia-panoramica-cbct.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/radiografia-panoramica-cbct.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/guies/radiografia-panoramica-cbct.html"
+    },
+    "/es/guias/radiografia-panoramica-cbct.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/guias/radiografia-panoramica-cbct.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/radiografia-panoramica-cbct.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/radiografia-panoramica-cbct.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/radiografia-panoramica-cbct.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/guias/radiografia-panoramica-cbct.html"
+    },
+    "/guies/neteja-dental-raspat.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/guies/neteja-dental-raspat.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/neteja-dental-raspat.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/limpieza-dental-raspado.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/neteja-dental-raspat.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/guies/neteja-dental-raspat.html"
+    },
+    "/es/guias/limpieza-dental-raspado.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/guias/limpieza-dental-raspado.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/neteja-dental-raspat.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/limpieza-dental-raspado.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/neteja-dental-raspat.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/guias/limpieza-dental-raspado.html"
+    },
+    "/guies/triar-dentista-lleida.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/guies/triar-dentista-lleida.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/triar-dentista-lleida.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/elegir-dentista-lleida.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/triar-dentista-lleida.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/guies/triar-dentista-lleida.html"
+    },
+    "/es/guias/elegir-dentista-lleida.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/guias/elegir-dentista-lleida.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/triar-dentista-lleida.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/elegir-dentista-lleida.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/triar-dentista-lleida.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/guias/elegir-dentista-lleida.html"
+    },
+    "/guies/por-dentista.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/guies/por-dentista.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/por-dentista.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/miedo-dentista.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/por-dentista.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/guies/por-dentista.html"
+    },
+    "/es/guias/miedo-dentista.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/guias/miedo-dentista.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/por-dentista.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/miedo-dentista.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/por-dentista.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/guias/miedo-dentista.html"
+    },
+    "/guies/sensibilitat-dental-fred.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/guies/sensibilitat-dental-fred.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/sensibilitat-dental-fred.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/sensibilidad-dental-frio.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/sensibilitat-dental-fred.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/guies/sensibilitat-dental-fred.html"
+    },
+    "/es/guias/sensibilidad-dental-frio.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/guias/sensibilidad-dental-frio.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/sensibilitat-dental-fred.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/sensibilidad-dental-frio.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/sensibilitat-dental-fred.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/guias/sensibilidad-dental-frio.html"
+    },
+    "/guies/bony-geniva.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/guies/bony-geniva.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/bony-geniva.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/bulto-encia.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/bony-geniva.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/guies/bony-geniva.html"
+    },
+    "/es/guias/bulto-encia.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/guias/bulto-encia.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/bony-geniva.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/bulto-encia.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/bony-geniva.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/guias/bulto-encia.html"
+    },
+    "/guies/mal-ale-persistent.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/guies/mal-ale-persistent.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/mal-ale-persistent.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/mal-aliento-persistente.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/mal-ale-persistent.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/guies/mal-ale-persistent.html"
+    },
+    "/es/guias/mal-aliento-persistente.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/guias/mal-aliento-persistente.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/mal-ale-persistent.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/mal-aliento-persistente.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/mal-ale-persistent.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/guias/mal-aliento-persistente.html"
+    },
+    "/guies/caries-dents-llet.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/guies/caries-dents-llet.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/caries-dents-llet.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/caries-dientes-leche.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/caries-dents-llet.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/guies/caries-dents-llet.html"
+    },
+    "/es/guias/caries-dientes-leche.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/guias/caries-dientes-leche.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/caries-dents-llet.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/caries-dientes-leche.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/caries-dents-llet.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/guias/caries-dientes-leche.html"
+    },
+    "/guies/caries-entre-dents.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/guies/caries-entre-dents.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/caries-entre-dents.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/caries-entre-dientes.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/caries-entre-dents.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/guies/caries-entre-dents.html"
+    },
+    "/es/guias/caries-entre-dientes.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/guias/caries-entre-dientes.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/caries-entre-dents.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/caries-entre-dientes.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/caries-entre-dents.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/guias/caries-entre-dientes.html"
+    },
+    "/guies/boca-seca.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/guies/boca-seca.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/boca-seca.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/boca-seca.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/boca-seca.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/guies/boca-seca.html"
+    },
+    "/es/guias/boca-seca.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/guias/boca-seca.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/boca-seca.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/boca-seca.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/boca-seca.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/guias/boca-seca.html"
+    },
+    "/guies/erosio-esmalt-dental.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/guies/erosio-esmalt-dental.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/erosio-esmalt-dental.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/erosion-esmalte-dental.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/erosio-esmalt-dental.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/guies/erosio-esmalt-dental.html"
+    },
+    "/es/guias/erosion-esmalte-dental.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/guias/erosion-esmalte-dental.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/erosio-esmalt-dental.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/erosion-esmalte-dental.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/erosio-esmalt-dental.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/guias/erosion-esmalte-dental.html"
+    },
+    "/guies/diabetis-genives.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/guies/diabetis-genives.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/diabetis-genives.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/diabetes-encias.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/diabetis-genives.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/guies/diabetis-genives.html"
+    },
+    "/es/guias/diabetes-encias.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/guias/diabetes-encias.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/diabetis-genives.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/diabetes-encias.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/diabetis-genives.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/guias/diabetes-encias.html"
+    },
+    "/guies/manteniment-implants-dentals.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/guies/manteniment-implants-dentals.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/manteniment-implants-dentals.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/mantenimiento-implantes-dentales.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/manteniment-implants-dentals.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/guies/manteniment-implants-dentals.html"
+    },
+    "/es/guias/mantenimiento-implantes-dentales.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/guias/mantenimiento-implantes-dentales.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/manteniment-implants-dentals.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/mantenimiento-implantes-dentales.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/manteniment-implants-dentals.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/guias/mantenimiento-implantes-dentales.html"
+    },
+    "/guies/escaner-intraoral.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/guies/escaner-intraoral.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/escaner-intraoral.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/escaner-intraoral.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/escaner-intraoral.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/guies/escaner-intraoral.html"
+    },
+    "/es/guias/escaner-intraoral.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/guias/escaner-intraoral.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/escaner-intraoral.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/escaner-intraoral.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/escaner-intraoral.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/guias/escaner-intraoral.html"
+    },
+    "/guies/durada-anestesia-dental.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/guies/durada-anestesia-dental.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/durada-anestesia-dental.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/duracion-anestesia-dental.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/durada-anestesia-dental.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/guies/durada-anestesia-dental.html"
+    },
+    "/es/guias/duracion-anestesia-dental.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/guias/duracion-anestesia-dental.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/durada-anestesia-dental.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/duracion-anestesia-dental.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/durada-anestesia-dental.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/guias/duracion-anestesia-dental.html"
+    },
+    "/guies/implants-poc-os.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "ca",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/guies/implants-poc-os.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/implants-poc-os.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/implantes-poco-hueso.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/implants-poc-os.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/guies/implants-poc-os.html"
+    },
+    "/es/guias/implantes-poco-hueso.html": {
+      "status": 200,
+      "h1": 1,
+      "lang": "es",
+      "canonical": [
+        "https://www.estudidentalcarrera.com/es/guias/implantes-poco-hueso.html"
+      ],
+      "hreflang": {
+        "ca": "https://www.estudidentalcarrera.com/guies/implants-poc-os.html",
+        "es": "https://www.estudidentalcarrera.com/es/guias/implantes-poco-hueso.html",
+        "x-default": "https://www.estudidentalcarrera.com/guies/implants-poc-os.html"
+      },
+      "cards": 0,
+      "final": "https://www.estudidentalcarrera.com/es/guias/implantes-poco-hueso.html"
+    }
+  }
+}

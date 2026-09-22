@@ -43,3 +43,12 @@ La publicació es comprova amb build, proves existents, revisió del render i co
 - 94 URLs del sitemap amb HTTP 200, un H1, idioma correcte, canonical propi, hreflang recíproc i sense meta noindex; 70 guies i 35 targetes a cada blog. La previsualització local conserva expressament una capçalera noindex.
 - Revisió al navegador de l’article de tria de dentista i del blog ES, en escriptori i a 390 × 844: títols, text, fotografia, peu fix de contacte, graella i filtre «La visita dental» (2 articles) correctes. Vista del navegador restaurada.
 - 67 fonts externes comprovades per HTTP: 59 respostes 200, una 202 i set 403 de proteccions contra automatització. Cap resposta 404. La lectura i el contrast de les fonts estan documentats a les notes editorials; un 403 del comprovador no s’interpreta com a article desaparegut.
+
+### Publicació i enviament a Google
+
+- Contingut publicat a `main`: `0771c3c06acd92c46b122cb17c1a8d884302dd84`.
+- Desplegament de producció `dpl_5ieituMhFFTLW8DTEjWsVF4RZ8ww`, estat READY, mateix SHA i àlies públic `www.estudidentalcarrera.com`. Comprovacions GitHub `build`, `deploy` i `report-build-status` correctes.
+- Verificació pública: les 94 URLs passen, 70 guies i 35 articles per idioma. Les deu fotografies diferents utilitzades als nous articles retornen HTTP 200. `robots.txt` permet rastrejar i apunta al sitemap vigent.
+- Sitemap `https://www.estudidentalcarrera.com/sitemap.xml` reenviat a Search Console el 22/09/2026. Confirmació visible: «Se ha enviado el sitemap correctamente». L’enviament inclou totes les 28 URLs noves.
+- Peticions individuals acceptades per a `/guies/triar-dentista-lleida.html` i `/es/guias/elegir-dentista-lleida.html`. En tots dos casos Google ha confirmat «Se ha solicitado la indexación» i la incorporació a la cua de rastreig prioritària després de comprovar la URL publicada.
+- **Indexació efectiva pendent de Google.** En fer les peticions, les dues URLs encara constaven com a desconegudes a l’índex. Ni la publicació ni la confirmació d’enviament acrediten que les 28 pàgines ja apareguin als resultats.
