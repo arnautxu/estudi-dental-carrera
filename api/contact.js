@@ -63,7 +63,7 @@ module.exports = async (req, res) => {
   const apiKey = String(process.env.RESEND_API_KEY || '').trim();
   const from = String(process.env.CONTACT_FROM_EMAIL || '').trim();
   const to = data.seu === 'tremp'
-    ? String(process.env.CONTACT_EMAIL_TREMP || 'tremp@clinicarrera.cat').trim()
+    ? String(process.env.CONTACT_EMAIL_TREMP || 'contacte@estudidentaltremp.com').trim()
     : String(process.env.CONTACT_EMAIL_LLEIDA || 'carrera@clinicarrera.cat').trim();
 
   if (!apiKey || !from || !to) {
