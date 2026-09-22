@@ -76,7 +76,8 @@ test('the jaw pain article is publicly accessible and discoverable in both langu
       assert.equal(response.status, 200);
       assert.ok(render('index-' + guide.lang).html.includes('/' + guide.path));
       assert.ok(fs.readFileSync('sitemap.xml', 'utf8').includes('<loc>https://www.estudidentalcarrera.com/' + guide.path + '</loc>'));
-      assert.ok(response.html.includes('atencio-mandibula-carme.webp'));
+      assert.ok(response.html.includes('src="' + guide.photography.src + '"'));
+      assert.ok(response.html.includes('srcset="' + guide.photography.srcset + '"'));
       assert.doesNotMatch(response.html, /name="robots" content="noindex/);
     }
   } finally {

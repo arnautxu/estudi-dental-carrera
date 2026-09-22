@@ -73,7 +73,7 @@ function document(page, main, graph) {
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&amp;display=swap" rel="stylesheet" />
   <link rel="preload" href="/assets/fonts/N27-Regular.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="/assets/css/main.min.css?v=20260916-blog" />
-  <link rel="stylesheet" href="/assets/css/guides.min.css?v=20260921-library" />
+  <link rel="stylesheet" href="/assets/css/guides.min.css?v=20260922-photography" />
   <link rel="stylesheet" href="/assets/css/blog.min.css?v=2" />
   ${page.type === 'index' ? `<link rel="preload" as="image" href="/${page.image}" />` : ''}
   <link rel="icon" type="image/svg+xml" href="/assets/img/logos/favicon.svg" />
@@ -95,6 +95,12 @@ function breadcrumb(lang) {
 
 function pageHeading(lang, title) {
   return `<header class="page-hero guide-heading"><div class="page-hero__bg page-hero__bg--serveis"></div><div class="container"><div class="page-hero__content">${breadcrumb(lang)}<h1>${escapeHtml(title)}</h1></div></div></header>`;
+}
+
+function renderPhotography(photography) {
+  if (!photography) return '';
+  const { src, width, height, alt, caption, srcset } = photography;
+  return `<figure class="guide-figure"><img src="${escapeHtml(src)}" width="${escapeHtml(width)}" height="${escapeHtml(height)}" alt="${escapeHtml(alt)}"${srcset ? ` srcset="${escapeHtml(srcset)}"` : ''} sizes="(max-width: 900px) calc(100vw - 40px), 760px" loading="lazy" decoding="async" />${caption ? `<figcaption>${escapeHtml(caption)}</figcaption>` : ''}</figure>`;
 }
 
 function renderIndex(lang) {
@@ -126,10 +132,11 @@ function renderIndex(lang) {
 function renderGuide(guide) {
   const l = labels(guide.lang);
   const sectionLinks = guide.sections.map(section => `<li><a href="#${escapeHtml(section.id)}">${escapeHtml(section.title)}</a></li>`).join('');
-  const sections = guide.sections.map(section => `<section id="${escapeHtml(section.id)}" class="guide-section"><h2>${escapeHtml(section.title)}</h2>${section.paragraphs.map(text => `<p>${text}</p>`).join('')}${section.items?.length ? `<ul>${section.items.map(item => `<li>${item}</li>`).join('')}</ul>` : ''}</section>`).join('');
+  const sections = guide.sections.map(section => `<section id="${escapeHtml(section.id)}" class="guide-section"><h2>${escapeHtml(section.title)}</h2>${section.paragraphs.map(text => `<p>${text}</p>`).join('')}${section.items?.length ? `<ul>${section.items.map(item => `<li>${item}</li>`).join('')}</ul>` : ''}${renderPhotography(section.photography)}</section>`).join('');
   const faqs = guide.faqs?.length ? `<section id="preguntes" class="guide-section guide-faq"><h2>${l.es ? 'Otras preguntas habituales' : 'Altres preguntes habituals'}</h2>${guide.faqs.map(faq => `<details><summary>${escapeHtml(faq.q)}</summary><p>${faq.a}</p></details>`).join('')}</section>` : '';
   const toc = `<aside class="guide-toc"><nav aria-label="${l.es ? 'En esta guía' : 'En aquesta guia'}"><h2>${l.es ? 'En esta guía' : 'En aquesta guia'}</h2><ul>${sectionLinks}</ul></nav><div class="guide-toc__service"><p>${l.es ? 'El tratamiento en Carrera' : 'El tractament a Carrera'}</p><a href="${guide.relatedService.href}" data-track="blog_service_click" data-track-label="${escapeHtml(guide.key)}">${escapeHtml(guide.relatedService.label)} ${arrow}</a></div></aside>`;
   const main = `<article>${pageHeading(guide.lang, guide.h1)}<div class="container guide-layout">${toc}<div class="guide-article"><p class="guide-lead">${escapeHtml(guide.lead)}</p>
+    ${renderPhotography(guide.photography)}
     <section id="en-resum" class="guide-summary"><h2>${l.es ? 'Lo esencial, antes de empezar' : 'L’essencial, abans de començar'}</h2><ul>${guide.summary.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul></section>
     ${sections}${faqs}
     <section class="guide-next-step"><h2>${l.es ? 'De la información a tu caso' : 'De la informació al teu cas'}</h2><p>${l.es ? 'Conoce cómo valoramos este motivo de consulta en Carrera y qué opciones explicamos en la visita.' : 'Coneix com valorem aquest motiu de consulta a Carrera i quines opcions expliquem a la visita.'}</p><a class="guide-text-link" href="${guide.relatedService.href}" data-track="blog_service_click" data-track-label="${escapeHtml(guide.key)}">${escapeHtml(guide.relatedService.label)} ${arrow}</a></section>

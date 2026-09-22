@@ -755,18 +755,12 @@ section[id], .team-card[id] { scroll-margin-top: 96px; }
   .service-card--photo-implants::after {
     background-image:
       linear-gradient(160deg, oklch(16% 0.02 55 / 0.92) 0%, oklch(18% 0.02 55 / 0.72) 50%, oklch(22% 0.03 55 / 0.6) 100%),
-      url('../img/serveis/implants-planificacio.jpg');
-    background-image:
-      linear-gradient(160deg, oklch(16% 0.02 55 / 0.92) 0%, oklch(18% 0.02 55 / 0.72) 50%, oklch(22% 0.03 55 / 0.6) 100%),
-      image-set(url('../img/serveis/implants-planificacio.webp') type('image/webp'), url('../img/serveis/implants-planificacio.jpg') type('image/jpeg'));
+      url('../img/editorial/implants-planificacio-lleida-960.webp');
   }
   .service-card--photo-estetica::after {
     background-image:
       linear-gradient(160deg, oklch(16% 0.02 55 / 0.92) 0%, oklch(18% 0.02 55 / 0.72) 50%, oklch(22% 0.03 55 / 0.6) 100%),
-      url('../img/serveis/estetica-llum.jpg');
-    background-image:
-      linear-gradient(160deg, oklch(16% 0.02 55 / 0.92) 0%, oklch(18% 0.02 55 / 0.72) 50%, oklch(22% 0.03 55 / 0.6) 100%),
-      image-set(url('../img/serveis/estetica-llum.webp') type('image/webp'), url('../img/serveis/estetica-llum.jpg') type('image/jpeg'));
+      url('../img/editorial/restauracio-dental-lleida-960.webp');
   }
   .service-card--photo-pedo::after {
     background-image:
@@ -1513,6 +1507,14 @@ section[id], .team-card[id] { scroll-margin-top: 96px; }
   box-shadow:0 34px 70px -30px oklch(28% 0.04 55 / 0.5),
              0 8px 22px -12px oklch(28% 0.04 55 / 0.3);
 }
+/* Landscape originals retain the whole clinical scene on every screen. */
+.svc-photo__img--landscape {
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:3 / 2;
+  object-fit:cover;
+}
 .svc-photo__cap {
   font-family:var(--font-display); font-style:italic;
   font-size:1rem; line-height:1.5; color:var(--beix-text);
@@ -1525,17 +1527,9 @@ section[id], .team-card[id] { scroll-margin-top: 96px; }
   background-image:url('../img/serveis/atm-carme.webp');
   background-image:image-set(url('../img/serveis/atm-carme.webp') type('image/webp'), url('../img/serveis/atm-carme.jpg') type('image/jpeg'));
 }
-.sdc-photo-implants {
-  background-image:url('../img/serveis/implants-planificacio.webp');
-  background-image:image-set(url('../img/serveis/implants-planificacio.webp') type('image/webp'), url('../img/serveis/implants-planificacio.jpg') type('image/jpeg'));
-}
 .sdc-photo-ortodoncia {
   background-image:url('../img/serveis/ortodoncia-model.webp');
   background-image:image-set(url('../img/serveis/ortodoncia-model.webp') type('image/webp'), url('../img/serveis/ortodoncia-model.jpg') type('image/jpeg'));
-}
-.sdc-photo-estetica {
-  background-image:url('../img/serveis/estetica-llum.webp');
-  background-image:image-set(url('../img/serveis/estetica-llum.webp') type('image/webp'), url('../img/serveis/estetica-llum.jpg') type('image/jpeg'));
 }
 /* Line-art anatomical illustration — editorial Gray's Anatomy vibes */
 .sdc-illo {

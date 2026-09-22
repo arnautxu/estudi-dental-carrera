@@ -1,0 +1,416 @@
+[
+  {
+    "key": "endodoncia-dubtes",
+    "path": "guies/endodoncia-dubtes.html",
+    "lang": "ca",
+    "opening": "/assets/img/editorial/tractament-dental-tremp.webp",
+    "details": [
+      {
+        "section": "despres",
+        "src": "/assets/img/editorial/restauracio-dental-lleida.webp"
+      }
+    ]
+  },
+  {
+    "key": "endodoncia-dudas",
+    "path": "es/guias/endodoncia-dudas.html",
+    "lang": "es",
+    "opening": "/assets/img/editorial/tractament-dental-tremp.webp",
+    "details": [
+      {
+        "section": "despues",
+        "src": "/assets/img/editorial/restauracio-dental-lleida.webp"
+      }
+    ]
+  },
+  {
+    "key": "sagnat-genives",
+    "path": "guies/sagnat-genives.html",
+    "lang": "ca",
+    "opening": "/assets/img/editorial/higiene-dental-tremp.webp",
+    "details": [
+      {
+        "section": "preparar-consulta",
+        "src": "/assets/img/editorial/conversa-consulta-tremp.webp"
+      }
+    ]
+  },
+  {
+    "key": "sangrado-encias",
+    "path": "es/guias/sangrado-encias.html",
+    "lang": "es",
+    "opening": "/assets/img/editorial/higiene-dental-tremp.webp",
+    "details": [
+      {
+        "section": "preparar-consulta",
+        "src": "/assets/img/editorial/conversa-consulta-tremp.webp"
+      }
+    ]
+  },
+  {
+    "key": "ferula-descarrega",
+    "path": "guies/ferula-descarrega.html",
+    "lang": "ca",
+    "opening": "/assets/img/editorial/atm-explicacio-lleida.webp",
+    "details": [
+      {
+        "section": "dolor-mandibular",
+        "src": "/assets/img/editorial/atm-exploracio-lleida.webp"
+      }
+    ]
+  },
+  {
+    "key": "ferula-descarga",
+    "path": "es/guias/ferula-descarga.html",
+    "lang": "es",
+    "opening": "/assets/img/editorial/atm-explicacio-lleida.webp",
+    "details": [
+      {
+        "section": "dolor-mandibular",
+        "src": "/assets/img/editorial/atm-exploracio-lleida.webp"
+      }
+    ]
+  },
+  {
+    "key": "implant-o-pont",
+    "path": "guies/implant-o-pont.html",
+    "lang": "ca",
+    "opening": "/assets/img/editorial/implants-planificacio-lleida.webp",
+    "details": [
+      {
+        "section": "valoracio-professional",
+        "src": "/assets/img/editorial/implant-preparacio-tremp.webp"
+      }
+    ]
+  },
+  {
+    "key": "implante-o-puente",
+    "path": "es/guias/implante-o-puente.html",
+    "lang": "es",
+    "opening": "/assets/img/editorial/implants-planificacio-lleida.webp",
+    "details": [
+      {
+        "section": "valoracion-profesional",
+        "src": "/assets/img/editorial/implant-preparacio-tremp.webp"
+      }
+    ]
+  },
+  {
+    "key": "alineadors-o-braquets",
+    "path": "guies/alineadors-o-braquets.html",
+    "lang": "ca",
+    "opening": "/assets/img/editorial/ortodoncia-model-lleida.webp",
+    "details": [
+      {
+        "section": "rutina-us",
+        "src": "/assets/img/editorial/alineadors-lleida.webp"
+      }
+    ]
+  },
+  {
+    "key": "alineadores-o-brackets",
+    "path": "es/guias/alineadores-o-brackets.html",
+    "lang": "es",
+    "opening": "/assets/img/editorial/ortodoncia-model-lleida.webp",
+    "details": [
+      {
+        "section": "rutina-uso",
+        "src": "/assets/img/editorial/alineadors-lleida.webp"
+      }
+    ]
+  },
+  {
+    "key": "taques-dents",
+    "path": "guies/taques-dents.html",
+    "lang": "ca",
+    "opening": "/assets/img/editorial/conversa-consulta-tremp.webp",
+    "details": [
+      {
+        "section": "neteja-superficie",
+        "src": "/assets/img/editorial/higiene-dental-tremp.webp"
+      }
+    ]
+  },
+  {
+    "key": "manchas-dientes",
+    "path": "es/guias/manchas-dientes.html",
+    "lang": "es",
+    "opening": "/assets/img/editorial/conversa-consulta-tremp.webp",
+    "details": [
+      {
+        "section": "limpieza-superficie",
+        "src": "/assets/img/editorial/higiene-dental-tremp.webp"
+      }
+    ]
+  },
+  {
+    "key": "dolor-mandibula-despertar",
+    "path": "guies/dolor-mandibula-despertar.html",
+    "lang": "ca",
+    "opening": "/assets/img/editorial/atm-exploracio-lleida.webp",
+    "details": [
+      {
+        "section": "que-observar",
+        "src": "/assets/img/editorial/atm-explicacio-lleida.webp"
+      }
+    ]
+  },
+  {
+    "key": "dolor-mandibula-despertar-es",
+    "path": "es/guias/dolor-mandibula-despertar.html",
+    "lang": "es",
+    "opening": "/assets/img/editorial/atm-exploracio-lleida.webp",
+    "details": [
+      {
+        "section": "que-observar",
+        "src": "/assets/img/editorial/atm-explicacio-lleida.webp"
+      }
+    ]
+  },
+  {
+    "key": "primera-visita-dentista-infantil-ca",
+    "path": "guies/primera-visita-dentista-infantil.html",
+    "lang": "ca",
+    "opening": "/assets/img/editorial/recepcio-tremp.webp",
+    "details": []
+  },
+  {
+    "key": "primera-visita-dentista-infantil-es",
+    "path": "es/guias/primera-visita-dentista-infantil.html",
+    "lang": "es",
+    "opening": "/assets/img/editorial/recepcio-tremp.webp",
+    "details": []
+  },
+  {
+    "key": "ortodoncia-infantil-ca",
+    "path": "guies/ortodoncia-infantil.html",
+    "lang": "ca",
+    "opening": "/assets/img/editorial/ortodoncia-model-lleida.webp",
+    "details": []
+  },
+  {
+    "key": "ortodoncia-infantil-es",
+    "path": "es/guias/ortodoncia-infantil.html",
+    "lang": "es",
+    "opening": "/assets/img/editorial/ortodoncia-model-lleida.webp",
+    "details": []
+  },
+  {
+    "key": "clic-mandibula-ca",
+    "path": "guies/clic-mandibula.html",
+    "lang": "ca",
+    "opening": "/assets/img/editorial/atm-explicacio-lleida.webp",
+    "details": []
+  },
+  {
+    "key": "clic-mandibula-es",
+    "path": "es/guias/clic-mandibula.html",
+    "lang": "es",
+    "opening": "/assets/img/editorial/atm-explicacio-lleida.webp",
+    "details": []
+  },
+  {
+    "key": "dolor-mandibula-dentista-fisioterapeuta-ca",
+    "path": "guies/dolor-mandibula-dentista-fisioterapeuta.html",
+    "lang": "ca",
+    "opening": "/assets/img/editorial/atm-exploracio-lleida.webp",
+    "details": []
+  },
+  {
+    "key": "dolor-mandibula-dentista-fisioterapeuta-es",
+    "path": "es/guias/dolor-mandibula-dentista-fisioterapeuta.html",
+    "lang": "es",
+    "opening": "/assets/img/editorial/atm-exploracio-lleida.webp",
+    "details": []
+  },
+  {
+    "key": "implant-immediat-carrega-immediata-ca",
+    "path": "guies/implant-immediat-carrega-immediata.html",
+    "lang": "ca",
+    "opening": "/assets/img/editorial/implant-preparacio-tremp.webp",
+    "details": [
+      {
+        "section": "seleccio",
+        "src": "/assets/img/editorial/implants-planificacio-lleida.webp"
+      }
+    ]
+  },
+  {
+    "key": "implante-inmediato-carga-inmediata-es",
+    "path": "es/guias/implante-inmediato-carga-inmediata.html",
+    "lang": "es",
+    "opening": "/assets/img/editorial/implant-preparacio-tremp.webp",
+    "details": [
+      {
+        "section": "seleccion",
+        "src": "/assets/img/editorial/implants-planificacio-lleida.webp"
+      }
+    ]
+  },
+  {
+    "key": "implants-multiples-ca",
+    "path": "guies/implants-multiples.html",
+    "lang": "ca",
+    "opening": "/assets/img/editorial/escaner-intraoral-tremp.webp",
+    "details": []
+  },
+  {
+    "key": "implantes-multiples-es",
+    "path": "es/guias/implantes-multiples.html",
+    "lang": "es",
+    "opening": "/assets/img/editorial/escaner-intraoral-tremp.webp",
+    "details": []
+  },
+  {
+    "key": "arcada-completa-quatre-sis-implants-ca",
+    "path": "guies/arcada-completa-quatre-sis-implants.html",
+    "lang": "ca",
+    "opening": "/assets/img/editorial/implants-planificacio-lleida.webp",
+    "details": [
+      {
+        "section": "nombre",
+        "src": "/assets/img/editorial/escaner-intraoral-tremp.webp"
+      }
+    ]
+  },
+  {
+    "key": "arcada-completa-cuatro-seis-implantes-es",
+    "path": "es/guias/arcada-completa-cuatro-seis-implantes.html",
+    "lang": "es",
+    "opening": "/assets/img/editorial/implants-planificacio-lleida.webp",
+    "details": [
+      {
+        "section": "numero",
+        "src": "/assets/img/editorial/escaner-intraoral-tremp.webp"
+      }
+    ]
+  },
+  {
+    "key": "protesi-fixa-removible-ca",
+    "path": "guies/protesi-fixa-removible.html",
+    "lang": "ca",
+    "opening": "/assets/img/editorial/valoracio-digital-tremp.webp",
+    "details": [
+      {
+        "section": "materials",
+        "src": "/assets/img/editorial/restauracio-dental-lleida.webp"
+      }
+    ]
+  },
+  {
+    "key": "protesis-fija-removible-es",
+    "path": "es/guias/protesis-fija-removible.html",
+    "lang": "es",
+    "opening": "/assets/img/editorial/valoracio-digital-tremp.webp",
+    "details": [
+      {
+        "section": "materiales",
+        "src": "/assets/img/editorial/restauracio-dental-lleida.webp"
+      }
+    ]
+  },
+  {
+    "key": "facetes-composite-porcellana-ca",
+    "path": "guies/facetes-composite-porcellana.html",
+    "lang": "ca",
+    "opening": "/assets/img/editorial/restauracio-dental-lleida.webp",
+    "details": []
+  },
+  {
+    "key": "carillas-composite-porcelana-es",
+    "path": "es/guias/carillas-composite-porcelana.html",
+    "lang": "es",
+    "opening": "/assets/img/editorial/restauracio-dental-lleida.webp",
+    "details": []
+  },
+  {
+    "key": "composite-dental-ca",
+    "path": "guies/composite-dental.html",
+    "lang": "ca",
+    "opening": "/assets/img/editorial/restauracio-dental-lleida.webp",
+    "details": []
+  },
+  {
+    "key": "composite-dental-es",
+    "path": "es/guias/composite-dental.html",
+    "lang": "es",
+    "opening": "/assets/img/editorial/restauracio-dental-lleida.webp",
+    "details": []
+  },
+  {
+    "key": "queixals-seny-ca",
+    "path": "guies/queixals-seny.html",
+    "lang": "ca",
+    "opening": "/assets/img/editorial/radiologia-lleida.webp",
+    "details": [
+      {
+        "section": "recuperacio",
+        "src": "/assets/img/editorial/gabinet-tremp.webp"
+      }
+    ]
+  },
+  {
+    "key": "muelas-juicio-es",
+    "path": "es/guias/muelas-juicio.html",
+    "lang": "es",
+    "opening": "/assets/img/editorial/radiologia-lleida.webp",
+    "details": [
+      {
+        "section": "recuperacion",
+        "src": "/assets/img/editorial/gabinet-tremp.webp"
+      }
+    ]
+  },
+  {
+    "key": "dent-trencada-cop-ca",
+    "path": "guies/dent-trencada-cop.html",
+    "lang": "ca",
+    "opening": "/assets/img/editorial/recepcio-lleida.webp",
+    "details": []
+  },
+  {
+    "key": "diente-roto-golpe-es",
+    "path": "es/guias/diente-roto-golpe.html",
+    "lang": "es",
+    "opening": "/assets/img/editorial/recepcio-lleida.webp",
+    "details": []
+  },
+  {
+    "key": "radiografia-panoramica-cbct-ca",
+    "path": "guies/radiografia-panoramica-cbct.html",
+    "lang": "ca",
+    "opening": "/assets/img/editorial/cbct-lleida.webp",
+    "details": [
+      {
+        "section": "abans",
+        "src": "/assets/img/editorial/radiologia-lleida.webp"
+      }
+    ]
+  },
+  {
+    "key": "radiografia-panoramica-cbct-es",
+    "path": "es/guias/radiografia-panoramica-cbct.html",
+    "lang": "es",
+    "opening": "/assets/img/editorial/cbct-lleida.webp",
+    "details": [
+      {
+        "section": "antes",
+        "src": "/assets/img/editorial/radiologia-lleida.webp"
+      }
+    ]
+  },
+  {
+    "key": "neteja-dental-raspat-ca",
+    "path": "guies/neteja-dental-raspat.html",
+    "lang": "ca",
+    "opening": "/assets/img/editorial/higiene-dental-tremp.webp",
+    "details": []
+  },
+  {
+    "key": "limpieza-dental-raspado-es",
+    "path": "es/guias/limpieza-dental-raspado.html",
+    "lang": "es",
+    "opening": "/assets/img/editorial/higiene-dental-tremp.webp",
+    "details": []
+  }
+]

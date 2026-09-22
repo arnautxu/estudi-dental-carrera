@@ -1,0 +1,614 @@
+[
+  {
+    "id": "atm-exploracio-lleida",
+    "source": "/Volumes/ADATA SD700/DENTAL CARRERA/FOTOS/CARME/WORK/DSCF0278.jpg",
+    "sourceSize": [
+      3677,
+      5530
+    ],
+    "width": 1440,
+    "height": 1080,
+    "cropCenter": [
+      0.5,
+      0.2
+    ],
+    "bytes": 137802,
+    "sourceSha256": "38e909c634dfadb571252292c319cc324bd21352257635336022fa3caeb3bb02",
+    "files": [
+      {
+        "path": "assets/img/editorial/atm-exploracio-lleida-640.webp",
+        "width": 640,
+        "height": 480,
+        "bytes": 28382
+      },
+      {
+        "path": "assets/img/editorial/atm-exploracio-lleida-960.webp",
+        "width": 960,
+        "height": 720,
+        "bytes": 53620
+      },
+      {
+        "path": "assets/img/editorial/atm-exploracio-lleida.webp",
+        "width": 1440,
+        "height": 1080,
+        "bytes": 137802
+      }
+    ]
+  },
+  {
+    "id": "atm-explicacio-lleida",
+    "source": "/Volumes/ADATA SD700/DENTAL CARRERA/FOTOS/CARME/WORK/DSCF9741 copia.jpg",
+    "sourceSize": [
+      6240,
+      4160
+    ],
+    "width": 1440,
+    "height": 960,
+    "cropCenter": [
+      0.5,
+      0.5
+    ],
+    "bytes": 69318,
+    "sourceSha256": "07319a8ac21230e82681e4e9b63515a3394f84b0206d9bbbe7616c0f4763f5d3",
+    "files": [
+      {
+        "path": "assets/img/editorial/atm-explicacio-lleida-640.webp",
+        "width": 640,
+        "height": 427,
+        "bytes": 21456
+      },
+      {
+        "path": "assets/img/editorial/atm-explicacio-lleida-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 37742
+      },
+      {
+        "path": "assets/img/editorial/atm-explicacio-lleida.webp",
+        "width": 1440,
+        "height": 960,
+        "bytes": 69318
+      }
+    ]
+  },
+  {
+    "id": "implants-planificacio-lleida",
+    "source": "/Volumes/ADATA SD700/DENTAL CARRERA/FOTOS/CARRERA/WORK/DSCF0490.jpg",
+    "sourceSize": [
+      6240,
+      4160
+    ],
+    "width": 1440,
+    "height": 960,
+    "cropCenter": [
+      0.5,
+      0.5
+    ],
+    "bytes": 102930,
+    "sourceSha256": "715daf67adf0dfd732f5af6acb2f274bca34002ce4c774ba2a9b93f66991d369",
+    "files": [
+      {
+        "path": "assets/img/editorial/implants-planificacio-lleida-640.webp",
+        "width": 640,
+        "height": 427,
+        "bytes": 32270
+      },
+      {
+        "path": "assets/img/editorial/implants-planificacio-lleida-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 57820
+      },
+      {
+        "path": "assets/img/editorial/implants-planificacio-lleida.webp",
+        "width": 1440,
+        "height": 960,
+        "bytes": 102930
+      }
+    ]
+  },
+  {
+    "id": "implant-preparacio-tremp",
+    "source": "/Volumes/ADATA SD700/DENTAL TREMP/FOTOS/RANDOM/_MCS4070.jpg",
+    "sourceSize": [
+      4799,
+      4160
+    ],
+    "width": 1440,
+    "height": 1080,
+    "cropCenter": [
+      0.5,
+      0.55
+    ],
+    "bytes": 44514,
+    "sourceSha256": "8b271d275b2f4a785f47b3b2ecb187ab36b3f61f36dbe3f3bf3b6e5b4cba7389",
+    "files": [
+      {
+        "path": "assets/img/editorial/implant-preparacio-tremp-640.webp",
+        "width": 640,
+        "height": 480,
+        "bytes": 15870
+      },
+      {
+        "path": "assets/img/editorial/implant-preparacio-tremp-960.webp",
+        "width": 960,
+        "height": 720,
+        "bytes": 26708
+      },
+      {
+        "path": "assets/img/editorial/implant-preparacio-tremp.webp",
+        "width": 1440,
+        "height": 1080,
+        "bytes": 44514
+      }
+    ]
+  },
+  {
+    "id": "escaner-intraoral-tremp",
+    "source": "/Volumes/ADATA SD700/DENTAL TREMP/FOTOS/YASMINE/WORK/_MCS3307.jpg",
+    "sourceSize": [
+      6240,
+      4160
+    ],
+    "width": 1440,
+    "height": 960,
+    "cropCenter": [
+      0.5,
+      0.5
+    ],
+    "bytes": 90748,
+    "sourceSha256": "e12920ce06be654f3f4ec7edb8ef70651b484d139de440385c860ebb1d81f156",
+    "files": [
+      {
+        "path": "assets/img/editorial/escaner-intraoral-tremp-640.webp",
+        "width": 640,
+        "height": 427,
+        "bytes": 28488
+      },
+      {
+        "path": "assets/img/editorial/escaner-intraoral-tremp-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 50386
+      },
+      {
+        "path": "assets/img/editorial/escaner-intraoral-tremp.webp",
+        "width": 1440,
+        "height": 960,
+        "bytes": 90748
+      }
+    ]
+  },
+  {
+    "id": "valoracio-digital-tremp",
+    "source": "/Volumes/ADATA SD700/DENTAL TREMP/FOTOS/YASMINE/WORK/_MCS3538.jpg",
+    "sourceSize": [
+      5963,
+      3836
+    ],
+    "width": 1440,
+    "height": 960,
+    "cropCenter": [
+      0.5,
+      0.5
+    ],
+    "bytes": 59542,
+    "sourceSha256": "e482cdd56e389c5a3c22535a29907dfbae92dfb991af75dc790705d3063e8747",
+    "files": [
+      {
+        "path": "assets/img/editorial/valoracio-digital-tremp-640.webp",
+        "width": 640,
+        "height": 427,
+        "bytes": 18314
+      },
+      {
+        "path": "assets/img/editorial/valoracio-digital-tremp-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 32890
+      },
+      {
+        "path": "assets/img/editorial/valoracio-digital-tremp.webp",
+        "width": 1440,
+        "height": 960,
+        "bytes": 59542
+      }
+    ]
+  },
+  {
+    "id": "higiene-dental-tremp",
+    "source": "/Volumes/ADATA SD700/DENTAL TREMP/FOTOS/NURIA/WORK/_MCS3212.jpg",
+    "sourceSize": [
+      6240,
+      4160
+    ],
+    "width": 1440,
+    "height": 960,
+    "cropCenter": [
+      0.5,
+      0.5
+    ],
+    "bytes": 65252,
+    "sourceSha256": "942a94e6afd0f0759aa409e50de778564c54425356066cd983daccd3bd37a964",
+    "files": [
+      {
+        "path": "assets/img/editorial/higiene-dental-tremp-640.webp",
+        "width": 640,
+        "height": 427,
+        "bytes": 20906
+      },
+      {
+        "path": "assets/img/editorial/higiene-dental-tremp-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 37264
+      },
+      {
+        "path": "assets/img/editorial/higiene-dental-tremp.webp",
+        "width": 1440,
+        "height": 960,
+        "bytes": 65252
+      }
+    ]
+  },
+  {
+    "id": "conversa-consulta-tremp",
+    "source": "/Volumes/ADATA SD700/DENTAL TREMP/FOTOS/NURIA/WORK/_MCS3217.jpg",
+    "sourceSize": [
+      6240,
+      4160
+    ],
+    "width": 1440,
+    "height": 960,
+    "cropCenter": [
+      0.5,
+      0.5
+    ],
+    "bytes": 78724,
+    "sourceSha256": "a2a00038e022da92485e39d4e43c60f3b151585520e5e2ea0ac8f5c2433b0d4e",
+    "files": [
+      {
+        "path": "assets/img/editorial/conversa-consulta-tremp-640.webp",
+        "width": 640,
+        "height": 427,
+        "bytes": 25092
+      },
+      {
+        "path": "assets/img/editorial/conversa-consulta-tremp-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 43596
+      },
+      {
+        "path": "assets/img/editorial/conversa-consulta-tremp.webp",
+        "width": 1440,
+        "height": 960,
+        "bytes": 78724
+      }
+    ]
+  },
+  {
+    "id": "tractament-dental-tremp",
+    "source": "/Volumes/ADATA SD700/DENTAL TREMP/FOTOS/CARRERA/WORK/_MCS4051.jpg",
+    "sourceSize": [
+      5122,
+      4160
+    ],
+    "width": 1440,
+    "height": 960,
+    "cropCenter": [
+      0.5,
+      0.5
+    ],
+    "bytes": 44716,
+    "sourceSha256": "ba578d636e8cebb257a5edbbf52a62ced3bdbc46c8b043768debe5c0ccb45f80",
+    "files": [
+      {
+        "path": "assets/img/editorial/tractament-dental-tremp-640.webp",
+        "width": 640,
+        "height": 427,
+        "bytes": 15848
+      },
+      {
+        "path": "assets/img/editorial/tractament-dental-tremp-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 26172
+      },
+      {
+        "path": "assets/img/editorial/tractament-dental-tremp.webp",
+        "width": 1440,
+        "height": 960,
+        "bytes": 44716
+      }
+    ]
+  },
+  {
+    "id": "restauracio-dental-lleida",
+    "source": "/Volumes/ADATA SD700/DENTAL CARRERA/FOTOS/CLINICA/DSCF9915.jpg",
+    "sourceSize": [
+      5429,
+      4160
+    ],
+    "width": 1440,
+    "height": 960,
+    "cropCenter": [
+      0.5,
+      0.5
+    ],
+    "bytes": 43504,
+    "sourceSha256": "8111a12adef51c02b959acaa4923d73d506dfb71c5f9e8f4a0b81f81429cb1e9",
+    "files": [
+      {
+        "path": "assets/img/editorial/restauracio-dental-lleida-640.webp",
+        "width": 640,
+        "height": 427,
+        "bytes": 14862
+      },
+      {
+        "path": "assets/img/editorial/restauracio-dental-lleida-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 24672
+      },
+      {
+        "path": "assets/img/editorial/restauracio-dental-lleida.webp",
+        "width": 1440,
+        "height": 960,
+        "bytes": 43504
+      }
+    ]
+  },
+  {
+    "id": "ortodoncia-model-lleida",
+    "source": "/Volumes/ADATA SD700/DENTAL CARRERA/FOTOS/CLINICA/DSCF9619.jpg",
+    "sourceSize": [
+      4057,
+      6240
+    ],
+    "width": 1440,
+    "height": 960,
+    "cropCenter": [
+      0.5,
+      0.5
+    ],
+    "bytes": 24494,
+    "sourceSha256": "615a4940405942dc3d46cd0b01293c1790f266d352c846f9b0a694cf1237bb7e",
+    "files": [
+      {
+        "path": "assets/img/editorial/ortodoncia-model-lleida-640.webp",
+        "width": 640,
+        "height": 427,
+        "bytes": 8636
+      },
+      {
+        "path": "assets/img/editorial/ortodoncia-model-lleida-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 14110
+      },
+      {
+        "path": "assets/img/editorial/ortodoncia-model-lleida.webp",
+        "width": 1440,
+        "height": 960,
+        "bytes": 24494
+      }
+    ]
+  },
+  {
+    "id": "alineadors-lleida",
+    "source": "/Volumes/ADATA SD700/DENTAL CARRERA/FOTOS/ISABEL/WORK/DSCF0234 copia.jpg",
+    "sourceSize": [
+      4160,
+      5543
+    ],
+    "width": 1440,
+    "height": 1080,
+    "cropCenter": [
+      0.5,
+      1.0
+    ],
+    "bytes": 42448,
+    "sourceSha256": "8cb5d59b3fc36b3a141bdd168fa7dcacfcef63ef1c404471a569b2526acd0f55",
+    "files": [
+      {
+        "path": "assets/img/editorial/alineadors-lleida-640.webp",
+        "width": 640,
+        "height": 480,
+        "bytes": 13092
+      },
+      {
+        "path": "assets/img/editorial/alineadors-lleida-960.webp",
+        "width": 960,
+        "height": 720,
+        "bytes": 23026
+      },
+      {
+        "path": "assets/img/editorial/alineadors-lleida.webp",
+        "width": 1440,
+        "height": 1080,
+        "bytes": 42448
+      }
+    ]
+  },
+  {
+    "id": "recepcio-tremp",
+    "source": "/Volumes/ADATA SD700/DENTAL TREMP/FOTOS/CAROL/WORK/_MCS3276.jpg",
+    "sourceSize": [
+      6240,
+      4160
+    ],
+    "width": 1440,
+    "height": 960,
+    "cropCenter": [
+      0.5,
+      0.5
+    ],
+    "bytes": 82630,
+    "sourceSha256": "bd8a5f144e24273db7dd13098811be4ec077d9f897238b0402c5d9f4c4d967e3",
+    "files": [
+      {
+        "path": "assets/img/editorial/recepcio-tremp-640.webp",
+        "width": 640,
+        "height": 427,
+        "bytes": 24230
+      },
+      {
+        "path": "assets/img/editorial/recepcio-tremp-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 45382
+      },
+      {
+        "path": "assets/img/editorial/recepcio-tremp.webp",
+        "width": 1440,
+        "height": 960,
+        "bytes": 82630
+      }
+    ]
+  },
+  {
+    "id": "recepcio-lleida",
+    "source": "/Volumes/ADATA SD700/DENTAL CARRERA/FOTOS/MIREIA/WORK/DSCF9634.jpg",
+    "sourceSize": [
+      6240,
+      4160
+    ],
+    "width": 1440,
+    "height": 960,
+    "cropCenter": [
+      0.5,
+      0.5
+    ],
+    "bytes": 60618,
+    "sourceSha256": "b6f46505afa967a510b99616b608a1e977b14b69841779c4585a33c9c0d07f12",
+    "files": [
+      {
+        "path": "assets/img/editorial/recepcio-lleida-640.webp",
+        "width": 640,
+        "height": 427,
+        "bytes": 18530
+      },
+      {
+        "path": "assets/img/editorial/recepcio-lleida-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 32880
+      },
+      {
+        "path": "assets/img/editorial/recepcio-lleida.webp",
+        "width": 1440,
+        "height": 960,
+        "bytes": 60618
+      }
+    ]
+  },
+  {
+    "id": "gabinet-tremp",
+    "source": "/Volumes/ADATA SD700/DENTAL TREMP/FOTOS/RANDOM/_MCS3487.jpg",
+    "sourceSize": [
+      5327,
+      4160
+    ],
+    "width": 1440,
+    "height": 960,
+    "cropCenter": [
+      0.5,
+      0.5
+    ],
+    "bytes": 61474,
+    "sourceSha256": "0d8ca29af1f4dbe44811a695c1b96b496fea28a490d6ae2a54eba5b596ca3fc2",
+    "files": [
+      {
+        "path": "assets/img/editorial/gabinet-tremp-640.webp",
+        "width": 640,
+        "height": 427,
+        "bytes": 20638
+      },
+      {
+        "path": "assets/img/editorial/gabinet-tremp-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 36138
+      },
+      {
+        "path": "assets/img/editorial/gabinet-tremp.webp",
+        "width": 1440,
+        "height": 960,
+        "bytes": 61474
+      }
+    ]
+  },
+  {
+    "id": "radiologia-lleida",
+    "source": "/Volumes/ADATA SD700/DENTAL CARRERA/FOTOS/CLINICA/DSCF0435.jpg",
+    "sourceSize": [
+      4160,
+      4906
+    ],
+    "width": 1440,
+    "height": 1080,
+    "cropCenter": [
+      0.5,
+      0.35
+    ],
+    "bytes": 72706,
+    "sourceSha256": "b1211ac898ea5f2add692609fb80abcfa88a1beb436ce99974994e9c9556b4d5",
+    "files": [
+      {
+        "path": "assets/img/editorial/radiologia-lleida-640.webp",
+        "width": 640,
+        "height": 480,
+        "bytes": 22600
+      },
+      {
+        "path": "assets/img/editorial/radiologia-lleida-960.webp",
+        "width": 960,
+        "height": 720,
+        "bytes": 40324
+      },
+      {
+        "path": "assets/img/editorial/radiologia-lleida.webp",
+        "width": 1440,
+        "height": 1080,
+        "bytes": 72706
+      }
+    ]
+  },
+  {
+    "id": "cbct-lleida",
+    "source": "/Volumes/ADATA SD700/DENTAL CARRERA/FOTOS/CLINICA/DSCF0532.jpg",
+    "sourceSize": [
+      6240,
+      4160
+    ],
+    "width": 1440,
+    "height": 960,
+    "cropCenter": [
+      0.5,
+      0.5
+    ],
+    "bytes": 69704,
+    "sourceSha256": "b5fb9c250e7484499aabd98c619ebc5226c028eb2e53c888b35146d8dbecf88f",
+    "files": [
+      {
+        "path": "assets/img/editorial/cbct-lleida-640.webp",
+        "width": 640,
+        "height": 427,
+        "bytes": 24108
+      },
+      {
+        "path": "assets/img/editorial/cbct-lleida-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 40978
+      },
+      {
+        "path": "assets/img/editorial/cbct-lleida.webp",
+        "width": 1440,
+        "height": 960,
+        "bytes": 69704
+      }
+    ]
+  }
+]

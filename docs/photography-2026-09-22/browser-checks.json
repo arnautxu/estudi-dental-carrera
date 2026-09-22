@@ -1,0 +1,386 @@
+[
+  {
+    "id": "atm",
+    "label": "desktop",
+    "url": "/guies/dolor-mandibula-despertar.html",
+    "overflow": false,
+    "figures": [
+      {
+        "src": "http://127.0.0.1:4178/assets/img/editorial/atm-exploracio-lleida-960.webp",
+        "complete": true,
+        "width": 760,
+        "box": 695.796875
+      },
+      {
+        "src": "http://127.0.0.1:4178/assets/img/editorial/atm-explicacio-lleida-960.webp",
+        "complete": true,
+        "width": 760,
+        "box": 695.796875
+      }
+    ],
+    "images": [
+      {
+        "src": "http://127.0.0.1:4178/assets/img/logos/logo-carrera-vertical.png",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4178/assets/img/logos/logo-carrera-vertical.png",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4178/assets/img/editorial/atm-exploracio-lleida-960.webp",
+        "loaded": true
+      }
+    ],
+    "captions": [
+      "Exploració a la consulta de Carrera, a Lleida.",
+      "Una explicació sobre la zona mandibular a la consulta de Lleida."
+    ]
+  },
+  {
+    "id": "implants",
+    "label": "desktop",
+    "url": "/guies/implant-o-pont.html",
+    "overflow": false,
+    "figures": [
+      {
+        "src": "http://127.0.0.1:4178/assets/img/editorial/implants-planificacio-lleida-960.webp",
+        "complete": true,
+        "width": 760,
+        "box": 695.796875
+      },
+      {
+        "src": "http://127.0.0.1:4178/assets/img/editorial/implant-preparacio-tremp-960.webp",
+        "complete": true,
+        "width": 760,
+        "box": 695.796875
+      }
+    ],
+    "images": [
+      {
+        "src": "http://127.0.0.1:4178/assets/img/logos/logo-carrera-vertical.png",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4178/assets/img/logos/logo-carrera-vertical.png",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4178/assets/img/editorial/implants-planificacio-lleida-960.webp",
+        "loaded": true
+      }
+    ],
+    "captions": [
+      "Revisió d’imatges dentals a la consulta de Lleida.",
+      "Preparació de l’instrumental al gabinet de Tremp."
+    ]
+  },
+  {
+    "id": "higiene-es",
+    "label": "desktop",
+    "url": "/es/guias/sangrado-encias.html",
+    "overflow": false,
+    "figures": [
+      {
+        "src": "http://127.0.0.1:4178/assets/img/editorial/higiene-dental-tremp-960.webp",
+        "complete": true,
+        "width": 760,
+        "box": 695.796875
+      },
+      {
+        "src": "http://127.0.0.1:4178/assets/img/editorial/conversa-consulta-tremp-960.webp",
+        "complete": true,
+        "width": 760,
+        "box": 695.796875
+      }
+    ],
+    "images": [
+      {
+        "src": "http://127.0.0.1:4178/assets/img/logos/logo-carrera-vertical.png",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4178/assets/img/logos/logo-carrera-vertical.png",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4178/assets/img/editorial/higiene-dental-tremp-960.webp",
+        "loaded": true
+      }
+    ],
+    "captions": [
+      "Exploración bucodental en el gabinete de Tremp.",
+      "Un momento de conversación en el gabinete de Tremp."
+    ]
+  },
+  {
+    "id": "blog",
+    "label": "desktop",
+    "url": "/blog.html",
+    "overflow": false,
+    "figures": [],
+    "images": [
+      {
+        "src": "http://127.0.0.1:4178/assets/img/logos/logo-carrera-vertical.png",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4178/assets/img/logos/logo-carrera-vertical.png",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4178/assets/img/editorial/implants-planificacio-lleida-640.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4178/assets/img/editorial/valoracio-digital-tremp-640.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4178/assets/img/editorial/restauracio-dental-lleida-640.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4178/assets/img/editorial/restauracio-dental-lleida-640.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4178/assets/img/editorial/radiologia-lleida-640.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4178/assets/img/editorial/recepcio-lleida-640.webp",
+        "loaded": true
+      }
+    ],
+    "captions": []
+  },
+  {
+    "id": "serveis",
+    "label": "desktop",
+    "url": "/serveis.html",
+    "overflow": false,
+    "figures": [],
+    "images": [
+      {
+        "src": "http://127.0.0.1:4178/assets/img/logos/logo-carrera-vertical.png",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4178/assets/img/logos/logo-carrera-vertical.png",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4178/assets/img/editorial/implants-planificacio-lleida-640.webp",
+        "loaded": true
+      }
+    ],
+    "captions": []
+  },
+  {
+    "id": "estetica",
+    "label": "desktop",
+    "url": "/serveis.html",
+    "overflow": false,
+    "figures": [],
+    "images": [
+      {
+        "src": "http://127.0.0.1:4178/assets/img/logos/logo-carrera-vertical.png",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4178/assets/img/logos/logo-carrera-vertical.png",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4178/assets/img/editorial/restauracio-dental-lleida-640.webp",
+        "loaded": true
+      }
+    ],
+    "captions": []
+  },
+  {
+    "id": "atm",
+    "label": "mobile",
+    "url": "/guies/dolor-mandibula-despertar.html",
+    "overflow": false,
+    "figures": [
+      {
+        "src": "http://127.0.0.1:4178/assets/img/editorial/atm-exploracio-lleida-640.webp",
+        "complete": true,
+        "width": 350,
+        "box": 350
+      },
+      {
+        "src": "http://127.0.0.1:4178/assets/img/editorial/atm-explicacio-lleida-640.webp",
+        "complete": true,
+        "width": 350,
+        "box": 350
+      }
+    ],
+    "images": [
+      {
+        "src": "http://127.0.0.1:4178/assets/img/logos/logo-carrera-vertical.png",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4178/assets/img/logos/logo-carrera-vertical.png",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4178/assets/img/editorial/atm-exploracio-lleida-640.webp",
+        "loaded": true
+      }
+    ],
+    "captions": [
+      "Exploració a la consulta de Carrera, a Lleida.",
+      "Una explicació sobre la zona mandibular a la consulta de Lleida."
+    ]
+  },
+  {
+    "id": "implants",
+    "label": "mobile",
+    "url": "/guies/implant-o-pont.html",
+    "overflow": false,
+    "figures": [
+      {
+        "src": "http://127.0.0.1:4178/assets/img/editorial/implants-planificacio-lleida-640.webp",
+        "complete": true,
+        "width": 350,
+        "box": 350
+      },
+      {
+        "src": "http://127.0.0.1:4178/assets/img/editorial/implant-preparacio-tremp-640.webp",
+        "complete": true,
+        "width": 350,
+        "box": 350
+      }
+    ],
+    "images": [
+      {
+        "src": "http://127.0.0.1:4178/assets/img/logos/logo-carrera-vertical.png",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4178/assets/img/logos/logo-carrera-vertical.png",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4178/assets/img/editorial/implants-planificacio-lleida-640.webp",
+        "loaded": true
+      }
+    ],
+    "captions": [
+      "Revisió d’imatges dentals a la consulta de Lleida.",
+      "Preparació de l’instrumental al gabinet de Tremp."
+    ]
+  },
+  {
+    "id": "higiene-es",
+    "label": "mobile",
+    "url": "/es/guias/sangrado-encias.html",
+    "overflow": false,
+    "figures": [
+      {
+        "src": "http://127.0.0.1:4178/assets/img/editorial/higiene-dental-tremp-640.webp",
+        "complete": true,
+        "width": 350,
+        "box": 350
+      },
+      {
+        "src": "",
+        "complete": false,
+        "width": 0,
+        "box": 350
+      }
+    ],
+    "images": [
+      {
+        "src": "http://127.0.0.1:4178/assets/img/logos/logo-carrera-vertical.png",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4178/assets/img/logos/logo-carrera-vertical.png",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4178/assets/img/editorial/higiene-dental-tremp-640.webp",
+        "loaded": true
+      }
+    ],
+    "captions": [
+      "Exploración bucodental en el gabinete de Tremp.",
+      "Un momento de conversación en el gabinete de Tremp."
+    ]
+  },
+  {
+    "id": "blog",
+    "label": "mobile",
+    "url": "/blog.html",
+    "overflow": false,
+    "figures": [],
+    "images": [
+      {
+        "src": "http://127.0.0.1:4178/assets/img/logos/logo-carrera-vertical.png",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4178/assets/img/logos/logo-carrera-vertical.png",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4178/assets/img/editorial/restauracio-dental-lleida-640.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4178/assets/img/editorial/radiologia-lleida-640.webp",
+        "loaded": true
+      }
+    ],
+    "captions": []
+  },
+  {
+    "id": "serveis",
+    "label": "mobile",
+    "url": "/serveis.html",
+    "overflow": false,
+    "figures": [],
+    "images": [
+      {
+        "src": "http://127.0.0.1:4178/assets/img/logos/logo-carrera-vertical.png",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4178/assets/img/logos/logo-carrera-vertical.png",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4178/assets/img/editorial/implants-planificacio-lleida-640.webp",
+        "loaded": true
+      }
+    ],
+    "captions": []
+  },
+  {
+    "id": "estetica",
+    "label": "mobile",
+    "url": "/serveis.html",
+    "overflow": false,
+    "figures": [],
+    "images": [
+      {
+        "src": "http://127.0.0.1:4178/assets/img/logos/logo-carrera-vertical.png",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4178/assets/img/logos/logo-carrera-vertical.png",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:4178/assets/img/editorial/restauracio-dental-lleida-640.webp",
+        "loaded": true
+      }
+    ],
+    "captions": []
+  }
+]

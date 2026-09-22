@@ -1,0 +1,215 @@
+{
+  "articles": [
+    {
+      "path": "guies/endodoncia-dubtes.html",
+      "status": 200,
+      "figures": 2
+    },
+    {
+      "path": "es/guias/endodoncia-dudas.html",
+      "status": 200,
+      "figures": 2
+    },
+    {
+      "path": "guies/sagnat-genives.html",
+      "status": 200,
+      "figures": 2
+    },
+    {
+      "path": "es/guias/sangrado-encias.html",
+      "status": 200,
+      "figures": 2
+    },
+    {
+      "path": "guies/ferula-descarrega.html",
+      "status": 200,
+      "figures": 2
+    },
+    {
+      "path": "es/guias/ferula-descarga.html",
+      "status": 200,
+      "figures": 2
+    },
+    {
+      "path": "guies/implant-o-pont.html",
+      "status": 200,
+      "figures": 2
+    },
+    {
+      "path": "es/guias/implante-o-puente.html",
+      "status": 200,
+      "figures": 2
+    },
+    {
+      "path": "guies/alineadors-o-braquets.html",
+      "status": 200,
+      "figures": 2
+    },
+    {
+      "path": "es/guias/alineadores-o-brackets.html",
+      "status": 200,
+      "figures": 2
+    },
+    {
+      "path": "guies/taques-dents.html",
+      "status": 200,
+      "figures": 2
+    },
+    {
+      "path": "es/guias/manchas-dientes.html",
+      "status": 200,
+      "figures": 2
+    },
+    {
+      "path": "guies/dolor-mandibula-despertar.html",
+      "status": 200,
+      "figures": 2
+    },
+    {
+      "path": "es/guias/dolor-mandibula-despertar.html",
+      "status": 200,
+      "figures": 2
+    },
+    {
+      "path": "guies/primera-visita-dentista-infantil.html",
+      "status": 200,
+      "figures": 1
+    },
+    {
+      "path": "es/guias/primera-visita-dentista-infantil.html",
+      "status": 200,
+      "figures": 1
+    },
+    {
+      "path": "guies/ortodoncia-infantil.html",
+      "status": 200,
+      "figures": 1
+    },
+    {
+      "path": "es/guias/ortodoncia-infantil.html",
+      "status": 200,
+      "figures": 1
+    },
+    {
+      "path": "guies/clic-mandibula.html",
+      "status": 200,
+      "figures": 1
+    },
+    {
+      "path": "es/guias/clic-mandibula.html",
+      "status": 200,
+      "figures": 1
+    },
+    {
+      "path": "guies/dolor-mandibula-dentista-fisioterapeuta.html",
+      "status": 200,
+      "figures": 1
+    },
+    {
+      "path": "es/guias/dolor-mandibula-dentista-fisioterapeuta.html",
+      "status": 200,
+      "figures": 1
+    },
+    {
+      "path": "guies/implant-immediat-carrega-immediata.html",
+      "status": 200,
+      "figures": 2
+    },
+    {
+      "path": "es/guias/implante-inmediato-carga-inmediata.html",
+      "status": 200,
+      "figures": 2
+    },
+    {
+      "path": "guies/implants-multiples.html",
+      "status": 200,
+      "figures": 1
+    },
+    {
+      "path": "es/guias/implantes-multiples.html",
+      "status": 200,
+      "figures": 1
+    },
+    {
+      "path": "guies/arcada-completa-quatre-sis-implants.html",
+      "status": 200,
+      "figures": 2
+    },
+    {
+      "path": "es/guias/arcada-completa-cuatro-seis-implantes.html",
+      "status": 200,
+      "figures": 2
+    },
+    {
+      "path": "guies/protesi-fixa-removible.html",
+      "status": 200,
+      "figures": 2
+    },
+    {
+      "path": "es/guias/protesis-fija-removible.html",
+      "status": 200,
+      "figures": 2
+    },
+    {
+      "path": "guies/facetes-composite-porcellana.html",
+      "status": 200,
+      "figures": 1
+    },
+    {
+      "path": "es/guias/carillas-composite-porcelana.html",
+      "status": 200,
+      "figures": 1
+    },
+    {
+      "path": "guies/composite-dental.html",
+      "status": 200,
+      "figures": 1
+    },
+    {
+      "path": "es/guias/composite-dental.html",
+      "status": 200,
+      "figures": 1
+    },
+    {
+      "path": "guies/queixals-seny.html",
+      "status": 200,
+      "figures": 2
+    },
+    {
+      "path": "es/guias/muelas-juicio.html",
+      "status": 200,
+      "figures": 2
+    },
+    {
+      "path": "guies/dent-trencada-cop.html",
+      "status": 200,
+      "figures": 1
+    },
+    {
+      "path": "es/guias/diente-roto-golpe.html",
+      "status": 200,
+      "figures": 1
+    },
+    {
+      "path": "guies/radiografia-panoramica-cbct.html",
+      "status": 200,
+      "figures": 2
+    },
+    {
+      "path": "es/guias/radiografia-panoramica-cbct.html",
+      "status": 200,
+      "figures": 2
+    },
+    {
+      "path": "guies/neteja-dental-raspat.html",
+      "status": 200,
+      "figures": 1
+    },
+    {
+      "path": "es/guias/limpieza-dental-raspado.html",
+      "status": 200,
+      "figures": 1
+    }
+  ],
+  "assetsChecked": 51
+}

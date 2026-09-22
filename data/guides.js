@@ -584,5 +584,6 @@ Object.assign(guides,
 );
 
 require('./guide-updates').enrichGuides(guides);
+require('./guide-photography').enrichGuides(guides);
 
 module.exports = { guides };
