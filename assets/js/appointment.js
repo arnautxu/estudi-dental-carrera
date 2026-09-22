@@ -6,7 +6,7 @@
   const text = (ca, castellano) => es ? castellano : ca;
   const clinics = {
     carrera: { city: 'Lleida', name: 'Estudi Dental Carrera', phone: '+34973268826', display: '973 26 88 26', wa: '34615983352' },
-    tremp: { city: 'Tremp', name: 'Estudi Dental Tremp', phone: '+34650600172', display: '650 60 01 72', wa: '34650600172' }
+    tremp: { city: 'Tremp', name: 'Estudi Dental Tremp', phone: '+34973447534', display: '973 44 75 34', wa: '34650600172' }
   };
   const steps = [...form.querySelectorAll('[data-step]')];
   const status = form.querySelector('[data-form-status]');

@@ -53,7 +53,7 @@ module.exports = {
     "name": "Estudi Dental Tremp",
     "url": "https://www.estudidentalcarrera.com/dentista-tremp.html",
     "image": "https://www.estudidentalcarrera.com/assets/img/tremp-exterior.jpg",
-    "telephone": "+34650600172",
+    "telephone": "+34973447534",
     "email": "contacte@estudidentaltremp.com",
     "priceRange": "€€",
     "branchOf": {

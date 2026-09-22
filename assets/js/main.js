@@ -898,7 +898,7 @@ window.track = function track(name, params) {
   ]);
   const clinicForNumber = value => {
     const digits = value.replace(/\D/g, '');
-    if (digits.endsWith('650600172')) return 'tremp';
+    if (digits.endsWith('973447534') || digits.endsWith('650600172')) return 'tremp';
     if (digits.endsWith('973268826') || digits.endsWith('615983352')) return 'lleida';
     return 'general';
   };
@@ -954,7 +954,7 @@ window.track = function track(name, params) {
   const hash = es ? '#contacto' : '#contacte';
   const clinics = {
     carrera: { city: 'Lleida', phone: '+34973268826', wa: '34615983352' },
-    tremp: { city: 'Tremp', phone: '+34650600172', wa: '34650600172' }
+    tremp: { city: 'Tremp', phone: '+34973447534', wa: '34650600172' }
   };
   const pageClinic = document.body.dataset.clinic || '';
   const bar = document.createElement('div');

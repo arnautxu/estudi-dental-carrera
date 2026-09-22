@@ -127,7 +127,7 @@ function render(page) {
     : '';
   const url = `${ORIGIN}/${page.path}`;
   const altUrl = `${ORIGIN}/${page.alternatePath}`;
-  const phone = page.location && page.location.id === 'tremp' ? '+34650600172' : '+34973268826';
+  const phone = page.location && page.location.id === 'tremp' ? '+34973447534' : '+34973268826';
   const wa = page.location && page.location.id === 'tremp' ? '34650600172' : '34615983352';
   const clinicDetails = page.type === 'location' ? renderClinicDetails(clinics[page.location.id], isEs, wa) : '';
   const editorialTeam = page.professional

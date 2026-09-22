@@ -1108,7 +1108,7 @@ pages['ca-tremp'] = locationPage('ca', {
         'Consulta a quina clínica correspon cada cita.',
         'Confirma si has de portar alguna prova o informe.',
         'Comunica les necessitats d’accés o acompanyament.',
-        'Per canviar una cita, truca al <a href="tel:+34650600172">650 60 01 72</a>.',
+        'Per canviar una cita, truca al <a href="tel:+34973447534">973 44 75 34</a>.',
       ],
     },
     {
@@ -1121,11 +1121,11 @@ pages['ca-tremp'] = locationPage('ca', {
     },
   ],
   faqs: [
-    { q: 'Com puc demanar una primera visita a Tremp?', a: 'Pots trucar al 650 60 01 72, escriure per WhatsApp o enviar el formulari. Aquests missatges són una sol·licitud de contacte. La cita queda confirmada quan recepció concreta el dia, l’hora i la clínica.' },
+    { q: 'Com puc demanar una primera visita a Tremp?', a: 'Pots trucar al 973 44 75 34, escriure per WhatsApp o enviar el formulari. Aquests missatges són una sol·licitud de contacte. La cita queda confirmada quan recepció concreta el dia, l’hora i la clínica.' },
     { q: 'On és la clínica de Tremp?', a: 'Al carrer Montllobar, 22 baixos, 25620 Tremp. Pots confirmar com arribar-hi i qualsevol necessitat d’accés amb recepció.' },
     { q: 'Ateneu persones d’altres poblacions del Pallars?', a: 'Sí. La planificació de visites s’adapta al tractament i, si cal coordinació amb Lleida, s’explica prèviament.' },
     { q: 'Puc enviar fotografies per WhatsApp per obtenir un diagnòstic?', a: 'WhatsApp és un canal de contacte, no substitueix una exploració ni és adequat per enviar dades clíniques sensibles sense indicació.' },
-    { q: 'Com es gestiona una urgència dental?', a: 'Truca al 650 60 01 72 perquè puguem valorar prioritat i disponibilitat. Davant d’una urgència vital, truca al 112.' },
+    { q: 'Com es gestiona una urgència dental?', a: 'Truca al 973 44 75 34 perquè puguem valorar prioritat i disponibilitat. Davant d’una urgència vital, truca al 112.' },
   ],
   location: { id: 'tremp' },
   related: [
@@ -1184,7 +1184,7 @@ pages['es-tremp'] = locationPage('es', {
         'Consulta qué clínica corresponde a cada cita.',
         'Confirma si debes traer alguna prueba o informe.',
         'Comunica las necesidades de acceso o acompañamiento.',
-        'Para cambiar una cita, llama al <a href="tel:+34650600172">650 60 01 72</a>.',
+        'Para cambiar una cita, llama al <a href="tel:+34973447534">973 44 75 34</a>.',
       ],
     },
     {
@@ -1197,11 +1197,11 @@ pages['es-tremp'] = locationPage('es', {
     },
   ],
   faqs: [
-    { q: '¿Cómo puedo pedir una primera visita en Tremp?', a: 'Puedes llamar al 650 60 01 72, escribir por WhatsApp o enviar el formulario. Estos mensajes son una solicitud de contacto. La cita queda confirmada cuando recepción concreta el día, la hora y la clínica.' },
+    { q: '¿Cómo puedo pedir una primera visita en Tremp?', a: 'Puedes llamar al 973 44 75 34, escribir por WhatsApp o enviar el formulario. Estos mensajes son una solicitud de contacto. La cita queda confirmada cuando recepción concreta el día, la hora y la clínica.' },
     { q: '¿Dónde está la clínica de Tremp?', a: 'En carrer Montllobar, 22, bajos, 25620 Tremp. Puedes confirmar cómo llegar y cualquier necesidad de acceso con recepción.' },
     { q: '¿Atendéis a personas de otras poblaciones del Pallars?', a: 'Sí. La planificación de visitas se adapta al tratamiento y, si hace falta coordinación con Lleida, se explica previamente.' },
     { q: '¿Puedo enviar fotografías por WhatsApp para obtener un diagnóstico?', a: 'WhatsApp es un canal de contacto, no sustituye una exploración ni es adecuado para enviar datos clínicos sensibles sin indicación.' },
-    { q: '¿Cómo se gestiona una urgencia dental?', a: 'Llama al 650 60 01 72 para que podamos valorar prioridad y disponibilidad. Ante una urgencia vital, llama al 112.' },
+    { q: '¿Cómo se gestiona una urgencia dental?', a: 'Llama al 973 44 75 34 para que podamos valorar prioridad y disponibilidad. Ante una urgencia vital, llama al 112.' },
   ],
   location: { id: 'tremp' },
   related: [

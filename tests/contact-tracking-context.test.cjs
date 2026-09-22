@@ -73,12 +73,13 @@ test('blog treatment links retain their event and article context after integrat
 test('phone and WhatsApp taps are counted once even when explicitly tagged', () => {
   const h = harness();
   h.click({ href: 'tel:+34973268826', track: 'appointment_cta_click' });
+  h.click({ href: 'tel:+34973447534', track: 'appointment_cta_click' });
   h.click({ href: 'https://wa.me/34650600172?text=private%20message', track: 'click_cita' });
   assert.deepEqual(h.events.filter(e => e.provider === 'ga4').map(e => [e.name, e.params.clinic]), [
-    ['phone_click', 'lleida'], ['whatsapp_click', 'tremp']
+    ['phone_click', 'lleida'], ['phone_click', 'tremp'], ['whatsapp_click', 'tremp']
   ]);
-  assert.equal(h.events.length, 4);
-  assert.doesNotMatch(JSON.stringify(h.events), /34973268826|34650600172|private|message|generate_lead/);
+  assert.equal(h.events.length, 6);
+  assert.doesNotMatch(JSON.stringify(h.events), /34973268826|34973447534|34650600172|private|message|generate_lead/);
 });
 
 test('generic appointment links and direct contact choices remain distinct', () => {
@@ -130,7 +131,7 @@ test('every consent combination independently gates custom events', () => {
 
 test('an unavailable Umami provider does not suppress consented GA4 events', () => {
   const h = harness({ umamiThrows: true });
-  h.click({ href: 'tel:+34650600172' });
+  h.click({ href: 'tel:+34973447534' });
   assert.equal(h.events.length, 1);
   assert.equal(h.events[0].provider, 'ga4');
   assert.equal(h.events[0].name, 'phone_click');

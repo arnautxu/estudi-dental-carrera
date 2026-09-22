@@ -212,7 +212,7 @@ test('conversion events obey analytics choices and never turn contact taps into 
   window.track('appointment_start', { form_name: 'appointment' });
   assert.equal(events.length, 0);
   prefs = { umami: false, analytics: true };
-  const tel = { getAttribute: () => 'tel:+34 650 600 172' };
+  const tel = { getAttribute: () => 'tel:+34 973 447 534' };
   await document.emit('click', { target: { closest: selector => selector === 'a[href^="tel:"]' ? tel : null } });
   assert.deepEqual(events.map(e => [e.provider, e.name, e.params.clinic]), [['ga4', 'phone_click', 'tremp']]);
   prefs = { umami: true, analytics: false };
