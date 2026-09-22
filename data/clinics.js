@@ -7,7 +7,7 @@ module.exports = {
     "url": "https://www.estudidentalcarrera.com/clinica-dental-lleida.html",
     "image": "https://www.estudidentalcarrera.com/assets/img/lleida-edifici.jpg",
     "telephone": "+34973268826",
-    "email": "carrera@clinicarrera.cat",
+    "email": "clinica@joancarrera.cat",
     "priceRange": "€€",
     "branchOf": {
       "@id": "https://www.estudidentalcarrera.com/#organization"
