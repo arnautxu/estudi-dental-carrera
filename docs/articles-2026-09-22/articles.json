@@ -1,0 +1,72 @@
+[
+  {
+    "ca": "/guies/triar-dentista-lleida.html",
+    "es": "/es/guias/elegir-dentista-lleida.html",
+    "photo": "recepcio-lleida"
+  },
+  {
+    "ca": "/guies/por-dentista.html",
+    "es": "/es/guias/miedo-dentista.html",
+    "photo": "conversa-consulta-tremp"
+  },
+  {
+    "ca": "/guies/sensibilitat-dental-fred.html",
+    "es": "/es/guias/sensibilidad-dental-frio.html",
+    "photo": "atm-exploracio-lleida"
+  },
+  {
+    "ca": "/guies/bony-geniva.html",
+    "es": "/es/guias/bulto-encia.html",
+    "photo": "conversa-consulta-tremp"
+  },
+  {
+    "ca": "/guies/mal-ale-persistent.html",
+    "es": "/es/guias/mal-aliento-persistente.html",
+    "photo": "higiene-dental-tremp"
+  },
+  {
+    "ca": "/guies/caries-dents-llet.html",
+    "es": "/es/guias/caries-dientes-leche.html",
+    "photo": "recepcio-tremp"
+  },
+  {
+    "ca": "/guies/caries-entre-dents.html",
+    "es": "/es/guias/caries-entre-dientes.html",
+    "photo": "restauracio-dental-lleida"
+  },
+  {
+    "ca": "/guies/boca-seca.html",
+    "es": "/es/guias/boca-seca.html",
+    "photo": "conversa-consulta-tremp"
+  },
+  {
+    "ca": "/guies/erosio-esmalt-dental.html",
+    "es": "/es/guias/erosion-esmalte-dental.html",
+    "photo": "restauracio-dental-lleida"
+  },
+  {
+    "ca": "/guies/diabetis-genives.html",
+    "es": "/es/guias/diabetes-encias.html",
+    "photo": "higiene-dental-tremp"
+  },
+  {
+    "ca": "/guies/manteniment-implants-dentals.html",
+    "es": "/es/guias/mantenimiento-implantes-dentales.html",
+    "photo": "implant-preparacio-tremp"
+  },
+  {
+    "ca": "/guies/escaner-intraoral.html",
+    "es": "/es/guias/escaner-intraoral.html",
+    "photo": "escaner-intraoral-tremp"
+  },
+  {
+    "ca": "/guies/durada-anestesia-dental.html",
+    "es": "/es/guias/duracion-anestesia-dental.html",
+    "photo": "gabinet-tremp"
+  },
+  {
+    "ca": "/guies/implants-poc-os.html",
+    "es": "/es/guias/implantes-poco-hueso.html",
+    "photo": "implants-planificacio-lleida"
+  }
+]

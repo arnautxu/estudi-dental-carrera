@@ -484,7 +484,7 @@ console.log(
   const I18N = {
     ca: {
       bannerTitle: 'Cookies i privacitat',
-      bannerText: 'Fem servir Umami sense cookies per a estadístiques bàsiques. Google Analytics envia senyals sense cookies. Les cookies d\'Analytics i Google Maps només s\'activen si ho acceptes. <a href="cookies.html">Més informació</a>.',
+      bannerText: 'Fem servir Umami sense cookies per a estadístiques bàsiques. Google Analytics envia senyals sense cookies. Les cookies d\'Analytics i Google Maps només s\'activen si ho acceptes. <a href="/cookies.html">Més informació</a>.',
       prefs: 'Preferències', reject: 'Rebutjar', accept: 'Acceptar',
       bannerAria: 'Consentiment de cookies',
       modalTitle: 'Preferències de cookies',
@@ -504,7 +504,7 @@ console.log(
     },
     es: {
       bannerTitle: 'Cookies y privacidad',
-      bannerText: 'Usamos Umami sin cookies para estadísticas básicas. Google Analytics envía señales sin cookies. Las cookies de Analytics y Google Maps solo se activan si lo aceptas. <a href="cookies.html">Más información</a>.',
+      bannerText: 'Usamos Umami sin cookies para estadísticas básicas. Google Analytics envía señales sin cookies. Las cookies de Analytics y Google Maps solo se activan si lo aceptas. <a href="/es/cookies.html">Más información</a>.',
       prefs: 'Preferencias', reject: 'Rechazar', accept: 'Aceptar',
       bannerAria: 'Consentimiento de cookies',
       modalTitle: 'Preferencias de cookies',

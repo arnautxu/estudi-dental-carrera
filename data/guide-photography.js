@@ -96,6 +96,20 @@ function photograph(id, lang) {
 
 // Each optional section names both translations explicitly so placement stays editorial.
 const selections = [
+  ['triar-dentista-lleida-ca', 'recepcio-lleida'],
+  ['por-dentista-ca', 'conversa-consulta-tremp'],
+  ['sensibilitat-dental-fred-ca', 'atm-exploracio-lleida'],
+  ['bony-geniva-ca', 'conversa-consulta-tremp'],
+  ['mal-ale-persistent-ca', 'higiene-dental-tremp'],
+  ['caries-dents-llet-ca', 'recepcio-tremp'],
+  ['caries-entre-dents-ca', 'restauracio-dental-lleida'],
+  ['boca-seca-ca', 'conversa-consulta-tremp'],
+  ['erosio-esmalt-dental-ca', 'restauracio-dental-lleida'],
+  ['diabetis-genives-ca', 'higiene-dental-tremp'],
+  ['manteniment-implants-dentals-ca', 'implant-preparacio-tremp'],
+  ['escaner-intraoral-ca', 'escaner-intraoral-tremp'],
+  ['durada-anestesia-dental-ca', 'gabinet-tremp'],
+  ['implants-poc-os-ca', 'implants-planificacio-lleida'],
   ['endodoncia-dubtes', 'tractament-dental-tremp', 'restauracio-dental-lleida', 'despres', 'despues'],
   ['sagnat-genives', 'higiene-dental-tremp', 'conversa-consulta-tremp', 'preparar-consulta', 'preparar-consulta'],
   ['ferula-descarrega', 'atm-explicacio-lleida', 'atm-exploracio-lleida', 'dolor-mandibular', 'dolor-mandibular'],

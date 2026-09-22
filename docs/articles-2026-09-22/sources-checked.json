@@ -1,0 +1,330 @@
+[
+  {
+    "url": "https://unitia.coec.cat/cercador_collegiats",
+    "status": 200,
+    "final": "https://unitia.coec.cat/cercador_collegiats"
+  },
+  {
+    "url": "https://consejodentistas.es/informacion-publica/informacion-clinica/salud-oral-y-salud-general/",
+    "status": 200,
+    "final": "https://consejodentistas.es/informacion-publica/informacion-clinica/salud-oral-y-salud-general/"
+  },
+  {
+    "url": "https://consejodentistas.es/el-dentista-un-profesional-imprescindible-en-cualquier-tratamiento-de-salud-bucodental/",
+    "status": 200,
+    "final": "https://consejodentistas.es/el-dentista-un-profesional-imprescindible-en-cualquier-tratamiento-de-salud-bucodental/"
+  },
+  {
+    "url": "https://www.mouthhealthy.org/dental-care/questions-about-going-to-the-dentist",
+    "status": 200,
+    "final": "https://www.mouthhealthy.org/dental-care/questions-about-going-to-the-dentist"
+  },
+  {
+    "url": "https://www.mouthhealthy.org/all-topics-a-z/anxiety",
+    "status": 200,
+    "final": "https://www.mouthhealthy.org/all-topics-a-z/anxiety"
+  },
+  {
+    "url": "https://www.mouthhealthy.org/all-topics-a-z/anesthesia-and-sedation",
+    "status": 200,
+    "final": "https://www.mouthhealthy.org/all-topics-a-z/anesthesia-and-sedation"
+  },
+  {
+    "url": "https://www.england.nhs.uk/long-read/clinical-guide-for-dental-anxiety-management/",
+    "status": 202,
+    "final": "https://www.england.nhs.uk/long-read/clinical-guide-for-dental-anxiety-management/"
+  },
+  {
+    "url": "https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/self-help-cbt-techniques/",
+    "status": 200,
+    "final": "https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/self-help-cbt-techniques/"
+  },
+  {
+    "url": "https://www.mouthhealthy.org/all-topics-a-z/sensitive-teeth",
+    "status": 200,
+    "final": "https://www.mouthhealthy.org/all-topics-a-z/sensitive-teeth"
+  },
+  {
+    "url": "https://www.aae.org/patients/dental-symptoms/tooth-pain/",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://www.nidcr.nih.gov/health-info/tooth-decay",
+    "status": 200,
+    "final": "https://www.nidcr.nih.gov/health-info/tooth-decay"
+  },
+  {
+    "url": "https://www.nhs.uk/live-well/healthy-teeth-and-gums/how-to-keep-your-teeth-clean/",
+    "status": 200,
+    "final": "https://www.nhs.uk/live-well/healthy-teeth-and-gums/how-to-keep-your-teeth-clean/"
+  },
+  {
+    "url": "https://www.nhs.uk/symptoms/teeth-grinding/",
+    "status": 200,
+    "final": "https://www.nhs.uk/symptoms/teeth-grinding/"
+  },
+  {
+    "url": "https://www.nhs.uk/conditions/dental-abscess/",
+    "status": 200,
+    "final": "https://www.nhs.uk/conditions/dental-abscess/"
+  },
+  {
+    "url": "https://www.aae.org/patients/dental-symptoms/abscessed-teeth/",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://www.aae.org/specialty/wp-content/uploads/sites/2/2019/12/ecfe-fall-2019-May-2021.pdf",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://www.aae.org/specialty/endodontic-periodontic-lesions/",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://www.nhs.uk/conditions/mouth-cancer/symptoms/",
+    "status": 200,
+    "final": "https://www.nhs.uk/conditions/mouth-cancer/symptoms/"
+  },
+  {
+    "url": "https://www.ada.org/resources/research/science/evidence-based-dental-research/antibiotics-for-dental-pain-and-swelling/",
+    "status": 200,
+    "final": "https://www.ada.org/resources/research/science/evidence-based-dental-research/antibiotics-for-dental-pain-and-swelling/"
+  },
+  {
+    "url": "https://112.gencat.cat/ca/inici",
+    "status": 200,
+    "final": "https://112.gencat.cat/ca/inici"
+  },
+  {
+    "url": "https://www.nhs.uk/symptoms/bad-breath/",
+    "status": 200,
+    "final": "https://www.nhs.uk/symptoms/bad-breath/"
+  },
+  {
+    "url": "https://www.mouthhealthy.org/all-topics-a-z/bad-breath",
+    "status": 200,
+    "final": "https://www.mouthhealthy.org/all-topics-a-z/bad-breath"
+  },
+  {
+    "url": "https://www.mouthhealthy.org/all-topics-a-z/mouthwash",
+    "status": 200,
+    "final": "https://www.mouthhealthy.org/all-topics-a-z/mouthwash"
+  },
+  {
+    "url": "https://www.nidcr.nih.gov/health-info/dry-mouth",
+    "status": 200,
+    "final": "https://www.nidcr.nih.gov/health-info/dry-mouth"
+  },
+  {
+    "url": "https://www.nidcr.nih.gov/health-info/gum-disease",
+    "status": 200,
+    "final": "https://www.nidcr.nih.gov/health-info/gum-disease"
+  },
+  {
+    "url": "https://www.aapd.org/resources/parent/faq/",
+    "status": 200,
+    "final": "https://www.aapd.org/resources/parent/faq/"
+  },
+  {
+    "url": "https://www.mouthhealthy.org/all-topics-a-z/tooth-decay-with-baby-bottles",
+    "status": 200,
+    "final": "https://www.mouthhealthy.org/all-topics-a-z/tooth-decay-with-baby-bottles"
+  },
+  {
+    "url": "https://www.nhs.uk/live-well/healthy-teeth-and-gums/taking-care-of-childrens-teeth/",
+    "status": 200,
+    "final": "https://www.nhs.uk/live-well/healthy-teeth-and-gums/taking-care-of-childrens-teeth/"
+  },
+  {
+    "url": "https://www.mouthhealthy.org/all-topics-a-z/x-rays",
+    "status": 200,
+    "final": "https://www.mouthhealthy.org/all-topics-a-z/x-rays"
+  },
+  {
+    "url": "https://www.nhs.uk/conditions/tooth-decay/",
+    "status": 200,
+    "final": "https://www.nhs.uk/conditions/tooth-decay/"
+  },
+  {
+    "url": "https://www.mouthhealthy.org/all-topics-a-z/cavities",
+    "status": 200,
+    "final": "https://www.mouthhealthy.org/all-topics-a-z/cavities"
+  },
+  {
+    "url": "https://www.mouthhealthy.org/all-topics-a-z/flossing",
+    "status": 200,
+    "final": "https://www.mouthhealthy.org/all-topics-a-z/flossing"
+  },
+  {
+    "url": "https://www.nhs.uk/symptoms/dry-mouth/",
+    "status": 200,
+    "final": "https://www.nhs.uk/symptoms/dry-mouth/"
+  },
+  {
+    "url": "https://www.mouthhealthy.org/all-topics-a-z/dry-mouth",
+    "status": 200,
+    "final": "https://www.mouthhealthy.org/all-topics-a-z/dry-mouth"
+  },
+  {
+    "url": "https://www.ada.org/resources/ada-library/oral-health-topics/xerostomia",
+    "status": 200,
+    "final": "https://www.ada.org/resources/ada-library/oral-health-topics/xerostomia"
+  },
+  {
+    "url": "https://www.ada.org/resources/ada-library/oral-health-topics/dental-erosion",
+    "status": 200,
+    "final": "https://www.ada.org/resources/ada-library/oral-health-topics/dental-erosion"
+  },
+  {
+    "url": "https://www.mouthhealthy.org/all-topics-a-z/dietary-acids-and-your-teeth",
+    "status": 200,
+    "final": "https://www.mouthhealthy.org/all-topics-a-z/dietary-acids-and-your-teeth"
+  },
+  {
+    "url": "https://www.mouthhealthy.org/all-topics-a-z/tooth-erosion-and-acid-reflux",
+    "status": 200,
+    "final": "https://www.mouthhealthy.org/all-topics-a-z/tooth-erosion-and-acid-reflux"
+  },
+  {
+    "url": "https://www.nidcr.nih.gov/health-info/bruxism",
+    "status": 200,
+    "final": "https://www.nidcr.nih.gov/health-info/bruxism"
+  },
+  {
+    "url": "https://www.nidcr.nih.gov/health-info/diabetes",
+    "status": 200,
+    "final": "https://www.nidcr.nih.gov/health-info/diabetes"
+  },
+  {
+    "url": "https://www.cdc.gov/diabetes/diabetes-complications/diabetes-and-oral-health.html",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://www.mouthhealthy.org/all-topics-a-z/diabetes",
+    "status": 200,
+    "final": "https://www.mouthhealthy.org/all-topics-a-z/diabetes"
+  },
+  {
+    "url": "https://www.ada.org/resources/ada-library/oral-health-topics/diabetes",
+    "status": 200,
+    "final": "https://www.ada.org/resources/ada-library/oral-health-topics/diabetes"
+  },
+  {
+    "url": "https://www.efp.org/for-patients/dental-implants/dental-implants-explained/",
+    "status": 200,
+    "final": "https://www.efp.org/for-patients/dental-implants/dental-implants-explained/"
+  },
+  {
+    "url": "https://www.efp.org/for-patients/dental-implants/peri-implant-diseases/",
+    "status": 200,
+    "final": "https://www.efp.org/for-patients/dental-implants/peri-implant-diseases/"
+  },
+  {
+    "url": "https://www.efp.org/for-patients/dental-implants/peri-implant-disease-prevention/",
+    "status": 200,
+    "final": "https://www.efp.org/for-patients/dental-implants/peri-implant-disease-prevention/"
+  },
+  {
+    "url": "https://www.efp.org/for-patients/dental-implants/check-your-symptoms/",
+    "status": 200,
+    "final": "https://www.efp.org/for-patients/dental-implants/check-your-symptoms/"
+  },
+  {
+    "url": "https://www.efp.org/fileadmin/uploads/efp/Documents/Other_publications/Clinical_guidelines/peri-implantitis-guideline-01-prevention.pdf",
+    "status": 200,
+    "final": "https://www.efp.org/fileadmin/uploads/efp/Documents/Other_publications/Clinical_guidelines/peri-implantitis-guideline-01-prevention.pdf"
+  },
+  {
+    "url": "https://www.guysandstthomas.nhs.uk/health-information/dental-implants",
+    "status": 200,
+    "final": "https://www.guysandstthomas.nhs.uk/health-information/dental-implants"
+  },
+  {
+    "url": "https://techselect.aaoinfo.org/intraoral-scanners/intraoral-scanners-how-to-choose/",
+    "status": 200,
+    "final": "https://techselect.aaoinfo.org/intraoral-scanners/intraoral-scanners-how-to-choose/"
+  },
+  {
+    "url": "https://adanews.ada.org/ada-news/2022/june/digital-dentistry-what-to-know-about-a-few-popular-technologies",
+    "status": 200,
+    "final": "https://adanews.ada.org/ada-news/2022/june/digital-dentistry-what-to-know-about-a-few-popular-technologies"
+  },
+  {
+    "url": "https://pages.ada.org/ada-news/technology-in-dentistry",
+    "status": 200,
+    "final": "https://pages.ada.org/ada-news/technology-in-dentistry"
+  },
+  {
+    "url": "https://www.hra.nhs.uk/planning-and-improving-research/application-summaries/research-summaries/the-application-of-intraoral-scanners-to-special-needs-dentistry/",
+    "status": 200,
+    "final": "https://www.hra.nhs.uk/planning-and-improving-research/application-summaries/research-summaries/the-application-of-intraoral-scanners-to-special-needs-dentistry/"
+  },
+  {
+    "url": "https://link.springer.com/article/10.1186/s12903-017-0442-x",
+    "status": 200,
+    "final": "https://link.springer.com/article/10.1186/s12903-017-0442-x?error=cookies_not_supported&code=697fbc9d-0be2-44b2-bf4a-0bf0db42e906"
+  },
+  {
+    "url": "https://www.fda.gov/radiation-emitting-products/medical-x-ray-imaging/dental-cone-beam-computed-tomography",
+    "status": 200,
+    "final": "https://www.fda.gov/radiation-emitting-products/medical-x-ray-imaging/dental-cone-beam-computed-tomography"
+  },
+  {
+    "url": "https://www.nhs.uk/tests-and-treatments/local-anaesthesia/",
+    "status": 200,
+    "final": "https://www.nhs.uk/tests-and-treatments/local-anaesthesia/"
+  },
+  {
+    "url": "https://www.uhsussex.nhs.uk/resources/removal-of-teeth-under-local-anaesthetic/",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://leedscommunityhealthcare.nhs.uk/our-services-a-z/dental/",
+    "status": 200,
+    "final": "https://leedscommunityhealthcare.nhs.uk/our-services-a-z/dental/"
+  },
+  {
+    "url": "https://www.dbth.nhs.uk/post-operative-instructions-after-dental-extraction-under-general-anaesthetic/",
+    "status": 200,
+    "final": "https://www.dbth.nhs.uk/post-operative-instructions-after-dental-extraction-under-general-anaesthetic/"
+  },
+  {
+    "url": "https://www.newcastle-hospitals.nhs.uk/resources/surgical-removal-of-teeth/",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://www.nhs.uk/conditions/anaphylaxis/",
+    "status": 200,
+    "final": "https://www.nhs.uk/conditions/anaphylaxis/"
+  },
+  {
+    "url": "https://www.cuh.nhs.uk/patient-information/bone-grafting-for-dental-implants/",
+    "status": 200,
+    "final": "https://www.cuh.nhs.uk/patient-information/bone-grafting-for-dental-implants/"
+  },
+  {
+    "url": "https://www.cuh.nhs.uk/patient-information/dental-implants-in-restorative-dentistry/",
+    "status": 200,
+    "final": "https://www.cuh.nhs.uk/patient-information/dental-implants-in-restorative-dentistry/"
+  },
+  {
+    "url": "https://www.guysandstthomas.nhs.uk/health-information/bone-grafting-dental-implants",
+    "status": 200,
+    "final": "https://www.guysandstthomas.nhs.uk/health-information/bone-grafting-dental-implants"
+  },
+  {
+    "url": "https://www.uhnm.nhs.uk/media/oinoshi1/agenda-item-07c-reapproved-dental-implants.pdf",
+    "status": 200,
+    "final": "https://www.uhnm.nhs.uk/media/oinoshi1/agenda-item-07c-reapproved-dental-implants.pdf"
+  },
+  {
+    "url": "https://www.dental-referrals.nhs.wales/patients/dental-specialities/dental-implants/",
+    "status": 200,
+    "final": "https://www.dental-referrals.nhs.wales/patients/dental-specialities/dental-implants/"
+  },
+  {
+    "url": "https://www.mouthhealthy.org/all-topics-a-z/missing-teeth",
+    "status": 200,
+    "final": "https://www.mouthhealthy.org/all-topics-a-z/missing-teeth"
+  }
+]

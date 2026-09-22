@@ -1,6 +1,7 @@
 // Published educational guides retain stable bilingual URLs.
 // Publication notes and source review are recorded in docs.
 const categories = {
+  consulta: { ca: 'La visita dental', es: 'La visita dental' },
   atm: { ca: 'ATM i bruxisme', es: 'ATM y bruxismo' },
   salut: { ca: 'Dents i genives', es: 'Dientes y encías' },
   tractaments: { ca: 'Implants i ortodòncia', es: 'Implantes y ortodoncia' },

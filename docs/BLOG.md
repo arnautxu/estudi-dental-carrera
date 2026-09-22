@@ -68,3 +68,7 @@ Els clics del blog cap a un tractament porten `blog_service_click`; llegir un ar
 Publicació conjunta autoritzada pel responsable del web: 14 temes nous en CA/ES i sis guies existents ampliades. Total de 21 temes en cada idioma. La petició substitueix el calendari esglaonat anterior. Fonts contrastades i cap atribució de revisió clínica a l'equip. Vegeu `docs/articles-serveis-2026-09-21/README.md` per a cobertura, fonts, límits editorials i verificació.
 
 Els nous temes viuen a `guides-family`, `guides-restoration`, `guides-aesthetics` i `guides-prevention`; `guides-library` els adapta al format del render i del catàleg. `guide-updates` amplia les sis guies sense canviar-ne les URLs.
+
+## Ampliació conjunta del 22/09/2026
+
+Publicació conjunta de 14 temes nous en CA/ES autoritzada pel responsable del web després de revisar blogs de clíniques de Lleida. S’exclouen els articles sobre preus. Total: 35 temes per idioma. Vegeu `docs/articles-2026-09-22/README.md` i les notes de fonts. Els nous mòduls són `guides-access-symptoms`, `guides-prevention-expansion` i `guides-treatment-care`. Cap signatura ni revisió clínica atribuïda a l’equip.
