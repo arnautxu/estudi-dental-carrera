@@ -1,7 +1,46 @@
 const { test } = require('node:test');
 const assert = require('node:assert/strict');
 const { guides } = require('../data/guides');
+const { articles } = require('../data/blog');
 const { photos, photograph, enrichGuides } = require('../data/guide-photography');
+const sourceManifest = require('../docs/photography-2026-09-23/sources.json');
+
+test('the excluded smiling patient photos have no editorial derivative', () => {
+  const forbiddenHash = '17fd787de17b15de8ad79b93ca7e89829d7103f5b25de64b878ce0043925690b';
+  assert.ok(sourceManifest.excluded_sources.some(source => source.source_sha256 === forbiddenHash));
+  const excluded = new Set(sourceManifest.excluded_sources.map(source => source.source_sha256));
+  for (const photo of sourceManifest.photos) {
+    assert.ok(!excluded.has(photo.source_sha256), `Excluded photo used by ${photo.asset_id}`);
+  }
+});
+
+test('each of the 35 article topics uses distinct visible photographs across cover and section', () => {
+  assert.equal(articles.length, 35);
+  const usedPaths = new Map();
+
+  for (const article of articles) {
+    const ca = guides[article.ca];
+    const es = guides[article.es];
+    assert.ok(ca && es, `Missing bilingual article pair: ${article.ca}`);
+    assert.equal(ca.lang, 'ca');
+    assert.equal(es.lang, 'es');
+
+    const visiblePaths = guide => [
+      guide.photography?.src,
+      ...guide.sections.filter(section => section.photography).map(section => section.photography.src),
+    ];
+    const caPaths = visiblePaths(ca);
+    assert.ok(caPaths.every(path => typeof path === 'string' && path.length > 0),
+      `Missing visible photograph path: ${article.ca}`);
+    assert.deepEqual(visiblePaths(es), caPaths, `Bilingual photographs differ: ${article.ca}`);
+
+    for (const [index, path] of caPaths.entries()) {
+      const use = `${article.ca} (${index === 0 ? 'cover' : 'section figure'})`;
+      assert.ok(!usedPaths.has(path), `Photograph ${path} is reused by ${use} and ${usedPaths.get(path)}`);
+      usedPaths.set(path, use);
+    }
+  }
+});
 
 test('all bilingual guide pairs share curated photos and localized descriptions', () => {
   const catalan = Object.values(guides).filter(guide => guide.lang === 'ca');

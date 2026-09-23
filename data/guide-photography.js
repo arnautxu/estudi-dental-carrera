@@ -75,6 +75,11 @@ const descriptions = {
   },
 };
 
+for (const [id, description] of Object.entries(require('./guide-photo-descriptions-2026-09-23'))) {
+  if (Object.prototype.hasOwnProperty.call(descriptions, id)) throw new Error(`Duplicate editorial photograph ID: ${id}`);
+  descriptions[id] = description;
+}
+
 const photos = Object.fromEntries(Object.entries(descriptions).map(([id, description]) => {
   const base = `/assets/img/editorial/${id}`;
   return [id, {
@@ -98,43 +103,48 @@ function photograph(id, lang) {
 const selections = [
   ['triar-dentista-lleida-ca', 'recepcio-lleida'],
   ['por-dentista-ca', 'conversa-consulta-tremp'],
-  ['sensibilitat-dental-fred-ca', 'atm-exploracio-lleida'],
-  ['bony-geniva-ca', 'conversa-consulta-tremp'],
-  ['mal-ale-persistent-ca', 'higiene-dental-tremp'],
-  ['caries-dents-llet-ca', 'recepcio-tremp'],
-  ['caries-entre-dents-ca', 'restauracio-dental-lleida'],
-  ['boca-seca-ca', 'conversa-consulta-tremp'],
-  ['erosio-esmalt-dental-ca', 'restauracio-dental-lleida'],
-  ['diabetis-genives-ca', 'higiene-dental-tremp'],
-  ['manteniment-implants-dentals-ca', 'implant-preparacio-tremp'],
+  ['sensibilitat-dental-fred-ca', 'sensibilitat-dental-fred-lleida'],
+  ['bony-geniva-ca', 'bony-geniva-tremp'],
+  ['mal-ale-persistent-ca', 'mal-ale-persistent-lleida'],
+  ['caries-dents-llet-ca', 'caries-dents-llet-lleida'],
+  ['caries-entre-dents-ca', 'caries-entre-dents-lleida'],
+  ['boca-seca-ca', 'boca-seca-tremp'],
+  ['erosio-esmalt-dental-ca', 'erosio-esmalt-dental-lleida'],
+  ['diabetis-genives-ca', 'diabetis-genives-lleida'],
+  ['manteniment-implants-dentals-ca', 'manteniment-implants-dentals-tremp'],
   ['escaner-intraoral-ca', 'escaner-intraoral-tremp'],
   ['durada-anestesia-dental-ca', 'gabinet-tremp'],
   ['implants-poc-os-ca', 'implants-planificacio-lleida'],
-  ['endodoncia-dubtes', 'tractament-dental-tremp', 'restauracio-dental-lleida', 'despres', 'despues'],
-  ['sagnat-genives', 'higiene-dental-tremp', 'conversa-consulta-tremp', 'preparar-consulta', 'preparar-consulta'],
-  ['ferula-descarrega', 'atm-explicacio-lleida', 'atm-exploracio-lleida', 'dolor-mandibular', 'dolor-mandibular'],
-  ['implant-o-pont', 'implants-planificacio-lleida', 'implant-preparacio-tremp', 'valoracio-professional', 'valoracion-profesional'],
+  ['endodoncia-dubtes', 'tractament-dental-tremp', 'endodoncia-dubtes-detall-tremp', 'despres', 'despues'],
+  ['sagnat-genives', 'sagnat-genives-tremp', 'sagnat-genives-detall-lleida', 'preparar-consulta', 'preparar-consulta'],
+  ['ferula-descarrega', 'ferula-descarrega-lleida', 'ferula-descarrega-detall-lleida', 'dolor-mandibular', 'dolor-mandibular'],
+  ['implant-o-pont', 'implant-o-pont-tremp', 'implant-o-pont-detall-lleida', 'valoracio-professional', 'valoracion-profesional'],
   ['alineadors-o-braquets', 'ortodoncia-model-lleida', 'alineadors-lleida', 'rutina-us', 'rutina-uso'],
-  ['taques-dents', 'conversa-consulta-tremp', 'higiene-dental-tremp', 'neteja-superficie', 'limpieza-superficie'],
-  ['dolor-mandibula-despertar', 'atm-exploracio-lleida', 'atm-explicacio-lleida', 'que-observar', 'que-observar'],
+  ['taques-dents', 'taques-dents-lleida', 'taques-dents-detall-lleida', 'neteja-superficie', 'limpieza-superficie'],
+  ['dolor-mandibula-despertar', 'atm-exploracio-lleida', 'dolor-mandibula-despertar-detall-lleida', 'que-observar', 'que-observar'],
   ['primera-visita-dentista-infantil-ca', 'recepcio-tremp'],
-  ['ortodoncia-infantil-ca', 'ortodoncia-model-lleida'],
+  ['ortodoncia-infantil-ca', 'ortodoncia-infantil-lleida'],
   ['clic-mandibula-ca', 'atm-explicacio-lleida'],
-  ['dolor-mandibula-dentista-fisioterapeuta-ca', 'atm-exploracio-lleida'],
-  ['implant-immediat-carrega-immediata-ca', 'implant-preparacio-tremp', 'implants-planificacio-lleida', 'seleccio', 'seleccion'],
-  ['implants-multiples-ca', 'escaner-intraoral-tremp'],
-  ['arcada-completa-quatre-sis-implants-ca', 'implants-planificacio-lleida', 'escaner-intraoral-tremp', 'nombre', 'numero'],
-  ['protesi-fixa-removible-ca', 'valoracio-digital-tremp', 'restauracio-dental-lleida', 'materials', 'materiales'],
-  ['facetes-composite-porcellana-ca', 'restauracio-dental-lleida'],
+  ['dolor-mandibula-dentista-fisioterapeuta-ca', 'dolor-mandibula-dentista-fisioterapeuta-lleida'],
+  ['implant-immediat-carrega-immediata-ca', 'implant-preparacio-tremp', 'implant-immediat-carrega-immediata-detall-tremp', 'seleccio', 'seleccion'],
+  ['implants-multiples-ca', 'implants-multiples-tremp'],
+  ['arcada-completa-quatre-sis-implants-ca', 'arcada-completa-quatre-sis-implants-lleida', 'arcada-completa-quatre-sis-implants-detall-tremp', 'nombre', 'numero'],
+  ['protesi-fixa-removible-ca', 'valoracio-digital-tremp', 'protesi-fixa-removible-detall-lleida', 'materials', 'materiales'],
+  ['facetes-composite-porcellana-ca', 'facetes-composite-porcellana-lleida'],
   ['composite-dental-ca', 'restauracio-dental-lleida'],
-  ['queixals-seny-ca', 'radiologia-lleida', 'gabinet-tremp', 'recuperacio', 'recuperacion'],
-  ['dent-trencada-cop-ca', 'recepcio-lleida'],
+  ['queixals-seny-ca', 'queixals-seny-lleida', 'queixals-seny-detall-lleida', 'recuperacio', 'recuperacion'],
+  ['dent-trencada-cop-ca', 'dent-trencada-cop-tremp'],
   ['radiografia-panoramica-cbct-ca', 'cbct-lleida', 'radiologia-lleida', 'abans', 'antes'],
   ['neteja-dental-raspat-ca', 'higiene-dental-tremp'],
 ];
 
 function enrichGuides(guides) {
+  const usedPhotos = new Map();
   for (const [key, opening, detail, caSection, esSection] of selections) {
+    for (const id of [opening, detail].filter(Boolean)) {
+      if (usedPhotos.has(id)) throw new Error(`Editorial photograph ${id} reused by ${key} and ${usedPhotos.get(id)}`);
+      usedPhotos.set(id, key);
+    }
     const ca = Object.prototype.hasOwnProperty.call(guides, key) ? guides[key] : null;
     if (!ca || ca.lang !== 'ca') throw new Error(`Missing Catalan guide for editorial photography: ${key}`);
     const es = Object.values(guides).find(guide => guide.path === ca.alternatePath);

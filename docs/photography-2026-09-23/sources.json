@@ -1,0 +1,1699 @@
+{
+  "generated_assets": 30,
+  "excluded_sources": [
+    {
+      "source_id": "124",
+      "source_path": "/Volumes/ADATA SD700/DENTAL CARRERA/FOTOS/CLINICA/DSCF0487.jpg",
+      "source_sha256": "17fd787de17b15de8ad79b93ca7e89829d7103f5b25de64b878ce0043925690b",
+      "reason": "Fotografia del noi somrient: prohibida per l'usuari"
+    },
+    {
+      "source_id": "118",
+      "source_path": "/Volumes/ADATA SD700/DENTAL CARRERA/FOTOS/CLINICA/DSCF0379.jpg",
+      "source_sha256": "779cfb78d61c1eca89f9d0007c425a3ccb82142c1b505dd21e12959ef0a132cc",
+      "reason": "Fotografia similar d'un home somrient: exclosa per prudència"
+    }
+  ],
+  "photos": [
+    {
+      "source_id": "227",
+      "article": "sagnat-genives",
+      "slot": "cover",
+      "location": "Tremp",
+      "literal_scene": "Professional atenent una pacient a la butaca dental",
+      "asset_id": "sagnat-genives-tremp",
+      "source_path": "/Volumes/ADATA SD700/DENTAL TREMP/FOTOS/NURIA/WORK/_MCS3179.jpg",
+      "source_sha256": "2bdcfa3212c9fd9b1c07a89e2e11822915e94b0f5ad8bac6f6f6b528fde45bba",
+      "source_dimensions": [
+        6240,
+        4160
+      ],
+      "oriented_dimensions": [
+        6240,
+        4160
+      ],
+      "source_color_profile": "Adobe RGB (1998)",
+      "output_color_space": "sRGB",
+      "crop_center_normalized": [
+        0.55,
+        0.5
+      ],
+      "crop_box_oriented_pixels": [
+        659,
+        0,
+        6206,
+        4160
+      ],
+      "variants": [
+        {
+          "path": "assets/img/editorial/sagnat-genives-tremp.webp",
+          "dimensions": [
+            1440,
+            1080
+          ],
+          "bytes": 80240
+        },
+        {
+          "path": "assets/img/editorial/sagnat-genives-tremp-960.webp",
+          "dimensions": [
+            960,
+            720
+          ],
+          "bytes": 47646
+        },
+        {
+          "path": "assets/img/editorial/sagnat-genives-tremp-640.webp",
+          "dimensions": [
+            640,
+            480
+          ],
+          "bytes": 27350
+        }
+      ]
+    },
+    {
+      "source_id": "66",
+      "article": "ferula-descarrega",
+      "slot": "cover",
+      "location": "Lleida",
+      "literal_scene": "Carme amb roba clínica i gorra floral davant un mural",
+      "asset_id": "ferula-descarrega-lleida",
+      "source_path": "/Volumes/ADATA SD700/DENTAL CARRERA/FOTOS/CARME/WORK/DSCF9804.jpg",
+      "source_sha256": "56686a9dda48a16ce555450468895e7caa229ef7d74a4e8fa3a16ee7e63f7a47",
+      "source_dimensions": [
+        5200,
+        4074
+      ],
+      "oriented_dimensions": [
+        5200,
+        4074
+      ],
+      "source_color_profile": "Adobe RGB (1998)",
+      "output_color_space": "sRGB",
+      "crop_center_normalized": [
+        0.5,
+        0.5
+      ],
+      "crop_box_oriented_pixels": [
+        0,
+        87,
+        5200,
+        3987
+      ],
+      "variants": [
+        {
+          "path": "assets/img/editorial/ferula-descarrega-lleida.webp",
+          "dimensions": [
+            1440,
+            1080
+          ],
+          "bytes": 112494
+        },
+        {
+          "path": "assets/img/editorial/ferula-descarrega-lleida-960.webp",
+          "dimensions": [
+            960,
+            720
+          ],
+          "bytes": 64970
+        },
+        {
+          "path": "assets/img/editorial/ferula-descarrega-lleida-640.webp",
+          "dimensions": [
+            640,
+            480
+          ],
+          "bytes": 38530
+        }
+      ]
+    },
+    {
+      "source_id": "220",
+      "article": "implant-o-pont",
+      "slot": "cover",
+      "location": "Tremp",
+      "literal_scene": "Professional consultant l’equip informàtic del gabinet",
+      "asset_id": "implant-o-pont-tremp",
+      "source_path": "/Volumes/ADATA SD700/DENTAL TREMP/FOTOS/CARRERA/WORK/_MCS3532.jpg",
+      "source_sha256": "1f6d399ece865af7b604d4769dc227cc642f4c47cbdef3a29de58f6d1c77dc43",
+      "source_dimensions": [
+        5756,
+        3608
+      ],
+      "oriented_dimensions": [
+        5756,
+        3608
+      ],
+      "source_color_profile": "Adobe RGB (1998)",
+      "output_color_space": "sRGB",
+      "crop_center_normalized": [
+        0.5,
+        0.5
+      ],
+      "crop_box_oriented_pixels": [
+        472,
+        0,
+        5283,
+        3608
+      ],
+      "variants": [
+        {
+          "path": "assets/img/editorial/implant-o-pont-tremp.webp",
+          "dimensions": [
+            1440,
+            1080
+          ],
+          "bytes": 69664
+        },
+        {
+          "path": "assets/img/editorial/implant-o-pont-tremp-960.webp",
+          "dimensions": [
+            960,
+            720
+          ],
+          "bytes": 36302
+        },
+        {
+          "path": "assets/img/editorial/implant-o-pont-tremp-640.webp",
+          "dimensions": [
+            640,
+            480
+          ],
+          "bytes": 19514
+        }
+      ]
+    },
+    {
+      "source_id": "149",
+      "article": "taques-dents",
+      "slot": "cover",
+      "location": "Lleida",
+      "literal_scene": "Higienista preparant instrumental al gabinet",
+      "asset_id": "taques-dents-lleida",
+      "source_path": "/Volumes/ADATA SD700/DENTAL CARRERA/FOTOS/HIGIENISTES/LISBETH/WORK/DSCF0226.jpg",
+      "source_sha256": "15a4a0a7ebe64cd6da8ecec70b699a438a320c80445c24d14abe60f24989a06a",
+      "source_dimensions": [
+        5628,
+        4160
+      ],
+      "oriented_dimensions": [
+        5628,
+        4160
+      ],
+      "source_color_profile": "Adobe RGB (1998)",
+      "output_color_space": "sRGB",
+      "crop_center_normalized": [
+        0.5,
+        0.5
+      ],
+      "crop_box_oriented_pixels": [
+        40,
+        0,
+        5587,
+        4160
+      ],
+      "variants": [
+        {
+          "path": "assets/img/editorial/taques-dents-lleida.webp",
+          "dimensions": [
+            1440,
+            1080
+          ],
+          "bytes": 81934
+        },
+        {
+          "path": "assets/img/editorial/taques-dents-lleida-960.webp",
+          "dimensions": [
+            960,
+            720
+          ],
+          "bytes": 49452
+        },
+        {
+          "path": "assets/img/editorial/taques-dents-lleida-640.webp",
+          "dimensions": [
+            640,
+            480
+          ],
+          "bytes": 30112
+        }
+      ]
+    },
+    {
+      "source_id": "98",
+      "article": "sensibilitat-dental-fred",
+      "slot": "cover",
+      "location": "Lleida",
+      "literal_scene": "Professional treballant a la boca d’un pacient",
+      "asset_id": "sensibilitat-dental-fred-lleida",
+      "source_path": "/Volumes/ADATA SD700/DENTAL CARRERA/FOTOS/CARRERA/WORK/DSCF9920.jpg",
+      "source_sha256": "7087bda4489ad3f7bbb3018d14729a15fa44db8157ec87084dae5af0e7af09c0",
+      "source_dimensions": [
+        4160,
+        6240
+      ],
+      "oriented_dimensions": [
+        4160,
+        6240
+      ],
+      "source_color_profile": "Adobe RGB (1998)",
+      "output_color_space": "sRGB",
+      "crop_center_normalized": [
+        0.5,
+        0.54
+      ],
+      "crop_box_oriented_pixels": [
+        0,
+        1810,
+        4160,
+        4930
+      ],
+      "variants": [
+        {
+          "path": "assets/img/editorial/sensibilitat-dental-fred-lleida.webp",
+          "dimensions": [
+            1440,
+            1080
+          ],
+          "bytes": 64000
+        },
+        {
+          "path": "assets/img/editorial/sensibilitat-dental-fred-lleida-960.webp",
+          "dimensions": [
+            960,
+            720
+          ],
+          "bytes": 34616
+        },
+        {
+          "path": "assets/img/editorial/sensibilitat-dental-fred-lleida-640.webp",
+          "dimensions": [
+            640,
+            480
+          ],
+          "bytes": 19516
+        }
+      ]
+    },
+    {
+      "source_id": "181",
+      "article": "bony-geniva",
+      "slot": "cover",
+      "location": "Tremp",
+      "literal_scene": "Dues professionals atenent un pacient a la consulta",
+      "asset_id": "bony-geniva-tremp",
+      "source_path": "/Volumes/ADATA SD700/DENTAL TREMP/FOTOS/ANDREA/WORK/_MCS3987.jpg",
+      "source_sha256": "1bacfbbaf0829dcdc832218b3733559bc74f2497e2a859bb85ef681a9ebfa3e7",
+      "source_dimensions": [
+        6240,
+        4160
+      ],
+      "oriented_dimensions": [
+        6240,
+        4160
+      ],
+      "source_color_profile": "Adobe RGB (1998)",
+      "output_color_space": "sRGB",
+      "crop_center_normalized": [
+        0.5,
+        0.5
+      ],
+      "crop_box_oriented_pixels": [
+        346,
+        0,
+        5893,
+        4160
+      ],
+      "variants": [
+        {
+          "path": "assets/img/editorial/bony-geniva-tremp.webp",
+          "dimensions": [
+            1440,
+            1080
+          ],
+          "bytes": 69996
+        },
+        {
+          "path": "assets/img/editorial/bony-geniva-tremp-960.webp",
+          "dimensions": [
+            960,
+            720
+          ],
+          "bytes": 37810
+        },
+        {
+          "path": "assets/img/editorial/bony-geniva-tremp-640.webp",
+          "dimensions": [
+            640,
+            480
+          ],
+          "bytes": 21390
+        }
+      ]
+    },
+    {
+      "source_id": "138",
+      "article": "mal-ale-persistent",
+      "slot": "cover",
+      "location": "Lleida",
+      "literal_scene": "Primer pla d’una higienista amb mascareta durant una visita",
+      "asset_id": "mal-ale-persistent-lleida",
+      "source_path": "/Volumes/ADATA SD700/DENTAL CARRERA/FOTOS/HIGIENISTES/LISBETH/WORK/DSCF0105.jpg",
+      "source_sha256": "b0a09bed96ed661e0a4fa7a5db4af74040f6cddde09055a7ca3156fa01905799",
+      "source_dimensions": [
+        4160,
+        6240
+      ],
+      "oriented_dimensions": [
+        4160,
+        6240
+      ],
+      "source_color_profile": "Adobe RGB (1998)",
+      "output_color_space": "sRGB",
+      "crop_center_normalized": [
+        0.5,
+        0.36
+      ],
+      "crop_box_oriented_pixels": [
+        0,
+        686,
+        4160,
+        3806
+      ],
+      "variants": [
+        {
+          "path": "assets/img/editorial/mal-ale-persistent-lleida.webp",
+          "dimensions": [
+            1440,
+            1080
+          ],
+          "bytes": 118278
+        },
+        {
+          "path": "assets/img/editorial/mal-ale-persistent-lleida-960.webp",
+          "dimensions": [
+            960,
+            720
+          ],
+          "bytes": 65082
+        },
+        {
+          "path": "assets/img/editorial/mal-ale-persistent-lleida-640.webp",
+          "dimensions": [
+            640,
+            480
+          ],
+          "bytes": 33820
+        }
+      ]
+    },
+    {
+      "source_id": "111",
+      "article": "caries-dents-llet",
+      "slot": "cover",
+      "location": "Lleida",
+      "literal_scene": "Gabinet buit amb butaca i equipament dental",
+      "asset_id": "caries-dents-llet-lleida",
+      "source_path": "/Volumes/ADATA SD700/DENTAL CARRERA/FOTOS/CLINICA/DSCF0176.jpg",
+      "source_sha256": "6309f82673e2bca9630db81b2d1e14a4d08e7c8d6f63ad5705ce11d559ee8077",
+      "source_dimensions": [
+        4160,
+        5822
+      ],
+      "oriented_dimensions": [
+        4160,
+        5822
+      ],
+      "source_color_profile": "Adobe RGB (1998)",
+      "output_color_space": "sRGB",
+      "crop_center_normalized": [
+        0.5,
+        0.57
+      ],
+      "crop_box_oriented_pixels": [
+        0,
+        1759,
+        4160,
+        4879
+      ],
+      "variants": [
+        {
+          "path": "assets/img/editorial/caries-dents-llet-lleida.webp",
+          "dimensions": [
+            1440,
+            1080
+          ],
+          "bytes": 109952
+        },
+        {
+          "path": "assets/img/editorial/caries-dents-llet-lleida-960.webp",
+          "dimensions": [
+            960,
+            720
+          ],
+          "bytes": 51462
+        },
+        {
+          "path": "assets/img/editorial/caries-dents-llet-lleida-640.webp",
+          "dimensions": [
+            640,
+            480
+          ],
+          "bytes": 27038
+        }
+      ]
+    },
+    {
+      "source_id": "82",
+      "article": "caries-entre-dents",
+      "slot": "cover",
+      "location": "Lleida",
+      "literal_scene": "Professional atenent un pacient a la butaca",
+      "asset_id": "caries-entre-dents-lleida",
+      "source_path": "/Volumes/ADATA SD700/DENTAL CARRERA/FOTOS/CARRERA/WORK/DSCF0464.jpg",
+      "source_sha256": "53d60596d405dd84c41e659c07223c6feb88631a3bf0c50126081b1a31eb36cc",
+      "source_dimensions": [
+        3668,
+        4794
+      ],
+      "oriented_dimensions": [
+        3668,
+        4794
+      ],
+      "source_color_profile": "Adobe RGB (1998)",
+      "output_color_space": "sRGB",
+      "crop_center_normalized": [
+        0.5,
+        0.52
+      ],
+      "crop_box_oriented_pixels": [
+        0,
+        1117,
+        3668,
+        3868
+      ],
+      "variants": [
+        {
+          "path": "assets/img/editorial/caries-entre-dents-lleida.webp",
+          "dimensions": [
+            1440,
+            1080
+          ],
+          "bytes": 163174
+        },
+        {
+          "path": "assets/img/editorial/caries-entre-dents-lleida-960.webp",
+          "dimensions": [
+            960,
+            720
+          ],
+          "bytes": 79092
+        },
+        {
+          "path": "assets/img/editorial/caries-entre-dents-lleida-640.webp",
+          "dimensions": [
+            640,
+            480
+          ],
+          "bytes": 43768
+        }
+      ]
+    },
+    {
+      "source_id": "260",
+      "article": "boca-seca",
+      "slot": "cover",
+      "location": "Tremp",
+      "literal_scene": "Atenció dental vista a través del vidre del gabinet",
+      "asset_id": "boca-seca-tremp",
+      "source_path": "/Volumes/ADATA SD700/DENTAL TREMP/FOTOS/RANDOM/_MCS3859.jpg",
+      "source_sha256": "eeaeeed4883ea5dee8d4b59a6b925dc6283ebbc62ed7c8ed55d62923ca65f654",
+      "source_dimensions": [
+        4419,
+        4160
+      ],
+      "oriented_dimensions": [
+        4419,
+        4160
+      ],
+      "source_color_profile": "Adobe RGB (1998)",
+      "output_color_space": "sRGB",
+      "crop_center_normalized": [
+        0.5,
+        0.52
+      ],
+      "crop_box_oriented_pixels": [
+        0,
+        506,
+        4419,
+        3820
+      ],
+      "variants": [
+        {
+          "path": "assets/img/editorial/boca-seca-tremp.webp",
+          "dimensions": [
+            1440,
+            1080
+          ],
+          "bytes": 109950
+        },
+        {
+          "path": "assets/img/editorial/boca-seca-tremp-960.webp",
+          "dimensions": [
+            960,
+            720
+          ],
+          "bytes": 57714
+        },
+        {
+          "path": "assets/img/editorial/boca-seca-tremp-640.webp",
+          "dimensions": [
+            640,
+            480
+          ],
+          "bytes": 29750
+        }
+      ]
+    },
+    {
+      "source_id": "175",
+      "article": "erosio-esmalt-dental",
+      "slot": "cover",
+      "location": "Lleida",
+      "literal_scene": "Professional atenent un pacient vista des del peu de la butaca",
+      "asset_id": "erosio-esmalt-dental-lleida",
+      "source_path": "/Volumes/ADATA SD700/DENTAL CARRERA/FOTOS/ISABEL/WORK/DSCF0399.jpg",
+      "source_sha256": "b703b7c61fdc6250d9e5aa2f0cb2af9d2a689d27a35d8d2fd17abf36056d1f19",
+      "source_dimensions": [
+        4160,
+        4379
+      ],
+      "oriented_dimensions": [
+        4160,
+        4379
+      ],
+      "source_color_profile": "Adobe RGB (1998)",
+      "output_color_space": "sRGB",
+      "crop_center_normalized": [
+        0.5,
+        0.52
+      ],
+      "crop_box_oriented_pixels": [
+        0,
+        717,
+        4160,
+        3837
+      ],
+      "variants": [
+        {
+          "path": "assets/img/editorial/erosio-esmalt-dental-lleida.webp",
+          "dimensions": [
+            1440,
+            1080
+          ],
+          "bytes": 70566
+        },
+        {
+          "path": "assets/img/editorial/erosio-esmalt-dental-lleida-960.webp",
+          "dimensions": [
+            960,
+            720
+          ],
+          "bytes": 39010
+        },
+        {
+          "path": "assets/img/editorial/erosio-esmalt-dental-lleida-640.webp",
+          "dimensions": [
+            640,
+            480
+          ],
+          "bytes": 22242
+        }
+      ]
+    },
+    {
+      "source_id": "151",
+      "article": "diabetis-genives",
+      "slot": "cover",
+      "location": "Lleida",
+      "literal_scene": "Higienista i professional atenent un pacient",
+      "asset_id": "diabetis-genives-lleida",
+      "source_path": "/Volumes/ADATA SD700/DENTAL CARRERA/FOTOS/HIGIENISTES/LISBETH/WORK/DSCF9833.jpg",
+      "source_sha256": "2279597631688a2af2746272d18fe344a66d1440536fde7c0800d5bb1c2f19de",
+      "source_dimensions": [
+        4160,
+        6240
+      ],
+      "oriented_dimensions": [
+        4160,
+        6240
+      ],
+      "source_color_profile": "Adobe RGB (1998)",
+      "output_color_space": "sRGB",
+      "crop_center_normalized": [
+        0.5,
+        0.5
+      ],
+      "crop_box_oriented_pixels": [
+        0,
+        1560,
+        4160,
+        4680
+      ],
+      "variants": [
+        {
+          "path": "assets/img/editorial/diabetis-genives-lleida.webp",
+          "dimensions": [
+            1440,
+            1080
+          ],
+          "bytes": 45240
+        },
+        {
+          "path": "assets/img/editorial/diabetis-genives-lleida-960.webp",
+          "dimensions": [
+            960,
+            720
+          ],
+          "bytes": 22912
+        },
+        {
+          "path": "assets/img/editorial/diabetis-genives-lleida-640.webp",
+          "dimensions": [
+            640,
+            480
+          ],
+          "bytes": 13208
+        }
+      ]
+    },
+    {
+      "source_id": "226",
+      "article": "manteniment-implants-dentals",
+      "slot": "cover",
+      "location": "Tremp",
+      "literal_scene": "Professional preparant material odontològic",
+      "asset_id": "manteniment-implants-dentals-tremp",
+      "source_path": "/Volumes/ADATA SD700/DENTAL TREMP/FOTOS/MELANI/WORK/_MCS3252.jpg",
+      "source_sha256": "12be55a61cc221871ddcf90b4fcf1155129a235f5634b79d8cad7127c90c4498",
+      "source_dimensions": [
+        6240,
+        4160
+      ],
+      "oriented_dimensions": [
+        6240,
+        4160
+      ],
+      "source_color_profile": "Adobe RGB (1998)",
+      "output_color_space": "sRGB",
+      "crop_center_normalized": [
+        0.5,
+        0.5
+      ],
+      "crop_box_oriented_pixels": [
+        346,
+        0,
+        5893,
+        4160
+      ],
+      "variants": [
+        {
+          "path": "assets/img/editorial/manteniment-implants-dentals-tremp.webp",
+          "dimensions": [
+            1440,
+            1080
+          ],
+          "bytes": 86070
+        },
+        {
+          "path": "assets/img/editorial/manteniment-implants-dentals-tremp-960.webp",
+          "dimensions": [
+            960,
+            720
+          ],
+          "bytes": 47810
+        },
+        {
+          "path": "assets/img/editorial/manteniment-implants-dentals-tremp-640.webp",
+          "dimensions": [
+            640,
+            480
+          ],
+          "bytes": 27780
+        }
+      ]
+    },
+    {
+      "source_id": "170",
+      "article": "ortodoncia-infantil",
+      "slot": "cover",
+      "location": "Lleida",
+      "literal_scene": "Professional sostenint un model dental",
+      "asset_id": "ortodoncia-infantil-lleida",
+      "source_path": "/Volumes/ADATA SD700/DENTAL CARRERA/FOTOS/ISABEL/WORK/DSCF0252.jpg",
+      "source_sha256": "3038e4b7e4308948111c9b986443da42077fa17cfe2bfb1af23c51333a888290",
+      "source_dimensions": [
+        4160,
+        6240
+      ],
+      "oriented_dimensions": [
+        4160,
+        6240
+      ],
+      "source_color_profile": "Adobe RGB (1998)",
+      "output_color_space": "sRGB",
+      "crop_center_normalized": [
+        0.5,
+        0.39
+      ],
+      "crop_box_oriented_pixels": [
+        0,
+        874,
+        4160,
+        3994
+      ],
+      "variants": [
+        {
+          "path": "assets/img/editorial/ortodoncia-infantil-lleida.webp",
+          "dimensions": [
+            1440,
+            1080
+          ],
+          "bytes": 110196
+        },
+        {
+          "path": "assets/img/editorial/ortodoncia-infantil-lleida-960.webp",
+          "dimensions": [
+            960,
+            720
+          ],
+          "bytes": 55002
+        },
+        {
+          "path": "assets/img/editorial/ortodoncia-infantil-lleida-640.webp",
+          "dimensions": [
+            640,
+            480
+          ],
+          "bytes": 27590
+        }
+      ]
+    },
+    {
+      "source_id": "85",
+      "article": "dolor-mandibula-dentista-fisioterapeuta",
+      "slot": "cover",
+      "location": "Lleida",
+      "literal_scene": "Professional treballant al costat d’un pacient a la butaca",
+      "asset_id": "dolor-mandibula-dentista-fisioterapeuta-lleida",
+      "source_path": "/Volumes/ADATA SD700/DENTAL CARRERA/FOTOS/CARRERA/WORK/DSCF0482.jpg",
+      "source_sha256": "34c6418e3c941d1ff85015963049170f4529e78f27951ac649e77210a90a3ce2",
+      "source_dimensions": [
+        3546,
+        5255
+      ],
+      "oriented_dimensions": [
+        3546,
+        5255
+      ],
+      "source_color_profile": "Adobe RGB (1998)",
+      "output_color_space": "sRGB",
+      "crop_center_normalized": [
+        0.5,
+        0.52
+      ],
+      "crop_box_oriented_pixels": [
+        0,
+        1403,
+        3546,
+        4063
+      ],
+      "variants": [
+        {
+          "path": "assets/img/editorial/dolor-mandibula-dentista-fisioterapeuta-lleida.webp",
+          "dimensions": [
+            1440,
+            1080
+          ],
+          "bytes": 115120
+        },
+        {
+          "path": "assets/img/editorial/dolor-mandibula-dentista-fisioterapeuta-lleida-960.webp",
+          "dimensions": [
+            960,
+            720
+          ],
+          "bytes": 59992
+        },
+        {
+          "path": "assets/img/editorial/dolor-mandibula-dentista-fisioterapeuta-lleida-640.webp",
+          "dimensions": [
+            640,
+            480
+          ],
+          "bytes": 32684
+        }
+      ]
+    },
+    {
+      "source_id": "223",
+      "article": "implants-multiples",
+      "slot": "cover",
+      "location": "Tremp",
+      "literal_scene": "Professional treballant a la boca d’un pacient al gabinet",
+      "asset_id": "implants-multiples-tremp",
+      "source_path": "/Volumes/ADATA SD700/DENTAL TREMP/FOTOS/CARRERA/WORK/_MCS3912.jpg",
+      "source_sha256": "4c9a0be4deb39d7927283a0aea103eddd1bf19bbfd5b1077d50c7ed42f8dae27",
+      "source_dimensions": [
+        6240,
+        4160
+      ],
+      "oriented_dimensions": [
+        6240,
+        4160
+      ],
+      "source_color_profile": "Adobe RGB (1998)",
+      "output_color_space": "sRGB",
+      "crop_center_normalized": [
+        0.5,
+        0.5
+      ],
+      "crop_box_oriented_pixels": [
+        346,
+        0,
+        5893,
+        4160
+      ],
+      "variants": [
+        {
+          "path": "assets/img/editorial/implants-multiples-tremp.webp",
+          "dimensions": [
+            1440,
+            1080
+          ],
+          "bytes": 103634
+        },
+        {
+          "path": "assets/img/editorial/implants-multiples-tremp-960.webp",
+          "dimensions": [
+            960,
+            720
+          ],
+          "bytes": 52926
+        },
+        {
+          "path": "assets/img/editorial/implants-multiples-tremp-640.webp",
+          "dimensions": [
+            640,
+            480
+          ],
+          "bytes": 28654
+        }
+      ]
+    },
+    {
+      "source_id": "16",
+      "article": "arcada-completa-quatre-sis-implants",
+      "slot": "cover",
+      "location": "Lleida",
+      "literal_scene": "Dues professionals amb roba clínica treballant al gabinet; pacient cobert",
+      "asset_id": "arcada-completa-quatre-sis-implants-lleida",
+      "source_path": "/Volumes/ADATA SD700/DENTAL CARRERA/FOTOS/BEHIND/IMG_1576.heic",
+      "source_sha256": "6bd0e73d237f9a37234c10f75c53e792210100ebc58268a0ed04540ed401209c",
+      "source_dimensions": [
+        4284,
+        5712
+      ],
+      "oriented_dimensions": [
+        4284,
+        5712
+      ],
+      "source_color_profile": "Display P3",
+      "output_color_space": "sRGB",
+      "crop_center_normalized": [
+        0.5,
+        0.56
+      ],
+      "crop_box_oriented_pixels": [
+        0,
+        1592,
+        4284,
+        4805
+      ],
+      "variants": [
+        {
+          "path": "assets/img/editorial/arcada-completa-quatre-sis-implants-lleida.webp",
+          "dimensions": [
+            1440,
+            1080
+          ],
+          "bytes": 111238
+        },
+        {
+          "path": "assets/img/editorial/arcada-completa-quatre-sis-implants-lleida-960.webp",
+          "dimensions": [
+            960,
+            720
+          ],
+          "bytes": 64026
+        },
+        {
+          "path": "assets/img/editorial/arcada-completa-quatre-sis-implants-lleida-640.webp",
+          "dimensions": [
+            640,
+            480
+          ],
+          "bytes": 36806
+        }
+      ]
+    },
+    {
+      "source_id": "142",
+      "article": "facetes-composite-porcellana",
+      "slot": "cover",
+      "location": "Lleida",
+      "literal_scene": "Higienista somrient amb un mirall dental",
+      "asset_id": "facetes-composite-porcellana-lleida",
+      "source_path": "/Volumes/ADATA SD700/DENTAL CARRERA/FOTOS/HIGIENISTES/LISBETH/WORK/DSCF0191.jpg",
+      "source_sha256": "c644d043ca726409a886b1bb13ac940ce9999a2ba4d14324626daef511e99a60",
+      "source_dimensions": [
+        6240,
+        4160
+      ],
+      "oriented_dimensions": [
+        6240,
+        4160
+      ],
+      "source_color_profile": "Adobe RGB (1998)",
+      "output_color_space": "sRGB",
+      "crop_center_normalized": [
+        0.5,
+        0.5
+      ],
+      "crop_box_oriented_pixels": [
+        346,
+        0,
+        5893,
+        4160
+      ],
+      "variants": [
+        {
+          "path": "assets/img/editorial/facetes-composite-porcellana-lleida.webp",
+          "dimensions": [
+            1440,
+            1080
+          ],
+          "bytes": 104898
+        },
+        {
+          "path": "assets/img/editorial/facetes-composite-porcellana-lleida-960.webp",
+          "dimensions": [
+            960,
+            720
+          ],
+          "bytes": 52470
+        },
+        {
+          "path": "assets/img/editorial/facetes-composite-porcellana-lleida-640.webp",
+          "dimensions": [
+            640,
+            480
+          ],
+          "bytes": 25936
+        }
+      ]
+    },
+    {
+      "source_id": "127",
+      "article": "queixals-seny",
+      "slot": "cover",
+      "location": "Lleida",
+      "literal_scene": "Professional davant la sala de radiologia",
+      "asset_id": "queixals-seny-lleida",
+      "source_path": "/Volumes/ADATA SD700/DENTAL CARRERA/FOTOS/CLINICA/DSCF9611.jpg",
+      "source_sha256": "158730302e404c1500c9f2f232043e4d4298b1d9dd698ce68bfe06aa562415da",
+      "source_dimensions": [
+        5607,
+        4160
+      ],
+      "oriented_dimensions": [
+        5607,
+        4160
+      ],
+      "source_color_profile": "Adobe RGB (1998)",
+      "output_color_space": "sRGB",
+      "crop_center_normalized": [
+        0.5,
+        0.5
+      ],
+      "crop_box_oriented_pixels": [
+        30,
+        0,
+        5577,
+        4160
+      ],
+      "variants": [
+        {
+          "path": "assets/img/editorial/queixals-seny-lleida.webp",
+          "dimensions": [
+            1440,
+            1080
+          ],
+          "bytes": 62208
+        },
+        {
+          "path": "assets/img/editorial/queixals-seny-lleida-960.webp",
+          "dimensions": [
+            960,
+            720
+          ],
+          "bytes": 37890
+        },
+        {
+          "path": "assets/img/editorial/queixals-seny-lleida-640.webp",
+          "dimensions": [
+            640,
+            480
+          ],
+          "bytes": 22912
+        }
+      ]
+    },
+    {
+      "source_id": "211",
+      "article": "dent-trencada-cop",
+      "slot": "cover",
+      "location": "Tremp",
+      "literal_scene": "Recepcionista atenent una trucada al taulell de Tremp",
+      "asset_id": "dent-trencada-cop-tremp",
+      "source_path": "/Volumes/ADATA SD700/DENTAL TREMP/FOTOS/CAROL/WORK/_MCS3265.jpg",
+      "source_sha256": "bdbd69701cf481050c631d6103ac5d7738d1ad01a8741040c3d9730d01703bc6",
+      "source_dimensions": [
+        6240,
+        4160
+      ],
+      "oriented_dimensions": [
+        6240,
+        4160
+      ],
+      "source_color_profile": "Adobe RGB (1998)",
+      "output_color_space": "sRGB",
+      "crop_center_normalized": [
+        0.5,
+        0.5
+      ],
+      "crop_box_oriented_pixels": [
+        346,
+        0,
+        5893,
+        4160
+      ],
+      "variants": [
+        {
+          "path": "assets/img/editorial/dent-trencada-cop-tremp.webp",
+          "dimensions": [
+            1440,
+            1080
+          ],
+          "bytes": 79280
+        },
+        {
+          "path": "assets/img/editorial/dent-trencada-cop-tremp-960.webp",
+          "dimensions": [
+            960,
+            720
+          ],
+          "bytes": 44076
+        },
+        {
+          "path": "assets/img/editorial/dent-trencada-cop-tremp-640.webp",
+          "dimensions": [
+            640,
+            480
+          ],
+          "bytes": 24864
+        }
+      ]
+    },
+    {
+      "source_id": "243",
+      "article": "endodoncia-dubtes",
+      "slot": "inline",
+      "location": "Tremp",
+      "literal_scene": "Gabinet buit amb butaca i equipament dental",
+      "asset_id": "endodoncia-dubtes-detall-tremp",
+      "source_path": "/Volumes/ADATA SD700/DENTAL TREMP/FOTOS/RANDOM/_MCS3579.jpg",
+      "source_sha256": "99b99bea9398bd11566910bdad8f4097a827e82a026f8bd80235b83421d8c992",
+      "source_dimensions": [
+        5863,
+        4086
+      ],
+      "oriented_dimensions": [
+        5863,
+        4086
+      ],
+      "source_color_profile": "Adobe RGB (1998)",
+      "output_color_space": "sRGB",
+      "crop_center_normalized": [
+        0.5,
+        0.5
+      ],
+      "crop_box_oriented_pixels": [
+        208,
+        0,
+        5656,
+        4086
+      ],
+      "variants": [
+        {
+          "path": "assets/img/editorial/endodoncia-dubtes-detall-tremp.webp",
+          "dimensions": [
+            1440,
+            1080
+          ],
+          "bytes": 106432
+        },
+        {
+          "path": "assets/img/editorial/endodoncia-dubtes-detall-tremp-960.webp",
+          "dimensions": [
+            960,
+            720
+          ],
+          "bytes": 60190
+        },
+        {
+          "path": "assets/img/editorial/endodoncia-dubtes-detall-tremp-640.webp",
+          "dimensions": [
+            640,
+            480
+          ],
+          "bytes": 31680
+        }
+      ]
+    },
+    {
+      "source_id": "115",
+      "article": "sagnat-genives",
+      "slot": "inline",
+      "location": "Lleida",
+      "literal_scene": "Dues professionals treballant a la recepció",
+      "asset_id": "sagnat-genives-detall-lleida",
+      "source_path": "/Volumes/ADATA SD700/DENTAL CARRERA/FOTOS/CLINICA/DSCF0194.jpg",
+      "source_sha256": "2891642591e691047939b3f01b5a4e1a005189a2aee5e81c3984e85cbf322157",
+      "source_dimensions": [
+        5682,
+        3923
+      ],
+      "oriented_dimensions": [
+        5682,
+        3923
+      ],
+      "source_color_profile": "Adobe RGB (1998)",
+      "output_color_space": "sRGB",
+      "crop_center_normalized": [
+        0.5,
+        0.5
+      ],
+      "crop_box_oriented_pixels": [
+        226,
+        0,
+        5457,
+        3923
+      ],
+      "variants": [
+        {
+          "path": "assets/img/editorial/sagnat-genives-detall-lleida.webp",
+          "dimensions": [
+            1440,
+            1080
+          ],
+          "bytes": 87758
+        },
+        {
+          "path": "assets/img/editorial/sagnat-genives-detall-lleida-960.webp",
+          "dimensions": [
+            960,
+            720
+          ],
+          "bytes": 48708
+        },
+        {
+          "path": "assets/img/editorial/sagnat-genives-detall-lleida-640.webp",
+          "dimensions": [
+            640,
+            480
+          ],
+          "bytes": 27488
+        }
+      ]
+    },
+    {
+      "source_id": "95",
+      "article": "ferula-descarrega",
+      "slot": "inline",
+      "location": "Lleida",
+      "literal_scene": "Professional concentrat treballant amb lupes",
+      "asset_id": "ferula-descarrega-detall-lleida",
+      "source_path": "/Volumes/ADATA SD700/DENTAL CARRERA/FOTOS/CARRERA/WORK/DSCF9817.jpg",
+      "source_sha256": "6bfe6e07baa1b4bffcec1364affa7410e088a2c952cc1905b8a166d3a81096fc",
+      "source_dimensions": [
+        3920,
+        5513
+      ],
+      "oriented_dimensions": [
+        3920,
+        5513
+      ],
+      "source_color_profile": "Adobe RGB (1998)",
+      "output_color_space": "sRGB",
+      "crop_center_normalized": [
+        0.5,
+        0.41
+      ],
+      "crop_box_oriented_pixels": [
+        0,
+        790,
+        3920,
+        3730
+      ],
+      "variants": [
+        {
+          "path": "assets/img/editorial/ferula-descarrega-detall-lleida.webp",
+          "dimensions": [
+            1440,
+            1080
+          ],
+          "bytes": 118348
+        },
+        {
+          "path": "assets/img/editorial/ferula-descarrega-detall-lleida-960.webp",
+          "dimensions": [
+            960,
+            720
+          ],
+          "bytes": 61132
+        },
+        {
+          "path": "assets/img/editorial/ferula-descarrega-detall-lleida-640.webp",
+          "dimensions": [
+            640,
+            480
+          ],
+          "bytes": 31552
+        }
+      ]
+    },
+    {
+      "source_id": "114",
+      "article": "implant-o-pont",
+      "slot": "inline",
+      "location": "Lleida",
+      "literal_scene": "Butaca i equipament dental en un gabinet",
+      "asset_id": "implant-o-pont-detall-lleida",
+      "source_path": "/Volumes/ADATA SD700/DENTAL CARRERA/FOTOS/CLINICA/DSCF0185.jpg",
+      "source_sha256": "23b3cea087d0c2ae5461f0ee92b9e72f2dfcfa8dd5041c4655eb034bfa70cf70",
+      "source_dimensions": [
+        6109,
+        4160
+      ],
+      "oriented_dimensions": [
+        6109,
+        4160
+      ],
+      "source_color_profile": "Adobe RGB (1998)",
+      "output_color_space": "sRGB",
+      "crop_center_normalized": [
+        0.5,
+        0.5
+      ],
+      "crop_box_oriented_pixels": [
+        281,
+        0,
+        5828,
+        4160
+      ],
+      "variants": [
+        {
+          "path": "assets/img/editorial/implant-o-pont-detall-lleida.webp",
+          "dimensions": [
+            1440,
+            1080
+          ],
+          "bytes": 71854
+        },
+        {
+          "path": "assets/img/editorial/implant-o-pont-detall-lleida-960.webp",
+          "dimensions": [
+            960,
+            720
+          ],
+          "bytes": 41468
+        },
+        {
+          "path": "assets/img/editorial/implant-o-pont-detall-lleida-640.webp",
+          "dimensions": [
+            640,
+            480
+          ],
+          "bytes": 24420
+        }
+      ]
+    },
+    {
+      "source_id": "153",
+      "article": "taques-dents",
+      "slot": "inline",
+      "location": "Lleida",
+      "literal_scene": "Higienista treballant al gabinet vista a través de la porta",
+      "asset_id": "taques-dents-detall-lleida",
+      "source_path": "/Volumes/ADATA SD700/DENTAL CARRERA/FOTOS/HIGIENISTES/LISBETH/WORK/DSCF9863.jpg",
+      "source_sha256": "677b0bc77195d3d1bf2ed100427a9c4aac38b62f02673c091e0e1104ee78ad09",
+      "source_dimensions": [
+        3475,
+        5087
+      ],
+      "oriented_dimensions": [
+        3475,
+        5087
+      ],
+      "source_color_profile": "Adobe RGB (1998)",
+      "output_color_space": "sRGB",
+      "crop_center_normalized": [
+        0.5,
+        0.36
+      ],
+      "crop_box_oriented_pixels": [
+        0,
+        528,
+        3475,
+        3134
+      ],
+      "variants": [
+        {
+          "path": "assets/img/editorial/taques-dents-detall-lleida.webp",
+          "dimensions": [
+            1440,
+            1080
+          ],
+          "bytes": 66924
+        },
+        {
+          "path": "assets/img/editorial/taques-dents-detall-lleida-960.webp",
+          "dimensions": [
+            960,
+            720
+          ],
+          "bytes": 32016
+        },
+        {
+          "path": "assets/img/editorial/taques-dents-detall-lleida-640.webp",
+          "dimensions": [
+            640,
+            480
+          ],
+          "bytes": 15592
+        }
+      ]
+    },
+    {
+      "source_id": "130",
+      "article": "dolor-mandibula-despertar",
+      "slot": "inline",
+      "location": "Lleida",
+      "literal_scene": "Professional parlant per telèfon a la clínica",
+      "asset_id": "dolor-mandibula-despertar-detall-lleida",
+      "source_path": "/Volumes/ADATA SD700/DENTAL CARRERA/FOTOS/CLINICA/DSCF9802.jpg",
+      "source_sha256": "c813e8710501e40d8d25e100258d1a57082b078acf55e83e6819254cdb0265f7",
+      "source_dimensions": [
+        3782,
+        5053
+      ],
+      "oriented_dimensions": [
+        3782,
+        5053
+      ],
+      "source_color_profile": "Adobe RGB (1998)",
+      "output_color_space": "sRGB",
+      "crop_center_normalized": [
+        0.5,
+        0.38
+      ],
+      "crop_box_oriented_pixels": [
+        0,
+        502,
+        3782,
+        3338
+      ],
+      "variants": [
+        {
+          "path": "assets/img/editorial/dolor-mandibula-despertar-detall-lleida.webp",
+          "dimensions": [
+            1440,
+            1080
+          ],
+          "bytes": 119038
+        },
+        {
+          "path": "assets/img/editorial/dolor-mandibula-despertar-detall-lleida-960.webp",
+          "dimensions": [
+            960,
+            720
+          ],
+          "bytes": 59950
+        },
+        {
+          "path": "assets/img/editorial/dolor-mandibula-despertar-detall-lleida-640.webp",
+          "dimensions": [
+            640,
+            480
+          ],
+          "bytes": 31896
+        }
+      ]
+    },
+    {
+      "source_id": "241",
+      "article": "implant-immediat-carrega-immediata",
+      "slot": "inline",
+      "location": "Tremp",
+      "literal_scene": "Sala de preparació i esterilització de material",
+      "asset_id": "implant-immediat-carrega-immediata-detall-tremp",
+      "source_path": "/Volumes/ADATA SD700/DENTAL TREMP/FOTOS/RANDOM/_MCS3551.jpg",
+      "source_sha256": "654723e24c11851d4a3f797f8f3f7ee3a0ed37c09ed740c331fe1a9237597cc0",
+      "source_dimensions": [
+        6115,
+        3738
+      ],
+      "oriented_dimensions": [
+        6115,
+        3738
+      ],
+      "source_color_profile": "Adobe RGB (1998)",
+      "output_color_space": "sRGB",
+      "crop_center_normalized": [
+        0.5,
+        0.5
+      ],
+      "crop_box_oriented_pixels": [
+        566,
+        0,
+        5550,
+        3738
+      ],
+      "variants": [
+        {
+          "path": "assets/img/editorial/implant-immediat-carrega-immediata-detall-tremp.webp",
+          "dimensions": [
+            1440,
+            1080
+          ],
+          "bytes": 49576
+        },
+        {
+          "path": "assets/img/editorial/implant-immediat-carrega-immediata-detall-tremp-960.webp",
+          "dimensions": [
+            960,
+            720
+          ],
+          "bytes": 28636
+        },
+        {
+          "path": "assets/img/editorial/implant-immediat-carrega-immediata-detall-tremp-640.webp",
+          "dimensions": [
+            640,
+            480
+          ],
+          "bytes": 16782
+        }
+      ]
+    },
+    {
+      "source_id": "219",
+      "article": "arcada-completa-quatre-sis-implants",
+      "slot": "inline",
+      "location": "Tremp",
+      "literal_scene": "Vista superior de la recepció amb una professional revisant documentació",
+      "asset_id": "arcada-completa-quatre-sis-implants-detall-tremp",
+      "source_path": "/Volumes/ADATA SD700/DENTAL TREMP/FOTOS/CAROL/WORK/_MCS3669.jpg",
+      "source_sha256": "c2b95d3ada0c94bcfcb65e9a5dddfcb8a2f8c1bc6310b11142535f61b446028f",
+      "source_dimensions": [
+        5874,
+        3834
+      ],
+      "oriented_dimensions": [
+        5874,
+        3834
+      ],
+      "source_color_profile": "Adobe RGB (1998)",
+      "output_color_space": "sRGB",
+      "crop_center_normalized": [
+        0.5,
+        0.5
+      ],
+      "crop_box_oriented_pixels": [
+        381,
+        0,
+        5493,
+        3834
+      ],
+      "variants": [
+        {
+          "path": "assets/img/editorial/arcada-completa-quatre-sis-implants-detall-tremp.webp",
+          "dimensions": [
+            1440,
+            1080
+          ],
+          "bytes": 146630
+        },
+        {
+          "path": "assets/img/editorial/arcada-completa-quatre-sis-implants-detall-tremp-960.webp",
+          "dimensions": [
+            960,
+            720
+          ],
+          "bytes": 69852
+        },
+        {
+          "path": "assets/img/editorial/arcada-completa-quatre-sis-implants-detall-tremp-640.webp",
+          "dimensions": [
+            640,
+            480
+          ],
+          "bytes": 33562
+        }
+      ]
+    },
+    {
+      "source_id": "109",
+      "article": "protesi-fixa-removible",
+      "slot": "inline",
+      "location": "Lleida",
+      "literal_scene": "Expositor de material informatiu dental a la clínica",
+      "asset_id": "protesi-fixa-removible-detall-lleida",
+      "source_path": "/Volumes/ADATA SD700/DENTAL CARRERA/FOTOS/CLINICA/DSCF0168.jpg",
+      "source_sha256": "00b29930b7df08c05dc1e8e21ddc3b9588782d0d3cedb71a7aa6db12a68d2622",
+      "source_dimensions": [
+        6240,
+        4160
+      ],
+      "oriented_dimensions": [
+        6240,
+        4160
+      ],
+      "source_color_profile": "Adobe RGB (1998)",
+      "output_color_space": "sRGB",
+      "crop_center_normalized": [
+        0.5,
+        0.5
+      ],
+      "crop_box_oriented_pixels": [
+        346,
+        0,
+        5893,
+        4160
+      ],
+      "variants": [
+        {
+          "path": "assets/img/editorial/protesi-fixa-removible-detall-lleida.webp",
+          "dimensions": [
+            1440,
+            1080
+          ],
+          "bytes": 121740
+        },
+        {
+          "path": "assets/img/editorial/protesi-fixa-removible-detall-lleida-960.webp",
+          "dimensions": [
+            960,
+            720
+          ],
+          "bytes": 62542
+        },
+        {
+          "path": "assets/img/editorial/protesi-fixa-removible-detall-lleida-640.webp",
+          "dimensions": [
+            640,
+            480
+          ],
+          "bytes": 34068
+        }
+      ]
+    },
+    {
+      "source_id": "101",
+      "article": "queixals-seny",
+      "slot": "inline",
+      "location": "Lleida",
+      "literal_scene": "Sala d’espera amb cadires buides",
+      "asset_id": "queixals-seny-detall-lleida",
+      "source_path": "/Volumes/ADATA SD700/DENTAL CARRERA/FOTOS/CLINICA/DSCF0149.jpg",
+      "source_sha256": "ddbd6ec1f4734e4aaf2758c6938e4dba0a0cb9d40b3a48c6f789375c26f7eb80",
+      "source_dimensions": [
+        5661,
+        4160
+      ],
+      "oriented_dimensions": [
+        5661,
+        4160
+      ],
+      "source_color_profile": "Adobe RGB (1998)",
+      "output_color_space": "sRGB",
+      "crop_center_normalized": [
+        0.5,
+        0.5
+      ],
+      "crop_box_oriented_pixels": [
+        57,
+        0,
+        5604,
+        4160
+      ],
+      "variants": [
+        {
+          "path": "assets/img/editorial/queixals-seny-detall-lleida.webp",
+          "dimensions": [
+            1440,
+            1080
+          ],
+          "bytes": 132746
+        },
+        {
+          "path": "assets/img/editorial/queixals-seny-detall-lleida-960.webp",
+          "dimensions": [
+            960,
+            720
+          ],
+          "bytes": 68006
+        },
+        {
+          "path": "assets/img/editorial/queixals-seny-detall-lleida-640.webp",
+          "dimensions": [
+            640,
+            480
+          ],
+          "bytes": 35652
+        }
+      ]
+    }
+  ]
+}
