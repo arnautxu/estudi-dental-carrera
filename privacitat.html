@@ -18,6 +18,9 @@
       if (savedConsent && savedConsent.analytics === true) {
         gtag('consent', 'update', { analytics_storage: 'granted' });
       }
+      if (savedConsent && savedConsent.campaigns === true) {
+        gtag('consent', 'update', { ad_storage: 'granted', ad_user_data: 'granted' });
+      }
     } catch (_) {}
     gtag('js', new Date());
     gtag('config', window.GA4_ID, {
@@ -165,7 +168,7 @@
             <li>Clínica escollida i preferència d’horari per rebre la trucada</li>
           </ul>
           <p>La pregunta inicial serveix per orientar-te al navegador: la resposta no es guarda ni s’envia. El formulari només envia les dades de contacte, la clínica escollida, la preferència d’horari i l’acceptació del tractament de les dades. Les dades clíniques dels pacients es gestionen de manera separada i amb les mesures de seguretat exigides per la normativa sanitària i de protecció de dades aplicable.</p>
-          <p>La nostra instància pròpia d'Umami tracta de manera agregada dades tècniques i d'ús com la pàgina visitada, el navegador, el tipus de dispositiu, el país aproximat i les interaccions amb els canals de contacte, sense cookies ni perfils personals. Google Analytics rep senyals de consentiment i mesurament sense cookies des de l’entrada al web. Si accepteu les cookies d’estadístiques, també utilitza cookies analítiques per mesurar l’ús del web. No enviem a cap sistema d'analítica el contingut del formulari ni dades clíniques.</p>
+          <p>La nostra instància pròpia d'Umami tracta de manera agregada dades tècniques i d'ús com la pàgina visitada, el navegador, el tipus de dispositiu, el país aproximat i les interaccions amb els canals de contacte, sense cookies ni perfils personals. Google Analytics rep senyals de consentiment i mesurament sense cookies des de l’entrada al web. Si accepteu les cookies d’estadístiques, també utilitza cookies analítiques per mesurar l’ús del web. Si accepteu el mesurament de campanyes, Google pot tractar identificadors de clic i accions de contacte per atribuir conversions. No enviem a cap d'aquests sistemes el contingut del formulari ni dades clíniques.</p>
 
           <h2>Finalitat del tractament</h2>
           <p>Les dades facilitades a través del formulari de contacte es tracten únicament per:</p>
@@ -175,16 +178,17 @@
             <li>Coordinar l'atenció entre els dos centres (Lleida i Tremp) si escau</li>
             <li>Mesurar de manera agregada l'ús del web amb Umami i millorar-ne el rendiment, amb opció de desactivació des de les preferències</li>
             <li>Obtenir estadístiques ampliades amb Google Analytics, només si heu acceptat les cookies d'estadístiques</li>
+            <li>Atribuir visites i accions de contacte a campanyes de Google Ads, només si heu acceptat el mesurament de campanyes</li>
           </ul>
 
           <h2>Base jurídica</h2>
-          <p>Les estadístiques mínimes i sense cookies d'Umami es tracten sobre la base de l'<strong>interès legítim</strong> de conèixer i millorar el funcionament del web (art. 6.1.f del RGPD), amb dades minimitzades, respecte del senyal «Do Not Track» i opció de desactivació. El formulari i l’ús de cookies de Google Analytics es fonamenten en el <strong>consentiment exprés</strong> (art. 6.1.a del RGPD). En l'àmbit clínic, el tractament pot fonamentar-se, addicionalment, en l'execució d'un contracte d'atenció sanitària (art. 6.1.b) i en el compliment d'obligacions legals (art. 6.1.c).</p>
+          <p>Les estadístiques mínimes i sense cookies d'Umami es tracten sobre la base de l'<strong>interès legítim</strong> de conèixer i millorar el funcionament del web (art. 6.1.f del RGPD), amb dades minimitzades, respecte del senyal «Do Not Track» i opció de desactivació. El formulari, l’ús de cookies de Google Analytics i el mesurament de campanyes es fonamenten en el <strong>consentiment exprés</strong> (art. 6.1.a del RGPD), amb opcions independents. En l'àmbit clínic, el tractament pot fonamentar-se, addicionalment, en l'execució d'un contracte d'atenció sanitària (art. 6.1.b) i en el compliment d'obligacions legals (art. 6.1.c).</p>
 
           <h2>Conservació de les dades</h2>
           <p>Les dades de contacte facilitades a través del formulari web es conserven durant el temps necessari per atendre la vostra sol·licitud. Si es formalitza una relació clínica, les dades s'integren a l'historial del pacient i es conserven d'acord amb els terminis establerts per la legislació sanitària catalana (Llei 21/2000, de 29 de desembre) i estatal, que és de, com a mínim, cinc anys des de l'alta del pacient.</p>
 
           <h2>Comunicació de dades a tercers</h2>
-          <p>Les vostres dades no es venen ni se cedeixen amb finalitats publicitàries. Poden ser tractades pels proveïdors tecnològics necessaris per allotjar el web i la instància pròpia d'Umami, emmagatzemar-ne les estadístiques, gestionar comunicacions i elaborar estadístiques mitjançant senyals sense cookies de Google Analytics o, si ho heu consentit, mitjançant cookies analítiques. Aquests proveïdors actuen d'acord amb els contractes i garanties de protecció de dades aplicables.</p>
+          <p>Les vostres dades no es venen. Poden ser tractades pels proveïdors tecnològics necessaris per allotjar el web i la instància pròpia d'Umami, emmagatzemar-ne les estadístiques, gestionar comunicacions i elaborar estadístiques mitjançant senyals sense cookies de Google Analytics o, si ho heu consentit, mitjançant cookies analítiques. Si accepteu el mesurament de campanyes, Google també pot tractar identificadors de clic i accions de contacte amb aquesta finalitat. Aquests proveïdors actuen d'acord amb els contractes i garanties de protecció de dades aplicables.</p>
           <p>Alguns proveïdors, inclosos els d'allotjament i base de dades, poden tractar informació fora de l'Espai Econòmic Europeu aplicant les garanties previstes al capítol V del RGPD. Umami no crea perfils personals ni fa seguiment entre webs; Google Analytics envia senyals sense cookies per defecte i només utilitza cookies analítiques amb el vostre consentiment, sense personalització publicitària.</p>
 
           <h2>Els vostres drets</h2>
@@ -274,7 +278,7 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.min.js?v=20260916-blog"></script>
+  <script src="assets/js/main.min.js?v=20260923-consent"></script>
   <!-- WhatsApp FAB -->
   <a href="seus.html#contacte-whatsapp" class="whatsapp-fab" rel="noopener" aria-label="WhatsApp: tria una clínica">
     <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.556 4.122 1.528 5.855L.057 23.175a.75.75 0 00.918.899l5.42-1.424A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 01-4.965-1.364l-.356-.211-3.677.964.982-3.592-.231-.369A9.713 9.713 0 012.25 12C2.25 6.613 6.613 2.25 12 2.25S21.75 6.613 21.75 12 17.387 21.75 12 21.75z"/></svg>

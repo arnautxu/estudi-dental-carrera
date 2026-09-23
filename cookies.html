@@ -18,6 +18,9 @@
       if (savedConsent && savedConsent.analytics === true) {
         gtag('consent', 'update', { analytics_storage: 'granted' });
       }
+      if (savedConsent && savedConsent.campaigns === true) {
+        gtag('consent', 'update', { ad_storage: 'granted', ad_user_data: 'granted' });
+      }
     } catch (_) {}
     gtag('js', new Date());
     gtag('config', window.GA4_ID, {
@@ -146,14 +149,14 @@
       <div class="container">
         <div class="legal-wrap reveal">
 
-          <p class="legal-meta">Darrera actualització: agost de 2026</p>
+          <p class="legal-meta">Darrera actualització: setembre de 2026</p>
 
           <h2>Què és una cookie?</h2>
           <p>Una cookie és un petit fitxer de text que un lloc web emmagatzema al vostre dispositiu (ordinador, tauleta o telèfon mòbil) quan el visiteu. Les cookies permeten al lloc web recordar les vostres accions i preferències durant un període de temps, de manera que no hàgiu de tornar a introduir-les cada vegada que visiteu el lloc o navegueu d'una pàgina a una altra.</p>
           <p>D'acord amb el que estableix la Llei 34/2002, d'11 de juliol, de serveis de la societat de la informació (LSSICE), i el Reglament General de Protecció de Dades (RGPD), us informem sobre les cookies que fem servir.</p>
 
           <h2>Cookies que utilitza aquest lloc web</h2>
-          <p>Aquest lloc web utilitza cookies tècniques pròpies, estadístiques privades sense cookies mitjançant una instància pròpia d'Umami i, només amb el vostre consentiment, cookies analítiques de Google Analytics i contingut de Google Maps. No utilitzem cookies publicitàries ni activem la personalització d'anuncis.</p>
+          <p>Aquest lloc web utilitza cookies tècniques pròpies, estadístiques privades sense cookies mitjançant una instància pròpia d'Umami i, només amb el vostre consentiment, cookies analítiques de Google Analytics, cookies de mesurament de campanyes de Google Ads i contingut de Google Maps. No fem remàrqueting ni personalització d'anuncis.</p>
 
           <div class="table-scroll">
             <table class="cookies-table">
@@ -196,6 +199,12 @@
                   <td>Fins a 2 anys</td>
                   <td>Manté l'estat de la sessió i permet mesurar pàgines vistes i interaccions, només després del consentiment.</td>
                 </tr>
+                <tr>
+                  <td><code>_gcl_*</code></td>
+                  <td>Mesurament de campanyes · Google Ads</td>
+                  <td>Segons la configuració de l'etiqueta de conversió</td>
+                  <td>Si es configura la mesura de conversions i accepteu aquesta categoria, conserva identificadors de clic per atribuir les accions de contacte a una campanya. No s'utilitza per crear públics de remàrqueting.</td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -206,6 +215,9 @@
           <p>Fem servir una instància pròpia d'Umami per obtenir estadístiques bàsiques sense cookies, empremtes digitals ni perfils personals. El sistema respecta el senyal «Do Not Track» del navegador i es pot desactivar en qualsevol moment des de «Preferències de cookies».</p>
           <p>Amb el vostre consentiment, utilitzem Google Analytics 4 per conèixer de manera agregada quines pàgines es visiten i si s'interactua amb accions de contacte com el telèfon, WhatsApp o el formulari. No enviem a Analytics el nom, el telèfon, el correu electrònic, el missatge ni dades clíniques.</p>
           <p>L’etiqueta de Google Analytics es carrega automàticament i envia a Google senyals de consentiment i mesurament sense cookies, encara que no accepteu les estadístiques. Les cookies analítiques només s’activen quan accepteu la categoria «Estadístiques». Podeu retirar aquest consentiment en qualsevol moment des de «Preferències de cookies». El proveïdor és Google Ireland Limited; podeu consultar la seva <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">política de privacitat</a>.</p>
+
+          <h2>Mesurament de campanyes</h2>
+          <p>La categoria «Mesurament de campanyes» és independent de les estadístiques. Si l'accepteu, autoritzeu que Google tracti identificadors de clic publicitari i esdeveniments de contacte per atribuir les visites o sol·licituds de cita a les campanyes. La configuració actual no envia a Google el nom, el telèfon, el correu, el missatge del formulari ni dades clíniques. El consentiment publicitari es denega per defecte i podeu retirar-lo en qualsevol moment des de «Preferències de cookies». No activem la personalització d'anuncis ni el remàrqueting.</p>
 
           <h2>Cookies de Google Maps</h2>
           <p>Les pàgines dels nostres centres inclouen mapes integrats de Google Maps per facilitar-ne la localització. Quan interactueu amb el mapa, Google pot establir les seves pròpies cookies al vostre dispositiu d'acord amb la seva pròpia política de privacitat, accessible a <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
@@ -301,7 +313,7 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.min.js?v=20260916-blog"></script>
+  <script src="assets/js/main.min.js?v=20260923-consent"></script>
   <!-- WhatsApp FAB -->
   <a href="seus.html#contacte-whatsapp" class="whatsapp-fab" rel="noopener" aria-label="WhatsApp: tria una clínica">
     <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.556 4.122 1.528 5.855L.057 23.175a.75.75 0 00.918.899l5.42-1.424A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 01-4.965-1.364l-.356-.211-3.677.964.982-3.592-.231-.369A9.713 9.713 0 012.25 12C2.25 6.613 6.613 2.25 12 2.25S21.75 6.613 21.75 12 17.387 21.75 12 21.75z"/></svg>

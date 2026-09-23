@@ -154,6 +154,9 @@ function render(page) {
       if (savedConsent && savedConsent.analytics === true) {
         gtag('consent', 'update', { analytics_storage: 'granted' });
       }
+      if (savedConsent && savedConsent.campaigns === true) {
+        gtag('consent', 'update', { ad_storage: 'granted', ad_user_data: 'granted' });
+      }
     } catch (_) {}
     gtag('js', new Date());
     gtag('config', window.GA4_ID, {
@@ -219,7 +222,7 @@ ${renderHeader(page.lang, page.alternatePath, { active: isService ? 'services' :
     <section class="landing-cta"><div class="container landing-cta__inner"><div><h2>${page.ctaTitle}</h2><p>${page.ctaText}</p></div><div class="landing-cta__actions"><a href="${contact}" class="btn btn--primary btn--lg" data-track="appointment_cta_click" data-track-label="landing-footer">${isService ? primaryCtaLabel : (isEs ? 'Pedir visita' : 'Demanar visita')}</a>${alternateClinicLink}</div></div></section>
   </main>`}
 ${renderFooter(page.lang)}
-  <script src="/assets/js/main.min.js?v=20260916-blog"></script>
+  <script src="/assets/js/main.min.js?v=20260923-consent"></script>
 </body>
 </html>`;
 }

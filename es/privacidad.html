@@ -18,6 +18,9 @@
       if (savedConsent && savedConsent.analytics === true) {
         gtag('consent', 'update', { analytics_storage: 'granted' });
       }
+      if (savedConsent && savedConsent.campaigns === true) {
+        gtag('consent', 'update', { ad_storage: 'granted', ad_user_data: 'granted' });
+      }
     } catch (_) {}
     gtag('js', new Date());
     gtag('config', window.GA4_ID, {
@@ -165,7 +168,7 @@
             <li>Clínica elegida y preferencia de horario para recibir la llamada</li>
           </ul>
           <p>La pregunta inicial sirve para orientarte en el navegador: su respuesta no se guarda ni se envía. El formulario solo envía los datos de contacto, la clínica elegida, la preferencia de horario y la aceptación del tratamiento de los datos. Los datos clínicos de los pacientes se gestionan de forma separada y con las medidas de seguridad exigidas por la normativa sanitaria y de protección de datos aplicable.</p>
-          <p>Nuestra instancia propia de Umami trata de forma agregada datos técnicos y de uso como la página visitada, el navegador, el tipo de dispositivo, el país aproximado y las interacciones con los canales de contacto, sin cookies ni perfiles personales. Google Analytics recibe señales de consentimiento y medición sin cookies desde la entrada al sitio. Si acepta las cookies de estadísticas, también utiliza cookies analíticas para medir el uso del sitio. No enviamos a ningún sistema de analítica el contenido del formulario ni datos clínicos.</p>
+          <p>Nuestra instancia propia de Umami trata de forma agregada datos técnicos y de uso como la página visitada, el navegador, el tipo de dispositivo, el país aproximado y las interacciones con los canales de contacto, sin cookies ni perfiles personales. Google Analytics recibe señales de consentimiento y medición sin cookies desde la entrada al sitio. Si acepta las cookies de estadísticas, también utiliza cookies analíticas para medir el uso del sitio. Si acepta la medición de campañas, Google puede tratar identificadores de clic y acciones de contacto para atribuir conversiones. No enviamos a ninguno de estos sistemas el contenido del formulario ni datos clínicos.</p>
 
           <h2>Finalidad del tratamiento</h2>
           <p>Los datos facilitados a través del formulario de contacto se tratan únicamente para:</p>
@@ -175,16 +178,17 @@
             <li>Coordinar la atención entre las dos clínicas (Lleida y Tremp) si procede</li>
             <li>Medir de forma agregada el uso del sitio con Umami y mejorar su rendimiento, con opción de desactivación desde las preferencias</li>
             <li>Obtener estadísticas ampliadas con Google Analytics, únicamente si ha aceptado las cookies de estadísticas</li>
+            <li>Atribuir visitas y acciones de contacto a campañas de Google Ads, únicamente si ha aceptado la medición de campañas</li>
           </ul>
 
           <h2>Base jurídica</h2>
-          <p>Las estadísticas mínimas y sin cookies de Umami se tratan sobre la base del <strong>interés legítimo</strong> de conocer y mejorar el funcionamiento del sitio (art. 6.1.f del RGPD), con datos minimizados, respeto de la señal «Do Not Track» y opción de desactivación. El formulario y el uso de cookies de Google Analytics se fundamentan en el <strong>consentimiento expreso</strong> (art. 6.1.a del RGPD). En el ámbito clínico, el tratamiento puede fundamentarse, adicionalmente, en la ejecución de un contrato de atención sanitaria (art. 6.1.b) y en el cumplimiento de obligaciones legales (art. 6.1.c).</p>
+          <p>Las estadísticas mínimas y sin cookies de Umami se tratan sobre la base del <strong>interés legítimo</strong> de conocer y mejorar el funcionamiento del sitio (art. 6.1.f del RGPD), con datos minimizados, respeto de la señal «Do Not Track» y opción de desactivación. El formulario, el uso de cookies de Google Analytics y la medición de campañas se fundamentan en el <strong>consentimiento expreso</strong> (art. 6.1.a del RGPD), con opciones independientes. En el ámbito clínico, el tratamiento puede fundamentarse, adicionalmente, en la ejecución de un contrato de atención sanitaria (art. 6.1.b) y en el cumplimiento de obligaciones legales (art. 6.1.c).</p>
 
           <h2>Conservación de los datos</h2>
           <p>Los datos de contacto facilitados a través del formulario web se conservan durante el tiempo necesario para atender su solicitud. Si se formaliza una relación clínica, los datos se integran en el historial del paciente y se conservan de acuerdo con los plazos establecidos por la legislación sanitaria catalana (Ley 21/2000, de 29 de diciembre) y estatal, que es de, como mínimo, cinco años desde el alta del paciente.</p>
 
           <h2>Comunicación de datos a terceros</h2>
-          <p>Sus datos no se venden ni se ceden con fines publicitarios. Pueden ser tratados por los proveedores tecnológicos necesarios para alojar el sitio y la instancia propia de Umami, almacenar sus estadísticas, gestionar comunicaciones y elaborar estadísticas mediante señales sin cookies de Google Analytics o, si lo ha consentido, mediante cookies analíticas. Estos proveedores actúan de acuerdo con los contratos y garantías de protección de datos aplicables.</p>
+          <p>Sus datos no se venden. Pueden ser tratados por los proveedores tecnológicos necesarios para alojar el sitio y la instancia propia de Umami, almacenar sus estadísticas, gestionar comunicaciones y elaborar estadísticas mediante señales sin cookies de Google Analytics o, si lo ha consentido, mediante cookies analíticas. Si acepta la medición de campañas, Google también puede tratar identificadores de clic y acciones de contacto con esta finalidad. Estos proveedores actúan de acuerdo con los contratos y garantías de protección de datos aplicables.</p>
           <p>Algunos proveedores, incluidos los de alojamiento y base de datos, pueden tratar información fuera del Espacio Económico Europeo aplicando las garantías previstas en el capítulo V del RGPD. Umami no crea perfiles personales ni realiza seguimiento entre webs; Google Analytics envía señales sin cookies por defecto y solo utiliza cookies analíticas con su consentimiento, sin personalización publicitaria.</p>
 
           <h2>Sus derechos</h2>
@@ -274,7 +278,7 @@
     </div>
   </footer>
 
-  <script src="../assets/js/main.min.js?v=20260916-blog"></script>
+  <script src="../assets/js/main.min.js?v=20260923-consent"></script>
   <!-- WhatsApp FAB -->
   <a href="sedes.html#contacto-whatsapp" class="whatsapp-fab" rel="noopener" aria-label="WhatsApp: elige una clínica">
     <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.556 4.122 1.528 5.855L.057 23.175a.75.75 0 00.918.899l5.42-1.424A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 01-4.965-1.364l-.356-.211-3.677.964.982-3.592-.231-.369A9.713 9.713 0 012.25 12C2.25 6.613 6.613 2.25 12 2.25S21.75 6.613 21.75 12 17.387 21.75 12 21.75z"/></svg>

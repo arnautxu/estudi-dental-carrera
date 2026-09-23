@@ -47,6 +47,9 @@ function document(page, main, graph) {
       if (savedConsent && savedConsent.analytics === true) {
         gtag('consent', 'update', { analytics_storage: 'granted' });
       }
+      if (savedConsent && savedConsent.campaigns === true) {
+        gtag('consent', 'update', { ad_storage: 'granted', ad_user_data: 'granted' });
+      }
     } catch (_) {}
     gtag('js', new Date());
     gtag('config', window.GA4_ID, {
@@ -83,7 +86,7 @@ function document(page, main, graph) {
 ${renderHeader(page.lang, page.alternatePath, { active: 'blog', hero: true })}
 <main id="main">${main}</main>
 ${renderFooter(page.lang)}
-<script src="/assets/js/main.min.js?v=20260916-blog"></script>
+<script src="/assets/js/main.min.js?v=20260923-consent"></script>
 ${page.type === 'index' ? '<script src="/assets/js/blog.min.js?v=1" defer></script>' : ''}
 </body></html>`;
 }

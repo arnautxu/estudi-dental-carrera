@@ -18,6 +18,9 @@
       if (savedConsent && savedConsent.analytics === true) {
         gtag('consent', 'update', { analytics_storage: 'granted' });
       }
+      if (savedConsent && savedConsent.campaigns === true) {
+        gtag('consent', 'update', { ad_storage: 'granted', ad_user_data: 'granted' });
+      }
     } catch (_) {}
     gtag('js', new Date());
     gtag('config', window.GA4_ID, {
@@ -146,14 +149,14 @@
       <div class="container">
         <div class="legal-wrap reveal">
 
-          <p class="legal-meta">Última actualización: agosto de 2026</p>
+          <p class="legal-meta">Última actualización: septiembre de 2026</p>
 
           <h2>¿Qué es una cookie?</h2>
           <p>Una cookie es un pequeño fichero de texto que un sitio web almacena en su dispositivo (ordenador, tableta o teléfono móvil) cuando lo visita. Las cookies permiten al sitio web recordar sus acciones y preferencias durante un período de tiempo, de modo que no tenga que volver a introducirlas cada vez que visite el sitio o navegue de una página a otra.</p>
           <p>De acuerdo con lo establecido en la Ley 34/2002, de 11 de julio, de servicios de la sociedad de la información (LSSICE), y el Reglamento General de Protección de Datos (RGPD), le informamos sobre las cookies que utilizamos.</p>
 
           <h2>Cookies que utiliza este sitio web</h2>
-          <p>Este sitio web utiliza cookies técnicas propias, estadísticas privadas sin cookies mediante una instancia propia de Umami y, solo con su consentimiento, cookies analíticas de Google Analytics y contenido de Google Maps. No utilizamos cookies publicitarias ni activamos la personalización de anuncios.</p>
+          <p>Este sitio web utiliza cookies técnicas propias, estadísticas privadas sin cookies mediante una instancia propia de Umami y, solo con su consentimiento, cookies analíticas de Google Analytics, cookies de medición de campañas de Google Ads y contenido de Google Maps. No hacemos remarketing ni personalización de anuncios.</p>
 
           <div class="table-scroll">
             <table class="cookies-table">
@@ -196,6 +199,12 @@
                   <td>Hasta 2 años</td>
                   <td>Mantiene el estado de la sesión y permite medir páginas vistas e interacciones, únicamente después del consentimiento.</td>
                 </tr>
+                <tr>
+                  <td><code>_gcl_*</code></td>
+                  <td>Medición de campañas · Google Ads</td>
+                  <td>Según la configuración de la etiqueta de conversión</td>
+                  <td>Si se configura la medición de conversiones y acepta esta categoría, conserva identificadores de clic para atribuir las acciones de contacto a una campaña. No se utiliza para crear públicos de remarketing.</td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -206,6 +215,9 @@
           <p>Utilizamos una instancia propia de Umami para obtener estadísticas básicas sin cookies, huellas digitales ni perfiles personales. El sistema respeta la señal «Do Not Track» del navegador y puede desactivarse en cualquier momento desde «Preferencias de cookies».</p>
           <p>Con su consentimiento, utilizamos Google Analytics 4 para conocer de forma agregada qué páginas se visitan y si se interactúa con acciones de contacto como el teléfono, WhatsApp o el formulario. No enviamos a Analytics el nombre, el teléfono, el correo electrónico, el mensaje ni datos clínicos.</p>
           <p>La etiqueta de Google Analytics se carga automáticamente y envía a Google señales de consentimiento y medición sin cookies, aunque no acepte las estadísticas. Las cookies analíticas solo se activan cuando acepta la categoría «Estadísticas». Puede retirar este consentimiento en cualquier momento desde «Preferencias de cookies». El proveedor es Google Ireland Limited; puede consultar su <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">política de privacidad</a>.</p>
+
+          <h2>Medición de campañas</h2>
+          <p>La categoría «Medición de campañas» es independiente de las estadísticas. Si la acepta, autoriza que Google trate identificadores de clic publicitario y eventos de contacto para atribuir las visitas o solicitudes de cita a las campañas. La configuración actual no envía a Google el nombre, el teléfono, el correo, el mensaje del formulario ni datos clínicos. El consentimiento publicitario se deniega por defecto y puede retirarlo en cualquier momento desde «Preferencias de cookies». No activamos la personalización de anuncios ni el remarketing.</p>
 
           <h2>Cookies de Google Maps</h2>
           <p>Las páginas de nuestras clínicas incluyen mapas integrados de Google Maps para facilitar la localización de nuestros centros. Cuando interactúe con el mapa, Google puede establecer sus propias cookies en su dispositivo de acuerdo con su propia política de privacidad, accesible en <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
@@ -301,7 +313,7 @@
     </div>
   </footer>
 
-  <script src="../assets/js/main.min.js?v=20260916-blog"></script>
+  <script src="../assets/js/main.min.js?v=20260923-consent"></script>
   <!-- WhatsApp FAB -->
   <a href="sedes.html#contacto-whatsapp" class="whatsapp-fab" rel="noopener" aria-label="WhatsApp: elige una clínica">
     <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.556 4.122 1.528 5.855L.057 23.175a.75.75 0 00.918.899l5.42-1.424A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 01-4.965-1.364l-.356-.211-3.677.964.982-3.592-.231-.369A9.713 9.713 0 012.25 12C2.25 6.613 6.613 2.25 12 2.25S21.75 6.613 21.75 12 17.387 21.75 12 21.75z"/></svg>

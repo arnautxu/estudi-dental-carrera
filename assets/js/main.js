@@ -478,13 +478,13 @@ console.log(
    ============================================================ */
 (function initConsent() {
   const STORAGE_KEY = 'edc_consent_v1';
-  const DEFAULT = { necessary: true, umami: true, maps: false, analytics: false, ts: null };
+  const DEFAULT = { necessary: true, umami: true, maps: false, analytics: false, campaigns: false, ts: null };
 
   const LANG = (document.documentElement.lang || 'ca').slice(0, 2).toLowerCase();
   const I18N = {
     ca: {
       bannerTitle: 'Cookies i privacitat',
-      bannerText: 'Fem servir Umami sense cookies per a estadístiques bàsiques. Google Analytics envia senyals sense cookies. Les cookies d\'Analytics i Google Maps només s\'activen si ho acceptes. <a href="/cookies.html">Més informació</a>.',
+      bannerText: 'Fem servir Umami sense cookies per a estadístiques bàsiques. Google Analytics envia senyals sense cookies. Les cookies d\'Analytics, de mesurament de campanyes i de Google Maps només s\'activen si ho acceptes. <a href="/cookies.html">Més informació</a>.',
       prefs: 'Preferències', reject: 'Rebutjar', accept: 'Acceptar',
       bannerAria: 'Consentiment de cookies',
       modalTitle: 'Preferències de cookies',
@@ -499,12 +499,14 @@ console.log(
         { key: 'maps', label: 'Mapes de Google Maps', tag: 'De tercers',
           desc: 'Carrega els mapes integrats a la pàgina de seus perquè puguis veure la ubicació de les clíniques. Google pot establir cookies pròpies segons la seva política.', required: false },
         { key: 'analytics', label: 'Estadístiques ampliades (Google Analytics)', tag: 'Amb consentiment',
-          desc: 'Ens ajuden a entendre de forma anònima i agregada com es fa servir el web (pàgines vistes, clics a telèfon o WhatsApp) per millorar-lo. L’etiqueta es carrega automàticament i envia senyals sense cookies; les cookies d’Analytics només s’activen si ho acceptes.', required: false }
+          desc: 'Ens ajuden a entendre de forma agregada com es fa servir el web (pàgines vistes, clics a telèfon o WhatsApp) per millorar-lo. L’etiqueta es carrega automàticament i envia senyals sense cookies; les cookies d’Analytics només s’activen si ho acceptes.', required: false },
+        { key: 'campaigns', label: 'Mesurament de campanyes (Google Ads)', tag: 'Amb consentiment',
+          desc: 'Permet atribuir a les campanyes les visites i les sol·licituds de cita mitjançant identificadors de clic i cookies publicitàries. No fem remàrqueting ni anuncis personalitzats, i no enviem dades del formulari ni dades clíniques.', required: false }
       ]
     },
     es: {
       bannerTitle: 'Cookies y privacidad',
-      bannerText: 'Usamos Umami sin cookies para estadísticas básicas. Google Analytics envía señales sin cookies. Las cookies de Analytics y Google Maps solo se activan si lo aceptas. <a href="/es/cookies.html">Más información</a>.',
+      bannerText: 'Usamos Umami sin cookies para estadísticas básicas. Google Analytics envía señales sin cookies. Las cookies de Analytics, medición de campañas y Google Maps solo se activan si lo acepta. <a href="/es/cookies.html">Más información</a>.',
       prefs: 'Preferencias', reject: 'Rechazar', accept: 'Aceptar',
       bannerAria: 'Consentimiento de cookies',
       modalTitle: 'Preferencias de cookies',
@@ -519,7 +521,9 @@ console.log(
         { key: 'maps', label: 'Mapas de Google Maps', tag: 'De terceros',
           desc: 'Carga los mapas integrados en la página de sedes para que puedas ver la ubicación de las clínicas. Google puede establecer sus propias cookies según su política.', required: false },
         { key: 'analytics', label: 'Estadísticas ampliadas (Google Analytics)', tag: 'Con consentimiento',
-          desc: 'Nos ayudan a entender de forma anónima y agregada cómo se usa el sitio (páginas vistas, clics en teléfono o WhatsApp) para mejorarlo. La etiqueta se carga automáticamente y envía señales sin cookies; las cookies de Analytics solo se activan si lo aceptas.', required: false }
+          desc: 'Nos ayudan a entender de forma agregada cómo se usa el sitio (páginas vistas, clics en teléfono o WhatsApp) para mejorarlo. La etiqueta se carga automáticamente y envía señales sin cookies; las cookies de Analytics solo se activan si lo acepta.', required: false },
+        { key: 'campaigns', label: 'Medición de campañas (Google Ads)', tag: 'Con consentimiento',
+          desc: 'Permite atribuir a las campañas las visitas y solicitudes de cita mediante identificadores de clic y cookies publicitarias. No hacemos remarketing ni anuncios personalizados, y no enviamos datos del formulario ni datos clínicos.', required: false }
       ]
     }
   };
@@ -533,8 +537,15 @@ console.log(
       if (!raw) return null;
       const p = JSON.parse(raw);
       if (!p || typeof p !== 'object') return null;
-      return Object.assign({}, DEFAULT, p, { necessary: true });
+      return Object.assign({}, DEFAULT, p, { necessary: true, campaigns: p.campaigns === true });
     } catch (_) { return null; }
+  }
+
+  function needsConsentPrompt() {
+    try {
+      const p = JSON.parse(localStorage.getItem(STORAGE_KEY));
+      return !p || typeof p.campaigns !== 'boolean';
+    } catch (_) { return true; }
   }
 
   function write(prefs) {
@@ -639,13 +650,17 @@ console.log(
     }
   };
 
-  /* ---- Google Analytics 4 consent updates ----
+  /* ---- Google tag consent updates ----
      The Google tag loads in <head> with denied defaults. Cookie choices
-     update its storage permission without loading or configuring it again. */
+     update analytics and campaign permissions without reloading it. */
   function applyAnalytics(prefs) {
     if (typeof window.gtag === 'function') {
+      const campaigns = prefs && prefs.campaigns === true ? 'granted' : 'denied';
       window.gtag('consent', 'update', {
-        analytics_storage: prefs && prefs.analytics === true ? 'granted' : 'denied'
+        analytics_storage: prefs && prefs.analytics === true ? 'granted' : 'denied',
+        ad_storage: campaigns,
+        ad_user_data: campaigns,
+        ad_personalization: 'denied'
       });
     }
   }
@@ -671,8 +686,8 @@ console.log(
       const btn = e.target.closest('[data-consent-action]');
       if (!btn) return;
       const action = btn.dataset.consentAction;
-      if (action === 'accept') { write({ umami: true, maps: true, analytics: true }); hideBanner(); }
-      else if (action === 'reject') { write({ umami: false, maps: false, analytics: false }); hideBanner(); }
+      if (action === 'accept') { write({ umami: true, maps: true, analytics: true, campaigns: true }); hideBanner(); }
+      else if (action === 'reject') { write({ umami: false, maps: false, analytics: false, campaigns: false }); hideBanner(); }
       else if (action === 'prefs') { openModal(); }
     });
     bannerEl = el;
@@ -748,8 +763,8 @@ console.log(
       if (!btn) return;
       const a = btn.dataset.consentAction;
       if (a === 'close') closeModal();
-      else if (a === 'accept') { write({ umami: true, maps: true, analytics: true }); closeModal(); hideBanner(); }
-      else if (a === 'reject') { write({ umami: false, maps: false, analytics: false }); closeModal(); hideBanner(); }
+      else if (a === 'accept') { write({ umami: true, maps: true, analytics: true, campaigns: true }); closeModal(); hideBanner(); }
+      else if (a === 'reject') { write({ umami: false, maps: false, analytics: false, campaigns: false }); closeModal(); hideBanner(); }
       else if (a === 'save') {
         const prefs = {};
         el.querySelectorAll('[data-switch]').forEach(s => {
@@ -827,8 +842,8 @@ console.log(
     get: current,
     set: write,
     open: openModal,
-    accept: () => write({ umami: true, maps: true, analytics: true }),
-    reject: () => write({ umami: false, maps: false, analytics: false }),
+    accept: () => write({ umami: true, maps: true, analytics: true, campaigns: true }),
+    reject: () => write({ umami: false, maps: false, analytics: false, campaigns: false }),
     on: fn => { if (typeof fn === 'function') listeners.add(fn); return () => listeners.delete(fn); }
   };
 
@@ -838,7 +853,7 @@ console.log(
     applyMapGate(stored || DEFAULT);
     applyUmami(stored || DEFAULT);
     applyAnalytics(stored || DEFAULT);
-    if (!stored) {
+    if (needsConsentPrompt()) {
       setTimeout(showBanner, 650);
     }
   }
