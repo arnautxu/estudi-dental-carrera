@@ -888,7 +888,7 @@ pages['ca-lleida'] = locationPage('ca', {
     'Estudi Dental Carrera és una clínica dental al centre de Lleida, al carrer Major, 74-76, 3r 3a. El nostre equip de dentistes hi fa visites de diagnòstic, prevenció i tractament. Abans de substituir o moure una dent, valorem què podem conservar i quin benefici tindria cada pas.',
     'Si el cas necessita diversos professionals, ordenem les visites entre l’equip. Pot caldre tractar les genives abans de posar una pròtesi o revisar la mossegada abans de restaurar una dent. T’expliquem què proposem, en quin ordre i per què.',
   ],
-  aside: 'Adreça: carrer Major, 74-76, 3r 3a, 25007 Lleida. Telèfon: 973 26 88 26. Horari: dilluns a divendres 9–20 h; dissabtes 9–14 h. Diumenges, tancat. Consulta amb recepció qualsevol necessitat d’accés.',
+  aside: 'Adreça: carrer Major, 74-76, 3r 3a, 25007 Lleida. Telèfon: 973 26 88 26. Horari: dilluns a dimecres 9–19 h; dijous i divendres 9–17 h. Dissabtes i diumenges, tancat. Consulta amb recepció qualsevol necessitat d’accés.',
   sections: [
     {
       title: 'Quins tractaments podem valorar a Lleida',
@@ -982,7 +982,7 @@ pages['es-lleida'] = locationPage('es', {
     'Estudi Dental Carrera es una clínica dental en el centro de Lleida, en carrer Major, 74-76, 3.º 3.ª. Hacemos visitas de diagnóstico, prevención y tratamiento. Antes de sustituir o mover un diente, valoramos qué podemos conservar y qué beneficio tendría cada paso.',
     'Si el caso necesita varios profesionales, ordenamos las visitas entre el equipo. Puede hacer falta tratar las encías antes de poner una prótesis o revisar la mordida antes de restaurar un diente. Te explicamos qué proponemos, en qué orden y por qué.',
   ],
-  aside: 'Dirección: carrer Major, 74-76, 3.º 3.ª, 25007 Lleida. Teléfono: 973 26 88 26. Horario: lunes a viernes 9–20 h; sábados 9–14 h. Domingos, cerrado. Consulta con recepción cualquier necesidad de acceso.',
+  aside: 'Dirección: carrer Major, 74-76, 3.º 3.ª, 25007 Lleida. Teléfono: 973 26 88 26. Horario: lunes a miércoles 9–19 h; jueves y viernes 9–17 h. Sábados y domingos, cerrado. Consulta con recepción cualquier necesidad de acceso.',
   sections: [
     {
       title: 'Qué tratamientos podemos valorar en Lleida',

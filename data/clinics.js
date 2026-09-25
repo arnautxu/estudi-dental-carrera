@@ -1,4 +1,4 @@
-// Public clinic facts; Lleida hours confirmed by the owner on 2026-09-15.
+// Public clinic facts; Lleida hours corrected from the clinic message supplied on 2026-09-25.
 module.exports = {
   "lleida": {
     "@type": "Dentist",
@@ -27,18 +27,16 @@ module.exports = {
         "dayOfWeek": [
           "Monday",
           "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday"
+          "Wednesday"
         ],
         "opens": "09:00",
-        "closes": "20:00"
+        "closes": "19:00"
       },
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Saturday",
+        "dayOfWeek": ["Thursday", "Friday"],
         "opens": "09:00",
-        "closes": "14:00"
+        "closes": "17:00"
       }
     ],
     "areaServed": {
