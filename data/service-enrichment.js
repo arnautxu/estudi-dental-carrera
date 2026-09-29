@@ -321,6 +321,53 @@ function enrichPages(pages) {
       addRelated(lleida, guideIndex, es ? 'Guías para preparar la consulta dental' : 'Guies per preparar la consulta dental');
     }
   }
+  // Local navigation and budget questions; no prices or clinical review claims.
+  for (const lang of ['ca', 'es']) {
+    const es = lang === 'es';
+    const prefix = es ? '/es' : '';
+    const local = es ? '/es/clinica-dental-lleida.html' : '/clinica-dental-lleida.html';
+    const implants = pages[`${lang}-implants`];
+    addSection(implants, {
+      id: es ? 'presupuesto-implantes' : 'pressupost-implants',
+      jumpLabel: es ? 'Presupuesto' : 'Pressupost',
+      title: es ? 'Presupuesto de implantes: qué conviene comparar' : 'Pressupost d’implants: què convé comparar',
+      paragraphs: [es
+        ? 'Antes de comparar un importe, pide que se detalle el plan completo: estudio, intervención, implante, pilar, prótesis provisional si se propone y restauración definitiva. Confirma qué revisiones están incluidas y cómo se presupuestan el mantenimiento o las actuaciones adicionales.'
+        : 'Abans de comparar un import, demana que es detalli el pla complet: estudi, intervenció, implant, pilar, pròtesi provisional si es proposa i restauració definitiva. Confirma quines revisions s’hi inclouen i com es pressuposten el manteniment o les actuacions addicionals.',
+        es
+        ? `El número de dientes que se reponen, la restauración elegida y los procedimientos que indique el diagnóstico pueden cambiar el presupuesto. Para valorar tu caso, puedes <a href="${local}#primera-visita">preparar una primera visita en Lleida</a>. La solicitud de contacto no confirma una cita ni un precio.`
+        : `El nombre de dents que es reposen, la restauració triada i els procediments que indiqui el diagnòstic poden canviar el pressupost. Per valorar el teu cas, pots <a href="${local}#primera-visita">preparar una primera visita a Lleida</a>. La sol·licitud de contacte no confirma una cita ni un preu.`],
+    });
+    for (const key of ['ortho', 'atm', 'perio']) {
+      const page = pages[`${lang}-${key}`];
+      addRelated(page, local, es ? 'Primera visita y contacto en Lleida' : 'Primera visita i contacte a Lleida');
+      page.related.find(item => item.href === local).type = 'Clínica';
+    }
+    const lleida = pages[`${lang}-lleida`];
+    addSection(lleida, {
+      id: es ? 'cirugia-oral' : 'cirurgia-oral',
+      jumpLabel: es ? 'Cirugía oral' : 'Cirurgia oral',
+      title: es ? 'Cirugía oral en Lleida: valorar antes de intervenir' : 'Cirurgia oral a Lleida: valorar abans d’intervenir',
+      paragraphs: [es
+        ? `Si te han propuesto una extracción o una intervención, trae los informes y las pruebas que ya tengas. La visita sirve para aclarar qué se propone, las alternativas, las fases y el seguimiento. El <a href="/es/equipo.html#joan-carrera-carrillo">Dr. Joan Carrera Carrillo</a> se dedica a la implantología y la cirugía oral.`
+        : `Si t’han proposat una extracció o una intervenció, porta els informes i les proves que ja tinguis. La visita serveix per aclarir què es proposa, les alternatives, les fases i el seguiment. El <a href="/equip.html#joan-carrera-carrillo">Dr. Joan Carrera Carrillo</a> es dedica a la implantologia i la cirurgia oral.`,
+        es
+        ? `Si la pregunta es si se puede conservar una pieza, consulta la <a href="${prefix}/periodoncia-endodoncia.html#endodoncia">valoración de endodoncia</a>. Si falta una pieza, puedes preparar las preguntas sobre <a href="/es/implantes-dentales.html">implantes y alternativas</a>.`
+        : `Si la pregunta és si es pot conservar una peça, consulta la <a href="/periodoncia-endodoncia.html#endodoncia">valoració d’endodòncia</a>. Si falta una peça, pots preparar les preguntes sobre <a href="/implants-dentals.html">implants i alternatives</a>.`],
+    });
+    for (const key of ['lleida', 'implants', 'ortho', 'atm', 'perio']) {
+      pages[`${lang}-${key}`].dateModified = '2026-09-29';
+      pages[`${lang}-${key}`].updatedLabel = es ? '29 de septiembre de 2026' : '29 de setembre de 2026';
+    }
+    const ortho = pages[`${lang}-ortho`];
+    ortho.sections.find(section => section.id === (es ? 'precio-ortodoncia' : 'preu-ortodoncia')).paragraphs.push(es
+      ? `Si buscas ortodoncia en Lleida, puedes <a href="${local}#primera-visita">consultar cómo preparar la primera visita</a> y llevar tus preguntas sobre brackets, alineadores y retención. Pide que el presupuesto indique quién realizará los controles y qué incluye el seguimiento.`
+      : `Si busques ortodòncia a Lleida, pots <a href="${local}#primera-visita">consultar com preparar la primera visita</a> i portar les preguntes sobre bràquets, alineadors i retenció. Demana que el pressupost indiqui qui farà els controls i què inclou el seguiment.`);
+    const atmPage = pages[`${lang}-atm`];
+    atmPage.sections.find(section => section.id === (es ? 'tratamiento-bruxismo' : 'tractament-bruxisme')).paragraphs.push(es
+      ? `Para una valoración en nuestra <a href="${local}">clínica de Lleida</a>, trae tu férula si ya utilizas una y los informes disponibles. La <a href="/es/equipo.html#carme-roure">Dra. Carme Roure Miquel</a> se dedica a la disfunción craniomandibular y el bruxismo. La exploración permite orientar qué seguimiento necesitas.`
+      : `Per a una valoració a la nostra <a href="${local}">clínica de Lleida</a>, porta la fèrula si ja en fas servir una i els informes disponibles. La <a href="/equip.html#carme-roure">Dra. Carme Roure Miquel</a> es dedica a la disfunció craniomandibular i el bruxisme. L’exploració permet orientar quin seguiment necessites.`);
+  }
   const readingLinks = [
     ['ca-implants', 'implant-i-protesi', '/guies/implant-o-pont.html', 'Si has de substituir una dent, consulta <a href="/guies/implant-o-pont.html">què convé comparar entre un implant i un pont dental</a>.'],
     ['es-implants', 'implante-y-protesis', '/es/guias/implante-o-puente.html', 'Si necesitas sustituir un diente, consulta <a href="/es/guias/implante-o-puente.html">qué conviene comparar entre un implante y un puente dental</a>.'],

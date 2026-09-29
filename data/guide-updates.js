@@ -1,5 +1,15 @@
 // Keep existing URLs and build on their original explanations.
 function enrichGuides(guides) {
+  const conciseTitles = {
+    'por-dentista-ca': 'Por del dentista: com tornar a la consulta | Carrera',
+    'manteniment-implants-dentals-ca': 'Manteniment dels implants dentals | Carrera',
+    'durada-anestesia-dental-ca': 'Quant dura l’anestèsia dental? | Carrera',
+    'mantenimiento-implantes-dentales-es': 'Mantenimiento de implantes dentales | Carrera',
+    'mal-aliento-persistente-es': 'Mal aliento persistente: qué revisar | Carrera',
+    'duracion-anestesia-dental-es': '¿Cuánto dura la anestesia dental? | Carrera',
+  };
+  for (const [key, title] of Object.entries(conciseTitles)) guides[key].title = title;
+
   const append = (key, id, title, paragraphs) => guides[key].sections.push({ id, title, paragraphs });
   append('ferula-descarrega', 'adaptacio-pressupost', 'Adaptació, neteja i pressupost: què convé deixar acordat?', [
     'Si la fèrula deixa d’encaixar, no la forcis ni intentis escalfar-la per donar-li forma. Contacta amb qui la controla i comenta si hi ha hagut algun tractament dental recent. Porta-la a la visita encara que hagis deixat d’utilitzar-la.',
