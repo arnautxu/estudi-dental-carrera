@@ -71,6 +71,23 @@ function enrichGuides(guides) {
     'Si tienes dolor intenso o persistente, hinchazón, una mordida que notas alta o se cae el provisional, contacta con el profesional. Explica cuándo empezó, cómo evoluciona y qué instrucciones has seguido. No ajustes por tu cuenta la medicación.',
     'Guarda el resumen del tratamiento y las fechas de control. Si cambias de dentista, esa información puede ayudar a continuar el seguimiento y a comparar la evolución del diente.',
   ]);
+  for (const [key, service, label] of [
+    ['alineadors-o-braquets', '/ortodoncia.html', 'Valora alineadors i bràquets a Lleida'],
+    ['alineadores-o-brackets', '/es/ortodoncia.html', 'Valora alineadores y brackets en Lleida'],
+    ['implant-o-pont', '/implants-dentals.html', 'Valora implants i alternatives a Lleida'],
+    ['implante-o-puente', '/es/implantes-dentales.html', 'Valora implantes y alternativas en Lleida'],
+  ]) {
+    const guide = guides[key];
+    const es = guide.lang === 'es';
+    guide.relatedService = { href: service, label };
+    append(key, 'primera-visita-lleida', es ? 'Preparar una primera visita en Lleida' : 'Preparar una primera visita a Lleida', es ? [
+      `Si estás comparando opciones, lleva tus dudas y cualquier propuesta previa a la visita. En <a href="${service}" data-track="blog_service_click" data-track-label="${key}">la página del tratamiento en Lleida</a> encontrarás cómo planteamos el estudio y el seguimiento.`,
+      'Consulta <a href="/es/clinica-dental-lleida.html">el equipo, el acceso y los horarios de la clínica de Lleida</a>. Puedes <a href="/es/sedes.html#contacto-carrera">pedir una primera visita</a>; recepción contactará contigo para confirmar el día y la hora. No es necesario enviar información clínica por el formulario.'
+    ] : [
+      `Si estàs comparant opcions, porta els dubtes i qualsevol proposta prèvia a la visita. A <a href="${service}" data-track="blog_service_click" data-track-label="${key}">la pàgina del tractament a Lleida</a> trobaràs com plantegem l’estudi i el seguiment.`,
+      'Consulta <a href="/clinica-dental-lleida.html">l’equip, l’accés i els horaris de la clínica de Lleida</a>. Pots <a href="/seus.html#contacte-carrera">demanar una primera visita</a>; recepció contactarà amb tu per confirmar el dia i l’hora. No cal enviar informació clínica pel formulari.'
+    ]);
+  }
   return guides;
 }
 module.exports = { enrichGuides };

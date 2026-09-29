@@ -368,6 +368,33 @@ function enrichPages(pages) {
       ? `Para una valoración en nuestra <a href="${local}">clínica de Lleida</a>, trae tu férula si ya utilizas una y los informes disponibles. La <a href="/es/equipo.html#carme-roure">Dra. Carme Roure Miquel</a> se dedica a la disfunción craniomandibular y el bruxismo. La exploración permite orientar qué seguimiento necesitas.`
       : `Per a una valoració a la nostra <a href="${local}">clínica de Lleida</a>, porta la fèrula si ja en fas servir una i els informes disponibles. La <a href="/equip.html#carme-roure">Dra. Carme Roure Miquel</a> es dedica a la disfunció craniomandibular i el bruxisme. L’exploració permet orientar quin seguiment necessites.`);
   }
+  // Prioritize the two treatment families requested for Lleida without duplicating URLs.
+  for (const lang of ['ca', 'es']) {
+    const es = lang === 'es';
+    const ortho = pages[`${lang}-ortho`];
+    ortho.title = es ? 'Ortodoncia en Lleida: alineadores y brackets | Carrera' : 'Ortodòncia a Lleida: alineadors i bràquets | Carrera';
+    ortho.h1 = es ? 'Ortodoncia en Lleida: alineadores y brackets' : 'Ortodòncia a Lleida: alineadors i bràquets';
+    ortho.description = es
+      ? 'Ortodoncia en Lleida con la Dra. Carme Roure. Alineadores y brackets, estudio inicial, presupuesto, controles y retención. Pide una primera visita.'
+      : 'Ortodòncia a Lleida amb la Dra. Carme Roure. Alineadors i bràquets, estudi inicial, pressupost, controls i retenció. Demana una primera visita.';
+    const implants = pages[`${lang}-implants`];
+    implants.title = es ? 'Implantes dentales en Lleida: valoración y fases | Carrera' : 'Implants dentals a Lleida: valoració i fases | Carrera';
+    implants.h1 = es ? 'Implantes dentales en Lleida' : 'Implants dentals a Lleida';
+    implants.description = es
+      ? 'Implantes dentales en Lleida: valoración con el Dr. Joan Carrera Carrillo, alternativas, fases y presupuesto completo. Pide una primera visita.'
+      : 'Implants dentals a Lleida: valoració amb el Dr. Joan Carrera Carrillo, alternatives, fases i pressupost complet. Demana una primera visita.';
+    addSection(implants, {
+      id: 'primera-visita-lleida',
+      title: es ? 'Tu primera visita de implantes en Lleida' : 'La primera visita d’implants a Lleida',
+      paragraphs: es ? [
+        'Puedes pedir una valoración en carrer Major, 74-76, 3.º 3.ª, Lleida. El <a href="/es/equipo.html#joan-carrera-carrillo">Dr. Joan Carrera Carrillo</a> se dedica a la implantología y la cirugía oral. Trae los informes, las pruebas y los presupuestos previos que ya tengas para poder plantear tus dudas.',
+        'No necesitas llegar con una técnica elegida. La visita permite hablar de las alternativas y de los pasos que habría que estudiar antes de confirmar un plan. Consulta <a href="/es/clinica-dental-lleida.html">horarios, acceso y equipo de Lleida</a> o <a href="/es/sedes.html#contacto-carrera">solicita una primera visita</a>. Recepción concretará contigo la fecha y la hora.'
+      ] : [
+        'Pots demanar una valoració al carrer Major, 74-76, 3r 3a, Lleida. El <a href="/equip.html#joan-carrera-carrillo">Dr. Joan Carrera Carrillo</a> es dedica a la implantologia i la cirurgia oral. Porta els informes, les proves i els pressupostos previs que ja tinguis per poder plantejar els dubtes.',
+        'No cal que arribis amb una tècnica escollida. La visita permet parlar de les alternatives i dels passos que caldria estudiar abans de confirmar un pla. Consulta <a href="/clinica-dental-lleida.html">horaris, accés i equip de Lleida</a> o <a href="/seus.html#contacte-carrera">sol·licita una primera visita</a>. Recepció concretarà amb tu el dia i l’hora.'
+      ]
+    });
+  }
   const readingLinks = [
     ['ca-implants', 'implant-i-protesi', '/guies/implant-o-pont.html', 'Si has de substituir una dent, consulta <a href="/guies/implant-o-pont.html">què convé comparar entre un implant i un pont dental</a>.'],
     ['es-implants', 'implante-y-protesis', '/es/guias/implante-o-puente.html', 'Si necesitas sustituir un diente, consulta <a href="/es/guias/implante-o-puente.html">qué conviene comparar entre un implante y un puente dental</a>.'],
