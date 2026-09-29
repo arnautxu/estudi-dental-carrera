@@ -937,7 +937,7 @@ pages['ca-lleida'] = locationPage('ca', {
       items: [
         'Adreça: carrer Major, 74-76, 3r 3a, 25007 Lleida.',
         '<a href="https://maps.google.com/?q=Carrer+Major+74-76,+25007+Lleida" target="_blank" rel="noopener">Obre la ubicació a Google Maps</a>.',
-        'Horari: dilluns a divendres de 9 a 20 h i dissabtes de 9 a 14 h.',
+        'Horari: dilluns a dimecres 9–19 h; dijous i divendres 9–17 h. Dissabtes i diumenges, tancat.',
         'Telèfon de recepció: <a href="tel:+34973268826">973 26 88 26</a>.',
       ],
     },
@@ -1031,7 +1031,7 @@ pages['es-lleida'] = locationPage('es', {
       items: [
         'Dirección: carrer Major, 74-76, 3.º 3.ª, 25007 Lleida.',
         '<a href="https://maps.google.com/?q=Carrer+Major+74-76,+25007+Lleida" target="_blank" rel="noopener">Abre la ubicación en Google Maps</a>.',
-        'Horario: lunes a viernes de 9 a 20 h y sábados de 9 a 14 h.',
+        'Horario: lunes a miércoles 9–19 h; jueves y viernes 9–17 h. Sábados y domingos, cerrado.',
         'Teléfono de recepción: <a href="tel:+34973268826">973 26 88 26</a>.',
       ],
     },

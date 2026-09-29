@@ -45,3 +45,14 @@ test('only the public Vercel alias redirects, leaving preview hosts available', 
   assert.equal(rule.has.length, 1);
   assert.equal(config.redirects.some(r => r.has?.some(h => h.value.includes('.*'))), false);
 });
+
+for (const [key, page] of Object.entries(pages).filter(([, page]) => page.location?.id === 'lleida')) {
+  test(`${key}: rendered arrival information uses the current Lleida hours`, () => {
+    let html;
+    landing({ query: { key } }, { setHeader() {}, status() { return this; }, send(value) { html = value; } });
+    assert.doesNotMatch(html, /(?:9 a 20|9 a 14) h/);
+    assert.ok(html.includes(page.lang === 'ca'
+      ? 'Horari: dilluns a dimecres 9–19 h; dijous i divendres 9–17 h. Dissabtes i diumenges, tancat.'
+      : 'Horario: lunes a miércoles 9–19 h; jueves y viernes 9–17 h. Sábados y domingos, cerrado.'));
+  });
+}
