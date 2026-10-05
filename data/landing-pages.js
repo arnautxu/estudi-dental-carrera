@@ -1216,4 +1216,5 @@ pages['es-tremp'] = locationPage('es', {
 });
 
 require('./service-enrichment').enrichPages(pages);
+require('./lleida-acquisition').applyLleidaAcquisition(pages);
 module.exports = { pages };
