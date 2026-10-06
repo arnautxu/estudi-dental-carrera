@@ -59,10 +59,10 @@
 .lleida-treatment-list { border-top:1px solid var(--lleida-rule); }
 .lleida-treatment-list article { display:grid; grid-template-columns:26px 1fr; gap:18px; padding:21px 0; border-bottom:1px solid var(--lleida-rule); }
 .lleida-treatment-list .lleida-number { padding-top:5px; }
-.lleida-treatment-list h3 { margin:0 0 8px; font-size:clamp(1.2rem,1.8vw,1.55rem); }
-.lleida-treatment-list h3 a { display:flex; justify-content:space-between; gap:12px; color:var(--ink); }
-.lleida-treatment-list h3 a:hover { color:var(--beix-text); }
-.lleida-treatment-list h3 span { font-family:var(--font-body); font-size:1.2rem; }
+.lleida-treatment-list h3 { margin:0; min-width:0; font-size:clamp(1.2rem,1.8vw,1.55rem); }
+.lleida-treatment-list__link { display:flex; align-items:baseline; justify-content:space-between; gap:12px; color:var(--ink); margin-bottom:8px; }
+.lleida-treatment-list__link:hover { color:var(--beix-text); }
+.lleida-treatment-list__link > [aria-hidden] { flex:none; font-family:var(--font-body); font-size:1.2rem; }
 .lleida-treatment-list p { font-size:.9rem; line-height:1.65; color:var(--gris-dark); margin:0; max-width:57ch; }
 .lleida-section-link { margin-top:35px; }
 .lleida-team__grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:25px; padding:0; margin:0; list-style:none; }
