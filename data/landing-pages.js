@@ -1218,4 +1218,5 @@ pages['es-tremp'] = locationPage('es', {
 require('./service-enrichment').enrichPages(pages);
 require('./lleida-acquisition').applyLleidaAcquisition(pages);
 require('./lleida-contextual-links').linkLocalPages(pages);
+require('./seo-priorities').applyServicePriorities(pages);
 module.exports = { pages };

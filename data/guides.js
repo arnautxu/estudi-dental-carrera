@@ -586,5 +586,6 @@ Object.assign(guides,
 require('./guide-updates').enrichGuides(guides);
 require('./guide-photography').enrichGuides(guides);
 require('./lleida-contextual-links').linkSupportingGuides(guides);
+require('./seo-priorities').linkWeakGuides(guides, require('./landing-pages').pages);
 
 module.exports = { guides };

@@ -188,7 +188,7 @@ function render(page) {
   <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&amp;display=optional" rel="stylesheet" /></noscript>
   <link rel="preload" href="/assets/fonts/N27-Regular.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="/assets/css/main.min.css?v=20260916-blog" />
-  <link rel="stylesheet" href="/assets/css/landing.min.css?v=20260916-onpage" />
+  <link rel="stylesheet" href="/assets/css/landing.min.css?v=20261007-prioritats" />
   ${isLleida ? '<link rel="stylesheet" href="/assets/css/lleida.min.css?v=20260916-home1" />' : ''}
   <link rel="icon" type="image/svg+xml" href="/assets/img/logos/favicon.svg" />
   <script type="application/ld+json">${jsonLd(page)}</script>
@@ -210,6 +210,7 @@ ${renderHeader(page.lang, page.alternatePath, { active: isService ? 'services' :
         ${professional}
       </div>
     </section>
+    ${page.quickLinks?.length ? `<nav class="landing-questions" aria-label="${isEs ? 'Resuelve tus dudas' : 'Resol els dubtes'}"><div class="container"><span>${isEs ? 'Antes de pedir visita' : 'Abans de demanar visita'}</span><ul>${page.quickLinks.map(link => `<li><a href="${escapeHtml(link.href)}">${escapeHtml(link.label)} <span aria-hidden="true">↓</span></a></li>`).join('')}</ul></div></nav>` : ''}
     <section class="landing-intro">
       <div class="container landing-intro__grid">
         <div class="landing-prose"><span class="landing-kicker">${escapeHtml(page.introKicker)}</span><h2>${page.introTitle}</h2>${page.intro.map(text => `<p>${text}</p>`).join('')}${sectionNav}
