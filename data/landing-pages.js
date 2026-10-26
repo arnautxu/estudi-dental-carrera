@@ -103,14 +103,14 @@ const carmeProfile = {
     name: 'Dra. Carme Roure Miquel',
     role: 'Metgessa odontòloga · Ortodòncia i ATM',
     href: '/equip.html#carme-roure',
-    image: '/assets/img/equip/carme-roure-20261026.webp',
+    image: '/assets/img/equip/carme-roure-20261026b.webp',
     imageWidth: 1086, imageHeight: 1181,
   },
   es: {
     name: 'Dra. Carme Roure Miquel',
     role: 'Médica odontóloga · Ortodoncia y ATM',
     href: '/es/equipo.html#carme-roure',
-    image: '/assets/img/equip/carme-roure-20261026.webp',
+    image: '/assets/img/equip/carme-roure-20261026b.webp',
     imageWidth: 1086, imageHeight: 1181,
   },
 };
