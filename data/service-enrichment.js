@@ -185,7 +185,7 @@ function enrichPages(pages) {
         name: 'Dra. Isabel Sierra',
         role: es ? 'Médica odontóloga · Endodoncia y estética' : 'Metgessa odontòloga · Endodòncia i estètica',
         href: `${team}#isabel-sierra`,
-        image: '/assets/img/equip/isabel-sierra.webp', imageWidth: 900, imageHeight: 1080,
+        image: '/assets/img/equip/isabel-sierra-20261026.webp', imageWidth: 900, imageHeight: 1080,
       };
       addSection(aesthetics, {
         id: es ? 'limpieza-y-blanqueamiento' : 'neteja-i-blanquejament',
