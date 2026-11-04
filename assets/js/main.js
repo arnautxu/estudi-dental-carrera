@@ -484,7 +484,7 @@ console.log(
   const I18N = {
     ca: {
       bannerTitle: 'Cookies i privacitat',
-      bannerText: 'Fem servir Umami sense cookies per a estadístiques bàsiques. Google Analytics envia senyals sense cookies. Les cookies d\'Analytics, de mesurament de campanyes i de Google Maps només s\'activen si ho acceptes. <a href="/cookies.html">Més informació</a>.',
+      bannerText: 'Fem servir Vercel Web Analytics sense cookies per a estadístiques bàsiques. Google Analytics envia senyals sense cookies. Les cookies d\'Analytics, de mesurament de campanyes i de Google Maps només s\'activen si ho acceptes. <a href="/cookies.html">Més informació</a>.',
       prefs: 'Preferències', reject: 'Rebutjar', accept: 'Acceptar',
       bannerAria: 'Consentiment de cookies',
       modalTitle: 'Preferències de cookies',
@@ -494,7 +494,7 @@ console.log(
       categories: [
         { key: 'necessary', label: 'Estrictament necessàries', tag: 'Sempre actives',
           desc: 'Permeten el funcionament bàsic del lloc (navegació, sessió, formularis). Sense aquestes cookies el web no funcionaria correctament.', required: true },
-        { key: 'umami', label: 'Estadístiques privades (Umami)', tag: 'Sense cookies',
+        { key: 'umami', label: 'Estadístiques privades (Vercel Web Analytics)', tag: 'Sense cookies',
           desc: 'Mesura pàgines vistes i interaccions de manera agregada, sense cookies ni perfils personals. Està activa per defecte, respecta «Do Not Track» i la pots desactivar aquí.', required: false },
         { key: 'maps', label: 'Mapes de Google Maps', tag: 'De tercers',
           desc: 'Carrega els mapes integrats a la pàgina de seus perquè puguis veure la ubicació de les clíniques. Google pot establir cookies pròpies segons la seva política.', required: false },
@@ -506,7 +506,7 @@ console.log(
     },
     es: {
       bannerTitle: 'Cookies y privacidad',
-      bannerText: 'Usamos Umami sin cookies para estadísticas básicas. Google Analytics envía señales sin cookies. Las cookies de Analytics, medición de campañas y Google Maps solo se activan si lo acepta. <a href="/es/cookies.html">Más información</a>.',
+      bannerText: 'Usamos Vercel Web Analytics sin cookies para estadísticas básicas. Google Analytics envía señales sin cookies. Las cookies de Analytics, medición de campañas y Google Maps solo se activan si lo acepta. <a href="/es/cookies.html">Más información</a>.',
       prefs: 'Preferencias', reject: 'Rechazar', accept: 'Aceptar',
       bannerAria: 'Consentimiento de cookies',
       modalTitle: 'Preferencias de cookies',
@@ -516,7 +516,7 @@ console.log(
       categories: [
         { key: 'necessary', label: 'Estrictamente necesarias', tag: 'Siempre activas',
           desc: 'Permiten el funcionamiento básico del sitio (navegación, sesión, formularios). Sin estas cookies el sitio no funcionaría correctamente.', required: true },
-        { key: 'umami', label: 'Estadísticas privadas (Umami)', tag: 'Sin cookies',
+        { key: 'umami', label: 'Estadísticas privadas (Vercel Web Analytics)', tag: 'Sin cookies',
           desc: 'Mide páginas vistas e interacciones de forma agregada, sin cookies ni perfiles personales. Está activa por defecto, respeta «Do Not Track» y puedes desactivarla aquí.', required: false },
         { key: 'maps', label: 'Mapas de Google Maps', tag: 'De terceros',
           desc: 'Carga los mapas integrados en la página de sedes para que puedas ver la ubicación de las clínicas. Google puede establecer sus propias cookies según su política.', required: false },
@@ -584,53 +584,43 @@ console.log(
     });
   }
 
-  /* ---- Privacy-first Umami analytics ----
-     Umami runs without cookies or cross-site profiles, respects the browser's
-     Do Not Track signal and is enabled by default with a persistent opt-out.
-     It is restricted to the canonical production hostname. */
+  /* ---- Privacy-first web analytics (Vercel Web Analytics) ----
+     Vercel Web Analytics runs without cookies or cross-site profiles. The
+     loader respects the browser's Do Not Track signal and the persistent
+     opt-out stored under the historical `umami` preference key. It is
+     restricted to the canonical production hostname. */
   let umamiLoaded = false;
   let umamiLoading = false;
   let umamiQueue = [];
+  function doNotTrack() {
+    try {
+      const n = window.navigator || {};
+      return n.doNotTrack === '1' || n.doNotTrack === 'yes' || window.doNotTrack === '1';
+    } catch (_) { return false; }
+  }
   function applyUmami(prefs) {
     if (prefs && prefs.umami) loadUmami();
     else umamiQueue = [];
   }
-  async function loadUmami() {
+  function loadUmami() {
     if (umamiLoaded || umamiLoading) return;
     if (window.location.hostname !== 'www.estudidentalcarrera.com') return;
-    umamiLoading = true;
-    let id = window.UMAMI_WEBSITE_ID;
-    if (!id) {
-      try {
-        const response = await fetch('/api/public-config', { headers: { Accept: 'application/json' } });
-        const config = response.ok ? await response.json() : null;
-        id = config && config.umamiWebsiteId;
-      } catch (_) {
-        id = null;
-      }
-    }
-    if (!/^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(id || '')) {
-      umamiLoading = false;
-      return;
-    }
+    if (doNotTrack()) return;
     if (!current().umami) {
-      umamiLoading = false;
       umamiQueue = [];
       return;
     }
-    window.UMAMI_WEBSITE_ID = id;
+    umamiLoading = true;
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     const s = document.createElement('script');
-    s.async = true;
-    s.src = '/stats/script.js';
-    s.dataset.websiteId = id;
-    s.dataset.domains = 'www.estudidentalcarrera.com';
-    s.dataset.doNotTrack = 'true';
+    s.defer = true;
+    s.src = '/_vercel/insights/script.js';
     s.onload = () => {
       umamiLoaded = true;
       umamiLoading = false;
       const pending = umamiQueue.splice(0);
-      if (current().umami && window.umami && typeof window.umami.track === 'function') {
-        pending.forEach(item => window.umami.track(item.name, item.params));
+      if (current().umami && typeof window.va === 'function') {
+        pending.forEach(item => window.va('event', { name: item.name, data: item.params }));
       }
     };
     s.onerror = () => { umamiLoading = false; };
@@ -641,8 +631,8 @@ console.log(
     track(name, params) {
       const prefs = current();
       if (!prefs.umami) return;
-      if (window.umami && typeof window.umami.track === 'function') {
-        window.umami.track(name, params || {});
+      if (umamiLoaded && typeof window.va === 'function') {
+        window.va('event', { name, data: params || {} });
       } else {
         umamiQueue.push({ name, params: params || {} });
         loadUmami();
@@ -865,7 +855,8 @@ console.log(
 })();
 
 /* ---------- CONVERSION EVENT TRACKING ----------
-   Thin wrapper over Umami and GA4. Umami is cookieless and can be disabled
+   Thin wrapper over private analytics (Vercel Web Analytics, exposed as
+   EDCUmami for compatibility) and GA4. Private analytics is cookieless and can be disabled
    from preferences; custom GA4 contact events remain consent-gated. We
    capture the conversion-critical micro-actions: phone taps, WhatsApp
    taps, appointment CTAs and form submissions. Delegated from document

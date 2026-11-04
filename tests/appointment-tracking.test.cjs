@@ -223,7 +223,7 @@ test('conversion events obey analytics choices and never turn contact taps into 
   assert.ok(events.every(e => e.name !== 'generate_lead'));
 });
 
-test('revoking Umami before its script loads discards queued events', () => {
+test('revoking private analytics before its script loads discards queued events', () => {
   const store = new Map();
   const scripts = [];
   const events = [];
@@ -232,13 +232,13 @@ test('revoking Umami before its script loads discards queued events', () => {
   document.readyState = 'loading';
   document.createElement = () => new Element();
   document.head = { appendChild: el => scripts.push(el) };
-  const window = { location: new URL('https://www.estudidentalcarrera.com'), UMAMI_WEBSITE_ID: '123e4567-e89b-42d3-a456-426614174000' };
+  const window = { location: new URL('https://www.estudidentalcarrera.com'), navigator: {} };
   const consent = mainSource.slice(mainSource.indexOf('(function initConsent()'), mainSource.indexOf('/* ---------- CONVERSION EVENT TRACKING'));
   vm.runInNewContext(consent, { window, document, localStorage: { getItem: key => store.get(key), setItem: (key, value) => store.set(key, value) }, setTimeout });
   window.EDCUmami.track('appointment_start', { clinic: 'lleida' });
   assert.equal(scripts.length, 1);
   window.EDCConsent.reject();
-  window.umami = { track: (name, params) => events.push({ name, params }) };
+  window.va = (type, payload) => events.push({ type, payload });
   scripts[0].onload();
   assert.equal(events.length, 0);
 });

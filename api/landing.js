@@ -225,7 +225,7 @@ ${renderHeader(page.lang, page.alternatePath, { active: isService ? 'services' :
     <section class="landing-cta"><div class="container landing-cta__inner"><div><h2>${page.ctaTitle}</h2><p>${page.ctaText}</p></div><div class="landing-cta__actions"><a href="${contact}" class="btn btn--primary btn--lg" data-track="appointment_cta_click" data-track-label="landing-footer">${isService ? primaryCtaLabel : (isEs ? 'Pedir visita' : 'Demanar visita')}</a>${alternateClinicLink}</div></div></section>
   </main>`}
 ${renderFooter(page.lang)}
-  <script src="/assets/js/main.min.js?v=20260923-consent"></script>
+  <script src="/assets/js/main.min.js?v=20261104-analytics"></script>
 </body>
 </html>`;
 }
