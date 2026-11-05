@@ -153,6 +153,7 @@
 
     { "source": "/seus.html", "destination": "/api/contact-route?lang=ca" },
     { "source": "/es/sedes.html", "destination": "/api/contact-route?lang=es" },
+    { "source": "/stats/api/:path*", "destination": "https://gateway.umami.is/api/:path*" },
     { "source": "/stats/:path*", "destination": "https://cloud.umami.is/:path*" },
     { "source": "/atm-bruxisme.html", "destination": "/api/landing?key=ca-atm" },
     { "source": "/implants-dentals.html", "destination": "/api/landing?key=ca-implants" },
