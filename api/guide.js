@@ -86,7 +86,7 @@ function document(page, main, graph) {
 ${renderHeader(page.lang, page.alternatePath, { active: 'blog', hero: true })}
 <main id="main">${main}</main>
 ${renderFooter(page.lang)}
-<script src="/assets/js/main.min.js?v=20260923-consent"></script>
+<script src="/assets/js/main.min.js?v=20261105-umami-cloud"></script>
 ${page.type === 'index' ? '<script src="/assets/js/blog.min.js?v=1" defer></script>' : ''}
 </body></html>`;
 }

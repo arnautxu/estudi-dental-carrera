@@ -623,6 +623,9 @@ console.log(
     s.async = true;
     s.src = '/stats/script.js';
     s.dataset.websiteId = id;
+    // Umami Cloud posts to its own gateway unless told otherwise; keep
+    // collection same-origin so the CSP and the /stats proxy cover it.
+    s.dataset.hostUrl = window.location.origin + '/stats';
     s.dataset.domains = 'www.estudidentalcarrera.com';
     s.dataset.doNotTrack = 'true';
     s.onload = () => {
