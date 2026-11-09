@@ -71,7 +71,9 @@ function renderClinicDetails(clinic, isEs, wa) {
     : { Monday: 'Dl', Tuesday: 'Dt', Wednesday: 'Dc', Thursday: 'Dj', Friday: 'Dv', Saturday: 'Ds', Sunday: 'Dg' };
   const hours = clinic.openingHoursSpecification.map(slot => {
     const week = [].concat(slot.dayOfWeek);
-    const label = week.length > 1 ? `${days[week[0]]}–${days[week[week.length - 1]]}` : days[week[0]];
+    const order = Object.keys(days);
+    const consecutive = week.every((day, i) => i === 0 || order.indexOf(day) === order.indexOf(week[i - 1]) + 1);
+    const label = week.length === 1 ? days[week[0]] : consecutive ? `${days[week[0]]}–${days[week[week.length - 1]]}` : week.map(day => days[day]).join(', ');
     return `${label}: ${slot.opens}–${slot.closes}`;
   }).join(' · ');
   return `<dl class="landing-clinic-facts">
