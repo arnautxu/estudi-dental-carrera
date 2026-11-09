@@ -111,7 +111,10 @@
           "addressCountry": "ES"
         },
         "openingHoursSpecification": [
-          {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"19:00"}
+          {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Wednesday"],"opens":"10:00","closes":"17:00"},
+          {"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Thursday"],"opens":"10:00","closes":"13:00"},
+          {"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Thursday"],"opens":"16:00","closes":"20:00"},
+          {"@type":"OpeningHoursSpecification","dayOfWeek":["Friday"],"opens":"10:00","closes":"15:00"}
         ],
         "geo": {"@type": "GeoCoordinates", "latitude": 42.16731, "longitude": 0.89164},
         "areaServed": {"@type": "AdministrativeArea", "name": "Pallars Jussà"},
@@ -460,7 +463,9 @@
                   Horario
                 </div>
                 <table class="horari-table">
-                  <tr><td>Lunes – Viernes</td><td>9:00 – 19:00</td></tr>
+                  <tr><td>Lunes y miércoles</td><td>10:00 – 17:00</td></tr>
+                  <tr><td>Martes y jueves</td><td>10:00 – 13:00, 16:00 – 20:00</td></tr>
+                  <tr><td>Viernes</td><td>10:00 – 15:00</td></tr>
                   <tr><td>Sábado</td><td>Cerrado</td></tr>
                   <tr><td>Domingo</td><td>Cerrado</td></tr>
                 </table>
@@ -568,7 +573,7 @@
           <ul>
             <li>Carrer Montllobar, 22, bajos</li><li>25620 Tremp</li>
             <li><a href="tel:+34973447534">973 44 75 34</a></li>
-            <li>L–V: 9h – 19h</li>
+            <li>L y Mi: 10h – 17h</li><li>M y J: 10h – 13h, 16h – 20h</li><li>V: 10h – 15h</li>
           </ul>
         </div>
       </div>
