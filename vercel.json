@@ -7,6 +7,14 @@
     "api/contact-route.js": { "includeFiles": "{seus.html,es/sedes.html}" }
   },
   "redirects": [
+    {"source": "/es/:path*", "has": [{"type": "host", "value": "dentaltremp.com"}], "destination": "https://www.estudidentalcarrera.com/es/dentista-tremp.html", "permanent": true},
+    {"source": "/:path*", "has": [{"type": "host", "value": "dentaltremp.com"}], "destination": "https://www.estudidentalcarrera.com/dentista-tremp.html", "permanent": true},
+    {"source": "/es/:path*", "has": [{"type": "host", "value": "www.dentaltremp.com"}], "destination": "https://www.estudidentalcarrera.com/es/dentista-tremp.html", "permanent": true},
+    {"source": "/:path*", "has": [{"type": "host", "value": "www.dentaltremp.com"}], "destination": "https://www.estudidentalcarrera.com/dentista-tremp.html", "permanent": true},
+    {"source": "/es/:path*", "has": [{"type": "host", "value": "dentaltremp.cat"}], "destination": "https://www.estudidentalcarrera.com/es/dentista-tremp.html", "permanent": true},
+    {"source": "/:path*", "has": [{"type": "host", "value": "dentaltremp.cat"}], "destination": "https://www.estudidentalcarrera.com/dentista-tremp.html", "permanent": true},
+    {"source": "/es/:path*", "has": [{"type": "host", "value": "www.dentaltremp.cat"}], "destination": "https://www.estudidentalcarrera.com/es/dentista-tremp.html", "permanent": true},
+    {"source": "/:path*", "has": [{"type": "host", "value": "www.dentaltremp.cat"}], "destination": "https://www.estudidentalcarrera.com/dentista-tremp.html", "permanent": true},
     {"source": "/tractaments", "has": [{"type": "host", "value": "estudidentaltremp.com"}], "destination": "https://www.estudidentalcarrera.com/serveis.html", "permanent": true},
     {"source": "/tractaments/", "has": [{"type": "host", "value": "estudidentaltremp.com"}], "destination": "https://www.estudidentalcarrera.com/serveis.html", "permanent": true},
     {"source": "/equip", "has": [{"type": "host", "value": "estudidentaltremp.com"}], "destination": "https://www.estudidentalcarrera.com/equip.html", "permanent": true},
