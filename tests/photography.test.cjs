@@ -14,8 +14,8 @@ test('the excluded smiling patient photos have no editorial derivative', () => {
   }
 });
 
-test('each of the 35 article topics uses distinct visible photographs across cover and section', () => {
-  assert.equal(articles.length, 35);
+test('each of the 36 article topics uses distinct visible photographs across cover and section', () => {
+  assert.equal(articles.length, 36);
   const usedPaths = new Map();
 
   for (const article of articles) {

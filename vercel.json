@@ -220,6 +220,8 @@
     { "source": "/politica-de-galetes", "destination": "/cookies.html", "permanent": true }
   ],
   "rewrites": [
+    {"source":"/guies/mal-queixal-urgencia.html","destination":"/api/guide?key=mal-queixal-urgencia-ca"},
+    {"source":"/es/guias/dolor-muelas-urgencia.html","destination":"/api/guide?key=dolor-muelas-urgencia-es"},
     {"source":"/guies/triar-dentista-lleida.html","destination":"/api/guide?key=triar-dentista-lleida-ca"},
     {"source":"/es/guias/elegir-dentista-lleida.html","destination":"/api/guide?key=elegir-dentista-lleida-es"},
     {"source":"/guies/por-dentista.html","destination":"/api/guide?key=por-dentista-ca"},

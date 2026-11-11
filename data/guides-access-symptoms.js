@@ -286,7 +286,7 @@ module.exports = [
         ['Em trauran la dent?', 'No es pot decidir només per la presència d’un bony. Si l’origen és dental, cal valorar l’estat de la peça i del seu suport per explicar si hi ha opcions de conservació i quins límits tenen.'],
       ],
       serviceLabel: 'Valoració periodontal i endodòntica',
-      related: [['/guies/sensibilitat-dental-fred.html', 'Molèsties amb el fred: què observar'], ['/guies/neteja-dental-raspat.html', 'Diferències entre neteja dental i raspat']],
+      related: [['/guies/sensibilitat-dental-fred.html', 'Molèsties amb el fred: què observar'], ['/guies/neteja-dental-raspat.html', 'Diferències entre neteja dental i raspat'], ['/guies/mal-queixal-urgencia.html', 'Mal de queixal: quan és una urgència']],
     },
     es: {
       h1: 'Un bulto en la encía: qué puede significar y cuándo consultar',
@@ -322,7 +322,7 @@ module.exports = [
         ['¿Me quitarán el diente?', 'No puede decidirse solo por la presencia de un bulto. Si el origen es dental, hay que valorar el estado de la pieza y de su soporte para explicar si existen opciones de conservación y qué límites tienen.'],
       ],
       serviceLabel: 'Valoración periodontal y endodóntica',
-      related: [['/es/guias/sensibilidad-dental-frio.html', 'Molestias con el frío: qué observar'], ['/es/guias/limpieza-dental-raspado.html', 'Diferencias entre limpieza dental y raspado']],
+      related: [['/es/guias/sensibilidad-dental-frio.html', 'Molestias con el frío: qué observar'], ['/es/guias/limpieza-dental-raspado.html', 'Diferencias entre limpieza dental y raspado'], ['/es/guias/dolor-muelas-urgencia.html', 'Dolor de muelas: cuándo es una urgencia']],
     },
   },
   {

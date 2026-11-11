@@ -73,6 +73,10 @@ const descriptions = {
     ca: { alt: 'Imatges tridimensionals de les estructures dentals en una pantalla a Lleida', caption: 'Visualització d’imatges de radiologia dental a la consulta de Lleida.' },
     es: { alt: 'Imágenes tridimensionales de las estructuras dentales en una pantalla en Lleida', caption: 'Visualización de imágenes de radiología dental en la consulta de Lleida.' },
   },
+  'mal-queixal-urgencia-lleida': {
+    ca: { alt: 'Professional explorant les dents d’un pacient a la butaca dental de Lleida', caption: 'Exploració a la consulta de Carrera, a Lleida.' },
+    es: { alt: 'Profesional explorando los dientes de un paciente en el sillón dental de Lleida', caption: 'Exploración en la consulta de Carrera, en Lleida.' },
+  },
 };
 
 for (const [id, description] of Object.entries(require('./guide-photo-descriptions-2026-09-23'))) {
@@ -101,6 +105,7 @@ function photograph(id, lang) {
 
 // Each optional section names both translations explicitly so placement stays editorial.
 const selections = [
+  ['mal-queixal-urgencia-ca', 'mal-queixal-urgencia-lleida'],
   ['triar-dentista-lleida-ca', 'recepcio-lleida'],
   ['por-dentista-ca', 'conversa-consulta-tremp'],
   ['sensibilitat-dental-fred-ca', 'sensibilitat-dental-fred-lleida'],

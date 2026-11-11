@@ -1,5 +1,6 @@
 // Bilingual, patient-facing guides. Sources are references, not clinical endorsements.
 const topics = [
+  ...require('./guides-urgency'),
   ...require('./guides-access-symptoms'),
   ...require('./guides-prevention-expansion'),
   ...require('./guides-treatment-care'),
@@ -13,7 +14,7 @@ const articles = [];
 for (const topic of topics) {
   const keys = { ca: topic.slugs[0] + '-ca', es: topic.slugs[1] + '-es' };
   const paths = { ca: `guies/${topic.slugs[0]}.html`, es: `es/guias/${topic.slugs[1]}.html` };
-  articles.push({ ...keys, category: topic.category, status: 'published' });
+  articles.push({ ...keys, category: topic.category, status: topic.status || 'published' });
   for (const [index, lang] of ['ca', 'es'].entries()) {
     const copy = topic[lang];
     guides[keys[lang]] = {
