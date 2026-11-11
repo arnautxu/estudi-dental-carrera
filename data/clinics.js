@@ -12,7 +12,12 @@ module.exports = {
     "branchOf": {
       "@id": "https://www.estudidentalcarrera.com/#organization"
     },
-    "hasMap": "https://www.google.com/maps/search/?api=1&query=Estudi+Dental+Carrera+Lleida",
+    "hasMap": "https://maps.google.com/?cid=2852582085267194305",
+    "sameAs": [
+      "https://maps.google.com/?cid=2852582085267194305",
+      "https://www.doctoralia.es/clinicas/estudi-dental-carrera",
+      "https://www.instagram.com/estudidentalcarrera/"
+    ],
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Carrer Major, 74-76, 3r 3a",
