@@ -49,7 +49,7 @@ module.exports = [
         ['despres', 'Què convé aclarir després de la visita?', 'Pregunta què s’ha observat, si la solució és provisional i quan s’ha de revisar. Guarda les indicacions i confirma quins canvis obliguen a tornar abans del control previst. La reparació visible pot ser només una part del seguiment d’un traumatisme.'],
       ],
       faqs: [['Si només falta una petita vora, també he de consultar?', 'Sí. Una valoració permet determinar l’abast i les alternatives. La prioritat es concreta en contactar amb el professional.'], ['Puc demanar ajuda pel formulari?', 'Per una situació urgent és preferible trucar. No esperis resposta d’un formulari si cal assistència immediata.']],
-      serviceLabel: 'Orientació sobre urgències dentals', related: [['/guies/composite-dental.html', 'Opcions de restauració després de la valoració']],
+      serviceLabel: 'Orientació sobre urgències dentals', related: [['/guies/composite-dental.html', 'Opcions de restauració després de la valoració'], ['/guies/mal-queixal-urgencia.html', 'Mal de queixal: quan és una urgència']],
     },
     es: {
       h1: 'Diente roto o golpe en la boca: cómo pedir ayuda', description: 'Qué explicar tras un golpe o una fractura dental, cuándo buscar ayuda urgente y cómo contactar con las sedes de Lleida y Tremp.',
@@ -64,7 +64,7 @@ module.exports = [
         ['despues', '¿Qué conviene aclarar después de la visita?', 'Pregunta qué se ha observado, si la solución es provisional y cuándo debe revisarse. Guarda las indicaciones y confirma qué cambios obligan a volver antes del control previsto. La reparación visible puede ser solo una parte del seguimiento de un traumatismo.'],
       ],
       faqs: [['Si solo falta un pequeño borde, ¿también debo consultar?', 'Sí. Una valoración permite determinar el alcance y las alternativas. La prioridad se concreta al contactar con el profesional.'], ['¿Puedo pedir ayuda por el formulario?', 'Para una situación urgente es preferible llamar. No esperes respuesta de un formulario si necesitas asistencia inmediata.']],
-      serviceLabel: 'Orientación sobre urgencias dentales', related: [['/es/guias/composite-dental.html', 'Opciones de restauración después de la valoración']],
+      serviceLabel: 'Orientación sobre urgencias dentales', related: [['/es/guias/composite-dental.html', 'Opciones de restauración después de la valoración'], ['/es/guias/dolor-muelas-urgencia.html', 'Dolor de muelas: cuándo es una urgencia']],
     },
   },
   {

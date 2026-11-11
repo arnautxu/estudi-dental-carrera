@@ -1,9 +1,8 @@
 // Original bilingual patient information. Sources support the educational content;
 // they do not imply endorsement or a clinical review of an individual patient.
-// Status 'review': visible only on preview deployments until the clinic approves it.
 module.exports = [
   {
-    slugs: ['mal-queixal-urgencia', 'dolor-muelas-urgencia'], category: 'consulta', status: 'review',
+    slugs: ['mal-queixal-urgencia', 'dolor-muelas-urgencia'], category: 'consulta',
     services: ['/clinica-dental-lleida.html#urgencies-dentals', '/es/clinica-dental-lleida.html#urgencias-dentales'],
     image: 'assets/img/serveis/estetica-llum.webp',
     sources: [
