@@ -72,3 +72,14 @@ Els nous temes viuen a `guides-family`, `guides-restoration`, `guides-aesthetics
 ## Ampliació conjunta del 22/09/2026
 
 Publicació conjunta de 14 temes nous en CA/ES autoritzada pel responsable del web després de revisar blogs de clíniques de Lleida. S’exclouen els articles sobre preus. Total: 35 temes per idioma. Vegeu `docs/articles-2026-09-22/README.md` i les notes de fonts. Els nous mòduls són `guides-access-symptoms`, `guides-prevention-expansion` i `guides-treatment-care`. Cap signatura ni revisió clínica atribuïda a l’equip.
+
+## Article preparat l'11/11/2026
+
+**Mal de queixal: què fer i quan és una urgència dental** / **Dolor de muelas: qué hacer y cuándo es una urgencia dental**
+
+- Fitxer: `data/guides-urgency.js`; URLs `/guies/mal-queixal-urgencia.html` i `/es/guias/dolor-muelas-urgencia.html`. Estat `review`: només visible en previsualització (noindex); en producció retorna 404 i no surt al Blog ni al sitemap.
+- Intenció: dolor dental i dubte sobre si és urgent. Demanda (DataForSEO, Espanya, castellà, 11/11/2026): «dentista de urgencia» 1.300/mes, «urgencia dental» 390, «dolor de muelas qué hacer» 170, «dentista urgencias lleida» 20 (30/10).
+- Destinació: apartat d'urgències de la landing de Lleida. El text de contacte reprodueix el que ja diu aquest apartat (telèfon, prioritat i disponibilitat, 061, 112); no promet atenció el mateix dia.
+- Fonts: NHS (toothache, dental abscess), ADA (antibiòtics), Canal Salut (061/112), 112 Generalitat.
+- Fotografia: `assets/img/editorial/mal-queixal-urgencia-lleida*.webp`, a partir de `_staging/CARRERA/WORK/DSCF0461.jpg` (sha256 fc50440e…087a). Cal confirmar que el gabinet és de Lleida.
+- Revisió clínica: **pendent**. Per publicar: passar a `published`, afegir les dues URL al sitemap amb hreflang i enllaços contextuals.
