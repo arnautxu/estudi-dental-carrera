@@ -50,4 +50,58 @@ function applyGscNovember(pages) {
   return pages;
 }
 
-module.exports = { applyGscNovember };
+// 15 Nov 2026: Search Console 17 Oct – 13 Nov. Service pages for implants and
+// orthodontics rank 13–18 for "<treatment> lleida" while the map listing ranks 2–5.
+// Lead with Lleida (Tremp stays in the description and the Tremp page).
+// Price-intent queries ("implantes dentales precio lleida", "preu implants dentals
+// lleida") get the existing quote section retitled and one FAQ. No prices are given.
+const UPDATED_15 = { dateModified: '2026-11-15', ca: '15 de novembre de 2026', es: '15 de noviembre de 2026' };
+
+function applyGscNovember15(pages) {
+  for (const lang of ['ca', 'es']) {
+    const es = lang === 'es';
+    const stamp = page => {
+      page.dateModified = UPDATED_15.dateModified;
+      page.updatedLabel = es ? UPDATED_15.es : UPDATED_15.ca;
+    };
+
+    const implants = pages[`${lang}-implants`];
+    implants.primaryClinic = 'lleida';
+    implants.title = es ? 'Implantes dentales en Lleida | Estudi Dental Carrera' : 'Implants dentals a Lleida | Estudi Dental Carrera';
+    implants.h1 = es ? 'Implantes dentales en Lleida' : 'Implants dentals a Lleida';
+    implants.description = es
+      ? 'Implantes dentales en Lleida con el Dr. Joan Carrera Carrillo: estudio, alternativas, presupuesto del plan y mantenimiento. También en Tremp.'
+      : 'Implants dentals a Lleida amb el Dr. Joan Carrera Carrillo: estudi, alternatives, pressupost del pla i manteniment. També a Tremp.';
+    // The quote section already exists (service-enrichment); put the searched words in its heading.
+    const quote = implants.sections.find(section => section.id === (es ? 'presupuesto-implantes' : 'pressupost-implants'));
+    if (quote) quote.title = es ? 'Precio de un implante en Lleida: qué incluye el presupuesto' : 'Preu d’un implant a Lleida: què inclou el pressupost';
+    if (!implants.faqs.some(faq => /precio|preu/i.test(faq.q))) {
+      implants.faqs.splice(1, 0, es
+        ? { q: '¿Cuánto cuesta un implante dental en Lleida?', a: 'Depende del número de piezas, del hueso disponible y de la prótesis. Después del estudio te explicamos el plan y su presupuesto, con las alternativas valoradas.' }
+        : { q: 'Quant costa un implant dental a Lleida?', a: 'Depèn del nombre de peces, de l’os disponible i de la pròtesi. Després de l’estudi t’expliquem el pla i el seu pressupost, amb les alternatives valorades.' });
+    }
+    stamp(implants);
+
+    const ortho = pages[`${lang}-ortho`];
+    ortho.primaryClinic = 'lleida';
+    ortho.title = es ? 'Ortodoncia en Lleida: alineadores y brackets | Carrera' : 'Ortodòncia a Lleida: alineadors i brackets | Carrera';
+    ortho.h1 = es ? 'Ortodoncia en Lleida: alineadores invisibles y brackets' : 'Ortodòncia a Lleida: alineadors invisibles i brackets';
+    ortho.description = es
+      ? 'Ortodoncia en Lleida con la Dra. Carme Roure: alineadores invisibles o brackets según la mordida y las encías. Qué incluye el presupuesto. También en Tremp.'
+      : 'Ortodòncia a Lleida amb la Dra. Carme Roure: alineadors invisibles o brackets segons la mossegada i les genives. Què inclou el pressupost. També a Tremp.';
+    stamp(ortho);
+
+    // Link the first-visit guide (published 15/11) from the Lleida, implants and orthodontics pages.
+    const visitHref = es ? '/es/guias/primera-visita-dentista-lleida.html' : '/guies/primera-visita-dentista-lleida.html';
+    const visitLink = es
+      ? `Si quieres saber qué incluye, cuánto dura y cómo se paga, consulta <a href="${visitHref}">cómo es la primera visita en Lleida</a>.`
+      : `Si vols saber què inclou, quant dura i com es paga, consulta <a href="${visitHref}">com és la primera visita a Lleida</a>.`;
+    for (const [key, id] of [['lleida', 'primera-visita'], ['implants', 'primera-visita-lleida'], ['ortho', 'primera-visita-lleida']]) {
+      const section = pages[`${lang}-${key}`].sections.find(item => item.id === id);
+      if (section && !section.paragraphs.some(text => text.includes(visitHref))) section.paragraphs.push(visitLink);
+    }
+  }
+  return pages;
+}
+
+module.exports = { applyGscNovember, applyGscNovember15 };

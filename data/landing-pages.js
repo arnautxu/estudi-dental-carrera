@@ -1220,4 +1220,5 @@ require('./lleida-acquisition').applyLleidaAcquisition(pages);
 require('./lleida-contextual-links').linkLocalPages(pages);
 require('./seo-priorities').applyServicePriorities(pages);
 require('./seo-gsc-2026-11').applyGscNovember(pages);
+require('./seo-gsc-2026-11').applyGscNovember15(pages);
 module.exports = { pages };

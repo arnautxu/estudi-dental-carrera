@@ -83,3 +83,14 @@ Publicació conjunta de 14 temes nous en CA/ES autoritzada pel responsable del w
 - Fonts: NHS (toothache, dental abscess), ADA (antibiòtics), Canal Salut (061/112), 112 Generalitat.
 - Fotografia: `assets/img/editorial/mal-queixal-urgencia-lleida*.webp`, a partir de `_staging/CARRERA/WORK/DSCF0461.jpg` (sha256 fc50440e…087a). Gabinet de Lleida confirmat pel responsable del web.
 - Validació: comunicada pel responsable del web l'11/11/2026; no s'atribueix revisió a cap professional concret.
+
+## Article preparat el 15/11/2026
+
+**Primera visita al dentista a Lleida: què inclou, quant dura i com es paga** / **Primera visita al dentista en Lleida: qué incluye, cuánto dura y cómo se paga**
+
+- Fitxer: `data/guides-first-visit.js`; URLs `/guies/primera-visita-dentista-lleida.html` i `/es/guias/primera-visita-dentista-lleida.html`. Estat `review`: només visible en previsualització (noindex); en producció retorna 404 i no surt al Blog ni al sitemap.
+- Intenció: cerques de preu i de primera visita a Lleida (Search Console 17/10–13/11: «dentistas lleida precios» 40 impr., «preu implants dentals lleida» 28, «implantes dentales precio lleida» 38, «preu ortodòncia lleida» 35).
+- Dades de la clínica (responsable del web, 15/11/2026): la primera visita es paga, dura aproximadament una hora i inclou revisió del problema i proposta. Import, Carnet Jove, telèfon i horari: textos ja publicats al web. Cap preu. El descompte de la primera visita si es fa el tractament **no** s'inclou fins que la clínica el confirmi.
+- Fotografia: `assets/img/editorial/primera-visita-lleida*.webp`, retall 3:2 de `assets/img/lleida-sala-espera.jpg` (sense persones).
+- Per publicar: passar a `published`, afegir les dues URL al sitemap amb hreflang i enllaços contextuals (landing de Lleida, implants, ortodòncia).
+- 15/11/2026: publicat amb el sí del responsable del web. Estat `published`, URLs al sitemap amb hreflang i enllaços des de les seccions de primera visita de la landing de Lleida, implants i ortodòncia.
