@@ -90,6 +90,16 @@ function applyGscNovember15(pages) {
       ? 'Ortodoncia en Lleida con la Dra. Carme Roure: alineadores invisibles o brackets según la mordida y las encías. Qué incluye el presupuesto. También en Tremp.'
       : 'Ortodòncia a Lleida amb la Dra. Carme Roure: alineadors invisibles o brackets segons la mossegada i les genives. Què inclou el pressupost. També a Tremp.';
     stamp(ortho);
+
+    // Link the first-visit guide (published 15/11) from the Lleida, implants and orthodontics pages.
+    const visitHref = es ? '/es/guias/primera-visita-dentista-lleida.html' : '/guies/primera-visita-dentista-lleida.html';
+    const visitLink = es
+      ? `Si quieres saber qué incluye, cuánto dura y cómo se paga, consulta <a href="${visitHref}">cómo es la primera visita en Lleida</a>.`
+      : `Si vols saber què inclou, quant dura i com es paga, consulta <a href="${visitHref}">com és la primera visita a Lleida</a>.`;
+    for (const [key, id] of [['lleida', 'primera-visita'], ['implants', 'primera-visita-lleida'], ['ortho', 'primera-visita-lleida']]) {
+      const section = pages[`${lang}-${key}`].sections.find(item => item.id === id);
+      if (section && !section.paragraphs.some(text => text.includes(visitHref))) section.paragraphs.push(visitLink);
+    }
   }
   return pages;
 }

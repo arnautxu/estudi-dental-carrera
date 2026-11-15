@@ -93,3 +93,4 @@ Publicació conjunta de 14 temes nous en CA/ES autoritzada pel responsable del w
 - Dades de la clínica (responsable del web, 15/11/2026): la primera visita es paga, dura aproximadament una hora i inclou revisió del problema i proposta. Import, Carnet Jove, telèfon i horari: textos ja publicats al web. Cap preu. El descompte de la primera visita si es fa el tractament **no** s'inclou fins que la clínica el confirmi.
 - Fotografia: `assets/img/editorial/primera-visita-lleida*.webp`, retall 3:2 de `assets/img/lleida-sala-espera.jpg` (sense persones).
 - Per publicar: passar a `published`, afegir les dues URL al sitemap amb hreflang i enllaços contextuals (landing de Lleida, implants, ortodòncia).
+- 15/11/2026: publicat amb el sí del responsable del web. Estat `published`, URLs al sitemap amb hreflang i enllaços des de les seccions de primera visita de la landing de Lleida, implants i ortodòncia.

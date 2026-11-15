@@ -2,10 +2,10 @@
 // Facts come from the clinic (15/11/2026: paid visit, about one hour, review of
 // the problem and a proposal) and from copy already published on the site
 // (amount given before confirming, Carnet Jove, phone and hours). No prices.
-// Status 'review': visible only on preview deployments until the clinic approves it.
+// Published 15/11/2026 with the approval of the site owner.
 module.exports = [
   {
-    slugs: ['primera-visita-dentista-lleida', 'primera-visita-dentista-lleida'], category: 'consulta', status: 'review',
+    slugs: ['primera-visita-dentista-lleida', 'primera-visita-dentista-lleida'], category: 'consulta',
     services: ['/clinica-dental-lleida.html#primera-visita', '/es/clinica-dental-lleida.html#primera-visita'],
     image: 'assets/img/lleida-sala-espera.webp',
     sources: [
