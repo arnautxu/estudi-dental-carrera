@@ -1,6 +1,7 @@
 // Bilingual, patient-facing guides. Sources are references, not clinical endorsements.
 const topics = [
   ...require('./guides-urgency'),
+  ...require('./guides-first-visit'),
   ...require('./guides-access-symptoms'),
   ...require('./guides-prevention-expansion'),
   ...require('./guides-treatment-care'),
