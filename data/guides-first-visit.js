@@ -28,7 +28,7 @@ module.exports = [
         ['preu', 'La primera visita, es paga?',
           'Sí, la primera visita és de pagament. T’indicarem l’import abans de confirmar la cita, perquè sàpigues què pagaràs abans de venir.',
           'A Lleida, amb el Carnet Jove, la primera visita i una neteja anual són gratuïtes i tens un 20% de descompte en la resta de serveis. Presenta el carnet a recepció.'],
-        ['pressupost', 'Què et emportes de la visita',
+        ['pressupost', 'Què t’emportes de la visita',
           'Surts sabent què passa i quines opcions tens. Si et proposem un tractament, t’expliquem les fases, què inclou el pressupost i què es pagaria a part.',
           'No cal que decideixis a la consulta. Pots endur-te la proposta, pensar-t’ho i preguntar-nos els dubtes que tinguis abans de començar.'],
         ['preparar', 'Com preparar-la',
